@@ -1,0 +1,15 @@
+{
+  "name": "simply-godofredoninja",
+  "version": "0.0.1",
+  "description": "simply theme for ghost by @GodoFredoNinja",
+  "scripts": {},
+  "bugs": {},
+  "author": {
+    "name": "GodoFredoNinja",
+    "email": "hello@godofredo.ninja",
+    "url": "https://godofredo.ninja"
+  },
+  "repository": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
