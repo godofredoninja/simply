@@ -1,0 +1,15 @@
+{
+  "entry": {
+    "main": [
+      "./scripts/main.js",
+      "./styles/main.scss"
+    ]
+  },
+  "watch": [
+    "*.hbs"
+  ],
+  "publicPath": "/content/themes/simply",
+  "devUrl": "http://localhost:2368",
+  "proxyUrl": "http://localhost:3000",
+  "cacheBusting": "[name]_[hash:8]"
+}
