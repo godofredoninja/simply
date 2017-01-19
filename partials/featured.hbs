@@ -1,0 +1,8 @@
+{{!-- Featured Content --}}
+{{#get "posts" include="author" filter="featured:true" limit="3" as |featured|}}
+<section class="featured">
+    <div class="featured-wrap">
+        {{#foreach featured}} {{>"entry"}} {{/foreach}}
+    </div>
+</section>
+{{/get}}

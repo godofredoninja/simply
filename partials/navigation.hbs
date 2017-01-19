@@ -1,0 +1,6 @@
+{{!-- Navigation template --}}
+<ul class="nav u-unstyled">
+    {{#foreach navigation}}
+        <li><a href="{{url absolute="true"}}" class="navigation-link {{#if current}}active{{/if}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>
