@@ -1,0 +1,12 @@
+{{!-- Template for entry meta and date --}}
+<div class="entry-byline">
+    {{#author}}
+    <div class="entry-avatar">
+        <a href="{{url}}" {{#if image}}style="background-image:url({{image}})" class="u-bgFull"{{else}}class="u-bgFull u-noimage"{{/if}}></a>
+    </div>
+    {{/author}}
+    <div class="entry-author">
+        {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} in {{tags limit="1"}}
+        <time class="u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
+    </div>
+</div>

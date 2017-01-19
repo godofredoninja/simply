@@ -3,10 +3,12 @@
         <a href="{{url}}" class="entry-image--link">
             {{#if image}}
             <img class="entry-img" src="{{image}}" alt="{{title}}" />
+            <span class="u-bgfull" style="background-image: url({{image}})"></span>
+            <span class="u-background-dark"></span>
             {{else}}
             <span class="namesite">{{@blog.title}}</span>
+            <span class="u-background-white"></span>
             {{/if}}
-            <span class="u-bgfull" style="background-image: url({{image}})"></span>
         </a>
     </figure>
     <section class="entry-body u-md-marginBottom10 u-paddingTop15 u-marginBottom30">
@@ -14,13 +16,7 @@
             <h2 class="entry-title u-contentSansBold u-fontSizeLarge u-paddingBottom2">{{title}}</h2>
             <p class="u-fontSizeBase">{{excerpt characters="100"}}</p>
         </a>
-
-        <div class="entry-byline">
-            <div class="entry-avatar">{{#author}}<a href="{{url}}" {{#if image}}style="background-image: url({{image}})" class="u-bgFull"{{else}}class="u-bgFull u-noimage"{{/if}}></a>{{/author}}</div>
-            <div class="entry-author">
-                {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} in {{tags limit="1"}}
-                <time class="u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
-            </div>
-        </div>
+        {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
+        {{>"entry-meta"}}
     </section>
 </article>
