@@ -1,3 +1,11 @@
-body {
-  background: #fff;
-}
+@charset "UTF-8";
+
+// Mixins & Variables
+@import "common/variables";
+@import "common/mixins";
+
+// Import npm dependencies
+@import "~normalize.css/normalize";
+
+// components
+@import "common/global";

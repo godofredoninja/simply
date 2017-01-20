@@ -56,5 +56,7 @@
     "webpack-hot-middleware": "^2.15.0",
     "webpack-merge": "^2.4.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "normalize.css": "^5.0.0"
+  }
 }
