@@ -1,0 +1,25 @@
+const webpack = require('webpack');
+// const BrowserSyncPlugin = require('browsersync-webpack-plugin');
+
+const config = require('./config');
+
+module.exports = {
+  output: {
+    pathinfo: true,
+    publicPath: config.proxyUrl + config.publicPath,
+  },
+  devtool: '#cheap-module-source-map',
+  stats: true,
+  plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    // new BrowserSyncPlugin({
+    //   target: config.devUrl,
+    //   proxyUrl: config.proxyUrl,
+    //   watch: config.watch,
+    //   delay: 500,
+    // }),
+  ],
+};

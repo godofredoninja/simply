@@ -126,6 +126,8 @@ fabric.properties
 .sass-cache/
 *.css.map
 
+## Map ##
+*.map
 
 ### SublimeText ###
 # cache files for sublime text
@@ -466,6 +468,6 @@ __pycache__/
 # tools/
 
 ### VisualStudio Patch ###
-build/
+./build
 
 # End of https://www.gitignore.io/api/node,phpstorm,sas,sass,sublimetext,visualstudio,webstorm
