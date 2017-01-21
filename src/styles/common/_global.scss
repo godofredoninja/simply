@@ -1,7 +1,31 @@
-body {
-  background: purple;
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
-a {
-  color: #fff;
+body {
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: $font-size-base;
+}
+
+//Default styles
+html {
+  box-sizing: border-box;
+  font-size: $font-size-root;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  width: auto;
+
+  &:not([src]) {
+    visibility: hidden;
+  }
 }

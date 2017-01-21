@@ -471,3 +471,5 @@ __pycache__/
 ./build
 
 # End of https://www.gitignore.io/api/node,phpstorm,sas,sass,sublimetext,visualstudio,webstorm
+
+.sass-lint.yml
