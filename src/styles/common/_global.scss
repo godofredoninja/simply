@@ -3,6 +3,16 @@
   box-sizing: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
 body {
   color: $primary-text-color;
   font-family: $primary-font;
@@ -28,4 +38,11 @@ img {
   &:not([src]) {
     visibility: hidden;
   }
+}
+
+ol, ul {
+  list-style-image: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }

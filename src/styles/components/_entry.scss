@@ -1,0 +1,22 @@
+// entry by line
+.entry {
+
+  &-author {
+    display: table-cell;
+    font-size: 15px;
+    line-height: 1.4;
+    padding-left: 10px;
+    text-rendering: auto;
+    vertical-align: middle;
+  }
+
+  // author avatar
+  &-avatar { display: table-cell; }
+  &-avatar--img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+
+    &.no-avatar { background-image: url('../../images/avatar.png')}
+  }
+}

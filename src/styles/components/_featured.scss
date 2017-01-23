@@ -1,0 +1,30 @@
+// Featured home page
+// ==========================================================================
+.featured {
+  padding-bottom: 33%;
+
+  .entry {
+    background-position: center;
+    background-size: cover;
+    color: rgba(255, 255, 255, 1);
+    transition: width 0.5s;
+    width: 50%;
+
+    &.entry2 {margin: 0 2px;}
+
+    &:not(.active) {
+      flex-grow: 1;
+      width: 25%;
+
+      .entry-byline,
+      .entry-excerpt {
+        display: none;
+      }
+    }
+
+    &-author {color: rgba(255, 255, 255, .9);}
+
+    &-body { @extend %content-absolute-bottom;}
+
+  }
+}

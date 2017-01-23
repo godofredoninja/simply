@@ -1,16 +1,15 @@
 {{!-- Header Template --}}
-
 <header class="header">
-    <div class="u-wrap">
+    <div class="header-wrap u-marginAuto">
         <div class="header-top-section">
-            <div class="u-flex-grid">
+            <div class="u-flexCenter">
                 <div class="col">
                     {{!-- header logo --}}
-                    <a class="blog-logo" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
+                    <a class="header-logo" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
                 </div>
                 <div class="col">
                     {{!-- header follow --}}
-                    <aside class="header-follow follow-box">
+                    <aside class="header-follow follow-box u-floatRight">
                         {{#if @blog.facebook}}<a title="Facebook {{@blog.facebook}}" href="{{facebook_url}}" target="_blank" class="i-facebook">Facebook</a>{{/if}}
                         {{#if @blog.twitter}}<a title="Twitter {{@blog.twitter}}" href="{{twitter_url}}" target="_blank" class="i-twitter">twitter</a>{{/if}}
                     </aside>

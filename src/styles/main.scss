@@ -7,7 +7,14 @@
 // Import npm dependencies
 @import "~normalize.css/normalize";
 
-// components
+// common
 @import "common/global";
 @import "common/typography";
+@import "common/typography";
+@import "common/utilities";
+
+// components
 @import "components/grid";
+@import "components/header";
+@import "components/featured";
+@import "components/entry";

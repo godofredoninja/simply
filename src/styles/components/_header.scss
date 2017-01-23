@@ -1,0 +1,43 @@
+// Header
+// ==========================================================================
+
+.header-wrap { width: $header-wrap;}
+
+.header {
+  color: #000;
+
+  &-logo {
+    display: inline-block;
+    height: 40px;
+    img {max-height: 100%; }
+  }
+}
+
+// Header menu
+// ==========================================================================
+.header-nav {
+  .nav {
+    display: inline-block;
+    vertical-align: middle;
+
+    &>li {
+      float: left;
+
+      a {
+        border-bottom: solid 3px transparent;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1em;
+        padding: 12px 27px;
+        text-transform: uppercase;
+        display: block;
+
+        &:hover {
+          background: none;
+          color: #000;
+          border-bottom: solid 3px #000;
+        }
+      }
+    }
+  }
+}

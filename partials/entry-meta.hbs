@@ -1,12 +1,12 @@
 {{!-- Template for entry meta and date --}}
-<div class="entry-byline">
+<div class="entry-byline u-paddingTop10">
     {{#author}}
-    <div class="entry-avatar">
-        <a href="{{url}}" {{#if image}}style="background-image:url({{image}})" class="u-bgFull"{{else}}class="u-bgFull u-noimage"{{/if}}></a>
+    <div class="entry-avatar u-clear">
+        <a href="{{url}}" {{#if image}}style="background-image:url({{image}})" class="entry-avatar--img u-block u-backgroundSizeCover"{{else}}class="entry-avatar--img u-block u-backgroundSizeCover no-avatar"{{/if}}></a>
     </div>
     {{/author}}
     <div class="entry-author">
         {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} in {{tags limit="1"}}
-        <time class="u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
+        <time class="u-textColorNormal u-fontSizeSmaller u-fontWeightThin u-block" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
     </div>
 </div>

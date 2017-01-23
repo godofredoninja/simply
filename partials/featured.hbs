@@ -1,8 +1,27 @@
 {{!-- Featured Content --}}
 {{#get "posts" include="author, tags" filter="featured:true" limit="3" as |featured|}}
-<section class="featured">
-    <div class="featured-wrap">
-        {{#foreach featured}} {{>"entry"}} {{/foreach}}
+<section class="featured u-relative">
+    <div class="featured-wrap u-absolute0 u-flex">
+
+    {{#foreach featured}}
+    <article class="entry u-flex u-relative entry{{@number}} {{#if @first}}active{{/if}}" >
+        {{#if image}}
+        <a href="{{url}}" class="entry-image--link u-block u-absolute0 u-backgroundDark u-backgroundSizeCover" style="background-image: url({{image}})"></a>
+        {{else}}
+        <a href="{{url}}" class="entry-image--link u-block u-absolute0 u-background-white"><span class="namesite">{{@blog.title}}</span></a>
+        {{/if}}
+
+        <section class="entry-body">
+            <a href="{{url}}">
+                <h2 class="entry-title u-contentTitle u-fontSizeLarger u-paddingBottom2 u-lineHeight1">{{title}}</h2>
+                <p class="entry-excerpt u-paddingTop5 u-fontSizeBase">{{excerpt words="15"}}...</p>
+            </a>
+            {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
+            {{>"entry-meta"}}
+        </section>
+    </article>
+    {{/foreach}}
+
     </div>
 </section>
 {{/get}}

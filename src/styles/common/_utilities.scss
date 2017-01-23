@@ -1,0 +1,132 @@
+// Positionds
+.u-relative { position: relative; }
+.u-absolute { position: absolute; }
+.u-absolute0 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.u-block {display: block}
+
+//  Background
+.u-backgroundDark::before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 29%, rgba(0, 0, 0, .6) 81%);
+  bottom: 0;
+  content: '';
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+// Clear
+.u-clear {
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+  &::after {clear: both;}
+}
+
+// font size
+.u-fontSizeMicro {font-size: 11px}
+.u-fontSizeSmallest {font-size: 12px}
+.u-fontSizeSmaller {font-size: 14px}
+.u-fontSizeSmall {font-size: 16px}
+.u-fontSizeBase {font-size: 18px}
+.u-fontSizeLarge {font-size: 24px}
+.u-fontSize28 {font-size: 28px}
+.u-fontSizeLarger {font-size: 32px}
+.u-fontSizeLargest {font-size: 44px}
+.u-fontSize40 {font-size: 40px}
+.u-fontSizeJumbo {font-size: 50px}
+.u-fontSize36 {font-size: 36px}
+.u-fontSize22 {font-size: 22px}
+.u-fontSize20 {font-size: 20px}
+.u-fontSize15 {font-size: 15px}
+.u-fontSize13 {font-size: 13px}
+
+@media (max-width:991px) {
+  .u-sm-fontSizeBase {font-size: 18px}
+  .u-sm-fontSizeLarger {font-size: 32px}
+}
+
+@media (max-width:767px) {
+  .u-xs-fontSizeBase {font-size: 18px}
+  .u-xs-fontSize13 {font-size: 13px}
+  .u-xs-fontSizeSmaller {font-size: 14px}
+  .u-xs-fontSizeSmall {font-size: 16px}
+  .u-xs-fontSize22 {font-size: 22px}
+  .u-xs-fontSizeLarge {font-size: 24px}
+  .u-xs-fontSize40 {font-size: 40px}
+  .u-xs-fontSizeLarger {font-size: 32px}
+  .u-xs-fontSizeSmallest {font-size: 12px}
+}
+
+// font weight
+.u-fontWeightThin {font-weight: 300}
+.u-fontWeightNormal {font-weight: 400}
+.u-fontWeightMedium {font-weight: 500}
+.u-fontWeightSemibold {font-weight: 600}
+.u-fontWeightBold {font-weight: 700}
+
+
+// Margin
+.u-marginAuto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-marginTop30 {margin-top: 30px}
+
+// padding
+.u-paddingTop5 { padding-top: 5px;}
+.u-paddingBottom2 { padding-bottom: 2px;}
+.u-paddingTop10 {padding-top: 10px;}
+
+.u-contentTitle {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+// line-height
+.u-lineHeight1 {line-height: 1;}
+
+// // flex
+// .u-flex-grid {
+//   align-items: center;
+//   display: flex;
+//   .col {flex: 1}
+// }
+
+// float
+.u-floatRight { float: right; }
+.u-floatLeft { float: left; }
+
+//  flex
+.u-flex { display: flex; }
+.u-flexCenter { align-items: center; display: flex; }
+
+// Background
+.u-backgroundSizeCover {
+  background-position: 49% 70%;
+  background-size: cover;
+}
+
+
+// hide global
+.u-hide {display: none !important}
+// hide before
+@media #{$md-and-down} {.u-hide-before-md {display: none !important} }
+@media #{$lg-and-down} {.u-hide-before-lg {display: none !important} }
+
+// hide after
+@media #{$md-and-up} {.u-hide-after-md {display: none !important} }
+@media #{$lg-and-up} {.u-hide-after-lg {display: none !important} }
