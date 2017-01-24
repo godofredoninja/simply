@@ -17,12 +17,13 @@
       width: 25%;
 
       .entry-byline,
-      .entry-excerpt {
-        display: none;
-      }
+      .entry-excerpt { display: none; }
     }
 
-    &-author {color: rgba(255, 255, 255, .9);}
+    &-author {
+      color: rgba(255, 255, 255, .9);
+      a, .entry-date {color: rgba(255, 255, 255, .9); }
+    }
 
     &-body { @extend %content-absolute-bottom;}
 

@@ -1,4 +1,10 @@
-// Positionds
+// color
+.u-textColorNormal {
+  color: rgba(0, 0, 0, .44);
+  fill: rgba(0, 0, 0, .44);
+}
+
+// Positions
 .u-relative { position: relative; }
 .u-absolute { position: absolute; }
 .u-absolute0 {
@@ -22,6 +28,8 @@
   top: 0;
   z-index: 1;
 }
+
+.u-background-white { background-color: #eeefee; }
 
 // Clear
 .u-clear {
@@ -75,19 +83,19 @@
 .u-fontWeightSemibold {font-weight: 600}
 .u-fontWeightBold {font-weight: 700}
 
+.u-textUppercase {text-transform: uppercase}
+.u-textAlignCenter {text-align:center}
 
 // Margin
-.u-marginAuto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
+.u-marginAuto { margin-left: auto; margin-right: auto;}
 .u-marginTop30 {margin-top: 30px}
+.u-marginBottom15 {margin-bottom: 15px}
 
 // padding
 .u-paddingTop5 { padding-top: 5px;}
 .u-paddingBottom2 { padding-bottom: 2px;}
 .u-paddingTop10 {padding-top: 10px;}
+.u-paddingTop15 {padding-top: 15px;}
 
 .u-contentTitle {
   font-family: $primary-font;
@@ -99,12 +107,8 @@
 // line-height
 .u-lineHeight1 {line-height: 1;}
 
-// // flex
-// .u-flex-grid {
-//   align-items: center;
-//   display: flex;
-//   .col {flex: 1}
-// }
+// overflow
+.u-overflowHidden {overflow: hidden}
 
 // float
 .u-floatRight { float: right; }
@@ -119,6 +123,9 @@
   background-position: 49% 70%;
   background-size: cover;
 }
+
+// max widht
+.u-maxWidth1000 { max-width: 1000px;}
 
 
 // hide global

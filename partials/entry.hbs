@@ -1,20 +1,19 @@
-<article class="col s12 m6 u-marginBottom15 entry entry-{{@number}} {{#if @first}}first{{/if}}" >
-    <figure class="entry-image u-relative">
-        <a href="{{url}}" class="entry-image--link">
+<article class="col s12 m6 u-marginBottom15 u-relative entry entry{{@number}} {{#if @first}}first{{/if}}" >
+    <div class="entry-image u-relative">
+        <a href="{{url}}" class="entry-image--link u-block u-absolute0 u-overflowHidden">
             {{#if image}}
-            <img class="entry-img" src="{{image}}" alt="{{title}}" />
-            <span class="u-bgfull" style="background-image: url({{image}})"></span>
-            <span class="u-background-dark"></span>
+            <span class="u-absolute0 u-backgroundSizeCover" style="background-image: url({{image}})"></span>
+            <span class="u-absolute0 u-backgroundDark"></span>
             {{else}}
-            <span class="namesite">{{@blog.title}}</span>
-            <span class="u-background-white"></span>
+            <span class="namesite u-absolute u-fontSize28 u-textAlignCenter u-contentTitle u-textUppercase noImage">{{@blog.title}}</span>
+            <span class="u-background-white u-absolute0"></span>
             {{/if}}
         </a>
-    </figure>
-    <section class="entry-body u-md-marginBottom10 u-paddingTop15 u-marginBottom30">
-        <a href="{{url}}">
-            <h2 class="entry-title u-contentSansBold u-fontSizeLarge u-paddingBottom2">{{title}}</h2>
-            <p class="u-fontSizeBase">{{excerpt characters="100"}}</p>
+    </div>
+    <section class="entry-body u-paddingTop15">
+        <a href="{{url}}" class="u-block">
+            <h2 class="entry-title u-contentTitle u-fontSizeLarge u-paddingBottom2 u-paddingTop5 u-lineHeight1">{{title}}</h2>
+            <p class="entry-excerpt u-paddingTop5 u-fontSizeBase">{{excerpt words="12"}}</p>
         </a>
         {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
         {{>"entry-meta"}}

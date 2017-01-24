@@ -1,3 +1,14 @@
+%link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+%link--accent {
+  color: $primary-color;
+  &:hover {color: $primary-color-dark;}
+}
+
 %content-absolute-bottom {
   bottom: 0;
   left: 0;
