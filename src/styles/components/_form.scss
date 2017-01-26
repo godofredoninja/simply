@@ -1,0 +1,35 @@
+.button {
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: 999em;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, .44);
+  cursor: pointer;
+  display: inline-block;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: 37px;
+  letter-spacing: 0;
+  line-height: 35px;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &--flat {
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+    color: rgba(0, 0, 0, .44);
+    padding: 0;
+    text-align: left;
+    vertical-align: baseline;
+    white-space: normal;
+  }
+}

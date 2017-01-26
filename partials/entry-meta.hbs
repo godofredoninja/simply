@@ -5,7 +5,7 @@
         <a href="{{url}}" {{#if image}}style="background-image:url({{image}})" class="entry-avatar--img u-block u-backgroundSizeCover"{{else}}class="entry-avatar--img u-block u-backgroundSizeCover no-avatar"{{/if}}></a>
     </div>
     {{/author}}
-    <div class="entry-author u-textColorNormal u-fontSizeSmaller">
+    <div class="entry-author u-textColorNormal {{#is "tag, author"}}u-fontSize15{{else}}u-fontSizeSmaller{{/is}}">
         {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} in {{tags limit="1"}}
         <time class="entry-date u-textColorNormal u-fontSizeSmaller u-fontWeightThin u-block u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
     </div>

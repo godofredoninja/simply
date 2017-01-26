@@ -1,0 +1,33 @@
+{{#foreach posts}}
+<article class="entry u-card {{#if @even}}even{{/if}} {{#if featured}}entry--featured{{/if}}">
+    {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
+    {{>"entry-meta"}}
+
+    <section class="entry-body u-paddingTop10">
+        <a href="{{url}}" class="u-block">
+            <h2 class="entry-title u-contentTitle u-fontSize28 u-paddingBottom2 u-paddingTop5 u-lineHeight1 u-fontWeightBold">{{title}}</h2>
+            <p class="entry-excerpt u-paddingTop10 u-fontSizeBase u-card--p">{{excerpt words="25"}}</p>
+        </a>
+
+        {{#if image}}
+            <figure class="entry-image u-overflowHidden u-marginTop30">
+                <a href="{{url}}" class="entry-image--link u-block u-overflowHidden u-relative">
+                    <img class="entry-img u-relative u-block" src="{{image}}" alt="{{title}}"/>
+                </a>
+            </figure>
+        {{/if}}
+    </section>
+
+    <footer class="u-clear u-paddingTop15">
+        <div class="u-floatLeft"><a href="#" class="button button--flat">10 Compartidos</a></div>
+        <div class="u-floatRight">
+            <a href="#" class="button button--flat">2 Cometarios</a>
+            <div class="button button--flat fb-save with-tooltip">
+                <div class="fb-save-icon">Save</div>
+                <div class="fb-save-wrap"></div>
+            </div>
+        </div>
+    </footer>
+
+</article>
+{{/foreach}}

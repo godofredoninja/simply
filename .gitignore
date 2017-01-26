@@ -204,6 +204,7 @@ GitHub.sublime-settings
 *.userosscache
 *.sln.docstates
 *.vcxproj.filters
+.vscode
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs

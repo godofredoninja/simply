@@ -30,6 +30,7 @@
 }
 
 .u-background-white { background-color: #eeefee; }
+.u-backgroundWhite {background-color: #fafafa;}
 
 // Clear
 .u-clear {
@@ -81,7 +82,7 @@
 .u-fontWeightNormal {font-weight: 400}
 .u-fontWeightMedium {font-weight: 500}
 .u-fontWeightSemibold {font-weight: 600}
-.u-fontWeightBold {font-weight: 700}
+.u-fontWeightBold {font-weight: 700 !important}
 
 .u-textUppercase {text-transform: uppercase}
 .u-textAlignCenter {text-align:center}
@@ -96,6 +97,7 @@
 .u-paddingBottom2 { padding-bottom: 2px;}
 .u-paddingTop10 {padding-top: 10px;}
 .u-paddingTop15 {padding-top: 15px;}
+.u-paddingTop30 {padding-top: 30px;}
 
 .u-contentTitle {
   font-family: $primary-font;
@@ -127,6 +129,23 @@
 // max widht
 .u-maxWidth1000 { max-width: 1000px;}
 
+// card
+.u-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .09);
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  margin-bottom: 10px;
+  padding: 10px 20px 15px;
+
+  &--p {
+    font-family: $secundary-font;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.004em;
+    line-height: 1.4;
+  }
+}
 
 // hide global
 .u-hide {display: none !important}

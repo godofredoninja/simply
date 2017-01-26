@@ -1,0 +1,19 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+<section class="u-maxWidth1000 u-marginAuto">
+    <div class="row u-paddingTop30">
+
+        <div class="feed-entry-content content col s12">
+            <div class="feed-entry-wrap">
+                {{!-- The tag below includes the post loop - partials/loop.hbs --}}
+                {{>"entry-post"}}
+            </div>
+        </div>
+
+        {{!-- Sidebar --}}
+        {{>"sidebar"}}
+
+    </div>
+
+</section>
