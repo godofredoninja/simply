@@ -4,6 +4,8 @@
   fill: rgba(0, 0, 0, .44);
 }
 
+.u-link { color: $primary-color !important; }
+
 // Positions
 .u-relative { position: relative; }
 .u-absolute { position: absolute; }
@@ -93,17 +95,18 @@
 .u-marginBottom15 {margin-bottom: 15px}
 
 // padding
-.u-paddingTop5 { padding-top: 5px;}
 .u-paddingBottom2 { padding-bottom: 2px;}
+.u-paddingTop5 { padding-top: 5px;}
 .u-paddingTop10 {padding-top: 10px;}
 .u-paddingTop15 {padding-top: 15px;}
+.u-paddingTop20 {padding-top: 20px;}
 .u-paddingTop30 {padding-top: 30px;}
 
 .u-contentTitle {
   font-family: $primary-font;
   font-style: normal;
   font-weight: 600;
-  letter-spacing: -.02em;
+  letter-spacing: -.028em;
 }
 
 // line-height
@@ -127,7 +130,14 @@
 }
 
 // max widht
+.u-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .u-maxWidth1000 { max-width: 1000px;}
+.u-maxWidth740 {max-width: 740px;}
 
 // card
 .u-card {
@@ -143,7 +153,7 @@
     font-style: normal;
     font-weight: 400;
     letter-spacing: -.004em;
-    line-height: 1.4;
+    line-height: 1.58;
   }
 }
 

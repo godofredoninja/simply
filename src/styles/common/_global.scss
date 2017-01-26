@@ -13,6 +13,19 @@ a {
   }
 }
 
+blockquote {
+  border-left: 3px solid rgba(0,0,0,.8);
+  font-family: $secundary-font;
+  font-size: 21px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.003em;
+  line-height: 1.58;
+  margin-left: -23px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+}
+
 body {
   color: $primary-text-color;
   font-family: $primary-font;

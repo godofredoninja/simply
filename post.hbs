@@ -3,22 +3,22 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<article class="post u-marginBottom40">
+<article class="post u-marginBottom40 u-marginAuto u-maxWidth1000 u-relative">
 
-    <header class="post-header container u-maxWidth740">
+    <header class="post-header u-container u-maxWidth740 u-paddingTop30">
+        {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
+        {{>"entry-meta"}}
 
+        <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-paddingBottom2 u-fontWeightBold">{{title}}</h1>
     </header>
 
-    <figure class="post-image">
+    {{#if image}}<figure class="post-image u-paddingTop30 u-block"> <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}"></figure>{{/if}}
 
-    </figure>
+    <section class="post-body u-container u-maxWidth740">{{content}}</section>
 
-    <section class="post-body">
-
-    </section>
-
-    <footer class="post-footer">
-
+    <footer class="post-footer u-container u-maxWidth740 u-paddingTop20">
+        {{!-- Post All Tags (category) --}}
+        {{#if tags}}<div class="post-tags">{{#foreach tags}}<a href="{{url}}" title="{{name}}" class="button">{{name}}</a>{{/foreach}}</div>{{/if}}
     </footer>
 
 </article>
