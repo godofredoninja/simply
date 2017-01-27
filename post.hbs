@@ -12,11 +12,27 @@
         <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-paddingBottom2 u-fontWeightBold">{{title}}</h1>
     </header>
 
+    {{!-- Figure --}}
     {{#if image}}<figure class="post-image u-paddingTop30 u-block"> <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}"></figure>{{/if}}
 
     <section class="post-body u-container u-maxWidth740">{{content}}</section>
 
     <footer class="post-footer u-container u-maxWidth740 u-paddingTop20">
+        {{!-- Email subscribe form at the bottom of the page --}}
+        {{#if @labs.subscribers}}
+        <div class="post-newsletter u-marginAuto u-textAlignCenter u-paddingTop30">
+            <h5 class="u-fontSize28 u-fontWeightBold">Subscribe to</h5>
+
+            {{subscribe_form
+            form_class="newsletter-form u-marginAuto u-flex u-paddingTop30 u-paddingBottom30"
+            input_class="form--input u-block u-fontSize20"
+            button_class="form--btn u-relative u-overflowHidden"
+            placeholder="yourname@example.com"
+            autofocus=""
+            }}
+        </div>
+        {{/if}}
+
         {{!-- Post All Tags (category) --}}
         {{#if tags}}<div class="post-tags">{{#foreach tags}}<a href="{{url}}" title="{{name}}" class="button">{{name}}</a>{{/foreach}}</div>{{/if}}
     </footer>

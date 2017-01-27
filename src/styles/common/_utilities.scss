@@ -9,13 +9,7 @@
 // Positions
 .u-relative { position: relative; }
 .u-absolute { position: absolute; }
-.u-absolute0 {
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
+.u-absolute0 { @extend %u-absolute0;}
 
 .u-block {display: block}
 
@@ -96,6 +90,7 @@
 
 // padding
 .u-paddingBottom2 { padding-bottom: 2px;}
+.u-paddingBottom30 { padding-bottom: 30px;}
 .u-paddingTop5 { padding-top: 5px;}
 .u-paddingTop10 {padding-top: 10px;}
 .u-paddingTop15 {padding-top: 15px;}

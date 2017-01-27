@@ -95,3 +95,44 @@
     }
   }
 }
+
+// post Newsletter
+// ==========================================================================
+
+.post-newsletter {
+  max-width: 520px;
+  .newsletter-form {max-width: 400px}
+
+  .form-group { width: 80%; padding-right: 5px; }
+  .form--input {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    height: 48px;
+    padding: 6px 12px 8px 5px;
+    resize: none;
+    width: 100%;
+    &:focus {
+      outline: 0;
+    }
+  }
+  .form--btn {
+    background-color: #a9a9a9;
+    border-radius: 0 45px 45px 0;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 0;
+    width: 20%;
+
+    &::before {
+      @extend %u-absolute0;
+      background-color: #a9a9a9;
+      content: 'a';
+      line-height: 45px;
+      z-index: 2;
+    }
+
+    &:hover {opacity: .8; }
+    &:focus { outline: 0; }
+  }
+}
