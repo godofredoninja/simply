@@ -2,6 +2,10 @@
   &-title {
     line-height: 1.04;
   }
+
+  &-footer {
+    border-bottom: 1px solid rgba(0,0,0,.05);
+  }
 }
 
 
@@ -134,5 +138,30 @@
 
     &:hover {opacity: .8; }
     &:focus { outline: 0; }
+  }
+}
+
+
+// post Relative
+// ==========================================================================
+.post-related {
+  .entry-image {
+    border-bottom: 1px solid rgba(0, 0, 0, .0785);
+    border-radius: 4px 4px 0 0;
+    height: 150px;
+  }
+
+  .entry-title {
+    color: rgba(0,0,0,.9);
+    -webkit-box-orient: vertical !important;
+    -webkit-line-clamp: 2 !important;
+    display: -webkit-box!important;
+    line-height: 1.1 !important;
+    max-height: 2.2em !important;
+    text-overflow: ellipsis !important;
+  }
+
+  .u-card {
+    height: 240px;
   }
 }

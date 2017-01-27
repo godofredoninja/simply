@@ -27,6 +27,7 @@
 
 .u-background-white { background-color: #eeefee; }
 .u-backgroundWhite {background-color: #fafafa;}
+.u-backgroundColorGrayLight {background-color: #f0f0f0 !important;}
 
 // Clear
 .u-clear {
@@ -87,10 +88,16 @@
 .u-marginAuto { margin-left: auto; margin-right: auto;}
 .u-marginTop30 {margin-top: 30px}
 .u-marginBottom15 {margin-bottom: 15px}
+.u-marginBottom30 {margin-bottom: 30px}
+.u-marginBottom40 {margin-bottom: 40px}
 
 // padding
+.u-padding0 {padding: 0 !important}
+.u-padding15 {padding: 15px !important;}
 .u-paddingBottom2 { padding-bottom: 2px;}
 .u-paddingBottom30 { padding-bottom: 30px;}
+.u-paddingBottom20 {padding-bottom: 20px}
+
 .u-paddingTop5 { padding-top: 5px;}
 .u-paddingTop10 {padding-top: 10px;}
 .u-paddingTop15 {padding-top: 15px;}

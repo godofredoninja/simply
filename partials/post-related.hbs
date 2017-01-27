@@ -1,0 +1,28 @@
+{{!-- Article relative --}}
+{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags"}}
+<section class="post-related u-backgroundWhite u-paddingTop30">
+    <div class="u-marginAuto u-maxWidth1000">
+        <div class="row">
+
+        {{#foreach posts}}
+            <article class="col s12 m4">
+                <div class="u-card u-padding0">
+                    <div class="entry-image u-relative u-overflowHidden">
+                        <a href="{{url}}" class="entry-image--link u-block u-absolute0">
+                            <span class="u-absolute0 u-backgroundSizeCover u-backgroundColorGrayLight" style="background-image:url({{image}});"></span>
+                        </a>
+                    </div>
+
+                    <div class="entry-body u-padding15">
+                        <a href="{{url}}">
+                        <h2 class="entry-title u-contentTitle u-fontSizeLarge u-fontWeightBold u-overflowHidden u-paddingBottom2">{{title}}</h2>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        {{/foreach}}
+
+        </div>
+    </div>
+</section>
+{{/get}}
