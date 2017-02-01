@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'simply';
+  src:  url('../../fonts/simply.eot?4md47s');
+  src:  url('../../fonts/simply.eot?4md47s#iefix') format('embedded-opentype'),
+    url('../../fonts/simply.ttf?4md47s') format('truetype'),
+    url('../../fonts/simply.woff?4md47s') format('woff'),
+    url('../../fonts/simply.svg?4md47s#simply') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"]::before, [class*=" i-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'simply' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-save--line:before {
+  content: "\e901";
+}
+.i-comments--line:before {
+  content: "\e902";
+}
+.i-twitter--line:before {
+  content: "\e903";
+}
+.i-facebook--line:before {
+  content: "\e900";
+}
+.i-check-circle:before {
+  content: "\e86c";
+}
+.i-close:before {
+  content: "\e5cd";
+}
+.i-favorite:before {
+  content: "\e87d";
+}
+.i-star:before {
+  content: "\e838";
+}
+.i-warning:before {
+  content: "\e002";
+}
+.i-rss:before {
+  content: "\e0e5";
+}
+.i-search:before {
+  content: "\e8b6";
+}
+.i-send:before {
+  content: "\e163";
+}
+.i-share:before {
+  content: "\e80d";
+}
+.i-twitter:before {
+  content: "\f099";
+}
+.i-github:before {
+  content: "\f09b";
+}
+.i-linkedin:before {
+  content: "\f0e1";
+}
+.i-code:before {
+  content: "\f121";
+}
+.i-youtube:before {
+  content: "\f16a";
+}
+.i-stack-overflow:before {
+  content: "\f16c";
+}
+.i-instagram:before {
+  content: "\f16d";
+}
+.i-flickr:before {
+  content: "\f16e";
+}
+.i-dribbble:before {
+  content: "\f17d";
+}
+.i-behance:before {
+  content: "\f1b4";
+}
+.i-spotify:before {
+  content: "\f1bc";
+}
+.i-codepen:before {
+  content: "\f1cb";
+}
+.i-facebook:before {
+  content: "\f230";
+}
+.i-pinterest:before {
+  content: "\f231";
+}
+.i-whatsapp:before {
+  content: "\f232";
+}
+.i-snapchat:before {
+  content: "\f2ac";
+}

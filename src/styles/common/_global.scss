@@ -30,6 +30,11 @@ body {
   color: $primary-text-color;
   font-family: $primary-font;
   font-size: $font-size-base;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-rendering: optimizeLegibility;
 }
 
 //Default styles
@@ -40,6 +45,16 @@ html {
 
 figure {
   margin: 0;
+}
+
+
+hr {
+  background: linear-gradient(to right, #F1F2F1 0, #b5b5b5 50%, #F1F2F1 100%);
+  background: #F1F2F1;
+  border: 0;
+  height: 1px;
+  margin: 80px auto;
+  max-width: 90%;
 }
 
 img {

@@ -1,43 +1,125 @@
 // Header
 // ==========================================================================
 
-.header-wrap { width: $header-wrap;}
-
 .header {
-  color: #000;
+  background: $primary-color;
+  color: #dce6ec;
+  z-index: 100;
+
+  a:hover {
+    color: #fff;
+  }
+
+  &-wrap {
+    height: 50px;
+  }
 
   &-logo {
-    display: inline-block;
-    height: 40px;
+    height: 30px;
     img {max-height: 100%; }
   }
+
+  // header description home page
+  &-description {
+    letter-spacing: -.02em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-width: 750px;
+  }
+}
+
+// Header Follow
+// ==========================================================================
+.follow>a {
+  padding-left: 15px;
 }
 
 // Header menu
 // ==========================================================================
-.header-nav {
-  .nav {
-    display: inline-block;
-    vertical-align: middle;
 
-    &>li {
-      float: left;
+.nav {
+  line-height: 40px;
+  padding: 8px 0;
+  position: relative;
 
-      a {
-        border-bottom: solid 3px transparent;
-        font-size: 14px;
-        font-weight: 600;
-        line-height: 1em;
-        padding: 12px 27px;
-        text-transform: uppercase;
-        display: block;
+  ul {
+    display: flex;
+  }
 
-        &:hover {
-          background: none;
-          color: #000;
-          border-bottom: solid 3px #000;
-        }
-      }
+  li {
+    float: left;
+
+    a {
+      font-weight: 600;
+      margin-right: 22px;
+      text-transform: uppercase;
     }
   }
+
+  &-border {
+    border-left: 1px solid #dce6ec;
+    height: 24px;
+  }
+}
+
+
+
+.button-search--toggle {
+  color: inherit !important;
+  padding-right: 0 !important;
+}
+
+
+// button-nav
+.button-nav--toggle {
+  height: 48px;
+  position: relative;
+  transition: transform .4s;
+  width: 48px;
+
+  span {
+    background-color: #dce6ec;
+    display: block;
+    height: 2px;
+    left: 14px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transition: .4s;
+    width: 20px;
+
+    &:first-child { transform: translate(0, -6px); }
+    &:last-child { transform: translate(0, 6px); }
+  }
+}
+
+
+body.is-frontpage .header-wrap {height: auto;}
+
+
+// Media Query
+// ==========================================================================
+
+@media #{$md-and-up} {
+  .header {
+    &-wrap {
+      border: 0;
+      height: 70px;
+    }
+    &-logo {
+      height: 40px;
+      padding-left: 0;
+    }
+  }
+
+  body.is-frontpage {
+    .header {
+      &-wrap { height: 190px; }
+      &-logo { height: 50px;}
+    }
+
+    .nav ul {flex: 1 1 auto;}
+  }
+
+
 }

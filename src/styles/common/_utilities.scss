@@ -40,29 +40,29 @@
 }
 
 // font size
-.u-fontSizeMicro {font-size: 11px}
-.u-fontSizeSmallest {font-size: 12px}
-.u-fontSizeSmaller {font-size: 14px}
-.u-fontSizeSmall {font-size: 16px}
-.u-fontSizeBase {font-size: 18px}
-.u-fontSizeLarge {font-size: 24px}
+.u-fontSize13 {font-size: 13px}
+.u-fontSize15 {font-size: 15px}
+.u-fontSize20 {font-size: 20px}
+.u-fontSize22 {font-size: 22px}
 .u-fontSize28 {font-size: 28px}
+.u-fontSize36 {font-size: 36px}
+.u-fontSize40 {font-size: 40px}
+.u-fontSizeBase {font-size: 18px}
+.u-fontSizeJumbo {font-size: 50px}
+.u-fontSizeLarge {font-size: 24px !important}
 .u-fontSizeLarger {font-size: 32px}
 .u-fontSizeLargest {font-size: 44px}
-.u-fontSize40 {font-size: 40px}
-.u-fontSizeJumbo {font-size: 50px}
-.u-fontSize36 {font-size: 36px}
-.u-fontSize22 {font-size: 22px}
-.u-fontSize20 {font-size: 20px}
-.u-fontSize15 {font-size: 15px}
-.u-fontSize13 {font-size: 13px}
+.u-fontSizeMicro {font-size: 11px}
+.u-fontSizeSmall {font-size: 16px}
+.u-fontSizeSmaller {font-size: 14px}
+.u-fontSizeSmallest {font-size: 12px}
 
-@media (max-width:991px) {
+@media (max-width: 991px) {
   .u-sm-fontSizeBase {font-size: 18px}
   .u-sm-fontSizeLarger {font-size: 32px}
 }
 
-@media (max-width:767px) {
+@media (max-width: 767px) {
   .u-xs-fontSizeBase {font-size: 18px}
   .u-xs-fontSize13 {font-size: 13px}
   .u-xs-fontSizeSmaller {font-size: 14px}
@@ -104,6 +104,9 @@
 .u-paddingTop20 {padding-top: 20px;}
 .u-paddingTop30 {padding-top: 30px;}
 
+.u-paddingRight20 {padding-right: 20px}
+.u-paddingLeft20 {padding-left: 20px}
+
 .u-contentTitle {
   font-family: $primary-font;
   font-style: normal;
@@ -124,6 +127,11 @@
 //  flex
 .u-flex { display: flex; }
 .u-flexCenter { align-items: center; display: flex; }
+.u-flex1 { flex: 1 1 auto; }
+.u-flexEnd {
+  align-items: center;
+  justify-content: flex-end;
+}
 
 // Background
 .u-backgroundSizeCover {
@@ -140,6 +148,17 @@
 }
 .u-maxWidth1000 { max-width: 1000px;}
 .u-maxWidth740 {max-width: 740px;}
+.u-maxWidth1040 { max-width: 1040px;}
+.u-sizeFullWidth{width: 100%}
+
+// .u-paddingRight20 {
+//     padding-right: 20px!important;
+// }
+// .u-paddingLeft20 {
+//     padding-left: 20px!important;
+// }
+
+
 
 // card
 .u-card {
