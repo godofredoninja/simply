@@ -14,10 +14,9 @@
 .u-block {display: block}
 
 //  Background
-.u-backgroundDark::before {
+.u-backgroundDark {
   background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 29%, rgba(0, 0, 0, .6) 81%);
   bottom: 0;
-  content: '';
   left: 0;
   position: absolute;
   right: 0;
@@ -25,7 +24,7 @@
   z-index: 1;
 }
 
-.u-background-white { background-color: #eeefee; }
+// .u-background-white { background-color: #eeefee; }
 .u-backgroundWhite {background-color: #fafafa;}
 .u-backgroundColorGrayLight {background-color: #f0f0f0 !important;}
 
@@ -135,7 +134,8 @@
 
 // Background
 .u-backgroundSizeCover {
-  background-position: 49% 70%;
+  background-origin: border-box;
+  background-position: center;
   background-size: cover;
 }
 
@@ -151,12 +151,8 @@
 .u-maxWidth1040 { max-width: 1040px;}
 .u-sizeFullWidth{width: 100%}
 
-// .u-paddingRight20 {
-//     padding-right: 20px!important;
-// }
-// .u-paddingLeft20 {
-//     padding-left: 20px!important;
-// }
+// border
+.u-borderLighter { border: 1px solid rgba(0, 0, 0, .15);}
 
 
 
