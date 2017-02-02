@@ -4,6 +4,8 @@
   fill: rgba(0, 0, 0, .44);
 }
 
+.u-textColorDarker {@extend %u-text-color-darker;}
+
 .u-link { color: $primary-color !important; }
 
 // Positions
@@ -149,7 +151,7 @@
 .u-maxWidth1000 { max-width: 1000px;}
 .u-maxWidth740 {max-width: 740px;}
 .u-maxWidth1040 { max-width: 1040px;}
-.u-sizeFullWidth{width: 100%}
+.u-sizeFullWidth {width: 100%}
 
 // border
 .u-borderLighter { border: 1px solid rgba(0, 0, 0, .15);}
