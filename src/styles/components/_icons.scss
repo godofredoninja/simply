@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'simply';
-  src:  url('../../fonts/simply.eot?4md47s');
-  src:  url('../../fonts/simply.eot?4md47s#iefix') format('embedded-opentype'),
-    url('../../fonts/simply.ttf?4md47s') format('truetype'),
-    url('../../fonts/simply.woff?4md47s') format('woff'),
-    url('../../fonts/simply.svg?4md47s#simply') format('svg');
+  src:  url('../../fonts/simply.eot?r0kbtm');
+  src:  url('../../fonts/simply.eot?r0kbtm#iefix') format('embedded-opentype'),
+    url('../../fonts/simply.ttf?r0kbtm') format('truetype'),
+    url('../../fonts/simply.woff?r0kbtm') format('woff'),
+    url('../../fonts/simply.svg?r0kbtm#simply') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,17 +24,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-save:before {
+  content: "\e8e6";
+}
 .i-save--line:before {
-  content: "\e901";
-}
-.i-comments--line:before {
-  content: "\e902";
-}
-.i-twitter--line:before {
-  content: "\e903";
-}
-.i-facebook--line:before {
-  content: "\e900";
+  content: "\e8e7";
 }
 .i-check-circle:before {
   content: "\e86c";

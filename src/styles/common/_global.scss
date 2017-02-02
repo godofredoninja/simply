@@ -91,3 +91,50 @@ ol, ul {
     max-width: 500px;
   }
 }
+
+
+// toltip
+
+// tooltip
+.with-tooltip {
+  overflow: visible;
+  position: relative;
+
+  &:after {
+    background: rgba(0, 0, 0, .85);
+    border-radius: 4px;
+    color: #FFF;
+    content: attr(data-tooltip);
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    left: 50%;
+    line-height: 1.25;
+    min-width: 120px;
+    opacity: 0;
+    padding: 4px 8px;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    text-transform: none;
+    top: -30px;
+    will-change: opacity, transform;
+    z-index: 1;
+  }
+
+  &:hover:after {
+    animation: tooltip .1s ease-out both;
+  }
+}
+
+@keyframes tooltip {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

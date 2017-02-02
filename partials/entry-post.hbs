@@ -18,12 +18,14 @@
         {{/if}}
     </section>
 
+    <a href="{{url}}" class="u-block u-paddingTop15 u-fontSize15 u-hoverColorNormal u-textColorNormal">Read more...</a>
+
     <footer class="u-clear u-paddingTop15">
-        <div class="u-floatLeft"><a href="#" class="button button--flat">10 Compartidos</a></div>
+        {{!-- <div class="u-floatLeft"><a href="#" class="button button--flat">10 Compartidos</a></div> --}}
         <div class="u-floatRight">
-            <a href="#" class="button button--flat">2 Cometarios</a>
-            <div class="button button--flat fb-save with-tooltip u-link">
-                <div class="fb-save-icon">Save</div>
+            <a href="#" class="button button--flat"><i class="i-comments--line"></i> 2 Cometarios</a>
+            <div class="button button--flat fb-save with-tooltip u-link" data-tooltip="Save to Facebook" style="padding-left:0">
+                <div class="fb-save-icon u-fontSizeLarge i-save--line"></div>
                 <div class="fb-save-wrap"></div>
             </div>
         </div>
