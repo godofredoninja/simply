@@ -90,6 +90,13 @@
 .u-textUppercase {text-transform: uppercase}
 .u-textAlignCenter {text-align:center}
 
+
+.u-noWrapWithEllipsis {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
 // Margin
 .u-marginAuto { margin-left: auto; margin-right: auto;}
 .u-marginTop30 {margin-top: 30px}
@@ -136,6 +143,8 @@
 .u-flex { display: flex; }
 .u-flexCenter { align-items: center; display: flex; }
 .u-flex1 { flex: 1 1 auto; }
+.u-flex0 { flex: 0 0 auto; }
+
 .u-flexEnd {
   align-items: center;
   justify-content: flex-end;

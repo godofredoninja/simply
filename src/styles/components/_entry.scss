@@ -2,16 +2,16 @@
 .entry {
 
   &-author {
-    display: table-cell;
+    // display: table-cell;
     line-height: 1.4;
     padding-left: 10px;
-    vertical-align: middle;
+    // vertical-align: middle;
 
     a { @extend %link, %link--accent;}
   }
 
   // author avatar
-  &-avatar { display: table-cell; }
+  // &-avatar { display: table-cell; }
   &-avatar--img {
     border-radius: 50%;
     height: 40px;
