@@ -131,7 +131,6 @@
     &::before {
       @extend %u-absolute0;
       background-color: #a9a9a9;
-      content: 'a';
       line-height: 45px;
       z-index: 2;
     }

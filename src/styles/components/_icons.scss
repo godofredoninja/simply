@@ -10,18 +10,7 @@
 }
 
 [class^="i-"]::before, [class*=" i-"]::before {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'simply' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: inherit;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @extend %fonts-icons;
 }
 
 .i-save:before {

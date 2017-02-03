@@ -113,3 +113,17 @@ $xl-and-up:     "only screen and (min-width : #{$xl})";
 $sm-and-down:   "only screen and (max-width : #{$sm})";
 $md-and-down:   "only screen and (max-width : #{$md})";
 $lg-and-down:   "only screen and (max-width : #{$lg})";
+
+
+// Code Color
+$code-bg-color:   #f7f7f7;
+$font-size-code:  16px;
+$code-color:      #c7254e;
+$pre-code-color:  #37474f;
+
+// icons
+
+$i-code: "\f121";
+$i-warning: "\e002";
+$i-check: "\e86c";
+$i-star: "\e838";

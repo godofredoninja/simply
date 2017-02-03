@@ -47,14 +47,61 @@ figure {
   margin: 0;
 }
 
+// Code
+// ==========================================================================
+kbd, samp, code {
+  background: $code-bg-color;
+  border-radius: 4px;
+  color: $code-color;
+  font-family: $code-font !important;
+  font-size: $font-size-code;
+  padding: 4px 6px;
+  white-space: pre-wrap;
+}
 
+pre {
+  background-color: $code-bg-color !important;
+  border-radius: 4px;
+  font-family: $code-font !important;
+  font-size: $font-size-code;
+  margin-top: 30px;
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  word-wrap: normal;
+
+  code {
+    background: transparent;
+    color: $pre-code-color;
+    padding: 0;
+    text-shadow: 0 1px #fff;
+  }
+}
+
+// hr
+// ==========================================================================
 hr {
-  background: linear-gradient(to right, #F1F2F1 0, #b5b5b5 50%, #F1F2F1 100%);
   background: #F1F2F1;
+  background: linear-gradient(to right, #F1F2F1 0, #b5b5b5 50%, #F1F2F1 100%);
   border: 0;
   height: 1px;
   margin: 80px auto;
   max-width: 90%;
+  position: relative;
+
+  &::before {
+    @extend %fonts-icons;
+    background: #fff;
+    color: rgba(73, 55, 65, .75);
+    content: $i-code;
+    display: block;
+    font-size: 35px;
+    left: 50%;
+    padding: 0 25px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
 }
 
 img {
@@ -75,6 +122,46 @@ ol, ul {
   padding: 0;
 }
 
+
+// warning success and Note
+// ==========================================================================
+.warning {
+  background: #fbe9e7;
+  color: #d50000;
+  &::before {content: $i-warning;}
+}
+
+.note {
+  background: #e1f5fe;
+  color: #0288d1;
+  &::before {content: $i-star;}
+}
+
+.success {
+  background: #e0f2f1;
+  color: #00897b;
+  &::before {color: #00bfa5; content: $i-check;}
+}
+
+.warning, .note, .success{
+  display: block;
+  font-size: 18px !important;
+  line-height: 1.2 !important;
+  margin-top: 28px;
+  padding: 12px 24px 12px 60px;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  &::before {
+    @extend %fonts-icons;
+    float: left;
+    font-size: 24px;
+    margin-left: -36px;
+  }
+}
 
 // tag
 .tag {
