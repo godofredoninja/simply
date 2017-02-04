@@ -88,7 +88,7 @@
 .u-fontWeightBold {font-weight: 700 !important}
 
 .u-textUppercase {text-transform: uppercase}
-.u-textAlignCenter {text-align:center}
+.u-textAlignCenter {text-align: center}
 
 
 .u-noWrapWithEllipsis {
@@ -144,6 +144,13 @@
 .u-flexCenter { align-items: center; display: flex; }
 .u-flex1 { flex: 1 1 auto; }
 .u-flex0 { flex: 0 0 auto; }
+.u-flexWrap {flex-wrap: wrap}
+
+.u-flexColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .u-flexEnd {
   align-items: center;
@@ -171,7 +178,8 @@
 
 // border
 .u-borderLighter { border: 1px solid rgba(0, 0, 0, .15);}
-
+.u-round {border-radius: 50%}
+.u-borderRadius2 {border-radius: 2px}
 
 
 // card
@@ -190,6 +198,10 @@
     letter-spacing: -.004em;
     line-height: 1.58;
   }
+}
+
+.u-boxShadowBottom {
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, .05);
 }
 
 // hide global

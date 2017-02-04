@@ -115,6 +115,11 @@ img {
   }
 }
 
+i {
+  // display: inline-block;
+  vertical-align: middle;
+}
+
 ol, ul {
   list-style-image: none;
   list-style: none;
@@ -214,14 +219,14 @@ ol, ul {
   }
 }
 
-@keyframes tooltip {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, 6px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
+// @keyframes tooltip {
+//   0% {
+//     opacity: 0;
+//     transform: translate(-50%, 6px);
+//   }
+//
+//   100% {
+//     opacity: 1;
+//     transform: translate(-50%, 0);
+//   }
+// }

@@ -1,0 +1,71 @@
+.author {
+  background-color: #fff;
+  color: rgba(0, 0, 0, .6);
+  min-height: 400px;
+
+  a {
+    color: rgba(0, 0, 0, .44);
+    &:hover {
+      color: rgba(0, 0, 0, .6);
+    }
+  }
+
+  &-wrap {
+    z-index: 2;
+  }
+
+  &-avatar {
+    height: 80px;
+    margin-right: 10px;
+    width: 80px;
+  }
+
+  &-meta {
+    span {
+      display: inline-block;
+      font-size: 17px;
+      font-style: italic;
+      margin: 0 25px 16px 0;
+      opacity: .8;
+      word-wrap: break-word;
+    }
+  }
+
+  &-name { color: rgba(0,0,0,.8)}
+
+  &-bio {
+    max-width: 600px;
+    // color: rgba(0, 0, 0, .6);
+  }
+
+  &-follow a {
+    box-shadow: inset 0 0 0 2px hsla(0,0%,100%,.5);
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 10px;
+    padding: 0 16px;
+    text-shadow: none;
+
+    &:hover {
+      box-shadow: inset 0 0 0 2px #fff;
+    }
+
+  }
+
+}
+
+
+.author.has--image {
+  color: #fff !important;
+  text-shadow: 0 0 10px rgba(0, 0, 0, .33);
+
+  .author-link:hover { opacity: 1!important}
+  a,
+  .author-name { color: #fff;}
+}
+
+@media #{$md-and-down} {
+  .author-meta span {display: block;}
+}

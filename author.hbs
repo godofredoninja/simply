@@ -1,0 +1,37 @@
+{{!< default}}
+{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
+
+{{#author}}
+<section class="author u-relative u-flex u-flexWrap u-backgroundSizeCover u-boxShadowBottom {{#if cover}}has--image{{/if}}" style="background-image:url({{cover}})">
+    {{#if cover}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
+
+    <article class="author-wrap u-flexCenter u-flexColumn u-relative u-maxWidth1040 u-container u-paddingTop20 u-paddingBottom20 u-textAlignCenter">
+        <div class="author-header u-paddingBottom20 u-flex">
+            <div  class="author-avatar animated bounceInDown u-round u-backgroundSizeCover {{^if image}}no-avatar{{/if}}" style="background-image:url({{image}})" alt="{{name}}"></div>
+            <div class="author-name-wrap animated bounceIn">
+                <span class="author-title u-textUppercase u-fontSizeSmall">Author</span>
+                <h1 class="author-name u-contentTitle u-fontSizeLarger">{{name}}</h1>
+            </div>
+        </div>
+
+        {{#if bio}}<p class="author-bio u-marginAuto u-paddingBottom30" itemprop="description">{{bio}}</p>{{/if}}
+
+        <div class="author-meta u-paddingBottom30">
+            {{#if location}}<span class="author-location"><i class="i-map"></i> {{location}}</span>{{/if}}
+            {{#if website}}<span class="author-link"><i class="i-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
+            <span class="author-stats"><i class="i-rss"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+        </div>
+
+        {{!-- Author location website --}}
+        <div class="author-follow">
+            {{#if facebook}}<a class="u-textUppercase u-borderRadius2 u-fontSizeSmall" href="{{facebook_url}}" title="Facebook" target="_blank"><i class="i-facebook"></i> Facebook</a>{{/if}}
+            {{#if twitter}}<a class="u-textUppercase u-borderRadius2 u-fontSizeSmall" href="{{twitter_url}}" title="{{twitter}}" target="_blank"><i class="i-twitter"></i> Twitter</a>{{/if}}
+        </div>
+    </article>
+
+</section>
+{{/author}}
+
+
+{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+{{>"loop"}}
