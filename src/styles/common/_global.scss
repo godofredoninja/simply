@@ -168,7 +168,8 @@ ol, ul {
   }
 }
 
-// tag
+// Page Tags
+// ==========================================================================
 .tag {
   color: #fff;
   min-height: 250px;
@@ -188,8 +189,7 @@ ol, ul {
 
 
 // toltip
-
-// tooltip
+// ==========================================================================
 .with-tooltip {
   overflow: visible;
   position: relative;
@@ -221,8 +221,8 @@ ol, ul {
   }
 }
 
-
-// footer
+// Footer
+// ==========================================================================
 .footer {
   color: rgba(0, 0, 0, .44);
 
@@ -232,7 +232,8 @@ ol, ul {
   }
 }
 
-// error page
+// Error page
+// ==========================================================================
 .errorPage {
   font-family: 'Roboto Mono', monospace;
   height: 100vh;
@@ -256,5 +257,27 @@ ol, ul {
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+
+// Video Responsive
+// ==========================================================================
+.video-responsive {
+  display: block;
+  height: 0;
+  margin-top: 30px;
+  overflow: hidden;
+  padding: 0 0 56.25%;
+  position: relative;
+
+  iframe {
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
 }
