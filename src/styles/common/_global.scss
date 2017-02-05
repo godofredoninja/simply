@@ -220,3 +220,14 @@ ol, ul {
     animation: tooltip .1s ease-out both;
   }
 }
+
+
+// footer
+.footer {
+  color: rgba(0, 0, 0, .44);
+
+  a {
+    color: rgba(0, 0, 0, .6);
+    &:hover {color: rgba(0, 0, 0, .8);}
+  }
+}

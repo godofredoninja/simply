@@ -1,1 +1,8 @@
-<h1>Footer</h1>
+<footer class="footer u-fontSizeSmaller u-fontWeightSemibold u-paddingTop20 {{#is "tag, author"}}u-backgroundWhite{{/is}}">
+    <div class="u-container u-maxWidth1000">
+        <div class="footer-wrap u-paddingBottom20 u-paddingTop20 u-textAlignCenter">
+            &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a> Powered by <a href="https://ghost.org" target="_blank">Ghost</a>
+            Design with <i class="i-favorite animated infinite pulse" style="color:red;display:inline-block"></i> by <a href="https://goo.gl/Jf1tZe" target="_blank" title="Developer Web FullStack.">@GodoFredoNinja</a>
+        </div>
+    </div>
+</footer>
