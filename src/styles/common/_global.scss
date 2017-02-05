@@ -171,12 +171,14 @@ ol, ul {
 // tag
 .tag {
   color: #fff;
-  height: 250px;
+  min-height: 250px;
   z-index: 2;
+
+  &-wrap {z-index: 2;}
 
   &.not--image {
     @extend %u-text-color-darker;
-    height: auto;
+    min-height: auto;
   }
 
   &-description {
@@ -218,15 +220,3 @@ ol, ul {
     animation: tooltip .1s ease-out both;
   }
 }
-
-// @keyframes tooltip {
-//   0% {
-//     opacity: 0;
-//     transform: translate(-50%, 6px);
-//   }
-//
-//   100% {
-//     opacity: 1;
-//     transform: translate(-50%, 0);
-//   }
-// }

@@ -2,14 +2,14 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#tag}}
-<section class="u-relative u-backgroundSizeCover" style="background-image: url({{image}})">
-    <div class="u-maxWidth1040 u-container u-relative u-flexCenter tag {{^if image}}not--image {{/if}}">
-        <div class="tag-wrap u-paddingTop30 u-paddingBottom30 u-sizeFullWidth u-textAlignCenter">
-            <h1 class="tag-title u-contentTitle">{{name}}</h1>
-            {{#if description}}<p class="tag-description u-fontSizeSmall u-paddingTop10 u-marginAuto">{{description}}</p>{{/if}}
-        </div>
-    </div>
+<section class="tag u-relative u-flex u-flexWrap u-backgroundSizeCover u-textAlignCenter {{^if image}}not--image {{/if}}" style="background-image: url({{image}})">
     {{#if image}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
+
+    <div class="u-maxWidth1040 u-container tag-wrap u-paddingTop30 u-paddingBottom30 u-relative u-flexCenter u-flexCenter u-flexColumn">
+        <h1 class="tag-title u-contentTitle">{{name}}</h1>
+        {{#if description}}<p class="tag-description u-fontSizeSmall u-paddingTop10 u-marginAuto">{{description}}</p>{{/if}}
+    </div>
+
 </section>
 {{/tag}}
 
