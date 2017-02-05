@@ -231,3 +231,30 @@ ol, ul {
     &:hover {color: rgba(0, 0, 0, .8);}
   }
 }
+
+// error page
+.errorPage {
+  font-family: 'Roboto Mono', monospace;
+  height: 100vh;
+  width: 100%;
+
+  &-link {
+    left: -5px;
+    padding: 24px 60px;
+    top: -6px;
+  }
+
+  &-text {
+    margin-top: 60px;
+    white-space: pre-wrap;
+  }
+
+  &-wrap {
+    color: rgba(0, 0, 0, .4);
+    left: 50%;
+    min-width: 680px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

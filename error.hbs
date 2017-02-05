@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+        <title>Page not found - {{meta_title}}</title>
+        <meta name="description" content="{{meta_description}}" />
+        {{!-- icon  --}}
+        <link rel="shortcut icon" href="{{asset "img/icon.png"}}" />
+        <link rel="icon" sizes="192x192" href="{{asset "img/icon.png"}}" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
+    </head>
+    <body>
+        <div class="errorPage u-relative">
+            <div class="errorPage-title">
+                <a class="errorPage-link u-relative u-fontSize22 u-contentTitle u-block" href="{{@blog.url}}">{{@blog.title}}</a>
+            </div>
+            <div class="errorPage-wrap u-textAlignCenter">
+                <div id="emoji" class="errorPage-emoji" style="font-size: 150px;">(>_<)</div>
+                <div class="errorPage-text">Unfortunately, this page doesn't exist</div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
+            var emojiRandom = emoji[Math.floor(Math.random()*emoji.length)];
+            document.getElementById('emoji').innerHTML = emojiRandom;
+        </script>
+    </body>
+</html>
