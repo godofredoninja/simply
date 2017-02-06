@@ -21,9 +21,14 @@
     <a href="{{url}}" class="u-block u-paddingTop15 u-fontSize15 u-hoverColorNormal u-textColorNormal">Read more...</a>
 
     <footer class="u-clear u-paddingTop15">
-        {{!-- <div class="u-floatLeft"><a href="#" class="button button--flat">10 Compartidos</a></div> --}}
         <div class="u-floatRight">
-            <a href="#" class="button button--flat"><i class="i-comments--line"></i> 2 Cometarios</a>
+            <a href="{{url}}#post-comments" class="button button--flat">
+                {{!-- Disqus Comments Count --}}
+                <span class="disqus-comment-count simply-disqus" data-disqus-url="{{url absolute="true"}}">0</span>
+                {{!-- Facebook Comments Counts --}}
+                <span class="fb-comments-count simply-facebook" data-href="{{url absolute="true"}}">0</span> <span class="simply-facebook">Comments</span>
+            </a>
+
             <div class="button button--flat fb-save with-tooltip u-link" data-tooltip="Save to Facebook" style="padding-left:0">
                 <div class="fb-save-icon u-fontSizeLarge i-save--line"></div>
                 <div class="fb-save-wrap"></div>
