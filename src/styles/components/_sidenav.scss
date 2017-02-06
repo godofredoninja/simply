@@ -1,0 +1,52 @@
+ // Navigation Mobile
+
+.sideNav {
+  background-color: $primary-color;
+  color: rgba(0, 0, 0, .8);
+  height: 100vh;
+  padding: $header-height-mobile 20px;
+  position: fixed !important;
+  transform: translateX(100%);
+  transition: .4s;
+  will-change: transform;
+  z-index: 99;
+
+  &-menu a { padding: 10px 20px; }
+
+  &-wrap {
+    background: #eee;
+    overflow: auto;
+    padding: 20px 0;
+    top: $header-height-mobile;
+  }
+
+  &-section {
+    border-bottom: solid 1px #ddd;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  &-follow {
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+
+    a {
+      color: #fff;
+      display: inline-block;
+      height: 36px;
+      line-height: 20px;
+      margin: 0 5px 5px 0;
+      min-width: 36px;
+      padding: 8px;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .i-facebook {@extend .bg-facebook;}
+    .i-twitter {@extend .bg-twitter;}
+    .i-instagram {@extend .bg-instagram;}
+    .i-youtube {@extend .bg-youtube;}
+  }
+
+
+}

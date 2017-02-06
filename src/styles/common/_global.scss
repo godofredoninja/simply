@@ -127,6 +127,12 @@ ol, ul {
   padding: 0;
 }
 
+.main,
+.footer {transition: transform .5s ease;}
+
+@media #{$md-and-down} {
+  .main {padding-top: $header-height-mobile;}
+}
 
 // warning success and Note
 // ==========================================================================
@@ -280,4 +286,11 @@ ol, ul {
     top: 0;
     width: 100%;
   }
+}
+
+// Social Media Color
+// ==========================================================================
+@each $social-name, $color in $social-colors {
+  .c-#{$social-name} { color: $color;}
+  .bg-#{$social-name} { background-color: $color !important; }
 }

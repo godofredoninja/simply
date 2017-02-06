@@ -1,22 +1,22 @@
 {{!-- Header Template --}}
-<header class="header">
+<header class="header u-sizeFullWidth u-relative">
     <div class="header-wrap u-backgroundSizeCover u-flexCenter"  {{#is "home"}}style="background-image:url({{@blog.cover}})"{{/is}}>
         <div class="u-maxWidth1040 u-sizeFullWidth u-container">
             <div class="header-top-section u-flexCenter">
                 {{!-- header logo --}}
                 <div class="u-flex1">
-                    <a class="header-logo u-flexCenter" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
+                    <a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
                 </div>
                 <div class="u-flex1 u-flex u-flexEnd">
                     {{!-- header follow if is not home page --}}
                     {{^is "home"}}{{>"widget-follow"}}{{/is}}
 
-                    <a href="#" class="button-search--toggle button button--flat i-search u-fontSizeLarge u-hide-after-md"></a>
-                    <a href="#" style="margin-right:-12px;" class="button-nav--toggle u-hide-after-md"><span></span><span></span><span></span></a>
+                    <a href="#" class="button-search--toggle u-relative button button--flat i-search u-fontSizeLarge u-hide-after-md"></a>
+                    <a href="#" style="margin-right:-12px;" class="button-nav--toggle u-relative u-hide-after-md"><span></span><span></span><span></span></a>
                 </div>
             </div>
             {{!-- Header description for home page --}}
-            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSizeLarge">{{@blog.description}}</div>{{/if}}{{/is}}
+            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSizeLarge u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
         </div>
     </div>
 
@@ -32,4 +32,7 @@
             </div>
         </div>
     </nav>
+
+    {{!-- Side Nav for Mobile --}}
+    {{>"sidenav"}}
 </header>

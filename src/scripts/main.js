@@ -17,6 +17,15 @@ const $doc = $(document);
 
 const $postBody = $('.post-body');
 
+
+/* Menu open and close for mobile */
+$('.button-nav--toggle').on('click', (e) => {
+  e.preventDefault();
+  $('body').toggleClass('is-showNavMob');
+});
+
+
+
 $doc.on('ready', () => {
   /* Video Responsive*/
   Simply.videoResponsive($postBody);

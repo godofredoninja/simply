@@ -4,7 +4,7 @@
 .header {
   background: $primary-color;
   color: #dce6ec;
-  z-index: 100;
+  z-index: 80;
 
   a:hover {
     color: #fff;
@@ -18,6 +18,11 @@
     height: 30px;
     img {max-height: 100%; }
   }
+
+  &-logo,
+  .button-search--toggle,
+  .button-nav--toggle {z-index: 150;}
+
 
   // header description home page
   &-description {
@@ -121,5 +126,39 @@ body.is-frontpage .header-wrap {height: auto;}
     .nav ul {flex: 1 1 auto;}
   }
 
+
+}
+
+
+// Header menu
+// ==========================================================================
+@media #{$md-and-down} {
+
+  .header {
+    position: fixed;
+
+    &-wrap {
+      height: $header-height-mobile !important;
+    }
+  }
+
+  // show menu mobile
+  body.is-showNavMob {
+    overflow: hidden;
+
+    .sideNav {transform: translateX(0); }
+
+    .button-nav--toggle {
+      border: 0;
+      transform: rotate(90deg);
+
+      span:first-child { transform: rotate(45deg) translate(0, 0);}
+      span:nth-child(2) { transform: scaleX(0);}
+      span:last-child {transform: rotate(-45deg) translate(0, 0);}
+    }
+
+    .header .button-search--toggle {display: none;}
+    .main, .footer { transform: translateX(-25%);}
+  }
 
 }
