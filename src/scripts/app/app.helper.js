@@ -4,12 +4,12 @@
  */
 
 /* Return rounded and pretty value of share count. */
-// const convertNumber = (n) => {
-//   if (n >= 1000000000) return `${(n / 1000000000).toFixed(1)}G`;
-//   if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
-//   if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
-//   return n;
-// };
+const convertNumber = (n) => {
+  if (n >= 1000000000) return `${(n / 1000000000).toFixed(1)}G`;
+  if (n >= 1000000) return `${(n / 1000000).toFixed(1)}M`;
+  if (n >= 1000) return `${(n / 1000).toFixed(1)}K`;
+  return n;
+};
 
 /* search all video in <post-body>  for Responsive*/
 function simplyVideoResponsive(elem) {
@@ -33,24 +33,25 @@ function simplyVideoResponsive(elem) {
   });
 }
 
-/* Facebook Comments Counts */
-// function simplyFacebookShareCount(sharebox) {
-//   sharebox.each(() => {
-//     const url = sharebox.attr('data-url');
-//     const getURL = `https://graph.facebook.com/?id=${encodeURIComponent(url)}&callback=?`;
+/* Facebook Share Counts */
+function simplyFacebookShareCount(sharebox) {
+  sharebox.each( function () {
+    const $this = $(this);
+    const url = $this.attr('data-url');
+    const getURL = `https://graph.facebook.com/?id=${encodeURIComponent(url)}&callback=?`;
 
-//     $.getJSON(getURL, (res) => {
-//       if (res.share !== undefined) {
-//         const n = res.share.share_count;
-//         const count = convertNumber(n);
-//         sharebox.html(count);
-//       }
-//     });
-//   });
-// }
+    $.getJSON(getURL, (res) => {
+      if (res.share !== undefined) {
+        const n = res.share.share_count;
+        const count = convertNumber(n);
+        $this.html(count);
+      }
+    });
+  });
+}
 
 
 module.exports = {
   videoResponsive: simplyVideoResponsive,
-  // facebookShareCount: simplyFacebookShareCount,
+  facebookShareCount: simplyFacebookShareCount,
 };

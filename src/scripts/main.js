@@ -16,6 +16,7 @@ const $doc = $(document);
 // const $win = $(window);
 
 const $postBody = $('.post-body');
+const $shareCount = $('.share-count');
 
 
 /* Menu open and close for mobile */
@@ -29,4 +30,7 @@ $('.button-nav--toggle').on('click', (e) => {
 $doc.on('ready', () => {
   /* Video Responsive*/
   Simply.videoResponsive($postBody);
+
+  /** Share Count in facebook */
+  Simply.facebookShareCount($shareCount);
 });
