@@ -6,10 +6,10 @@
     ]
   },
   "watch": [
-    "partials/*.hbs",
+    "partials/**/*.hbs",
     "*hbs"
   ],
-  "publicPath": "",
+  "publicPath": "/",
   "devUrl": "http://localhost:2368",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

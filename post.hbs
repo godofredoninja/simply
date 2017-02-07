@@ -19,7 +19,22 @@
     </figure>
     {{/if}}
 
-    <section class="post-body u-container u-maxWidth740">{{content}}</section>
+    <section class="post-body u-container u-maxWidth740 u-relative">
+        {{content}}
+
+        {{!-- Share post --}}
+        <div class="sharePost u-absolute u-textAlignCenter u-hide-before-lg">
+            <div class="share-box">
+                <span class="share-count u-block u-fontWeightBold u-contentTitle">120</span>
+                <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSizeSmaller">SHARES</span>
+            </div>
+            <a href="#" class="i-facebook bg-facebook u-fontSize20 u-block"></a>
+            <a href="#" class="i-twitter bg-twitter u-fontSize20 u-block"></a>
+            <a href="#" class="i-reddit bg-reddit u-fontSize20 u-block"></a>
+            <a href="#" class="i-linkedin bg-linkedin u-fontSize20 u-block"></a>
+            <a href="#" class="i-pinterest bg-pinterest u-fontSize20 u-block"></a>
+        </div>
+    </section>
 
     <footer class="post-footer u-container u-maxWidth740 u-paddingTop20 u-paddingBottom20">
         {{!-- Email subscribe form at the bottom of the page --}}
@@ -52,5 +67,9 @@
 {{!-- post relative --}}
 {{>"post-related"}}
 
-{{!-- post Commets --}}
-{{#post}}{{>"post-comments"}}{{/post}}
+{{#post}}
+    {{!-- post Commets --}}
+    {{>"post-comments"}}
+    {{!-- Post Actions (next and prev post, share social media, cout share in facebook) --}}
+    {{>"post-actions"}}
+{{/post}}

@@ -22,11 +22,67 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  &--flat {
+  &--chromeless {
     border-radius: 0;
     border-width: 0;
     box-shadow: none;
+    color: rgba(0, 0, 0, .44);
+    height: auto;
+    line-height: inherit;
+    padding: 0;
     text-align: left;
+    vertical-align: baseline;
     white-space: normal;
   }
+
+  &--large {
+    font-size: 15px;
+    height: 44px;
+    line-height: 42px;
+    padding: 0 18px;
+  }
+
+  &--dark {
+    border-color: rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, .6);
+
+    &:hover {
+      border-color: rgba(0, 0, 0, .8);
+      color: rgba(0, 0, 0, .8);
+    }
+  }
 }
+
+
+
+.buttonSet {
+
+  .button--large.button--chromeless,
+  .button--large.button--link {
+    height: 44px;
+    line-height: 42px;
+  }
+
+  &>.button--chromeless:not(.button--circle) {
+    margin-right: 0;
+    padding-right: 8px;
+  }
+
+  &>.button--chromeless+.button--chromeless:not(.button--circle) {
+    margin-left: 0;
+    padding-left: 8px;
+  }
+
+  &>.button--chromeless:last-child {
+    padding-right: 0;
+  }
+}
+
+
+
+
+.button--large.button--chromeless,
+.button--large.button--link {
+  padding: 0;
+}
+

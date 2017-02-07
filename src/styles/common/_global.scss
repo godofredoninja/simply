@@ -116,7 +116,7 @@ img {
 }
 
 i {
-  // display: inline-block;
+  display: inline-block;
   vertical-align: middle;
 }
 
@@ -291,6 +291,6 @@ ol, ul {
 // Social Media Color
 // ==========================================================================
 @each $social-name, $color in $social-colors {
-  .c-#{$social-name} { color: $color;}
+  .c-#{$social-name} { color: $color !important;}
   .bg-#{$social-name} { background-color: $color !important; }
 }

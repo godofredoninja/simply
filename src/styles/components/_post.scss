@@ -131,6 +131,7 @@
     &::before {
       @extend %u-absolute0;
       background-color: #a9a9a9;
+      border-radius: 0 45px 45px 0;
       line-height: 45px;
       z-index: 2;
     }
@@ -163,4 +164,60 @@
   .u-card {
     height: 240px;
   }
+}
+
+
+// Share Post
+// ==========================================================================
+.sharePost {
+  left: -100px;
+  top: 0;
+  width: 45px;
+
+  a {
+    background-image: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 36px;
+    line-height: 20px;
+    margin: 10px auto;
+    padding: 8px;
+    text-decoration: none;
+    width: 36px;
+  }
+}
+
+// Post Actions
+// ==========================================================================
+.postActions {
+  background-color: #fff;
+  bottom: 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .44);
+  height: 44px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  transform: translateY(100%);
+  transition: transform .3s;
+  visibility: hidden;
+  z-index: 500;
+
+  &.is-visible {
+    transform: translateY(0);
+    transition-delay: 0s;
+    visibility: visible;
+  }
+
+  &-wrap {max-width: 1200px;}
+
+  .separator {
+    background: rgba(0, 0, 0, .15);
+    height: 24px;
+    margin: 0 15px;
+    width: 1px;
+  }
+}
+
+.nextPost {
+  max-width: 260px;
 }
