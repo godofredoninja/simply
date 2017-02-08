@@ -19,11 +19,9 @@
     </figure>
     {{/if}}
 
-    <section class="post-body u-container u-maxWidth740 u-relative">
-        {{content}}
-
+    <section class="post-body u-container u-maxWidth740 u-relative u-clear">
         {{!-- Share post --}}
-        <div class="sharePost u-absolute u-textAlignCenter u-hide-before-lg">
+        <div class="sharePost u-floatLeft u-textAlignCenter u-hide-before-lg">
             <div class="share-box">
                 <span class="share-count u-block u-fontWeightBold u-contentTitle" data-url="{{url absolute="true"}}">0</span>
                 <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSizeSmaller">SHARES</span>
@@ -34,6 +32,9 @@
             <a href="#" class="simply-share i-linkedin bg-linkedin u-fontSize20 u-block" data-share="linkedin" data-url="{{url absolute="true"}}"></a>
             <a href="#" class="simply-share i-pinterest bg-pinterest u-fontSize20 u-block" data-share="pinterest" data-url="{{url absolute="true"}}" data-title="{{title}}"></a>
         </div>
+
+        {{content}}
+
     </section>
 
     <footer class="post-footer u-container u-maxWidth740 u-paddingTop20 u-paddingBottom20">

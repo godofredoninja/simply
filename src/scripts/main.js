@@ -4,7 +4,7 @@
  */
 
 // import external dependencies
-// import 'sticky-kit/dist/sticky-kit';
+import 'sticky-kit/dist/sticky-kit';
 
 // import local dependencies
 import Simply from './app/app.helper';
@@ -19,6 +19,7 @@ const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
 const $share = $('.simply-share');
 const $postActions = $('.postActions');
+const $header = $('.header');
 
 
 /* Menu open and close for mobile */
@@ -47,6 +48,11 @@ $doc.on('ready', () => {
     const share = new SimplyShare($(this));
     share.share();
   });
+
+  /** sticky for Share Post and sidebar sticky */
+  $('.sharePost, .sidebar-sticky').stick_in_parent({
+    offset_top: 30,
+  })
 });
 
 
