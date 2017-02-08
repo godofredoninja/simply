@@ -8,7 +8,7 @@
 
 // import local dependencies
 import Simply from './app/app.helper';
-// import SimplyShare from './app/app.share';
+import SimplyShare from './app/app.share';
 // import './app/app.pagination';
 
 // Variables
@@ -17,6 +17,7 @@ const $doc = $(document);
 
 const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
+const $share = $('.simply-share')
 
 
 /* Menu open and close for mobile */
@@ -38,4 +39,11 @@ $doc.on('ready', () => {
 
   /** Share Count in facebook */
   Simply.facebookShareCount($shareCount);
+
+  /* Share article in Social media */
+  $share.bind('click', function (e) {
+    e.preventDefault();
+    const share = new SimplyShare($(this));
+    share.share();
+  });
 });

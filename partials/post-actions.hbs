@@ -32,10 +32,10 @@
         <div class="u-floatRight u-flex u-flexCenter">
             {{!-- post Share--}}
             <div class="postShare u-fontSize20 u-flex buttonSet">
-                <a href="#" title="Share on Facebook" class="i-facebook button button--large button--chromeless c-facebook u-fontSizeLarge"></a>
-                <a href="#" title="Share on Twitter" class="i-twitter button button--large button--chromeless c-twitter u-fontSizeLarge"></a>
-                <a href="#" title="Share on whatsapp" class="i-whatsapp button button--large button--chromeless c-whatsapp u-fontSizeLarge u-hide-after-lg"></a>
-                <a href="#" title="Share on Reddit" class="i-reddit button button--large button--chromeless c-reddit u-fontSizeLarge u-hide-before-lg"></a>
+                <a href="#" title="Share on Facebook" class="simply-share i-facebook button button--large button--chromeless c-facebook u-fontSizeLarge" data-share="facebook" data-url="{{url absolute="true"}}"></a>
+                <a href="#" title="Share on Twitter" class="simply-share i-twitter button button--large button--chromeless c-twitter u-fontSizeLarge" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}"></a>
+                <a href="#" title="Share on whatsapp" class="simply-share i-whatsapp button button--large button--chromeless c-whatsapp u-fontSizeLarge u-hide-after-lg" data-share="whatsapp" data-title="{{title}}" data-url="{{url absolute="true"}}"></a>
+                <a href="#" title="Share on Reddit" class="simply-share i-reddit button button--large button--chromeless c-reddit u-fontSizeLarge u-hide-before-lg" data-share="reddit" data-url="{{url absolute="true"}}"></a>
                 <div class="fbSave with-tooltip u-relative button button--large button--chromeless c-facebook" data-tooltip="Save to Facebook">
                     <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
                     <div class="fbSave-dropdown u-absolute u-overflowHidden u-lineHeight1"><div class="fb-save" data-uri="{{url absolute="true"}}" data-size="large"></div></div>
