@@ -294,3 +294,22 @@ ol, ul {
   .c-#{$social-name} { color: $color !important;}
   .bg-#{$social-name} { background-color: $color !important; }
 }
+
+
+// Facebook Save
+// ==========================================================================
+.fbSave {
+  &-dropdown {
+    background-color: #FFF;
+    border: 1px solid #e0e0e0;
+    bottom: 100%;
+    display: none;
+    max-width: 200px;
+    min-width: 100px;
+    padding: 8px;
+    transform: translate(-50%, 0);
+    z-index: 10;
+
+    &.is-visible {display: block; }
+  }
+}

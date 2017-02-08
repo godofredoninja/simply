@@ -25,7 +25,12 @@ $('.button-nav--toggle').on('click', (e) => {
   $('body').toggleClass('is-showNavMob');
 });
 
-
+/* Save Post in facebook*/
+$('.fbSave').on('click', function (e) {
+  e.stopPropagation();
+  $(this).find('.fbSave-dropdown').toggleClass('is-visible');
+  $doc.one('click', () => $(this).find('.fbSave-dropdown').toggleClass('is-visible'));
+});
 
 $doc.on('ready', () => {
   /* Video Responsive*/
