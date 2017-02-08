@@ -13,11 +13,12 @@ import SimplyShare from './app/app.share';
 
 // Variables
 const $doc = $(document);
-// const $win = $(window);
+const $win = $(window);
 
 const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
-const $share = $('.simply-share')
+const $share = $('.simply-share');
+const $postActions = $('.postActions');
 
 
 /* Menu open and close for mobile */
@@ -46,4 +47,17 @@ $doc.on('ready', () => {
     const share = new SimplyShare($(this));
     share.share();
   });
+});
+
+
+$win.on('scroll', function () {
+    const scrollTop = $(this).scrollTop();
+    const heightPostBody = $postBody.height();
+
+    // active or desactive Post Actions in post Sections
+    if (scrollTop < heightPostBody) {
+      $postActions.addClass('is-visible');
+    } else {
+      $postActions.removeClass('is-visible');
+    }
 });
