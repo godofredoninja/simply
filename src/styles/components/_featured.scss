@@ -12,11 +12,16 @@
     &-title {font-size: 32px !important;}
 
     &.entry2 {
-      border-left: solid 1px #fff;
-      border-right: solid 1px #fff;
+      border-left: solid 2px #fff;
+      border-right: solid 2px #fff;
     }
 
     &-image {height: 100%;}
+
+    &.first .entry-body {
+      animation-duration: 1.2s;
+      animation-name: opacity;
+    }
 
     &:not(.first) {
       flex-grow: 1;

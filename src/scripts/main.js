@@ -21,6 +21,7 @@ const $share = $('.simply-share');
 const $postActions = $('.postActions');
 const $header = $('.header');
 const $followBox = $('.follow-box');
+const $featuredPost = $('.featured');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
@@ -41,6 +42,9 @@ $('.fbSave').on('click', function (e) {
 $doc.on('ready', () => {
   /** Follow social media */
   if (typeof followSocialMedia !== 'undefined') Simply.followMe(followSocialMedia, $followBox, urlRegexp); // eslint-disable-line
+
+  /* Featured Post Animation */
+  if ($featuredPost.find('.entry').hover(function() {$featuredPost.find('.entry').removeClass('first'), $(this).addClass('first')}));
 
   /* Video Responsive*/
   Simply.videoResponsive($postBody);
