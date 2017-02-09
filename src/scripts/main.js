@@ -20,6 +20,9 @@ const $shareCount = $('.share-count');
 const $share = $('.simply-share');
 const $postActions = $('.postActions');
 const $header = $('.header');
+const $followBox = $('.follow-box');
+
+const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
 
 /* Menu open and close for mobile */
@@ -36,6 +39,9 @@ $('.fbSave').on('click', function (e) {
 });
 
 $doc.on('ready', () => {
+  /** Follow social media */
+  if (typeof followSocialMedia !== 'undefined') Simply.followMe(followSocialMedia, $followBox, urlRegexp); // eslint-disable-line
+
   /* Video Responsive*/
   Simply.videoResponsive($postBody);
 

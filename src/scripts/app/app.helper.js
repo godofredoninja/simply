@@ -50,8 +50,18 @@ function simplyFacebookShareCount(sharebox) {
   });
 }
 
+/* Follow me in my social media*/
+function SimplyFollowMe(links, box, urlRegexp) {
+  return $.each(links, (name, url) => {
+    if (typeof url === 'string' && urlRegexp.test(url)) {
+      const template = `<a title="Follow me in ${name}" href="${url}" target="_blank" class="i-${name}"></a>`;
+      box.append(template);
+    }
+  });
+}
 
 module.exports = {
   videoResponsive: simplyVideoResponsive,
   facebookShareCount: simplyFacebookShareCount,
+  followMe: SimplyFollowMe,
 };
