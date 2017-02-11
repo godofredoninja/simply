@@ -22,6 +22,7 @@ const $postActions = $('.postActions');
 const $header = $('.header');
 const $followBox = $('.follow-box');
 const $featuredPost = $('.featured');
+const $comments = $('.post-comments');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
@@ -45,6 +46,21 @@ $('.fbSave').on('click', function (e) {
   $doc.one('click', () => $(this).find('.fbSave-dropdown').toggleClass('is-visible'));
 });
 
+/* scroll link width click (ID)*/
+$('.scroll-id').on('click', function (e) {
+  e.preventDefault();
+  $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 50 }, 500, 'linear');
+});
+
+/* Disqus Comments */
+function disqusComments(shortname) {
+  const dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = `//${shortname}.disqus.com/embed.js`;
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}
+
 $doc.on('ready', () => {
   /** Follow social media */
   if (typeof followSocialMedia !== 'undefined') Simply.followMe(followSocialMedia, $followBox, urlRegexp); // eslint-disable-line
@@ -64,6 +80,9 @@ $doc.on('ready', () => {
     const share = new SimplyShare($(this));
     share.share();
   });
+
+  /* Disqys Comments */
+  if (typeof disqusShortName !== 'undefined' && $comments.length > 0) disqusComments(disqusShortName); // eslint-disable-line
 
   /** sticky for Share Post and sidebar sticky */
   $('.sharePost, .sidebar-sticky').stick_in_parent({
