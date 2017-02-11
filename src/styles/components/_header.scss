@@ -3,11 +3,11 @@
 
 .header {
   background: $primary-color;
-  color: #dce6ec;
+  color: $header-color;
   z-index: 80;
 
   a:hover {
-    color: #fff;
+    color: $header-color-hover;
   }
 
   &-wrap {
@@ -62,8 +62,9 @@
   }
 
   &-border {
-    border-left: 1px solid #dce6ec;
+    border-left: 1px solid $header-color;
     height: 24px;
+    padding-left: 20px;
   }
 }
 
@@ -83,7 +84,7 @@
   width: 48px;
 
   span {
-    background-color: #dce6ec;
+    background-color: $header-color;
     display: block;
     height: 2px;
     left: 14px;
@@ -100,6 +101,29 @@
 
 
 body.is-frontpage .header-wrap {height: auto;}
+
+
+// Search
+// ==========================================================================
+.search {
+  background-color: #eee;
+  display: none;
+  padding: 10px 0;
+
+  &.is-visible {display: block;}
+
+  input {
+    background-color: transparent;
+    border: none;
+    line-height: 40px;
+
+    &:focus { outline: 0; }
+  }
+
+  .button  {
+    color: rgba(0, 0, 0, .8) !important;
+  }
+}
 
 
 // Media Query
@@ -140,6 +164,16 @@ body.is-frontpage .header-wrap {height: auto;}
     &-wrap {
       height: $header-height-mobile !important;
     }
+  }
+
+  // Search Header
+  .search {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    z-index: 150;
+
+    form {height: $header-height-mobile; }
   }
 
   // show menu mobile

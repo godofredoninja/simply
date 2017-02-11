@@ -32,6 +32,12 @@ $('.button-nav--toggle').on('click', (e) => {
   $('body').toggleClass('is-showNavMob');
 });
 
+/* Menu open and close for mobile */
+$('.button-search--toggle').on('click', (e) => {
+  e.preventDefault();
+  $('.search').toggleClass('is-visible');
+});
+
 /* Save Post in facebook*/
 $('.fbSave').on('click', function (e) {
   e.stopPropagation();
