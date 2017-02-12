@@ -5,6 +5,7 @@
 
 // import external dependencies
 import 'sticky-kit/dist/sticky-kit';
+import 'prismjs';
 
 // import local dependencies
 import Simply from './app/app.helper';
@@ -94,7 +95,7 @@ $doc.on('ready', () => {
   /** sticky for Share Post and sidebar sticky */
   $('.sharePost, .sidebar-sticky').stick_in_parent({
     offset_top: 30,
-  })
+  });
 });
 
 

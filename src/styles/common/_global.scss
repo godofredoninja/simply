@@ -78,6 +78,17 @@ pre {
   }
 }
 
+
+code[class*=language-],
+pre[class*=language-] {
+  color: $pre-code-color;
+  line-height: 1.4;
+
+  .token.comment { opacity: .8; }
+
+}
+
+
 // hr
 // ==========================================================================
 hr {

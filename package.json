@@ -58,6 +58,7 @@
   },
   "dependencies": {
     "normalize.css": "^5.0.0",
+    "prismjs": "^1.6.0",
     "sticky-kit": "^1.1.3"
   }
 }
