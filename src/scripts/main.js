@@ -10,7 +10,7 @@ import 'prismjs';
 // import local dependencies
 import Simply from './app/app.helper';
 import SimplyShare from './app/app.share';
-// import './app/app.pagination';
+import './app/app.pagination';
 
 // Variables
 const $doc = $(document);

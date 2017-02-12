@@ -1,11 +1,26 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-<section class="u-wrap">
-    <div class="feed-entry-content">
+{{!-- featured 3 post --}}
+{{^is "paged"}}
+    {{#get "posts" include="author, tags" filter="featured:true" limit="3" as |featured|}}
+    <section class="featured u-relative">
+        <div class="featured-wrap u-absolute0 u-flex">
+            {{#foreach featured}}{{>"entry"}}{{/foreach}}
+        </div>
+    </section>
+    {{/get}}
+{{/is}}
+
+{{!-- All entry --}}
+<section class="homePage u-wrap">
+    <div class="feed-entry-content u-marginTop30 u-marginBottom15 u-maxWidth1000 u-marginAuto">
         <div class="feed-entry-wrap">
-            {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-            {{>"loop"}}
+            {{!-- This is the post loop - each post will be output using this markup --}}
+            <div class="row">{{#foreach posts}} {{>"entry"}} {{/foreach}} </div>
         </div>
     </div>
+
+    {{!-- Pagination --}}
+    {{^is "paged"}}<a href="#" class="loadMore" data-page-total="{{pagination.pages}}">Load more</a>{{else}}{{"pagination"}}{{/is}}
 </section>

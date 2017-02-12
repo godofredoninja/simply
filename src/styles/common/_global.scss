@@ -64,7 +64,7 @@ pre {
   border-radius: 4px;
   font-family: $code-font !important;
   font-size: $font-size-code;
-  margin-top: 30px;
+  margin-top: 30px !important;
   overflow: hidden;
   padding: 1rem;
   position: relative;
@@ -127,7 +127,7 @@ img {
 }
 
 i {
-  display: inline-block;
+  // display: inline-block;
   vertical-align: middle;
 }
 
@@ -323,4 +323,16 @@ ol, ul {
 
     &.is-visible {display: block; }
   }
+}
+
+// Load More
+// ==========================================================================
+.loadMore {
+  color: $primary-color;
+  display: block;
+  font-size: 15px;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding-top: 10px;
+  text-align: center;
 }
