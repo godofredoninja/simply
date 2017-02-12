@@ -23,6 +23,7 @@ const $header = $('.header');
 const $followBox = $('.follow-box');
 const $featuredPost = $('.featured');
 const $comments = $('.post-comments');
+const $videoPostFormat = $('.video-post-format');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
@@ -68,8 +69,11 @@ $doc.on('ready', () => {
   /* Featured Post Animation */
   if ($featuredPost.find('.entry').hover(function() {$featuredPost.find('.entry').removeClass('first'), $(this).addClass('first')}));
 
-  /* Video Responsive*/
-  Simply.videoResponsive($postBody);
+  /* Video Post Format */
+  if ($videoPostFormat.length > 0 ){
+     const video = $('iframe[src*="youtube.com"]')[0];
+    $videoPostFormat.find('.video-responsive').prepend(video);
+  }
 
   /** Share Count in facebook */
   Simply.facebookShareCount($shareCount);
@@ -80,6 +84,9 @@ $doc.on('ready', () => {
     const share = new SimplyShare($(this));
     share.share();
   });
+
+  /* Video Responsive*/
+  Simply.videoResponsive($postBody);
 
   /* Disqys Comments */
   if (typeof disqusShortName !== 'undefined' && $comments.length > 0) disqusComments(disqusShortName); // eslint-disable-line
