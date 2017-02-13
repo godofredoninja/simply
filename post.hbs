@@ -3,7 +3,7 @@
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<article class="post u-marginBottom40 u-marginAuto u-maxWidth1000 u-relative">
+<article class="post u-marginBottom40 u-relative">
 
     <header class="post-header u-container u-maxWidth740 u-paddingTop30">
         {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
@@ -14,11 +14,11 @@
 
     {{!-- Video Post Format --}}
     {{#has tag="#video-post-format"}}
-        <div class="video-post-format"><div class="video-responsive"></div></div>
+        <div class="video-post-format u-marginAuto u-maxWidth1000"><div class="video-responsive"></div></div>
     {{else}}
         {{!-- Figure --}}
         {{#if image}}
-            <figure class="post-image u-paddingTop30 u-block">
+            <figure class="post-image u-paddingTop30 u-block u-marginAuto {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
                 <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}" />
             </figure>
         {{/if}}

@@ -113,12 +113,14 @@
   }
 
   .twitter-tweet,
-  iframe:not(.video-responsive iframe)  {
+  iframe {
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px !important;
   }
+
+  .video-responsive iframe { margin-top: 0 !important}
 
 }
 
@@ -281,6 +283,12 @@
     h4 {
       font-size: 22px;
       margin-top: 22px;
+    }
+
+    q {
+      font-size: 22px !important;
+      letter-spacing: -.008em !important;
+      line-height: 1.4 !important;
     }
 
     &> p:first-of-type:first-letter {

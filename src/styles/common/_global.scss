@@ -144,6 +144,20 @@ mark {
   color: rgba(0, 0, 0, .8);
 }
 
+q {
+  color: rgba(0, 0, 0, .44);
+  display: block;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.014em;
+  line-height: 1.48;
+  padding-left: 50px;
+  padding-top: 15px;
+  text-align: left;
+
+  &:before, &:after {display: none;}
+}
 
 .main,
 .footer {transition: transform .5s ease; }
