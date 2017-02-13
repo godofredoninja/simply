@@ -1,0 +1,25 @@
+{{!< default}}
+
+{{!-- Everything inside the #post tags pulls data from the post --}}
+{{#post}}
+
+<article class="post u-marginBottom40 u-relative">
+
+    <header class="post-header u-container u-maxWidth740 u-paddingTop30">
+        <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-paddingBottom2 u-fontWeightBold u-md-fontSizeLarger">{{title}}</h1>
+    </header>
+
+    {{!-- Figure --}}
+    {{#if image}}
+        <figure class="post-image u-paddingTop30 u-block u-marginAuto u-maxWidth1000">
+            <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}" />
+        </figure>
+    {{/if}}
+
+    <section class="post-body u-container u-maxWidth740 u-relative u-clear">
+        {{content}}
+    </section>
+
+</article>
+
+{{/post}}
