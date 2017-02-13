@@ -106,11 +106,25 @@ body.is-frontpage .header-wrap {height: auto;}
 // Search
 // ==========================================================================
 .search {
-  background-color: #eee;
   display: none;
-  padding: 10px 0;
+
+  a {
+    padding: 9px 0;
+    &:hover {color: #999 !important}
+  }
+  &-wrap { background-color: #eee; }
+
+  &-results {
+    border-top: solid 1px #e2e2e2;
+    display: none;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 0 30px 20px;
+  }
 
   &.is-visible {display: block;}
+
+  form {padding: 18px 0 15px;}
 
   input {
     background-color: transparent;
@@ -173,7 +187,14 @@ body.is-frontpage .header-wrap {height: auto;}
     top: 0;
     z-index: 150;
 
-    form {height: $header-height-mobile; }
+    &-results {
+      padding: 0 0 10px;
+    }
+
+    form {
+      height: $header-height-mobile;
+      padding: 10px 0 5px;
+    }
   }
 
   // show menu mobile

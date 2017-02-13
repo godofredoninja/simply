@@ -42,10 +42,11 @@
       vertical-align: middle;
     }
 
-    .i-facebook {@extend .bg-facebook;}
-    .i-twitter {@extend .bg-twitter;}
-    .i-instagram {@extend .bg-instagram;}
-    .i-youtube {@extend .bg-youtube;}
+    @each $social-name, $color in $social-colors {
+      .i-#{$social-name} {
+        @extend .bg-#{$social-name};
+      }
+    }
   }
 
 

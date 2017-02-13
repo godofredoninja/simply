@@ -64,7 +64,7 @@
 .u-fontSizeSmallest {font-size: 12px}
 
 @media #{$md-and-down} {
-  .u-sm-fontSizeBase {font-size: 18px}
+  .u-md-fontSizeBase {font-size: 18px !important}
   .u-md-fontSizeLarger {font-size: 32px}
 }
 

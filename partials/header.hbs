@@ -38,12 +38,13 @@
 
     {{!-- Search --}}
     <div class="search u-absolute u-sizeFullWidth">
-        <div class="u-maxWidth1040 u-container">
-            <div class="search-wrap">
+        <div class="u-maxWidth1040 u-marginAuto">
+            <div class="search-wrap u-paddingRight20 u-paddingLeft20">
                 <form class="u-flex u-flexCenter">
-                    <input id="search-field" class="u-sizeFullWidth" type="text" placeholder="Search..." />
+                    <input id="search-field" class="u-sizeFullWidth u-md-fontSizeBase u-fontSizeLarge" type="text" placeholder="Search..." />
                     <a href="#" class="button-search--toggle button button--chromeless u-fontSize28 i-close" style="margin-right:-12px;"></a>
                 </form>
+                <div id="search-results" class="search-results"></div>
             </div>
         </div>
     </div>

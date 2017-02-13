@@ -6,6 +6,8 @@
 // import external dependencies
 import 'sticky-kit/dist/sticky-kit';
 import 'prismjs';
+// import 'lunr';
+import './lib/jquery.ghostHunter'; // eslint-disable-line
 
 // import local dependencies
 import Simply from './app/app.helper';
@@ -25,6 +27,7 @@ const $followBox = $('.follow-box');
 const $featuredPost = $('.featured');
 const $comments = $('.post-comments');
 const $videoPostFormat = $('.video-post-format');
+const $seachInput = $('#search-field');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
@@ -39,6 +42,7 @@ $('.button-nav--toggle').on('click', (e) => {
 $('.button-search--toggle').on('click', (e) => {
   e.preventDefault();
   $('.search').toggleClass('is-visible');
+  $seachInput.focus();
 });
 
 /* Save Post in facebook*/
@@ -62,6 +66,7 @@ function disqusComments(shortname) {
   dsq.src = `//${shortname}.disqus.com/embed.js`;
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }
+
 
 $doc.on('ready', () => {
   /** Follow social media */
@@ -95,6 +100,18 @@ $doc.on('ready', () => {
   /** sticky for Share Post and sidebar sticky */
   $('.sharePost, .sidebar-sticky').stick_in_parent({
     offset_top: 30,
+  });
+
+  /* Search */
+  $seachInput
+    .blur(() => setTimeout(() => $('.search').removeClass('is-visible'), 200))
+    .keyup(() => $('.search-results').css('display', 'block'))
+    .ghostHunter({
+      results: '#search-results',
+      zeroResultsInfo: false,
+      displaySearchInfo: false,
+      result_template: `<a class="u-block u-textColorDarker u-fontSizeBase" href="{{link}}">{{title}}</a>`,
+      onKeyUp: true,
   });
 });
 
