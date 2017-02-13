@@ -17,7 +17,7 @@
         {{#if bio}}<p class="author-bio u-marginAuto u-paddingBottom30" itemprop="description">{{bio}}</p>{{/if}}
 
         <div class="author-meta u-paddingBottom30">
-            {{#if location}}<span class="author-location"><i class="i-map"></i> {{location}}</span>{{/if}}
+            {{#if location}}<span class="author-location"><i class="i-location"></i> {{location}}</span>{{/if}}
             {{#if website}}<span class="author-link"><i class="i-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
             <span class="author-stats"><i class="i-rss"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
         </div>

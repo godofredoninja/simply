@@ -63,22 +63,22 @@
 .u-fontSizeSmaller {font-size: 14px}
 .u-fontSizeSmallest {font-size: 12px}
 
-@media (max-width: 991px) {
+@media #{$md-and-down} {
   .u-sm-fontSizeBase {font-size: 18px}
-  .u-sm-fontSizeLarger {font-size: 32px}
+  .u-md-fontSizeLarger {font-size: 32px}
 }
 
-@media (max-width: 767px) {
-  .u-xs-fontSizeBase {font-size: 18px}
-  .u-xs-fontSize13 {font-size: 13px}
-  .u-xs-fontSizeSmaller {font-size: 14px}
-  .u-xs-fontSizeSmall {font-size: 16px}
-  .u-xs-fontSize22 {font-size: 22px}
-  .u-xs-fontSizeLarge {font-size: 24px}
-  .u-xs-fontSize40 {font-size: 40px}
-  .u-xs-fontSizeLarger {font-size: 32px}
-  .u-xs-fontSizeSmallest {font-size: 12px}
-}
+// @media (max-width: 767px) {
+//   .u-xs-fontSizeBase {font-size: 18px}
+//   .u-xs-fontSize13 {font-size: 13px}
+//   .u-xs-fontSizeSmaller {font-size: 14px}
+//   .u-xs-fontSizeSmall {font-size: 16px}
+//   .u-xs-fontSize22 {font-size: 22px}
+//   .u-xs-fontSizeLarge {font-size: 24px}
+//   .u-xs-fontSize40 {font-size: 40px}
+//   .u-xs-fontSizeLarger {font-size: 32px}
+//   .u-xs-fontSizeSmallest {font-size: 12px}
+// }
 
 // font weight
 .u-fontWeightThin {font-weight: 300}

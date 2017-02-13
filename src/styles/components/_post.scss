@@ -61,19 +61,59 @@
     margin-top: 28px;
   }
 
-  ul,
-  ol {
-    font-size: 21px;
-    list-style: disc;
-    margin-top: 30px;
-    padding-left: 40px;
-    li {line-height: 1.58;}
+  &> p:first-of-type:first-letter {
+    float: left;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: .83;
+    margin-bottom: -.08em;
+    margin-left: -5px;
+    margin-right: 7px;
+    padding-top: 7px;
+    text-transform: uppercase;
   }
 
-  ol {list-style: decimal;}
+  ul,
+  ol {
+    counter-reset: post;
+    font-family: $secundary-font;
+    font-size: 21px;
+    margin-top: 20px;
+
+    li {
+      letter-spacing: -.003em;
+      line-height: 1.58;
+      margin-bottom: 14px;
+      margin-left: 30px;
+
+      &::before {
+        box-sizing: border-box;
+        display: inline-block;
+        margin-left: -78px;
+        position: absolute;
+        text-align: right;
+        width: 78px;
+      }
+    }
+  }
+
+  ul li::before {
+    content: '•';
+    font-size: 16.8px;
+    padding-right: 15px;
+    padding-top: 4px;
+  }
+
+  ol li::before {
+    content: counter(post) ".";
+    counter-increment: post;
+    padding-right: 12px;
+  }
 
   .twitter-tweet,
-  iframe {
+  iframe:not(.video-responsive iframe)  {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -220,4 +260,40 @@
 
 .nextPost {
   max-width: 260px;
+}
+
+
+
+@media #{$md-and-down} {
+
+  .post-body {
+
+    h2 {
+      font-size: 32px;
+      margin-top: 26px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-top: 28px;
+    }
+
+    h4 {
+      font-size: 22px;
+      margin-top: 22px;
+    }
+
+    &> p:first-of-type:first-letter {
+      font-size: 54.85px;
+      margin-left: -4px;
+      margin-right: 6px;
+      padding-top: 3.5px;
+    }
+
+    ol , ul, p {
+      font-size: 18px;
+      letter-spacing: -.004em;
+      line-height: 1.58;
+    }
+  }
 }

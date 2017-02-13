@@ -28,7 +28,7 @@
     {{>"header"}}
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-    <main class="main {{#is "tag, author"}}u-backgroundWhite{{/is}}">{{{body}}}</main>
+    <main class="main u-overflowHidden {{#is "tag, author"}}u-backgroundWhite{{/is}}">{{{body}}}</main>
 
     {{!-- Footer Content --}}
     {{>"footer"}}
@@ -40,6 +40,9 @@
     {{ghost_foot}}
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>
+
+    {{!-- Loandig Bar --}}
+    <div class="loadingBar"></div>
 
     {{!--  Font Roboto  && Roboto Mono --}}
     <script type="text/javascript">WebFontConfig ={google:{families:['Droid+Serif:400,700','Source+Code+Pro','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src=('https:'==document.location.protocol?'https':'http')+'://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>

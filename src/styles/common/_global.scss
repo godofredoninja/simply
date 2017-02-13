@@ -138,8 +138,15 @@ ol, ul {
   padding: 0;
 }
 
+mark {
+  background-color: transparent !important;
+  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
+  color: rgba(0, 0, 0, .8);
+}
+
+
 .main,
-.footer {transition: transform .5s ease;}
+.footer {transition: transform .5s ease; }
 
 @media #{$md-and-down} {
   .main {padding-top: $header-height-mobile;}
@@ -168,7 +175,7 @@ ol, ul {
 .warning, .note, .success{
   display: block;
   font-size: 18px !important;
-  line-height: 1.2 !important;
+  line-height: 1.58 !important;
   margin-top: 28px;
   padding: 12px 24px 12px 60px;
 
@@ -182,6 +189,7 @@ ol, ul {
     float: left;
     font-size: 24px;
     margin-left: -36px;
+    margin-top: -5px;
   }
 }
 
@@ -335,4 +343,23 @@ ol, ul {
   max-width: 1000px;
   padding-top: 10px;
   text-align: center;
+}
+
+
+.loadingBar {
+  background: #48e79a;
+  display: none;
+  height: 2px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  z-index: 800;
+}
+
+.is-loading .loadingBar {
+  animation-delay: .8s;
+  animation: loading-bar 1s ease-in-out infinite;
+  display: block;
 }

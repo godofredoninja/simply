@@ -74,3 +74,10 @@
   0% {opacity: 0; transform: translate(-50%, 6px);}
   100% {opacity: 1; transform: translate(-50%, 0);}
 }
+
+@keyframes loading-bar {
+  0% {transform: translateX(-100%)}
+  40% {transform: translateX(0)}
+  60% {transform: translateX(0)}
+  100% {transform: translateX(100%)}
+}

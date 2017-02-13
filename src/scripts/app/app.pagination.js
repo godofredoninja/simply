@@ -38,6 +38,7 @@ $(document).on('ready', () => {
           url: `${paginationUrl}page/${paginationNumber}`,
           beforeSend: () => {
             $win.off('scroll', activeScroll);
+            $('body').addClass('is-loading');
             $btnLoadMore.text('Loading...');
           },
           success: (data) => {
@@ -48,6 +49,9 @@ $(document).on('ready', () => {
             paginationNumber += 1;
 
             $win.on('scroll', activeScroll);
+          },
+          complete: () => {
+            setTimeout(() => {$('body').removeClass('is-loading');}, 700);
           },
         });
 
