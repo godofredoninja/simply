@@ -5,9 +5,10 @@
 
 // import external dependencies
 import 'sticky-kit/dist/sticky-kit';
-import 'prismjs';
+import Prism from 'prismjs';
+import 'prismjs/plugins/autoloader/prism-autoloader';
 // import 'lunr';
-import './lib/jquery.ghostHunter'; // eslint-disable-line
+import './lib/jquery.ghostHunter';
 
 // import local dependencies
 import Simply from './app/app.helper';
@@ -112,7 +113,10 @@ $doc.on('ready', () => {
       displaySearchInfo: false,
       result_template: `<a class="u-block u-textColorDarker u-fontSizeBase" href="{{link}}">{{title}}</a>`,
       onKeyUp: true,
-  });
+    });
+
+  /* Prism code syntax autoloader */
+  Prism.plugins.autoloader.languages_path = '/assets/scripts/prism-components/';
 });
 
 
