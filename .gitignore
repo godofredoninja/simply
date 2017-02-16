@@ -473,4 +473,10 @@ __pycache__/
 
 # End of https://www.gitignore.io/api/node,phpstorm,sas,sass,sublimetext,visualstudio,webstorm
 
+
+# For Branch master
 .sass-lint.yml
+.eslintrc
+.editorconfig
+src
+yarn.lock
