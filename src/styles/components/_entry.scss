@@ -16,7 +16,7 @@
     height: 40px;
     width: 40px;
 
-    &.no-avatar { background-image: url('../../images/avatar.png')}
+    &.no-avatar { background-image: url('../images/avatar.png') !important}
   }
 
   // not has image

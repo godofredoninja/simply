@@ -9,7 +9,7 @@
     "partials/**/*.hbs",
     "*hbs"
   ],
-  "publicPath": "",
+  "publicPath": "/content/themes/simply",
   "devUrl": "http://localhost:2368",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",

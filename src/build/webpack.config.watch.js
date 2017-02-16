@@ -11,7 +11,6 @@ module.exports = {
   devtool: '#cheap-module-source-map',
   stats: false,
   plugins: [
-    // new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
