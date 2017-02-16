@@ -1,12 +1,11 @@
 <aside class="sidebar col s12 u-hide-before-md">
 
     {{!-- Sidebar Content Optional --}}
-    <div class="sidebar-items u-marginBottom30">
-        <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">Bienvenidos</h3>
-        <p class="u-textColorDarker u-fontSize15 u-marginBottom10">
-            It’s time to get more from what you read. Find and share real perspectives about topics that matter today.
-        </p>
-    </div>
+
+    {{!-- <div class="sidebar-items u-marginBottom30">
+        <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
+        <p class="u-textColorDarker u-fontSize15 u-marginBottom10">.. your description or content ..</p>
+    </div> --}}
 
     {{!-- Add Post Recents --}}
     {{#get "posts" limit="5" as |recents|}}
@@ -26,14 +25,15 @@
     {{/get}}
 
     {{!-- Add your sticky content inside this box --}}
-    <div class="sidebar-sticky">
 
-        {{!-- this is Book  --}}
+    {{!-- <div class="sidebar-sticky">
+
+        <!-- this is Book  -->
         <div class="sidebar-items u-marginBottom30"> <!--Open Book -->
-            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
-            <p class="u-textColorDarker u-fontSize15 u-marginBottom10"> .. your Content .. </p>
+            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title sticky ..</h3>
+            <p class="u-textColorDarker u-fontSize15 u-marginBottom10"> .. your Content sticky .. </p>
         </div> <!-- close Book -->
 
-    </div>
+    </div> --}}
 
 </aside>
