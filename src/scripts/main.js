@@ -74,7 +74,7 @@ $doc.on('ready', () => {
   if (typeof followSocialMedia !== 'undefined') Simply.followMe(followSocialMedia, $followBox, urlRegexp); // eslint-disable-line
 
   /* Featured Post Animation */
-  if ($featuredPost.find('.entry').hover(function() {$featuredPost.find('.entry').removeClass('first'), $(this).addClass('first')}));
+  // if ($featuredPost.find('.entry').hover(function() {$featuredPost.find('.entry').removeClass('first'), $(this).addClass('first')}));
 
   /* Video Post Format */
   if ($videoPostFormat.length > 0 ){

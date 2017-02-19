@@ -6,6 +6,7 @@
     ]
   },
   "watch": [
+    "src/scripts/**/*.js",
     "partials/**/*.hbs",
     "*hbs"
   ],
