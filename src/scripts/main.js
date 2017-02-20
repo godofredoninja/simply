@@ -19,6 +19,7 @@ import './app/app.pagination';
 const $doc = $(document);
 const $win = $(window);
 
+const $pageUrl = $('body').attr('data-page');
 const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
 const $share = $('.simply-share');
@@ -111,12 +112,12 @@ $doc.on('ready', () => {
       results: '#search-results',
       zeroResultsInfo: false,
       displaySearchInfo: false,
-      result_template: `<a class="u-block u-textColorDarker u-fontSizeBase" href="{{link}}">{{title}}</a>`,
+      result_template: `<a class="u-block u-textColorDarker u-fontSizeBase" href="${$pageUrl}{{link}}">{{title}}</a>`,
       onKeyUp: true,
     });
 
   /* Prism code syntax autoloader */
-  Prism.plugins.autoloader.languages_path = '/assets/scripts/prism-components/';
+  Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
 
 

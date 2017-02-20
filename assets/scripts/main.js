@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "3673156cbb3c377e85a9"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "75e7f4ef96a4691f7aba"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -997,6 +997,7 @@ module.exports = Html5Entities;
 var $doc = $(document);
 var $win = $(window);
 
+var $pageUrl = $('body').attr('data-page');
 var $postBody = $('.post-body');
 var $shareCount = $('.share-count');
 var $share = $('.simply-share');
@@ -1091,12 +1092,12 @@ $doc.on('ready', function () {
       results: '#search-results',
       zeroResultsInfo: false,
       displaySearchInfo: false,
-      result_template: "<a class=\"u-block u-textColorDarker u-fontSizeBase\" href=\"{{link}}\">{{title}}</a>",
+      result_template: ("<a class=\"u-block u-textColorDarker u-fontSizeBase\" href=\"" + $pageUrl + "{{link}}\">{{title}}</a>"),
       onKeyUp: true,
     });
 
   /* Prism code syntax autoloader */
-  __WEBPACK_IMPORTED_MODULE_1_prismjs___default.a.plugins.autoloader.languages_path = '/assets/scripts/prism-components/';
+  __WEBPACK_IMPORTED_MODULE_1_prismjs___default.a.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
 
 
