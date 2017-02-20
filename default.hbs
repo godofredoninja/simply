@@ -18,12 +18,12 @@
     <link rel="icon" sizes="192x192" href="{{asset "images/icon.png"}}" />
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "styles/main_4f17f508.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag{{/is}}{{#is "author"}}is-author{{/is}}">
+<body class="{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag{{/is}}{{#is "author"}}is-author{{/is}}" data-page="{{@blog.url}}">
 
     {{!-- Header Content --}}
     {{>"header"}}
@@ -40,7 +40,7 @@
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
     {{!-- The main JavaScript file for Casper --}}
-    <script type="text/javascript" src="{{asset "scripts/main_4f17f508.js"}}"></script>
+    <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>
 
     {{!-- Loandig Bar --}}
     <div class="loadingBar"></div>
