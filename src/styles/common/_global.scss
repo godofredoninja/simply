@@ -92,26 +92,21 @@ pre[class*=language-] {
 // hr
 // ==========================================================================
 hr {
-  background: #F1F2F1;
-  background: linear-gradient(to right, #F1F2F1 0, #b5b5b5 50%, #F1F2F1 100%);
   border: 0;
-  height: 1px;
-  margin: 80px auto;
-  max-width: 90%;
-  position: relative;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
 
   &::before {
-    @extend %fonts-icons;
-    background: #fff;
-    color: rgba(73, 55, 65, .75);
-    content: $i-code;
-    display: block;
-    font-size: 35px;
-    left: 50%;
-    padding: 0 25px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    color: rgba(0, 0, 0, .6);
+    content: '...';
+    display: inline-block;
+    font-family: $primary-font;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: .6em;
+    position: relative;
+    top: -25px;
   }
 }
 
