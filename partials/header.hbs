@@ -11,7 +11,7 @@
                     {{!-- header follow if is not home page --}}
                     {{^is "home"}}{{>"widget-follow"}}{{/is}}
 
-                    <a href="#" class="button-search--toggle u-relative button button--chromeless i-search u-fontSizeLarge u-hide-after-md"></a>
+                    <a href="#" class="button-search--open u-relative button button--chromeless i-search u-fontSizeLarge u-hide-after-md"></a>
                     <a href="#" style="margin-right:-12px;" class="button-nav--toggle u-relative u-hide-after-md"><span></span><span></span><span></span></a>
                 </div>
             </div>
@@ -26,7 +26,7 @@
             <div class="nav u-flex u-flexCenter">
                 {{navigation}}
                 {{^is "home"}}<span class="nav-border"></span>{{/is}}
-                <a href="#" class="button-search--toggle button button--chromeless u-fontSizeLarge i-search"></a>
+                <a href="#" class="button-search--open button button--chromeless u-fontSizeLarge i-search"></a>
                 {{!-- nav follow active is home page --}}
                 {{#is "home"}}{{>"widget-follow"}}{{/is}}
             </div>
@@ -35,17 +35,4 @@
 
     {{!-- Side Nav for Mobile --}}
     {{>"sidenav"}}
-
-    {{!-- Search --}}
-    <div class="search u-absolute u-sizeFullWidth">
-        <div class="u-maxWidth1040 u-marginAuto">
-            <div class="search-wrap u-paddingRight20 u-paddingLeft20">
-                <form class="u-flex u-flexCenter">
-                    <input id="search-field" class="u-sizeFullWidth u-md-fontSizeBase u-fontSizeLarge" type="text" placeholder="Search..." />
-                    <a href="#" class="button-search--toggle button button--chromeless u-fontSize28 i-close" style="margin-right:-12px;"></a>
-                </form>
-                <div id="search-results" class="search-results"></div>
-            </div>
-        </div>
-    </div>
 </header>

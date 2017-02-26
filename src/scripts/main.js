@@ -40,11 +40,17 @@ $('.button-nav--toggle').on('click', (e) => {
   $('body').toggleClass('is-showNavMob');
 });
 
-/* Menu open and close for mobile */
-$('.button-search--toggle').on('click', (e) => {
+/* Search Open */
+$('.button-search--open').on('click', (e) => {
   e.preventDefault();
-  $('.search').toggleClass('is-visible');
+  $('body').addClass('is-search');
   $seachInput.focus();
+});
+
+/* Search Close */
+$('.button-search--close').on('click', (e) => {
+  e.preventDefault();
+  $('body').removeClass('is-search');
 });
 
 /* Save Post in facebook*/
@@ -104,15 +110,19 @@ $doc.on('ready', () => {
     offset_top: 30,
   });
 
+   /* Search Template */
+  const searchTemplate = `
+    <a class="u-block" href="${$pageUrl}{{link}}">
+      <span class="u-contentTitle u-fontSizeBase">{{title}}</span>
+      <span class="u-block u-fontSizeSmaller u-textColorNormal u-paddingTop5">{{pubDate}}</span>
+    </a>`;
+
   /* Search */
-  $seachInput
-    .blur(() => setTimeout(() => $('.search').removeClass('is-visible'), 200))
-    .keyup(() => $('.search-results').css('display', 'block'))
-    .ghostHunter({
-      results: '#search-results',
-      zeroResultsInfo: false,
-      displaySearchInfo: false,
-      result_template: `<a class="u-block u-textColorDarker u-fontSizeBase" href="${$pageUrl}{{link}}">{{title}}</a>`,
+  $seachInput.ghostHunter({
+      results: '#searchResults',
+      zeroResultsInfo: true,
+      info_template: '<p class="u-paddingBottom20 u-fontSize15">Showing {{amount}} results</p>',
+      result_template: searchTemplate,
       onKeyUp: true,
     });
 
