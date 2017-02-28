@@ -478,5 +478,5 @@ __pycache__/
 .sass-lint.yml
 .eslintrc
 .editorconfig
-src
+src/
 yarn.lock

@@ -29,10 +29,13 @@
     {{>"header"}}
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-    <main class="main u-overflowHidden {{#is "tag, author"}}u-backgroundWhite{{/is}}">{{{body}}}</main>
+    <main class="main {{#is "tag, author"}}u-backgroundWhite{{/is}}">{{{body}}}</main>
 
     {{!-- Footer Content --}}
     {{>"footer"}}
+
+    {{!-- Search box --}}
+    {{>"search"}}
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>

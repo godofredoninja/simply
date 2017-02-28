@@ -1,0 +1,13 @@
+{{!-- Search --}}
+<div class="search u-absolute0 u-sizeFullWidth">
+    <header class="search-header u-flex u-flexCenter">
+        <a href="{{@blog.url}}" class="u-contentTitle u-fontSize20 u-textUppercase u-flex1">{{@blog.title}}</a>
+        <a href="#" class="button-search--close u-relative button button--large button--chromeless i-close u-fontSizeLarge"></a>
+    </header>
+
+    <form action="" class="search-form u-relative u-sizeFullWidth u-marginAuto u-marginBottom20">
+        <input id="search-field" class="u-sizeFullWidth u-md-fontSizeBase u-fontSize40 u-fontWeightSemibold" type="text" placeholder="Search..." />
+    </form>
+
+    <div id="searchResults" class="search-results u-marginAuto u-sizeFullWidth"></div>
+</div>
