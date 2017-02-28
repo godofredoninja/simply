@@ -158,7 +158,10 @@ q {
 .footer {transition: transform .5s ease; }
 
 @media #{$md-and-down} {
-  .main {padding-top: $header-height-mobile;}
+  .main {
+    overflow: hidden;
+    padding-top: $header-height-mobile;
+  }
 }
 
 // warning success and Note

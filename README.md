@@ -35,7 +35,6 @@ You can see a demo in my [blog](http://bit.ly/GodoFredoNinja-blog).
 - Related Articles (3 articles)
 - Video Post Format => add tag `#video-post-format`
 - Image post Format => add tag `#image-post-format`
-- 3 articles featured in the home page
 - 5 articles latest posts in the (author - tag) section sidebar
 - Previous and next button in the Post
 - Has button to save the link on facebook
@@ -47,7 +46,7 @@ You can see a demo in my [blog](http://bit.ly/GodoFredoNinja-blog).
 - YouTube, Vimeo, kickstarter -> Video Responsive
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
-> **To have the best design is recommended to have 14 articles per page.**
+> **To have the best design is recommended to have 12 articles per page.**
 
 ## Simply Support for Web Browsers
 Mapache supports the following web [browsers](http://caniuse.com/#search=flexbox)
@@ -118,6 +117,7 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 - [Prismjs](http://prismjs.com/)
 - [sticky-kit](https://github.com/leafo/sticky-kit)
 - [lunr.js](https://github.com/olivernn/lunr.js)
+- [zoom.js](https://github.com/fat/zoom.js/)
 - [Fonts](https://fonts.google.com/?selection.family=Droid+Serif:400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Droid+Serif)
 
 ## Copyright & License

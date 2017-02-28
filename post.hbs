@@ -19,7 +19,7 @@
         {{!-- Figure --}}
         {{#if image}}
             <figure class="post-image u-paddingTop30 u-block u-marginAuto {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
-                <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}" />
+                <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}" {{^has tag="#image-post-format"}}data-action="zoom"{{/has}}/>
             </figure>
         {{/if}}
     {{/has}}

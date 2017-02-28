@@ -8,6 +8,9 @@
 @import "~normalize.css/normalize";
 @import "~prismjs/themes/prism";
 
+// import lib
+@import "lib/zoom";
+
 // common
 @import "common/global";
 @import "common/typography";

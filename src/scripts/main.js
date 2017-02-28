@@ -7,7 +7,9 @@
 import 'sticky-kit/dist/sticky-kit';
 import Prism from 'prismjs';
 import 'prismjs/plugins/autoloader/prism-autoloader';
-// import 'lunr';
+
+import './lib/zoom';
+import './lib/transition';
 import './lib/jquery.ghostHunter';
 
 // import local dependencies
@@ -24,9 +26,7 @@ const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
 const $share = $('.simply-share');
 const $postActions = $('.postActions');
-const $header = $('.header');
 const $followBox = $('.follow-box');
-const $featuredPost = $('.featured');
 const $comments = $('.post-comments');
 const $videoPostFormat = $('.video-post-format');
 const $seachInput = $('#search-field');
@@ -82,6 +82,9 @@ $doc.on('ready', () => {
 
   /* Featured Post Animation */
   // if ($featuredPost.find('.entry').hover(function() {$featuredPost.find('.entry').removeClass('first'), $(this).addClass('first')}));
+
+  /* add atribute for Zoom img */
+  $postBody.find('img').attr('data-action', 'zoom');
 
   /* Video Post Format */
   if ($videoPostFormat.length > 0 ){
@@ -142,3 +145,5 @@ $win.on('scroll', function () {
       $postActions.removeClass('is-visible');
     }
 });
+
+
