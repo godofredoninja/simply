@@ -28,26 +28,33 @@
 
 // entry Global
 .entry.u-card {
-  .entry-image--link {
+  .entry-image {
     max-height: 240px;
     max-width: 360px;
   }
 }
 
+// Entry or post (author and tag) page
+// ==========================================================================
+
 // if post is featured
 .entry.entry--featured {
   .entry-body { display: flex; flex-direction: column;}
-  .entry-image--link {max-width: 100%; max-height: 185px;}
+
   .entry-image {
+    height: 200px;
     margin-bottom: 20px;
     margin-top: 5px;
+    max-width: 100%;
     order: -1;
   }
 
-  .entry-img {
+  .entry-image--link {
     left: 50%;
+    position: absolute;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 
 }

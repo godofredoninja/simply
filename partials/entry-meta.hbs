@@ -7,8 +7,9 @@
     {{/author}}
     <div class="entry-author u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}{{#is "post"}}u-fontSizeSmall{{else}}u-fontSizeSmaller{{/is}}{{/is}}">
 
-        {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} <span>in</span> {{tags limit="1"}}
+        {{#author}}<a href="{{url}}">{{name}}</a>{{/author}} {{#if tags}}<span>in</span> {{tags limit="1"}}{{/if}}
 
+        {{!-- If it is on the article page add the author's description --}}
         {{#is "post"}}{{#if author.bio}}
         <div class="u-block u-paddingBottom2 u-fontSizeSmaller u-noWrapWithEllipsis" style="padding-top:2px;">{{{author.bio}}}</div>
         {{/if}}{{/is}}

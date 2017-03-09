@@ -1,7 +1,13 @@
 {{!-- Header Template --}}
 <header class="header u-sizeFullWidth u-relative">
-    <div class="header-wrap u-backgroundSizeCover u-flexCenter"  {{#is "home"}}style="background-image:url({{@blog.cover}})"{{/is}}>
-        <div class="u-maxWidth1040 u-sizeFullWidth u-container">
+    <div class="header-wrap u-flexCenter u-relative">
+        {{!-- background dark if home have image --}}
+        {{#is "home"}} {{#if @blog.cover}}
+            <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md" style="background-image:url({{@blog.cover}})"></span>
+            <span class="u-absolute0 u-backgroundDark u-hide-before-md"></span>
+        {{/if}}{{/is}}
+
+        <div class="u-maxWidth1040 u-sizeFullWidth u-container" style="z-index:100">
             <div class="header-top-section u-flexCenter">
                 {{!-- header logo --}}
                 <div class="u-flex1">
