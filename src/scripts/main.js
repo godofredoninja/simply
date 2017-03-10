@@ -21,7 +21,8 @@ import './app/app.pagination';
 const $doc = $(document);
 const $win = $(window);
 
-const $pageUrl = $('body').attr('data-page');
+const $body = $('body');
+const $pageUrl = $body.attr('data-page');
 const $postBody = $('.post-body');
 const $shareCount = $('.share-count');
 const $share = $('.simply-share');
@@ -37,20 +38,20 @@ const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\
 /* Menu open and close for mobile */
 $('.button-nav--toggle').on('click', (e) => {
   e.preventDefault();
-  $('body').toggleClass('is-showNavMob');
+  $body.toggleClass('is-showNavMob');
 });
 
 /* Search Open */
 $('.button-search--open').on('click', (e) => {
   e.preventDefault();
-  $('body').addClass('is-search');
+  $body.addClass('is-search');
   $seachInput.focus();
 });
 
 /* Search Close */
 $('.button-search--close').on('click', (e) => {
   e.preventDefault();
-  $('body').removeClass('is-search');
+  $body.removeClass('is-search');
 });
 
 /* Save Post in facebook*/
@@ -65,6 +66,7 @@ $('.scroll-id').on('click', function (e) {
   e.preventDefault();
   $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top - 50 }, 500, 'linear');
 });
+
 
 /* Disqus Comments */
 function disqusComments(shortname) {
@@ -129,21 +131,24 @@ $doc.on('ready', () => {
       onKeyUp: true,
     });
 
+  /* rocket to the moon */
+  $('.rocket').on('click', function (e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: 0}, 250);
+  });
+
   /* Prism code syntax autoloader */
   Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
 
 
 $win.on('scroll', function () {
-    const scrollTop = $(this).scrollTop();
-    const heightPostBody = $postBody.height();
+  const scrollTop = $(this).scrollTop();
+  const heightPostBody = $postBody.height();
 
-    // active or desactive Post Actions in post Sections
-    if (scrollTop < heightPostBody) {
-      $postActions.addClass('is-visible');
-    } else {
-      $postActions.removeClass('is-visible');
-    }
+  // active or desactive Post Actions in post Sections
+  (scrollTop < heightPostBody) ? $postActions.addClass('is-visible') : $postActions.removeClass('is-visible');
+
 });
 
 

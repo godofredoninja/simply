@@ -347,6 +347,28 @@ q {
 
 // Load More
 // ==========================================================================
+.rocket {
+  bottom: 50px;
+  position: fixed;
+  right: 20px;
+  text-align: center;
+  z-index: 888;
+  width: 60px;
+
+  &:hover svg path {
+    fill: rgba(0, 0, 0, .6);
+  }
+}
+
+.svg-icon {
+  svg {
+    width: 100%;
+    height: auto;
+  }
+}
+
+// Load More
+// ==========================================================================
 .loadMore {
   color: $primary-color;
   display: block;
