@@ -54,7 +54,7 @@ function simplyFacebookShareCount(sharebox) {
 function SimplyFollowMe(links, box, urlRegexp) {
   return $.each(links, (name, url) => {
     if (typeof url === 'string' && urlRegexp.test(url)) {
-      const template = `<a title="Follow me in ${name}" href="${url}" target="_blank" class="i-${name}"></a>`;
+      const template = `<a data-event-category="FollowMe" data-event-action="Social" data-event-label="${name}" data-event-non-interaction="1" title="Follow me in ${name}" href="${url}" target="_blank" class="simply-tracking i-${name}"></a>`;
       box.append(template);
     }
   });
