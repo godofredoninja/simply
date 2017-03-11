@@ -5,7 +5,7 @@
         <div class="row">
 
         {{#foreach posts}}
-            <article class="col s12 m4">
+            <article class="col s12 m4 simply-tracking" data-event-category="Article" data-event-action="Related Posts" data-event-label="Entry" data-event-non-interaction="1">
                 <div class="u-card u-padding0">
                     <div class="entry-image u-relative u-overflowHidden">
                         <a href="{{url}}" class="entry-image--link u-block u-absolute0">
@@ -13,11 +13,9 @@
                         </a>
                     </div>
 
-                    <div class="entry-body u-padding15">
-                        <a href="{{url}}">
+                    <a href="{{url}}" class="entry-body u-padding15 u-block">
                         <h2 class="entry-title u-contentTitle u-fontSizeLarge u-fontWeightBold u-overflowHidden u-paddingBottom2">{{title}}</h2>
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </article>
         {{/foreach}}
