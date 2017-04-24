@@ -1,6 +1,5 @@
 const path = require('path');
-const argv = require('minimist')(process.argv.slice(2));
-const uniq = require('lodash/uniq');
+const { argv } = require('yargs');
 const merge = require('webpack-merge');
 
 const userConfig = require('../config');
@@ -28,9 +27,6 @@ const config = merge({
   watch: [],
   browsers: [],
 }, userConfig);
-
-config.watch.push(`${path.basename(config.paths.assets)}/${config.copy}`);
-config.watch = uniq(config.watch);
 
 module.exports = merge(config, {
   env: Object.assign({ production: isProduction, development: !isProduction }, argv.env),
