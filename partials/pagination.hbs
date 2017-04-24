@@ -1,9 +1,9 @@
 <nav class="pagination u-maxWidth1000 u-marginAuto u-textAlignCenter u-fontSize15 u-paddingTop10" role="navigation">
     {{#if prev}}
-        <a class="newer-posts u-link" href="{{page_url prev}}">&larr; Newer Posts</a>
+        <a class="newer-posts link--accent" href="{{page_url prev}}">&larr; Newer Posts</a>
     {{/if}}
     <span class="page-number">Page {{page}} of {{pages}}</span>
     {{#if next}}
-        <a class="older-posts u-link" href="{{page_url next}}">Older Posts &rarr;</a>
+        <a class="older-posts link--accent" href="{{page_url next}}">Older Posts &rarr;</a>
     {{/if}}
 </nav>

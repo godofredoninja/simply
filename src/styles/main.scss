@@ -19,14 +19,16 @@
 
 // components
 @import "components/grid";
-@import "components/header";
-@import "components/entry";
-@import "components/homepage";
-@import "components/post";
-@import "components/author";
 @import "components/form";
-@import "components/search";
-@import "components/sidebar";
-@import "components/sidenav";
 @import "components/icons";
 @import "components/animated";
+
+//layouts
+@import "layouts/header";
+@import "layouts/entry";
+@import "layouts/homepage";
+@import "layouts/post";
+@import "layouts/author";
+@import "layouts/search";
+@import "layouts/sidebar";
+@import "layouts/sidenav";

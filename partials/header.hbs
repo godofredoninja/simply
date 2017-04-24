@@ -1,19 +1,23 @@
 {{!-- Header Template --}}
-<header class="header u-sizeFullWidth u-relative">
+<header class="header u-sizeFullWidth u-relative u-bgColor">
     <div class="header-wrap u-flexCenter u-relative">
         {{!-- background dark if home have image --}}
-        {{#is "home"}} {{#if @blog.cover}}
+        {{#is "home"}}
+            {{#if @blog.cover}}
             <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md" style="background-image:url({{@blog.cover}})"></span>
             <span class="u-absolute0 u-backgroundDark u-hide-before-md"></span>
-        {{/if}}{{/is}}
+            {{else}}
+            <span class="u-absolute0 u-hide-before-md" style="background:rgba(0,0,0,.175)"></span>
+            {{/if}}
+        {{/is}}
 
         <div class="u-maxWidth1040 u-sizeFullWidth u-container" style="z-index:100">
-            <div class="header-top-section u-flexCenter">
+            <div class="header-top-section u-flexCenter u-headerColorLink">
                 {{!-- header logo --}}
                 <div class="u-flex1">
                     <a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
                 </div>
-                <div class="u-flex1 u-flex u-flexEnd">
+                <div class="u-flex1 u-flex u-flexEnd u-headerColorLink">
                     {{!-- header follow if is not home page --}}
                     {{^is "home"}}{{>"widget-follow"}}{{/is}}
 
@@ -27,11 +31,10 @@
     </div>
 
     {{!-- Header Navigation --}}
-    <nav class="mainMenu u-hide-before-md u-fontSizeSmaller">
+    <nav class="mainMenu u-hide-before-md u-fontSizeSmaller u-bgColor">
         <div class="u-maxWidth1040 u-container">
-            <div class="nav u-flex u-flexCenter">
+            <div class="nav u-flex u-flexCenter u-headerColorLink">
                 {{navigation}}
-                {{^is "home"}}<span class="nav-border"></span>{{/is}}
                 <a href="#" class="button-search--open button button--chromeless u-fontSizeLarge i-search"></a>
                 {{!-- nav follow active is home page --}}
                 {{#is "home"}}{{>"widget-follow"}}{{/is}}

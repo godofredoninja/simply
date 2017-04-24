@@ -35,6 +35,13 @@
     text-align: left;
     vertical-align: baseline;
     white-space: normal;
+
+    &:active,
+    &:hover,
+    &:focus {
+      border-width: 0;
+      color: rgba(0, 0, 0, .6);
+    }
   }
 
   &--large {

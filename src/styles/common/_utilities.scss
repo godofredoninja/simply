@@ -9,9 +9,17 @@
   fill: rgba(0, 0, 0, .6);
 }
 
-.u-textColorDarker {@extend %u-text-color-darker;}
+//  background color
+.u-bgColor { background-color: $primary-color; }
 
-.u-link { color: $primary-color !important; }
+.u-headerColorLink a {
+  color: $header-color;
+  &.active,
+  &:hover { color: $header-color-hover; }
+
+}
+
+.u-textColorDarker {@extend %u-text-color-darker;}
 
 // Positions
 .u-relative { position: relative; }

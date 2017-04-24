@@ -1,0 +1,158 @@
+// Header
+// ==========================================================================
+
+.header {
+  // background: $primary-color;
+  z-index: 80;
+
+  &-wrap { height: 50px; }
+
+  &-logo {
+    height: 30px;
+    img {max-height: 100%; }
+  }
+
+  &-logo,
+  .button-search--open,
+  .button-nav--toggle {z-index: 150;}
+
+
+  // header description home page
+  &-description {
+    color: $header-color;
+    letter-spacing: -.02em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    max-width: 750px;
+  }
+}
+
+// Header Follow
+// ==========================================================================
+.follow>a {
+  padding-left: 15px;
+}
+
+// Header menu
+// ==========================================================================
+
+.nav {
+  line-height: 40px;
+  padding: 8px 0;
+  position: relative;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    float: left;
+
+    a {
+      font-weight: 600;
+      margin-right: 22px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+
+.button-search--open {
+  color: inherit !important;
+  padding-right: 0 !important;
+}
+
+
+// button-nav
+.button-nav--toggle {
+  height: 48px;
+  position: relative;
+  transition: transform .4s;
+  width: 48px;
+
+  span {
+    background-color: $header-color;
+    display: block;
+    height: 2px;
+    left: 14px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transition: .4s;
+    width: 20px;
+
+    &:first-child { transform: translate(0, -6px); }
+    &:last-child { transform: translate(0, 6px); }
+  }
+}
+
+
+body.is-frontpage .header-wrap {height: auto;}
+
+
+// Media Query
+// ==========================================================================
+
+@media #{$md-and-up} {
+  .header {
+    &-wrap {
+      border: 0;
+      // height: 50px;
+    }
+    &-logo {
+      height: 30px;
+      padding-left: 0;
+    }
+
+    &-top-section {padding-top: 15px;}
+  }
+
+  body.is-frontpage {
+    .header {
+      &-wrap { height: 200px; }
+      &-logo {
+        height: 40px;
+        margin-bottom: 15px;
+      }
+      &-top-section {padding-top: 0;}
+    }
+
+    .nav ul {flex: 1 1 auto;}
+  }
+
+}
+
+
+// Header menu
+// ==========================================================================
+@media #{$md-and-down} {
+
+  .header {
+    position: fixed;
+
+    &-wrap {
+      height: $header-height-mobile !important;
+    }
+  }
+
+  // show menu mobile
+  body.is-showNavMob {
+    overflow: hidden;
+
+    .sideNav {transform: translateX(0); }
+
+    .button-nav--toggle {
+      border: 0;
+      transform: rotate(90deg);
+
+      span:first-child { transform: rotate(45deg) translate(0, 0);}
+      span:nth-child(2) { transform: scaleX(0);}
+      span:last-child {transform: rotate(-45deg) translate(0, 0);}
+    }
+
+    .header .button-search--toggle {display: none;}
+    .main, .footer { transform: translateX(-25%);}
+  }
+
+}

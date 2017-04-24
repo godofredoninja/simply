@@ -7,7 +7,8 @@
     {{/author}}
     <div class="entry-author u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}{{#is "post"}}u-fontSizeSmall{{else}}u-fontSizeSmaller{{/is}}{{/is}}">
 
-        {{#author}}<a href="{{url}}" {{#is "post"}}class="simply-tracking" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1"{{/is}}>{{name}}</a>{{/author}} {{#if tags}}<span>en</span> {{tags limit="1"}}{{/if}}
+        {{#author}}<span class="link--accent"><a href="{{url}}" {{#is "post"}}class="simply-tracking" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1"{{/is}}>{{name}}</a></span>{{/author}}
+        {{#if tags}}<span>in</span> <span class="link--accent">{{tags limit="1"}}</span>{{/if}}
 
         {{!-- If it is on the article page add the author's description --}}
         {{#is "post"}}{{#if author.bio}}
