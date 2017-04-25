@@ -11,18 +11,13 @@
 Hello, I created this theme for Ghost inspired by [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden commercial use. If you have any suggestions to improve the theme,  you can send me tweet to [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-#### 😃 To continue updating the theme with many improvements, I hope a collaboration of ❤ heart through [Paypal](https://goo.gl/pE8aEC)
+## ❤ Please. Help me with a small donation on [Paypal](https://goo.gl/pE8aEC). For to be motivated and updated the theme with many improvements.
 [![](./donate.gif)](https://goo.gl/pE8aEC)
-
----
-
-> ⚠️ *Use this theme for ghost under your own responsibility.
-Because I am not responsible if [Medium](https://medium.com/) makes you a claim for copyright on the design.*
 
 ![](./screenshot.png)
 
 ## Demo
-You can see a demo in my [blog](http://bit.ly/GodoFredoNinja-blog).
+You can see a demo in my [blog](https://goo.gl/V7moIY).
 
 ## Featured
 - Responsive layout
@@ -40,13 +35,14 @@ You can see a demo in my [blog](http://bit.ly/GodoFredoNinja-blog).
 - Has button to save the link on facebook
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
-- Buttons to share the article
+- Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
 - Additional sticky content in the sidebar
-- YouTube, Vimeo, kickstarter -> Video Responsive
+- YouTube, Vimeo, kickstarter => Video Responsive
+- Lazy image loading for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
-> **To have the best design is recommended to have 12 articles per page.**
+> **To have the best design is recommended to have 12 or 14 articles per page.**
 
 ## Simply Support for Web Browsers
 Mapache supports the following web [browsers](http://caniuse.com/#search=flexbox)
@@ -80,7 +76,7 @@ You now have all the necessary dependencies to run the build process.
 
 #### Additional commands
 
-* `yarn run clean` — Remove your `assets/` folder
+* `yarn run rmassets` — Remove your `assets/` folder
 * `yarn run lint` — Run eslint against your assets and build scripts
 
 ### Using Browsersync
@@ -101,9 +97,7 @@ If you would like to force Browsersync to reload the page whenever certain file 
 ```json
 ...
   "watch": [
-    "src/scripts/**/*.js",
-    "partials/**/*.hbs",
-    "*.hbs"
+    "**/*.hbs"
   ],
 ...
 ```
@@ -118,6 +112,7 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 - [sticky-kit](https://github.com/leafo/sticky-kit)
 - [lunr.js](https://github.com/olivernn/lunr.js)
 - [zoom.js](https://github.com/fat/zoom.js/)
+- [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
 - [Fonts](https://fonts.google.com/?selection.family=Droid+Serif:400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Droid+Serif)
 
 ## Copyright & License
