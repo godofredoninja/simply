@@ -242,7 +242,7 @@
   transform: translateY(100%);
   transition: transform .3s;
   visibility: hidden;
-  z-index: 500;
+  z-index: 400;
 
   &.is-visible {
     transform: translateY(0);
