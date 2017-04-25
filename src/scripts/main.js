@@ -7,6 +7,7 @@
 import 'sticky-kit/dist/sticky-kit';
 import Prism from 'prismjs';
 import 'prismjs/plugins/autoloader/prism-autoloader';
+import 'jquery-lazyload';
 
 import './lib/zoom';
 import './lib/transition';
@@ -135,6 +136,15 @@ $doc.on('ready', () => {
   $('.rocket').on('click', function (e) {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0}, 250);
+  });
+
+  /* Lazy load for image */
+  $('.simply-lazy.lazy').lazyload({
+    threshold : 200,
+  });
+
+  $('.cover-lazy.lazy').lazyload({
+    effect : 'fadeIn',
   });
 
   /* Prism code syntax autoloader */

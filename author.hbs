@@ -2,7 +2,7 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#author}}
-<section class="author u-relative u-flex u-flexWrap u-backgroundSizeCover u-boxShadowBottom {{#if cover}}has--image{{/if}}" style="background-image:url({{cover}})">
+<section class="author u-relative u-flex u-flexWrap u-backgroundSizeCover u-boxShadowBottom {{#if cover}}has--image cover-lazy lazy{{/if}}" data-original="{{cover}}">
     {{#if cover}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
 
     <article class="author-wrap u-flexCenter u-flexColumn u-relative u-maxWidth1040 u-container u-paddingTop20 u-paddingBottom20 u-textAlignCenter">

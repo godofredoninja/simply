@@ -26,7 +26,7 @@
 .u-absolute { position: absolute; }
 .u-absolute0 { @extend %u-absolute0;}
 
-.u-block {display: block}
+.u-block {display: block !important}
 
 //  Background
 .u-backgroundDark {

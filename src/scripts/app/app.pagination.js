@@ -48,6 +48,11 @@ $(document).on('ready', () => {
 
             paginationNumber += 1;
 
+            /* Lazy load for image */
+            $('.simply-lazy.lazy').lazyload({
+              threshold : 200,
+            });
+
             $win.on('scroll', activeScroll);
           },
           complete: () => {
