@@ -117,4 +117,4 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 
 ## Copyright & License
 
-Copyright (c) 2017 GodoFredoNinja - Released under the [MIT license](LICENSE).
+Copyright (c) 2017 GodoFredoNinja - Released under the [GPL 3 license](LICENSE).
