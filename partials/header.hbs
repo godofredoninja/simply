@@ -15,7 +15,11 @@
             <div class="header-top-section u-flexCenter u-headerColorLink">
                 {{!-- header logo --}}
                 <div class="u-flex1">
-                    <a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}{{@blog.title}}{{/if}}</a>
+                {{#is "home"}}
+                <h1><a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSizeJumbo u-md-fontSizeLarger u-fontWeightSemibold">{{@blog.title}}</span>{{/if}}</a></h1>
+                {{else}}
+                <a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSize36 u-fontWeightSemibold">{{@blog.title}}</span>{{/if}}</a>
+                {{/is}}
                 </div>
                 <div class="u-flex1 u-flex u-flexEnd u-headerColorLink">
                     {{!-- header follow if is not home page --}}
