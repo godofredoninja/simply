@@ -10,9 +10,9 @@
         </a>
 
         {{#if image}}
-            <figure class="entry-image u-overflowHidden u-marginTop30">
-                <a href="{{url}}" class="entry-image--link u-block u-overflowHidden u-relative">
-                    <img class="entry-img u-relative u-block" src="{{image}}" alt="{{title}}"/>
+            <figure class="entry-image u-overflowHidden u-marginTop30 u-relative">
+                <a href="{{url}}" class="entry-image--link u-block">
+                    <img class="entry-img u-block" src="{{image}}" alt="{{title}}"/>
                 </a>
             </figure>
         {{/if}}
@@ -29,7 +29,7 @@
                 <span class="fb-comments-count simply-facebook" data-href="{{url absolute="true"}}">0</span> Comments
             </a>
 
-            <div class="fbSave button button--chromeless u-relative with-tooltip u-link" data-tooltip="Save to Facebook" style="padding-left:0;vertical-align:middle;">
+            <div class="fbSave button button--chromeless u-relative with-tooltip" data-tooltip="Save to Facebook" style="padding-left:0;vertical-align:middle;">
                 <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
                 <div class="fbSave-dropdown u-absolute u-overflowHidden u-lineHeight1"><div class="fb-save" data-uri="{{url absolute="true"}}" data-size="large"></div></div>
             </div>

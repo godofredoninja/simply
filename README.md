@@ -11,18 +11,13 @@
 Hello, I created this theme for Ghost inspired by [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden commercial use. If you have any suggestions to improve the theme,  you can send me tweet to [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-#### 😃 To continue updating the theme with many improvements, I hope a collaboration of ❤ heart through [Paypal](https://goo.gl/pE8aEC)
+## ❤ Please. Help me with a small donation on [Paypal](https://goo.gl/pE8aEC). For to be motivated and updated the theme with many improvements.
 [![](./donate.gif)](https://goo.gl/pE8aEC)
-
----
-
-> ⚠️ *Use this theme for ghost under your own responsibility.
-Because I am not responsible if [Medium](https://medium.com/) makes you a claim for copyright on the design.*
 
 ![](./screenshot.png)
 
 ## Demo
-You can see a demo in my Page section [blog](https://goo.gl/V7moIY).
+You can see a demo in my Page [Demo](https://goo.gl/V7moIY).
 
 ## Featured
 - Responsive layout
@@ -41,13 +36,14 @@ You can see a demo in my Page section [blog](https://goo.gl/V7moIY).
 - Has a search engine system
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
-- Buttons to share the article
+- Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
 - Additional sticky content in the sidebar
-- YouTube, Vimeo, kickstarter -> Video Responsive
+- YouTube, Vimeo, kickstarter => Video Responsive
+- Lazy image loading for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
-> **To have the best design is recommended to have 12 articles per page.**
+> **To have the best design is recommended to have 12 or 14 articles per page.**
 
 ## Simply Support for Web Browsers
 Mapache supports the following web [browsers](http://caniuse.com/#search=flexbox)
@@ -106,7 +102,7 @@ For it to work please add the following code in `Settings -> Code Injection -> B
 ## Enable Disqus or Facebook Comments
 Only enable either Disqus or Facebook comments.
 
-## Disqus Comments
+#### Disqus Comments
 Insert your [Disqus shortname](https://shortname.disqus.com/admin/) in both the comments and Disqus comment count sections.
 
 1. To enable Disqus comments update the code in `Settings -> Code Injection -> Blog Header.`
@@ -130,7 +126,7 @@ Insert your [Disqus shortname](https://shortname.disqus.com/admin/) in both the 
 To ensure the Disqus comment count is working correctly verify that the Disqus settings -> Comment & Community Configuration is set as seen below.
 ![](./documentation/disqus_comment_count.png)
 
-### Facebook Comments
+#### Facebook Comments
 To use facebook comments, skip the configuration Disqus.
 
 This enables comments and comment counter
@@ -204,35 +200,7 @@ If you want to have a image post format, you only have to add the tag `#image-po
 
 ## Change Theme Style
 To make your changes with your favorite colors you just have to add the following code and replace with your colors
-
-`Settings -> Code Injection -> Blog Header`
-
-```html
-<style>
-  /* Header background color*/
-  .header, .sideNav {background-color: YOUR_FAVORITE_COLOR !important; }
-
-  /* Border separation nav header */
-  .nav-border {border-color: YOUR_FAVORITE_COLOR}
-  .button-nav--toggle span {background-color: YOUR_FAVORITE_COLOR}
-
-  /*Header color links */
-  .header .nav a, .follow a, .button-search--toggle {color: YOUR_FAVORITE_COLOR !important}
-  /* Header color links hover */
-  .header .nav a:hover, .follow a:hover {color: YOUR_FAVORITE_COLOR !important}
-
-  /* Header description color */
-  .header-description {color: YOUR_FAVORITE_COLOR !important }
-
-  /* Links color globals */
-  .entry-author a {color: YOUR_FAVORITE_COLOR}
-  .postActions .u-link,
-  .fbSave-icon {color: YOUR_FAVORITE_COLOR !important}
-
-  /* Hover color links globals */
-  .entry-author a:hover {color: YOUR_FAVORITE_COLOR}
-</style>
-```
+[Themes](THEMES.md)
 
 ### Credits
 - [Normalize](https://necolas.github.io/normalize.css/)
@@ -241,8 +209,9 @@ To make your changes with your favorite colors you just have to add the followin
 - [sticky-kit](https://github.com/leafo/sticky-kit)
 - [lunr.js](https://github.com/olivernn/lunr.js)
 - [zoom.js](https://github.com/fat/zoom.js/)
+- [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
 - [Fonts](https://fonts.google.com/?selection.family=Droid+Serif:400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Droid+Serif)
 
 ## Copyright & License
 
-Copyright (c) 2017 GodoFredoNinja - Released under the [MIT license](LICENSE).
+Copyright (c) 2017 GodoFredoNinja - Released under the [GPL 3 license](LICENSE).

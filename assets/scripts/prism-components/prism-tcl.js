@@ -3,10 +3,7 @@ Prism.languages.tcl = {
 		pattern: /(^|[^\\])#.*/,
 		lookbehind: true
 	},
-	'string': {
-		pattern: /"(?:[^"\\\r\n]|\\(?:\r\n|[\s\S]))*"/,
-		greedy: true
-	},
+	'string': /"(?:[^"\\\r\n]|\\(?:\r\n|[\s\S]))*"/,
 	'variable': [
 		{
 			pattern: /(\$)(?:::)?(?:[a-zA-Z0-9]+::)*[a-zA-Z0-9_]+/,

@@ -1,9 +1,6 @@
 Prism.languages.scheme = {
 	'comment' : /;.*/,
-	'string' :  {
-		pattern: /"(?:[^"\\\r\n]|\\.)*?"|'[^('\s]*/,
-		greedy: true
-	},
+	'string' :  /"(?:[^"\\\r\n]|\\.)*?"|'[^('\s]*/,
 	'keyword' : {
 		pattern : /(\()(?:define(?:-syntax|-library|-values)?|(?:case-)?lambda|let(?:\*|rec)?(?:-values)?|else|if|cond|begin|delay(?:-force)?|parameterize|guard|set!|(?:quasi-)?quote|syntax-rules)/,
 		lookbehind : true

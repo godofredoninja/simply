@@ -14,10 +14,7 @@ Prism.languages.inform7 = {
 			}
 		}
 	},
-	'comment': {
-		pattern: /\[[^\]]+\]/,
-		greedy: true
-	},
+	'comment': /\[[^\]]+\]/,
 	'title': {
 		pattern: /^[ \t]*(?:volume|book|part(?! of)|chapter|section|table)\b.+/im,
 		alias: 'important'

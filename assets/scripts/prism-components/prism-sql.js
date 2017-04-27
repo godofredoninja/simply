@@ -5,7 +5,6 @@ Prism.languages.sql= {
 	},
 	'string' : {
 		pattern: /(^|[^@\\])("|')(?:\\?[\s\S])*?\2/,
-		greedy: true,
 		lookbehind: true
 	},
 	'variable': /@[\w.$]+|@("|'|`)(?:\\?[\s\S])+?\1/,
