@@ -8,16 +8,16 @@
 
 ### Free theme for Ghost
 
-Hello, I created this theme for Ghost inspired by [Medium](https://medium.com/).
-It is available for free so you can use on your site. It is strictly forbidden commercial use. If you have any suggestions to improve the theme,  you can send me tweet to [@GodoFredoNinja](https://goo.gl/y3aivK)
+Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
+It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-## ❤ Please. Help me with a small donation on [Paypal](https://goo.gl/pE8aEC). For to be motivated and updated the theme with many improvements.
+## ❤ Please, help me with a small donation on [Paypal](https://goo.gl/pE8aEC). It'll help motivate me to update the theme with many improvements.
 [![](./donate.gif)](https://goo.gl/pE8aEC)
 
 ![](./screenshot.png)
 
 ## Demo
-You can see a demo in my Page [Demo](https://goo.gl/V7moIY).
+You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY).
 
 ## Featured
 - Responsive layout
@@ -32,7 +32,7 @@ You can see a demo in my Page [Demo](https://goo.gl/V7moIY).
 - Image post Format => add tag `#image-post-format`
 - 5 articles latest posts in the (author - tag) section sidebar
 - Previous and next button in the Post
-- Has button to save the link on facebook
+- Has button to save the link on Facebook
 - Has a search engine system
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
@@ -45,11 +45,11 @@ You can see a demo in my Page [Demo](https://goo.gl/V7moIY).
 
 > **To have the best design is recommended to have 12 or 14 articles per page.**
 
-## Simply Support for Web Browsers
-Mapache supports the following web [browsers](http://caniuse.com/#search=flexbox)
+## Web Browser Support for Simply
+Simply supports the following web [browsers](http://caniuse.com/#search=flexbox).
 
 ### Replace Favorite Icon
-Create an image icon with these dimensions with the name icon.png `192px * 192px` in Copy your new favorite icon to `./assets/images/icon.png`
+Create an image icon with these dimensions with the name icon.png `192px * 192px` in Copy your new favorite icon to `./assets/images/icon.png`.
 
 # Simply settings
 
@@ -58,7 +58,7 @@ Create an image icon with these dimensions with the name icon.png `192px * 192px
 ![](./documentation/labs.png)
 
 ## Social Links
-Add the Social Links only for the services you want to appear in the header section of your website. Pay attention as enabling too many services will cause menu problems.
+Add the Social Links only for the services you want to appear in the header section of your website. Pay careful attention as enabling too many services will cause menu problems.
 
 Add the following code in `Settings -> Code Injection -> Blog Footer`
 
@@ -83,7 +83,7 @@ var followSocialMedia = {
 ```
 
 ## Save To Facebook
-The Save button lets people save articles in your [facebook](https://developers.facebook.com/docs/plugins/save?locale=en_US) account
+The Save button lets people save articles in your [Facebook](https://developers.facebook.com/docs/plugins/save?locale=en_US) account.
 
 For it to work please add the following code in `Settings -> Code Injection -> Blog Footer.`
 ```html
@@ -127,9 +127,9 @@ To ensure the Disqus comment count is working correctly verify that the Disqus s
 ![](./documentation/disqus_comment_count.png)
 
 #### Facebook Comments
-To use facebook comments, skip the configuration Disqus.
+To use Facebook comments, skip the configuration Disqus.
 
-This enables comments and comment counter
+This enables comments and comment counter.
 
 1. Add the code in `Settings -> Code Injection -> Blog Header`
 
@@ -139,7 +139,7 @@ This enables comments and comment counter
   </style>
 ```
 2. Add the code `Settings -> Code Injection -> Blog Footer`
-> If you have the facebook button to save. It is no longer necessary to add the following code
+> If you have the Facebook button to save. It is no longer necessary to add the following code.
 
   ```html
     <div id="fb-root"></div>
@@ -179,7 +179,7 @@ Add some more styling options to your articles text with these three styles.
 ![](./documentation/note.png)
 
 ### PrismJS code syntax
-Make your code stand out. WIth the PrismJS code highlighter.
+Make your code stand out with the PrismJS code highlighter.
 PrismJS allows you to select which languge you embeded and performs code highlighting according to the language. Neat!
 
 Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languages-list)
@@ -187,7 +187,7 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 ![](./documentation/prism.png)
 
 ## Video Post Format
-If you want to have a video post format, you only have to add the tag `#video-post-format` . The first video in the article will be large in size.
+If you want to have a video post format, you only have to add the tag `#video-post-format`. The first video in the article will be large in size.
 
 ![](./documentation/video-post-format.png)
 ---
@@ -195,12 +195,12 @@ If you want to have a video post format, you only have to add the tag `#video-po
 ---
 
 ## Image Post Format
-If you want to have a image post format, you only have to add the tag `#image-post-format` The Featured image will become large in size
+If you want to have a image post format, you only have to add the tag `#image-post-format` The Featured image will become large in size.
 
 
 ## Change Theme Style
 To make your changes with your favorite colors you just have to add the following code and replace with your colors
-[Themes](THEMES.md)
+[Themes](THEMES.md).
 
 ### Credits
 - [Normalize](https://necolas.github.io/normalize.css/)
