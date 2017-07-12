@@ -17,9 +17,9 @@
         <div class="video-post-format u-marginAuto u-maxWidth1000"><div class="video-responsive"></div></div>
     {{else}}
         {{!-- Figure --}}
-        {{#if image}}
+        {{#if feature_image}}
             <figure class="post-image u-paddingTop30 u-block u-marginAuto {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
-                <img src="{{image}}" class="u-block u-marginAuto" alt="{{title}}" {{^has tag="#image-post-format"}}data-action="zoom"{{/has}}/>
+                <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}" {{^has tag="#image-post-format"}}data-action="zoom"{{/has}}/>
             </figure>
         {{/if}}
     {{/has}}

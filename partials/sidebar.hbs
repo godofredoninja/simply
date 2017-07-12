@@ -1,39 +1,32 @@
 <aside class="sidebar col s12 u-hide-before-md">
-
-    {{!-- Sidebar Content Optional --}}
-
-    {{!-- <div class="sidebar-items u-marginBottom30">
-        <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
-        <p class="u-textColorDarker u-fontSize15 u-marginBottom10">.. your description or content ..</p>
-    </div> --}}
-
-    {{!-- Add Post Recents --}}
-    {{#get "posts" limit="5" as |recents|}}
-    <div class="sidebar-items u-marginBottom30">
-        <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">Artículos Recientes</h3>
-
-        {{#foreach recents}}
-        <div class="u-paddingBottom2 sidebar-post">
-            <a href="{{url absolute="true"}}" class="sidebar-post--link u-block u-relative">
-                <span class="sidebar-border u-flexCenter u-absolute u-fontSize28 u-lineHeight1 u-fontWeightSemibold">{{@number}}</span>
-                <h3 class="sidebar-post--title u-fontSizeBase u-fontWeightNormal">{{title}}</h3>
-            </a>
-        </div>
-        {{/foreach}}
-
-    </div>
-    {{/get}}
-
     {{!-- Add your sticky content inside this box --}}
+    <div class="sidebar-sticky">
 
-    {{!-- <div class="sidebar-sticky">
+        {{!-- Sidebar Content Optional --}}
+        {{!-- <div class="sidebar-items u-marginBottom30">
+            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
+            <p class="u-textColorDarker u-fontSize15 u-marginBottom10">.. your Content .. </p>
+        </div> --}}
 
-        <!-- this is Book  -->
-        <div class="sidebar-items u-marginBottom30"> <!--Open Book -->
-            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title sticky ..</h3>
-            <p class="u-textColorDarker u-fontSize15 u-marginBottom10"> .. your Content sticky .. </p>
-        </div> <!-- close Book -->
+        {{!-- Add Post Recents --}}
+        {{#get "posts" limit="5" as |recents|}}
+        <div class="sidebar-items u-marginBottom30">
+            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">Artículos Recientes</h3>
+            {{#foreach recents}}
+            <div class="u-paddingBottom2 sidebar-post">
+                <a href="{{url absolute="true"}}" class="sidebar-post--link u-block u-relative">
+                    <span class="sidebar-border u-flexCenter u-absolute u-fontSize28 u-lineHeight1 u-fontWeightSemibold">{{@number}}</span>
+                    <h3 class="sidebar-post--title u-fontSizeBase u-fontWeightNormal">{{title}}</h3>
+                </a>
+            </div>
+            {{/foreach}}
+        </div>
+        {{/get}}
 
-    </div> --}}
-
+        {{!-- this is Book  --}}
+        {{!-- <div class="sidebar-items u-marginBottom30">
+            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
+            <p class="u-textColorDarker u-fontSize15 u-marginBottom10"> .. your Content .. </p>
+        </div> --}}
+    </div>
 </aside>

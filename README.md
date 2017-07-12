@@ -1,23 +1,26 @@
-# Simply theme for [Ghost](https://github.com/tryghost/ghost/) by @GodoFredoNinja
+# Simply theme for [Ghost v1](https://github.com/tryghost/ghost/) by @GodoFredoNinja
 
-[![Ghost version](https://img.shields.io/badge/Ghost-0.11.x-brightgreen.svg?style=flat-square)](https://ghost.org/)
-[![Node version](https://img.shields.io/node/v/uno-zen.svg?style=flat-square)](https://nodejs.org/en/)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square)](https://goo.gl/pE8aEC)
+[![Ghost version](https://img.shields.io/badge/Ghost-1.x.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
+[![Node](https://img.shields.io/node/v/uno-zen.svg)](https://nodejs.org/en/)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
 > Simple and Elegant theme for [Ghost](https://github.com/tryghost/ghost/).
+
+### ⚠ This theme is only compatible with ghost version 1.x.x. — If you want to use in previous versions follow the link 👉 [Simply-Tag-0.02](https://github.com/godofredoninja/simply/tree/0.0.2)
 
 ### Free theme for Ghost
 
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-## ❤ Please, help me with a small donation on [Paypal](https://goo.gl/pE8aEC). It'll help motivate me to update the theme with many improvements.
-[![](./donate.gif)](https://goo.gl/pE8aEC)
+## ❤ Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements.
+[![](./donate.gif)](https://bit.ly/PayPal-GodoFredoNinja)
 
 ![](./screenshot.png)
 
+
 ## Demo
-You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY).
+You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Featured
 - Responsive layout
@@ -47,9 +50,6 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY).
 
 ## Web Browser Support for Simply
 Simply supports the following web [browsers](http://caniuse.com/#search=flexbox).
-
-### Replace Favorite Icon
-Create an image icon with these dimensions with the name icon.png `192px * 192px` in Copy your new favorite icon to `./assets/images/icon.png`.
 
 # Simply settings
 

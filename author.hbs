@@ -2,12 +2,12 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#author}}
-<section class="author u-relative u-flex u-flexWrap u-backgroundSizeCover u-boxShadowBottom {{#if cover}}has--image cover-lazy lazy{{/if}}" data-original="{{cover}}">
-    {{#if cover}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
+<section class="author u-relative u-flex u-flexWrap u-backgroundSizeCover u-boxShadowBottom {{#if cover_image}}has--image cover-lazy lazy{{/if}}" data-original="{{cover_image}}">
+    {{#if cover_image}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
 
     <article class="author-wrap u-flexCenter u-flexColumn u-relative u-maxWidth1040 u-container u-paddingTop20 u-paddingBottom20 u-textAlignCenter">
         <div class="author-header u-paddingBottom20 u-flex">
-            <div  class="author-avatar animated bounceInDown u-round u-backgroundSizeCover {{^if image}}no-avatar{{/if}}" style="background-image:url({{image}})" alt="{{name}}"></div>
+            <div  class="author-avatar animated bounceInDown u-round u-backgroundSizeCover {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{profile_image}})" alt="{{name}}"></div>
             <div class="author-name-wrap animated bounceIn">
                 <span class="author-title u-textUppercase u-fontSizeSmall">Author</span>
                 <h1 class="author-name u-contentTitle u-fontSizeLarger u-md-fontSizeBase">{{name}}</h1>
