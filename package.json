@@ -1,12 +1,28 @@
 {
   "name": "simply-godofredoninja",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
   "description": "simply theme for ghost by @GodoFredoNinja",
+  "demo": "https://godofredo.ninja",
   "author": {
     "name": "GodoFredoNinja",
     "email": "hello@godofredo.ninja",
     "url": "https://godofredo.ninja"
   },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Magazine"
+    ]
+  },
+   "keywords": [
+    "ghost",
+    "theme",
+    "GodoFredoNinja"
+   ],
   "repository": {
     "type": "git",
     "url": "https://github.com/godofredoninja/simply"
@@ -24,9 +40,12 @@
     "lint": "eslint src/scripts src/build",
     "test": "yarn run lint"
   },
+  "config": {
+    "posts_per_page": 12
+  },
   "license": "GPL 3",
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
+    "autoprefixer": "^7.1.1",
     "browser-sync": "^2.18.8",
     "browsersync-webpack-plugin": "^0.5.3",
     "bs-html-injector": "^3.0.3",
@@ -49,6 +68,11 @@
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.16.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-webpack-plugin": "^0.5.1",
+    "stylelint-config-sass-guidelines": "^2.2.0",
+    "stylelint-scss": "^1.4.4",
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1",
     "webpack-assets-manifest": "^0.6.2",

@@ -11,10 +11,5 @@
   "cacheBusting": "[name]",
   "watch": [
     "**/*.hbs"
-  ],
-  "browsers": [
-    "last 2 versions",
-    "android 4",
-    "opera 12"
   ]
 }
