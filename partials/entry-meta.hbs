@@ -2,7 +2,7 @@
 <div class="entry-byline u-paddingTop10 u-flex">
     {{#author}}
     <div class="entry-avatar u-flex0">
-        <a href="{{url}}" style="background-image:url({{image}});{{#is "post"}}height:60px;width:60px;{{/is}}" class="entry-avatar--img u-block u-backgroundSizeCover {{^if image}}no-avatar{{/if}}"></a>
+        <a href="{{url}}" style="background-image:url({{profile_image}});{{#is "post"}}height:60px;width:60px;{{/is}}" class="entry-avatar--img u-block u-backgroundSizeCover {{^if profile_image}}no-avatar{{/if}}"></a>
     </div>
     {{/author}}
     <div class="entry-author u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}{{#is "post"}}u-fontSizeSmall{{else}}u-fontSizeSmaller{{/is}}{{/is}}">
@@ -11,9 +11,7 @@
         {{#if tags}}<span>in</span> <span class="link--accent">{{tags limit="1"}}</span>{{/if}}
 
         {{!-- If it is on the article page add the author's description --}}
-        {{#is "post"}}{{#if author.bio}}
-        <div class="u-block u-paddingBottom2 u-fontSizeSmaller u-noWrapWithEllipsis" style="padding-top:2px;">{{{author.bio}}}</div>
-        {{/if}}{{/is}}
+        {{#is "post"}}{{#if author.bio}}<div class="u-block u-paddingBottom2 u-fontSizeSmaller u-noWrapWithEllipsis" style="padding-top:2px;">{{{author.bio}}}</div>{{/if}}{{/is}}
 
         <time class="entry-date u-textColorNormal u-fontSizeSmaller u-fontWeightThin u-block u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
     </div>

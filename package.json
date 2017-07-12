@@ -24,6 +24,9 @@
     "lint": "eslint src/scripts src/build",
     "test": "yarn run lint"
   },
+  "config": {
+    "posts_per_page": 14
+  },
   "license": "GPL 3",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
