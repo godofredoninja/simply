@@ -1,0 +1,30 @@
+@media #{$md-and-up} {
+  // background image featured in tag and author
+  .is-author.has-featured-image,
+  .is-tag.has-featured-image {
+    .header,
+    .mainMenu {
+      background-color: transparent !important;
+    }
+    .u-headerColorLink a { color: #fff !important; }
+
+    .main {
+      margin-top: 0;
+      top: -110px;
+    }
+
+    .tag,
+    .author {
+      padding-top: 120px;
+    }
+  }
+
+  // is-article
+  .is-article {
+    .post-header { padding-top: 35px; }
+    .post-body { margin-top: 30px; }
+
+    .post-image,
+    .video-post-format { margin-top: 50px; }
+  }
+}

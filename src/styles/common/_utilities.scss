@@ -9,6 +9,11 @@
   fill: rgba(0, 0, 0, .6);
 }
 
+.u-accentColor--iconNormal {
+  color: $primary-color;
+  fill: $primary-color;
+}
+
 //  background color
 .u-bgColor { background-color: $primary-color; }
 

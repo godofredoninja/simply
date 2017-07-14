@@ -18,7 +18,7 @@
     {{else}}
         {{!-- Figure --}}
         {{#if feature_image}}
-            <figure class="post-image u-paddingTop30 u-block u-marginAuto {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
+            <figure class="post-image u-block u-marginAuto u-marginTop30 {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
                 <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}" {{^has tag="#image-post-format"}}data-action="zoom"{{/has}}/>
             </figure>
         {{/if}}

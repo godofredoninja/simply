@@ -3,12 +3,12 @@
   color: rgba(0, 0, 0, .6);
   min-height: 400px;
 
-  a {
-    color: rgba(0, 0, 0, .8);
-    &:hover {
-      color: rgba(0, 0, 0, .6);
-    }
-  }
+  // a {
+  //   color: rgba(0, 0, 0, .8);
+  //   &:hover {
+  //     color: rgba(0, 0, 0, .6);
+  //   }
+  // }
 
   &-wrap {
     z-index: 2;
@@ -37,23 +37,6 @@
     max-width: 600px;
     // color: rgba(0, 0, 0, .6);
   }
-
-  &-follow a {
-    box-shadow: inset 0 0 0 2px hsla(0,0%,100%,.5);
-    cursor: pointer;
-    display: inline-block;
-    height: 40px;
-    line-height: 40px;
-    margin: 0 10px;
-    padding: 0 16px;
-    text-shadow: none;
-
-    &:hover {
-      box-shadow: inset 0 0 0 2px #fff;
-    }
-
-  }
-
 }
 
 
@@ -61,11 +44,21 @@
   color: #fff !important;
   text-shadow: 0 0 10px rgba(0, 0, 0, .33);
 
-  .author-link:hover { opacity: 1!important}
+  .author-link:hover { opacity: 1 !important }
+
+  .u-accentColor--iconNormal { fill: #fff; }
+
   a,
-  .author-name { color: #fff;}
+  .author-name { color: #fff; }
+
+  .author-follow a {
+    border: 2px solid;
+    border-color: hsla(0, 0%, 100%, .5) !important;
+    font-size: 16px;
+  }
+
 }
 
 @media #{$md-and-down} {
-  .author-meta span {display: block;}
+  .author-meta span { display: block; }
 }

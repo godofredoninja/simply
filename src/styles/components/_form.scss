@@ -22,7 +22,7 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  i { display: inline-block}
+  i { display: inline-block; }
 
   &--chromeless {
     border-radius: 0;
@@ -62,33 +62,49 @@
   }
 }
 
-
+// Primary
+.button--primary {
+  border-color: $primary-color;
+  color: $primary-color;
+}
 
 .buttonSet {
-
-  .button--large.button--chromeless,
-  .button--large.button--link {
-    height: 44px;
-    line-height: 42px;
+  > .button {
+    margin-right: 8px;
+    vertical-align: middle;
   }
 
-  &>.button--chromeless:not(.button--circle) {
+  > .button:last-child {
     margin-right: 0;
-    padding-right: 8px;
   }
 
-  &>.button--chromeless+.button--chromeless:not(.button--circle) {
-    margin-left: 0;
-    padding-left: 8px;
-  }
-
-  &>.button--chromeless:last-child {
-    padding-right: 0;
+  .button--chromeless {
+    height: 37px;
+    line-height: 35px;
   }
 }
 
+// .buttonSet {
+//   .button--large.button--chromeless,
+//   .button--large.button--link {
+//     height: 44px;
+//     line-height: 42px;
+//   }
 
+//   &>.button--chromeless:not(.button--circle) {
+//     margin-right: 0;
+//     padding-right: 8px;
+//   }
 
+//   &>.button--chromeless+.button--chromeless:not(.button--circle) {
+//     margin-left: 0;
+//     padding-left: 8px;
+//   }
+
+//   &>.button--chromeless:last-child {
+//     padding-right: 0;
+//   }
+// }
 
 .button--large.button--chromeless,
 .button--large.button--link {
