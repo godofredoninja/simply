@@ -35,6 +35,12 @@ const $seachInput = $('#search-field');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
+const postActionsHeight = $postActions.outerHeight();
+
+let scrollTimeOut = true;
+let lastYPos = 0;
+let yPos = 0;
+let yPosDelta = 5;
 
 /* Menu open and close for mobile */
 $('.button-nav--toggle').on('click', (e) => {
@@ -78,6 +84,30 @@ function disqusComments(shortname) {
   (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 }
 
+/** show and hidePost Actions in footer of post */
+function setPostActionsClass () {
+  const heightPostBody = $postBody.outerHeight();
+  const headerheight = $('.header').outerHeight();
+
+  scrollTimeOut = false;
+  yPos = $win.scrollTop();
+
+  if (yPos < (heightPostBody+headerheight)){
+    if (Math.abs(lastYPos - yPos) >= yPosDelta) {
+      if (yPos > lastYPos && yPos > postActionsHeight) {
+        $postActions.addClass('is-visible');
+      } else {
+        $postActions.removeClass('is-visible');
+      }
+      lastYPos = yPos;
+    }
+  } else {
+    $postActions.addClass('is-visible')
+  }
+}
+
+/* enable scroll time */
+$win.on('scroll', () => scrollTimeOut = true);
 
 $doc.on('ready', () => {
   /** Follow social media */
@@ -147,18 +177,22 @@ $doc.on('ready', () => {
     effect : 'fadeIn',
   });
 
+  setInterval( () => {
+    /* Called the function setPostActionsClass */
+    if (scrollTimeOut) setPostActionsClass();
+
+    /* show btn SctrollTop */
+    ($win.scrollTop() > 100) ? $('.rocket').removeClass('u-hide') : $('.rocket').addClass('u-hide');
+  }, 250);
+
   /* Prism code syntax autoloader */
   Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
 
 
-$win.on('scroll', function () {
-  const scrollTop = $(this).scrollTop();
-  const heightPostBody = $postBody.height();
-
-  // active or desactive Post Actions in post Sections
-  (scrollTop < heightPostBody) ? $postActions.addClass('is-visible') : $postActions.removeClass('is-visible');
-
-});
-
-
+// $win.on('scroll', function () {
+//   const scrollTop = $(this).scrollTop();
+//   const heightPostBody = $postBody.height();
+//   // active or desactive Post Actions in post Sections
+//   (scrollTop < heightPostBody) ? $postActions.addClass('is-visible') : $postActions.removeClass('is-visible');
+// });

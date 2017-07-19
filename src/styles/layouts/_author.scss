@@ -61,4 +61,6 @@
 
 @media #{$md-and-down} {
   .author-meta span { display: block; }
+  .author-header { display: block; }
+  .author-avatar { margin: 0 auto 20px; }
 }
