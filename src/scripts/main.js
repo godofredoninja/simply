@@ -30,11 +30,13 @@ const $share = $('.simply-share');
 const $postActions = $('.postActions');
 const $followBox = $('.follow-box');
 const $comments = $('.post-comments');
-const $videoPostFormat = $('.video-post-format');
+const $videoPostBox = $('.video-post-format');
 const $seachInput = $('#search-field');
+const $mainMenu = $('.mainMenu');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
+const mainMenuOffsetTop = $mainMenu.offset().top;
 const postActionsHeight = $postActions.outerHeight();
 
 let scrollTimeOut = true;
@@ -106,6 +108,28 @@ function setPostActionsClass () {
   }
 }
 
+
+/* Video Post Format */
+function videoPostFormat() {
+  const video = $('iframe[src*="youtube.com"]')[0];
+  $videoPostBox.find('.video-responsive').prepend(video);
+
+  if (typeof youtubeChannel !== 'undefined') {
+    $.each(youtubeChannel, (channelName, channelId) => { // eslint-disable-line
+      $('.channel-name').removeClass('u-hide').prepend(`<span class="u-paddingRight20">Subscribe to ${channelName}</span>`);
+      $('.g-ytsubscribe').attr('data-channelid', channelId);
+    });
+
+    const go = document.createElement('script');
+    go.type = 'text/javascript';
+    go.async = true;
+    go.src = 'https://apis.google.com/js/platform.js';
+    // document.body.appendChild(go);
+    const s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(go, s);
+  }
+}
+
 /* enable scroll time */
 $win.on('scroll', () => scrollTimeOut = true);
 
@@ -120,10 +144,7 @@ $doc.on('ready', () => {
   $postBody.find('img').attr('data-action', 'zoom');
 
   /* Video Post Format */
-  if ($videoPostFormat.length > 0 ){
-     const video = $('iframe[src*="youtube.com"]')[0];
-    $videoPostFormat.find('.video-responsive').prepend(video);
-  }
+  if ($videoPostBox.length > 0) videoPostFormat();
 
   /** Share Count in facebook */
   Simply.facebookShareCount($shareCount);
@@ -169,13 +190,8 @@ $doc.on('ready', () => {
   });
 
   /* Lazy load for image */
-  $('.simply-lazy.lazy').lazyload({
-    threshold : 200,
-  });
-
-  $('.cover-lazy.lazy').lazyload({
-    effect : 'fadeIn',
-  });
+  $('.simply-lazy.lazy').lazyload({threshold : 200});
+  $('.cover-lazy.lazy').lazyload({ effect : 'fadeIn'});
 
   setInterval( () => {
     /* Called the function setPostActionsClass */
@@ -189,6 +205,14 @@ $doc.on('ready', () => {
   Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
 
+
+
+$win.on('scroll', function () {
+  const winScrollTop = $(this).scrollTop();
+
+  /** add affixed for menu in header */
+  (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
+});
 
 // $win.on('scroll', function () {
 //   const scrollTop = $(this).scrollTop();

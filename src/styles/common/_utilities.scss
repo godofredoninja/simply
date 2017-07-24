@@ -29,7 +29,8 @@
 // Positions
 .u-relative { position: relative; }
 .u-absolute { position: absolute; }
-.u-absolute0 { @extend %u-absolute0;}
+.u-absolute0 { @extend %u-absolute0; }
+.u-fixed { position: fixed !important; }
 
 .u-block {display: block !important}
 
@@ -219,7 +220,7 @@
 }
 
 // hide global
-.u-hide {display: none !important}
+.u-hide { display: none !important }
 // hide before
 @media #{$md-and-down} {.u-hide-before-md {display: none !important} }
 @media #{$lg-and-down} {.u-hide-before-lg {display: none !important} }

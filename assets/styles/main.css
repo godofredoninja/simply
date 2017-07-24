@@ -1468,6 +1468,10 @@ p {
   position: absolute;
 }
 
+.u-fixed {
+  position: fixed !important;
+}
+
 .u-block {
   display: block !important;
 }
@@ -2878,6 +2882,11 @@ body.is-frontpage .header-wrap {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
   }
+
+  .mainMenu--affixed {
+    position: fixed;
+    top: 0;
+  }
 }
 
 @media only screen and (max-width: 766px) {
@@ -3341,7 +3350,7 @@ body.is-frontpage .header-wrap {
 .post-related .entry-image {
   border-bottom: 1px solid rgba(0, 0, 0, 0.0785);
   border-radius: 4px 4px 0 0;
-  height: 150px;
+  height: 160px;
 }
 
 .post-related .entry-title {
@@ -3355,7 +3364,8 @@ body.is-frontpage .header-wrap {
 }
 
 .post-related .u-card {
-  height: 240px;
+  height: 250px;
+  margin-bottom: 20px;
 }
 
 .sharePost {

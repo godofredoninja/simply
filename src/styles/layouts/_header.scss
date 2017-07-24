@@ -11,13 +11,12 @@
     color: #fff !important;
     height: 30px;
 
-    img {max-height: 100%; }
+    img { max-height: 100%; }
   }
 
   &-logo,
   .button-search--open,
-  .button-nav--toggle {z-index: 150;}
-
+  .button-nav--toggle { z-index: 150; }
 
   // header description home page
   &-description {
@@ -31,7 +30,7 @@
 
 // Header Follow
 // ==========================================================================
-.follow>a {
+.follow > a {
   padding-left: 15px;
 }
 
@@ -57,8 +56,6 @@
     }
   }
 }
-
-
 
 .button-search--open {
   padding-right: 0 !important;
@@ -120,6 +117,13 @@ body.is-frontpage .header-wrap {height: auto;}
     }
 
     .nav ul {flex: 1 1 auto;}
+  }
+
+  // Main Menu Fixed
+  // ==========================================================================
+  .mainMenu--affixed {
+    position: fixed;
+    top: 0;
   }
 
 }
