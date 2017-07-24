@@ -2,7 +2,7 @@
 .entry {
   &-author {
     // display: table-cell;
-    line-height: 1.4;
+    line-height: 1.2;
     padding-left: 10px;
     // vertical-align: middle;
 
@@ -25,7 +25,6 @@
   }
 }
 
-
 // entry Global
 .entry.u-card {
   .entry-image {
@@ -39,7 +38,7 @@
 
 // if post is featured
 .entry.entry--featured {
-  .entry-body { display: flex; flex-direction: column;}
+  .entry-body { display: flex; flex-direction: column; }
 
   .entry-image {
     height: 200px;
@@ -56,9 +55,7 @@
     transform: translate(-50%, -50%);
     width: 100%;
   }
-
 }
-
 
 // even entry
 .entry.entry--featured,
@@ -69,5 +66,18 @@
     font-size: 23px;
     letter-spacing: -.022em;
     line-height: 1.22;
+  }
+}
+
+// Media Query
+@media #{$md-and-down} {
+  .entry {
+    border-bottom: 1px solid rgba(0, 0, 0, .0785);
+    padding-bottom: 20px;
+  }
+
+  .entry-avatar--img {
+    height: 32px;
+    width: 32px;
   }
 }

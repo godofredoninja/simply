@@ -1239,6 +1239,7 @@ svg {
 }
 
 .loadingBar {
+  background-color: #48e79a;
   display: none;
   height: 2px;
   left: 0;
@@ -2940,7 +2941,7 @@ body.is-frontpage .header-wrap {
 }
 
 .entry-author {
-  line-height: 1.4;
+  line-height: 1.2;
   padding-left: 10px;
 }
 
@@ -2999,6 +3000,18 @@ body.is-frontpage .header-wrap {
   font-size: 23px;
   letter-spacing: -.022em;
   line-height: 1.22;
+}
+
+@media only screen and (max-width: 766px) {
+  .entry {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.0785);
+    padding-bottom: 20px;
+  }
+
+  .entry-avatar--img {
+    height: 32px;
+    width: 32px;
+  }
 }
 
 .homePage .entry .u-backgroundDark {
@@ -3154,10 +3167,6 @@ body.is-frontpage .header-wrap {
 
 .post-title {
   line-height: 1.04;
-}
-
-.post-footer {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .post-body a {
