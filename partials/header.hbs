@@ -2,20 +2,20 @@
 <header class="header u-sizeFullWidth u-relative u-bgColor">
     <div class="header-wrap u-flexCenter u-relative">
         {{!-- background dark if home have image --}}
-        {{#is "home"}}
+         {{#is "index"}}
             {{#if @blog.cover_image}}
             <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md cover-lazy lazy" data-original="{{@blog.cover_image}}"></span>
             <span class="u-absolute0 u-backgroundDark u-hide-before-md"></span>
             {{else}}
             <span class="u-absolute0 u-hide-before-md" style="background:rgba(0,0,0,.175)"></span>
             {{/if}}
-        {{/is}}
+         {{/is}}
 
         <div class="u-maxWidth1040 u-sizeFullWidth u-container" style="z-index:100">
             <div class="header-top-section u-flexCenter u-headerColorLink">
                 {{!-- header logo --}}
                 <div class="u-flex1">
-                {{#is "home"}}
+                {{#is "index"}}
                 <h1><a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSizeJumbo u-md-fontSizeLarger u-fontWeightSemibold">{{@blog.title}}</span>{{/if}}</a></h1>
                 {{else}}
                 <a class="header-logo u-flexCenter u-relative" href="{{@blog.url}}">{{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSize36 u-fontWeightSemibold">{{@blog.title}}</span>{{/if}}</a>
@@ -23,25 +23,25 @@
                 </div>
                 <div class="u-flex1 u-flex u-flexEnd u-headerColorLink">
                     {{!-- header follow if is not home page --}}
-                    {{^is "home"}}{{>"widget-follow"}}{{/is}}
+                    {{^is "index"}}{{>"widget-follow"}}{{/is}}
 
                     <a href="#" class="button-search--open u-relative button button--chromeless i-search u-fontSizeLarge u-hide-after-md"></a>
                     <a href="#" style="margin-right:-12px;" class="button-nav--toggle u-relative u-hide-after-md"><span></span><span></span><span></span></a>
                 </div>
             </div>
             {{!-- Header description for home page --}}
-            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSizeLarge u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
+            {{#is "index"}}{{#if @blog.description}}<div class="header-description u-fontSizeLarge u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
         </div>
     </div>
 
     {{!-- Header Navigation --}}
-    <nav class="mainMenu u-hide-before-md u-fontSizeSmaller u-bgColor">
+    <nav class="mainMenu u-fontSizeSmaller u-bgColor u-sizeFullWidth">
         <div class="u-maxWidth1040 u-container">
             <div class="nav u-flex u-flexCenter u-headerColorLink">
                 {{navigation}}
                 <a href="#" class="button-search--open button button--chromeless u-fontSizeLarge i-search"></a>
                 {{!-- nav follow active is home page --}}
-                {{#is "home"}}{{>"widget-follow"}}{{/is}}
+                {{#is "index"}}{{>"widget-follow"}}{{/is}}
             </div>
         </div>
     </nav>

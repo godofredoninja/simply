@@ -14,11 +14,14 @@
 
     {{!-- Video Post Format --}}
     {{#has tag="#video-post-format"}}
-        <div class="video-post-format u-marginAuto u-maxWidth1000"><div class="video-responsive"></div></div>
+        <div class="video-post-format u-marginAuto u-maxWidth1000">
+            <div class="video-responsive"></div>
+            <div class="u-flex u-flexWrap u-paddingTop20 u-fontSize15 u-flexCenter channel-name u-hide"><div class="g-ytsubscribe" data-channelid="" data-layout="default" data-count="default"></div></div>
+        </div>
     {{else}}
         {{!-- Figure --}}
         {{#if feature_image}}
-            <figure class="post-image u-paddingTop30 u-block u-marginAuto {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
+            <figure class="post-image u-block u-marginAuto u-marginTop30 {{#has tag="#image-post-format"}}u-sizeFullWidth{{else}}u-maxWidth1000{{/has}}">
                 <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}" {{^has tag="#image-post-format"}}data-action="zoom"{{/has}}/>
             </figure>
         {{/if}}
