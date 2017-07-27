@@ -132,11 +132,11 @@ var $followBox = $('.follow-box');
 var $comments = $('.post-comments');
 var $videoPostBox = $('.video-post-format');
 var $seachInput = $('#search-field');
-var $mainMenu = $('.mainMenu');
+// const $mainMenu = $('.mainMenu');
 
 var urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
-var mainMenuOffsetTop = $mainMenu.offset().top;
+// const mainMenuOffsetTop = $mainMenu.offset().top;
 var postActionsHeight = $postActions.outerHeight();
 
 var scrollTimeOut = true;
@@ -305,18 +305,9 @@ $doc.on('ready', function () {
 
 
 
-$win.on('scroll', function () {
-  var winScrollTop = $(this).scrollTop();
-
-  /** add affixed for menu in header */
-  (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
-});
-
 // $win.on('scroll', function () {
-//   const scrollTop = $(this).scrollTop();
-//   const heightPostBody = $postBody.height();
-//   // active or desactive Post Actions in post Sections
-//   (scrollTop < heightPostBody) ? $postActions.addClass('is-visible') : $postActions.removeClass('is-visible');
+//   const winScrollTop = $(this).scrollTop();
+//   (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
 // });
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))

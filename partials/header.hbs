@@ -35,18 +35,16 @@
     </div>
 
     {{!-- Header Navigation --}}
-    <div class="u-relative u-hide-before-md" style="height:58px">
-        <nav class="mainMenu u-fontSizeSmaller u-bgColor u-sizeFullWidth">
-            <div class="u-maxWidth1040 u-container">
-                <div class="nav u-flex u-flexCenter u-headerColorLink">
-                    {{navigation}}
-                    <a href="#" class="button-search--open button button--chromeless u-fontSizeLarge i-search"></a>
-                    {{!-- nav follow active is home page --}}
-                    {{#is "home"}}{{>"widget-follow"}}{{/is}}
-                </div>
+    <nav class="mainMenu u-fontSizeSmaller u-bgColor u-sizeFullWidth">
+        <div class="u-maxWidth1040 u-container">
+            <div class="nav u-flex u-flexCenter u-headerColorLink">
+                {{navigation}}
+                <a href="#" class="button-search--open button button--chromeless u-fontSizeLarge i-search"></a>
+                {{!-- nav follow active is home page --}}
+                {{#is "home"}}{{>"widget-follow"}}{{/is}}
             </div>
-        </nav>
-    </div>
+        </div>
+    </nav>
 
     {{!-- Side Nav for Mobile --}}
     {{>"sidenav"}}

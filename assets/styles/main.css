@@ -2883,11 +2883,6 @@ body.is-frontpage .header-wrap {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
   }
-
-  .mainMenu--affixed {
-    position: fixed;
-    top: 0;
-  }
 }
 
 @media only screen and (max-width: 766px) {

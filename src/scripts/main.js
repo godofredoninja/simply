@@ -32,11 +32,11 @@ const $followBox = $('.follow-box');
 const $comments = $('.post-comments');
 const $videoPostBox = $('.video-post-format');
 const $seachInput = $('#search-field');
-const $mainMenu = $('.mainMenu');
+// const $mainMenu = $('.mainMenu');
 
 const urlRegexp = /^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \+\.-]*)*\/?$/; // eslint-disable-line
 
-const mainMenuOffsetTop = $mainMenu.offset().top;
+// const mainMenuOffsetTop = $mainMenu.offset().top;
 const postActionsHeight = $postActions.outerHeight();
 
 let scrollTimeOut = true;
@@ -207,16 +207,7 @@ $doc.on('ready', () => {
 
 
 
-$win.on('scroll', function () {
-  const winScrollTop = $(this).scrollTop();
-
-  /** add affixed for menu in header */
-  (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
-});
-
 // $win.on('scroll', function () {
-//   const scrollTop = $(this).scrollTop();
-//   const heightPostBody = $postBody.height();
-//   // active or desactive Post Actions in post Sections
-//   (scrollTop < heightPostBody) ? $postActions.addClass('is-visible') : $postActions.removeClass('is-visible');
+//   const winScrollTop = $(this).scrollTop();
+//   (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
 // });
