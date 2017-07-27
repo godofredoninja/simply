@@ -409,72 +409,100 @@ module.exports = {
  * pagination
  */
 var $win = $(window);
-var paginationUrl = $('link[rel=canonical]').attr('href');
+var $pathname = $('link[rel=canonical]').attr('href');
 var $btnLoadMore = $('.loadMore');
-var $paginationTotal = $btnLoadMore.attr('data-page-total');
+var $maxPages = $btnLoadMore.attr('data-page-total');
 
-var enableDisableScroll = false; // false => !1
-var paginationNumber = 2;
+var scrollTime = false;
+var currentPage = 2;
 
-/* Page end */
-function activeScroll() {
-  enableDisableScroll = true; // true => !0
-}
+var lastScroll = 0;
 
-//  window scroll
-$win.on('scroll', activeScroll);
+/* active Scroll */
+var onScroll = function () { return scrollTime = true; };
+
 
 /* Scroll page END */
-function PageEnd() {
+var  detectPageEnd = function () {
   var scrollTopWindow = $win.scrollTop() + window.innerHeight;
   var scrollTopBody = document.body.clientHeight - (window.innerHeight * 2);
 
-  return (enableDisableScroll === true && scrollTopWindow > scrollTopBody);
+  return (scrollTime === true && scrollTopWindow > scrollTopBody);
 }
 
+/* Fetch Page */
+function fetchPage () {
+  if (typeof $maxPages !== 'undefined' && currentPage <= $maxPages && detectPageEnd()) {
+    $.ajax({
+      type: 'GET',
+      url: ($pathname + "page/" + currentPage),
+      dataType: 'html',
+      beforeSend: function () {
+        $win.off('scroll', onScroll);
+        $('body').addClass('is-loading');
+        $btnLoadMore.text('Loading...');
+      },
+      success: function (data) {
+        var entries = $('.feed-entry-wrap', data);
+        $('.feed-entry-content').append(entries);
+        $btnLoadMore.html('Load more');
 
-$(document).on('ready', function () {
-  // set interbal
-  setInterval(function () {
-    if (PageEnd()) {
-      if (typeof $paginationTotal !== 'undefined' && paginationNumber <= $paginationTotal) {
-        /* Call Ajax Get URL */
-        $.ajax({
-          type: 'GET',
-          url: (paginationUrl + "page/" + paginationNumber),
-          beforeSend: function () {
-            $win.off('scroll', activeScroll);
-            $('body').addClass('is-loading');
-            $btnLoadMore.text('Loading...');
-          },
-          success: function (data) {
-            var entries = $('.feed-entry-wrap', data);
-            $('.feed-entry-content').append(entries);
-            $btnLoadMore.html('Load more');
+        currentPage ++;
 
-            paginationNumber += 1;
+        /* Lazy load for image */
+        $('.simply-lazy.lazy').lazyload({ threshold : 200 });
 
-            /* Lazy load for image */
-            $('.simply-lazy.lazy').lazyload({
-              threshold : 200,
-            });
+        $win.on('scroll', onScroll);
+      },
+      complete: function () {
+        setTimeout(function () {$('body').removeClass('is-loading')}, 700);
+      },
+    });
 
-            $win.on('scroll', activeScroll);
-          },
-          complete: function () {
-            setTimeout(function () {$('body').removeClass('is-loading');}, 700);
-          },
-        });
+    /* Disable scroll */
+    scrollTime = false;
+  } else {
+    $btnLoadMore.remove();
+  }
+}
 
-        /* Disable scroll */
-        enableDisableScroll = false; // => !1;
-      } else {
-        $btnLoadMore.remove();
-      }
+/* Is visble next page */
+function isVisible(element) {
+  var scroll_pos = $win.scrollTop();
+  var windowHeight = $win.height();
+  var elementTop = $(element).offset().top;
+  var elementHeight = $(element).height();
+  var elementBottom = elementTop + elementHeight;
+  return ((elementBottom - elementHeight * 0.25 > scroll_pos) && (elementTop < (scroll_pos + 0.5 * windowHeight)));
+}
+
+function historyReplaceState () {
+  if ($btnLoadMore.length > 0) {
+    var scroll = $win.scrollTop();
+
+    if (Math.abs(scroll - lastScroll) > $win.height() * 0.1) {
+      lastScroll = scroll;
+
+      $('.feed-entry-wrap').each(function () {
+        if (isVisible($(this))) {
+          history.replaceState(null, null, $(this).attr("data-page"));
+          return (false);
+        }
+      });
     }
-  }, 500);
+  }
+}
 
-});
+//  window scroll
+$win.on('scroll', onScroll);
+
+// set interbal
+setInterval(function () {
+  fetchPage();
+  historyReplaceState();
+}, 500);
+
+
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 

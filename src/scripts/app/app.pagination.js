@@ -3,69 +3,97 @@
  * pagination
  */
 const $win = $(window);
-const paginationUrl = $('link[rel=canonical]').attr('href');
+const $pathname = $('link[rel=canonical]').attr('href');
 const $btnLoadMore = $('.loadMore');
-const $paginationTotal = $btnLoadMore.attr('data-page-total');
+const $maxPages = $btnLoadMore.attr('data-page-total');
 
-let enableDisableScroll = false; // false => !1
-let paginationNumber = 2;
+let scrollTime = false;
+let currentPage = 2;
 
-/* Page end */
-function activeScroll() {
-  enableDisableScroll = true; // true => !0
-}
+let lastScroll = 0;
 
-//  window scroll
-$win.on('scroll', activeScroll);
+/* active Scroll */
+let onScroll = () => scrollTime = true;
+
 
 /* Scroll page END */
-function PageEnd() {
+let  detectPageEnd = () => {
   const scrollTopWindow = $win.scrollTop() + window.innerHeight;
   const scrollTopBody = document.body.clientHeight - (window.innerHeight * 2);
 
-  return (enableDisableScroll === true && scrollTopWindow > scrollTopBody);
+  return (scrollTime === true && scrollTopWindow > scrollTopBody);
 }
 
+/* Fetch Page */
+function fetchPage () {
+  if (typeof $maxPages !== 'undefined' && currentPage <= $maxPages && detectPageEnd()) {
+    $.ajax({
+      type: 'GET',
+      url: `${$pathname}page/${currentPage}`,
+      dataType: 'html',
+      beforeSend: () => {
+        $win.off('scroll', onScroll);
+        $('body').addClass('is-loading');
+        $btnLoadMore.text('Loading...');
+      },
+      success: (data) => {
+        const entries = $('.feed-entry-wrap', data);
+        $('.feed-entry-content').append(entries);
+        $btnLoadMore.html('Load more');
 
-$(document).on('ready', () => {
-  // set interbal
-  setInterval(() => {
-    if (PageEnd()) {
-      if (typeof $paginationTotal !== 'undefined' && paginationNumber <= $paginationTotal) {
-        /* Call Ajax Get URL */
-        $.ajax({
-          type: 'GET',
-          url: `${paginationUrl}page/${paginationNumber}`,
-          beforeSend: () => {
-            $win.off('scroll', activeScroll);
-            $('body').addClass('is-loading');
-            $btnLoadMore.text('Loading...');
-          },
-          success: (data) => {
-            const entries = $('.feed-entry-wrap', data);
-            $('.feed-entry-content').append(entries);
-            $btnLoadMore.html('Load more');
+        currentPage ++;
 
-            paginationNumber += 1;
+        /* Lazy load for image */
+        $('.simply-lazy.lazy').lazyload({ threshold : 200 });
 
-            /* Lazy load for image */
-            $('.simply-lazy.lazy').lazyload({
-              threshold : 200,
-            });
+        $win.on('scroll', onScroll);
+      },
+      complete: () => {
+        setTimeout(() => {$('body').removeClass('is-loading')}, 700);
+      },
+    });
 
-            $win.on('scroll', activeScroll);
-          },
-          complete: () => {
-            setTimeout(() => {$('body').removeClass('is-loading');}, 700);
-          },
-        });
+    /* Disable scroll */
+    scrollTime = false;
+  } else {
+    $btnLoadMore.remove();
+  }
+}
 
-        /* Disable scroll */
-        enableDisableScroll = false; // => !1;
-      } else {
-        $btnLoadMore.remove();
-      }
+/* Is visble next page */
+function isVisible(element) {
+  const scroll_pos = $win.scrollTop();
+  const windowHeight = $win.height();
+  const elementTop = $(element).offset().top;
+  const elementHeight = $(element).height();
+  const elementBottom = elementTop + elementHeight;
+  return ((elementBottom - elementHeight * 0.25 > scroll_pos) && (elementTop < (scroll_pos + 0.5 * windowHeight)));
+}
+
+function historyReplaceState () {
+  if ($btnLoadMore.length > 0) {
+    const scroll = $win.scrollTop();
+
+    if (Math.abs(scroll - lastScroll) > $win.height() * 0.1) {
+      lastScroll = scroll;
+
+      $('.feed-entry-wrap').each(function () {
+        if (isVisible($(this))) {
+          history.replaceState(null, null, $(this).attr("data-page"));
+          return (false);
+        }
+      });
     }
-  }, 500);
+  }
+}
 
-});
+//  window scroll
+$win.on('scroll', onScroll);
+
+// set interbal
+setInterval(() => {
+  fetchPage();
+  historyReplaceState();
+}, 500);
+
+

@@ -5,7 +5,7 @@
 <section class="homePage u-wrap">
     <div class="feed-entry-content u-marginTop30 u-marginBottom15 u-maxWidth1000 u-marginAuto">
         {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}
-        <div class="feed-entry-wrap">
+        <div class="feed-entry-wrap" data-page="{{#is "paged"}}/page/{{pagination.page}}{{/is}}/">
             {{!-- This is the post loop - each post will be output using this markup --}}
             <div class="row">{{#foreach posts}} {{>"entry"}} {{/foreach}} </div>
         </div>
