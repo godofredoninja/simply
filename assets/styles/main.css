@@ -3712,8 +3712,7 @@ body.is-search .search {
 
   .is-author.has-featured-image .main,
   .is-tag.has-featured-image .main {
-    margin-top: 0;
-    top: -110px;
+    margin-top: -110px;
   }
 
   .is-author.has-featured-image .tag,
