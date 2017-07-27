@@ -1,11 +1,11 @@
 {{!-- Article relative --}}
-{{#get "posts" limit="3" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags"}}
+{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags"}}
 <section class="post-related u-backgroundWhite u-paddingTop30 u-paddingBottom20 u-overflowHidden">
     <div class="u-marginAuto u-maxWidth1000">
         <div class="row">
 
         {{#foreach posts}}
-            <article class="col s12 m4 simply-tracking" data-event-category="Article" data-event-action="Related Posts" data-event-label="Entry" data-event-non-interaction="1">
+            <article class="col s12 m6 l4 simply-tracking" data-event-category="Article" data-event-action="Related Posts" data-event-label="Entry" data-event-non-interaction="1">
                 <div class="u-card u-padding0">
                     <div class="entry-image u-relative u-overflowHidden">
                         <a href="{{url}}" class="entry-image--link u-block u-absolute0">

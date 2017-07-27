@@ -3,11 +3,10 @@
 
 .homePage {
   .entry {
-    .u-backgroundDark {display: none;}
-    &-image {height: 172px;}
+    .u-backgroundDark { display: none; }
+    &-image { height: 172px; }
   }
 }
-
 
 
 @media #{$md-and-up} {
@@ -40,9 +39,9 @@
       // entry full with background all
       &.entry7 {
         .entry-image {height: 450px;}
-
         .entry-title {font-size: 44px !important}
         .entry-excerpt { font-size: 24px; line-height: 1.3;}
+        .u-accentColor--iconNormal { fill: #fff; }
       }
 
       &.entry7,

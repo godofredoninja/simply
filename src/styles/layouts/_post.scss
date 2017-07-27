@@ -3,9 +3,9 @@
     line-height: 1.04;
   }
 
-  &-footer {
-    border-bottom: 1px solid rgba(0,0,0,.05);
-  }
+  // &-footer {
+  //   border-bottom: 1px solid rgba(0,0,0,.05);
+  // }
 }
 
 
@@ -190,7 +190,7 @@
   .entry-image {
     border-bottom: 1px solid rgba(0, 0, 0, .0785);
     border-radius: 4px 4px 0 0;
-    height: 150px;
+    height: 160px;
   }
 
   .entry-title {
@@ -204,7 +204,8 @@
   }
 
   .u-card {
-    height: 240px;
+    height: 250px;
+    margin-bottom: 20px;
   }
 }
 
@@ -239,15 +240,18 @@
   left: 0;
   position: fixed;
   right: 0;
-  transform: translateY(100%);
-  transition: transform .3s;
-  visibility: hidden;
+  // transform: translateY(100%);
+  // transition: transform .3s;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.25s ease-in-out;
+  // visibility: hidden;
   z-index: 400;
 
   &.is-visible {
-    transform: translateY(0);
-    transition-delay: 0s;
-    visibility: visible;
+    transform: translateY(100%);
+    // transform: translateY(0);
+    // transition-delay: 0s;
+    // visibility: visible;
   }
 
   &-wrap {max-width: 1200px;}

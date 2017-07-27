@@ -5,5 +5,9 @@
   "extends": [
     "stylelint-config-sass-guidelines",
     "stylelint-config-standard",
-  ]
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "number-leading-zero": null
+  }
 }

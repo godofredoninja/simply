@@ -22,7 +22,7 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  i { display: inline-block}
+  i { display: inline-block; }
 
   &--chromeless {
     border-radius: 0;
@@ -62,10 +62,29 @@
   }
 }
 
-
+// Primary
+.button--primary {
+  border-color: $primary-color;
+  color: $primary-color;
+}
 
 .buttonSet {
+  > .button {
+    margin-right: 8px;
+    vertical-align: middle;
+  }
 
+  > .button:last-child {
+    margin-right: 0;
+  }
+
+  .button--chromeless {
+    height: 37px;
+    line-height: 35px;
+  }
+}
+
+.buttonSet {
   .button--large.button--chromeless,
   .button--large.button--link {
     height: 44px;
@@ -86,9 +105,6 @@
     padding-right: 0;
   }
 }
-
-
-
 
 .button--large.button--chromeless,
 .button--large.button--link {

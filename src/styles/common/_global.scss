@@ -374,19 +374,21 @@ q {
   position: fixed;
   right: 20px;
   text-align: center;
-  z-index: 888;
   width: 60px;
+  z-index: 888;
 
   &:hover svg path {
     fill: rgba(0, 0, 0, .6);
   }
 }
 
-.svg-icon {
-  svg {
-    width: 100%;
-    height: auto;
-  }
+.svgIcon {
+  display: inline-block;
+}
+
+svg {
+  height: auto;
+  width: 100%;
 }
 
 // Load More
@@ -400,8 +402,8 @@ q {
   text-align: center;
 }
 
-
 .loadingBar {
+  background-color: #48e79a;
   display: none;
   height: 2px;
   left: 0;

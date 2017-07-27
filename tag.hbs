@@ -2,7 +2,7 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#tag}}
-<section class="tag u-relative u-flex u-flexWrap u-backgroundSizeCover u-textAlignCenter {{^if feature_image}}not--image {{/if}}" style="background-image: url({{feature_image}})">
+<section class="tag u-relative u-flex u-flexWrap u-backgroundSizeCover u-textAlignCenter u-paddingBottom20 {{^if feature_image}}not--image {{/if}}" style="background-image: url({{feature_image}})">
     {{#if feature_image}}<span class="u-absolute0 u-backgroundDark"></span>{{/if}}
 
     <div class="u-maxWidth1040 u-container tag-wrap u-paddingTop30 u-paddingBottom30 u-relative u-flexCenter u-flexCenter u-flexColumn">
