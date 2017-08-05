@@ -204,10 +204,3 @@ $doc.on('ready', () => {
   /* Prism code syntax autoloader */
   Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
-
-
-
-// $win.on('scroll', function () {
-//   const winScrollTop = $(this).scrollTop();
-//   (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
-// });

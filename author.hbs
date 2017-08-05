@@ -20,8 +20,8 @@
 
         <div class="author-meta u-paddingBottom30">
             {{#if location}}<span class="author-location"><i class="i-location"></i> {{location}}</span>{{/if}}
-            {{#if website}}<span class="author-link"><i class="i-link"></i> <a href="{{website}}">{{website}}</a></span>{{/if}}
-            <span class="author-stats"><i class="i-rss"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</span>
+            {{#if website}}<span class="author-link"><a href="{{website}}" target="_blank"><i class="i-link"></i> {{website}}</a></span>{{/if}}
+            <span class="author-stats"><a href="http://cloud.feedly.com/#subscription/feed/{{url absolute="true"}}rss/" target="_blank"><i class="i-rss"></i> {{plural ../pagination.total empty='No posts' singular='% post' plural='% posts'}}</a></span>
         </div>
 
         {{!-- Author location website --}}

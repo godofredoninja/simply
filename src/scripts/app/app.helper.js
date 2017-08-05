@@ -20,6 +20,8 @@ function simplyVideoResponsive(elem) {
       'iframe[src*="soundcloud.com"]',
       'iframe[src*="embed.spotify.com"]',
       'iframe[src*="spotify.com"]',
+      'iframe[src*="dailymotion.com"]',
+      'iframe[src*="facebook.com/plugins/video.php"]',
       'iframe[src*="youtube.com"]',
       'iframe[src*="youtube-nocookie.com"]',
       'iframe[src*="kickstarter.com"][src*="video.html"]',
