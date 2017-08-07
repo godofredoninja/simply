@@ -30,9 +30,10 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Pagination Infinite Scroll
 - Cover images for blog, tag and author
 - links to followers in social media
-- Related Articles (3 articles)
+- Related Articles (6 articles)
 - Video Post Format => add tag `#video-post-format`
 - Image post Format => add tag `#image-post-format`
+- YouTube Subscribe Button in video post Format
 - 5 articles latest posts in the (author - tag) section sidebar
 - Previous and next button in the Post
 - Has button to save the link on Facebook
@@ -40,8 +41,8 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Support for counter comments (Facebook or Disqus)
 - Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
-- Additional sticky content in the sidebar
-- YouTube, Vimeo, kickstarter => Video Responsive
+- Sticky content in the sidebar
+- YouTube, Vimeo, kickstarter, Facebook, dailymotion, Spotify, soundcloud => Responsive
 - Lazy image loading for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
@@ -117,4 +118,4 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 
 ## Copyright & License
 
-Copyright (c) 2017 GodoFredoNinja - Released under the [GPL 3 license](LICENSE).
+Copyright (c) 2017 GodoFredoNinja - Released under the [CC BY-NC 4.0](LICENSE).

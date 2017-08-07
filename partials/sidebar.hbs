@@ -13,10 +13,10 @@
         {{!-- Add Post Recents --}}
         {{#get "posts" limit="5" as |recents|}}
         <div class="sidebar-items u-marginBottom30">
-            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">Artículos Recientes</h3>
+            <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">Latest Articles</h3>
 
             {{#foreach recents}}
-            <div class="u-paddingBottom2 sidebar-post">
+            <div class="u-paddingBottom2 sidebar-post simply-tracking" data-event-category="{{#is "tag"}}Tag{{else}}Author{{/is}}" data-event-action="Sidebar - Latest articles" data-event-label="{{url absolute="true"}}" data-event-non-interaction="1">
                 <a href="{{url absolute="true"}}" class="sidebar-post--link u-block u-relative">
                     <span class="sidebar-border u-flexCenter u-absolute u-fontSize28 u-lineHeight1 u-fontWeightSemibold">{{@number}}</span>
                     <h3 class="sidebar-post--title u-fontSizeBase u-fontWeightNormal">{{title}}</h3>
