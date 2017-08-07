@@ -5,7 +5,6 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 
 # Runtime data
 pids
@@ -480,3 +479,5 @@ __pycache__/
 .editorconfig
 src/
 yarn.lock
+.cache-loader
+yarn-error.log

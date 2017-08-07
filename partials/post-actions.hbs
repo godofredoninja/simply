@@ -4,7 +4,7 @@
         <div class="u-floatLeft u-flex u-flexCenter">
             {{!-- Prev Post--}}
             {{#prev_post}}
-            <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Read" data-event-label="Previous - Article" data-event-non-interaction="1">
+            <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Previous - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="1">
                 <a href="{{url}}" class="u-block">
                     <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">Prev article</span>
                     <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>
@@ -23,9 +23,10 @@
             <a href="#post-comments" class="button button--large button--chromeless button--dark u-fontSizeLarge scroll-id">
                 <i class="i-comments"></i>
                 {{!-- Disqus Comments Count --}}
-                <span class="disqus-comment-count u-fontSizeSmall simply-disqus" data-disqus-url="{{url absolute="true"}}">0</span>
+                <span class="disqus-comment-count u-fontSizeSmall simply-disqus" data-disqus-url="{{url absolute="true"}}"></span>
                 {{!-- Facebook Comments Counts --}}
                 <span class="fb-comments-count u-fontSizeSmall simply-facebook" data-href="{{url absolute="true"}}">0</span>
+                <span class="u-fontSizeSmall simply-facebook">Comments</span>
             </a>
 
         </div>
@@ -36,7 +37,7 @@
                 <a href="#" title="Share on Twitter" class="simply-tracking simply-share i-twitter button button--large button--chromeless c-twitter u-fontSizeLarge" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}" data-event-category="Article" data-event-action="Share" data-event-label="Twitter - Bottom" data-event-non-interaction="1"></a>
                 <a href="#" title="Share on whatsapp" class="simply-tracking simply-share i-whatsapp button button--large button--chromeless c-whatsapp u-fontSizeLarge u-hide-after-lg" data-share="whatsapp" data-title="{{title}}" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Whatsapp - Bottom" data-event-non-interaction="1"></a>
                 <a href="#" title="Share on Reddit" class="simply-tracking simply-share i-reddit button button--large button--chromeless c-reddit u-fontSizeLarge u-hide-before-lg" data-share="reddit" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Reddit - Bottom" data-event-non-interaction="1"></a>
-                <div class="simply-tracking fbSave with-tooltip u-relative button button--large button--chromeless c-facebook" data-tooltip="Save to Facebook" data-event-category="Article" data-event-action="Share" data-event-label="Facebook - Bookmark" data-event-non-interaction="1">
+                <div class="simply-tracking fbSave with-tooltip u-relative button button--large button--chromeless c-facebook u-hide" data-tooltip="Save to Facebook" data-event-category="Article" data-event-action="Share" data-event-label="Facebook - Bookmark" data-event-non-interaction="1">
                     <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
                     <div class="fbSave-dropdown u-absolute u-overflowHidden u-lineHeight1"><div class="fb-save" data-uri="{{url absolute="true"}}" data-size="large"></div></div>
                 </div>
@@ -46,7 +47,7 @@
             {{#next_post}}
             <div class="separator u-hide-before-lg"></div>
 
-            <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Read" data-event-label="Next - Article" data-event-non-interaction="1">
+            <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Next - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="1">
                 <a href="{{url}}" class="u-block">
                     <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">Next article</span>
                     <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>

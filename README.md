@@ -1,12 +1,10 @@
-# Simply theme for [Ghost v1](https://github.com/tryghost/ghost/) by @GodoFredoNinja
+# Simply theme for [Ghost](https://github.com/tryghost/ghost/) by @GodoFredoNinja
 
 [![Ghost version](https://img.shields.io/badge/Ghost-1.x.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Node](https://img.shields.io/node/v/uno-zen.svg)](https://nodejs.org/en/)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
 > Simple and Elegant theme for [Ghost](https://github.com/tryghost/ghost/).
-
-### ⚠ This theme is only compatible with ghost version 1.x.x. — If you want to use in previous versions follow the link 👉 [Simply-Tag-0.02](https://github.com/godofredoninja/simply/tree/0.0.2)
 
 ### Free theme for Ghost
 
@@ -30,9 +28,10 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Pagination Infinite Scroll
 - Cover images for blog, tag and author
 - links to followers in social media
-- Related Articles (3 articles)
+- Related Articles (6 articles)
 - Video Post Format => add tag `#video-post-format`
 - Image post Format => add tag `#image-post-format`
+- YouTube Subscribe Button in video post Format
 - 5 articles latest posts in the (author - tag) section sidebar
 - Previous and next button in the Post
 - Has button to save the link on Facebook
@@ -41,12 +40,11 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Support for counter comments (Facebook or Disqus)
 - Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
-- Additional sticky content in the sidebar
-- YouTube, Vimeo, kickstarter => Video Responsive
+- Sticky content in the sidebar
+- YouTube, Vimeo, kickstarter, Facebook, dailymotion, Spotify, soundcloud => Responsive
 - Lazy image loading for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
-> **To have the best design is recommended to have 12 or 14 articles per page.**
 
 ## Web Browser Support for Simply
 Simply supports the following web [browsers](http://caniuse.com/#search=flexbox).
@@ -77,27 +75,11 @@ var followSocialMedia = {
   'behance':'https://...',
   'flickr':'https://...',
   'pinterest':'https://...',
+  'telegram':'https://...',
   'rss':'https://...',
 };
 </script>
 ```
-
-## Save To Facebook
-The Save button lets people save articles in your [Facebook](https://developers.facebook.com/docs/plugins/save?locale=en_US) account.
-
-For it to work please add the following code in `Settings -> Code Injection -> Blog Footer.`
-```html
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.async=true;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-```
-
 
 ## Enable Disqus or Facebook Comments
 Only enable either Disqus or Facebook comments.
@@ -123,9 +105,6 @@ Insert your [Disqus shortname](https://shortname.disqus.com/admin/) in both the 
   <script id="dsq-count-scr" src="//YOUR_DISQUS_SHORTCUT_HERE.disqus.com/count.js" async></script>
   ```
 
-To ensure the Disqus comment count is working correctly verify that the Disqus settings -> Comment & Community Configuration is set as seen below.
-![](./documentation/disqus_comment_count.png)
-
 #### Facebook Comments
 To use Facebook comments, skip the configuration Disqus.
 
@@ -144,6 +123,7 @@ This enables comments and comment counter.
   ```html
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
+      $('.fbSave').removeClass('u-hide');
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
@@ -153,6 +133,16 @@ This enables comments and comment counter.
     }(document, 'script', 'facebook-jssdk'));</script>
   ```
 
+## YouTube Subscribe Button
+Add the code `Settings -> Code Injection -> Blog Footer`
+```html
+<script>
+/* 0.2  Video Post Format Subscribe */
+var youtubeChannelName = '...Your channel name...';
+var youtubeChannelID = '... Your Channel ID ...';
+</script>
+```
+
 ## Add additional content to the sidebar
 Add you own custom content into the side bar by editing the `./partials/sidebar.hbs` file.
 
@@ -160,16 +150,6 @@ Add you own custom content into the side bar by editing the `./partials/sidebar.
 <div class="sidebar-items u-marginBottom30">
     <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title ..</h3>
     <p class="u-textColorDarker u-fontSize15 u-marginBottom10">.. your description or content ..</p>
-</div>
-
-<!-- Add sticky content to the bottom -->
-<div class="sidebar-sticky">
-
-    <div class="sidebar-items u-marginBottom30"> <!--Open Book -->
-        <h3 class="sidebar-title u-fontSizeBase u-textColorDarker">.. your title sticky ..</h3>
-        <p class="u-textColorDarker u-fontSize15 u-marginBottom10"> .. your Content sticky .. </p>
-    </div> <!-- close Book -->
-
 </div>
 ```
 
@@ -214,4 +194,4 @@ To make your changes with your favorite colors you just have to add the followin
 
 ## Copyright & License
 
-Copyright (c) 2017 GodoFredoNinja - Released under the [GPL 3 license](LICENSE).
+Copyright (c) 2017 GodoFredoNinja - Released under the [CC BY-NC 4.0](LICENSE).

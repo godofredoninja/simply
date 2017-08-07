@@ -22,14 +22,16 @@
 
     <footer class="u-paddingTop15 u-flex u-flexEnd">
         <div class="buttonSet">
-            <a href="{{url}}#post-comments" class="button button--chromeless">
+            <a href="{{url}}#post-comments" class="button button--chromeless" title="Comments">
                 {{!-- Disqus Comments Count --}}
-                <span class="disqus-comment-count simply-disqus" data-disqus-url="{{url absolute="true"}}">0</span>
+                <i class="i-comments u-fontSizeLarge"></i>
+                <span class="disqus-comment-count simply-disqus" data-disqus-url="{{url absolute="true"}}"></span>
                 {{!-- Facebook Comments Counts --}}
-                <span class="fb-comments-count simply-facebook" data-href="{{url absolute="true"}}">0</span> Comments
+                <span class="fb-comments-count simply-facebook" data-href="{{url absolute="true"}}">0</span>
+                <span class="simply-facebook" >Comments</span>
             </a>
 
-            <div class="fbSave button button--chromeless u-relative with-tooltip" data-tooltip="Save to Facebook">
+            <div class="fbSave button button--chromeless u-relative with-tooltip u-hide" data-tooltip="Save to Facebook">
                 <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
                 <div class="fbSave-dropdown u-absolute u-overflowHidden u-lineHeight1"><div class="fb-save" data-uri="{{url absolute="true"}}" data-size="large"></div></div>
             </div>
