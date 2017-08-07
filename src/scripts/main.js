@@ -30,7 +30,7 @@ const $share = $('.simply-share');
 const $postActions = $('.postActions');
 const $followBox = $('.follow-box');
 const $comments = $('.post-comments');
-const $videoPostBox = $('.video-post-format');
+const $videoPostFormat = $('.video-post-format');
 const $seachInput = $('#search-field');
 // const $mainMenu = $('.mainMenu');
 
@@ -79,11 +79,12 @@ $('.scroll-id').on('click', function (e) {
 
 /* Disqus Comments */
 function disqusComments(shortname) {
-  const dsq = document.createElement('script');
-  dsq.type = 'text/javascript';
-  dsq.async = true;
-  dsq.src = `//${shortname}.disqus.com/embed.js`;
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  let d = document;
+  let s = d.createElement('script');
+  s.async = true;
+  s.src = `//${shortname}.disqus.com/embed.js`;
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
 }
 
 /** show and hidePost Actions in footer of post */
@@ -108,17 +109,17 @@ function setPostActionsClass () {
   }
 }
 
+/* Video Post Format subscribe */
+function videoPostFormatSubscribe(){
+  if (typeof youtubeChannelName !== 'undefined' && typeof youtubeChannelID !== 'undefined') {
+    /*eslint-disable */
+    var template = `<div class="u-flex u-flexWrap u-paddingTop20 u-fontSize15 u-flexCenter channel-name">
+      <span class="u-paddingRight20">Subscribe to ${youtubeChannelName}</span>
+      <div class="g-ytsubscribe" data-channelid="${youtubeChannelID}" data-layout="default" data-count="default"></div>
+    </div>`;
+    /*eslint-enable */
 
-/* Video Post Format */
-function videoPostFormat() {
-  const video = $('iframe[src*="youtube.com"]')[0];
-  $videoPostBox.find('.video-responsive').prepend(video);
-
-  if (typeof youtubeChannel !== 'undefined') {
-    $.each(youtubeChannel, (channelName, channelId) => { // eslint-disable-line
-      $('.channel-name').removeClass('u-hide').prepend(`<span class="u-paddingRight20">Subscribe to ${channelName}</span>`);
-      $('.g-ytsubscribe').attr('data-channelid', channelId);
-    });
+    $videoPostFormat.append(template);
 
     const go = document.createElement('script');
     go.type = 'text/javascript';
@@ -144,7 +145,10 @@ $doc.on('ready', () => {
   $postBody.find('img').attr('data-action', 'zoom');
 
   /* Video Post Format */
-  if ($videoPostBox.length > 0) videoPostFormat();
+  Simply.videoPostFormat($videoPostFormat); // eslint-disable-line
+  videoPostFormatSubscribe();
+  /* Video Responsive*/
+  Simply.videoResponsive($postBody);
 
   /** Share Count in facebook */
   Simply.facebookShareCount($shareCount);
@@ -155,9 +159,6 @@ $doc.on('ready', () => {
     const share = new SimplyShare($(this));
     share.share();
   });
-
-  /* Video Responsive*/
-  Simply.videoResponsive($postBody);
 
   /* Disqys Comments */
   if (typeof disqusShortName !== 'undefined' && $comments.length > 0) disqusComments(disqusShortName); // eslint-disable-line
@@ -204,10 +205,3 @@ $doc.on('ready', () => {
   /* Prism code syntax autoloader */
   Prism.plugins.autoloader.languages_path = '../assets/scripts/prism-components/';
 });
-
-
-
-// $win.on('scroll', function () {
-//   const winScrollTop = $(this).scrollTop();
-//   (winScrollTop >= mainMenuOffsetTop) ? $mainMenu.addClass('mainMenu--affixed') : $mainMenu.removeClass('mainMenu--affixed');
-// });

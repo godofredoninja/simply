@@ -5,7 +5,7 @@
       "./styles/main.scss"
     ]
   },
-  "publicPath": "/content/themes/simply",
+  "publicPath": "",
   "devUrl": "http://localhost:2368",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]",

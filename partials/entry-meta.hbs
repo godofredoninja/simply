@@ -1,5 +1,5 @@
 {{!-- Template for entry meta and date --}}
-<div class="entry-byline u-paddingTop10 u-flex u-flexCenter">
+<div class="entry-byline {{#is "index"}}u-marginTop20{{else}}u-paddingTop5{{/is}} u-flex u-flexCenter">
     {{#author}}
     <div class="entry-avatar u-flex0">
         <a href="{{url}}" style="background-image:url({{profile_image}});{{#is "post"}}height:60px;width:60px;{{/is}}" class="entry-avatar--img u-block u-backgroundSizeCover u-relative {{^if profile_image}}no-avatar{{/if}}">

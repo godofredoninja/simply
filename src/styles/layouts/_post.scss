@@ -61,20 +61,6 @@
     margin-top: 28px;
   }
 
-  &> p:first-of-type:first-letter {
-    float: left;
-    font-size: 64px;
-    font-style: normal;
-    font-weight: 700;
-    letter-spacing: -.03em;
-    line-height: .83;
-    margin-bottom: -.08em;
-    margin-left: -5px;
-    margin-right: 7px;
-    padding-top: 7px;
-    text-transform: uppercase;
-  }
-
   ul,
   ol {
     counter-reset: post;
@@ -124,6 +110,21 @@
 
 }
 
+// fisrt p
+.kg-card-markdown > p:first-of-type::first-letter,
+.post-body > p:first-of-type::first-letter {
+  float: left;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: .83;
+  margin-bottom: -.08em;
+  margin-left: -5px;
+  margin-right: 7px;
+  padding-top: 7px;
+  text-transform: uppercase;
+}
 
 // post Tags
 // ==========================================================================

@@ -5,7 +5,6 @@
 # Logs
 logs
 *.log
-npm-debug.log*
 
 # Runtime data
 pids
@@ -474,3 +473,5 @@ __pycache__/
 # End of https://www.gitignore.io/api/node,phpstorm,sas,sass,sublimetext,visualstudio,webstorm
 
 .sass-lint.yml
+.cache-loader
+yarn-error.log
