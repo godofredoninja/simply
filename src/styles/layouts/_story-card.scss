@@ -1,0 +1,52 @@
+.avatar-image--smaller {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-image {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.story {
+  &-title { letter-spacing: -.028em; }
+
+  &-excerpt {
+    display: -webkit-box;
+    margin-top: 5px;
+    max-height: 4.5em;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
+//  media Query
+@media #{$md-and-up} {
+  .story--260 {
+    .story-wrap { height: 260px }
+    .story-image { height: 100px }
+
+    .story-body {
+      height: 160px;
+    }
+  }
+
+  .story--200 {
+    .story-wrap { height: 260px; display: flex }
+
+    .story-body {
+      flex: 1 1 auto;
+      height: 100%;
+    }
+
+    .story-image {
+      flex: 0 0 auto;
+      height: 100%;
+      width: 200px;
+    }
+  }
+}

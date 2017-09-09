@@ -2,15 +2,21 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- All entry --}}
-<section class="homePage u-wrap">
-    <div class="feed-entry-content u-marginTop30 u-marginBottom15 u-maxWidth1000 u-marginAuto">
-        {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}
-        <div class="feed-entry-wrap" data-page="{{#is "paged"}}/page/{{pagination.page}}{{/is}}/">
-            {{!-- This is the post loop - each post will be output using this markup --}}
-            <div class="row">{{#foreach posts}} {{>"entry"}} {{/foreach}} </div>
-        </div>
-    </div>
 
-    {{!-- Pagination --}}
-    {{^is "paged"}}<a href="#" class="loadMore link--accent" data-page-total="{{pagination.pages}}">Load more</a>{{else}}{{"pagination"}}{{/is}}
-</section>
+<div class="feed-entry-content">
+    {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}
+    <div class="feed-entry-wrap u-maxWidth1000 u-marginAuto u-marginTop30 u-marginBottom40" data-page="{{#is "paged"}}/page/{{pagination.page}}{{/is}}/">
+        {{!-- This is the post loop - each post will be output using this markup --}}
+        {{!-- <div class="row">{{#foreach posts}} {{>"entry"}} {{/foreach}} </div> --}}
+
+        <section class="row">
+            {{#foreach posts}} {{> "story-card" }} {{/foreach}}
+        </section>
+
+
+    </div>
+</div>
+
+{{!-- Pagination --}}
+{{^is "paged"}}<a href="#" class="loadMore link--accent" data-page-total="{{pagination.pages}}">Load more</a>{{else}}{{"pagination"}}{{/is}}
+

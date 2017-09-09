@@ -1,0 +1,10 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    declaration-block-trailing-semicolon: null,
+    number-leading-zero: "never",
+    "selector-list-comma-newline-after": "always-multi-line",
+    declaration-block-single-line-max-declarations: 3,
+    "no-empty-source": null
+  }
+}

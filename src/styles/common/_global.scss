@@ -1,6 +1,6 @@
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -155,18 +155,25 @@ q {
   &:before, &:after {display: none;}
 }
 
-
 // Links color
 // ==========================================================================
 .link--accent { @extend %link--accent; }
 
 .link { @extend %link; }
 
+.link--underline {
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
 
 // Animation main page and footer
 // ==========================================================================
 .main,
-.footer {transition: transform .5s ease; }
+.footer { transition: transform .5s ease; }
 
 @media #{$md-and-down} {
   .main {
