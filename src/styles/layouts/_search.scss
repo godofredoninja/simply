@@ -2,21 +2,17 @@
 // ==========================================================================
 .search {
   background-color: #fff;
-  display: none;
-  height: 100%;
-  padding: 0 20px 0;
-  position: fixed !important;
+  bottom: 100% !important;
+  height: 0;
+  overflow: hidden;
+  padding: 0 40px;
+  transition: all .3s;
+  visibility: hidden;
   z-index: 9999;
-
-  &-header {
-    box-shadow: 0 1px 0 rgba(0, 0, 0, .05);
-    height: $header-height-mobile;
-    margin: 0 -20px 30px;
-    padding: 0 20px;
-  }
 
   &-form {
     max-width: 680px;
+    margin-top: 80px;
 
     &::before {
       background: #eee;
@@ -38,32 +34,36 @@
 
       &:focus { outline: 0; }
     }
-
   }
 
   // result
   &-results {
-    flex: 1;
-    height: 100%;
+    max-height: calc(90% - 100px);
     max-width: 680px;
     overflow: auto;
 
     a {
       border-bottom: 1px solid #eee;
       padding: 12px 0;
-      &:hover {
-        color: rgba(0, 0, 0, .44);
-      }
+
+      &:hover { color: rgba(0, 0, 0, .44) }
     }
   }
 }
 
+.button-search--close {
+  position: absolute !important;
+  right: 50px;
+  top: 20px;
+}
 
 body.is-search {
   overflow: hidden;
 
   .search {
-    display: flex;
-    flex-direction: column;
+    bottom: 0 !important;
+    height: 100%;
+    transition: all .3s;
+    visibility: visible;
   }
 }
