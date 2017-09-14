@@ -18,7 +18,7 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag {{#tag}}{{#if feature_image}}has-featured-image{{/if}}{{/tag}}{{/is}}{{#is "author"}}is-author {{#author}}{{#if cover_image}}has-featured-image{{/if}}{{/author}}{{/is}}" data-page="{{@blog.url}}">
+<body class="{{#is "home"}}is-home {{/is}}{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag {{#tag}}{{#if feature_image}}has-featured-image{{/if}}{{/tag}}{{/is}}{{#is "author"}}is-author {{#author}}{{#if cover_image}}has-featured-image{{/if}}{{/author}}{{/is}}" data-page="{{@blog.url}}">
 
     {{!-- Header Content --}}
     {{>"header"}}

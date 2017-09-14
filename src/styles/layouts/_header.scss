@@ -2,15 +2,13 @@
 // ==========================================================================
 
 .header {
-  // background: $primary-color;
   z-index: 80;
 
-  &-wrap { height: 50px; }
+  &-wrap { height: 55px; }
 
   &-logo {
-    // color: #fff !important;
+    color: #fff !important;
     height: 30px;
-    text-align: center;
 
     img { max-height: 100%; }
   }
@@ -21,51 +19,45 @@
 
   // header description home page
   &-description {
-    color: $header-color;
+    color: rgba(255, 255, 255, 0.8);
     letter-spacing: -.02em;
     margin-bottom: 5px;
     margin-top: 5px;
-    max-width: 750px;
+    max-width: 650px;
   }
 }
 
+// not have logo
+.not-logo .header-logo { height: auto !important }
+
 // Header Follow
 // ==========================================================================
-.follow > a {
-  padding-left: 15px;
-}
+
+.follow > a { padding-left: 15px }
 
 // Header menu
 // ==========================================================================
 
-.mainMenu {
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
-  height: 50px;
-}
-
 .nav {
-  // line-height: 40px;
-  // padding: 8px 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
   position: relative;
-  border-top: 1px solid rgba(0, 0, 0, .05) !important;
+  overflow: hidden;
 
   ul {
-    white-space: nowrap !important;
+    display: flex;
+    margin-right: 20px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   li {
-    // float: left;
-    display: inline-block;
-    // padding: 10px 20px 10px 0;
-    padding-right: 18px;
+    float: left;
 
     a {
-      // font-weight: 600;
-      // font-size: 14px;
-      height: 50px;
-      line-height: 50px;
-      // margin-right: 22px;
-      // text-transform: uppercase;
+      font-weight: 600;
+      margin-right: 22px;
+      text-transform: uppercase;
     }
   }
 }
@@ -73,7 +65,6 @@
 .button-search--open {
   padding-right: 0 !important;
 }
-
 
 // button-nav
 .button-nav--toggle {
@@ -98,39 +89,19 @@
   }
 }
 
-
-body.is-frontpage .header-wrap {height: auto;}
-
-
 // Media Query
 // ==========================================================================
 
 @media #{$md-and-up} {
-  // .header {
-  //   &-wrap {
-  //     border: 0;
-  //     // height: 50px;
-  //   }
-  //   &-logo {
-  //     height: 30px;
-  //     padding-left: 0;
-  //   }
+  body.is-home {
+    .header {
+      &-wrap { height: 200px; }
 
-  //   &-top-section {padding-top: 15px;}
-  // }
-
-  // body.is-frontpage {
-  //   .header {
-  //     &-wrap { height: 200px; }
-  //     &-logo {
-  //       height: 40px;
-  //       // margin-bottom: 15px;
-  //     }
-  //     &-top-section {padding-top: 0;}
-  //   }
-
-  //   // .nav ul {flex: 1 1 auto;}
-  // }
+      &-logo {
+        height: 50px;
+      }
+    }
+  }
 
   // Main Menu Fixed
   // ==========================================================================
@@ -138,39 +109,40 @@ body.is-frontpage .header-wrap {height: auto;}
   //   position: fixed;
   //   top: 0;
   // }
-
 }
-
 
 // Header menu
 // ==========================================================================
 @media #{$md-and-down} {
-
   .header {
     position: fixed;
 
-    &-wrap {
-      height: $header-height-mobile !important;
-    }
+    &-wrap { height: $header-height-mobile }
+  }
+
+  .header-logo--wrap { text-align: left }
+
+  .header-top {
+    display: flex;
+    align-items: center;
   }
 
   // show menu mobile
   body.is-showNavMob {
     overflow: hidden;
 
-    .sideNav {transform: translateX(0); }
+    .sideNav { transform: translateX(0); }
 
     .button-nav--toggle {
       border: 0;
       transform: rotate(90deg);
 
-      span:first-child { transform: rotate(45deg) translate(0, 0);}
-      span:nth-child(2) { transform: scaleX(0);}
-      span:last-child {transform: rotate(-45deg) translate(0, 0);}
+      span:first-child { transform: rotate(45deg) translate(0, 0); }
+      span:nth-child(2) { transform: scaleX(0); }
+      span:last-child { transform: rotate(-45deg) translate(0, 0); }
     }
 
-    .header .button-search--toggle {display: none;}
-    .main, .footer { transform: translateX(-25%);}
+    .header .button-search--toggle { display: none; }
+    .main, .footer { transform: translateX(-25%); }
   }
-
 }

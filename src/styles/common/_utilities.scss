@@ -18,14 +18,14 @@
 .u-bgColor { background-color: $primary-color; }
 
 .u-headerColorLink a {
-  color: rgba(0, 0, 0, .44);
-  // color: $header-color;
+  // color: rgba(0, 0, 0, .44);
+  color: $header-color;
 
-  // &.active,
-  // &:hover {
-  //   // color: $header-
-  //   // color: $header-color-hover;
-  // }
+  &.active,
+  &:hover {
+    // color: $header-
+    color: $header-color-hover;
+  }
 }
 
 .u-textColorDarker { @extend %u-text-color-darker; }
@@ -37,6 +37,7 @@
 .u-fixed { position: fixed !important; }
 
 .u-block { display: block !important }
+.u-inlineBlock { display: inline-block }
 
 //  Background
 .u-backgroundDark {
@@ -167,7 +168,7 @@
 //  flex
 .u-flex { display: flex; }
 .u-flexCenter { align-items: center; display: flex; }
-.u-flex--1 { flex: 1 }
+// .u-flex--1 { flex: 1 }
 .u-flex1 { flex: 1 1 auto; }
 .u-flex0 { flex: 0 0 auto; }
 .u-flexWrap { flex-wrap: wrap }
@@ -203,9 +204,11 @@
   padding-left: 20px;
   padding-right: 20px;
 }
-.u-maxWidth1000 { max-width: 1000px; }
-.u-maxWidth740 { max-width: 740px; }
-.u-maxWidth1040 { max-width: 1040px; }
+
+.u-maxWidth1200 { max-width: 1200px }
+.u-maxWidth1000 { max-width: 1000px }
+.u-maxWidth740 { max-width: 740px }
+.u-maxWidth1040 { max-width: 1040px }
 .u-sizeFullWidth { width: 100% }
 
 // border
