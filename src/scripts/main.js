@@ -3,6 +3,8 @@
  * JavaScript functions
  */
 
+// import './lib/jquery';
+
 // import external dependencies
 import 'sticky-kit/dist/sticky-kit';
 import Prism from 'prismjs';
