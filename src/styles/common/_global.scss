@@ -24,6 +24,8 @@ blockquote {
   margin-left: -23px;
   padding-bottom: 2px;
   padding-left: 20px;
+
+  p:first-of-type { margin-top: 0 }
 }
 
 body {

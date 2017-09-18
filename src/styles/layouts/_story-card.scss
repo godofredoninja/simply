@@ -50,3 +50,59 @@
     }
   }
 }
+
+// card for (author and tag) story
+// ==========================================================================
+.card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .09);
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  margin-bottom: 10px;
+  padding: 10px 20px 15px;
+
+  &--p {
+    font-family: $secundary-font;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.004em;
+    line-height: 1.58;
+  }
+
+  &-image {
+    max-height: 240px;
+    max-width: 360px;
+  }
+
+  // if story is featured
+  &.card--featured {
+    .card-body { display: flex; flex-direction: column; }
+
+    .card-image {
+      height: 200px;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      max-width: 100%;
+      order: -1;
+    }
+
+    .card-image--link {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
+  // even
+  &.even:not(.card--featured) {
+    .card-excerpt {
+      color: rgba(0, 0, 0, .44);
+      font-family: $primary-font;
+      font-size: 23px;
+      letter-spacing: -.022em;
+      line-height: 1.22;
+    }
+  }
+}

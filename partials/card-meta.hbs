@@ -1,0 +1,26 @@
+{{!-- Template for entry meta and date --}}
+<div class="u-flex u-flexCenter u-paddingTop5">
+
+    {{#author}}
+    <div class="u-flex0">
+        <a href="{{url}}" style="background-image:url({{profile_image}});{{#is "post"}}height:60px;width:60px;{{/is}}" class="avatar-image avatar-image--smaller u-backgroundSizeCover u-relative {{^if profile_image}}no-avatar{{/if}}"></a>
+    </div>
+    {{/author}}
+
+    <div class="u-paddingLeft15 u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}u-fontSizeSmall{{/is}}">
+
+        {{#author}}<a href="{{url}}"class="simply-tracking link u-accentColor--iconNormal" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>{{/author}}
+
+        {{!-- tags Primary --}}
+        {{#primary_tag}} <span>in</span> <a class="link u-accentColor--iconNormal" href="{{url}}">{{name}}</a> {{/primary_tag}}
+
+        {{!-- in post page add author's description --}}
+        {{#is "post"}}
+            {{#if author.bio}}
+                <div class="u-block u-paddingBottom2 u-fontSizeSmaller u-noWrapWithEllipsis" style="padding-top:2px;">{{{author.bio}}}</div>
+            {{/if}}
+        {{/is}}
+
+        <time class="datetime u-textColorNormal u-fontSizeSmaller u-block u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
+    </div>
+</div>

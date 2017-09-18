@@ -1,15 +1,17 @@
-// @media #{$lg-and-up} {
-//   .content {
-//     flex: 1 !important;
-//     max-width: calc(100% - 340px) !important;
-//     order: 1;
-//     // overflow: hidden;
-//   }
-//   .sidebar {
-//     flex: 0 0 340px !important;
-//     order: 2;
-//   }
-// }
+@media #{$lg-and-up} {
+  .content {
+    // flex: 1 !important;
+    max-width: calc(100% - 340px) !important;
+    // order: 1;
+    // overflow: hidden;
+  }
+
+  .sidebar {
+    width: 340px !important;
+    // flex: 0 0 340px !important;
+    // order: 2;
+  }
+}
 
 .row {
   margin-left: - 10px;
