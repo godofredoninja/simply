@@ -3241,6 +3241,10 @@ jquery-lazyload@^1.9.7:
   version "1.9.7"
   resolved "https://registry.yarnpkg.com/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz#9982b388c533c0b611214b3c5aaa0b9fede071f7"
 
+jquery@>=1.7.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
+
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.1.9.tgz#f0e80ae039a4bd654b5f281fc93f04a914a7fcce"
@@ -5842,10 +5846,6 @@ stdout-stream@^1.4.0:
   dependencies:
     readable-stream "^2.0.1"
 
-sticky-kit@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/sticky-kit/-/sticky-kit-1.1.3.tgz#dab5ace49b462cf6d4969b1d58e639fc01377570"
-
 stream-browserify@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.1.tgz#66266ee5f9bdb9940a4e4514cafb43bb71e5c9db"
@@ -6318,6 +6318,12 @@ tfunk@^3.0.1:
   dependencies:
     chalk "^1.1.1"
     object-path "^0.9.0"
+
+theia-sticky-sidebar@^1.7.0:
+  version "1.7.0"
+  resolved "https://registry.yarnpkg.com/theia-sticky-sidebar/-/theia-sticky-sidebar-1.7.0.tgz#0fbb924e84eaff987368fd284d00caea7a7ec35a"
+  dependencies:
+    jquery ">=1.7.0"
 
 through2-filter@^2.0.0:
   version "2.0.0"

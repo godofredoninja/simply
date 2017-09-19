@@ -33,11 +33,13 @@
     {{>"search"}}
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> --}}
-    <script src="{{asset "scripts/jquery.js"}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
 
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>
