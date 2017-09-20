@@ -1,5 +1,5 @@
 {{#foreach posts}}
-<article class="card {{#if @even}}even{{/if}} {{#if featured}}card--featured{{/if}}">
+<article class="card {{#has number="2, 5, 8, 11, 14"}}card--large{{/has}} {{#has number="nth:3"}}card--medium{{/has}}">
 
     {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
     {{>"card-meta"}}

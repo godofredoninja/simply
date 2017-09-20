@@ -9,10 +9,14 @@
 
     <div class="u-paddingLeft15 u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}u-fontSizeSmall{{/is}}">
 
-        {{#author}}<a href="{{url}}"class="simply-tracking link u-accentColor--iconNormal" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>{{/author}}
+        {{#author}}
+            <a href="{{url}}"class="simply-tracking link {{#is "post"}} u-textColorDarker {{else}} u-accentColor--iconNormal{{/is}}" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>
+        {{/author}}
 
         {{!-- tags Primary --}}
-        {{#primary_tag}} <span>in</span> <a class="link u-accentColor--iconNormal" href="{{url}}">{{name}}</a> {{/primary_tag}}
+        {{^is "post"}}
+            {{#primary_tag}} <span>in</span> <a class="link u-accentColor--iconNormal" href="{{url}}">{{name}}</a> {{/primary_tag}}
+        {{/is}}
 
         {{!-- in post page add author's description --}}
         {{#is "post"}}

@@ -253,9 +253,11 @@
 // Share Post
 // ==========================================================================
 .sharePost {
-  margin-left: -130px;
+  // margin-left: -130px;
+  left: -130px;
   margin-top: 28px;
   width: 45px;
+  position: absolute !important;
 
   a {
     background-image: none;
