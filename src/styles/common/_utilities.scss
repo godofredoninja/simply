@@ -1,7 +1,7 @@
 // color
 .u-textColorNormal {
-  color: rgba(0, 0, 0, .44);
-  fill: rgba(0, 0, 0, .44);
+  color: rgba(0, 0, 0, .44) !important;
+  fill: rgba(0, 0, 0, .44) !important;
 }
 
 .u-hoverColorNormal:hover {
@@ -67,7 +67,7 @@
 // font size
 .u-fontSize13 { font-size: 13px }
 .u-fontSize14 { font-size: 14px }
-.u-fontSize15 { font-size: 15px }
+.u-fontSize15 { font-size: 15px !important }
 .u-fontSize20 { font-size: 20px }
 .u-fontSize22 { font-size: 22px }
 .u-fontSize28 { font-size: 28px !important; }
@@ -233,9 +233,10 @@
 // card
 .u-card {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .09);
+  border: 1px solid rgba(0, 0, 0, .04);
   border-radius: 3px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  // box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
   margin-bottom: 10px;
   padding: 10px 20px 15px;
 }

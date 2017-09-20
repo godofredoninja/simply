@@ -8,6 +8,16 @@
   // }
 }
 
+// meta line
+.postMetaInline {
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .44);
+  fill: rgba(0, 0, 0, .44);
+}
+
 // post content body
 // ==========================================================================
 .post-body {
@@ -215,13 +225,16 @@
 // post Relative
 // ==========================================================================
 .post-related {
-  .entry-image {
+  &-image {
     border-bottom: 1px solid rgba(0, 0, 0, .0785);
     border-radius: 4px 4px 0 0;
     height: 160px;
   }
 
-  .entry-title {
+  &-excerpt { font-family: $secundary-font }
+
+  &-excerpt,
+  &-title {
     color: rgba(0, 0, 0, .9);
     -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 2 !important;
@@ -232,7 +245,7 @@
   }
 
   .u-card {
-    height: 250px;
+    height: 270px;
     margin-bottom: 20px;
   }
 }
