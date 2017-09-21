@@ -74,6 +74,11 @@ export default {
       additionalMarginTop: 30,
     });
 
+    // show comments count of disqus
+    if (typeof disqusShortName !== 'undefined') {
+      $('.simply-disqus').removeClass('u-hide');
+    }
+
     /* show btn for Retur TOP PAGE */
     setInterval( () => {
       ($(window).scrollTop() > 100) ? $('.rocket').removeClass('u-hide') : $('.rocket').addClass('u-hide');

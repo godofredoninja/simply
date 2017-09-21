@@ -181,7 +181,11 @@
 // ==========================================================================
 
 .post-newsletter {
-  max-width: 520px;
+  outline: 1px solid #f0f0f0 !important;
+  outline-offset: -1px;
+  border-radius: 2px;
+  padding: 40px 10px;
+
   .newsletter-form { max-width: 400px }
 
   .form-group { width: 80%; padding-right: 5px; }

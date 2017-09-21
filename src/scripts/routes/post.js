@@ -18,6 +18,16 @@ export default {
       additionalMarginTop: 30,
     });
 
+    // newsletter title change
+    if (typeof newsletterTitle !== 'undefined') {
+      $('.newsletter-title').html(newsletterTitle); // eslint-disable-line
+    }
+
+    // newsletter Description
+    if (typeof newsletterDescription !== 'undefined') {
+      $('.newsletter-description').html(newsletterDescription); // eslint-disable-line
+    }
+
     // show and hide post actions
     setInterval( () => {
       const scrollTop = $(window).scrollTop();
