@@ -52,7 +52,17 @@
         },
         complete: () => {
           setTimeout(() => {$('body').removeClass('is-loading')}, 700);
+
+          // Disqus Update Count
+          if (typeof disqusShortName !== 'undefined') {
+            $('.simply-disqus').removeClass('u-hide');
+            if (typeof DISQUSWIDGETS !== 'undefined') {
+              DISQUSWIDGETS.getCount({reset: true}); // eslint-disable-line
+            }
+          }
+
         },
+
       });
 
       /* Disable scroll */

@@ -283,9 +283,22 @@ q {
   color: rgba(0, 0, 0, .44);
   padding-bottom: 45px;
 
+  .follow {
+    display: block;
+    text-align: center;
+
+    a {
+      @extend %u-text-color-darker;
+
+      padding: 0 7px;
+
+      &:hover { color: rgba(0, 0, 0, 0.6) !important }
+    }
+  }
+
   a {
     color: rgba(0, 0, 0, .6);
-    &:hover { color: rgba(0, 0, 0, .8); }
+    &:hover { @extend %u-text-color-darker; }
   }
 }
 
