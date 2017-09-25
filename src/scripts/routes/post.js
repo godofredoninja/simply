@@ -1,5 +1,6 @@
 import mediaEmbedResponsive from '../helper/video';
 import facebookShareCount from '../helper/facebook-share-count';
+import instagramFeed from '../helper/instagram-feed';
 
 export default {
   init() {
@@ -28,6 +29,10 @@ export default {
       $('.newsletter-description').html(newsletterDescription); // eslint-disable-line
     }
 
+    // Instagram Feed
+    if (typeof instagramUserId !== 'undefined' && typeof instagramToken !== 'undefined' && typeof instagramUserName !== 'undefined') {
+      instagramFeed(instagramUserId, instagramToken, instagramUserName); // eslint-disable-line
+    }
     // show and hide post actions
     setInterval( () => {
       const scrollTop = $(window).scrollTop();

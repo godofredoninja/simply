@@ -302,6 +302,45 @@ q {
   }
 }
 
+// Instagram Fedd
+// ==========================================================================
+.instagram {
+  &-img {
+    height: 264px;
+
+    &:hover > .instagram-hover { opacity: 1 }
+  }
+
+  &-hover {
+    background-color: rgba(0, 0, 0, .3);
+    // transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &-name {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    a {
+      background-color: #fff;
+      color: #000 !important;
+      font-size: 20px !important;
+      font-weight: 600 !important;
+      min-width: 200px;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      text-align: center !important;
+    }
+  }
+
+  &-col {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
 // Error page
 // ==========================================================================
 .errorPage {
