@@ -180,6 +180,12 @@ q {
     overflow: hidden;
     padding-top: $header-height-mobile;
   }
+
+  .feed-entry-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
 }
 
 // warning success and Note

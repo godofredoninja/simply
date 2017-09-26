@@ -10,11 +10,21 @@
                 <div class="u-flexColumnTop u-flexWrap u-overflowHidden u-absolute0 u-md-relative">
                     {{!-- Title --}}
                     <div class="u-flex0 u-sizeFullWidth">
-                        {{!-- {{#has tag="#video-post-format"}}
-                            <a href="" class="link link--noUnderline u-baseColor--link is-touched">Video</a>
-                        {{/has}} --}}
+                        <a href="{{url}}">
+                            {{!--  Primary tag  --}}
+                            {{#if primary_tag}}
+                            <div class="story-tag u-textColorNormal u-flexCenter u-fontSize20 u-lineHeight1" style="padding-bottom:9px">
+                                {{#has tag="#video-post-format"}}<i class="i-video--line"></i>
+                                {{else}}
+                                {{#has tag="#image-post-format"}}<i class="i-photo"></i>{{/has}}
+                                {{/has}}
+                                <span class="u-fontSize14">{{primary_tag.name}}</span>
+                            </div>
+                            {{/if}}
 
-                        <a href="{{url}}"><h3 class="story-title u-fontWeightBold u-lineHeight1 u-fontSize22">{{title}}</h3></a>
+                            {{!-- Title of story --}}
+                            <h3 class="story-title u-fontWeightBold u-lineHeight1 u-fontSize22">{{title}}</h3>
+                        </a>
                     </div>
 
                     {{!-- Excerpt --}}

@@ -22,6 +22,12 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
+
+  &-tag i {
+    color: rgba(0, 0, 0, .3) !important;
+    display: flex;
+    margin-right: 5px;
+  }
 }
 
 //  media Query

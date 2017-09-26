@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'simply';
-  src:  url('../fonts/simply.eot?eso605');
-  src:  url('../fonts/simply.eot?eso605#iefix') format('embedded-opentype'),
-    url('../fonts/simply.ttf?eso605') format('truetype'),
-    url('../fonts/simply.woff?eso605') format('woff'),
-    url('../fonts/simply.svg?eso605#simply') format('svg');
+  src:  url('../fonts/simply.eot?25764j');
+  src:  url('../fonts/simply.eot?25764j#iefix') format('embedded-opentype'),
+    url('../fonts/simply.ttf?25764j') format('truetype'),
+    url('../fonts/simply.woff?25764j') format('woff'),
+    url('../fonts/simply.svg?25764j#simply') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -14,6 +14,54 @@
 }
 
 
+.i-photo:before {
+  content: "\e412";
+}
+.i-video--line:before {
+  content: "\e039";
+}
+.i-audio:before {
+  content: "\e050";
+}
+.i-location:before {
+  content: "\e8b4";
+}
+.i-save:before {
+  content: "\e8e6";
+}
+.i-save--line:before {
+  content: "\e8e7";
+}
+.i-check-circle:before {
+  content: "\e86c";
+}
+.i-close:before {
+  content: "\e5cd";
+}
+.i-favorite:before {
+  content: "\e87d";
+}
+.i-star:before {
+  content: "\e838";
+}
+.i-warning:before {
+  content: "\e002";
+}
+.i-rss:before {
+  content: "\e0e5";
+}
+.i-search:before {
+  content: "\e8b6";
+}
+.i-send:before {
+  content: "\e163";
+}
+.i-share:before {
+  content: "\e80d";
+}
+.i-comments:before {
+  content: "\e900";
+}
 .i-telegram:before {
   content: "\f2c6";
 }
@@ -70,43 +118,4 @@
 }
 .i-snapchat:before {
   content: "\f2ac";
-}
-.i-comments:before {
-  content: "\e900";
-}
-.i-location:before {
-  content: "\e8b4";
-}
-.i-save:before {
-  content: "\e8e6";
-}
-.i-save--line:before {
-  content: "\e8e7";
-}
-.i-check-circle:before {
-  content: "\e86c";
-}
-.i-close:before {
-  content: "\e5cd";
-}
-.i-favorite:before {
-  content: "\e87d";
-}
-.i-star:before {
-  content: "\e838";
-}
-.i-warning:before {
-  content: "\e002";
-}
-.i-rss:before {
-  content: "\e0e5";
-}
-.i-search:before {
-  content: "\e8b6";
-}
-.i-send:before {
-  content: "\e163";
-}
-.i-share:before {
-  content: "\e80d";
 }
