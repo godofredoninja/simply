@@ -3,6 +3,10 @@
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
+    ],
+    "amp": [
+      "./scripts/amp.js",
+      "./styles/amp.scss"
     ]
   },
   "publicPath": "",

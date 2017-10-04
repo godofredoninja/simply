@@ -1,0 +1,473 @@
+// 01. Variables
+// ==========================================================================
+$code-color:#c7254e;
+$primary-color: #00A034;
+$primary-font:    'Source Sans Pro', sans-serif;
+$secundary-font:  'Droid Serif', serif;
+
+// 02. Utilities
+// ==========================================================================
+.u-bgColor { background-color: $primary-color }
+.u-flexCenter { align-items: center; display: flex; }
+.u-block { display: block }
+.u-relative { position: relative }
+.u-overflowHidden { overflow: hidden }
+.u-fontSizeSmaller { font-size: 14px }
+.u-flex1 { flex: 1 1 auto }
+.u-absolute { position: absolute }
+.u-textCenter { text-align: center }
+
+.u-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.u-textColorNormal {
+  color: rgba(0, 0, 0, 0.44);
+  fill: rgba(0, 0, 0, 0.44);
+}
+
+// 03. Global
+// ==========================================================================
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+body {
+  color: rgba(0, 0, 0, 0.8);
+  font-family: $primary-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+}
+
+blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.8);
+  font-style: italic;
+  letter-spacing: -.003em;
+  margin-left: -5px;
+  margin-right: 0;
+  padding-bottom: 2px;
+  padding-left: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $primary-font;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -.028em;
+  line-height: 1.1;
+  margin: 32px 0 0;
+}
+
+h1 { font-size: 32px }
+h2 { font-size: 30px }
+h3 { font-size: 28px }
+h4 { font-size: 22px }
+h5 { font-size: 20px }
+h6 { font-size: 18px }
+
+hr {
+  border: 0;
+  display: block;
+  margin: 50px auto;
+  text-align: center;
+  overflow: visible;
+  height: 0;
+
+  &::before {
+    color: rgba(0, 0, 0, .6);
+    content: '...';
+    display: inline-block;
+    font-family: $primary-font;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: .6em;
+    position: relative;
+    top: -30px;
+  }
+}
+
+mark {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
+  color: rgba(0, 0, 0, .8);
+}
+
+p {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+p code {
+  background: #EFEFEF;
+  border-radius: 4px;
+  color: $code-color;
+  padding: 4px 6px;
+  text-shadow: 0 1px #fff;
+}
+
+pre {
+  background: #EFEFEF;
+  border-radius: 3px;
+  padding: 10px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+iframe,
+amp-iframe,
+.fluid-width-video-wrapper { margin-top: 30px }
+
+.svg-icon {
+  width: auto;
+  height: 20px;
+  fill: rgba(0, 0, 0, 0.8);
+  stroke: none;
+}
+
+// 04. Header
+// ==========================================================================
+.main-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.blog-title {
+  height: 50px;
+  line-height: 0;
+}
+
+.logo-link {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.hamburgermenu {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  height: 48px;
+  position: relative;
+  transition: transform .4s;
+  width: 48px;
+  margin-right: -12px;
+
+  span {
+    background-color: #fff;
+    display: block;
+    height: 2px;
+    left: 14px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 20px;
+
+    &:first-child { transform: translate(0, -6px); }
+    &:last-child { transform: translate(0, 6px); }
+  }
+}
+
+// 05. Sidebar
+// ==========================================================================
+
+.sidebar {
+  width: 280px;
+  background: #eee;
+
+  ul { margin: 18px 0 20px }
+
+  ul li a {
+    margin-bottom: 5px;
+    padding: 6px 20px;
+  }
+
+  .follow { border-top: 1px solid #ddd }
+}
+
+.close-sidebar {
+  height: 50px;
+  font-size: 25px;
+  line-height: 50px;
+  text-align: right;
+  padding-right: 20px;
+  color: #fff;
+}
+
+// 06. author info
+// ==========================================================================
+.author {
+  border-radius: 50%;
+  flex: 0 0 auto;
+
+  &-avatar {
+    height: 60px;
+    width: 60px;
+  }
+
+  &-image {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
+  &-left {
+    padding-left: 15px;
+    font-size: 16px;
+  }
+
+  &-bio {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+// 07. Article
+// ==========================================================================
+
+.main {
+  margin: auto;
+  max-width: 600px;
+  padding-top: 50px;
+}
+
+.article {
+  &-header { margin-top: 20px }
+  &-title { line-height: 1.04; margin-top: 20px }
+
+  &-excerpt {
+    color: rgba(0, 0, 0, 0.44);
+    font-size: 20px;
+    letter-spacing: -.022em;
+    line-height: 1.22;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  &-image {
+    margin-right: -20px;
+    margin-left: -20px;
+  }
+
+  &-tags {
+    padding: 30px 0 0;
+
+    a {
+      background: rgba(0, 0, 0, 0.08);
+      border-radius: 3px;
+      color: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      font-size: 14px;
+      height: 37px;
+      line-height: 35px;
+      padding:  0 16px;
+      margin: 0 8px 8px 0;
+    }
+  }
+}
+
+// post content
+.article-body {
+  font-family: $secundary-font;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -.004em;
+  line-height: 1.58;
+
+  a {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, 0) 50%);
+    background-position: 0 1.07em;
+    background-repeat: repeat-x;
+    background-size: 2px .1em;
+    text-decoration: none;
+  }
+
+  p { margin-top: 28px }
+
+  ul,
+  ol {
+    counter-reset: post;
+    margin-top: 20px;
+
+    li {
+      letter-spacing: -.003em;
+      line-height: 1.58;
+      margin-left: 30px;
+
+      &::before {
+        box-sizing: border-box;
+        display: inline-block;
+        margin-left: -78px;
+        position: absolute;
+        text-align: right;
+        width: 78px;
+      }
+    }
+  }
+
+  ul li::before {
+    content: '•';
+    font-size: 16.8px;
+    padding-right: 15px;
+    padding-top: 4px;
+  }
+
+  ol li::before {
+    content: counter(post) ".";
+    counter-increment: post;
+    padding-right: 12px;
+  }
+}
+
+.kg-card-markdown > p:first-of-type::first-letter {
+  float: left;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -.03em;
+  line-height: .83;
+  margin-bottom: -.08em;
+  margin-left: -5px;
+  margin-right: 7px;
+  padding-top: 7px;
+  text-transform: uppercase;
+}
+
+// 0.8 Article Related
+// ==========================================================================
+.related {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 40px;
+  background: #fafafa;
+
+  &-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    margin-bottom: 30px;
+
+    span {
+      border-bottom: 1px solid rgba(0, 0, 0, .54);
+      color: rgba(0, 0, 0, .84);
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 600;
+      padding-bottom: 20px;
+    }
+  }
+}
+
+.story {
+  // padding-bottom: 2px;
+
+  &:nth-child(3n) { .story-border { border-color: darken(orange, 2%); } }
+  &:nth-child(3n+2) { .story-border { border-color: #26a8ed } }
+
+  &-link {
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .04);
+    box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
+    min-height: 50px;
+    padding: 15px 15px 15px 55px;
+  }
+
+  &-title {
+    line-height: 1.1;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &-border {
+    border-left: 3px solid $primary-color;
+    bottom: 0;
+    color: rgba(0, 0, 0, .2);
+    font-family: $secundary-font;
+    font-size: 28px;
+    font-weight: 700;
+    left: 0;
+    padding: 15px 10px 10px;
+    top: 0;
+  }
+}
+
+// 0.9 Footer
+// ==========================================================================
+.footer {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, .44);
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 45px;
+}
+
+.copyright {
+  font-size: 14px;
+
+  a { color: rgba(0, 0, 0, .7) }
+}
+
+// 10 Follow
+// ==========================================================================
+.follow {
+  padding: 20px;
+
+  a {
+    padding: 0 7px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.share {
+  margin: 15px 0 0;
+  height: 26px;
+
+  ul {
+    display: flex;
+    height: 26px;
+  }
+
+  li {
+    width: 25%;
+    margin: 0 2px;
+  }
+
+  li svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    fill: #fff;
+  }
+
+  li.fb { background-color: #45619D }
+  li.tw { background-color: #00ACEE }
+  li.wa { background-color: #0f9938 }
+  li.gplus { background-color: #F63E28 }
+}
