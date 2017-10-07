@@ -121,7 +121,8 @@
   }
 
   .header-logo--wrap { text-align: left }
-  .header-logo { display: flex; flex: 1 1 auto }
+  .header-logo { display: flex; flex: 1 1 auto; }
+  .header-logo span { font-size: 24px }
 
   .header-top {
     display: flex;

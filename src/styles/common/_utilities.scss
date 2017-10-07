@@ -246,6 +246,10 @@
   padding: 10px 20px 15px;
 }
 
+.no-avatar {
+  background-image: url('../images/avatar.png') !important
+}
+
 @media #{$md-and-down} {
   .u-hide-before-md { display: none !important }
   .u-md-heightAuto { height: auto; }
