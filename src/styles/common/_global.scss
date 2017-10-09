@@ -1,6 +1,6 @@
 
-*, *:before, *:after {
-  box-sizing: inherit;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 a {
@@ -14,16 +14,18 @@ a {
 }
 
 blockquote {
-  border-left: 3px solid rgba(0,0,0,.8);
+  border-left: 3px solid rgba(0, 0, 0, .8);
   font-family: $secundary-font;
   font-size: 21px;
   font-style: italic;
   font-weight: 400;
   letter-spacing: -.003em;
   line-height: 1.58;
-  margin-left: -23px;
+  margin: 30px 0 0 -23px;
   padding-bottom: 2px;
   padding-left: 20px;
+
+  p:first-of-type { margin-top: 0 }
 }
 
 body {
@@ -66,6 +68,7 @@ pre {
   font-family: $code-font !important;
   font-size: $font-size-code;
   margin-top: 30px !important;
+  max-width: 100%;
   overflow: hidden;
   padding: 1rem;
   position: relative;
@@ -79,16 +82,13 @@ pre {
   }
 }
 
-
 code[class*=language-],
 pre[class*=language-] {
   color: $pre-code-color;
   line-height: 1.4;
 
   .token.comment { opacity: .8; }
-
 }
-
 
 // hr
 // ==========================================================================
@@ -128,8 +128,8 @@ i {
 }
 
 ol, ul {
-  list-style-image: none;
   list-style: none;
+  list-style-image: none;
   margin: 0;
   padding: 0;
 }
@@ -152,9 +152,8 @@ q {
   padding-top: 15px;
   text-align: left;
 
-  &:before, &:after {display: none;}
+  &::before, &::after { display: none; }
 }
-
 
 // Links color
 // ==========================================================================
@@ -162,17 +161,33 @@ q {
 
 .link { @extend %link; }
 
+.link--underline {
+  &:active,
+  &:focus,
+  &:hover {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
 
 // Animation main page and footer
 // ==========================================================================
 .main,
-.footer {transition: transform .5s ease; }
+.footer { transition: transform .5s ease; }
 
 @media #{$md-and-down} {
   .main {
     overflow: hidden;
     padding-top: $header-height-mobile;
   }
+
+  .feed-entry-content {
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+  }
+
+  blockquote { margin-left: -5px }
 }
 
 // warning success and Note
@@ -180,22 +195,22 @@ q {
 .warning {
   background: #fbe9e7;
   color: #d50000;
-  &::before {content: $i-warning;}
+  &::before { content: $i-warning; }
 }
 
 .note {
   background: #e1f5fe;
   color: #0288d1;
-  &::before {content: $i-star;}
+  &::before { content: $i-star; }
 }
 
 .success {
   background: #e0f2f1;
   color: #00897b;
-  &::before {color: #00bfa5; content: $i-check;}
+  &::before { color: #00bfa5; content: $i-check; }
 }
 
-.warning, .note, .success{
+.warning, .note, .success {
   display: block;
   font-size: 18px !important;
   line-height: 1.58 !important;
@@ -209,6 +224,7 @@ q {
 
   &::before {
     @extend %fonts-icons;
+
     float: left;
     font-size: 24px;
     margin-left: -36px;
@@ -223,10 +239,11 @@ q {
   min-height: 300px;
   z-index: 2;
 
-  &-wrap {z-index: 2;}
+  &-wrap { z-index: 2; }
 
   &.not--image {
     @extend %u-text-color-darker;
+
     min-height: auto;
   }
 
@@ -235,17 +252,16 @@ q {
   }
 }
 
-
 // toltip
 // ==========================================================================
 .with-tooltip {
   overflow: visible;
   position: relative;
 
-  &:after {
+  &::after {
     background: rgba(0, 0, 0, .85);
     border-radius: 4px;
-    color: #FFF;
+    color: #fff;
     content: attr(data-tooltip);
     display: inline-block;
     font-size: 12px;
@@ -264,7 +280,7 @@ q {
     z-index: 1;
   }
 
-  &:hover:after {
+  &:hover::after {
     animation: tooltip .1s ease-out both;
   }
 }
@@ -273,10 +289,63 @@ q {
 // ==========================================================================
 .footer {
   color: rgba(0, 0, 0, .44);
+  padding-bottom: 45px;
+
+  .follow {
+    display: block;
+    text-align: center;
+
+    a {
+      @extend %u-text-color-darker;
+
+      padding: 0 7px;
+
+      &:hover { color: rgba(0, 0, 0, 0.6) !important }
+    }
+  }
 
   a {
     color: rgba(0, 0, 0, .6);
-    &:hover {color: rgba(0, 0, 0, .8);}
+    &:hover { @extend %u-text-color-darker; }
+  }
+}
+
+// Instagram Fedd
+// ==========================================================================
+.instagram {
+  &-img {
+    height: 264px;
+
+    &:hover > .instagram-hover { opacity: 1 }
+  }
+
+  &-hover {
+    background-color: rgba(0, 0, 0, .3);
+    // transition: opacity 1s ease-in-out;
+    opacity: 0;
+  }
+
+  &-name {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    a {
+      background-color: #fff;
+      color: #000 !important;
+      font-size: 20px !important;
+      font-weight: 600 !important;
+      min-width: 200px;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+      text-align: center !important;
+    }
+  }
+
+  &-col {
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -308,7 +377,6 @@ q {
   }
 }
 
-
 // Video Responsive
 // ==========================================================================
 .video-responsive {
@@ -318,6 +386,7 @@ q {
   overflow: hidden;
   padding: 0 0 56.25%;
   position: relative;
+  width: 100%;
 
   iframe {
     border: 0;
@@ -340,32 +409,30 @@ q {
   }
 }
 
-
 // Social Media Color
 // ==========================================================================
 @each $social-name, $color in $social-colors {
-  .c-#{$social-name} { color: $color !important;}
+  .c-#{$social-name} { color: $color !important; }
   .bg-#{$social-name} { background-color: $color !important; }
 }
 
-
 // Facebook Save
 // ==========================================================================
-.fbSave {
-  &-dropdown {
-    background-color: #FFF;
-    border: 1px solid #e0e0e0;
-    bottom: 100%;
-    display: none;
-    max-width: 200px;
-    min-width: 100px;
-    padding: 8px;
-    transform: translate(-50%, 0);
-    z-index: 10;
+// .fbSave {
+//   &-dropdown {
+//     background-color: #fff;
+//     border: 1px solid #e0e0e0;
+//     bottom: 100%;
+//     display: none;
+//     max-width: 200px;
+//     min-width: 100px;
+//     padding: 8px;
+//     transform: translate(-50%, 0);
+//     z-index: 10;
 
-    &.is-visible {display: block; }
-  }
-}
+//     &.is-visible { display: block; }
+//   }
+// }
 
 // Rocket for return top page
 // ==========================================================================
@@ -415,7 +482,7 @@ svg {
 }
 
 .is-loading .loadingBar {
-  animation-delay: .8s;
   animation: loading-bar 1s ease-in-out infinite;
+  animation-delay: .8s;
   display: block;
 }

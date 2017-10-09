@@ -1,8 +1,29 @@
 <div id="post-comments" class="post-comments u-backgroundWhite u-paddingTop30 u-paddingBottom30 link--accent">
     <div class="u-container u-maxWidth1000 u-card">
         {{!-- Disqus Comments --}}
-        <div id="disqus_thread" class="simply-disqus"></div>
+        <div id="disqus_thread" class="simply-disqus link--accent u-hide"></div>
         {{!-- Comments section for facebook --}}
-        <div class="fb-comments simply-facebook" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
+        <div class="fb-comments simply-facebook u-hide" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
     </div>
 </div>
+
+
+{{#contentFor "scripts"}}
+
+{{!-- Disqys Comments --}}
+<script>
+    (function() {
+        if (typeof disqusShortName !== 'undefined') {
+            $('.simply-disqus').removeClass('u-hide');
+            var d = document, s = d.createElement('script');
+            s.async = true;
+            // IMPORTANT: Replace EXAMPLE with your forum shortname!
+            s.src = 'https://'+disqusShortName+'.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        }
+    })();
+</script>
+
+{{/contentFor}}

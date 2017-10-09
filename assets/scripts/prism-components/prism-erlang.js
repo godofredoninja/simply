@@ -1,9 +1,6 @@
 Prism.languages.erlang = {
 	'comment': /%.+/,
-	'string': {
-		pattern: /"(?:\\?.)*?"/,
-		greedy: true
-	},
+	'string': /"(?:\\?.)*?"/,
 	'quoted-function': {
 		pattern: /'(?:\\.|[^'\\])+'(?=\()/,
 		alias: 'function'

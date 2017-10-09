@@ -2,7 +2,6 @@ Prism.languages.mel = {
 	'comment': /\/\/.*/,
 	'code': {
 		pattern: /`(?:\\.|[^\\`\r\n])*`/,
-		greedy: true,
 		alias: 'italic',
 		inside: {
 			'delimiter': {
@@ -12,10 +11,7 @@ Prism.languages.mel = {
 			// See rest below
 		}
 	},
-	'string': {
-		pattern: /"(?:\\.|[^\\"\r\n])*"/,
-		greedy: true
-	},
+	'string': /"(?:\\.|[^\\"\r\n])*"/,
 	'variable': /\$\w+/,
 	'number': /(?:\b|-)(?:0x[\da-fA-F]+|\d+\.?\d*)/,
 	'flag': {

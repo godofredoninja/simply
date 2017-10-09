@@ -1,3 +1,18 @@
+//  Follow me btn is post
+.simply-follow {
+  &:hover {
+    .simply-hover-hidden { display: none !important }
+    .simply-hover-show { display: inline-block !important }
+  }
+
+  &-btn {
+    height: 19px;
+    line-height: 17px;
+    padding: 0 10px;
+  }
+}
+
+
 @media #{$md-and-up} {
   // background image featured in tag and author
   .is-author.has-featured-image,
@@ -5,16 +20,17 @@
     .header,
     .mainMenu {
       background-color: transparent !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    .u-headerColorLink a { color: #fff !important; }
+    .u-headerColorLink a { color: #fff; }
 
     .main {
-      margin-top: -110px;
+      margin-top: -56px;
     }
 
     .tag,
     .author {
-      padding-top: 120px;
+      padding-top: 100px;
     }
   }
 

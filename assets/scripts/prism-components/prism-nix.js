@@ -2,7 +2,6 @@ Prism.languages.nix = {
 	'comment': /\/\*[\s\S]*?\*\/|#.*/,
 	'string': {
 		pattern: /"(?:[^"\\]|\\[\s\S])*"|''(?:(?!'')[\s\S]|''(?:'|\\|\$\{))*''/,
-		greedy: true,
 		inside: {
 			'interpolation': {
 				// The lookbehind ensures the ${} is not preceded by \ or ''

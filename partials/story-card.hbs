@@ -1,0 +1,65 @@
+<div class="story col s12 {{#has number="1, 2, 3, 4"}}m6 story--200{{else}}m4{{/has}} {{#has number="6,7,8,9"}}story--260{{/has}}">
+    <div class="story-wrap u-sizeFullWidth u-height540 u-md-heightAuto u-marginBottom20 u-overflowHidden u-relative u-borderRadius2 u-borderBlackLightest">
+
+        {{!--  Image --}}
+        <a href="{{url}}" class="story-image u-relative u-block u-backgroundSizeCover u-height280 u-md-height170 u-backgroundColorGrayLight simply-lazy lazy" data-original="{{feature_image}}"></a>
+
+        <div class="story-body u-flexColumn u-padding20 u-height260 u-md-heightAuto">
+
+            <div class="u-flex1 u-relative">
+                <div class="u-flexColumnTop u-flexWrap u-overflowHidden u-absolute0 u-md-relative">
+                    {{!-- Title --}}
+                    <div class="u-flex0 u-sizeFullWidth">
+                        <a href="{{url}}">
+                            {{!--  Primary tag  --}}
+                            {{#if primary_tag}}
+                            <div class="story-tag u-textColorNormal u-flexCenter u-fontSize20 u-lineHeight1" style="padding-bottom:9px">
+                                {{#has tag="#video-post-format"}}<i class="i-video--line"></i>
+                                {{else}}
+                                {{#has tag="#image-post-format"}}<i class="i-photo"></i>{{/has}}
+                                {{/has}}
+                                <span class="u-fontSize14">{{primary_tag.name}}</span>
+                            </div>
+                            {{/if}}
+
+                            {{!-- Title of story --}}
+                            <h3 class="story-title u-fontWeightBold u-lineHeight1 u-fontSize22">{{title}}</h3>
+                        </a>
+                    </div>
+
+                    {{!-- Excerpt --}}
+                    <a href="{{url}}"><p class="story-excerpt u-fontSizeSmall u-textColorNormal">{{excerpt words="15"}}</p></a>
+                </div>
+            </div>
+
+            <div class="u-flex u-paddingTop10 u-flex0">
+                {{!-- Author avatar --}}
+                {{#author}}
+
+                <div class="u-flex0 u-paddingRight10">
+                    <a href="{{url}}" style="background-image:url({{profile_image}})" class="avatar-image avatar-image--smaller u-backgroundSizeCover u-relative {{#unless profile_image}}no-avatar{{/unless}}">
+                        {{!-- <div class="u-absolute u-accentColor--iconNormal svgIcon" style="width: calc(100% + 10px);height: calc(100% + 10px);top:-5px;left:-5px;"><svg viewBox="0 0 114 114" xmlns="http://www.w3.org/2000/svg"><path d="M7.66922967,32.092726 C17.0070768,13.6353618 35.9421928,1.75 57,1.75 C78.0578072,1.75 96.9929232,13.6353618 106.33077,32.092726 L107.66923,31.4155801 C98.0784505,12.4582656 78.6289015,0.25 57,0.25 C35.3710985,0.25 15.9215495,12.4582656 6.33077033,31.4155801 L7.66922967,32.092726 Z"></path><path d="M106.33077,81.661427 C96.9929232,100.118791 78.0578072,112.004153 57,112.004153 C35.9421928,112.004153 17.0070768,100.118791 7.66922967,81.661427 L6.33077033,82.338573 C15.9215495,101.295887 35.3710985,113.504153 57,113.504153 C78.6289015,113.504153 98.0784505,101.295887 107.66923,82.338573 L106.33077,81.661427 Z"></path></svg></div> --}}
+                    </a>
+                </div>
+
+                <div class="u-flex1 u-noWrapWithEllipsis u-fontSize13">
+                    <div class="u-noWrapWithEllipsis"><a href="{{url}}" class="link u-textColorDarker link--underline">{{name}}</a></div>
+
+                {{/author}}
+
+                    {{!-- Datetime  --}}
+                    <div class="u-fontSize13 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight">
+                        <time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at timeago="true"}}</time>
+                    </div>
+                </div>
+
+                {{!-- Save btn --}}
+                {{!-- <div class="u-flex0 u-flexCenter u-textColorNormal">
+                    <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
+                </div> --}}
+
+            </div>
+
+        </div>
+    </div>
+</div>

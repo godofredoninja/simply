@@ -18,7 +18,7 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag {{#tag}}{{#if feature_image}}has-featured-image{{/if}}{{/tag}}{{/is}}{{#is "author"}}is-author {{#author}}{{#if cover_image}}has-featured-image{{/if}}{{/author}}{{/is}}" data-page="{{@blog.url}}">
+<body class="{{#is "home"}}is-home {{/is}}{{#is "index"}}is-frontpage{{/is}}{{#is "post"}}is-article{{/is}}{{#is "tag"}}is-tag {{#tag}}{{#if feature_image}}has-featured-image{{/if}}{{/tag}}{{/is}}{{#is "author"}}is-author {{#author}}{{#if cover_image}}has-featured-image{{/if}}{{/author}}{{/is}}" data-page="{{@blog.url}}">
 
     {{!-- Header Content --}}
     {{>"header"}}
@@ -37,6 +37,9 @@
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{{block "scripts"}}}
 
     {{!-- The main JavaScript file for Casper --}}
     <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>

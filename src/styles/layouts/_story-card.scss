@@ -1,0 +1,114 @@
+.avatar-image--smaller {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar-image {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 100%;
+}
+
+.story {
+  &-title { letter-spacing: -.028em; }
+
+  &-excerpt {
+    display: -webkit-box;
+    margin-top: 5px;
+    max-height: 4.5em;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  &-tag i {
+    color: rgba(0, 0, 0, .3) !important;
+    display: flex;
+    margin-right: 5px;
+  }
+}
+
+//  media Query
+@media #{$md-and-up} {
+  .story--260 {
+    .story-wrap { height: 260px }
+    .story-image { height: 100px }
+
+    .story-body {
+      height: 160px;
+    }
+  }
+
+  .story--200 {
+    .story-wrap { height: 260px; display: flex }
+
+    .story-body {
+      flex: 1 1 auto;
+      height: 100%;
+    }
+
+    .story-image {
+      flex: 0 0 auto;
+      height: 100%;
+      width: 200px;
+    }
+  }
+}
+
+// card for (author and tag) story
+// ==========================================================================
+.card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, .09);
+  border-radius: 3px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  margin-bottom: 10px;
+  padding: 10px 20px 15px;
+
+  &--p {
+    font-family: $secundary-font;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -.004em;
+    line-height: 1.58;
+  }
+
+  &-image {
+    max-height: 240px;
+    max-width: 360px;
+  }
+
+  // if story is featured
+  &.card--large {
+    .card-body { display: flex; flex-direction: column; }
+
+    .card-image {
+      height: 200px;
+      margin-bottom: 20px;
+      margin-top: 5px;
+      max-width: 100%;
+      order: -1;
+    }
+
+    .card-image--link {
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+  }
+
+  // even
+  &.card--medium {
+    .card-excerpt {
+      color: rgba(0, 0, 0, .44);
+      font-family: $primary-font;
+      font-size: 23px;
+      letter-spacing: -.022em;
+      line-height: 1.22;
+    }
+  }
+}

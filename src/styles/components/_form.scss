@@ -22,8 +22,6 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  i { display: inline-block; }
-
   &--chromeless {
     border-radius: 0;
     border-width: 0;
@@ -91,17 +89,17 @@
     line-height: 42px;
   }
 
-  &>.button--chromeless:not(.button--circle) {
+  & > .button--chromeless:not(.button--circle) {
     margin-right: 0;
     padding-right: 8px;
   }
 
-  &>.button--chromeless+.button--chromeless:not(.button--circle) {
+  & > .button--chromeless + .button--chromeless:not(.button--circle) {
     margin-left: 0;
     padding-left: 8px;
   }
 
-  &>.button--chromeless:last-child {
+  & > .button--chromeless:last-child {
     padding-right: 0;
   }
 }
@@ -110,4 +108,3 @@
 .button--large.button--link {
   padding: 0;
 }
-

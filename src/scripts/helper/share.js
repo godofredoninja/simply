@@ -3,7 +3,7 @@
 * Share social media
 */
 
-class zetamindsShare {
+class simplyShare {
   constructor(elem) {
     this.elem = elem;
     this.popWidth = 600;
@@ -116,4 +116,4 @@ class zetamindsShare {
 }
 
 /* Export Class */
-module.exports = zetamindsShare;
+module.exports = simplyShare;

@@ -8,6 +8,15 @@
   // }
 }
 
+// meta line
+.postMetaInline {
+  letter-spacing: 0;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .44);
+  fill: rgba(0, 0, 0, .44);
+}
 
 // post content body
 // ==========================================================================
@@ -19,10 +28,12 @@
     background-size: 2px .1em;
     text-decoration: none;
   }
+
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    // max-width: 1000px;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -100,14 +111,37 @@
 
   .twitter-tweet,
   iframe {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    // display: block;
+    // margin-left: auto !important;
+    // margin-right: auto !important;
     margin-top: 40px !important;
+    width: 100% !important;
   }
 
-  .video-responsive iframe { margin-top: 0 !important}
+  .video-responsive iframe { margin-top: 0 !important }
 
+  blockquote,
+  dl,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  ol,
+  p,
+  pre,
+  ul {
+    min-width: 100%;
+  }
+}
+
+// markdown content of post
+.kg-card-markdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // max-width: 920px;
 }
 
 // fisrt p
@@ -136,6 +170,7 @@
     color: rgba(0, 0, 0, .6);
     margin-bottom: 8px;
     margin-right: 8px;
+
     &:hover {
       background: rgba(0, 0, 0, .1);
       color: rgba(0, 0, 0, .6);
@@ -147,10 +182,15 @@
 // ==========================================================================
 
 .post-newsletter {
-  max-width: 520px;
-  .newsletter-form {max-width: 400px}
+  outline: 1px solid #f0f0f0 !important;
+  outline-offset: -1px;
+  border-radius: 2px;
+  padding: 40px 10px;
+
+  .newsletter-form { max-width: 400px }
 
   .form-group { width: 80%; padding-right: 5px; }
+
   .form--input {
     border: 0;
     border-bottom: 1px solid #ccc;
@@ -158,10 +198,12 @@
     padding: 6px 12px 8px 5px;
     resize: none;
     width: 100%;
+
     &:focus {
       outline: 0;
     }
   }
+
   .form--btn {
     background-color: #a9a9a9;
     border-radius: 0 45px 45px 0;
@@ -173,50 +215,54 @@
 
     &::before {
       @extend %u-absolute0;
+
       background-color: #a9a9a9;
       border-radius: 0 45px 45px 0;
       line-height: 45px;
       z-index: 2;
     }
 
-    &:hover {opacity: .8; }
+    &:hover { opacity: .8; }
     &:focus { outline: 0; }
   }
 }
 
-
 // post Relative
 // ==========================================================================
 .post-related {
-  .entry-image {
+  &-image {
     border-bottom: 1px solid rgba(0, 0, 0, .0785);
     border-radius: 4px 4px 0 0;
     height: 160px;
   }
 
-  .entry-title {
-    color: rgba(0,0,0,.9);
+  &-excerpt { font-family: $secundary-font }
+
+  &-excerpt,
+  &-title {
+    color: rgba(0, 0, 0, .9);
     -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 2 !important;
-    display: -webkit-box!important;
+    display: -webkit-box !important;
     line-height: 1.1 !important;
     max-height: 2.2em !important;
     text-overflow: ellipsis !important;
   }
 
   .u-card {
-    height: 250px;
+    height: 270px;
     margin-bottom: 20px;
   }
 }
 
-
 // Share Post
 // ==========================================================================
 .sharePost {
-  margin-left: -130px;
+  // margin-left: -130px;
+  left: -130px;
   margin-top: 28px;
   width: 45px;
+  position: absolute !important;
 
   a {
     background-image: none;
@@ -255,7 +301,7 @@
     // visibility: visible;
   }
 
-  &-wrap {max-width: 1200px;}
+  &-wrap { max-width: 1200px; }
 
   .separator {
     background: rgba(0, 0, 0, .15);
@@ -269,11 +315,8 @@
   max-width: 260px;
 }
 
-
 @media #{$md-and-down} {
-
   .post-body {
-
     h2 {
       font-size: 32px;
       margin-top: 26px;
@@ -295,14 +338,14 @@
       line-height: 1.4 !important;
     }
 
-    &> p:first-of-type:first-letter {
+    & > p:first-of-type::first-letter {
       font-size: 54.85px;
       margin-left: -4px;
       margin-right: 6px;
       padding-top: 3.5px;
     }
 
-    ol , ul, p {
+    ol, ul, p {
       font-size: 18px;
       letter-spacing: -.004em;
       line-height: 1.58;

@@ -1,9 +1,6 @@
 Prism.languages.verilog = {
-  'comment': /\/\/.*|\/\*[\s\S]*?\*\//,
-  'string': {
-    pattern: /"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"/,
-    greedy: true
-  },
+  'comment': /\/\/.*|\/\*[\w\W]*?\*\//,
+  'string': /"(?:\\(?:\r\n|[\s\S])|[^"\\\r\n])*"/,
   // support for any kernel function (ex: $display())
   'property': /\B\$\w+\b/,
   // support for user defined constants (ex: `define)

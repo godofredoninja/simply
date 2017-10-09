@@ -15,15 +15,11 @@ Prism.languages.rip = {
 
 	'regex': {
 		pattern: /(^|[^/])\/(?!\/)(\[.+?]|\\.|[^/\\\r\n])+\/(?=\s*($|[\r\n,.;})]))/,
-		lookbehind: true,
-		greedy: true
+		lookbehind: true
 	},
 
 	'symbol': /:[^\d\s`'",.:;#\/\\()<>\[\]{}][^\s`'",.:;#\/\\()<>\[\]{}]*/,
-	'string': {
-		pattern: /("|')(\\?.)*?\1/,
-		greedy: true
-	},
+	'string': /("|')(\\?.)*?\1/,
 	'number': /[+-]?(?:(?:\d+\.\d+)|(?:\d+))/,
 
 	'punctuation': /(?:\.{2,3})|[`,.:;=\/\\()<>\[\]{}]/,

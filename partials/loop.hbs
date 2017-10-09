@@ -5,7 +5,7 @@
             <div class="feed-entry-content">
                 <div class="feed-entry-wrap" data-page="{{#is "author"}}{{#author}}{{url}}{{/author}}{{/is}}{{#is "tag"}}{{#tag}}{{url}}{{/tag}}{{/is}}{{#is "paged"}}page/{{pagination.page}}{{/is}}">
                     {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-                    {{>"entry-post"}}
+                    {{>"card"}}
                 </div>
             </div>
 

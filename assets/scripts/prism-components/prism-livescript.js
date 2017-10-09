@@ -23,7 +23,7 @@ Prism.languages.livescript = {
 	},
 	'comment': [
 		{
-			pattern: /(^|[^\\])\/\*[\s\S]*?\*\//,
+			pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
 			lookbehind: true,
 			greedy: true
 		},

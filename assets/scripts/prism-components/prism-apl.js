@@ -1,9 +1,6 @@
 Prism.languages.apl = {
 	'comment': /(?:⍝|#[! ]).*$/m,
-	'string': {
-		pattern: /'(?:[^'\r\n]|'')*'/,
-		greedy: true
-	},
+	'string': /'(?:[^'\r\n]|'')*'/,
 	'number': /¯?(?:\d*\.?\d+(?:e[+¯]?\d+)?|¯|∞)(?:j¯?(?:\d*\.?\d+(?:e[\+¯]?\d+)?|¯|∞))?/i,
 	'statement': /:[A-Z][a-z][A-Za-z]*\b/,
 	'system-function': {
@@ -11,13 +8,13 @@ Prism.languages.apl = {
 		alias: 'function'
 	},
 	'constant': /[⍬⌾#⎕⍞]/,
-	'function': /[-+×÷⌈⌊∣|⍳⍸?*⍟○!⌹<≤=>≥≠≡≢∊⍷∪∩~∨∧⍱⍲⍴,⍪⌽⊖⍉↑↓⊂⊃⊆⊇⌷⍋⍒⊤⊥⍕⍎⊣⊢⍁⍂≈⍯↗¤→]/,
+	'function': /[-+×÷⌈⌊∣|⍳⍸?*⍟○!⌹<≤=>≥≠≡≢∊⍷∪∩~∨∧⍱⍲⍴,⍪⌽⊖⍉↑↓⊂⊃⌷⍋⍒⊤⊥⍕⍎⊣⊢⍁⍂≈⍯↗¤→]/,
 	'monadic-operator': {
 		pattern: /[\\\/⌿⍀¨⍨⌶&∥]/,
 		alias: 'operator'
 	},
 	'dyadic-operator': {
-		pattern: /[.⍣⍠⍤∘⌸@⌺]/,
+		pattern: /[.⍣⍠⍤∘⌸]/,
 		alias: 'operator'
 	},
 	'assignment': {

@@ -3,42 +3,24 @@
   color: rgba(0, 0, 0, .6);
   min-height: 400px;
 
-  // a {
-  //   color: rgba(0, 0, 0, .8);
-  //   &:hover {
-  //     color: rgba(0, 0, 0, .6);
-  //   }
-  // }
-
-  &-wrap {
-    z-index: 2;
-  }
-
   &-avatar {
     height: 80px;
-    margin-right: 10px;
     width: 80px;
   }
 
-  &-meta {
-    span {
-      display: inline-block;
-      font-size: 17px;
-      font-style: italic;
-      margin: 0 25px 16px 0;
-      opacity: .8;
-      word-wrap: break-word;
-    }
+  &-meta span {
+    display: inline-block;
+    font-size: 17px;
+    font-style: italic;
+    margin: 0 25px 16px 0;
+    opacity: .8;
+    word-wrap: break-word;
   }
 
-  &-name { color: rgba(0,0,0,.8)}
+  &-name { color: rgba(0, 0, 0, .8) }
 
-  &-bio {
-    max-width: 600px;
-    // color: rgba(0, 0, 0, .6);
-  }
+  &-bio { max-width: 600px; }
 }
-
 
 .author.has--image {
   color: #fff !important;
@@ -56,7 +38,6 @@
     border-color: hsla(0, 0%, 100%, .5) !important;
     font-size: 16px;
   }
-
 }
 
 @media #{$md-and-down} {

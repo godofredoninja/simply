@@ -7,7 +7,7 @@
 
     <header class="post-header u-container u-maxWidth740 u-paddingTop30">
         {{!-- entry meta < author avtar, name, fisrt tag, datetime> --}}
-        {{>"entry-meta"}}
+        {{>"card-meta"}}
 
         <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-paddingBottom2 u-fontWeightBold u-md-fontSizeLarger">{{title}}</h1>
 
@@ -33,7 +33,7 @@
 
     <section class="post-body u-container u-maxWidth740 u-relative u-clear">
         {{!-- Share post --}}
-        <div class="sharePost u-floatLeft u-textAlignCenter u-hide-before-lg">
+        <div class="sharePost u-textAlignCenter u-hide-before-lg">
             <div class="share-box">
                 <span class="share-count u-block u-fontWeightBold u-contentTitle" data-url="{{url absolute="true"}}">0</span>
                 <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSizeSmaller">SHARES</span>
@@ -52,8 +52,9 @@
     <footer class="post-footer u-container u-maxWidth740 u-paddingTop20 u-paddingBottom20">
         {{!-- Email subscribe form at the bottom of the page --}}
         {{#if @labs.subscribers}}
-        <div class="post-newsletter u-marginAuto u-textAlignCenter u-paddingTop30 u-paddingBottom20">
-            <h5 class="u-fontSize28 u-fontWeightBold">Subscribe to</h5>
+        <div class="post-newsletter u-marginAuto u-textAlignCenter u-marginBottom20">
+            <h5 class="newsletter-title u-fontSize28 u-fontWeightBold u-marginBottom15">Sign up for my newsletter!</h5>
+            <div class="newsletter-description u-fontSizeSmall" style="color: #5f5f5f">Get the latest posts delivered right to your inbox</div>
 
             {{subscribe_form
             form_class="simply-subscribe-tracking newsletter-form u-marginAuto u-flex u-paddingTop30 u-paddingBottom20"
@@ -68,7 +69,7 @@
         {{!-- Post All Tags (category) --}}
         {{#if tags}}
         <div class="post-tags">
-            {{#foreach tags}}<a href="{{url}}" title="{{name}}" class="button simply-tracking" data-event-category="Article" data-event-action="Tags" data-event-label="{{name}}" data-event-non-interaction="1">{{name}}</a>{{/foreach}}
+            {{#foreach tags}}<a href="{{url absolute="true"}}" title="{{name}}" class="button simply-tracking" data-event-category="Article" data-event-action="Tags" data-event-label="{{name}}" data-event-non-interaction="1">{{name}}</a>{{/foreach}}
         </div>
         {{/if}}
     </footer>
@@ -83,6 +84,10 @@
 {{#post}}
     {{!-- post Commets --}}
     {{>"post-comments"}}
+
     {{!-- Post Actions (next and prev post, share social media, cout share in facebook) --}}
     {{>"post-actions"}}
+
+    {{!-- Instgram Feed --}}
+    {{>"instagram-feed"}}
 {{/post}}
