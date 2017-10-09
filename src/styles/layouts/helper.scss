@@ -1,3 +1,18 @@
+//  Follow me btn is post
+.simply-follow {
+  &:hover {
+    .simply-hover-hidden { display: none !important }
+    .simply-hover-show { display: inline-block !important }
+  }
+
+  &-btn {
+    height: 19px;
+    line-height: 17px;
+    padding: 0 10px;
+  }
+}
+
+
 @media #{$md-and-up} {
   // background image featured in tag and author
   .is-author.has-featured-image,

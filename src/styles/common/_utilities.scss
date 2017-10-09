@@ -70,7 +70,7 @@
 }
 
 // font size
-.u-fontSize13 { font-size: 13px }
+.u-fontSize13 { font-size: 13px !important }
 .u-fontSize14 { font-size: 14px }
 .u-fontSize15 { font-size: 15px !important }
 .u-fontSize20 { font-size: 20px }
@@ -238,7 +238,7 @@
 // card
 .u-card {
   background: #fff;
-  border: 1px solid rgba(0, 0, 0, .04);
+  border: 1px solid rgba(0, 0, 0, .09);
   border-radius: 3px;
   // box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
   box-shadow: 0 1px 7px rgba(0, 0, 0, .05);

@@ -28,9 +28,11 @@
 
   &--link {
     background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, .09);
+    box-shadow: 0 1px 7px rgba(0, 0, 0, .09);
     min-height: 50px;
     padding: 15px 15px 15px 55px;
-    &:hover { .sidebar-border {background-color: rgba(229,239,245,1);}  }
 
+    &:hover { .sidebar-border { background-color: rgba(229, 239, 245, 1) } }
   }
 }

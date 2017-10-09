@@ -11,6 +11,19 @@
 
         {{#author}}
             <a href="{{url}}"class="simply-tracking link {{#is "post"}} u-textColorDarker {{else}} u-accentColor--iconNormal{{/is}}" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>
+
+            {{!-- Follow --}}
+            {{#is "post"}}{{#has any="facebook, twitter"}}
+                <div class="u-inlineBlock simply-follow" style="margin-left:10px">
+                    <span class="simply-hover-hidden simply-follow-btn button button--primary u-borderRadius2 u-fontSizeSmall u-fontSize13">Follow</span>
+                    {{!-- Author Facebook and Twitter --}}
+                    <div class="simply-hover-show buttonSet u-inlineBlock" style="display:none">
+                        {{#if facebook}}<a class="simply-follow-btn button button--primary u-borderRadius2 u-fontSize13" href="{{facebook_url}}" title="Facebook" target="_blank"><i class="i-facebook"></i> Facebook</a>{{/if}}
+                        {{#if twitter}}<a class="simply-follow-btn button button--primary u-borderRadius2 u-fontSize13" href="{{twitter_url}}" title="{{twitter}}" target="_blank"><i class="i-twitter"></i> Twitter</a>{{/if}}
+                    </div>
+                </div>
+            {{/has}}{{/is}}
+
         {{/author}}
 
         {{!-- tags Primary --}}
