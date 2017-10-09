@@ -1,9 +1,6 @@
 Prism.languages.scheme = {
 	'comment' : /;.*/,
-	'string' :  {
-		pattern: /"(?:[^"\\\r\n]|\\.)*?"|'[^('\s]*/,
-		greedy: true
-	},
+	'string' :  /"(?:[^"\\\r\n]|\\.)*?"|'[^('\s]*/,
 	'keyword' : {
 		pattern : /(\()(?:define(?:-syntax|-library|-values)?|(?:case-)?lambda|let(?:\*|rec)?(?:-values)?|else|if|cond|begin|delay(?:-force)?|parameterize|guard|set!|(?:quasi-)?quote|syntax-rules)/,
 		lookbehind : true
@@ -13,7 +10,7 @@ Prism.languages.scheme = {
 		lookbehind : true
 	},
 	'number' : {
-		pattern: /(\s|\))[-+]?\d*\.?\d+(?:\s*[-+]\s*\d*\.?\d+i)?\b/,
+		pattern: /(\s|\))[-+]?[0-9]*\.?[0-9]+(?:\s*[-+]\s*[0-9]*\.?[0-9]+i)?\b/,
 		lookbehind: true
 	},
 	'boolean' : /#[tf]/,

@@ -23,10 +23,10 @@
             <a href="#post-comments" class="button button--large button--chromeless button--dark u-fontSizeLarge scroll-id">
                 <i class="i-comments"></i>
                 {{!-- Disqus Comments Count --}}
-                <span class="disqus-comment-count u-fontSizeSmall simply-disqus" data-disqus-url="{{url absolute="true"}}"></span>
+                <span class="disqus-comment-count u-fontSizeSmall simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 Comments</span>
                 {{!-- Facebook Comments Counts --}}
-                <span class="fb-comments-count u-fontSizeSmall simply-facebook" data-href="{{url absolute="true"}}">0</span>
-                <span class="u-fontSizeSmall simply-facebook">Comments</span>
+                <span class="fb-comments-count u-fontSizeSmall simply-facebook u-hide" data-href="{{url absolute="true"}}">0</span>
+                <span class="u-fontSizeSmall simply-facebook u-hide">Comments</span>
             </a>
 
         </div>
@@ -37,10 +37,7 @@
                 <a href="#" title="Share on Twitter" class="simply-tracking simply-share i-twitter button button--large button--chromeless c-twitter u-fontSizeLarge" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}" data-event-category="Article" data-event-action="Share" data-event-label="Twitter - Bottom" data-event-non-interaction="1"></a>
                 <a href="#" title="Share on whatsapp" class="simply-tracking simply-share i-whatsapp button button--large button--chromeless c-whatsapp u-fontSizeLarge u-hide-after-lg" data-share="whatsapp" data-title="{{title}}" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Whatsapp - Bottom" data-event-non-interaction="1"></a>
                 <a href="#" title="Share on Reddit" class="simply-tracking simply-share i-reddit button button--large button--chromeless c-reddit u-fontSizeLarge u-hide-before-lg" data-share="reddit" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Reddit - Bottom" data-event-non-interaction="1"></a>
-                <div class="simply-tracking fbSave with-tooltip u-relative button button--large button--chromeless c-facebook u-hide" data-tooltip="Save to Facebook" data-event-category="Article" data-event-action="Share" data-event-label="Facebook - Bookmark" data-event-non-interaction="1">
-                    <div class="fbSave-icon u-fontSizeLarge i-save--line"></div>
-                    <div class="fbSave-dropdown u-absolute u-overflowHidden u-lineHeight1"><div class="fb-save" data-uri="{{url absolute="true"}}" data-size="large"></div></div>
-                </div>
+                <a href="#" title="Share on Pinterest" class="simply-tracking simply-share i-pinterest button button--large button--chromeless c-pinterest u-fontSizeLarge u-hide-before-lg" data-share="pinterest" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="pinterest - Bottom" data-event-non-interaction="1"></a>
             </div>
 
             {{!-- next Post--}}

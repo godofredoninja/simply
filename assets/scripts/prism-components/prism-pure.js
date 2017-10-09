@@ -16,8 +16,7 @@
 		},
 		'comment': [
 			{
-				pattern: /(^|[^\\])\/\*[\s\S]*?\*\//,
-				greedy: true,
+				pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
 				lookbehind: true
 			},
 			{
@@ -26,10 +25,7 @@
 			},
 			/#!.+/
 		],
-		'string': {
-			pattern: /"(?:\\.|[^"\\\r\n])*"/,
-			greedy: true
-		},
+		'string': /"(?:\\.|[^"\\\r\n])*"/,
 		'number': {
 			// The look-behind prevents wrong highlighting of the .. operator
 			pattern: /((?:\.\.)?)(?:\b(?:inf|nan)\b|\b0x[\da-f]+|(?:\b(?:0b)?\d+(?:\.\d)?|\B\.\d)\d*(?:e[+-]?\d+)?L?)/i,

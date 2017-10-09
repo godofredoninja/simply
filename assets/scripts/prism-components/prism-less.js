@@ -8,7 +8,7 @@
 
 Prism.languages.less = Prism.languages.extend('css', {
 	'comment': [
-		/\/\*[\s\S]*?\*\//,
+		/\/\*[\w\W]*?\*\//,
 		{
 			pattern: /(^|[^\\])\/\/.*/,
 			lookbehind: true

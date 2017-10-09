@@ -3,10 +3,7 @@ Prism.languages.makefile = {
 		pattern: /(^|[^\\])#(?:\\(?:\r\n|[\s\S])|.)*/,
 		lookbehind: true
 	},
-	'string': {
-		pattern: /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
-		greedy: true
-	},
+	'string': /(["'])(?:\\(?:\r\n|[\s\S])|(?!\1)[^\\\r\n])*\1/,
 
 	// Built-in target names
 	'builtin': /\.[A-Z][^:#=\s]+(?=\s*:(?!=))/,

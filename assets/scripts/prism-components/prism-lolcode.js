@@ -12,8 +12,7 @@ Prism.languages.lolcode = {
 				/:\[[^\]]+\]/,
 				/:[)>o":]/
 			]
-		},
-		greedy: true
+		}
 	},
 	'number': /(-|\b)\d*\.?\d+/,
 	'symbol': {

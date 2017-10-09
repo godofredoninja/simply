@@ -1,6 +1,6 @@
 (function(Prism) {
 
-	var handlebars_pattern = /\{\{\{[\s\S]+?\}\}\}|\{\{[\s\S]+?\}\}/g;
+	var handlebars_pattern = /\{\{\{[\w\W]+?\}\}\}|\{\{[\w\W]+?\}\}/g;
 
 	Prism.languages.handlebars = Prism.languages.extend('markup', {
 		'handlebars': {
@@ -22,7 +22,7 @@
 					pattern: /\[[^\]]+\]/,
 					inside: {
 						punctuation: /\[|\]/,
-						variable: /[\s\S]+/
+						variable: /[\w\W]+/
 					}
 				},
 				'punctuation': /[!"#%&'()*+,.\/;<=>@\[\\\]^`{|}~]/,
@@ -35,7 +35,7 @@
 	// surround markup
 	Prism.languages.insertBefore('handlebars', 'tag', {
 		'handlebars-comment': {
-			pattern: /\{\{![\s\S]*?\}\}/,
+			pattern: /\{\{![\w\W]*?\}\}/,
 			alias: ['handlebars','comment']
 		}
 	});
@@ -51,15 +51,9 @@
 
 		env.backupCode = env.code;
 		env.code = env.code.replace(handlebars_pattern, function(match) {
-			var i = env.tokenStack.length;
-			// Check for existing strings
-			while (env.backupCode.indexOf('___HANDLEBARS' + i + '___') !== -1)
-				++i;
+			env.tokenStack.push(match);
 
-			// Create a sparse array
-			env.tokenStack[i] = match;
-
-			return '___HANDLEBARS' + i + '___';
+			return '___HANDLEBARS' + env.tokenStack.length + '___';
 		});
 	});
 
@@ -78,12 +72,9 @@
 			return;
 		}
 
-		for (var i = 0, keys = Object.keys(env.tokenStack); i < keys.length; ++i) {
-			var k = keys[i];
-			var t = env.tokenStack[k];
-
+		for (var i = 0, t; t = env.tokenStack[i]; i++) {
 			// The replace prevents $$, $&, $`, $', $n, $nn from being interpreted as special patterns
-			env.highlightedCode = env.highlightedCode.replace('___HANDLEBARS' + k + '___', Prism.highlight(t, env.grammar, 'handlebars').replace(/\$/g, '$$$$'));
+			env.highlightedCode = env.highlightedCode.replace('___HANDLEBARS' + (i + 1) + '___', Prism.highlight(t, env.grammar, 'handlebars').replace(/\$/g, '$$$$'));
 		}
 
 		env.element.innerHTML = env.highlightedCode;

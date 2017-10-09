@@ -13,7 +13,6 @@ Prism.languages.autoit = {
 	},
 	"string": {
 		pattern: /(["'])(?:\1\1|(?!\1)[^\r\n])*\1/,
-		greedy: true,
 		inside: {
 			"variable": /([%$@])\w+\1/
 		}

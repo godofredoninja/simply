@@ -1,12 +1,12 @@
-# Simply theme for [Ghost](https://github.com/tryghost/ghost/) by @GodoFredoNinja
+# Simply theme for [Ghost](https://github.com/tryghost/ghost/)
 
-[![Ghost version](https://img.shields.io/badge/Ghost-1.x.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
+[![Ghost version](https://img.shields.io/badge/Ghost-1.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Node](https://img.shields.io/node/v/uno-zen.svg)](https://nodejs.org/en/)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
 > Simple and Elegant theme for [Ghost](https://github.com/tryghost/ghost/).
 
-### Free theme for Ghost
+## Free theme for Ghost
 
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
@@ -16,16 +16,19 @@ It is available for free so you can use on your site. It is strictly forbidden t
 
 ![](./screenshot.png)
 
-
 ## Demo
+
 You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Featured
+
 - Responsive layout
 - Blog navigation
 - Page 404 (Multiple faces emoticons)
 - Page subscribe
 - Pagination Infinite Scroll
+- Instagram Feed in footer of Post
+- AMP template (Accelerated Mobile Pages)
 - Cover images for blog, tag and author
 - links to followers in social media
 - Related Articles (6 articles)
@@ -34,36 +37,46 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - YouTube Subscribe Button in video post Format
 - 5 articles latest posts in the (author - tag) section sidebar
 - Previous and next button in the Post
-- Has button to save the link on Facebook
-- Has a search engine system
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
 - Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
 - Sticky content in the sidebar
-- YouTube, Vimeo, kickstarter, Facebook, dailymotion, Spotify, soundcloud => Responsive
+- YouTube, Vimeo, kickstarter, Facebook, dailymotion => Responsive
 - Lazy image loading for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
-
 ## Web Browser Support for Simply
+
 Simply supports the following web [browsers](http://caniuse.com/#search=flexbox).
 
-# Simply settings
+## Ghost Settings
 
 > Enable all checkboxes on the labs page in your Ghost admin panel.
 
 ![](./documentation/labs.png)
 
-## Social Links
-Add the Social Links only for the services you want to appear in the header section of your website. Pay careful attention as enabling too many services will cause menu problems.
+## Simply Settings
 
-Add the following code in `Settings -> Code Injection -> Blog Footer`
+### Social Links
+
+Add the Social Links only for the services you want to appear in the header section of your website. Pay attention as enabling too many services will cause menu problems.
+
+### YouTube Subscribe Button
+
+This section enables the YouTube Post format. Add the Channel Name and Channel ID which can be found here [YouTube Advanced Settings](https://www.youtube.com/account_advanced)
+
+— Copy the below script to `Settings -> Code Injection  -> Blog Footer section`
 
 ```html
 <script>
-/* links to followers in social media */
+/*====================================================
+  THEME SETTINGS & GLOBAL VARIABLES
+====================================================*/
+
+/* 01. Social Media Follow*/
 var followSocialMedia = {
+  'google': 'https://...',
   'youtube': 'https://...',
   'instagram': 'https://...',
   'snapchat': 'https://...',
@@ -76,74 +89,53 @@ var followSocialMedia = {
   'flickr':'https://...',
   'pinterest':'https://...',
   'telegram':'https://...',
-  'rss':'https://...',
+  'feed':'https://...',
 };
-</script>
-```
 
-## Enable Disqus or Facebook Comments
-Only enable either Disqus or Facebook comments.
-
-#### Disqus Comments
-Insert your [Disqus shortname](https://shortname.disqus.com/admin/) in both the comments and Disqus comment count sections.
-
-1. To enable Disqus comments update the code in `Settings -> Code Injection -> Blog Header.`
-  ```html
-  <style>
-    .simply-facebook {display:none !important}
-  </style>
-  ```
-
-2. To enable Disqus comments update the code in Settings -> Code Injection -> Blog Footer.
-  ```html
-  <script>
-    /* Disqus for Comments */
-    var disqusShortName = 'YOUR_DISQUS_SHORTCUT_HERE';
-  </script>
-
-  <!-- Disqus Comments Count-->
-  <script id="dsq-count-scr" src="//YOUR_DISQUS_SHORTCUT_HERE.disqus.com/count.js" async></script>
-  ```
-
-#### Facebook Comments
-To use Facebook comments, skip the configuration Disqus.
-
-This enables comments and comment counter.
-
-1. Add the code in `Settings -> Code Injection -> Blog Header`
-
-  ```html
-  <style>
-    .simply-disqus {display:none !important}
-  </style>
-```
-2. Add the code `Settings -> Code Injection -> Blog Footer`
-> If you have the Facebook button to save. It is no longer necessary to add the following code.
-
-  ```html
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      $('.fbSave').removeClass('u-hide');
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.async=true;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-  ```
-
-## YouTube Subscribe Button
-Add the code `Settings -> Code Injection -> Blog Footer`
-```html
-<script>
 /* 0.2  Video Post Format Subscribe */
-var youtubeChannelName = '...Your channel name...';
-var youtubeChannelID = '... Your Channel ID ...';
+var youtubeChannelName = 'YOUR_CHANNEL_NAME';
+var youtubeChannelID = 'YOUR_CHANNEL_ID';
+
+/* 03. Disqus Comment Settings */
+var disqusShortName = 'YOUR_DISQUS_SHORTCUT_HERE';
+
+/* 04. Newsletter (optional) */
+var newsletterTitle = 'YOUR_TITLE';
+var newsletterDescription = 'YOUR_DESCRIPTION';
+
+/* 05. instgram */
+var instagramToken = 'Token_app_instagram';
+var instagramUserId = 'User_ID';
+var instagramUserName = 'User_Name';
 </script>
+
+<!-- Disqus Comments Count-->
+<script id="dsq-count-scr" src="//YOUR_DISQUS_SHORTCUT_HERE.disqus.com/count.js" async></script>
+```
+
+### Facebook Comments
+
+To use facebook comments, skip the configuration Disqus.
+
+This enables comments and comment counter
+
+— Add the code `Settings -> Code Injection -> Blog Footer`
+
+```html
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    $('.simply-facebook').removeClass('u-hide');
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.async=true;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 ```
 
 ## Add additional content to the sidebar
+
 Add you own custom content into the side bar by editing the `./partials/sidebar.hbs` file.
 
 ```html
@@ -154,11 +146,13 @@ Add you own custom content into the side bar by editing the `./partials/sidebar.
 ```
 
 ## Warning - Note - Success
+
 Add some more styling options to your articles text with these three styles.
 
 ![](./documentation/note.png)
 
 ### PrismJS code syntax
+
 Make your code stand out with the PrismJS code highlighter.
 PrismJS allows you to select which languge you embeded and performs code highlighting according to the language. Neat!
 
@@ -166,23 +160,24 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 
 ![](./documentation/prism.png)
 
+## Image Post Format
+
+If you want to have a image post format, you only have to add the tag `#image-post-format` The Featured image will become large in size.
+
 ## Video Post Format
+
 If you want to have a video post format, you only have to add the tag `#video-post-format`. The first video in the article will be large in size.
 
 ![](./documentation/video-post-format.png)
----
-![](./documentation/video-post-format-2.png)
----
-
-## Image Post Format
-If you want to have a image post format, you only have to add the tag `#image-post-format` The Featured image will become large in size.
-
 
 ## Change Theme Style
+
 To make your changes with your favorite colors you just have to add the following code and replace with your colors
 [Themes](THEMES.md).
 
 ### Credits
+
+- [Hodor AMP Template](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost)
 - [Normalize](https://necolas.github.io/normalize.css/)
 - [Jquery.ghostHunter](https://github.com/jamalneufeld/ghostHunter)
 - [Prismjs](http://prismjs.com/)

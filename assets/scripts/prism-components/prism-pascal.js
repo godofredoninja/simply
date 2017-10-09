@@ -10,10 +10,7 @@ Prism.languages.pascal = {
 		/\{[\s\S]+?\}/,
 		/\/\/.*/
 	],
-	'string': {
-		pattern: /(?:'(?:''|[^'\r\n])*'|#[&$%]?[a-f\d]+)+|\^[a-z]/i,
-		greedy: true
-	},
+	'string': /(?:'(?:''|[^'\r\n])*'|#[&$%]?[a-f\d]+)+|\^[a-z]/i,
 	'keyword': [
 		{
 			// Turbo Pascal

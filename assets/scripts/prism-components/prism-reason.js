@@ -1,6 +1,6 @@
 Prism.languages.reason = Prism.languages.extend('clike', {
 	'comment': {
-		pattern: /(^|[^\\])\/\*[\s\S]*?\*\//,
+		pattern: /(^|[^\\])\/\*[\w\W]*?\*\//,
 		lookbehind: true
 	},
 	'string': {
