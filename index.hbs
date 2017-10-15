@@ -1,7 +1,8 @@
 {{!< default}}
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
-{{!-- All entry --}}
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "simply_class_body"}}is-frontpage{{/contentFor}}
 
 <div class="feed-entry-content">
     {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}

@@ -1,14 +1,13 @@
 {{!-- Layout --}}
 {{!< layout-article }}
 
-
 {{!-- Image Container --}}
 {{#post}}
 
 {{#contentFor "simply_feature_image"}}
     {{#if feature_image}}
-        <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1000">
-            <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}" data-action="zoom"/>
+        <figure class="post-image u-block u-marginAuto u-marginTop30 u-sizeFullWidth">
+            <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}"/>
         </figure>
     {{/if}}
 {{/contentFor}}

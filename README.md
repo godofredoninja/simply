@@ -28,14 +28,17 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Page subscribe
 - Pagination Infinite Scroll
 - Instagram Feed in footer of Post
-- AMP template (Accelerated Mobile Pages)
+- [AMP](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost) Template (Accelerated Mobile Pages)
 - Cover images for blog, tag and author
 - links to followers in social media
 - Related Articles (6 articles)
-- Video Post Format => add tag `#video-post-format`
-- Image post Format => add tag `#image-post-format`
+- Template Video Post Format
+- Template Image post Format
+- Template Audio post Format
+- Template not Image Featured in Post
 - YouTube Subscribe Button in video post Format
-- 5 articles latest posts in the (author - tag) section sidebar
+- 5 articles latest posts in the (Author - Tag) section sidebar
+- Tags Cloud in page of Author and Tag
 - Previous and next button in the Post
 - Support for comments (Facebook or Disqus)
 - Support for counter comments (Facebook or Disqus)
