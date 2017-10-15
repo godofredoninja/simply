@@ -2,6 +2,11 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#author}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "simply_class_body"}}is-author {{#if cover_image}}has-featured-image{{/if}}{{/contentFor}}
+
+{{!-- Author content --}}
 <section class="author u-relative u-flex u-flexWrap u-boxShadowBottom u-paddingBottom30 u-paddingTop30 {{#if cover_image}}has--image{{/if}}">
     <span class="cover-lazy lazy u-absolute0 u-backgroundSizeCover" data-original="{{cover_image}}"></span>
     {{#if cover_image}}<span class="u-absolute0 u-backgroundDark" style="z-index-1"></span>{{/if}}

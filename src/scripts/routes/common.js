@@ -1,26 +1,16 @@
-import Share from '../helper/share';
-import followMe from '../helper/follow-me';
+import simplyShare from '../app/app.share';
+import simplyFollow from '../app/app.follow';
+import simplySearch from '../app/app.search';
 
 // Varibles
 const $body = $('body');
-const $pageUrl = $body.attr('data-page');
+const $blogUrl = $body.attr('data-page');
 const $seachInput = $('#search-field');
-
-/* Search Template */
-const searchTemplate = `
-  <a class="u-block" href="${$pageUrl}{{link}}">
-    <span class="u-contentTitle u-fontSizeBase">{{title}}</span>
-    <span class="u-block u-fontSizeSmaller u-textColorNormal u-paddingTop5">{{pubDate}}</span>
-  </a>
-`;
-
 
 export default {
   init() {
     // Follow me
-    if (typeof followSocialMedia !== 'undefined') {
-      followMe(followSocialMedia); // eslint-disable-line
-    }
+    if (typeof followSocialMedia !== 'undefined') simplyFollow(followSocialMedia); // eslint-disable-line
 
     /* Lazy load for image */
     $('.cover-lazy.lazy').lazyload({effect : 'fadeIn'});
@@ -34,28 +24,6 @@ export default {
       $body.toggleClass('is-showNavMob');
     });
 
-    /* Search Open */
-    $('.button-search--open').on('click', (e) => {
-      e.preventDefault();
-      $body.addClass('is-search');
-      $seachInput.focus();
-    });
-
-    /* Search Close */
-    $('.button-search--close').on('click', (e) => {
-      e.preventDefault();
-      $body.removeClass('is-search');
-    });
-
-    /* Search */
-    $seachInput.ghostHunter({
-      results: '#searchResults',
-      zeroResultsInfo: true,
-      info_template: '<p class="u-paddingBottom20 u-fontSize15">Showing {{amount}} results</p>',
-      result_template: searchTemplate,
-      onKeyUp: true,
-    });
-
     /* rocket to the moon (retur TOP HOME) */
     $('.rocket').on('click', function (e) {
       e.preventDefault();
@@ -65,19 +33,18 @@ export default {
     /* Share article in Social media */
     $('.simply-share').bind('click', function (e) {
       e.preventDefault();
-      const share = new Share($(this));
+      const share = new simplyShare($(this));
       share.share();
     });
 
     /* sicky sidebar */
-    $('.sidebar-sticky').theiaStickySidebar({
-      additionalMarginTop: 30,
-    });
+    $('.sidebar-sticky').theiaStickySidebar({additionalMarginTop: 30});
 
     // show comments count of disqus
-    if (typeof disqusShortName !== 'undefined') {
-      $('.simply-disqus').removeClass('u-hide');
-    }
+    if (typeof disqusShortName !== 'undefined') $('.simply-disqus').removeClass('u-hide');
+
+    // Search
+    simplySearch($seachInput, $blogUrl);
 
     /* show btn for Retur TOP PAGE */
     setInterval( () => {
