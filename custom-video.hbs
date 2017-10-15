@@ -1,0 +1,13 @@
+{{!-- Layout --}}
+{{!< layout-article }}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "simply_class_body"}}is-video{{/contentFor}}
+
+{{!-- Video Container --}}
+{{#contentFor "simply_video"}}
+    <div class="video-post-format u-marginAuto u-maxWidth1000 u-hide"></div>
+{{/contentFor}}
+
+{{!-- Article --}}
+{{> "article"}}

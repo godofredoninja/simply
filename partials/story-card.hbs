@@ -14,10 +14,6 @@
                             {{!--  Primary tag  --}}
                             {{#if primary_tag}}
                             <div class="story-tag u-textColorNormal u-flexCenter u-fontSize20 u-lineHeight1" style="padding-bottom:9px">
-                                {{#has tag="#video-post-format"}}<i class="i-video--line"></i>
-                                {{else}}
-                                {{#has tag="#image-post-format"}}<i class="i-photo"></i>{{/has}}
-                                {{/has}}
                                 <span class="u-fontSize14">{{primary_tag.name}}</span>
                             </div>
                             {{/if}}
