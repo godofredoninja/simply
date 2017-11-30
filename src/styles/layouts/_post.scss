@@ -1,6 +1,7 @@
 .post {
   &-title {
     line-height: 1.04;
+    font-weight: 600;
   }
 
   // &-footer {
@@ -14,8 +15,8 @@
   font-weight: 400;
   font-style: normal;
   font-size: 14px;
-  color: rgba(0, 0, 0, .44);
-  fill: rgba(0, 0, 0, .44);
+  color: rgba(0, 0, 0, .54);
+  fill: rgba(0, 0, 0, .54);
 }
 
 // post content body
@@ -38,7 +39,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
   }
 
@@ -65,18 +66,20 @@
 
   p {
     font-family: $secundary-font;
-    font-size: 21px;
+    font-size: 20px;
     font-weight: 400;
     letter-spacing: -.003em;
     line-height: 1.58;
-    margin-top: 28px;
+    margin-top: 35px;
   }
+
+  .kg-card-markdown > ul { margin-top: 35px }
 
   ul,
   ol {
     counter-reset: post;
     font-family: $secundary-font;
-    font-size: 21px;
+    font-size: 20px;
     margin-top: 20px;
 
     li {
@@ -97,10 +100,10 @@
   }
 
   ul li::before {
-    content: '•';
+    content: '\2022';
     font-size: 16.8px;
     padding-right: 15px;
-    padding-top: 4px;
+    padding-top: 3px;
   }
 
   ol li::before {
@@ -111,14 +114,16 @@
 
   .twitter-tweet,
   iframe {
-    // display: block;
-    // margin-left: auto !important;
-    // margin-right: auto !important;
+    display: block;
+    margin-left: auto !important;
+    margin-right: auto !important;
     margin-top: 40px !important;
-    width: 100% !important;
+    // width: 100% !important;
   }
 
   .video-responsive iframe { margin-top: 0 !important }
+
+  iframe[src*="facebook.com"] { width: 100% }
 
   blockquote,
   dl,
@@ -137,12 +142,12 @@
 }
 
 // markdown content of post
-.kg-card-markdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+// .kg-card-markdown {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   // max-width: 920px;
-}
+// }
 
 // fisrt p
 .kg-card-markdown > p:first-of-type::first-letter,
@@ -301,7 +306,11 @@
     // visibility: visible;
   }
 
-  &-wrap { max-width: 1200px; }
+  &-wrap {
+    max-width: 1200px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 
   .separator {
     background: rgba(0, 0, 0, .15);
@@ -350,5 +359,13 @@
       letter-spacing: -.004em;
       line-height: 1.58;
     }
+
+    iframe { width: 100% !important; }
+  }
+
+  // Post Related
+  .post-related {
+    padding-left: 8px;
+    padding-right: 8px;
   }
 }

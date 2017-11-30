@@ -1,4 +1,4 @@
-<div id="post-comments" class="post-comments u-backgroundWhite u-paddingTop30 u-paddingBottom30 link--accent">
+<div id="post-comments" class="post-comments u-hide u-backgroundWhite u-paddingTop30 u-paddingBottom30 link--accent">
     <div class="u-container u-maxWidth1000 u-card">
         {{!-- Disqus Comments --}}
         <div id="disqus_thread" class="simply-disqus link--accent u-hide"></div>
@@ -14,6 +14,7 @@
 <script>
     (function() {
         if (typeof disqusShortName !== 'undefined') {
+            $('#post-comments').removeClass('u-hide');
             $('.simply-disqus').removeClass('u-hide');
             var d = document, s = d.createElement('script');
             s.async = true;

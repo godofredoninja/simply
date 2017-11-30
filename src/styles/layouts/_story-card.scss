@@ -10,13 +10,16 @@
 }
 
 .story {
-  &-title { letter-spacing: -.028em; }
+  &-title {
+    letter-spacing: -.028em;
+    line-height: 24px !important;
+  }
 
   &-excerpt {
     display: -webkit-box;
     margin-top: 5px;
-    max-height: 4.5em;
-    line-height: 1.4;
+    max-height: 60px;
+    line-height: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-box-orient: vertical;

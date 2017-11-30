@@ -13,8 +13,8 @@ export default {
     if (typeof followSocialMedia !== 'undefined') simplyFollow(followSocialMedia); // eslint-disable-line
 
     /* Lazy load for image */
-    $('.cover-lazy.lazy').lazyload({effect : 'fadeIn'});
-    $('.simply-lazy.lazy').lazyload({threshold : 200});
+    $('.cover-lazy').lazyload({effect : 'fadeIn'});
+    $('.story-image-lazy').lazyload({threshold : 200});
   }, // end Init
 
   finalize() {
