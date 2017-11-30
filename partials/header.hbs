@@ -5,8 +5,8 @@
         {{!-- background dark if home have image --}}
         {{#is "home"}}
             {{#if @blog.cover_image}}
-            <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md cover-lazy lazy" data-original="{{@blog.cover_image}}"></span>
             <span class="u-absolute0 u-backgroundDark u-hide-before-md"></span>
+            <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md cover-lazy lazy" data-original="{{@blog.cover_image}}"></span>
             {{else}}
             <span class="u-absolute0 u-hide-before-md" style="background:rgba(0,0,0,.175)"></span>
             {{/if}}
@@ -47,7 +47,7 @@
             </div>
 
             {{!-- Header description for index page --}}
-            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSize22 u-marginAuto u-paddingTop10 u-textAlignCenter u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
+            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSize21 u-fontWeightSemibold u-marginAuto u-paddingTop10 u-textAlignCenter u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
 
         </div>
     </div>

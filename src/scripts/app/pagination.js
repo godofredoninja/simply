@@ -46,7 +46,7 @@
           currentPage ++;
 
           /* Lazy load for image */
-          $('.simply-lazy.lazy').lazyload({ threshold : 200 });
+          $('.story-image-lazy').lazyload({ threshold : 200 });
 
           $win.on('scroll', onScroll);
         },

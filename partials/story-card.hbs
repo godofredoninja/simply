@@ -2,7 +2,7 @@
     <div class="story-wrap u-sizeFullWidth u-height540 u-md-heightAuto u-marginBottom20 u-overflowHidden u-relative u-borderRadius2 u-borderBlackLightest">
 
         {{!--  Image --}}
-        <a href="{{url}}" class="story-image u-relative u-block u-backgroundSizeCover u-height280 u-md-height170 u-backgroundColorGrayLight simply-lazy lazy" data-original="{{feature_image}}"></a>
+        <a href="{{url}}" class="story-image u-relative u-block u-backgroundSizeCover u-height280 u-md-height170 u-backgroundColorGrayLight story-image-lazy" data-original="{{feature_image}}"></a>
 
         <div class="story-body u-flexColumn u-padding20 u-height260 u-md-heightAuto">
 
@@ -14,12 +14,12 @@
                             {{!--  Primary tag  --}}
                             {{#if primary_tag}}
                             <div class="story-tag u-textColorNormal u-flexCenter u-fontSize20 u-lineHeight1" style="padding-bottom:9px">
-                                <span class="u-fontSize14">{{primary_tag.name}}</span>
+                                <span class="u-fontSize14 u-fontWeightSemibold">{{primary_tag.name}}</span>
                             </div>
                             {{/if}}
 
                             {{!-- Title of story --}}
-                            <h3 class="story-title u-fontWeightBold u-lineHeight1 u-fontSize22">{{title}}</h3>
+                            <h3 class="story-title u-fontWeightSemibold u-lineHeight1 u-fontSize21">{{title}}</h3>
                         </a>
                     </div>
 
@@ -38,14 +38,16 @@
                     </a>
                 </div>
 
-                <div class="u-flex1 u-noWrapWithEllipsis u-fontSize13">
+                <div class="u-flex1 u-noWrapWithEllipsis u-fontSize14">
                     <div class="u-noWrapWithEllipsis"><a href="{{url}}" class="link u-textColorDarker link--underline">{{name}}</a></div>
 
                 {{/author}}
 
-                    {{!-- Datetime  --}}
-                    <div class="u-fontSize13 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight">
-                        <time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at timeago="true"}}</time>
+                    {{!-- Datetime - readingTime --}}
+                    <div class="u-fontSize14 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight u-flex">
+                        <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
+                        <span class="points u-fontWeightBold" style="margin:0 5px;">·</span>
+                        <span class="readingTime">{{reading_time}}</span>
                     </div>
                 </div>
 

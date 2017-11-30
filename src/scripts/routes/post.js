@@ -5,7 +5,6 @@ import simplyInstagram from '../app/app.instagram';
 const iframeVideo = [
   'iframe[src*="player.vimeo.com"]',
   'iframe[src*="dailymotion.com"]',
-  'iframe[src*="facebook.com/plugins/video.php"]',
   'iframe[src*="youtube.com"]',
   'iframe[src*="youtube-nocookie.com"]',
   'iframe[src*="vid.me"]',
@@ -19,13 +18,7 @@ export default {
     // Video responsive
     // allMedia.map((key, value) => $(value).wrap('<aside class="video-responsive"></aside>'));
     $allMedia.each(function () {
-      const $this = $(this);
-
-      const height = ( this.tagName.toLowerCase() === 'object' || ($this.attr('height') && !isNaN(parseInt($this.attr('height'), 10))) ) ? parseInt($this.attr('height'), 10) : $this.height();
-      const width = !isNaN(parseInt($this.attr('width'), 10)) ? parseInt($this.attr('width'), 10) : $this.width();
-      const aspectRatio = height / width;
-
-      $(this).wrap('<aside class="video-responsive"></aside>').parent('.video-responsive').css('padding-bottom', (aspectRatio * 100)+'%');
+      $(this).wrap('<aside class="video-responsive"></aside>').parent('.video-responsive');
     });
   },
   finalize() {

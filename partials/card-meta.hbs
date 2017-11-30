@@ -38,6 +38,11 @@
             {{/if}}
         {{/is}}
 
-        <time class="datetime u-textColorNormal u-fontSizeSmaller u-block u-textColorNormal" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
+        {{!-- Datetime - readingTime  --}}
+        <div class="u-fontSize14 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight u-flex">
+            <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
+            <span class="points u-fontWeightBold" style="margin:0 5px;">·</span>
+            <span class="readingTime">{{reading_time}}</span>
+        </div>
     </div>
 </div>

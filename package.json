@@ -93,6 +93,7 @@
   },
   "dependencies": {
     "jquery-lazyload": "^1.9.7",
+    "lazyload": "^2.0.0-beta.2",
     "lunr": "1.0.0",
     "normalize.css": "^7.0.0",
     "prismjs": "^1.6.0",

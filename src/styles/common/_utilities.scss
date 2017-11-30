@@ -1,7 +1,9 @@
 // color
 .u-textColorNormal {
-  color: rgba(0, 0, 0, .44) !important;
-  fill: rgba(0, 0, 0, .44) !important;
+  // color: rgba(0, 0, 0, .44) !important;
+  // fill: rgba(0, 0, 0, .44) !important;
+  color: rgba(0, 0, 0, .54) !important;
+  fill: rgba(0, 0, 0, .54) !important;
 }
 
 .u-textColorWhite {
@@ -46,7 +48,8 @@
 
 //  Background
 .u-backgroundDark {
-  background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 29%, rgba(0, 0, 0, .6) 81%);
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, .3) 29%, rgba(0, 0, 0, .6) 81%);
+  background-color: #000;
   bottom: 0;
   left: 0;
   position: absolute;
@@ -74,6 +77,7 @@
 .u-fontSize14 { font-size: 14px }
 .u-fontSize15 { font-size: 15px !important }
 .u-fontSize20 { font-size: 20px }
+.u-fontSize21 { font-size: 21px }
 .u-fontSize22 { font-size: 22px }
 .u-fontSize28 { font-size: 28px !important; }
 .u-fontSize36 { font-size: 36px }
@@ -113,6 +117,7 @@
 .u-fontWeightBold { font-weight: 700 }
 
 .u-textUppercase { text-transform: uppercase }
+.u-textCapitalize { text-transform: capitalize }
 .u-textAlignCenter { text-align: center }
 
 .u-noWrapWithEllipsis {
