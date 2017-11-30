@@ -1,0 +1,40 @@
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "simply_class_body"}}is-subscribe{{/contentFor}}
+
+<section class="subscribe u-flexColumn u-flexCenter {{#if success}}subscribe-success{{/if}}">
+    <div class="subscribe-wrap u-flex1 u-flexCenter u-marginTop30 u-marginBottom15">
+        <div class="subscribe-card u-textAlignCenter u-overflowHidden u-flexColumn u-relative">
+
+        {{^if success}}
+
+            <h1 class="subscribe-title u-fontSizeLarger u-marginAuto u-marginBottom20 u-fontWeightBold">Sign up for my newsletter!</h1>
+            <h2 class="u-fontWeightNormal u-fontSizeBase u-marginBottom20">Get the latest posts delivered right to your inbox</h2>
+
+            <div class="subscribe-form">
+                <div class="u-flex0 u-marginTop30">
+                    {{subscribe_form
+                        form_class="u-marginAuto"
+                        input_class="subscribe-input u-sizeFullWidth u-fontSizeBase u-marginBottom15 u-textAlignCenter"
+                        button_class="button u-marginTop15 u-marginBottom15 u-marginTop20 u-marginAuto"
+                        placeholder="Your email address"
+                        autofocus="true"
+                    }}
+                </div>
+            </div>
+
+        {{else}}
+
+            <h1 class="subscribe-title u-flex0 u-fontSizeLarger u-marginAuto u-marginBottom20 u-fontWeightBold">Subscribed!</h1>
+            <h2 class="u-fontWeightNormal u-flex0 u-fontSizeBase u-marginAuto u-marginBottom20">You've successfully subscribed with the email address {{email}}</h2>
+
+            <a href="{{#if subscribed_url}}{{subscribed_url}}{{else}}{{@blog.url}}{{/if}}" class="button u-marginAuto u-flex0 u-marginTop15 u-marginBottom15 u-marginTop20">ok</a>
+
+            <div class="u-flex1"></div>
+
+        {{/if}}
+
+        </div>
+    </div>
+</section>
