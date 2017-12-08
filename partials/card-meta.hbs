@@ -10,7 +10,7 @@
     <div class="u-paddingLeft15 u-textColorNormal u-flex1 u-overflowHidden {{#is "tag, author"}}u-fontSize15{{else}}u-fontSizeSmall{{/is}}">
 
         {{#author}}
-            <a href="{{url}}"class="simply-tracking link {{#is "post"}} u-textColorDarker {{else}} u-accentColor--iconNormal{{/is}}" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>
+            <a href="{{url}}" class="simply-tracking link {{#is "post"}} u-textColorDarker {{else}} u-accentColor--iconNormal{{/is}}" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="1">{{name}}</a>
 
             {{!-- Follow --}}
             {{#is "post"}}{{#has any="facebook, twitter"}}
