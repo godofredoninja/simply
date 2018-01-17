@@ -138,9 +138,11 @@ pre {
   font-size: 14px;
 }
 
+// stylelint-disable
 iframe,
 amp-iframe,
 .fluid-width-video-wrapper { margin-top: 30px }
+// stylelint-enable
 
 .svg-icon {
   width: auto;
@@ -287,7 +289,7 @@ amp-iframe,
       font-size: 14px;
       height: 37px;
       line-height: 35px;
-      padding:  0 16px;
+      padding: 0 16px;
       margin: 0 8px 8px 0;
     }
   }

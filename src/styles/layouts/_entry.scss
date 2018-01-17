@@ -1,5 +1,5 @@
 .entry-wrap {
-  border: 1px solid rgba(0,0,0,.1) !important;
+  border: 1px solid rgba(0, 0, 0, .1) !important;
   border-radius: 2px;
   width: 100%;
   height: 540px;
@@ -13,7 +13,6 @@
 .entry-body {
   height: 260px;
   padding: 20px;
-
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
@@ -57,9 +56,10 @@
 }
 
 .u-textColorNormal {
-  color: rgba(0,0,0,.44) !important;
-  fill: rgba(0,0,0,.44) !important;
+  color: rgba(0, 0, 0, .44) !important;
+  fill: rgba(0, 0, 0, .44) !important;
 }
+
 .u-marginTop5 {
   margin-top: 5px !important;
 }
@@ -81,6 +81,7 @@
   text-overflow: ellipsis !important;
   overflow: hidden !important;
 }
+
 .u-lineHeightTight {
   line-height: 1.2 !important;
 }
@@ -106,7 +107,7 @@
     height: 40px;
     width: 40px;
 
-    &.no-avatar { background-image: url('../images/avatar.png') !important}
+    &.no-avatar { background-image: url('../images/avatar.png') !important }
   }
 
   // not has image

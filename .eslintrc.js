@@ -1,4 +1,4 @@
-{
+module.exports = {
   "root": true,
   "extends": "eslint:recommended",
   "globals": {
@@ -32,8 +32,7 @@
     ]
   },
   "rules": {
-    // "no-console": 0,
-    // "no-unused-vars": 0,
+    "no-console": process.env.NODE_ENV === 'production' ? 2 : 0,
     "comma-dangle": [
       "error",
       {

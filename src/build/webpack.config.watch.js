@@ -26,6 +26,7 @@ module.exports = {
     new webpack.NoEmitOnErrorsPlugin(),
     new BrowserSyncPlugin({
       target,
+      // open: config.open,
       open: false,
       proxyUrl: config.proxyUrl,
       watch: config.watch,

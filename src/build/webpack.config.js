@@ -6,6 +6,7 @@ const CleanPlugin = require('clean-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 const config = require('./config');
 
@@ -50,7 +51,7 @@ let webpackConfig = {
       },
       {
         test: /\.js$/,
-        exclude: [/(node_modules|bower_components)(?![/|\\](bootstrap|foundation-sites))/],
+        exclude: [/node_modules(?![/|\\](bootstrap|foundation-sites))/],
         use: [
           { loader: 'cache' },
           { loader: 'buble', options: { objectAssign: 'Object.assign' } },
@@ -103,7 +104,7 @@ let webpackConfig = {
       },
       {
         test: /\.(ttf|eot|woff2?|png|jpe?g|gif|svg|ico)$/,
-        include: /node_modules|bower_components/,
+        include: /node_modules/,
         loader: 'url',
         options: {
           limit: 4096,
@@ -117,7 +118,6 @@ let webpackConfig = {
     modules: [
       config.paths.assets,
       'node_modules',
-      'bower_components',
     ],
     enforceExtension: false,
   },
@@ -151,8 +151,7 @@ let webpackConfig = {
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery',
-      Tether: 'tether',
-      'window.Tether': 'tether',
+      Popper: 'popper.js/dist/umd/popper.js',
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: config.enabled.optimize,
@@ -172,10 +171,11 @@ let webpackConfig = {
         eslint: { failOnWarning: false, failOnError: true },
       },
     }),
-    // new StyleLintPlugin({
-    //   failOnError: !config.enabled.watcher,
-    //   syntax: 'scss',
-    // }),
+    new StyleLintPlugin({
+      failOnError: !config.enabled.watcher,
+      syntax: 'scss',
+    }),
+    new FriendlyErrorsWebpackPlugin(),
   ],
 };
 
