@@ -19,17 +19,17 @@
         {{/if}}
     </div>
 
-    <a href="{{url}}" class="u-block u-paddingTop15 u-fontSize15 u-hoverColorNormal u-textColorNormal">Read more...</a>
+    <a href="{{url}}" class="u-block u-paddingTop15 u-fontSize15 u-hoverColorNormal u-textColorNormal">{{t "Read More"}}...</a>
 
     <footer class="u-paddingTop15 u-flex u-flexEnd">
         <div class="buttonSet">
             <a href="{{url}}#post-comments" class="button button--chromeless" title="Comments">
                 {{!-- Disqus Comments Count --}}
                 <i class="i-comments u-fontSizeLarge"></i>
-                <span class="disqus-comment-count simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 Comments</span>
+                <span class="disqus-comment-count simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 {{t "Comments"}}</span>
                 {{!-- Facebook Comments Counts --}}
                 <span class="fb-comments-count simply-facebook u-hide" data-href="{{url absolute="true"}}">0</span>
-                <span class="simply-facebook u-hide" >Comments</span>
+                <span class="simply-facebook u-hide" >{{t "Comments"}}</span>
             </a>
         </div>
     </footer>

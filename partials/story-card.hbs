@@ -47,7 +47,7 @@
                     <div class="u-fontSize14 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight u-flex">
                         <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
                         <span class="points u-fontWeightBold" style="margin:0 5px;">·</span>
-                        <span class="readingTime">{{reading_time}}</span>
+                        <span class="readingTime">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
                     </div>
                 </div>
 
