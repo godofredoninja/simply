@@ -232,18 +232,18 @@
   }
 }
 
-// post Relative
+// Card Post
 // ==========================================================================
-.post-related {
+.cardPost {
   &-image {
     border-bottom: 1px solid rgba(0, 0, 0, .0785);
     border-radius: 4px 4px 0 0;
     height: 160px;
   }
 
-  &-excerpt { font-family: $secundary-font }
+  // &-excerpt { font-family: $secundary-font }
 
-  &-excerpt,
+  // &-excerpt,
   &-title {
     color: rgba(0, 0, 0, .9);
     -webkit-box-orient: vertical !important;
@@ -255,7 +255,7 @@
   }
 
   .u-card {
-    height: 270px;
+    height: 296px;
     margin-bottom: 20px;
   }
 }
@@ -266,7 +266,7 @@
   // margin-left: -130px;
   left: -130px;
   margin-top: 28px;
-  width: 45px;
+  width: 65px;
   position: absolute !important;
 
   a {

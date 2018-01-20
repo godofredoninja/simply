@@ -15,53 +15,18 @@
 }
 
 
-.i-photo:before {
-  content: "\e412";
-}
-.i-video--line:before {
-  content: "\e039";
-}
 .i-audio:before {
-  content: "\e050";
+  content: "\e901";
 }
-.i-location:before {
-  content: "\e8b4";
-}
-.i-save:before {
-  content: "\e8e6";
-}
-.i-save--line:before {
-  content: "\e8e7";
-}
-.i-check-circle:before {
-  content: "\e86c";
-}
-.i-close:before {
-  content: "\e5cd";
-}
-.i-favorite:before {
-  content: "\e87d";
-}
-.i-star:before {
-  content: "\e838";
-}
-.i-warning:before {
-  content: "\e002";
-}
-.i-rss:before {
-  content: "\e0e5";
-}
-.i-search:before {
-  content: "\e8b6";
-}
-.i-send:before {
-  content: "\e163";
-}
-.i-share:before {
-  content: "\e80d";
+.i-rocket:before {
+  content: "\e902";
+  color: #999;
 }
 .i-comments:before {
   content: "\e900";
+}
+.i-google:before {
+  content: "\f1a0";
 }
 .i-telegram:before {
   content: "\f2c6";
@@ -80,9 +45,6 @@
 }
 .i-linkedin:before {
   content: "\f0e1";
-}
-.i-code:before {
-  content: "\f121";
 }
 .i-youtube:before {
   content: "\f16a";
@@ -119,4 +81,49 @@
 }
 .i-snapchat:before {
   content: "\f2ac";
+}
+.i-arrow_left:before {
+  content: "\e314";
+}
+.i-arrow_right:before {
+  content: "\e315";
+}
+.i-play:before {
+  content: "\e037";
+}
+.i-star-line:before {
+  content: "\e83a";
+}
+.i-photo:before {
+  content: "\e412";
+}
+.i-location:before {
+  content: "\e8b4";
+}
+.i-check-circle:before {
+  content: "\e86c";
+}
+.i-close:before {
+  content: "\e5cd";
+}
+.i-favorite:before {
+  content: "\e87d";
+}
+.i-star:before {
+  content: "\e838";
+}
+.i-warning:before {
+  content: "\e002";
+}
+.i-rss:before {
+  content: "\e0e5";
+}
+.i-search:before {
+  content: "\e8b6";
+}
+.i-send:before {
+  content: "\e163";
+}
+.i-share:before {
+  content: "\e80d";
 }
