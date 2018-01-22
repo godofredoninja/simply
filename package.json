@@ -34,7 +34,7 @@
   },
   "license": "CC BY-NC 4.0",
   "config": {
-    "posts_per_page": 3
+    "posts_per_page": 15
   },
   "browserslist": [
     "last 2 versions",

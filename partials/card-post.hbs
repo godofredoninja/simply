@@ -1,4 +1,4 @@
-<section class="cardPost u-backgroundWhite u-paddingTop30 u-paddingBottom20 u-overflowHidden">
+<div class="cardPost u-backgroundWhite u-paddingTop30 u-paddingBottom20 u-overflowHidden">
     <div class="u-marginAuto u-maxWidth1000">
         <div class="row">
 
@@ -9,7 +9,7 @@
                     {{!-- Featured image cover --}}
                     {{#if feature_image}}
                     <div class="cardPost-image u-relative u-overflowHidden u-sizeFullWidth">
-                        <a href="{{url}}" class="cardPost-image--link u-block u-absolute0">
+                        <a href="{{url absolute="true"}}" class="cardPost-image--link u-block u-absolute0">
                             <span class="u-absolute0 u-backgroundSizeCover u-backgroundColorGrayLight story-image-lazy" data-original="{{feature_image}}"></span>
                         </a>
                     </div>
@@ -20,11 +20,11 @@
                         <div class="u-flex1">
                             {{!-- Primary tag --}}
                             {{#primary_tag}}
-                                <a href="{{url}}" class="u-block postMetaInline u-lineHeight1 link--underline u-fontSize15 u-fontWeightSemibold" style="padding-bottom:7px">{{name}}</a>
+                                <a href="{{url absolute="true"}}" class="u-block postMetaInline u-lineHeight1 link--underline u-fontSize15 u-fontWeightSemibold" style="padding-bottom:7px">{{name}}</a>
                             {{/primary_tag}}
 
 
-                            <a href="{{url}}" class="u-block">
+                            <a href="{{url absolute="true"}}" class="u-block">
                                 {{!-- title --}}
                                 <h2 class="cardPost-title u-contentTitle u-fontSize22 u-fontWeightBold u-overflowHidden u-paddingBottom2">{{title}}</h2>
 
@@ -40,7 +40,7 @@
                         <div class="u-flex0 u-flexCenter u-fontSize14 postMetaInline u-paddingTop10">
                             <time class="datetime" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
                             <span class="points u-fontWeightBold" style="margin:0 5px;">·</span>
-                            <span class="readingTime">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span></1>
+                            <span class="readingTime">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
                         </div>
 
                     </div>
@@ -50,4 +50,4 @@
 
         </div>
     </div>
-</section>
+</div>

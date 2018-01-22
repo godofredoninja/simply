@@ -32,14 +32,14 @@
                 {{!-- Author avatar --}}
                 {{#author}}
 
-                <div class="u-flex0 u-paddingRight10">
+                <div class="u-flex0 u-paddingRight10 story-author-avatar">
                     <a href="{{url}}" style="background-image:url({{profile_image}})" class="avatar-image avatar-image--smaller u-backgroundSizeCover u-relative {{#unless profile_image}}no-avatar{{/unless}}">
                         {{!-- <div class="u-absolute u-accentColor--iconNormal svgIcon" style="width: calc(100% + 10px);height: calc(100% + 10px);top:-5px;left:-5px;"><svg viewBox="0 0 114 114" xmlns="http://www.w3.org/2000/svg"><path d="M7.66922967,32.092726 C17.0070768,13.6353618 35.9421928,1.75 57,1.75 C78.0578072,1.75 96.9929232,13.6353618 106.33077,32.092726 L107.66923,31.4155801 C98.0784505,12.4582656 78.6289015,0.25 57,0.25 C35.3710985,0.25 15.9215495,12.4582656 6.33077033,31.4155801 L7.66922967,32.092726 Z"></path><path d="M106.33077,81.661427 C96.9929232,100.118791 78.0578072,112.004153 57,112.004153 C35.9421928,112.004153 17.0070768,100.118791 7.66922967,81.661427 L6.33077033,82.338573 C15.9215495,101.295887 35.3710985,113.504153 57,113.504153 C78.6289015,113.504153 98.0784505,101.295887 107.66923,82.338573 L106.33077,81.661427 Z"></path></svg></div> --}}
                     </a>
                 </div>
 
                 <div class="u-flex1 u-noWrapWithEllipsis u-fontSize14">
-                    <div class="u-noWrapWithEllipsis"><a href="{{url}}" class="link u-textColorDarker link--underline">{{name}}</a></div>
+                    <div class="u-noWrapWithEllipsis story-author-name"><a href="{{url}}" class="link u-textColorDarker link--underline">{{name}}</a></div>
 
                 {{/author}}
 
