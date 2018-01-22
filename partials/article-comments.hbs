@@ -12,6 +12,11 @@
 
 {{!-- Disqys Comments --}}
 <script>
+    var disqus_config = function () {
+        this.page.url = '{{url absolute="true"}}';
+        this.page.identifier = 'ghost-{{comment_id}}';
+    };
+
     (function() {
         if (typeof disqusShortName !== 'undefined') {
             $('#post-comments').removeClass('u-hide');

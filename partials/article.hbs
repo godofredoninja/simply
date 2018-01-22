@@ -40,8 +40,11 @@
 </article>
 {{/post}}
 
-{{!-- post relative --}}
-{{> "article-related"}}
+{{!-- Article related --}}
+{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |related|}}
+    {{> "card-post" widgetTitle=(t "Article Related") cardPosts=related }}
+{{/get}}
+
 
 {{#post}}
     {{!-- post Commets --}}

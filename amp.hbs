@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ⚡>
+<html lang="{{lang}}">
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8">
@@ -154,7 +154,7 @@
         {{!-- Related Articles --}}
         {{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}"}}
             <div class="related u-container">
-                <div class="related-title"><span>Related Articles</span></div>
+                <div class="related-title"><span>{{t "Related Articles"}}</span></div>
 
                 {{#foreach posts}}
                 <div class="story">

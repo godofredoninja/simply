@@ -9,7 +9,7 @@
 
     {{!-- Add Post Recents --}}
     {{#get "posts" limit="5" as |recents| }}
-        {{> "sidebar-post" widgetTitle="Latest Articles" widgetPosts=recents }}
+        {{> "sidebar-post" widgetTitle=(t "Latest Articles") widgetPosts=recents }}
     {{/get}}
 
     {{!-- Tags Cloud --}}

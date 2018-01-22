@@ -1,27 +1,51 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-        <title>Page not found - {{meta_title}}</title>
+<html lang="{{lang}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Page not found</title>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet" />
-        <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
-    </head>
-    <body>
-        <div class="errorPage u-relative">
-            <div class="errorPage-title">
-                <a class="errorPage-link u-relative u-fontSize22 u-contentTitle u-block" href="{{@blog.url}}">{{@blog.title}}</a>
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
+</head>
+<body class="u-backgroundWhite">
+
+    {{!-- Header Content --}}
+    {{>"header"}}
+
+    <main class="u-paddingBottom30 u-paddingTop30">
+        {{!-- Content Emojis --}}
+        <section class="errorPage u-lineHeight1">
+            <div class="errorPage-wrap u-marginAuto u-maxWidth1000 u-textAlignCenter">
+                <div id="emoji" class="errorPage-emoji" style="font-size:100px">(>_<)</div>
+                <div class="errorPage-text">{{t "Unfortunately, this page doesn't exist"}}</div>
             </div>
-            <div class="errorPage-wrap u-textAlignCenter">
-                <div id="emoji" class="errorPage-emoji" style="font-size: 150px;">(>_<)</div>
-                <div class="errorPage-text">Unfortunately, this page doesn't exist</div>
-            </div>
-        </div>
-        <script type="text/javascript">
-            var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
-            var emojiRandom = emoji[Math.floor(Math.random()*emoji.length)];
-            document.getElementById('emoji').innerHTML = emojiRandom;
-        </script>
-    </body>
+        </section>
+
+        {{!-- Articles style Card --}}
+        {{#get "posts" limit="6" include="tags" as |recents| }}
+            {{> "card-post" widgetTitle=(t "Posts") cardPosts=recents }}
+        {{/get}}
+    </main>
+
+    {{!-- Search box --}}
+    {{>"search"}}
+
+    {{!-- Scripts --}}
+    {{ghost_foot}}
+
+    <script type="text/javascript">
+        var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
+        var emojiRandom = emoji[Math.floor(Math.random()*emoji.length)];
+        document.getElementById('emoji').innerHTML = emojiRandom;
+    </script>
+
+    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    {{!-- The main JavaScript --}}
+    <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>
+
+    {{!--  Font Source sans Pro && roboto mono --}}
+    <script type="text/javascript">WebFontConfig ={google:{families:['Roboto+Mono:400','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+</body>
 </html>

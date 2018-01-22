@@ -6,7 +6,7 @@
             {{#prev_post}}
             <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Previous - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="1">
                 <a href="{{url}}" class="u-block">
-                    <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">Prev article</span>
+                    <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">{{t "Prev article"}}</span>
                     <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>
                 </a>
             </div>
@@ -15,18 +15,18 @@
             {{/prev_post}}
 
             {{!-- Share Count Book --}}
-            <div class="share-box u-textAlignCenter u-hide-before-lg" style="margin-right: 15px;">
+            {{!-- <div class="share-box u-textAlignCenter u-hide-before-lg" style="margin-right: 15px;">
                 <span class="share-count u-block u-fontWeightBold u-contentTitle u-lineHeight1" data-url="{{url absolute="true"}}">0</span>
-                <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSize13 u-lineHeight1">SHARES</span>
-            </div>
+                <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSize13 u-lineHeight1 u-textUppercase">{{t "shares"}}</span>
+            </div> --}}
 
             <a href="#post-comments" class="button button--large button--chromeless button--dark u-fontSizeLarge scroll-id">
                 <i class="i-comments"></i>
                 {{!-- Disqus Comments Count --}}
-                <span class="disqus-comment-count u-fontSizeSmall simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 Comments</span>
+                <span class="disqus-comment-count u-fontSizeSmall simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 {{t "Comments"}}</span>
                 {{!-- Facebook Comments Counts --}}
                 <span class="fb-comments-count u-fontSizeSmall simply-facebook u-hide" data-href="{{url absolute="true"}}">0</span>
-                <span class="u-fontSizeSmall simply-facebook u-hide">Comments</span>
+                <span class="u-fontSizeSmall simply-facebook u-hide">{{t "Comments"}}</span>
             </a>
 
         </div>
@@ -46,7 +46,7 @@
 
             <div class="nextPost u-hide-before-lg simply-tracking" data-event-category="Article" data-event-action="Next - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="1">
                 <a href="{{url}}" class="u-block">
-                    <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">Next article</span>
+                    <span class="u-block link--accent u-contentTitle u-fontSizeSmaller u-lineHeight1">{{t "Next article"}}</span>
                     <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>
                 </a>
             </div>
