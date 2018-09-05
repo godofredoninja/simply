@@ -1,12 +1,13 @@
 {
   "name": "simply-godofredoninja",
-  "version": "0.0.5",
-  "engines": {
-    "ghost": ">=1.0.0",
-    "node": ">= 6.9.4"
-  },
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
+  "version": "0.0.6",
+  "engines": {
+    "ghost": ">=2.0.0",
+    "node": ">= 6.9.4"
+  },
+  "license": "CC BY-NC 4.0",
   "author": {
     "name": "GodoFredoNinja",
     "email": "hello@godofredo.ninja",
@@ -16,12 +17,14 @@
     "type": "theme",
     "categories": [
       "Minimal",
-      "Magazine"
+      "Magazine",
+      "Blog"
     ]
   },
   "keywords": [
     "ghost",
     "theme",
+    "ghost-theme",
     "GodoFredoNinja"
   ],
   "repository": {
@@ -32,7 +35,6 @@
     "url": "https://github.com/godofredoninja/simply/issues",
     "email": "hello@godofredo.ninja"
   },
-  "license": "CC BY-NC 4.0",
   "config": {
     "posts_per_page": 15
   },
@@ -41,42 +43,9 @@
     "android 4",
     "opera 12"
   ],
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "no-empty-source": null,
-      "declaration-block-trailing-semicolon": null,
-      "number-leading-zero": null,
-      "color-hex-case": null,
-      "selector-list-comma-newline-after": null,
-      "declaration-block-single-line-max-declarations": 3,
-      "at-rule-no-unknown": [
-        true,
-        {
-          "ignoreAtRules": [
-            "extend",
-            "at-root",
-            "debug",
-            "warn",
-            "error",
-            "if",
-            "else",
-            "for",
-            "each",
-            "while",
-            "mixin",
-            "include",
-            "content",
-            "return",
-            "function"
-          ]
-        }
-      ]
-    }
-  },
   "scripts": {
     "build": "webpack --progress --config src/build/webpack.config.js",
-    "build:production": "webpack --progress -p --config src/build/webpack.config.js",
+    "build:production": "webpack --env.production --progress --config src/build/webpack.config.js",
     "build:profile": "webpack --progress --profile --json --config src/build/webpack.config.js",
     "start": "webpack --hide-modules --watch --config src/build/webpack.config.js",
     "rmassets": "rimraf assets",
@@ -86,42 +55,43 @@
     "test": "yarn run -s lint"
   },
   "devDependencies": {
-    "autoprefixer": "~7.1",
-    "browser-sync": "~2.18",
+    "autoprefixer": "~8.2.0",
+    "browser-sync": "~2.23.6",
     "browsersync-webpack-plugin": "^0.6.0",
     "bs-html-injector": "~3.0",
     "buble-loader": "^0.4.1",
-    "cache-loader": "~1.1.0",
-    "clean-webpack-plugin": "^0.1.16",
+    "cache-loader": "~1.2.0",
+    "clean-webpack-plugin": "^0.1.18",
     "copy-globs-webpack-plugin": "^0.2.0",
-    "css-loader": "^0.28.4",
+    "css-loader": "^0.28.9",
     "cssnano": "~v4.0.0-rc.2",
-    "eslint": "~4.9.0",
+    "eslint": "~4.19.1",
     "eslint-loader": "~1.9",
-    "eslint-plugin-import": "~2.8.0",
-    "extract-text-webpack-plugin": "~3.0",
-    "file-loader": "^1.1.5",
+    "eslint-plugin-import": "~2.11.0",
+    "extract-text-webpack-plugin": "~3.0.2",
+    "file-loader": "^1.1.6",
     "friendly-errors-webpack-plugin": "^1.6.1",
-    "imagemin-mozjpeg": "~6.0",
-    "imagemin-webpack-plugin": "~1.5.0-beta.0",
+    "imagemin-mozjpeg": "~7.0.0",
+    "imagemin-webpack-plugin": "~2.1.1",
     "import-glob": "~1.5",
-    "node-sass": "~4.5",
-    "postcss-loader": "~2.0",
+    "node-sass": "~4.8.3",
+    "postcss-loader": "~2.1.0",
     "postcss-safe-parser": "~3.0",
-    "resolve-url-loader": "~2.1",
+    "resolve-url-loader": "~2.3.0",
     "rimraf": "~2.6",
     "sass-loader": "~6.0",
-    "style-loader": "^0.19.0",
-    "stylelint": "^8.2.0",
-    "stylelint-config-standard": "~17.0.0",
-    "stylelint-webpack-plugin": "^0.9.0",
+    "style-loader": "^0.20.1",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "~18.2.0",
+    "stylelint-webpack-plugin": "^0.10.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
     "url-loader": "^0.6.2",
-    "webpack": "~3.8.1",
+    "webpack": "~3.10.0",
     "webpack-assets-manifest": "^1.0.0",
-    "webpack-dev-middleware": "~1.12.0",
-    "webpack-hot-middleware": "~2.20.0",
-    "webpack-merge": "~4.1",
-    "yargs": "~9.0.1"
+    "webpack-dev-middleware": "~2.0.4",
+    "webpack-hot-middleware": "~2.22.0",
+    "webpack-merge": "~4.1.1",
+    "yargs": "~11.0.0"
   },
   "dependencies": {
     "jquery-lazyload": "^1.9.7",
