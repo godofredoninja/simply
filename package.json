@@ -36,7 +36,7 @@
     "email": "hello@godofredo.ninja"
   },
   "config": {
-    "posts_per_page": 5
+    "posts_per_page": 15
   },
   "browserslist": [
     "last 2 versions",

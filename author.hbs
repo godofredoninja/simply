@@ -29,7 +29,7 @@
         <div class="author-meta u-paddingBottom30">
             {{#if location}}<span class="author-location"><i class="i-location"></i> {{location}}</span>{{/if}}
             {{#if website}}<span class="author-link"><a href="{{website}}" target="_blank"><i class="i-link"></i> {{website}}</a></span>{{/if}}
-            <span class="author-stats"><a href="http://cloud.feedly.com/#subscription/feed/{{url absolute="true"}}rss/" target="_blank"><i class="i-rss"></i> {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</a></span>
+            <span class="author-stats"><a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" target="_blank"><i class="i-rss"></i> {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</a></span>
         </div>
 
         {{!-- Author Facebook and Twitter --}}

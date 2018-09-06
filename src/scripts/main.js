@@ -15,7 +15,7 @@ import Router from './util/Router';
 import common from './routes/common';
 import isArticle from './routes/post';
 import isVideo from './routes/video';
-import isAudio from './routes/audio';
+// import isAudio from './routes/audio';
 
 
 /** Populate Router instance with DOM routes */
@@ -27,7 +27,7 @@ const routes = new Router({
   // video post format
   isVideo,
   // Audio post Format
-  isAudio,
+  // isAudio,
 });
 
 // Load Events
