@@ -1,11 +1,12 @@
 {
   "name": "simply-godofredoninja",
-  "version": "0.1.0",
-  "engines": {
-    "ghost": ">=1.0.0"
-  },
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
+  "version": "0.1.1",
+  "engines": {
+    "ghost": ">=2.0.0"
+  },
+  "license": "CC BY-NC 4.0",
   "author": {
     "name": "GodoFredoNinja",
     "email": "hello@godofredo.ninja",
@@ -15,12 +16,14 @@
     "type": "theme",
     "categories": [
       "Minimal",
-      "Magazine"
+      "Magazine",
+      "Blog"
     ]
   },
   "keywords": [
     "ghost",
     "theme",
+    "ghost-theme",
     "GodoFredoNinja"
   ],
   "repository": {
@@ -34,8 +37,5 @@
   "scripts": {},
   "config": {
     "posts_per_page": 15
-  },
-  "license": "CC BY-NC 4.0",
-  "devDependencies": {},
-  "dependencies": {}
+  }
 }

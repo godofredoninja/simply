@@ -1,0 +1,25 @@
+<header class="header u-bgColor u-flexCenter u-container">
+    <div class="u-flex1">
+
+        {{!--
+            - Active Logo in AMP Page
+            - uncomment the lines below.
+            - but in the width and height properties (width="110" height="30")
+            - you have to add exact sizes of your reduced logo
+            - so you do not have problems with amp
+
+            - then comment page name
+        --}}
+
+        {{!-- <a href="{{@blog.url}}">
+            <amp-img src="{{@blog.logo}}" width="110" height="30" alt="{{@blog.title}}"></amp-img>
+        </a> --}}
+
+        {{!-- Name Page --}}
+        <a href="{{@blog.url}}" class="logo-link">{{@blog.title}}</a>
+    </div>
+
+    {{!-- Open Sidenav --}}
+    <button class="hamburgermenu" on="tap:sidenav.open" tabindex="0"><span></span><span></span><span></span></button>
+
+</header>

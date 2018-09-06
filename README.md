@@ -1,21 +1,18 @@
-# Simply theme for [Ghost](https://github.com/tryghost/ghost/)
+# Simply free theme for [Ghost](https://github.com/tryghost/ghost/)
 
-[![Ghost version](https://img.shields.io/badge/Ghost-1.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
-[![Node](https://img.shields.io/node/v/uno-zen.svg)](https://nodejs.org/en/)
+[![Ghost version](https://img.shields.io/badge/Ghost-2.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
-> Simple and Elegant theme for [Ghost](https://github.com/tryghost/ghost/).
-
-## Free theme for Ghost
+> *Simple and Elegant Theme.*
 
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK).
 
 ## ❤ Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
 
-[![](./donate.gif)](https://bit.ly/PayPal-GodoFredoNinja)
+## If you have a ❤ heart and value my work. 🙏 Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
 
-![](./screenshot.png)
+![Simply free theme for ghost](./screenshot.png)
 
 ## Demo
 
@@ -134,16 +131,23 @@ This enables comments and comment counter
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.async=true;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 ```
 
 ## Publication Language
 
+**Simply supports:**
+
+- `en` — English default language
+- `es` — Español
+- `de` — German - By [dkbast](https://github.com/dkbast)
+- `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz)
+
 ![](./documentation/language.png)
 
-Mapache supports English and Spanish languages.
+
 if you want to have in another language you just have to copy `locales>en.json` and rename the file then translate to your favorite language:
 
 Just enter the [language/locale tag](https://www.w3schools.com/tags/ref_language_codes.asp) of the files to use (e.g.: `fr.json` for French, `zh.json` for Chinese, `ja.json` for Japanese)
@@ -174,13 +178,13 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 
 ![](./documentation/prism.png)
 
-## Template for (Video - Image - Audio)
+## Template for Post Format
 
-**Image** — The Featured image will become large in size.
+**Post Image** — The Featured image will become large in size.
 
-**Not Image** — The featured image will not be displayed in the article (Post).
+**Post Not Image** — The featured image will not be displayed in the article (Post).
 
-**Video** — The first video in the article will be large in size. Supports formats
+**Post Video** — The first video in the article will be large in size. Supports formats
 
 - vimeo
 - Dailymotion
@@ -188,15 +192,9 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 - Vid
 - kickstarter
 
-**Audio** — The first Audio in the article will be large in size. Supports formats
-
-- Soundcloud
-- Mixcloud
-- Spotify
-
 ---
 
-> **Add video or Audio where convenient. When you change the theme you will not have problems and not have Problem in your AMP Template**
+> **Add video where convenient. When you change the theme you will not have problems and not have Problem in your AMP Template**
 
 ---
 
@@ -217,7 +215,7 @@ To make your changes with your favorite colors you just have to add the followin
 - [lunr.js](https://github.com/olivernn/lunr.js)
 - [zoom.js](https://github.com/fat/zoom.js/)
 - [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
-- [Fonts](https://fonts.google.com/?selection.family=Droid+Serif:400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Droid+Serif)
+- [Fonts](https://fonts.google.com/?selection.family=Merriweather:300,400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Merriweather)
 
 ## Copyright & License
 

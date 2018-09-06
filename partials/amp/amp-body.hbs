@@ -1,0 +1,74 @@
+{{#post}}
+
+<article class="article">
+    <header class="article-header">
+        {{!-- Title --}}
+        <h1 class="article-title">{{title}}</h1>
+
+        {{!-- Excerpt --}}
+        {{#if custom_excerpt}}<p class="article-excerpt">{{custom_excerpt}}</p>{{/if}}
+
+        <div class="article-meta">
+            {{!-- Author Name --}}
+            {{#primary_author}}<span class="author-name">{{t "By"}} <a href="{{url absolute="true"}}">{{name}}</a></span>{{/primary_author}}
+
+            {{!-- Datetime --}}
+            <span class="timestamp">
+                <time class="datetime" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
+                <span>{{t "in"}}</span>
+            </span>
+
+            {{!-- Category --}}
+            {{#if primary_tag}}{{#primary_tag}}
+                <span class="categories"><a href="{{url}}" title="{{name}}">{{name}}</a></span>
+            {{/primary_tag}}{{/if}}
+        </div>
+    </header>
+
+    {{!-- featured image --}}
+    {{#if feature_image}}
+        <figure class="article-image u-block u-marginTop30">
+            <amp-img src="{{img_url feature_image absolute="true"}}" width="600" height="400" layout="responsive"></amp-img>
+        </figure>
+    {{/if}}
+
+    {{!-- article body (all content) --}}
+    <div class="article-body"> {{amp_content}} </div>
+
+    {{!-- Post All Tags (category) --}}
+    {{#if tags}}
+        <div class="article-tags">
+            {{#foreach tags}}
+                <a href="{{url absolute="true"}}" title="{{name}}" class="button">{{name}}</a>
+            {{/foreach}}
+        </div>
+    {{/if}}
+
+    {{!-- Share social Media --}}
+    <footer class="share">
+        <amp-social-share class="rounded"
+        type="email"
+        width="36"
+        height="36"></amp-social-share>
+        <amp-social-share class="rounded"
+        type="facebook"
+        data-param-app_id="254325784911610"
+        width="36"
+        height="36"></amp-social-share>
+        <amp-social-share class="rounded"
+        type="twitter"
+        width="36"
+        height="36"></amp-social-share>
+        <amp-social-share class="rounded"
+        type="linkedin"
+        width="36"
+        height="36"></amp-social-share>
+        <amp-social-share class="rounded"
+        type="whatsapp"
+        width="36"
+        height="36"></amp-social-share>
+    </footer>
+
+</article>
+
+{{/post}}
