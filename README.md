@@ -1,20 +1,16 @@
-# Simply theme for [Ghost](https://github.com/tryghost/ghost/)
+# Simply free theme for [Ghost](https://github.com/tryghost/ghost/)
 
-[![Ghost version](https://img.shields.io/badge/Ghost-1.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
-[![Node](https://img.shields.io/node/v/uno-zen.svg)](https://nodejs.org/en/)
+[![Ghost version](https://img.shields.io/badge/Ghost-2.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
 
-> Simple and Elegant theme for [Ghost](https://github.com/tryghost/ghost/).
-
-## Free theme for Ghost
+> *Simple and Elegant Theme.*
 
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
 
-## ❤ Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements.
-[![](./donate.gif)](https://bit.ly/PayPal-GodoFredoNinja)
+## If you have a ❤ heart and value my work. 🙏 Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
 
-![](./screenshot.png)
+![Simply free theme for ghost](./screenshot.png)
 
 ## Demo
 
@@ -121,7 +117,7 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 - [lunr.js](https://github.com/olivernn/lunr.js)
 - [zoom.js](https://github.com/fat/zoom.js/)
 - [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
-- [Fonts](https://fonts.google.com/?selection.family=Droid+Serif:400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Droid+Serif)
+- [Fonts](https://fonts.google.com/?selection.family=Merriweather:300,400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Merriweather)
 
 ## Copyright & License
 
