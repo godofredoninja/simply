@@ -1,5 +1,5 @@
 // const $postBody = $('.post-body');
-const $videoPostFormat = $('.video-post-format');
+const $videoEmbed = $('.video-post-format');
 
 /* Iframe SRC video */
 const iframeVideo = [
@@ -15,10 +15,21 @@ export default {
   init() {
     const firstVideo = $('.post-body').find(iframeVideo.join(','))[0];
 
-    $videoPostFormat.removeClass('u-hide');
+    if (typeof firstVideo === 'undefined') {
+      return;
+    }
 
-    // Move for large fisrt Video
-    $(firstVideo).parent('.video-responsive').appendTo($videoPostFormat);
+    $videoEmbed.removeClass('u-hide');
+    const $video = $(firstVideo);
+    const $firstParentVideo = $video.parent('.video-responsive');
+    const $secondParentVideo = $firstParentVideo.parent('.kg-embed-card');
+
+    // Append Video
+    if ($secondParentVideo.hasClass('kg-embed-card')) {
+      $secondParentVideo.appendTo($videoEmbed);
+    } else {
+      $firstParentVideo.appendTo($videoEmbed);
+    }
 
      // youTube Btn Subscribe
      if (typeof youtubeChannelName !== 'undefined' && typeof youtubeChannelID !== 'undefined') {
@@ -30,7 +41,7 @@ export default {
       </div>`;
       /*eslint-enable */
 
-      $videoPostFormat.append(template);
+      $videoEmbed.append(template);
 
       const go = document.createElement('script');
       go.type = 'text/javascript';

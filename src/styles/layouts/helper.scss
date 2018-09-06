@@ -12,6 +12,8 @@
   }
 }
 
+.video-post-format .video-responsive { margin-top: 0 }
+
 @media #{$md-and-up} {
   // background image featured in tag and author
   .is-author.has-featured-image,
