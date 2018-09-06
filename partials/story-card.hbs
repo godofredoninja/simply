@@ -30,7 +30,7 @@
 
             <div class="u-flex u-paddingTop10 u-flex0">
                 {{!-- Author avatar --}}
-                {{#author}}
+                {{#primary_author}}
 
                 <div class="u-flex0 u-paddingRight10 story-author-avatar">
                     <a href="{{url}}" style="background-image:url({{profile_image}})" class="avatar-image avatar-image--smaller u-backgroundSizeCover u-relative {{#unless profile_image}}no-avatar{{/unless}}">
@@ -41,7 +41,7 @@
                 <div class="u-flex1 u-noWrapWithEllipsis u-fontSize14">
                     <div class="u-noWrapWithEllipsis story-author-name"><a href="{{url}}" class="link u-textColorDarker link--underline">{{name}}</a></div>
 
-                {{/author}}
+                {{/primary_author}}
 
                     {{!-- Datetime - readingTime --}}
                     <div class="u-fontSize14 u-textColorNormal u-noWrapWithEllipsis u-lineHeightTight u-flex">

@@ -291,6 +291,11 @@ q {
   color: rgba(0, 0, 0, .44);
   padding-bottom: 45px;
 
+  a {
+    color: rgba(0, 0, 0, .6);
+    &:hover { @extend %u-text-color-darker; }
+  }
+
   .follow {
     display: block !important;
     text-align: center;
@@ -303,26 +308,21 @@ q {
       &:hover { color: rgba(0, 0, 0, 0.6) !important }
     }
   }
-
-  a {
-    color: rgba(0, 0, 0, .6);
-    &:hover { @extend %u-text-color-darker; }
-  }
 }
 
 // Instagram Fedd
 // ==========================================================================
 .instagram {
-  &-img {
-    height: 264px;
-
-    &:hover > .instagram-hover { opacity: 1 }
-  }
-
   &-hover {
     background-color: rgba(0, 0, 0, .3);
     // transition: opacity 1s ease-in-out;
     opacity: 0;
+  }
+
+  &-img {
+    height: 264px;
+
+    &:hover > .instagram-hover { opacity: 1 }
   }
 
   &-name {
@@ -331,6 +331,7 @@ q {
     transform: translate(-50%, -50%);
     z-index: 10;
 
+    // stylelint-disable-next-line
     a {
       background-color: #fff;
       color: #000 !important;

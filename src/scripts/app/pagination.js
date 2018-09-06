@@ -12,7 +12,7 @@
   let scrollTime = false;
   let currentPage = 2;
 
-  let lastScroll = 0;
+  // let lastScroll = 0;
 
   /* active Scroll */
   let onScroll = () => scrollTime = true;
@@ -73,31 +73,31 @@
   }
 
   /* Is visble next page */
-  function isVisible(element) {
-    const scroll_pos = $win.scrollTop();
-    const windowHeight = $win.height();
-    const elementTop = $(element).offset().top;
-    const elementHeight = $(element).height();
-    const elementBottom = elementTop + elementHeight;
-    return ((elementBottom - elementHeight * 0.25 > scroll_pos) && (elementTop < (scroll_pos + 0.5 * windowHeight)));
-  }
+  // function isVisible(element) {
+  //   const scroll_pos = $win.scrollTop();
+  //   const windowHeight = $win.height();
+  //   const elementTop = $(element).offset().top;
+  //   const elementHeight = $(element).height();
+  //   const elementBottom = elementTop + elementHeight;
+  //   return ((elementBottom - elementHeight * 0.25 > scroll_pos) && (elementTop < (scroll_pos + 0.5 * windowHeight)));
+  // }
 
-  function historyReplaceState () {
-    if ($btnLoadMore.length > 0) {
-      const scroll = $win.scrollTop();
+  // function historyReplaceState () {
+  //   if ($btnLoadMore.length > 0) {
+  //     const scroll = $win.scrollTop();
 
-      if (Math.abs(scroll - lastScroll) > $win.height() * 0.1) {
-        lastScroll = scroll;
+  //     if (Math.abs(scroll - lastScroll) > $win.height() * 0.1) {
+  //       lastScroll = scroll;
 
-        $('.feed-entry-wrap').each(function () {
-          if (isVisible($(this))) {
-            history.replaceState(null, null, $(this).attr("data-page"));
-            return (false);
-          }
-        });
-      }
-    }
-  }
+  //       $('.feed-entry-wrap').each(function () {
+  //         if (isVisible($(this))) {
+  //           history.replaceState(null, null, $(this).attr("data-page"));
+  //           return (false);
+  //         }
+  //       });
+  //     }
+  //   }
+  // }
 
   //  window scroll
   $win.on('scroll', onScroll);
@@ -105,7 +105,7 @@
   // set interbal
   setInterval(() => {
     fetchPage();
-    historyReplaceState();
+    // historyReplaceState();
   }, 500);
 
 })();

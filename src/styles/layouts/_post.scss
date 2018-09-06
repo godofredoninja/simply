@@ -73,14 +73,12 @@
     margin-top: 35px;
   }
 
-  .kg-card-markdown > ul { margin-top: 35px }
-
   ul,
   ol {
     counter-reset: post;
     font-family: $secundary-font;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
 
     li {
       letter-spacing: -.003em;
@@ -269,6 +267,7 @@
   width: 65px;
   position: absolute !important;
 
+  //stylelint-disable-next-line
   a {
     background-image: none;
     border-radius: 5px;

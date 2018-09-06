@@ -1,6 +1,33 @@
 // Header
 // ==========================================================================
 
+.button-search--open {
+  padding-right: 0 !important;
+}
+
+// button-nav
+.button-nav--toggle {
+  height: 48px;
+  position: relative;
+  transition: transform .4s;
+  width: 48px;
+
+  span {
+    background-color: $header-color;
+    display: block;
+    height: 2px;
+    left: 14px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transition: .4s;
+    width: 20px;
+
+    &:first-child { transform: translate(0, -6px); }
+    &:last-child { transform: translate(0, 6px); }
+  }
+}
+
 .header {
   z-index: 999;
 
@@ -59,33 +86,6 @@
       margin-right: 22px;
       text-transform: uppercase;
     }
-  }
-}
-
-.button-search--open {
-  padding-right: 0 !important;
-}
-
-// button-nav
-.button-nav--toggle {
-  height: 48px;
-  position: relative;
-  transition: transform .4s;
-  width: 48px;
-
-  span {
-    background-color: $header-color;
-    display: block;
-    height: 2px;
-    left: 14px;
-    margin-top: -1px;
-    position: absolute;
-    top: 50%;
-    transition: .4s;
-    width: 20px;
-
-    &:first-child { transform: translate(0, -6px); }
-    &:last-child { transform: translate(0, 6px); }
   }
 }
 

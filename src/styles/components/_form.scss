@@ -66,6 +66,11 @@
   color: $primary-color;
 }
 
+.button--large.button--chromeless,
+.button--large.button--link {
+  padding: 0;
+}
+
 .buttonSet {
   > .button {
     margin-right: 8px;
@@ -80,13 +85,15 @@
     height: 37px;
     line-height: 35px;
   }
-}
 
-.buttonSet {
   .button--large.button--chromeless,
   .button--large.button--link {
     height: 44px;
     line-height: 42px;
+  }
+
+  & > .button--chromeless:last-child {
+    padding-right: 0;
   }
 
   & > .button--chromeless:not(.button--circle) {
@@ -98,13 +105,4 @@
     margin-left: 0;
     padding-left: 8px;
   }
-
-  & > .button--chromeless:last-child {
-    padding-right: 0;
-  }
-}
-
-.button--large.button--chromeless,
-.button--large.button--link {
-  padding: 0;
 }

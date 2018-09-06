@@ -1,0 +1,15 @@
+{{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}"}}
+    <div class="related u-container">
+        <div class="related-title"><span>{{t "Related Articles"}}</span></div>
+
+        {{#foreach posts}}
+        <div class="story">
+            <a href="{{url absolute="true"}}amp" class="story-link u-block u-relative">
+                <span class="story-border u-flexCenter u-absolute">{{@number}}</span>
+                <h3 class="story-title">{{title}}</h3>
+            </a>
+        </div>
+        {{/foreach}}
+
+    </div>
+{{/get}}
