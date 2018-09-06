@@ -4,6 +4,13 @@
     font-weight: 600;
   }
 
+  &-excerpt {
+    font-family: $secundary-font;
+    font-size: 1.3125rem;
+    line-height: 1.5;
+    letter-spacing: -.022em;
+  }
+
   // &-footer {
   //   border-bottom: 1px solid rgba(0,0,0,.05);
   // }
@@ -22,6 +29,10 @@
 // post content body
 // ==========================================================================
 .post-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   a {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, 0) 50%);
     background-position: 0 1.07em;
@@ -66,18 +77,18 @@
 
   p {
     font-family: $secundary-font;
-    font-size: 20px;
+    font-size: 1.125rem;
     font-weight: 400;
     letter-spacing: -.003em;
-    line-height: 1.58;
-    margin-top: 35px;
+    line-height: 1.7;
+    margin-top: 25px;
   }
 
   ul,
   ol {
     counter-reset: post;
     font-family: $secundary-font;
-    font-size: 20px;
+    font-size: 1.125rem;
     margin-top: 30px;
 
     li {
@@ -110,45 +121,24 @@
     padding-right: 12px;
   }
 
-  .twitter-tweet,
-  iframe {
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    margin-top: 40px !important;
-    // width: 100% !important;
+  h1, h2, h3, h4, h5, h6, p,
+  ol, ul, hr, pre, dl, blockquote, .kg-embed-card {
+    min-width: 100%;
   }
 
-  .video-responsive iframe { margin-top: 0 !important }
+  & > ul { margin-top: 35px }
 
-  iframe[src*="facebook.com"] { width: 100% }
-
-  blockquote,
-  dl,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  ol,
-  p,
-  pre,
-  ul {
-    min-width: 100%;
+  & > iframe,
+  & > img,
+  .kg-image-card,
+  .kg-gallery-card,
+  .kg-card,
+  .kg-embed-card {
+    margin-top: 30px !important
   }
 }
 
-// markdown content of post
-// .kg-card-markdown {
-// display: flex;
-// flex-direction: column;
-// align-items: center;
-// max-width: 920px;
-// }
-
 // fisrt p
-.kg-card-markdown > p:first-of-type::first-letter,
 .post-body > p:first-of-type::first-letter {
   float: left;
   font-size: 64px;
@@ -321,6 +311,36 @@
 
 .nextPost {
   max-width: 260px;
+}
+
+// Gallery
+// ==========================================================================
+.kg-gallery-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  width: 100%;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 0.75em;
 }
 
 @media #{$md-and-down} {

@@ -15,12 +15,13 @@ a {
 
 blockquote {
   border-left: 3px solid rgba(0, 0, 0, .8);
+  color: #000;
   font-family: $secundary-font;
-  font-size: 21px;
+  font-size: 1.3125rem;
   font-style: italic;
   font-weight: 400;
   letter-spacing: -.003em;
-  line-height: 1.58;
+  line-height: 1.7;
   margin: 30px 0 0 -23px;
   padding-bottom: 2px;
   padding-left: 20px;
@@ -48,6 +49,25 @@ html {
 
 figure {
   margin: 0;
+}
+
+figcaption {
+  color: rgba(0, 0, 0, .68);
+  display: block;
+  font-family: $primary-font;
+  font-feature-settings: "liga" on, "lnum" on;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin-top: 10px;
+  outline: 0;
+  position: relative;
+  text-align: center;
+  top: 0;
+  width: 100%;
 }
 
 // Code
@@ -403,6 +423,8 @@ q {
     width: 100%;
   }
 }
+
+.kg-embed-card .video-responsive { margin-top: 0 }
 
 // Social Media Color
 // ==========================================================================
