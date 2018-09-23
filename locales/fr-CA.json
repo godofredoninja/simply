@@ -11,7 +11,7 @@
     "Your email address": "Ton adresse courriel",
     "You've successfully subscribed": "La souscription est complété",
     "A collection of posts": "Une collection d'articles",
-    "A collection of 1 post": "Une collection d'un article",
+    "A collection of 1 post": "Une collection d'un seul article",
     "A collection of % posts": "Une collection de % articles",
     "Get the latest posts delivered right to your inbox": "Reçois les articles les plus récents directement par courriel",
     "Latest Posts": "Articles récents",
@@ -27,10 +27,10 @@
     "Search": "Rechercher",
     "< 1 min read": "&lt; 1 minute à lire",
     "1 min read": "1 minute à lire",
-    "% min read": "% minute à lire",
+    "% min read": "% minutes à lire",
     "shares": "partages",
     "Comments": "Commentaires",
-    "Next article": "Article prochain",
+    "Next article": "Article suivant",
     "Prev article": "Article précédant",
     "in": "dans",
     "Latest Articles": "Articles récents",
@@ -38,5 +38,5 @@
     "Follow": "Suivre",
     "Sign up for my newsletter!": "Inscris-toi à ma liste !",
     "Related Articles": "Articles en liens",
-    "Unfortunately, this page doesn't exist": "Malheuresement, cette page n'existe pas"
+    "Unfortunately, this page doesn't exist": "Oups! Cette page n'existe pas"
 }
