@@ -18,7 +18,7 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Featured
 
-- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) (en - es)
+- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language)
 - Responsive layout
 - Blog navigation
 - Page 404 (Multiple faces emoticons)
@@ -142,6 +142,7 @@ This enables comments and comment counter
 - `es` — Español
 - `de` — German - By [dkbast](https://github.com/dkbast)
 - `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz)
+- `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
 
 ![](./documentation/language.png)
 
