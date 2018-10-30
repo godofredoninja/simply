@@ -1,29 +1,19 @@
 .post {
   &-title {
     line-height: 1.04;
-    font-weight: 600;
   }
 
   &-excerpt {
     font-family: $secundary-font;
-    font-size: 1.3125rem;
+    font-size: 1.25rem;
     line-height: 1.5;
     letter-spacing: -.022em;
+    margin-top: 8px;
   }
 
   // &-footer {
   //   border-bottom: 1px solid rgba(0,0,0,.05);
   // }
-}
-
-// meta line
-.postMetaInline {
-  letter-spacing: 0;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  color: rgba(0, 0, 0, .54);
-  fill: rgba(0, 0, 0, .54);
 }
 
 // post content body
@@ -34,11 +24,14 @@
   align-items: center;
 
   a {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .6) 50%, rgba(0, 0, 0, 0) 50%);
-    background-position: 0 1.07em;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .68) 50%, rgba(0, 0, 0, 0) 50%);
+    background-position: 0 1.12em;
     background-repeat: repeat-x;
-    background-size: 2px .1em;
+    background-size: 2px .2em;
     text-decoration: none;
+    word-break: break-word;
+
+    &:hover { background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 50%); }
   }
 
   img {
@@ -50,29 +43,24 @@
 
   h1, h2, h3, h4, h5, h6 {
     margin-top: 30px;
-    font-weight: 600;
     font-style: normal;
   }
 
   h2 {
-    font-size: 40px;
     letter-spacing: -.03em;
     line-height: 1.04;
-    margin-top: 54px;
+    margin-top: 40px;
   }
 
   h3 {
-    font-size: 32px;
     letter-spacing: -.02em;
     line-height: 1.15;
-    margin-top: 52px;
+    margin-top: 35px;
   }
 
   h4 {
-    font-size: 24px;
     letter-spacing: -.018em;
     line-height: 1.22;
-    margin-top: 30px;
   }
 
   p {
@@ -122,7 +110,7 @@
   }
 
   h1, h2, h3, h4, h5, h6, p,
-  ol, ul, hr, pre, dl, blockquote, .kg-embed-card {
+  ol, ul, hr, pre, dl, blockquote, table, .kg-embed-card {
     min-width: 100%;
   }
 
@@ -153,21 +141,27 @@
   text-transform: uppercase;
 }
 
-// post Tags
+// pif => post image format
 // ==========================================================================
-.post-tags {
-  a {
-    background: rgba(0, 0, 0, .08);
-    border: none;
-    border-radius: 3px;
-    color: rgba(0, 0, 0, .6);
-    margin-bottom: 8px;
-    margin-right: 8px;
+.pif-wrap { min-height: 460px }
+.pif-grad { background: rgba(0, 0, 0, 0.4) }
 
-    &:hover {
-      background: rgba(0, 0, 0, .1);
-      color: rgba(0, 0, 0, .6);
+@media #{$lg-and-up} {
+  .pif-wrap { min-height: 100vh }
+  .pif-grad { height: 60%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) }
+}
+
+body.is-image {
+  .post {
+    &-header {
+      left: 0;
+      right: 0;
+      padding: 100px 10px 80px;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
     }
+
+    &-title { color: #fff; font-size: 2.625rem }
+    &-excerpt { color: rgba(255, 255, 255, .85) }
   }
 }
 
@@ -175,10 +169,10 @@
 // ==========================================================================
 
 .post-newsletter {
-  outline: 1px solid #f0f0f0 !important;
-  outline-offset: -1px;
+  border: 1px solid rgba(0, 0, 0, .09);
   border-radius: 2px;
-  padding: 40px 10px;
+  padding: 30px 10px;
+  margin-top: 10px;
 
   .newsletter-form { max-width: 400px }
 
@@ -198,7 +192,7 @@
   }
 
   .form--btn {
-    background-color: #a9a9a9;
+    background-color: #bdbdbd;
     border-radius: 0 45px 45px 0;
     border: 0;
     color: #fff;
@@ -209,7 +203,7 @@
     &::before {
       @extend %u-absolute0;
 
-      background-color: #a9a9a9;
+      background-color: #bdbdbd;
       border-radius: 0 45px 45px 0;
       line-height: 45px;
       z-index: 2;
@@ -217,34 +211,6 @@
 
     &:hover { opacity: .8; }
     &:focus { outline: 0; }
-  }
-}
-
-// Card Post
-// ==========================================================================
-.cardPost {
-  &-image {
-    border-bottom: 1px solid rgba(0, 0, 0, .0785);
-    border-radius: 4px 4px 0 0;
-    height: 160px;
-  }
-
-  // &-excerpt { font-family: $secundary-font }
-
-  // &-excerpt,
-  &-title {
-    color: rgba(0, 0, 0, .9);
-    -webkit-box-orient: vertical !important;
-    -webkit-line-clamp: 2 !important;
-    display: -webkit-box !important;
-    line-height: 1.1 !important;
-    max-height: 2.2em !important;
-    text-overflow: ellipsis !important;
-  }
-
-  .u-card {
-    height: 296px;
-    margin-bottom: 20px;
   }
 }
 
@@ -260,20 +226,36 @@
   //stylelint-disable-next-line
   a {
     background-image: none;
-    border-radius: 5px;
-    color: #fff;
-    height: 36px;
-    line-height: 20px;
-    margin: 10px auto;
-    padding: 8px;
+    margin-top: 8px;
     text-decoration: none;
-    width: 36px;
+    font-size: 20px;
+    line-height: 35px;
+    height: 35px;
+    width: 35px;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .76);
+
+    &:hover { background-color: rgba(0, 0, 0, .84) }
+  }
+}
+
+.sr-wrap {
+  // visibility: visible;
+  // opacity: 1;
+  transition: visibility 0s linear 0s, opacity .3s 0s;
+
+  &.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear .3s, opacity .3s 0s;
   }
 }
 
 // Post Actions
 // ==========================================================================
-.postActions {
+.pa {
   background-color: #fff;
   bottom: 0;
   box-shadow: 0 0 1px rgba(0, 0, 0, .44);
@@ -281,16 +263,15 @@
   left: 0;
   position: fixed;
   right: 0;
-  // transform: translateY(100%);
+  transform: translateY(100%);
   // transition: transform .3s;
-  transform: translate3d(0, 0, 0);
-  transition: all 0.25s ease-in-out;
+  // transform: translate3d(0, 0, 0);
+  transition: transform .3s;
   // visibility: hidden;
-  z-index: 400;
+  z-index: 20;
 
   &.is-visible {
-    transform: translateY(100%);
-    // transform: translateY(0);
+    transform: translateY(0);
     // transition-delay: 0s;
     // visibility: visible;
   }
@@ -299,6 +280,7 @@
     max-width: 1200px;
     padding-left: 8px;
     padding-right: 8px;
+    height: 44px;
   }
 
   .separator {
@@ -307,46 +289,85 @@
     margin: 0 15px;
     width: 1px;
   }
+
+  .button {
+    font-size: 24px;
+    background-color: transparent;
+    padding: 0 10px;
+    height: 44px;
+    line-height: 42px;
+
+    &:hover {
+      color: rgba(0, 0, 0, .8)
+    }
+  }
+
+  // Share mobile
+  &-s {
+    justify-content: flex-end;
+    // stylelint-disable-next-line
+    a {
+      font-size: 15px;
+      border-radius: 14px;
+      color: #fff;
+      min-width: 100px;
+      text-align: center;
+      height: 28px;
+      line-height: 28px;
+      margin: 0 5px;
+      letter-spacing: 0.5px;
+      &::before { margin-right: 5px; vertical-align: middle; }
+    }
+  }
 }
 
 .nextPost {
   max-width: 260px;
 }
 
-// Gallery
+// Clases for box of ghost
 // ==========================================================================
-.kg-gallery-container {
+.kg-gallery {
+  &-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1040px;
+    width: 100vw;
+  }
+
+  &-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &:not(:first-of-type) { margin: 0.75em 0 0 0 }
+  }
+
+  &-image {
+    img {
+      display: block;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &:not(:first-of-type) { margin: 0 0 0 0.75em }
+  }
+}
+
+// stylelint-disable-next-line
+.kg-embed-card {
   display: flex;
   flex-direction: column;
-  max-width: 1040px;
-  width: 100vw;
-}
-
-.kg-gallery-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.kg-gallery-image img {
-  display: block;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.kg-gallery-row:not(:first-of-type) {
-  margin: 0.75em 0 0 0;
-}
-
-.kg-gallery-image:not(:first-of-type) {
-  margin: 0 0 0 0.75em;
+  align-items: center;
+  min-width: 100%;
 }
 
 // Image
 // ==========================================================================
 .kg-width-full .kg-image { max-width: 100vw }
 .kg-width-wide .kg-image { max-width: 1040px }
+// .kg-width-full, .kg-width-wide { position: relative; z-index: 2; }
 
 // Media Query
 // ==========================================================================
@@ -390,14 +411,10 @@
     iframe { width: 100% !important; }
   }
 
-  // Post Related
-  .post-related {
-    padding-left: 8px;
-    padding-right: 8px;
-  }
-
   // Image
   .kg-width-wide .kg-image { width: 100%; }
+
+  .pa-s { justify-content: center }
 }
 
 // @media #{$md-and-up} {

@@ -1,0 +1,40 @@
+<div class="hh u-flex u-flexCenter u-relative zindex4">
+    {{!-- Author Avatar --}}
+    {{#primary_author}}
+    <div class="hh-avatar u-flex0 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Avatar" data-event-non-interaction="true"{{/is}}>
+        <a href="{{url}}" class="avatar-image u-bgCover {{#is "post"}}img-md{{/is}} {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{profile_image}})"></a>
+    </div>
+    {{/primary_author}}
+
+    <div class="hh-right u-flex1 u-overflowHidden u-fontSizeSmall">
+
+        {{#primary_author}}
+            <a href="{{url}}" class="hh-author-name link--underline u-textColorDarker {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="true"{{/is}}>{{name}}</a>
+
+            {{!-- Follow Author--}}
+            {{#is "post"}}{{#has any="facebook, twitter"}}
+                <div class="hh-follow u-inlineBlock">
+                    <span class="hh-follow-toggle hh-btn button--primary">{{t "Follow"}}</span>
+                    {{!-- Author Facebook and Twitter --}}
+                    <div class="hh-follow-show u-inlineBlock" style="display:none">
+                        {{#if facebook}}<a class="hh-btn hh-fb u-textColorWhite godo-tracking" href="{{facebook_url}}" title="Facebook" target="_blank" rel="nofollow" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Facebook" data-event-non-interaction="true"><i class="i-facebook"></i> Facebook</a>{{/if}}
+                        {{#if twitter}}<a class="hh-btn hh-tw u-textColorWhite godo-tracking" href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="nofollow" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Twitter" data-event-non-interaction="true"><i class="i-twitter"></i> Twitter</a>{{/if}}
+                    </div>
+                </div>
+            {{/has}}{{/is}}
+        {{/primary_author}}
+
+        {{!-- Primary Tag --}}
+        {{^is "post"}}{{#if primary_tag}}{{#primary_tag}}
+            <span class="u-textColorNormal">{{t "in"}}</span> <a href="{{url}}" class="hh-tag link--underline u-textColorDarker">{{name}}</a>
+        {{/primary_tag}}{{/if}}{{/is}}
+
+        {{!-- In post add author's description --}}
+        {{#is "post"}}{{#if primary_author.bio}}
+            <div class="hh-author-bio u-block u-fontSize15 u-textColorNormal u-noWrapWithEllipsis">{{primary_author.bio}}</div>
+        {{/if}}{{/is}}
+
+        {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
+        {{> "helper/helper-datetime"}}
+    </div>
+</div>

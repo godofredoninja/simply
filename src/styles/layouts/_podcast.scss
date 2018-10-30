@@ -1,0 +1,158 @@
+.spc {
+  &-header {
+    background-color: #110f16;
+
+    // &::before {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   content: "";
+    //   display: block;
+    //   background: rgba(0, 0, 0, .7);
+    // }
+
+    &::before,
+    &::after {
+      content: '';
+      left: 0;
+      position: absolute;
+      width: 100%;
+      display: block;
+    }
+
+    &::before {
+      height: 200px;
+      top: 0;
+      background-image: linear-gradient(to top, transparent, #18151f);
+    }
+
+    &::after {
+      height: 300px;
+      bottom: 0;
+      background-image: linear-gradient(to bottom, transparent, #110f16);
+    }
+  }
+
+  // Header
+  &-h {
+    &-inner {
+      padding: calc(9vw + 55px) 4vw 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.25rem;
+    }
+
+    &-t {
+      font-size: 4rem;
+    }
+
+    &-e {
+      color: #fecd35;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      margin-top: 5px;
+      text-transform: uppercase;
+    }
+  }
+
+  // Description
+  &-des {
+    margin: 40px auto 30px;
+    line-height: 1.4;
+    font-family: Georgia, 'Merriweather', serif;
+    opacity: .8;
+
+    em {
+      font-style: italic;
+      color: #fecd35;
+    }
+  }
+
+  // buttons
+  &-buttons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      background: hsla(0, 0%, 100%, .9);
+      border-radius: 35px;
+      color: #15171a;
+      font-size: 16px;
+      height: 33px;
+      line-height: 1em;
+      margin: 5px;
+      padding: 7px 12px;
+      transition: background .5s ease;
+
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+
+    img {
+      display: inline-block;
+      height: 20px;
+      margin: 0 8px 0 0;
+      width: auto;
+    }
+  }
+}
+
+// Card
+.spc-c {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px;
+
+  &-img {
+    min-height: 200px;
+    width: 100%;
+  }
+
+  &-body {
+    padding: 15px 20px;
+  }
+}
+
+.listen-btn {
+  border: 2px solid $primary-color;
+  color: $primary-color;
+  letter-spacing: 3px;
+  border-radius: 0;
+  line-height: 32px;
+  background: #fff;
+
+  &:hover {
+    color: #fff;
+    background-color: $primary-color;
+    transition: all .1s linear;
+  }
+}
+
+.listen-icon {
+  width: 18px;
+  height: 18px;
+  top: -2px;
+}
+
+@media #{$lg-and-up} {
+  .spc-c {
+    display: flex;
+
+    &-img {
+      width: 285px;
+      flex: 0 0 auto;
+    }
+  }
+
+  .spc-h-inner { font-size: 1.875rem; }
+}

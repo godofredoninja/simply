@@ -18,31 +18,38 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Featured
 
-- Responsive layout
-- Blog navigation
-- Page 404 (Multiple faces emoticons)
-- Page subscribe
-- Pagination Infinite Scroll
-- Instagram Feed in footer of Post
-- [AMP](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost) Template (Accelerated Mobile Pages)
-- Cover images for blog, tag and author
-- links to followers in social media
-- Related Articles (6 articles)
+- Support for different languages
+- [AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost) Template
+- Includes 3 templates for Home Page (Home Masonry - Home Sidebar - Home Grid)
+- Responsive Layout
+- Blog Navigation
+- Include sections to add ads
+- Include Google Analytics Tracking use (Google Tag Manager)
+- Custom Search Engine (works almost in all languages)
+- Template Page Newsletter
+- Template Page Podcast
+- Template Page Tag
 - Template Video Post Format
 - Template Image post Format
-- Template Audio post Format
-- Template not Image Featured in Post
-- YouTube Subscribe Button in video post Format
-- 5 articles latest posts in the (Author - Tag) section sidebar
-- Tags Cloud in page of Author and Tag
+- Template not Image
+- Related Articles (6 articles)
 - Previous and next button in the Post
+- YouTube Subscribe Button in video post Format
+- Links to Social Media
+- 4 latest posts in the Sidebar (Author - Tag)
+- Tags Cloud in the Sidebar (Author - Tag)
+- Instagram random in (Post)
+- Cover Image in (Home - Tag - Author)
+- Page 404 (Multiple faces emoticons)
+- Pagination Infinite Scroll
 - Support for comments (Facebook or Disqus)
-- Support for counter comments (Facebook or Disqus)
+- Comment Counter (Facebook or Disqus)
 - Buttons to share the article (Facebook - Twitter - Reddit - Linkedin - Pinterest - Whatsapp)
 - Counter shared articles on Facebook
-- Sticky content in the sidebar
-- YouTube, Vimeo, kickstarter, Facebook, dailymotion => Responsive
-- Lazy image loading for better performance only in backgrounds
+- Sticky Sidebar
+- YouTube, Vimeo, kickstarter, dailymotion => Responsive
+- Varied colors to change the look of the theme
+- Lazy load Image for better performance only in backgrounds
 - Code syntax [Prismjs](http://prismjs.com/index.html#languages-list) Supported all syntax.
 
 ## Web Browser Support for Simply
@@ -109,16 +116,16 @@ To continue with the configuration [read](https://github.com/GodoFredoNinja/simp
 
 ### Credits
 
-- [Hodor AMP Template](https://github.com/godofredoninja/Hodor-AMP-Template-for-Ghost)
+- [Hodor AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost)
 - [Normalize](https://necolas.github.io/normalize.css/)
-- [Jquery.ghostHunter](https://github.com/jamalneufeld/ghostHunter)
+- [Ghost Search](https://github.com/HauntedThemes/ghost-search)
+- [Fuzzysort](https://github.com/farzher/fuzzysort)
 - [Prismjs](http://prismjs.com/)
-- [sticky-kit](https://github.com/leafo/sticky-kit)
-- [lunr.js](https://github.com/olivernn/lunr.js)
+- [Theia Sticky Sidebar](https://github.com/WeCodePixels/theia-sticky-sidebar)
 - [zoom.js](https://github.com/fat/zoom.js/)
-- [jquery-lazyload](http://www.appelsiini.net/projects/lazyload)
+- [Vanilla Lazyload](https://github.com/verlok/lazyload)
 - [Fonts](https://fonts.google.com/?selection.family=Merriweather:300,400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Merriweather)
 
 ## Copyright & License
 
-Copyright (c) 2017 GodoFredoNinja - Released under the [CC BY-NC 4.0](LICENSE).
+Copyright (c) 2018 GodoFredoNinja - Released under the [CC BY-NC 4.0](LICENSE).

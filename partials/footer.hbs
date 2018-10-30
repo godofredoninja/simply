@@ -1,8 +1,10 @@
-<footer class="footer u-fontSizeSmaller u-fontWeightSemibold u-paddingTop20 {{#is "tag, author, post"}}u-backgroundWhite{{/is}}">
+<footer class="footer u-fontSizeSmaller u-fontWeightSemibold u-paddingTop20 {{#is "post"}}u-bgWhite{{/is}}">
     <div class="u-container u-maxWidth1000">
 
-        {{!-- follow Me --}}
-        {{>"widget-follow"}}
+        <aside class="follow followMe u-fontSize20 u-flex u-hide-before-md">
+            {{#if @blog.facebook}}<a href="{{facebook_url}}" class="godo-tracking i-facebook" title="Facebook {{@blog.facebook}}" target="_blank" rel="nofollow"></a>{{/if}}
+            {{#if @blog.twitter}}<a href="{{twitter_url}}" class="godo-tracking i-twitter" title="Twitter {{@blog.twitter}}" target="_blank" rel="nofollow"></a>{{/if}}
+        </aside>
 
         <div class="footer-wrap u-paddingBottom20 u-paddingTop20 u-textAlignCenter">
             &copy; {{date format="YYYY"}} <a href="{{@blog.url}}">{{@blog.title}}</a>

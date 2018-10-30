@@ -1,28 +1,33 @@
 @media #{$lg-and-up} {
-  .content {
-    // flex: 1 !important;
-    max-width: calc(100% - 340px) !important;
-    // order: 1;
-    // overflow: hidden;
+  .col-left {
+    flex-basis: 0 !important;
+    flex-grow: 1 !important;
+    max-width: 100% !important;
   }
 
   .sidebar {
-    width: 340px !important;
-    // flex: 0 0 340px !important;
-    // order: 2;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    padding-left: $container-gutter-width;
+    padding-right: $container-gutter-width;
+    width: 320px;
   }
 }
 
 .row {
-  margin-left: - 10px;
-  margin-right: - 10px;
-
-  @extend .u-clear;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  margin-left: - $container-gutter-width;
+  margin-right: - $container-gutter-width;
 
   .col {
-    float: left;
-    padding-left: 10px;
-    padding-right: 10px;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding-left: $container-gutter-width;
+    padding-right: $container-gutter-width;
 
     $i: 1;
 
@@ -30,7 +35,8 @@
       $perc: unquote((100 / ($num-cols / $i)) + "%");
 
       &.s#{$i} {
-        width: $perc;
+        flex-basis: $perc;
+        max-width: $perc;
       }
 
       $i: $i + 1;
@@ -44,7 +50,8 @@
         $perc: unquote((100 / ($num-cols / $i)) + "%");
 
         &.m#{$i} {
-          width: $perc;
+          flex-basis: $perc;
+          max-width: $perc;
         }
 
         $i: $i + 1;
@@ -59,7 +66,8 @@
         $perc: unquote((100 / ($num-cols / $i)) + "%");
 
         &.l#{$i} {
-          width: $perc;
+          flex-basis: $perc;
+          max-width: $perc;
         }
 
         $i: $i + 1;

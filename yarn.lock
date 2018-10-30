@@ -3143,6 +3143,10 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
 
+fuzzysort@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/fuzzysort/-/fuzzysort-1.1.4.tgz#a0510206ed44532cbb52cf797bf5a3cb12acd4ba"
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "https://registry.yarnpkg.com/gauge/-/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"
@@ -3218,6 +3222,12 @@ getpass@^0.1.1:
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+ghost-search@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/ghost-search/-/ghost-search-0.1.0.tgz#0b5ad2e83b8945f4528029a6b3e6b380f8df344f"
+  dependencies:
+    fuzzysort "^1.1.4"
 
 gifsicle@^3.0.0:
   version "3.0.4"
@@ -4317,10 +4327,6 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery-lazyload@^1.9.7:
-  version "1.9.7"
-  resolved "https://registry.yarnpkg.com/jquery-lazyload/-/jquery-lazyload-1.9.7.tgz#9982b388c533c0b611214b3c5aaa0b9fede071f7"
-
 jquery@>=1.7.0:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
@@ -4475,10 +4481,6 @@ lazy-cache@^1.0.3:
 lazy-req@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/lazy-req/-/lazy-req-1.1.0.tgz#bdaebead30f8d824039ce0ce149d4daa07ba1fac"
-
-lazyload@^2.0.0-beta.2:
-  version "2.0.0-beta.2"
-  resolved "https://registry.yarnpkg.com/lazyload/-/lazyload-2.0.0-beta.2.tgz#1dc729c3739f06fdc825702c33b9dd99f89ebcbd"
 
 lazystream@^1.0.0:
   version "1.0.0"
@@ -4830,10 +4832,6 @@ lru-cache@^4.0.1, lru-cache@^4.1.1:
   dependencies:
     pseudomap "^1.0.2"
     yallist "^2.1.2"
-
-lunr@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/lunr/-/lunr-1.0.0.tgz#5c9276c92c91ac35a9241b5018d46723d92e2f5f"
 
 magic-string@^0.14.0:
   version "0.14.0"
@@ -8316,6 +8314,10 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+vanilla-lazyload@10.17.0:
+  version "10.17.0"
+  resolved "https://registry.yarnpkg.com/vanilla-lazyload/-/vanilla-lazyload-10.17.0.tgz#e8db81ede5596722757f9bb593d123b598f9cf09"
 
 vendors@^1.0.0:
   version "1.0.2"

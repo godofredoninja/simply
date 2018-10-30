@@ -3,12 +3,12 @@
   // background-color: $primary-color;
   color: rgba(0, 0, 0, 0.8);
   height: 100vh;
-  padding: $header-height-mobile 20px;
+  padding: $header-height 20px;
   position: fixed !important;
   transform: translateX(100%);
   transition: 0.4s;
   will-change: transform;
-  z-index: 99;
+  z-index: 19;
 
   &-menu a { padding: 10px 20px; }
 
@@ -16,7 +16,7 @@
     background: #eee;
     overflow: auto;
     padding: 20px 0;
-    top: $header-height-mobile;
+    top: $header-height;
   }
 
   &-section {

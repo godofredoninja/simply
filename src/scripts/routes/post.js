@@ -1,5 +1,6 @@
 import facebookShareCount from '../app/app.facebook-share-count';
 import simplyInstagram from '../app/app.instagram';
+// import shareFade from '../app/app.share-fade'
 
 /* Iframe SRC video */
 const iframeVideo = [
@@ -35,26 +36,27 @@ export default {
   },
   finalize() {
     // Add data action zoom FOR IMG
-    $('.post-body').find('img').attr('data-action', 'zoom');
+    $('.post-body img').not('.kg-width-full img').attr('data-action', 'zoom');
+    $('.post-body').find('a').find('img').removeAttr('data-action');
 
     // Share Count
     facebookShareCount($('.share-count'));
 
     // sticky share post in left
-    $('.sharePost').theiaStickySidebar({additionalMarginTop: 30});
-
-    // newsletter title change
-    if (typeof newsletterTitle !== 'undefined') $('.newsletter-title').html(newsletterTitle); // eslint-disable-line
-
-    // newsletter Description
-    if (typeof newsletterDescription !== 'undefined') $('.newsletter-description').html(newsletterDescription); // eslint-disable-line
+    $('.sharePost').theiaStickySidebar({
+      additionalMarginTop: 80,
+      minWidth: 970,
+    });
 
     // Instagram Feed
     if (typeof instagramUserId !== 'undefined' && typeof instagramToken !== 'undefined' && typeof instagramUserName !== 'undefined') {
-      simplyInstagram(instagramUserId, instagramToken, instagramUserName); // eslint-disable-line
+      const url = `https://api.instagram.com/v1/users/${instagramUserId}/media/recent/?access_token=${instagramToken}&count=10&callback=?`; // eslint-disable-line
+      const user = `<a href="https://www.instagram.com/${instagramUserName}" class="instagram-btn" target="_blank"><i class="i-instagram"></i> ${instagramUserName}</a>`; // eslint-disable-line
+
+      simplyInstagram(url, user);
     }
 
-    /* Prism autoloader */
-    Prism.plugins.autoloader.languages_path = `${$('body').attr('data-page')}/assets/scripts/prism-components/`; // eslint-disable-line
-  }, // end finalize
+    // Share Fade
+    // shareFade($('.sr-wrap'));
+  },
 };

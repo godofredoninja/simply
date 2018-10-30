@@ -1,38 +1,41 @@
 .sidebar {
-  &-title {
-    border-bottom: 1px solid rgba(0, 0, 0, .0785);
-    font-weight: 700;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-  }
+  &-items { @extend .u-marginBottom30 }
 
-  // border for post
-  &-border {
-    border-left: 3px solid $primary-color;
-    bottom: 0;
-    color: rgba(0, 0, 0, .2);
-    font-family: $secundary-font;
-    left: 0;
-    padding: 15px 10px 10px;
-    top: 0;
+  &-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    color: rgba(0, 0, 0, .84);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -.42px;
+    margin-bottom: 20px;
+
+    span {
+      border-bottom: 1px solid rgba(0, 0, 0, .54);
+      display: inline-block;
+      padding-bottom: 10px;
+    }
   }
 }
 
-.sidebar-post {
-  &:nth-child(3n) { .sidebar-border { border-color: darken(orange, 2%); } }
-  &:nth-child(3n+2) { .sidebar-border { border-color: #26a8ed } }
+//Sidebar Post
+.sp {
+  margin-bottom: 16px;
 
-  &--title {
-    line-height: 1.1;
+  &-n { color: rgba(0, 0, 0, .15); font-family: $secundary-font }
+
+  &-t {
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -.18px;
+    line-height: 1.2;
+    margin-bottom: 3px;
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  &--link {
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, .09);
-    box-shadow: 0 1px 7px rgba(0, 0, 0, .09);
-    min-height: 50px;
-    padding: 15px 15px 15px 55px;
-
-    &:hover { .sidebar-border { background-color: rgba(229, 239, 245, 1) } }
-  }
+  &:hover .sp-t { text-decoration: underline }
 }

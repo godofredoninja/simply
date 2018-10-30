@@ -1,23 +1,28 @@
+{{!-- Layout --}}
 {{!< default}}
-{{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{!-- custom Styles For tag <body> --}}
-{{#contentFor "simply_class_body"}}is-frontpage{{/contentFor}}
+{{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}} is-frontpage{{/contentFor}}
 
-<div class="feed-entry-content">
-    {{!--<header class="u-marginBottom30 u-fontSizeLarge u-fontWeightBold u-link u-contentTitle u-md-fontSizeBase">Most Recent Articles</header>--}}
-    <div class="feed-entry-wrap u-maxWidth1000 u-marginAuto u-marginTop30 u-marginBottom40">
-        {{!-- This is the post loop - each post will be output using this markup --}}
-        {{!-- <div class="row">{{#foreach posts}} {{>"entry"}} {{/foreach}} </div> --}}
+<div class="feed-entry-content u-container">
+    {{!-- Ad --}}
+    {{> "ad/ad-home-top"}}
 
+    <div class="feed-entry-wrap u-maxWidth1040 u-marginAuto u-marginTop30 u-marginBottom40">
         <section class="row">
-            {{#foreach posts}} {{> "story-card" }} {{/foreach}}
+            {{#foreach posts}}
+                {{!-- <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else}}{{#has number="5, 6, 11, 12"}}s6 ss2{{else}}{{#has number="7"}}l12 ss3{{else}}l4{{/has}}{{/has}}{{/has}}"></div> --}}
+                <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else has number="5, 6, 11, 12"}}s6 ss2{{else has number="7"}}l12 ss3{{else}}l4{{/has}}">
+                    {{> "story/story-grid" }}
+                </div>
+
+                {{!-- ad --}}
+                {{#has number="6"}}<div class="col s12">{{> "ad/ad-home-medium"}}</div>{{/has}}
+                {{#has number="12"}}<div class="col s12">{{> "ad/ad-home-footer"}}{{/has}}
+            {{/foreach}}
         </section>
-
-
     </div>
 </div>
 
-{{!-- Pagination --}}
-{{^is "paged"}}<a href="#" class="loadMore link--accent" data-page-total="{{pagination.pages}}">Load more</a>{{else}}{{"pagination"}}{{/is}}
-
+{{!-- Pagination - partials/pagination.hbs --}}
+{{"pagination"}}

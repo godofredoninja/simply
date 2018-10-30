@@ -14,22 +14,26 @@
 // common
 @import "common/global";
 @import "common/typography";
+@import "components/form";
+
+//
 @import "common/utilities";
 
 // components
 @import "components/grid";
-@import "components/form";
 @import "components/icons";
 @import "components/animated";
 
 //layouts
 @import "layouts/header";
-@import "layouts/story-card";
 @import "layouts/homepage";
+@import "layouts/story";
 @import "layouts/post";
 @import "layouts/author";
 @import "layouts/search";
 @import "layouts/sidebar";
 @import "layouts/sidenav";
-@import "layouts/helper";
 @import "layouts/subscribe";
+@import "layouts/topics";
+@import "layouts/podcast";
+@import "layouts/newsletter";

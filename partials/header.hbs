@@ -1,75 +1,35 @@
-{{!-- Header Template --}}
-<header class="header u-sizeFullWidth u-relative u-bgColor">
-    <div class="header-wrap u-flexCenter u-relative">
+{{#is "home"}}
 
-        {{!-- background dark if home have image --}}
-        {{#is "home"}}
-            {{#if @blog.cover_image}}
-            <span class="u-absolute0 u-backgroundDark u-hide-before-md"></span>
-            <span class="u-absolute0 u-backgroundSizeCover u-hide-before-md cover-lazy lazy" data-original="{{@blog.cover_image}}"></span>
-            {{else}}
-            <span class="u-absolute0 u-hide-before-md" style="background:rgba(0,0,0,.175)"></span>
-            {{/if}}
-        {{/is}}
+<header class="cHeader u-flexCenter u-relative u-hide-before-lg u-bgColor {{#unless @blog.logo}}not-logo{{/unless}}">
+    {{!-- Cover Background --}}
+    {{#if @blog.cover_image}}
+        <span class="u-absolute0 cover-bg zindex1"></span>
+        <span class="simply-lazy lazy u-absolute0 u-bgCover zindex2 cover-img" data-src="{{@blog.cover_image}}"></span>
+    {{/if}}
 
-        <div class="u-maxWidth1200 u-sizeFullWidth u-container {{#unless @blog.logo}} not-logo {{/unless}} {{#is "home"}} header-top {{else}} u-flex u-flexCenter {{/is}}" style="z-index:100">
+    <div class="u-maxWidth1200 u-sizeFullWidth u-container u-relative zindex3">
+        {{!-- Logo --}}
+        <h1 class="cHeader-logo u-textAlignCenter u-lineHeight1">
+            <a class="cHeader-logo-link u-textColorWhite u-inlineBlock" href="{{@blog.url}}">
+                {{#if @blog.logo}}
+                    <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+                {{else}}
+                    <span class="u-fontSizeJumbo u-fontWeightBold">{{@blog.title}}</span>
+                {{/if}}
+            </a>
+        </h1>
 
-            {{!-- header logo --}}
-            {{#is "home"}}
-                <h1 class="u-textAlignCenter u-flex1 u-lineHeight1 header-logo--wrap">
-                    <a class="header-logo u-inlineBlock" href="{{@blog.url}}">
-                        {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSizeJumbo u-fontWeightBold">{{@blog.title}}</span>{{/if}}
-                    </a>
-                </h1>
-
-            {{else}}
-
-                <a class="header-logo u-inlineBlock u-flex0" href="{{@blog.url}}">
-                    {{#if @blog.logo}}<img src="{{@blog.logo}}" alt="{{@blog.title}}"/>{{else}}<span class="u-fontSize36 u-lineHeight1 u-fontWeightSemibold">{{@blog.title}}</span>{{/if}}
-                </a>
-            {{/is}}
-
-
-            {{!-- Menu if is not home page --}}
-            {{^is "home"}}
-                <nav class="nav u-flex u-flex1 u-paddingLeft20 u-flexCenter u-headerColorLink u-hide-before-md">{{navigation}}</nav>
-            {{/is}}
-
-            <div class="u-flex0 u-flex u-flexEnd u-headerColorLink {{#is "home"}}u-hide-after-md{{/is}}">
-
-                {{!-- Btn search and close menu --}}
-                <a href="#" class="search-toggle u-relative button button--chromeless i-search u-fontSizeLarge"></a>
-                <a href="#" style="margin-right:-12px;" class="button-nav--toggle u-relative u-hide-after-md"><span></span><span></span><span></span></a>
-
-                {{!-- header follow if is not index page --}}
-                {{^is "home"}} {{>"widget-follow"}} {{/is}}
-
-            </div>
-
-            {{!-- Header description for index page --}}
-            {{#is "home"}}{{#if @blog.description}}<div class="header-description u-fontSize21 u-marginAuto u-paddingTop10 u-textAlignCenter u-hide-before-md">{{@blog.description}}</div>{{/if}}{{/is}}
-
-        </div>
+        {{!-- Description --}}
+        {{#if @blog.description}}
+            <h2 class="cHeader-des u-fontSize21 u-textColorWhite u-marginAuto u-textAlignCenter u-fontWeightNormal">{{@blog.description}}</h2>
+        {{/if}}
     </div>
-
-    {{!-- if is home page --}}
-    {{#is "home"}}
-
-    <nav class="mainMenu u-fontSizeSmaller u-bgColor u-sizeFullWidth u-hide-before-md">
-        <div class="nav u-flex u-flexCenter u-headerColorLink u-maxWidth1040 u-container">
-            {{!-- Navigation --}}
-            {{navigation}}
-
-            <a href="#" class="search-toggle button button--chromeless u-fontSizeLarge i-search"></a>
-
-            {{!-- follow Me --}}
-            {{>"widget-follow"}}
-        </div>
-    </nav>
-
-    {{/is}}
-
-    {{!-- Side Nav for Mobile --}}
-    {{>"sidenav"}}
-
 </header>
+
+{{/is}}
+
+{{!-- Menu --}}
+{{> "menu"}}
+
+{{!-- Menu Mobile --}}
+{{>"sidenav"}}

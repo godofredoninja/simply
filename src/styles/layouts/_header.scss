@@ -1,13 +1,80 @@
-// Header
+// Collection Header
 // ==========================================================================
+.cHeader {
+  height: 250px;
+  padding: 20px 0;
 
-.button-search--open {
-  padding-right: 0 !important;
+  &-logo-link { height: 50px; }
+  &.not-logo .cHeader-logo-link { height: auto; }
+
+  &-des {
+    letter-spacing: -.02em;
+    line-height: 1.4;
+    margin-top: 20px;
+    max-width: 650px;
+  }
 }
 
-// button-nav
-.button-nav--toggle {
+.cHeader-logo-link img,
+.nav-logo img { max-height: 100% }
+
+// Nav
+// ==========================================================================
+.nav {
+  height: $header-height;
+  position: relative;
+  top: 0;
+  z-index: 20;
+
+  &.nav-up { transform: translateY(-100%) }
+  &.has-sticky { position: sticky; transition: transform .3s; }
+  &-logo { height: 30px; }
+  &-left { margin-right: 20px }
+
+  &-wrap {
+    height: $header-height;
+
+    &.sticky {
+      position: fixed;
+      top: 0;
+    }
+  }
+}
+
+.follow > a {
+  padding: 10px 7px;
+}
+
+// Menu
+.nav-menu {
+  position: relative;
+  overflow: hidden;
+
+  ul {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  li {
+    a {
+      padding: 10px;
+      text-transform: uppercase;
+    }
+    &:first-child a { padding-left: 0 }
+  }
+}
+
+// stylelint-disable-next-line
+.nav-right a, .nav ul li a {
+  color: #bbf1b9;
+  &:hover { color: #fff } // stylelint-disable-line
+}
+
+// Menu - Toggle
+.menu-toggle {
   height: 48px;
+  margin-right: -$container-gutter-width;
   position: relative;
   transition: transform .4s;
   width: 48px;
@@ -28,114 +95,17 @@
   }
 }
 
-.header {
-  z-index: 999;
-
-  &-wrap { height: 55px; }
-
-  &-logo {
-    color: #fff !important;
-    height: 30px;
-
-    img { max-height: 100%; }
-  }
-
-  &-logo,
-  .button-search--open,
-  .button-nav--toggle { z-index: 150; }
-
-  // header description home page
-  &-description {
-    color: rgba(255, 255, 255, 0.8);
-    letter-spacing: -.02em;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    max-width: 650px;
-  }
-}
-
-// not have logo
-.not-logo .header-logo { height: auto !important }
-
-// Header Follow
-// ==========================================================================
-
-.follow > a { padding-left: 15px }
-
-// Header menu
-// ==========================================================================
-
-.nav {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  position: relative;
-  overflow: hidden;
-
-  ul {
-    display: flex;
-    margin-right: 20px;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  li {
-    float: left;
-
-    a {
-      font-weight: 600;
-      margin-right: 22px;
-      text-transform: uppercase;
-    }
-  }
-}
-
 // Media Query
-// ==========================================================================
-
-@media #{$md-and-up} {
-  body.is-home {
-    .header {
-      &-wrap { height: 200px; }
-
-      &-logo {
-        height: 50px;
-      }
-    }
-  }
-
-  // Main Menu Fixed
-  // ==========================================================================
-  // .mainMenu--affixed {
-  //   position: fixed;
-  //   top: 0;
-  // }
-}
-
-// Header menu
-// ==========================================================================
-@media #{$md-and-down} {
-  .header {
-    position: fixed;
-
-    &-wrap { height: $header-height-mobile }
-  }
-
-  .header-logo--wrap { text-align: left }
-  .header-logo { display: flex; flex: 1 1 auto; }
-  .header-logo span { font-size: 24px }
-
-  .header-top {
-    display: flex;
-    align-items: center;
-  }
+@media #{$lg-and-down} {
+  .nav-left { flex: 1 1 auto }
 
   // show menu mobile
   body.is-showNavMob {
     overflow: hidden;
 
-    .sideNav { transform: translateX(0); }
+    .sideNav { transform: translateX(0) }
 
-    .button-nav--toggle {
+    .menu-toggle {
       border: 0;
       transform: rotate(90deg);
 
@@ -144,7 +114,7 @@
       span:last-child { transform: rotate(-45deg) translate(0, 0); }
     }
 
-    .header .button-search--toggle { display: none; }
+    .nav .search-toggle { display: none; }
     .main, .footer { transform: translateX(-25%); }
   }
 }

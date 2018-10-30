@@ -1,0 +1,16 @@
+.topic {
+  &-items { border: 1px solid rgba(0, 0, 0, .1) }
+  &-img { height: 180px }
+
+  &-c {
+    border: 1px solid rgba(0, 0, 0, .15);
+    width: 45px;
+    height: 45px;
+    line-height: 43px;
+  }
+
+  &-h {
+    height: 100px;
+    padding: 0 20px;
+  }
+}

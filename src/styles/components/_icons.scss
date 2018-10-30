@@ -15,6 +15,39 @@
 }
 
 
+.i-tag:before {
+  content: "\e903";
+}
+.i-warning:before {
+  content: "\e904";
+}
+.i-arrow-round-left:before {
+  content: "\e905";
+}
+.i-arrow-round-down:before {
+  content: "\e906";
+}
+.i-arrow-round-right:before {
+  content: "\e907";
+}
+.i-arrow-round-top:before {
+  content: "\e908";
+}
+.i-send:before {
+  content: "\e909";
+}
+.i-search:before {
+  content: "\e90a";
+}
+.i-link:before {
+  content: "\e90b";
+}
+.i-star:before {
+  content: "\e90c";
+}
+.i-star-line:before {
+  content: "\e90d";
+}
 .i-audio:before {
   content: "\e901";
 }
@@ -25,14 +58,41 @@
 .i-comments:before {
   content: "\e900";
 }
+.i-arrow_left:before {
+  content: "\e314";
+}
+.i-arrow_right:before {
+  content: "\e315";
+}
+.i-play:before {
+  content: "\e037";
+}
+.i-photo:before {
+  content: "\e412";
+}
+.i-location:before {
+  content: "\e8b4";
+}
+.i-check-circle:before {
+  content: "\e86c";
+}
+.i-close:before {
+  content: "\e5cd";
+}
+.i-favorite:before {
+  content: "\e87d";
+}
+.i-rss:before {
+  content: "\e0e5";
+}
+.i-share:before {
+  content: "\e80d";
+}
 .i-google:before {
   content: "\f1a0";
 }
 .i-telegram:before {
   content: "\f2c6";
-}
-.i-link:before {
-  content: "\f0c1";
 }
 .i-reddit:before {
   content: "\f281";
@@ -81,49 +141,4 @@
 }
 .i-snapchat:before {
   content: "\f2ac";
-}
-.i-arrow_left:before {
-  content: "\e314";
-}
-.i-arrow_right:before {
-  content: "\e315";
-}
-.i-play:before {
-  content: "\e037";
-}
-.i-star-line:before {
-  content: "\e83a";
-}
-.i-photo:before {
-  content: "\e412";
-}
-.i-location:before {
-  content: "\e8b4";
-}
-.i-check-circle:before {
-  content: "\e86c";
-}
-.i-close:before {
-  content: "\e5cd";
-}
-.i-favorite:before {
-  content: "\e87d";
-}
-.i-star:before {
-  content: "\e838";
-}
-.i-warning:before {
-  content: "\e002";
-}
-.i-rss:before {
-  content: "\e0e5";
-}
-.i-search:before {
-  content: "\e8b6";
-}
-.i-send:before {
-  content: "\e163";
-}
-.i-share:before {
-  content: "\e80d";
 }

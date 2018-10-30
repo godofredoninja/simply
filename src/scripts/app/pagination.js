@@ -3,6 +3,8 @@
  * pagination
  */
 
+import simplyLazyLoadImage from './app.lazy-load';
+
 (function () {
   const $win = $(window);
   const $pathname = $('link[rel=canonical]').attr('href');
@@ -45,22 +47,19 @@
 
           currentPage ++;
 
-          /* Lazy load for image */
-          $('.story-image-lazy').lazyload({ threshold : 200 });
+          // const lol = cssBackgrounds.update(); // eslint-disable-line
 
           $win.on('scroll', onScroll);
         },
         complete: () => {
           setTimeout(() => {$('body').removeClass('is-loading')}, 700);
 
-          // Disqus Update Count
-          if (typeof disqusShortName !== 'undefined') {
-            $('.simply-disqus').removeClass('u-hide');
-            if (typeof DISQUSWIDGETS !== 'undefined') {
-              DISQUSWIDGETS.getCount({reset: true}); // eslint-disable-line
-            }
-          }
+          simplyLazyLoadImage().update();
 
+          // const cssBackgrounds = new LazyLoad({
+          //   elements_selector: '.simply-lazy',
+          // });
+          // cssBackgrounds.update();
         },
 
       });

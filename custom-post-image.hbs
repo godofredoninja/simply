@@ -1,18 +1,29 @@
 {{!-- Layout --}}
-{{!< layout-article }}
+{{!< default}}
 
-{{!-- Image Container --}}
+{{#contentFor "special_body_class"}}is-article is-image{{/contentFor}}
+
 {{#post}}
 
-{{#contentFor "simply_feature_image"}}
-    {{#if feature_image}}
-        <figure class="post-image u-block u-marginAuto u-marginTop30 u-sizeFullWidth">
-            <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}"/>
-        </figure>
-    {{/if}}
+{{#contentFor "simply_image_post"}}
+    <div class="u-container u-maxWidth740 u-paddingTop30">
+        {{!-- Meta - partials/helper/helper-meta.hbs --}}
+        {{> "helper/helper-author-meta"}}
+    </div>
+
+    <div class="pif-wrap u-relative simply-lazy u-bgCover" {{#if feature_image}}data-src="{{feature_image}}"{{/if}}>
+        <header class="post-header u-container u-maxWidth740 u-absolute zindex3">
+            {{!-- Article Title --}}
+            <h1 class="post-title u-fontSize40 u-contentTitle u-md-fontSizeLarger">{{title}}</h1>
+            {{!-- Article Excerpt  --}}
+            {{#if custom_excerpt}}<p class="post-excerpt u-textColorNormal">{{custom_excerpt}}</p>{{/if}}
+        </header>
+        {{!-- bg --}}
+        <div class="u-absolute0 zindex2 pif-grad"></div>
+    </div>
 {{/contentFor}}
 
 {{/post}}
 
 {{!-- Article --}}
-{{> "article"}}
+{{> "article/article"}}

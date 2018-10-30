@@ -36,7 +36,7 @@
     "email": "hello@godofredo.ninja"
   },
   "config": {
-    "posts_per_page": 15
+    "posts_per_page": 12
   },
   "browserslist": [
     "last 2 versions",
@@ -94,11 +94,11 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "jquery-lazyload": "^1.9.7",
-    "lazyload": "^2.0.0-beta.2",
-    "lunr": "1.0.0",
+    "fuzzysort": "^1.1.4",
+    "ghost-search": "^0.1.0",
     "normalize.css": "^7.0.0",
     "prismjs": "^1.9.0",
-    "theia-sticky-sidebar": "^1.7.0"
+    "theia-sticky-sidebar": "^1.7.0",
+    "vanilla-lazyload": "10.17.0"
   }
 }

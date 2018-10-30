@@ -8,11 +8,11 @@ export default links => {
         href="${url}"
         title="Follow me in ${name}"
         target="_blank"
-        class="simply-tracking i-${name}"
-        data-event-category="FollowMe"
+        class="godo-tracking i-${name}"
+        data-event-category="Social"
         data-event-action="Social"
         data-event-label="${name}"
-        data-event-non-interaction="1">
+        data-event-non-interaction="true">
       </a>`;
 
       $('.followMe').append(template);

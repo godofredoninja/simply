@@ -1,0 +1,32 @@
+<nav class="nav u-sizeFullWidth u-fontSizeSmaller u-relative {{^is "home"}}has-sticky{{/is}}">
+    <div class="nav-wrap u-sizeFullWidth u-container u-bgColor">
+        <div class="u-flex u-flexCenter u-headerColorLink u-maxWidth1040 u-marginAuto">
+            {{!-- Logo --}}
+            <div class="nav-left u-flex0 {{#is "home"}}u-hide-after-lg{{/is}}">
+                <a class="nav-logo u-textColorWhite u-block u-lineHeight1 godo-tracking" href="{{@blog.url}}" data-event-category="Header" data-event-action="Logo" data-event-label="Click" data-event-non-interaction="true">
+                    {{#if @blog.logo}}
+                        <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+                    {{else}}
+                        <span class="u-fontSize28 u-fontWeightBold">{{@blog.title}}</span>
+                    {{/if}}
+                </a>
+            </div>
+
+            {{!-- Navigation --}}
+            <div class="nav-menu u-flex u-flex1 u-paddingRight20 u-flexCenter u-hide-before-lg">{{navigation}}</div>
+
+            <div class="nav-right u-flex0 u-flex u-flexEnd">
+                {{!-- follow Me --}}
+                <aside class="follow followMe u-fontSize20 u-flex u-hide-before-lg">
+                    {{#if @blog.facebook}}<a class="godo-tracking i-facebook" data-event-category="Header" data-event-action="Social" data-event-label="Facebook" data-event-non-interaction="true" title="Facebook {{@blog.facebook}}" href="{{facebook_url}}"  rel="nofollow" target="_blank"></a>{{/if}}
+                    {{#if @blog.twitter}}<a class="godo-tracking i-twitter" data-event-category="Header" data-event-action="Social" data-event-label="Twitter" data-event-non-interaction="true" title="Twitter {{@blog.twitter}}" href="{{twitter_url}}"  rel="nofollow" target="_blank"></a>{{/if}}
+                </aside>
+
+                {{!-- Toggle Searcg --}}
+                <a href="#" class="search-toggle u-fontSizeLarge i-search godo-tracking" data-event-category="Header" data-event-action="Search" data-event-label="Click" data-event-non-interaction="true"></a>
+                {{!-- Toggle Menu --}}
+                <a href="#" class="menu-toggle u-relative u-hide-after-lg"><span></span><span></span><span></span></a>
+            </div>
+        </div>
+    </div>
+</nav>

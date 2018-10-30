@@ -1,20 +1,22 @@
 // import external dependencies
-import 'prismjs';
+import 'prismjs/components/prism-core';
 import 'prismjs/plugins/autoloader/prism-autoloader';
-import 'jquery-lazyload';
 import 'theia-sticky-sidebar';
 
 // Import everything from autoload
 import './autoload/**/*';
 
+import './app/simply'
+
 // Pagination infinite scroll
-import './app/pagination';
+import './pagination'
 
 // import local dependencies
 import Router from './util/Router';
 import common from './routes/common';
-import isArticle from './routes/post';
-import isVideo from './routes/video';
+import isArticle from './routes/post'; // <body class="is-article">
+import isVideo from './routes/video'; // <body class="is-video">
+import isNewsletter from './routes/newsletter';
 // import isAudio from './routes/audio';
 
 
@@ -28,6 +30,8 @@ const routes = new Router({
   isVideo,
   // Audio post Format
   // isAudio,
+  // Newsletter
+  isNewsletter,
 });
 
 // Load Events

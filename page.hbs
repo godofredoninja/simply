@@ -1,5 +1,7 @@
 {{!< default}}
 
+{{#contentFor "special_body_class"}}is-article{{/contentFor}}
+
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
@@ -12,7 +14,7 @@
     {{!-- Figure --}}
     {{#if feature_image}}
         <figure class="post-image u-paddingTop30 u-block u-marginAuto u-maxWidth1000">
-            <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}" />
+            <img src="{{feature_image}}" class="u-block u-marginAuto" alt="{{title}}"/>
         </figure>
     {{/if}}
 

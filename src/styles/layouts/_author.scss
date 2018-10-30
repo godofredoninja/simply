@@ -1,8 +1,20 @@
-.author {
-  background-color: #fff;
-  color: rgba(0, 0, 0, .6);
+.cover {
+  align-items: center;
+  display: flex;
+  flex-direction: wrap;
+  justify-content: center;
   min-height: 400px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  position: relative;
 
+  &-title { color: rgba(0, 0, 0, .84) }
+  &-des { max-width: 650px; color: rgba(0, 0, 0, .76) }
+  &-bg { background-color: #000 }
+  &-img { opacity: .5 }
+}
+
+.author {
   &-avatar {
     height: 80px;
     width: 80px;
@@ -12,36 +24,48 @@
     display: inline-block;
     font-size: 17px;
     font-style: italic;
-    margin: 0 25px 16px 0;
-    opacity: .8;
+    margin: 0 10px 16px;
     word-wrap: break-word;
   }
-
-  &-name { color: rgba(0, 0, 0, .8) }
-
-  &-bio { max-width: 600px; }
 }
 
-.author.has--image {
-  color: #fff !important;
-  text-shadow: 0 0 10px rgba(0, 0, 0, .33);
+// tag page
+.tag { min-height: auto !important }
 
-  .author-link:hover { opacity: 1 !important }
+body.has-cover {
+  .cover {
+    color: #fff !important;
+    text-shadow: 0 0 10px rgba(0, 0, 0, .8);
+    min-height: 600px;
 
-  .u-accentColor--iconNormal { fill: #fff; }
+    &-title,
+    &-des,
+    .button { color: #fff }
 
-  a,
-  .author-name { color: #fff; }
-
-  .author-follow a {
-    border: 2px solid;
-    border-color: hsla(0, 0%, 100%, .5) !important;
-    font-size: 16px;
+    .button {
+      border: 1px solid hsla(0, 0%, 100%, .5);
+      background: transparent;
+    }
   }
+
+  .nav-wrap { transition: all 0.4s ease-in-out; border-bottom: 1px solid transparent }
+  .tag { min-height: 350px !important }
+
+  // header
+  .main { margin-top: -($header-height + 2) }
+  .author .u-accentColor--iconNormal { fill: #fff }
+}
+
+body.is-transparent {
+  .nav-wrap {
+    border-bottom: 1px solid hsla(0, 0%, 100%, .1);
+    background-color: transparent !important;
+  }
+
+  .nav-right a, .nav-menu ul li a { color: #fff }
 }
 
 @media #{$md-and-down} {
   .author-meta span { display: block; }
-  .author-header { display: block; }
   .author-avatar { margin: 0 auto 20px; }
 }

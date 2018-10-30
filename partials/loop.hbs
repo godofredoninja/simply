@@ -1,20 +1,27 @@
-<div class="u-maxWidth1000 u-marginAuto">
-    <div class="row u-paddingTop30">
+<div class="u-container">
+    <div class="u-maxWidth1000 u-marginAuto">
+        <div class="row u-paddingTop30">
+            <div class="col s12 col-left">
+                <div class="feed-entry-content u-maxWidth740 u-marginAuto">
+                    <div class="feed-entry-wrap">
 
-        <div class="content col s12">
-            <div class="feed-entry-content">
-                <div class="feed-entry-wrap">
-                    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-                    {{>"card"}}
+                        {{#foreach posts}}
+                            {{>"story/story-card"}}
+
+                            {{!-- ad --}}
+                            {{#has number="5"}}{{> "ad/ad-loop-medium"}}{{/has}}
+                            {{#has number="10"}}{{> "ad/ad-loop-footer"}}{{/has}}
+                        {{/foreach}}
+
+                    </div>
                 </div>
+
+                {{!-- Pagination - partials/pagination.hbs --}}
+                {{"pagination"}}
             </div>
 
-            {{!-- Pagination --}}
-            {{^is "paged"}}<a href="#" class="loadMore link--accent" data-page-total="{{pagination.pages}}">Load more</a>{{else}}{{"pagination"}}{{/is}}
+            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+            {{>"sidebar/sidebar"}}
         </div>
-
-        {{!-- Sidebar --}}
-        {{>"sidebar"}}
-
     </div>
 </div>

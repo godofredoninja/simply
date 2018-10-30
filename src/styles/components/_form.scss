@@ -1,9 +1,9 @@
 .button {
-  background: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, .15);
-  border-radius: 4px;
+  background: rgba(0, 0, 0, .05);
+  border-radius: 3px;
+  border: 2px solid transparent;
   box-sizing: border-box;
-  color: rgba(0, 0, 0, .44);
+  color: rgba(0, 0, 0, .68);
   cursor: pointer;
   display: inline-block;
   font-family: $primary-font;
@@ -18,91 +18,99 @@
   text-align: center;
   text-decoration: none;
   text-rendering: optimizeLegibility;
+  transition: .1s background-color, .1s border-color, .1s color, .1s fill;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
 
-  &--chromeless {
-    border-radius: 0;
-    border-width: 0;
-    box-shadow: none;
-    color: rgba(0, 0, 0, .44);
-    height: auto;
-    line-height: inherit;
-    padding: 0;
-    text-align: left;
-    vertical-align: baseline;
-    white-space: normal;
-
-    &:active,
-    &:hover,
-    &:focus {
-      border-width: 0;
-      color: rgba(0, 0, 0, .6);
-    }
-  }
-
-  &--large {
-    font-size: 15px;
-    height: 44px;
-    line-height: 42px;
-    padding: 0 18px;
-  }
-
-  &--dark {
-    border-color: rgba(0, 0, 0, .6);
-    color: rgba(0, 0, 0, .6);
-
-    &:hover {
-      border-color: rgba(0, 0, 0, .8);
-      color: rgba(0, 0, 0, .8);
-    }
+  &:hover {
+    background: rgba(0, 0, 0, .1);
+    color: rgba(0, 0, 0, .68);
   }
 }
 
-// Primary
+//   &--chromeless {
+//     border-radius: 0;
+//     border-width: 0;
+//     box-shadow: none;
+//     color: rgba(0, 0, 0, .44);
+//     height: auto;
+//     line-height: inherit;
+//     padding: 0;
+//     text-align: left;
+//     vertical-align: baseline;
+//     white-space: normal;
+
+//     &:active,
+//     &:hover,
+//     &:focus {
+//       border-width: 0;
+//       color: rgba(0, 0, 0, .6);
+//     }
+//   }
+
+//   &--large {
+//     font-size: 15px;
+//     height: 44px;
+//     line-height: 42px;
+//     padding: 0 18px;
+//   }
+
+//   &--dark {
+//     border-color: rgba(0, 0, 0, .6);
+//     color: rgba(0, 0, 0, .6);
+
+//     &:hover {
+//       border-color: rgba(0, 0, 0, .8);
+//       color: rgba(0, 0, 0, .8);
+//     }
+//   }
+// }
+
+// // Primary
 .button--primary {
-  border-color: $primary-color;
+  border: 1px solid $primary-color;
   color: $primary-color;
 }
 
-.button--large.button--chromeless,
-.button--large.button--link {
-  padding: 0;
-}
+// .button--large.button--chromeless,
+// .button--large.button--link {
+//   padding: 0;
+// }
 
 .buttonSet {
   > .button {
     margin-right: 8px;
+    margin-bottom: 8px;
     vertical-align: middle;
+    &:last-child { margin-right: 0 }
   }
 
-  > .button:last-child {
-    margin-right: 0;
-  }
-
-  .button--chromeless {
-    height: 37px;
-    line-height: 35px;
-  }
-
-  .button--large.button--chromeless,
-  .button--large.button--link {
-    height: 44px;
-    line-height: 42px;
-  }
-
-  & > .button--chromeless:last-child {
-    padding-right: 0;
-  }
-
-  & > .button--chromeless:not(.button--circle) {
-    margin-right: 0;
-    padding-right: 8px;
-  }
-
-  & > .button--chromeless + .button--chromeless:not(.button--circle) {
-    margin-left: 0;
-    padding-left: 8px;
-  }
+  // &.not-margin .button { margin-bottom: 0 !important }
 }
+
+//   .button--chromeless {
+//     height: 37px;
+//     line-height: 35px;
+//   }
+
+//   .button--large.button--chromeless,
+//   .button--large.button--link {
+//     height: 44px;
+//     line-height: 42px;
+//   }
+
+//   & > .button--chromeless:last-child {
+//     padding-right: 0;
+//   }
+
+//   & > .button--chromeless:not(.button--circle) {
+//     margin-right: 0;
+//     padding-right: 8px;
+//   }
+
+//   & > .button--chromeless + .button--chromeless:not(.button--circle) {
+//     margin-left: 0;
+//     padding-left: 8px;
+//   }
+// }

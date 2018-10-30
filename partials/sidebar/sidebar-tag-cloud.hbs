@@ -1,0 +1,12 @@
+{{#get "tags" limit="10" include="count.posts" order="count.posts desc"}}
+
+<div class="sidebar-items">
+    <h3 class="sidebar-title"><span>{{t "Tag Cloud"}}</span></h3>
+    <div class="buttonSet">
+        {{#foreach tags}}
+            <a href="{{url absolute="true"}}" title="{{name}}" class="button godo-tracking" data-event-category="Sidebar" data-event-action="Tags" data-event-label="{{name}}" data-event-non-interaction="true">{{name}}</a>
+        {{/foreach}}
+    </div>
+</div>
+
+{{/get}}
