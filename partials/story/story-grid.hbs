@@ -1,0 +1,28 @@
+<article class="story u-relative">
+    <div class="story-image u-relative u-borderLighter u-bgColorGrayLight u-overflowHidden">
+        <div class="simply-lazy u-absolute0 u-block u-bgCover {{#unless feature_image}}not-image{{/unless}}" {{#if feature_image}}data-src="{{feature_image}}"{{/if}}></div>
+        <span class="story-gradient u-backgroundDark"></span>
+        {{!-- icon star if is featured post --}}
+        {{#if featured}}<span class="story-icon-featured u-absolute u-textColorWhite i-star-line"></span>{{/if}}
+    </div>
+    <section class="story-body u-paddingTop15">
+        {{!-- Primary tag --}}
+        {{!-- {{#if primary_tag}}{{#primary_tag}}
+            <div class="story-tag u-lineHeight1 u-fontSizeSmaller">
+                <a href="{{url}}" class="u-relative zindex4 u-fontWeightSemibold u-textUppercase link--underline">{{name}}</a>
+            </div>
+        {{/primary_tag}}{{/if}} --}}
+
+        <h2 class="story-title u-contentTitle u-fontSize20"><a href="{{url}}">{{title}}</a></h2>
+        <p class="story-excerpt u-fontSizeBase u-lineHeightTight u-marginBottom20">{{excerpt words="12"}}</p>
+
+        {{!-- Author Meta --}}
+        <div class="story-author u-flex">
+            {{#primary_author}}<a href="{{url}}" class="hh-author-name link--underline u-textColorDarker u-relative zindex4">{{name}}</a>{{/primary_author}}
+            <span class="points u-textColorNormal"></span>
+            {{> "helper/helper-datetime"}}
+        </div>
+    </section>
+    {{!-- link --}}
+    <a href="{{url}}" class="u-absolute0 zindex3"></a>
+</article>

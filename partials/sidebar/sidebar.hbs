@@ -1,0 +1,28 @@
+<aside class="sidebar col u-hide-before-lg sidebar-sticky">
+    {{!-- Sidebar Content Optional --}}
+    {{!-- <div class="sidebar-items">
+        <h3 class="sidebar-title"><span>Bienvenidos</span></h3>
+        <p class="u-textColorDarker u-fontSize15 u-marginBottom10">
+            It’s time to get more from what you read. Find and share real perspectives about topics that matter today.
+        </p>
+    </div> --}}
+
+    {{!-- Add Post Recents --}}
+    {{#is "home"}}
+        {{#get "posts" filter="featured:true" limit="4" as |sidebar_featured_post| }}
+            {{#if sidebar_featured_post}}
+                {{> "sidebar/sidebar-post" widgetTitle=(t "Featured Articles") widgetPosts=sidebar_featured_post }}
+            {{/if}}
+        {{/get}}
+    {{else}}
+        {{#get "posts" limit="4" as |sidebar_latest_post| }}
+            {{> "sidebar/sidebar-post" widgetTitle=(t "Latest Articles") widgetPosts=sidebar_latest_post }}
+        {{/get}}
+    {{/is}}
+
+    {{!-- Tag Cloud - partials/sidebar/sidebar-tag-cloud.hbs --}}
+    {{> "sidebar/sidebar-tag-cloud"}}
+
+    {{!-- ad --}}
+    {{> "ad/ad-sidebar"}}
+</aside>

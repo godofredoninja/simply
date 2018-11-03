@@ -1,0 +1,60 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#contentFor "special_body_class"}}is-newsletter u-bgWhite{{/contentFor}}
+
+{{#post}}
+
+<article class="post ne">
+    <header class="ne-h u-container">
+        <div class="ne-inner u-maxWidth740 u-marginAuto u-relative u-flexColumn u-flexCenter u-textAlignCenter">
+            <h1 class="ne-t u-contentTitle">{{title}}</h1>
+            {{#if custom_excerpt}}<p class="ne-e u-textColorNormal">{{custom_excerpt}}</p>{{/if}}
+        </div>
+    </header>
+
+    <section class="ne-body u-relative u-container"><div class="post-body u-maxWidth1000 u-marginAuto ">{{content}}</div></section>
+</article>
+
+{{/post}}
+
+{{!-- <div class="godo-ne">
+    <!-- Replace => Action -->
+    <form id="godo-form" class="godo-ne-form" action="https://ninja.us10.list-manage.com/subscribe/post?u=5c52d5a541f6ab2e8d6020e82&id=f5f6d462c4" method="get">
+        <label for="fieldEmail">Email Address</label>
+        <div class="godo-ne-form-group">
+            <input class="godo-ne-input" name="EMAIL" type="email" placeholder="yourname@example.com" required="">
+            <button class="godo-ne-button button" type="submit">Subscribe</button>
+        </div>
+        <small>No marketing campaigns. No jibber jabber. Unsubscribe anytime.</small>
+    </form>
+    <div class="godo-ne-success u-hide">
+        <h3>✉️ Nice! Please check your email</h3>
+        <p>Click on the link in your inbox to confirm your subscription</p>
+    </div>
+</div> --}}
+
+{{!-- <div class="godo-n-q">
+
+    <div class="godo-n-q-i">
+        <img src="https://blog.ghost.org/content/images/2018/04/tim.jpeg">
+        <h3>Tim Cook</h3>
+        <div class="godo-n-q-d">CEO, Apple</div>
+        <blockquote>"This is a pretty fantastic newsletter tbh, I definitely recommend it"</blockquote>
+    </div>
+
+    <div class="godo-n-q-i">
+        <img src="https://blog.ghost.org/content/images/2018/04/satya.jpg">
+        <h3>Satya Nadella</h3>
+        <div class="godo-n-q-d">CEO, Microsoft</div>
+        <blockquote>"Finally, this newsletter is something we can really agree on"</blockquote>
+    </div>
+
+    <div class="godo-n-q-i">
+        <img src="https://blog.ghost.org/content/images/2018/04/gravatar-j8.jpg">
+        <h3>John O'Nolan</h3>
+        <div class="godo-n-q-d">CEO, Ghost</div>
+        <blockquote>"I should really get around to organising some quotes one of these days"</blockquote>
+    </div>
+
+</div> --}}

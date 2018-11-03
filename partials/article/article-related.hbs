@@ -1,0 +1,21 @@
+{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |post_related|}}
+{{#if post_related}}
+
+<div class="post-related u-bgWhite u-paddingTop30 u-paddingBottom20">
+    {{!-- Ad --}}
+    {{> "ad/ad-article-medium"}}
+
+    <div class="u-container u-maxWidth1200">
+        <div class="row">
+            {{#foreach post_related}}
+            <div class="col s12 m6 l4 u-flex">
+                {{!-- Meta - partials/story/story-card-small.hbs --}}
+                {{> "story/story-card-small"}}
+            </div>
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{/if}}
+{{/get}}

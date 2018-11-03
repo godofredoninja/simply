@@ -1,0 +1,48 @@
+{{!-- Post Actions share and next post--}}
+<div class="pa">
+    <div class="pa-wrap u-marginAuto u-flex">
+        <div class="u-flex u-flex1 u-flexCenter u-hide-before-lg">
+            {{!-- Prev Post--}}
+            {{#next_post}}
+            <div class="nextPost godo-tracking" data-event-category="Article" data-event-action="Previous - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true">
+                <a href="{{url}}" class="u-block">
+                    <span class="u-block u-textColorNormal u-contentTitle u-fontSizeSmaller u-lineHeight1 u-fontWeightSemibold">{{t "Prev article"}}</span>
+                    <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>
+                </a>
+            </div>
+            <div class="separator"></div>
+            {{/next_post}}
+
+            <a href="#post-comments" class="button scroll-id godo-tracking" data-event-category="Article" data-event-action="Comments" data-event-label="Click" data-event-non-interaction="true">
+                <i class="i-comments"></i>
+                {{!-- Disqus Comments Count --}}
+                <span class="disqus-comment-count u-fontSizeSmall simply-disqus u-hide" data-disqus-url="{{url absolute="true"}}">0 {{t "Comments"}}</span>
+                {{!-- Facebook Comments Counts --}}
+                <span class="fb-comments-count u-fontSizeSmall simply-facebook u-hide" data-href="{{url absolute="true"}}">0</span>
+                <span class="u-fontSizeSmall simply-facebook u-hide">{{t "Comments"}}</span>
+            </a>
+        </div>
+
+        {{!-- post Share--}}
+        <div class="pa-s u-flex u-flex1 u-flexCenter">
+            <a href="#" title="{{t "Share on"}} Facebook" class="godo-tracking simply-share i-facebook bg-facebook" data-share="facebook" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Facebook - Footer" data-event-non-interaction="true">Share</a>
+            <a href="#" title="{{t "Share on"}} Twitter" class="godo-tracking simply-share i-twitter bg-twitter" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}" data-event-category="Article" data-event-action="Share" data-event-label="Twitter - Footer" data-event-non-interaction="true">Tweet</a>
+            <a href="#" title="{{t "Share on"}} whatsapp" class="godo-tracking simply-share i-whatsapp bg-whatsapp u-hide-after-md" data-share="whatsapp" data-title="{{title}}" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Whatsapp - Footer" data-event-non-interaction="true">Send</a>
+        </div>
+
+        <div class="u-flex u-flex0 u-flexCenter u-hide-before-lg">
+            {{!-- next Post--}}
+            {{#prev_post}}
+            <div class="separator"></div>
+
+            <div class="nextPost godo-tracking" data-event-category="Article" data-event-action="Next - Article" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true">
+                <a href="{{url}}" class="u-block">
+                    <span class="u-block u-textColorNormal u-contentTitle u-fontSizeSmaller u-lineHeight1 u-fontWeightSemibold">{{t "Next article"}}</span>
+                    <h4 class="u-contentTitle u-fontSizeSmall u-noWrapWithEllipsis u-fontWeightBold">{{title}}</h4>
+                </a>
+            </div>
+            {{/prev_post}}
+        </div>
+
+    </div>
+</div>

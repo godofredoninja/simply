@@ -1,0 +1,35 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-podcast has-cover is-transparent{{/contentFor}}
+
+{{#post}}
+<section class="spc-header u-bgCover simply-lazy u-relative u-overflowHidden" data-src="{{feature_image}}">
+    <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex2 u-textAlignCenter">
+        <h1 class="spc-h-t u-md-fontSizeLarger">{{title}}</h1>
+        {{content}}
+    </div>
+</section>
+{{/post}}
+
+{{!-- ad --}}
+{{> "ad/ad-podcast-top"}}
+
+<section class="u-container">
+    <div class="feed-entry-content u-maxWidth1000 u-marginAuto u-paddingTop30">
+        <div class="feed-entry-wrap row">
+        {{#foreach posts}}
+            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+            {{>"story/story-podcast"}}
+
+            {{!-- ad --}}
+            {{#has number="4"}}{{> "ad/ad-podcast-medium"}}{{/has}}
+            {{#has number="8"}}{{> "ad/ad-podcast-footer"}}{{/has}}
+        {{/foreach}}
+        </div>
+    </div>
+</section>
+
+{{!-- Pagination --}}
+{{"pagination"}}

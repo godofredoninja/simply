@@ -1,0 +1,23 @@
+<article class="card u-card u-relative {{#has number="nth:3"}}uu{{/has}}">
+    {{!-- Meta - partials/helper/helper-meta.hbs --}}
+    {{> "helper/helper-author-meta"}}
+
+    <div class="card-body u-flexColumnTop">
+        <h2 class="card-title u-contentTitle"><a href="{{url}}">{{title}}</a></h2>
+        <p class="card-excerpt">{{excerpt words="25"}}</p>
+
+        {{#if feature_image}}
+            <figure class="card-image u-overflowHidden u-marginTop20 u-relative">
+                <img class="card-img u-block" src="{{feature_image}}" alt="{{title}}"/>
+            </figure>
+        {{/if}}
+
+        {{!-- Read More --}}
+        <div class="u-block u-paddingTop15 u-fontSize15 u-fontWeightSemibold">
+            <a href="{{url}}" class="u-hoverColorNormal u-textColorNormal u-relative zindex4">{{t "Read More"}}...</a>
+        </div>
+    </div>
+
+    {{!-- Link --}}
+    <a href="{{url}}" class="u-absolute0 zindex3"></a>
+</article>

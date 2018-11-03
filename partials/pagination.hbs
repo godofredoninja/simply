@@ -1,4 +1,5 @@
-<nav class="pagination u-maxWidth1000 u-marginAuto u-textAlignCenter u-fontSize15 u-marginTop30" role="navigation">
+{{#is "paged"}}
+    <nav class="pagination u-maxWidth1000 u-marginAuto u-textAlignCenter u-fontSize15 u-marginTop30" role="navigation">
     {{#if prev}}
         <a class="newer-posts link--accent" href="{{page_url prev}}">&larr; {{t "Newer Posts"}}</a>
     {{/if}}
@@ -7,3 +8,4 @@
         <a class="older-posts link--accent" href="{{page_url next}}">{{t "Older Posts"}} &rarr;</a>
     {{/if}}
 </nav>
+{{/is}}

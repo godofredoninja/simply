@@ -1,13 +1,27 @@
 {{!-- Layout --}}
-{{!< layout-article }}
+{{!< default}}
 
 {{!-- custom Styles For tag <body> --}}
-{{#contentFor "simply_class_body"}}is-video{{/contentFor}}
+{{#contentFor "special_body_class"}}is-article is-video{{/contentFor}}
 
-{{!-- Video Container --}}
-{{#contentFor "simply_video"}}
+{{#post}}
+
+{{#contentFor "simply_video_post"}}
+    <header class="post-header u-container u-maxWidth740 u-paddingTop30">
+        {{!-- Meta - partials/helper/helper-meta.hbs --}}
+        {{> "helper/helper-author-meta"}}
+        {{!-- Article Title --}}
+        <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-md-fontSizeLarger">{{title}}</h1>
+        {{!-- Article Excerpt  --}}
+        {{#if custom_excerpt}}<p class="post-excerpt u-textColorNormal u-marginBottom20">{{custom_excerpt}}</p>{{/if}}
+    </header>
+
+    {{!-- Video Container --}}
     <div class="video-post-format u-marginAuto u-maxWidth1000 u-hide"></div>
 {{/contentFor}}
 
+{{/post}}
+
 {{!-- Article --}}
-{{> "article"}}
+{{> "article/article"}}
+

@@ -1,0 +1,16 @@
+<article class="col s12 m6 l12 u-flex">
+    <div class="spc-c u-relative u-marginBottom30">
+        <div class="spc-c-img u-bgCover u-relative u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div>
+        <div class="spc-c-body">
+            {{> "helper/helper-author-meta"}}
+            <h2 class="spc-c-title u-contentTitle card-title"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
+            <p class="spc-c-excerpt u-marginBottom20 card-excerpt">{{excerpt}}</p>
+            <a href="{{url}}" class="listen-btn button u-textUppercase u-fontSizeSmall u-relative zindex3">
+                <span class="listen-icon svg-icon">{{> "icons/icon-listen"}}</span>
+                {{t "Listen"}}
+            </a>
+        </div>
+
+        <a href="{{url}}" class="u-absolute0 zindex2"></a>
+    </div>
+</article>
