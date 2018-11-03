@@ -10,7 +10,7 @@ It is available for free so you can use on your site. It is strictly forbidden t
 
 ## If you have a ❤ heart and value my work. 🙏 Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
 
-![Simply free theme for ghost](./screenshot.png)
+![Simply free theme for ghost](./screenshot.jpg)
 
 ## Demo
 
@@ -26,7 +26,7 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 - Include sections to add ads
 - Include Google Analytics Tracking use (Google Tag Manager)
 - Custom Search Engine (works almost in all languages)
-- Template Page Newsletter
+- Template Page Newsletter (Mailchimp)
 - Template Page Podcast
 - Template Page Tag
 - Template Video Post Format
