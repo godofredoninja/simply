@@ -148,6 +148,7 @@ This enables comments and comment counter
 - `es` — Español
 - `de` — German - By [dkbast](https://github.com/dkbast)
 - `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz)
+- `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
 
 ![](./documentation/language.png)
 
