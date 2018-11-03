@@ -62,10 +62,11 @@ body.is-transparent {
     background-color: transparent !important;
   }
 
+  .menu-toggle span { background: #fff }
   .nav-right a, .nav-menu ul li a { color: #fff }
 }
 
 @media #{$md-and-down} {
   .author-meta span { display: block; }
-  .author-avatar { margin: 0 auto 20px; }
+  .author-avatar { margin-top: 20px; }
 }

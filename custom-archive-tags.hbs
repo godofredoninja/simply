@@ -20,7 +20,7 @@
                 <h2 class="u-fontSize22 u-contentTitle u-flex1"><a href="{{url}}">{{name}}</a></h2>
                 <div class="topic-c u-flex0 u-textAlignCenter u-round u-fontWeightSemibold u-fontSizeBase">{{count.posts}}</div>
             </div>
-            <div class="topic-img u-bgCover simply-lazy u-bgColorGrayLight" {{#if feature_image}}data-src="{{feature_image}}"{{/if}}></div>
+            <div class="topic-img u-bgCover simply-lazy u-bgColorGrayLight" data-src="{{#if feature_image}}{{feature_image}}{{else}}{{asset "images/not-image.jpg"}}{{/if}}"></div>
             <a href="{{url}}" class="u-absolute0 zindex2"></a>
         </div>
     </div>

@@ -4,12 +4,12 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}} is-frontpage{{/contentFor}}
 
-<div class="feed-entry-content u-container">
+<section class="feed-entry-content u-container">
     {{!-- Ad --}}
     {{> "ad/ad-home-top"}}
 
     <div class="feed-entry-wrap u-maxWidth1040 u-marginAuto u-marginTop30 u-marginBottom40">
-        <section class="row">
+        <div class="row">
             {{#foreach posts}}
                 {{!-- <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else}}{{#has number="5, 6, 11, 12"}}s6 ss2{{else}}{{#has number="7"}}l12 ss3{{else}}l4{{/has}}{{/has}}{{/has}}"></div> --}}
                 <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else has number="5, 6, 11, 12"}}s6 ss2{{else has number="7"}}l12 ss3{{else}}l4{{/has}}">
@@ -18,11 +18,11 @@
 
                 {{!-- ad --}}
                 {{#has number="6"}}<div class="col s12">{{> "ad/ad-home-medium"}}</div>{{/has}}
-                {{#has number="12"}}<div class="col s12">{{> "ad/ad-home-footer"}}{{/has}}
+                {{#has number="12"}}<div class="col s12">{{> "ad/ad-home-footer"}}</div>{{/has}}
             {{/foreach}}
-        </section>
+        </div>
     </div>
-</div>
+</section>
 
 {{!-- Pagination - partials/pagination.hbs --}}
 {{"pagination"}}
