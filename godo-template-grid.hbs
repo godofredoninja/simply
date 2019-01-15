@@ -3,17 +3,4 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}}{{/contentFor}}
 
-<div class="feed-entry-content u-container">
-    <div class="feed-entry-wrap u-maxWidth1040 u-marginAuto u-marginTop30 u-marginBottom40">
-        <section class="row">
-            {{#foreach posts}}
-                <div class="col s12 m6 l4">
-                    {{> "story/story-grid" }}
-                </div>
-            {{/foreach}}
-        </section>
-    </div>
-</div>
-
-{{!-- Pagination - partials/pagination.hbs --}}
-{{"pagination"}}
+{{> "loop"}}

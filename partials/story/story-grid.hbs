@@ -1,26 +1,34 @@
 <article class="story u-relative">
-    <div class="story-image u-relative u-borderLighter u-bgColorGrayLight u-overflowHidden">
-        <div class="simply-lazy u-absolute0 u-block u-bgCover {{#unless feature_image}}not-image{{/unless}}" {{#if feature_image}}data-src="{{feature_image}}"{{/if}}></div>
-        <span class="story-gradient u-backgroundDark"></span>
+    <figure class="story-image u-relative u-borderLighter u-bgColorGrayLight u-overflowHidden">
+        {{!-- Imagenes --}}
+        {{#if feature_image}}
+            <img class="story-img u-absolute u-image u-block lazyload"
+                src="{{img_url feature_image size="m"}}"
+                srcset="{{img_url feature_image size="xxs"}}"
+                data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+                data-sizes="(max-width: 1000px) 400px, 600px"
+                alt="{{title}}"
+            />
+        {{else}}
+            <div class="u-absolute0 u-block u-bgCover not-image"></div>
+        {{/if}}
+
         {{!-- icon star if is featured post --}}
         {{#if featured}}<span class="story-icon-featured u-absolute u-textColorWhite i-star-line"></span>{{/if}}
-    </div>
+    </figure>
     <section class="story-body u-paddingTop15">
-        {{!-- Primary tag --}}
-        {{!-- {{#if primary_tag}}{{#primary_tag}}
-            <div class="story-tag u-lineHeight1 u-fontSizeSmaller">
-                <a href="{{url}}" class="u-relative zindex4 u-fontWeightSemibold u-textUppercase link--underline">{{name}}</a>
-            </div>
-        {{/primary_tag}}{{/if}} --}}
-
-        <h2 class="story-title u-contentTitle u-fontSize20"><a href="{{url}}">{{title}}</a></h2>
-        <p class="story-excerpt u-fontSizeBase u-lineHeightTight u-marginBottom20">{{excerpt words="12"}}</p>
+        <h2 class="story-title u-contentTitle u-fontSize22 u-lineHeight1"><a href="{{url}}">{{title}}</a></h2>
+        <p class="story-excerpt u-fontSizeSmall u-marginBottom20">{{excerpt words="12"}}</p>
 
         {{!-- Author Meta --}}
-        <div class="story-author u-flex">
-            {{#primary_author}}<a href="{{url}}" class="hh-author-name link--underline u-textColorDarker u-relative zindex4">{{name}}</a>{{/primary_author}}
-            <span class="points u-textColorNormal"></span>
-            {{> "helper/helper-datetime"}}
+        <div class="u-flexCenter u-fontSize15">
+            {{#primary_author}}
+            <span class="u-relative avatar-image" style="margin-right:5px">
+                <img class="u-absolute u-image u-block u-round lazyload" data-src="{{#if profile_image}}{{img_url profile_image size="xxs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{name}}">
+            </span>
+            <a href="{{url}}" class="link--underline u-textColorDarker u-relative zindex4" style="margin-right:5px">{{name}}</a>
+            {{/primary_author}}
+            <time class="datetime u-textCapitalize u-textColorNormal" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMMM DD, YYYY"}}</time>
         </div>
     </section>
     {{!-- link --}}

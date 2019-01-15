@@ -1,6 +1,16 @@
 <article class="col s12 m6 l12 u-flex">
     <div class="spc-c u-relative u-marginBottom30">
-        <div class="spc-c-img u-bgCover u-relative u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div>
+        <div class="spc-c-img u-relative u-bgColorGrayLight">
+            {{#if feature_image}}
+            <img class="u-absolute u-image u-block lazyload"
+                data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+                data-sizes="(max-width: 1000px) 400px, 600px"
+                data-src="{{img_url feature_image size="m"}}"
+                alt="{{title}}"
+            />
+            {{/if}}
+        </div>
+
         <div class="spc-c-body">
             {{> "helper/helper-author-meta"}}
             <h2 class="spc-c-title u-contentTitle card-title"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>

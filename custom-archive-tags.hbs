@@ -1,29 +1,43 @@
 {{!-- Layout --}}
 {{!< default}}
+<div class="u-container">
 
-<section class="topic u-container u-maxWidth1000 u-paddingTop30">
+<section class="topic u-maxWidth1100 u-paddingTop30 u-marginAuto">
 {{#post}}
     <div class="topic-header u-marginBottom40 u-paddingTop10">
         <h1 class="topic-t u-fontSizeLarger u-contentTitle">{{title}}</h1>
     </div>
 {{/post}}
 
-{{#get "tags" limit="all" include="count.posts" order="count.posts desc"}}
+{{#get "tags" limit="18" include="count.posts" order="count.posts desc"}}
 
 <div class="row">
 
     {{#foreach tags}}
 
-    <div class="col s12 m6 l4 u-marginBottom30">
+    <article class="col s12 m6 l4 u-marginBottom40">
         <div class="topic-items u-relative">
-            <div class="topic-h u-flexCenter">
-                <h2 class="u-fontSize22 u-contentTitle u-flex1"><a href="{{url}}">{{name}}</a></h2>
-                <div class="topic-c u-flex0 u-textAlignCenter u-round u-fontWeightSemibold u-fontSizeBase">{{count.posts}}</div>
-            </div>
-            <div class="topic-img u-bgCover simply-lazy u-bgColorGrayLight" data-src="{{#if feature_image}}{{feature_image}}{{else}}{{asset "images/not-image.jpg"}}{{/if}}"></div>
+            <figure class="topic-img u-relative u-bgColorGrayLight">
+                {{!-- Imagenes --}}
+                {{#if feature_image}}
+                    <img class="u-absolute u-image u-block lazyload"
+                        data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w"
+                        data-sizes="(max-width: 1000px) 400px, 600px"
+                        data-src="{{img_url feature_image size="m"}}"
+                        alt="{{name}}"
+                    />
+                {{else}}
+                    <div class="u-absolute0 u-block u-bgCover" style="background-image: url({{asset "images/not-image.jpg"}})"></div>
+                {{/if}}
+            </figure>
+            <header class="topic-h u-paddingTop20">
+                <h2 class="topic-st u-fontWeightSemibold u-fontSize20 u-paddingBottom10"><a href="{{url}}">{{name}}</a></h2>
+                {{#if description}}<p class="topic-d u-fontSizeSmall u-overflowHidden">{{description}}</p>{{/if}}
+                <p class="u-fontSize15 u-textColorNormal">{{count.posts}} {{t "Stories"}}</p>
+            </header>
             <a href="{{url}}" class="u-absolute0 zindex2"></a>
         </div>
-    </div>
+    </article>
 
     {{/foreach}}
 
@@ -32,3 +46,5 @@
 {{/get}}
 
 </section>
+
+</div>

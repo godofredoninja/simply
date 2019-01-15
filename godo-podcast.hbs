@@ -5,8 +5,21 @@
 {{#contentFor "special_body_class"}}is-podcast has-cover is-transparent{{/contentFor}}
 
 {{#post}}
-<section class="spc-header u-bgCover simply-lazy u-relative u-overflowHidden" data-src="{{feature_image}}">
-    <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex2 u-textAlignCenter">
+<section class="spc-header u-relative u-overflowHidden">
+    {{#if feature_image}}
+        <img
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{title}}"
+            class="u-absolute u-image u-block"
+        />
+    {{/if}}
+
+    <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex3 u-textAlignCenter">
         <h1 class="spc-h-t u-md-fontSizeLarger">{{title}}</h1>
         {{content}}
     </div>

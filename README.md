@@ -1,14 +1,16 @@
 # Simply free theme for [Ghost](https://github.com/tryghost/ghost/)
 
 [![Ghost version](https://img.shields.io/badge/Ghost-2.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
-[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://bit.ly/PayPal-GodoFredoNinja)
+[![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
 
 > *Simple and Elegant Theme*
 
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK).
 
-## If you have a ❤ heart and value my work. 🙏 Please, help me with a small donation on [Paypal](https://bit.ly/PayPal-GodoFredoNinja). It'll help motivate me to update the theme with many improvements
+## 🙏 Please, help me with a small donation [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url) or [PayPal](https://www.paypal.me/godofredoninja). It'll help motivate me to update the theme with many improvements
+
+[![donate](./donate.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
 
 ![Simply free theme for ghost](./screenshot.jpg)
 
@@ -146,17 +148,21 @@ var followSocialMedia = {
   'flickr':'https://...',
   'pinterest':'https://...',
   'telegram':'https://...',
-  'feed':'https://...',
+  'rss':'https://...',
 };
 
 /* 02. YouTube Subscribe Button */
-var youtubeChannelName = 'YOUR_CHANNEL_NAME';
-var youtubeChannelID = 'YOUR_CHANNEL_ID';
+var youTube = {
+  name: 'YOUR_CHANNEL_NAME',
+  channelId: 'YOUR_CHANNEL_ID'
+};
 
 /* 03. Instagram */
-var instagramToken = 'Token_app_instagram';
-var instagramUserId = 'User_ID';
-var instagramUserName = 'User_Name';
+var instagramFeed  = {
+  token: 'Token_app_instagram',
+  userId: 'User_ID',
+  userName: 'User_Name',
+};
 
 
 /* 04. Comments */
@@ -632,7 +638,7 @@ Take a look at the [Prismjs Supported Language List](http://prismjs.com/#languag
 - [Prismjs](http://prismjs.com/)
 - [Theia Sticky Sidebar](https://github.com/WeCodePixels/theia-sticky-sidebar)
 - [zoom.js](https://github.com/fat/zoom.js/)
-- [Vanilla Lazyload](https://github.com/verlok/lazyload)
+- [lazysizes](https://github.com/aFarkas/lazysizes)
 - [Fonts](https://fonts.google.com/?selection.family=Merriweather:300,400,700|Source+Code+Pro|Source+Sans+Pro:300,400,600,700&query=Merriweather)
 
 ## Copyright & License

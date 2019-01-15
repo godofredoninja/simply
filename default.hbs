@@ -10,7 +10,7 @@
 
     {{!-- Mobile Meta --}}
     <meta name="HandheldFriendly" content="True" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{!-- Styles'n'Scripts --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
@@ -19,7 +19,7 @@
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 </head>
-<body class="{{block "special_body_class"}}" data-page="{{@blog.url}}">
+<body class="{{block "special_body_class"}}">
 
     {{!-- Header Content --}}
     {{>"header"}}
@@ -29,37 +29,33 @@
 
     {{!-- Footer Content --}}
     {{>"footer"}}
+    {{!-- {{>"footer-two"}} --}}
 
     {{!-- Search box --}}
     {{> "widget/search"}}
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> --}}
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
+
+    {{!-- Blog URL --}}
+    <script>var siteUrl = '{{@site.url}}';</script>
 
     {{#if pagination.pages}}
         <script>var maxPages = parseInt('{{pagination.pages}}');</script>
     {{/if}}
 
-    {{#is "home"}}
-    <script>
-        var $nav = $('body.is-home').find('.nav-wrap');
-        var navHeight = $nav.offset().top;
-
-        $(window).on('scroll', function(){
-            if ( $(window).scrollTop() > navHeight ){
-                $nav.addClass('sticky');
-            } else {
-                $nav.removeClass('sticky');
-            }
-        });
-    </script>
-    {{/is}}
-
     {{!-- The main JavaScript --}}
-    <script src="{{asset "scripts/main.js"}}"></script>
+    <script src="{{asset "scripts/main.js"}}" defer></script>
+    {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer></script>{{/if}}
+    {{!-- <script src="{{asset "scripts/search.js"}}" defer></script> --}}
 
     {{!-- script --}}
     {{{block "scripts"}}}
@@ -68,11 +64,11 @@
     <div class="loadingBar"></div>
 
     {{!-- Return home top page scroll --}}
-    <a href="#" class="rocket u-hide-before-md u-hide">
+    <a href="#" class="rocket u-hide-before-lg u-hide">
         <span class="svgIcon u-block">{{> "icons/rocket"}}</span>
     </a>
 
     {{!--  Font Droid Serif  && Source sans Pro --}}
-    <script>WebFontConfig ={google:{families:['Merriweather:300,400,700','Source+Sans+Pro:300,400,600,700'{{#is "post"}},'Source+Code+Pro'{{/is}}]}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+    <script>WebFontConfig ={google:{families:['Merriweather:300,400,700','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
 </body>
 </html>

@@ -4,19 +4,13 @@
 {{#tag}}
 
 {{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}is-tag {{#if feature_image}}has-cover is-transparent{{/if}}{{/contentFor}}
+{{#contentFor "special_body_class"}}is-tag{{/contentFor}}
 
-<section class="tag cover">
-    {{#if feature_image}}
-        <span class="u-absolute0 cover-bg zindex1"></span>
-        <span class="simply-lazy lazy u-absolute0 u-bgCover zindex2 cover-img" data-src="{{feature_image}}"></span>
-    {{/if}}
-
+<section class="tag u-paddingTop30">
     <div class="cover-wrap u-relative u-maxWidth1040 u-container u-sizeFullWidth u-textAlignCenter zindex3">
-        <h1 class="cover-title animated bounceIn u-contentTitle u-fontSize40">{{name}}</h1>
-        {{#if description}}<p class="cover-des u-fontSize20 u-marginTop20 u-marginAuto">{{description}}</p>{{/if}}
+        <h1 class="cover-title u-contentTitle u-fontSize36">{{name}}</h1>
+        {{#if description}}<p class="cover-des u-fontSizeLarge u-fontWeightThin u-marginTop20 u-marginAuto">{{description}}</p>{{/if}}
     </div>
-
 </section>
 {{/tag}}
 

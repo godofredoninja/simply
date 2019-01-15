@@ -9,14 +9,26 @@
 {{!-- Author content --}}
 <div class="author cover u-bgWhite u-boxShadowBottom">
     {{#if cover_image}}
-        <span class="u-absolute0 cover-bg zindex1"></span>
-        <span class="simply-lazy lazy u-absolute0 u-bgCover zindex2 cover-img" data-src="{{cover_image}}"></span>
+        <span class="u-absolute0 u-bgGradient zindex2"></span>
+        <img class="u-absolute u-image u-block zindex1"
+            srcset="{{img_url cover_image size="s"}} 300w,
+                {{img_url cover_image size="m"}} 600w,
+                {{img_url cover_image size="l"}} 1000w,
+                {{img_url cover_image size="xl"}} 2000w"
+            sizes="(max-width: 1000px) 400px, 700px"
+            src="{{img_url cover_image size="m"}}"
+            alt="{{name}}"
+        />
     {{/if}}
 
     <article class="cover-wrap u-relative u-maxWidth1040 u-container u-sizeFullWidth u-textAlignCenter zindex3">
 
         {{!-- author avatar --}}
-        <div  class="author-avatar animated bounceInDown u-round u-bgCover u-relative u-marginAuto {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{profile_image}})">
+        <div  class="author-avatar animated bounceInDown u-round u-bgCover u-relative u-marginAuto {{^if profile_image}}no-avatar{{/if}}">
+            {{#if profile_image}}
+            <img class="u-absolute u-image u-block u-round" src="{{img_url profile_image size="s"}}" alt="{{t "Hi I'm"}} {{name}}"/>
+            {{/if}}
+
             <div class="u-absolute u-accentColor--iconNormal svgIcon" style="width: calc(100% + 14px);height: calc(100% + 14px);top:-7px;left:-7px;">
                 {{> "icons/halo"}}
             </div>
@@ -32,14 +44,14 @@
         {{!-- Author (Location - website - RSS) --}}
         <div class="author-meta u-marginTop30">
             {{#if location}}<span class="author-location"><i class="i-location"></i> {{location}}</span>{{/if}}
-            {{#if website}}<span class="author-link"><a href="{{website}}" class="link--underline" target="_blank"><i class="i-link"></i> {{website}}</a></span>{{/if}}
-            <span class="author-stats"><a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" rel="nofollow" class="link--underline" target="_blank"><i class="i-rss"></i> {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</a></span>
+            {{#if website}}<span class="author-link"><a href="{{website}}" class="link--underline" target="_blank" rel="noopener noreferrer"><i class="i-link"></i> {{website}}</a></span>{{/if}}
+            <span class="author-stats"><a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" class="link--underline" target="_blank" rel="noopener noreferrer"><i class="i-rss"></i> {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</a></span>
         </div>
 
         {{!-- Author Facebook and Twitter --}}
         <div class="author-follow buttonSet u-marginTop30">
-            {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" class="button u-fontSizeSmall" target="_blank" rel="nofollow"><i class="i-facebook"></i> Facebook</a>{{/if}}
-            {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" class="button u-fontSizeSmall" target="_blank" rel="nofollow"><i class="i-twitter"></i> Twitter</a>{{/if}}
+            {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" class="button u-fontSizeSmall" target="_blank" rel="noopener noreferrer"><i class="i-facebook"></i> Facebook</a>{{/if}}
+            {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" class="button u-fontSizeSmall" target="_blank" rel="noopener noreferrer"><i class="i-twitter"></i> Twitter</a>{{/if}}
         </div>
     </article>
 

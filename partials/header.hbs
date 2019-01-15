@@ -1,33 +1,3 @@
-{{#is "home"}}
-
-<header class="cHeader u-flexCenter u-relative u-hide-before-lg u-bgColor {{#unless @blog.logo}}not-logo{{/unless}}">
-    {{!-- Cover Background --}}
-    {{#if @blog.cover_image}}
-        <span class="u-absolute0 cover-bg zindex1"></span>
-        <span class="simply-lazy lazy u-absolute0 u-bgCover zindex2 cover-img" data-src="{{@blog.cover_image}}"></span>
-    {{/if}}
-
-    <div class="u-maxWidth1200 u-sizeFullWidth u-container u-relative zindex3">
-        {{!-- Logo --}}
-        <h1 class="cHeader-logo u-textAlignCenter u-lineHeight1">
-            <a class="cHeader-logo-link u-textColorWhite u-inlineBlock" href="{{@blog.url}}">
-                {{#if @blog.logo}}
-                    <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
-                {{else}}
-                    <span class="u-fontSizeJumbo u-fontWeightBold">{{@blog.title}}</span>
-                {{/if}}
-            </a>
-        </h1>
-
-        {{!-- Description --}}
-        {{#if @blog.description}}
-            <h2 class="cHeader-des u-fontSize21 u-textColorWhite u-marginAuto u-textAlignCenter u-fontWeightNormal">{{@blog.description}}</h2>
-        {{/if}}
-    </div>
-</header>
-
-{{/is}}
-
 {{!-- Menu --}}
 {{> "menu"}}
 

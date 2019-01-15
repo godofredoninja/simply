@@ -1,8 +1,14 @@
 <div class="cr u-overflowHidden u-flexColumnTop u-relative u-flex1 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Related Posts" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true"{{/is}}>
     {{#if feature_image}}
-    <div class="cr-img u-relative u-overflowHidden u-sizeFullWidth">
-        <div class="u-absolute0 u-bgCover u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div>
-    </div>
+    <figure class="cr-img u-relative u-overflowHidden u-sizeFullWidth">
+        {{!-- <div class="u-absolute0 u-bgCover u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div> --}}
+        <img class="cr-imagen u-absolute u-image u-block lazyload"
+            data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+            data-sizes="(max-width: 1000px) 400px, 600px"
+            data-src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+        />
+    </figure>
     {{/if}}
 
     <div class="cr-inner u-padding15 u-flexColumnTop">

@@ -1,9 +1,10 @@
 <div class="hh u-flex u-flexCenter u-relative zindex4">
     {{!-- Author Avatar --}}
     {{#primary_author}}
-    <div class="hh-avatar u-flex0 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Avatar" data-event-non-interaction="true"{{/is}}>
-        <a href="{{url}}" class="avatar-image u-bgCover {{#is "post"}}img-md{{/is}} {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{profile_image}})"></a>
-    </div>
+    <a href="{{url}}" class="hh-avatar u-flex0 u-relative avatar-image {{#is "post"}}godo-tracking img-md{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Avatar" data-event-non-interaction="true"{{/is}}>
+        <img class="u-absolute u-image u-block u-round lazyload" data-src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Go to the profile of "}} {{name}}"/>
+    </a>
+    {{!-- <a href="{{url}}" class="avatar-image u-bgCover {{#is "post"}}img-md{{/is}} {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{img_url profile_image size="xs"}})"></a> --}}
     {{/primary_author}}
 
     <div class="hh-right u-flex1 u-overflowHidden u-fontSizeSmall">
@@ -17,8 +18,8 @@
                     <span class="hh-follow-toggle hh-btn button--primary">{{t "Follow"}}</span>
                     {{!-- Author Facebook and Twitter --}}
                     <div class="hh-follow-show u-inlineBlock" style="display:none">
-                        {{#if facebook}}<a class="hh-btn hh-fb u-textColorWhite godo-tracking" href="{{facebook_url}}" title="Facebook" target="_blank" rel="nofollow" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Facebook" data-event-non-interaction="true"><i class="i-facebook"></i> Facebook</a>{{/if}}
-                        {{#if twitter}}<a class="hh-btn hh-tw u-textColorWhite godo-tracking" href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="nofollow" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Twitter" data-event-non-interaction="true"><i class="i-twitter"></i> Twitter</a>{{/if}}
+                        {{#if facebook}}<a class="hh-btn hh-fb u-textColorWhite godo-tracking" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Facebook" data-event-non-interaction="true"><i class="i-facebook"></i> Facebook</a>{{/if}}
+                        {{#if twitter}}<a class="hh-btn hh-tw u-textColorWhite godo-tracking" href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="noopener noreferrer" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Twitter" data-event-non-interaction="true"><i class="i-twitter"></i> Twitter</a>{{/if}}
                     </div>
                 </div>
             {{/has}}{{/is}}

@@ -4,6 +4,7 @@
   "fonts/simply.ttf?25764j": "fonts/simply.ttf",
   "fonts/simply.woff?25764j": "fonts/simply.woff",
   "images/avatar.png": "images/avatar.png",
+  "images/digital-ocean.png": "images/digital-ocean.png",
   "images/icon-itunes.png": "images/icon-itunes.png",
   "images/icon-pocketcasts.png": "images/icon-pocketcasts.png",
   "images/icon-rss.png": "images/icon-rss.png",
@@ -11,5 +12,8 @@
   "styles/amp.css": "styles/amp.css",
   "scripts/amp.js": "scripts/amp.js",
   "styles/main.css": "styles/main.css",
-  "scripts/main.js": "scripts/main.js"
+  "scripts/main.js": "scripts/main.js",
+  "scripts/pagination.js": "scripts/pagination.js",
+  "scripts/prismjs.js": "scripts/prismjs.js",
+  "scripts/search.js": "scripts/search.js"
 }

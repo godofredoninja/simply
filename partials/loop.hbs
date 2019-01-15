@@ -1,27 +1,22 @@
-<div class="u-container">
-    <div class="u-maxWidth1000 u-marginAuto">
-        <div class="row u-paddingTop30">
-            <div class="col s12 col-left">
-                <div class="feed-entry-content u-maxWidth740 u-marginAuto">
-                    <div class="feed-entry-wrap">
+<section class="feed-entry-content u-container u-marginTop30">
+    {{!-- Ad --}}
+    {{> "ad/ad-home-top"}}
 
-                        {{#foreach posts}}
-                            {{>"story/story-card"}}
-
-                            {{!-- ad --}}
-                            {{#has number="5"}}{{> "ad/ad-loop-medium"}}{{/has}}
-                            {{#has number="10"}}{{> "ad/ad-loop-footer"}}{{/has}}
-                        {{/foreach}}
-
-                    </div>
+    <div class="feed-entry-wrap u-maxWidth1100 u-marginAuto">
+        <div class="row">
+            {{#foreach posts}}
+                {{!-- <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else}}{{#has number="5, 6, 11, 12"}}s6 ss2{{else}}{{#has number="7"}}l12 ss3{{else}}l4{{/has}}{{/has}}{{/has}}"></div> --}}
+                <div class="col s12 m6 l4">
+                    {{> "story/story-grid" }}
                 </div>
 
-                {{!-- Pagination - partials/pagination.hbs --}}
-                {{"pagination"}}
-            </div>
-
-            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
-            {{>"sidebar/sidebar"}}
+                {{!-- ad --}}
+                {{#has number="6"}}<div class="col s12">{{> "ad/ad-home-medium"}}</div>{{/has}}
+                {{#has number="12"}}<div class="col s12">{{> "ad/ad-home-footer"}}</div>{{/has}}
+            {{/foreach}}
         </div>
     </div>
-</div>
+</section>
+
+{{!-- Pagination - partials/pagination.hbs --}}
+{{"pagination"}}
