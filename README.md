@@ -55,25 +55,38 @@ You can see Simply in action on my Page [Demo](https://goo.gl/V7moIY)
 
 ## Navigation
 
-- [Ghost Settings](#ghost-settings)
-- [Simply Settings](#simply-settings)
-  - [Social Media Links](#social-media-links)
-  - [YouTube Subscribe Button](#youtube-subscribe-button)
-  - [Instagram](#instagram)
-  - [Comments](#comments)
-  - [Search](#search)
-- [Theme Translation](#theme-translation)
-- [AMP](#amp)
-- [Home Page](#home-page)
-- [Post Format](#post-format)
-- [Tags Page](#tags-page)
-- [Newsletter Page](#newsletter-page)
-- [Podcast Page](#podcast-page)
-- [Ads](#ads)
-- [Change Theme Color](#change-theme-color)
-- [Tracking Google Tag Mananger](#tracking-google-tag-mananger)
-- [Warnig Note Success](#warning---note---success)
-- [PrismJS code syntax](#prismjs-code-syntax)
+- [Simply free theme for Ghost](#simply-free-theme-for-ghost)
+  - [🙏 Please, help me with a small donation here or PayPal. It'll help motivate me to update the theme with many improvements](#-please-help-me-with-a-small-donation-here-or-paypal-itll-help-motivate-me-to-update-the-theme-with-many-improvements)
+  - [Demo](#demo)
+  - [Featured](#featured)
+  - [Navigation](#navigation)
+  - [Web Browser Support for Simply](#web-browser-support-for-simply)
+  - [Ghost Settings](#ghost-settings)
+  - [Simply Settings](#simply-settings)
+    - [Social Media Links](#social-media-links)
+    - [YouTube Subscribe Button](#youtube-subscribe-button)
+    - [Instagram](#instagram)
+    - [Comments](#comments)
+    - [Search](#search)
+      - [Setup a Custom integration](#setup-a-custom-integration)
+  - [Theme Translation](#theme-translation)
+  - [AMP](#amp)
+  - [Home Page](#home-page)
+  - [Post Format](#post-format)
+  - [Tags Page](#tags-page)
+  - [Newsletter Page](#newsletter-page)
+  - [Podcast Page](#podcast-page)
+  - [Ads](#ads)
+  - [Change Theme Color](#change-theme-color)
+  - [Tracking Google Tag Mananger](#tracking-google-tag-mananger)
+    - [Settings Google Tag Mananger](#settings-google-tag-mananger)
+      - [First we'll create triggers](#first-well-create-triggers)
+      - [Second we'll create Tag](#second-well-create-tag)
+      - [Third Insert code](#third-insert-code)
+  - [Warning - Note - Success](#warning---note---success)
+    - [PrismJS code syntax](#prismjs-code-syntax)
+    - [Credits](#credits)
+  - [Copyright & License](#copyright--license)
 
 ## Web Browser Support for Simply
 
@@ -81,7 +94,7 @@ Simply supports the following web [browsers](http://caniuse.com/#search=flexbox)
 
 ## Ghost Settings
 
-> Enable all checkboxes on the labs page in your Ghost admin panel.
+> Enable Subscribers checkbox on the labs page in your Ghost admin panel.
 
 ![ghost labs](./documentation/labs.jpg)
 
@@ -119,6 +132,22 @@ First, you will need to get your account `userName` and `userId` and `accessToke
 ### Search
 
 > The default search engine will only search the titles of the post
+
+#### Setup a Custom integration
+
+1. Go in your Ghost's dashboard -> Integrations -> Add custom integration
+2. Set a name: GodoFredo Themes Search
+3. Get the Content API Key and replace the demo key with this one
+4. Get the admin domain. This will be different in some cases
+
+```html
+<script>
+  var searchSettings = {
+    key: 'ADD_YOUR_API_KEY',
+    host: 'https://demo.ghost.io',
+  };
+</script>
+```
 
 The search engine that includes simply is very powerful, supports almost all languages and you can customize to your liking.
 
@@ -173,14 +202,16 @@ var facebookLocaleComments = 'en_US';
 
 /* 05. Search Settings */
 var searchSettings = {
+  key: 'ADD_YOUR_API_KEY',
+  host: 'https://demo.ghost.io',
+  /* This is optional */
   options: {
     keys: [
         'title',
     ],
     limit: 10,
-    threshold: -3500,
-    allowTypo: false,
   },
+  /* This is optional to perform filtering of the ghost api */
   api: {
     resource: 'posts',
     parameters: {
@@ -437,34 +468,34 @@ To change the color of the Simply theme select one of the theme styles below and
 
 ```html
 <!-- 1.- Theme Simply Deep Orange -->
-<style>.nav-right a,.nav ul li a{color:#ffc79e}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff}.menu-toggle span{background-color:#ffc79e}.link--accent,.u-accentColor--iconNormal{color:#b34e11;fill:#b34e11}.u-bgColor{background-color:#d25704}.button--primary{color:#b34e11;border-color:#b34e11}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#b34e11}.godo-ne-button:hover{background-color:#b34e11}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#d58b59}.listen-btn{color:#d25704;border-color:#d25704}.listen-btn:hover{background-color:#d25704}mark{background-image:linear-gradient(180deg,#ffe1c2,#ffe1c2)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#ffc79e}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff}.menu-toggle span{background-color:#ffc79e}.link--accent,.u-accentColor--iconNormal{color:#b34e11;fill:#b34e11}.u-bgColor{background-color:#d25704}.button--primary{color:#b34e11;border-color:#b34e11}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#b34e11}.godo-ne-button:hover{background-color:#b34e11}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#d58b59}.listen-btn{color:#d25704;border-color:#d25704}.listen-btn:hover{background-color:#d25704}mark{background-image:linear-gradient(180deg,#ffe1c2,#ffe1c2)}</style>
 
 <!-- 2.- Theme Simply Cyan -->
-<style>.nav-right a,.nav ul li a{color:#00787f}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff}.menu-toggle span{background-color:#00787f}.link--accent,.u-accentColor--iconNormal{color:#36aeb7;fill:#36aeb7}.u-bgColor{background-color:#6ac8cf}.button--primary{color:#36aeb7;border-color:#36aeb7}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#36aeb7}.godo-ne-button:hover{background-color:#36aeb7}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#6bc9d0}.listen-btn{color:#6ac8cf;border-color:#6ac8cf}.listen-btn:hover{background-color:#6ac8cf}mark{background-image:linear-gradient(180deg,#dff6f8,#dff6f8)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#00787f}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff}.menu-toggle span{background-color:#00787f}.link--accent,.u-accentColor--iconNormal{color:#36aeb7;fill:#36aeb7}.u-bgColor{background-color:#6ac8cf}.button--primary{color:#36aeb7;border-color:#36aeb7}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#36aeb7}.godo-ne-button:hover{background-color:#36aeb7}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#6bc9d0}.listen-btn{color:#6ac8cf;border-color:#6ac8cf}.listen-btn:hover{background-color:#6ac8cf}mark{background-image:linear-gradient(180deg,#dff6f8,#dff6f8)}</style>
 
 <!-- 3.- Theme Simply Blue Dark -->
-<style>.nav-right a,.nav ul li a{color:#c1cbdb}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff}.menu-toggle span{background-color:#c1cbdb}.link--accent,.u-accentColor--iconNormal{color:#1e3858;fill:#1e3858}.u-bgColor{background-color:#1e3757}.button--primary{color:#1e3858;border-color:#1e3858}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#1e3858}.godo-ne-button:hover{background-color:#1e3858}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(30,56,88,.54)}.listen-btn{color:#1e3757;border-color:#1e3757}.listen-btn:hover{background-color:#1e3757}mark{background-image:linear-gradient(180deg,#dff6f8,#dff6f8)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#c1cbdb}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff}.menu-toggle span{background-color:#c1cbdb}.link--accent,.u-accentColor--iconNormal{color:#1e3858;fill:#1e3858}.u-bgColor{background-color:#1e3757}.button--primary{color:#1e3858;border-color:#1e3858}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#1e3858}.godo-ne-button:hover{background-color:#1e3858}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(30,56,88,.54)}.listen-btn{color:#1e3757;border-color:#1e3757}.listen-btn:hover{background-color:#1e3757}mark{background-image:linear-gradient(180deg,#dff6f8,#dff6f8)}</style>
 
 <!-- 4.- Theme Simply Red -->
-<style>.nav-right a,.nav ul li a{color:#ffbbb4}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff}.menu-toggle span{background-color:#ffbbb4}.link--accent,.u-accentColor--iconNormal{color:#c53236;fill:#c53236}.u-bgColor{background-color:#c43235}.button--primary{color:#c53236;border-color:#c53236}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#c53236}.godo-ne-button:hover{background-color:#c53236}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(197,50,54,.46)}.listen-btn{color:#c43235;border-color:#c43235}.listen-btn:hover{background-color:#c43235}mark{background-image:linear-gradient(180deg,#ffdcd6,#ffdcd6)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#ffbbb4}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff}.menu-toggle span{background-color:#ffbbb4}.link--accent,.u-accentColor--iconNormal{color:#c53236;fill:#c53236}.u-bgColor{background-color:#c43235}.button--primary{color:#c53236;border-color:#c53236}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#c53236}.godo-ne-button:hover{background-color:#c53236}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(197,50,54,.46)}.listen-btn{color:#c43235;border-color:#c43235}.listen-btn:hover{background-color:#c43235}mark{background-image:linear-gradient(180deg,#ffdcd6,#ffdcd6)}</style>
 
 <!-- 5.- Theme Simply blue semi dark -->
-<style>.nav-right a,.nav ul li a{color:#c1cde6}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff}.menu-toggle span{background-color:#c1cde6}.link--accent,.u-accentColor--iconNormal{color:#3367d6;fill:#3367d6}.u-bgColor{background-color:#3367d6}.button--primary{color:#3367d6;border-color:#3367d6}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#3367d6}.godo-ne-button:hover{background-color:#3367d6}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(49,103,216,.43)}.listen-btn{color:#3367d6;border-color:#3367d6}.listen-btn:hover{background-color:#3367d6}mark{background-image:linear-gradient(180deg,rgba(49,103,216,.11),rgba(49,103,216,.13))}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#c1cde6}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff}.menu-toggle span{background-color:#c1cde6}.link--accent,.u-accentColor--iconNormal{color:#3367d6;fill:#3367d6}.u-bgColor{background-color:#3367d6}.button--primary{color:#3367d6;border-color:#3367d6}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#3367d6}.godo-ne-button:hover{background-color:#3367d6}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(49,103,216,.43)}.listen-btn{color:#3367d6;border-color:#3367d6}.listen-btn:hover{background-color:#3367d6}mark{background-image:linear-gradient(180deg,rgba(49,103,216,.11),rgba(49,103,216,.13))}</style>
 
 <!-- 6.- Theme Simply dark -->
-<style>.nav-right a,.nav ul li a{color:#b1aeae}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#ece9e9}.menu-toggle span{background-color:#b1aeae}.u-bgColor{background-color:#000}.button--primary{color:#000;border-color:#000}.godo-n-q-d,.godo-ne-form label,.ne-t{color:rgba(0,0,0,.84)}.godo-ne-button:hover{background-color:rgba(0,0,0,.84)}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#b1aeae}mark{background-image:linear-gradient(180deg,#f3f0ef,#f3f0ef)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#b1aeae}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#ece9e9}.menu-toggle span{background-color:#b1aeae}.u-bgColor{background-color:#000}.button--primary{color:#000;border-color:#000}.godo-n-q-d,.godo-ne-form label,.ne-t{color:rgba(0,0,0,.84)}.godo-ne-button:hover{background-color:rgba(0,0,0,.84)}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#b1aeae}mark{background-image:linear-gradient(180deg,#f3f0ef,#f3f0ef)}</style>
 
 <!-- 7.- Theme Simply Lavender -->
-<style>.nav-right a,.nav ul li a{color:#dce6fa}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fcffff}.menu-toggle span{background-color:#dce6fa}.link--accent,.u-accentColor--iconNormal{color:#8da7d5;fill:#8da7d5}.u-bgColor{background-color:#8da7d5}.button--primary{color:#8da7d5;border-color:#8da7d5}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#8da7d5}.godo-ne-button:hover{background-color:#8da7d5}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#8da7d6}.listen-btn{color:#8da7d5;border-color:#8da7d5}.listen-btn:hover{background-color:#8da7d5}mark{background-image:linear-gradient(180deg,#ebf1ff,#ebf1ff)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#dce6fa}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fcffff}.menu-toggle span{background-color:#dce6fa}.link--accent,.u-accentColor--iconNormal{color:#8da7d5;fill:#8da7d5}.u-bgColor{background-color:#8da7d5}.button--primary{color:#8da7d5;border-color:#8da7d5}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#8da7d5}.godo-ne-button:hover{background-color:#8da7d5}.ne-body:after,.ne-body:before,.ne-t:before{background-color:#8da7d6}.listen-btn{color:#8da7d5;border-color:#8da7d5}.listen-btn:hover{background-color:#8da7d5}mark{background-image:linear-gradient(180deg,#ebf1ff,#ebf1ff)}</style>
 
 <!-- 8.- Theme Simply Dark Green -->
-<style>.nav-right a,.nav ul li a{color:#b5dda8}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#f3ffea}.menu-toggle span{background-color:#b5dda8}.link--accent,.u-accentColor--iconNormal{color:#006400;fill:#006400}.u-bgColor{background-color:#006400}.button--primary{color:#006400;border-color:#006400}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#006400}.godo-ne-button:hover{background-color:#006400}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(3,101,0,.8)}.listen-btn{color:#006400;border-color:#006400}.listen-btn:hover{background-color:#006400}mark{background-image:linear-gradient(180deg,#defad3,#defad3)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#b5dda8}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#f3ffea}.menu-toggle span{background-color:#b5dda8}.link--accent,.u-accentColor--iconNormal{color:#006400;fill:#006400}.u-bgColor{background-color:#006400}.button--primary{color:#006400;border-color:#006400}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#006400}.godo-ne-button:hover{background-color:#006400}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(3,101,0,.8)}.listen-btn{color:#006400;border-color:#006400}.listen-btn:hover{background-color:#006400}mark{background-image:linear-gradient(180deg,#defad3,#defad3)}</style>
 
 <!-- 9.- Theme Simply Hot Pink   -->
-<style>.nav-right a,.nav ul li a{color:#ffbfc6}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:#fff1f4}.menu-toggle span{background-color:#ffbfc6}.link--accent,.u-accentColor--iconNormal{color:#d43d5a;fill:#d43d5a}.u-bgColor{background-color:#d43d5a}.button--primary{color:#d43d5a;border-color:#d43d5a}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#d43d5a}.godo-ne-button:hover{background-color:#d43d5a}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(213,61,91,.6)}.listen-btn{color:#d43d5a;border-color:#d43d5a}.listen-btn:hover{background-color:#d43d5a}mark{background-image:linear-gradient(180deg,#ffdce1,#ffdce1)}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:#ffbfc6}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:#fff1f4}.menu-toggle span{background-color:#ffbfc6}.link--accent,.u-accentColor--iconNormal{color:#d43d5a;fill:#d43d5a}.u-bgColor{background-color:#d43d5a}.button--primary{color:#d43d5a;border-color:#d43d5a}.godo-n-q-d,.godo-ne-form label,.ne-t{color:#d43d5a}.godo-ne-button:hover{background-color:#d43d5a}.ne-body:after,.ne-body:before,.ne-t:before{background-color:rgba(213,61,91,.6)}.listen-btn{color:#d43d5a;border-color:#d43d5a}.listen-btn:hover{background-color:#d43d5a}mark{background-image:linear-gradient(180deg,#ffdce1,#ffdce1)}</style>
 
 <!-- 10.- Theme Simply White -->
-<style>.nav-right a,.nav ul li a{color:rgba(0,0,0,.54)}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover{color:rgba(0,0,0,.68)}.nav-wrap{box-shadow:0 2px 2px -2px rgba(0,0,0,.15)}.menu-toggle span{background-color:rgba(0,0,0,.54)}.u-bgColor{background-color:#fff}</style>
+<style>.nav-right a,.nav ul li a,.search-toggle{color:rgba(0,0,0,.54)}.nav-right a:hover,.nav ul li a.active,.nav ul li a:hover,.search-toggle:hover{color:rgba(0,0,0,.68)}.nav-wrap{box-shadow:0 2px 2px -2px rgba(0,0,0,.15)}.menu-toggle span{background-color:rgba(0,0,0,.54)}.u-bgColor{background-color:#fff}</style>
 ```
 
 > If you don't like the colors above, then play with your favorite colors. Just change the colors in the following code
@@ -473,9 +504,11 @@ To change the color of the Simply theme select one of the theme styles below and
 <style>
     /* Nav */
     .nav-right a,
+    .search-toggle,
     .nav ul li a { color: #FFBFC6 }
 
     .nav-right a:hover,
+    .search-toggle:hover,
     .nav ul li a.active,
     .nav ul li a:hover { color: #FFF1F4  }
 
