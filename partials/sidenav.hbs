@@ -5,12 +5,12 @@
         {{!--follow box --}}
 
         <div class="sideNav-follow followMe u-fontSize20 u-paddingTop20 u-paddingLeft20 u-paddingRight20">
-            {{#if @blog.facebook}} <a href="{{facebook_url}}" title="Facebook {{@blog.facebook}}" target="_blank" rel="noopener noreferrer" class="i-facebook"></a>{{/if}}
-            {{#if @blog.twitter}} <a href="{{twitter_url}}" title="Twitter {{@blog.twitter}}" target="_blank" rel="noopener noreferrer" class="i-twitter"></a>{{/if}}
+            {{#if @site.facebook}} <a href="{{facebook_url}}" title="Facebook {{@site.facebook}}" target="_blank" rel="noopener noreferrer" class="i-facebook"></a>{{/if}}
+            {{#if @site.twitter}} <a href="{{twitter_url}}" title="Twitter {{@site.twitter}}" target="_blank" rel="noopener noreferrer" class="i-twitter"></a>{{/if}}
         </div>
 
         <div class="sideNav-copyright u-textColorNormal u-fontSizeSmaller u-fontWeightSemibold u-textAlignCenter u-paddingTop20 u-paddingLeft20 u-paddingRight20">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@blog.title}}</a> Design with <i class="i-favorite animated infinite pulse" style="color:red;display:inline-block"></i> by <a href="https://goo.gl/Jf1tZe" title="Developer Web FullStack.">@GodoFredoNinja</a>
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> Design with <i class="i-favorite animated infinite pulse" style="color:red;display:inline-block"></i> by <a href="https://goo.gl/Jf1tZe" title="Developer Web FullStack.">@GodoFredoNinja</a>
         </div>
     </div>
 </aside>

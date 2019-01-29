@@ -1,13 +1,63 @@
 <aside class="sharePost u-textAlignCenter u-hide-before-lg">
     <div class="sr-wrap">
         <div class="share-box">
-        <span class="share-count u-block u-fontWeightBold u-contentTitle" data-url="{{url absolute="true"}}">0</span>
-        <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSizeSmaller u-textUppercase">SHARES</span>
-    </div>
-    <a href="#" class="godo-tracking simply-share i-facebook bg-facebook" title="{{t "Share on"}} Facebook" data-share="facebook" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Facebook" data-event-non-interaction="true"></a>
-    <a href="#" class="godo-tracking simply-share i-twitter bg-twitter" title="{{t "Share on"}} Twitter" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}" data-event-category="Article" data-event-action="Share" data-event-label="Twitter" data-event-non-interaction="true"></a>
-    <a href="#" class="godo-tracking simply-share i-reddit bg-reddit" title="{{t "Share on"}} Redit" data-share="reddit" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Reddit" data-event-non-interaction="true"></a>
-    <a href="#" class="godo-tracking simply-share i-linkedin bg-linkedin" title="{{t "Share on"}} Linkeding" data-share="linkedin" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Linkedin" data-event-non-interaction="true"></a>
-    <a href="#" class="godo-tracking simply-share i-pinterest bg-pinterest" title="{{t "Share on"}} Pinterest" data-share="pinterest" data-url="{{url absolute="true"}}" data-title="{{title}}" data-event-category="Article" data-event-action="Share" data-event-label="Pinterest" data-event-non-interaction="true"></a>
+            <span class="share-count u-block u-fontWeightBold u-contentTitle" data-url="{{url absolute="true"}}">0</span>
+            <span class="share-label u-block u-textColorNormal u-contentTitle u-fontSizeSmaller u-textUppercase">SHARES</span>
+        </div>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Facebook"
+            class="godo-tracking i-facebook bg-facebook"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Facebook"
+            data-event-non-interaction="true">
+        </a>
+        <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Twitter"
+            class="godo-tracking i-twitter bg-twitter"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Twitter"
+            data-event-non-interaction="true">
+        </a>
+        <a href="https://www.reddit.com/submit?url={{url absolute="true"}}&amp;title={{encode title}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Redit"
+            class="godo-tracking i-reddit bg-reddit"
+            onclick="window.open(this.href, 'share-reddit', 'width=600,height=480');return false;"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Reddit"
+            data-event-non-interaction="true">
+        </a>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Linkeding"
+            class="godo-tracking i-linkedin bg-linkedin"
+            onclick="window.open(this.href, 'share-linkeding', 'width=600,height=480');return false;"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Linkedin"
+            data-event-non-interaction="true">
+        </a>
+        <a href="http://pinterest.com/pin/create/button/?url={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Pinterest"
+            class="godo-tracking i-pinterest bg-pinterest"
+            onclick="window.open(this.href, 'share-pinterest', 'width=600,height=480');return false;"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Pinterest"
+            data-event-non-interaction="true">
+        </a>
     </div>
 </aside>

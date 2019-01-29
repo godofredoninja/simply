@@ -15,11 +15,11 @@
             {{!-- Datetime --}}
             <span class="timestamp">
                 <time class="datetime" datetime="{{date format='YYYY-MM-DD'}}">{{date published_at timeago="true"}}</time>
-                <span>{{t "in"}}</span>
             </span>
 
             {{!-- Category --}}
             {{#if primary_tag}}{{#primary_tag}}
+                <span>{{t "in"}}</span>
                 <span class="categories"><a href="{{url}}" title="{{name}}">{{name}}</a></span>
             {{/primary_tag}}{{/if}}
         </div>
@@ -28,7 +28,7 @@
     {{!-- featured image --}}
     {{#if feature_image}}
         <figure class="article-image u-block u-marginTop30">
-            <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="400" layout="responsive"></amp-img>
+            <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="400" layout="responsive" alt="{{title}}"></amp-img>
         </figure>
     {{/if}}
 

@@ -2,11 +2,15 @@
   "name": "simply-godofredoninja",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "engines": {
-    "ghost": ">=2.0.0"
+    "ghost": ">=2.0.0",
+    "ghost-api": "v2"
   },
   "license": "CC BY-NC 4.0",
+  "screenshots": {
+    "desktop": "screenshot.jpg"
+  },
   "author": {
     "name": "GodoFredoNinja",
     "email": "hello@godofredo.ninja",

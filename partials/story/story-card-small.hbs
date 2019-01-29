@@ -1,14 +1,15 @@
 <div class="cr u-overflowHidden u-flexColumnTop u-relative u-flex1 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Related Posts" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true"{{/is}}>
     {{#if feature_image}}
-    <figure class="cr-img u-relative u-overflowHidden u-sizeFullWidth">
+    <a href="{{url}}" class="cr-img u-relative u-overflowHidden u-sizeFullWidth u-block">
         {{!-- <div class="u-absolute0 u-bgCover u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div> --}}
-        <img class="cr-imagen u-absolute u-image u-block lazyload"
+        <img class="cr-imagen u-absolute u-image u-block blur-up lazyload"
+            src="{{img_url feature_image size="s"}}"
+            srcset="{{img_url feature_image size="xxs"}}"
             data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
             data-sizes="(max-width: 1000px) 400px, 600px"
-            data-src="{{img_url feature_image size="m"}}"
             alt="{{title}}"
         />
-    </figure>
+    </a>
     {{/if}}
 
     <div class="cr-inner u-padding15 u-flexColumnTop">
@@ -19,9 +20,9 @@
             </div>
             {{/primary_tag}}{{/if}} --}}
 
-            <h2 class="cr-t u-contentTitle u-fontSize22 u-overflowHidden"><a href="{{url}}">{{title}}</a></h2>
+            <a href="{{url}}"><h2 class="cr-t u-contentTitle u-fontSize22 u-overflowHidden">{{title}}</h2></a>
 
-            {{#unless feature_image}}<p class="cr-e u-textColorNormal">{{excerpt words="20"}}</p>{{/unless}}
+            {{#unless feature_image}}<p class="cr-e u-textColorNormal"><a href="{{url}}">{{excerpt words="20"}}</a></p>{{/unless}}
         </div>
 
         {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
@@ -29,5 +30,5 @@
     </div>
 
     {{!-- Link --}}
-    <a href="{{url}}" class="u-absolute0 zindex3"></a>
+    {{!-- <a href="{{url}}" class="u-absolute0 zindex3"></a> --}}
 </div>

@@ -5,6 +5,7 @@
 # Logs
 logs
 *.log
+*.ini
 
 # Runtime data
 pids
@@ -472,12 +473,6 @@ __pycache__/
 
 # End of https://www.gitignore.io/api/node,phpstorm,sas,sass,sublimetext,visualstudio,webstorm
 
-
-# For Branch master
 .sass-lint.yml
-.eslintrc
-.editorconfig
-src/
-yarn.lock
 .cache-loader
 yarn-error.log

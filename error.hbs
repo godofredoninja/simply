@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <title>Page not found</title>
+    <title>{{t "Page not found"}}</title>
 
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
+
+    {{!-- Ghost outputs important style and meta data with this tag --}}
+    {{ghost_head}}
 </head>
 <body class="u-bgWhite">
 
@@ -43,8 +46,8 @@
     {{!-- Search box --}}
     {{>"widget/search"}}
 
-    {{!-- Scripts --}}
-    {{ghost_foot}}
+    {{!-- Blog URL --}}
+    <script>var siteUrl = '{{@site.url}}';</script>
 
     <script type="text/javascript">
         var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
@@ -54,9 +57,14 @@
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    {{!-- Content APi --}}
+    <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js" defer></script>
+
+    {{!-- Scripts --}}
+    {{ghost_foot}}
 
     {{!-- The main JavaScript --}}
-    <script type="text/javascript" src="{{asset "scripts/main.js"}}"></script>
+    <script type="text/javascript" src="{{asset "scripts/main.js"}}" defer></script>
 
     {{!--  Font Source sans Pro && roboto mono --}}
     <script type="text/javascript">WebFontConfig ={google:{families:['Roboto+Mono:400','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>

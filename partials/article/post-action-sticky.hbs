@@ -25,9 +25,34 @@
 
         {{!-- post Share--}}
         <div class="pa-s u-flex u-flex1 u-flexCenter">
-            <a href="#" title="{{t "Share on"}} Facebook" class="godo-tracking simply-share i-facebook bg-facebook" data-share="facebook" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Facebook - Footer" data-event-non-interaction="true">Share</a>
-            <a href="#" title="{{t "Share on"}} Twitter" class="godo-tracking simply-share i-twitter bg-twitter" data-share="twitter" data-url="{{url absolute="true"}}" data-title="{{title}} {{#if @blog.twitter}}by {{@blog.twitter}}{{/if}}" data-event-category="Article" data-event-action="Share" data-event-label="Twitter - Footer" data-event-non-interaction="true">Tweet</a>
-            <a href="#" title="{{t "Share on"}} whatsapp" class="godo-tracking simply-share i-whatsapp bg-whatsapp u-hide-after-md" data-share="whatsapp" data-title="{{title}}" data-url="{{url absolute="true"}}" data-event-category="Article" data-event-action="Share" data-event-label="Whatsapp - Footer" data-event-non-interaction="true">Send</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="{{t "Share on"}} Facebook"
+                class="godo-tracking i-facebook bg-facebook"
+                onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;"
+                data-event-category="Article"
+                data-event-action="Share"
+                data-event-label="Facebook - Footer"
+                data-event-non-interaction="true">Share</a>
+            <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="{{t "Share on"}} Twitter"
+                class="godo-tracking i-twitter bg-twitter"
+                onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;"
+                data-event-category="Article"
+                data-event-action="Share"
+                data-event-label="Twitter - Footer"
+                data-event-non-interaction="true">Tweet</a>
+            <a href="whatsapp://send?text={{url absolute="true"}}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="godo-tracking i-whatsapp bg-whatsapp u-hide-after-md"
+                data-event-category="Article"
+                data-event-action="Share"
+                data-event-label="Whatsapp - Footer"
+                data-event-non-interaction="true">Send</a>
         </div>
 
         <div class="u-flex u-flex0 u-flexCenter u-hide-before-lg">

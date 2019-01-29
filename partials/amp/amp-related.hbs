@@ -4,10 +4,17 @@
 
         {{#foreach posts}}
         <div class="story">
-            <a href="{{url absolute="true"}}amp" class="story-link u-block u-relative">
-                <span class="story-border u-flexCenter u-absolute">{{@number}}</span>
-                <h3 class="story-title">{{title}}</h3>
-            </a>
+
+            {{!-- featured image --}}
+            {{#if feature_image}}
+                <figure class="story-image">
+                    <a href="{{url absolute="true"}}amp">
+                        <amp-img src="{{img_url feature_image size="s" absolute="true"}}" width="130" height="80" layout="responsive" alt="{{title}}"></amp-img>
+                    </a>
+                </figure>
+                <h3><a href="{{url absolute="true"}}amp">{{title}}</a></h3>
+            {{/if}}
+
         </div>
         {{/foreach}}
 
