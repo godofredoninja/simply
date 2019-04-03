@@ -13,9 +13,9 @@ It is available for free so you can use on your site. It is strictly forbidden t
 
 ## Please help me. I need to raise $10,000. I met a girl on the Internet and we are a couple, now I want to travel to her country.  The money will be used for travel expenses
 
-### The campaign is being launched on [https://www.gofundme.com/](https://www.gofundme.com/manage/por-favor-ayudame-quiero-conocer-a-worapitcha/). Here is the link where you can learn more about my story
+### The campaign is being launched on [gofundme.com](https://www.gofundme.com/por-favor-ayudame-quiero-conocer-a-worapitcha/). Here is the link where you can learn more about my story
 
-[Help me. I want to travel and meet Worapitcha](https://www.gofundme.com/manage/por-favor-ayudame-quiero-conocer-a-worapitcha)
+[Help me. I want to travel and meet Worapitcha](https://www.gofundme.com/por-favor-ayudame-quiero-conocer-a-worapitcha/)
 
 ### You can also help me with donations in [PayPal](https://www.paypal.me/godofredoninja). If you don't have Paypal you can do it through [this link](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
 
