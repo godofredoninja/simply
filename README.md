@@ -8,18 +8,7 @@
 Hello, I created this theme for Ghost with inspiration from [Medium](https://medium.com/).
 It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK).
 
-Hi. I created this theme for ghost especially for you.
-It is available for free so you can use on your site. It is strictly forbidden to use it for commercial use. If you have any suggestions to improve the theme,  you can send me a tweet [@GodoFredoNinja](https://goo.gl/y3aivK)
-
-## Please help me. I need to raise $10,000. I met a girl on the Internet and we are a couple, now I want to travel to her country.  The money will be used for travel expenses
-
-### The campaign is being launched on [gofundme.com](https://www.gofundme.com/por-favor-ayudame-quiero-conocer-a-worapitcha/). Here is the link where you can learn more about my story
-
-[Help me. I want to travel and meet Worapitcha](https://www.gofundme.com/por-favor-ayudame-quiero-conocer-a-worapitcha/)
-
-### You can also help me with donations in [PayPal](https://www.paypal.me/godofredoninja). If you don't have Paypal you can do it through [this link](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
-
-### Please, I tell you with my heart, help me
+## 🙏 Please, help me with a small donation [here](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url) or [PayPal](https://www.paypal.me/godofredoninja). It'll help motivate me to update the theme with many improvements
 
 [![donate](./donate.gif)](https://www.paypal.me/godofredoninja)
 
