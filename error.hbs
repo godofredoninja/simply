@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>{{t "Page not found"}}</title>
 
+    {{!--  Font Source sans Pro && roboto mono --}}
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
@@ -66,7 +69,7 @@
     {{!-- The main JavaScript --}}
     <script type="text/javascript" src="{{asset "scripts/main.js"}}" defer></script>
 
-    {{!--  Font Source sans Pro && roboto mono --}}
-    <script type="text/javascript">WebFontConfig ={google:{families:['Roboto+Mono:400','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+    {{!-- Search --}}
+    <script src="{{asset "scripts/search.js"}}" defer></script>
 </body>
 </html>

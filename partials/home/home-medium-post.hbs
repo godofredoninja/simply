@@ -1,0 +1,28 @@
+<article class="homeHero-mediumCard u-relativeb u-hide-before-lg">
+    <div class="homeHero-post u-sizeFullWidth">
+        {{!-- Image --}}
+        <a href="{{url}}" class="hhp-image">
+             <div class="hhp-img u-borderLighter u-bgColorGrayLight u-relative u-marginBottom15">
+                {{#if feature_image}}
+                    <img class="u-image u-block u-absolute0"
+                        src="{{img_url feature_image size="s"}}"
+                        srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+                        alt="{{title}}"
+                    />
+                {{/if}}
+
+                {{!-- icon star if is featured post --}}
+                <span class="story-icon-featured u-absolute u-textColorWhite i-star-line"></span>
+             </div>
+        </a>
+        {{!-- Content --}}
+        <div class="hhp-body">
+            <div class="hhp-titleWrap u-flexColumnTop u-flexWrap u-overflowHidden u-marginBottom15">
+                <a href="{{url}}" class="u-flex0 u-overflowHidden u-sizeFullWidth"><h2 class="hhp-title u-fontSizeLarge">{{title}}</h2></a>
+                <a href="{{url}}" class="u-flex0 u-overflowHidden u-sizeFullWidth"><div class="hhp-excerpt u-fontSizeBase u-textColorNormal">{{excerpt words="30"}}</div></a>
+            </div>
+            {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+            {{> "helper/helper-author-meta"}}
+        </div>
+    </div>
+</article>

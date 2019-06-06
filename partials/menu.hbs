@@ -1,8 +1,8 @@
-<nav class="nav u-sizeFullWidth u-fontSizeSmaller u-relative u-container u-bgColor">
-    <div class="u-flex u-flexCenter u-headerColorLink u-maxWidth1100 u-marginAuto">
+<div class="nav u-sizeFullWidth u-fontSizeSmaller u-relative u-container u-bgheader">
+    <div class="nav-wrap u-flex u-flexCenter u-headerColorLink u-maxWidth1100 u-marginAuto">
         {{!-- Logo --}}
         <div class="nav-left u-flex0">
-            <a class="nav-logo u-textColorWhite u-block u-lineHeight1 godo-tracking" href="{{@site.url}}" data-event-category="Header" data-event-action="Logo" data-event-label="Click" data-event-non-interaction="true">
+            <a class="nav-logo u-block u-lineHeight1 godo-tracking" href="{{@site.url}}" data-event-category="Header" data-event-action="Logo" data-event-label="Click" data-event-non-interaction="true">
                 {{#if @site.logo}}
                     <img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}"/>
                 {{else}}
@@ -12,19 +12,23 @@
         </div>
 
         {{!-- Navigation --}}
-        <div class="nav-menu u-flex u-flex1 u-paddingRight20 u-flexCenter u-hide-before-lg">{{navigation}}</div>
+        <nav class="nav-menu u-flex u-flex1 u-paddingRight20 u-flexCenter u-hide-before-lg u-menu-color" role="navigation" aria-label="Primary Menu">
+            <ul class="u-unstyled u-flex1" itemscope itemtype="http://schema.org/SiteNavigationElement" role="menu">
+                {{navigation}}
+            </ul>
+        </nav>
 
         <div class="nav-right u-flex0 u-flex u-flexEnd">
             {{!-- Social Media --}}
-            <aside class="follow followMe u-fontSize20 u-flex u-hide-before-lg">
+            <aside class="follow followMe u-fontSize20 u-flex u-hide-before-lg u-menu-color">
                 {{#if @site.facebook}}<a class="godo-tracking i-facebook" data-event-category="Header" data-event-action="Social" data-event-label="Facebook" data-event-non-interaction="true" title="Facebook {{@site.facebook}}" href="{{facebook_url}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
                 {{#if @site.twitter}}<a class="godo-tracking i-twitter" data-event-category="Header" data-event-action="Social" data-event-label="Twitter" data-event-non-interaction="true" title="Twitter {{@site.twitter}}" href="{{twitter_url}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
             </aside>
 
             {{!-- Toggle Searcg --}}
-            <div class="search-toggle u-fontSizeLarge i-search u-hide godo-tracking" data-event-category="Header" data-event-action="Search" data-event-label="Click" data-event-non-interaction="true"></div>
+            <div class="search-toggle u-fontSizeLarge i-search u-hide godo-tracking u-menu-color u-pointer" data-event-category="Header" data-event-action="Search" data-event-label="Click" data-event-non-interaction="true"></div>
             {{!-- Toggle Menu --}}
-            <div class="menu-toggle u-relative u-hide-after-lg"><span></span><span></span><span></span></div>
+            <div class="menu-toggle u-relative u-hide-after-lg u-pointer"><span></span><span></span><span></span></div>
         </div>
     </div>
-</nav>
+</div>

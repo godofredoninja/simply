@@ -13,7 +13,7 @@
 
     {{!-- Figure --}}
     {{#if feature_image}}
-        <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1000">
+        <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1100">
             <img
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
@@ -27,7 +27,7 @@
         </figure>
     {{/if}}
 
-    <section class="post-body u-container u-maxWidth740 u-relative u-clear">
+    <section id="post-body" class="post-body u-container u-maxWidth740 u-relative u-clear">
         {{content}}
     </section>
 

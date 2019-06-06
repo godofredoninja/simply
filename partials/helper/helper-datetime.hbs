@@ -1,6 +1,6 @@
-<div class="u-textColorNormal u-flexCenter u-fontSize15">
-    <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMMM DD"}}</time>
+<div class="u-textColorNormal u-flexCenter u-fontSizeSmaller">
+    <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
     <span class="points"></span>
-    {{#if featured}}<span class="i-star u-fontSize13" style="padding-right:.3em"></span>{{/if}}
-    <span class="readingTime">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
+    <span class="readingTime" style="cursor:default" title="{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
+    {{#if featured}}<span class="i-star" style="padding-left:4px"></span>{{/if}}
 </div>

@@ -1,5 +1,5 @@
 {{!-- Search --}}
-<div class="search u-absolute0 u-fixed">
+<div id="search" class="search u-absolute0 u-fixed u-flex">
     {{!-- <a href="#" class="search-toggle sa-close i-close u-absolute"></a> --}}
     <div class="search-close sa-close u-absolute zindex4">
         <span class="sa-close--left"></span>
@@ -11,4 +11,11 @@
     </form>
 
     <div id="searchResults" class="search-results u-marginAuto u-sizeFullWidth"></div>
+
+    <div class="search-nav-hints u-hide-before-lg">
+        <div class="search-nav-hint"><span>↑</span> <span>↓</span> {{t "Navigate up/down"}}</div>
+        <div class="search-nav-hint"><span>Enter</span> {{t "Go to article"}}</div>
+        <div class="search-nav-hint"><span>/</span> {{t "Search new term"}}</div>
+        <div class="search-nav-hint"><span>Esc</span> {{t "Close search"}}</div>
+    </div>
 </div>

@@ -1,0 +1,23 @@
+<article class="homeHero-smallCard">
+    <div class="homeHero-post u-flex">
+        <a href="{{url}}" class="u-flex0">
+             <div class="hhp-smallCard-img u-borderLighter u-bgColorGrayLight u-relative">
+                {{#if feature_image}}
+                    <img class="u-image u-block u-absolute0"
+                        src="{{img_url feature_image size="s"}}"
+                        alt="{{title}}"
+                    />
+                {{/if}}
+            </div>
+        </a>
+
+        <div class="hhp-smallCard-body">
+            <div class="hhp-titleWrap">
+                <a href="{{url}}"><h2 class="hhp-smallCard-title u-fontSize20 u-lineHeight1">{{title}}</h2></a>
+                {{!-- <a href="{{url}}"><div class="hhp-smallCard-excerpt u-noWrapWithEllipsis u-fontSizeSmall u-textColorNormal">{{excerpt words="10"}}</div></a> --}}
+            </div>
+            {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+            {{> "helper/helper-author-meta"}}
+        </div>
+    </div>
+</article>

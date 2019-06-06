@@ -1,0 +1,54 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}} is-frontpage{{/contentFor}}
+
+<div class="homeLayout-container">
+    <section class="homeHero-container u-container u-marginTop30 u-marginBottom30 u-flex u-relative">
+        {{!-- First post --}}
+        {{#foreach posts limit="1"}}
+            {{!-- Fisrt Large Post - partials/home/home-first-post.hbs --}}
+            {{> "home/home-first-post"}}
+        {{/foreach}}
+
+        {{!-- Small Post --}}
+        <div class="homeHero-smallCardWrap u-flexColumnTop">
+            {{#foreach posts from="2" to="4"}}
+                {{!-- medium Post small - partials/home/home-small-post.hbs --}}
+                {{> "home/home-small-post"}}
+            {{/foreach}}
+        </div>
+
+        {{!-- Featured post Medium --}}
+        {{#get "posts" include="tags,authors" filter="featured:true" limit="1" as |home_featured_post|}}
+            {{#if home_featured_post}}{{#foreach home_featured_post}}
+                {{!-- Featured Post medium - partials/home/home-medium-post.hbs --}}
+                {{> "home/home-medium-post"}}
+            {{/foreach}}{{/if}}
+        {{/get}}
+    </section>
+</div>
+
+<section class="feed-entry-content u-container u-marginTop30">
+    {{!-- Ad --}}
+    {{> "ad/ad-home-top"}}
+
+    <div class="feed-entry-wrap u-maxWidth1100 u-marginAuto">
+        <div class="row">
+            {{#foreach posts from="5" to="12"}}
+                {{!-- <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else has number="5, 6"}}s6 ss2{{else}}l4{{/has}}"></div> --}}
+                <div class="col s12 m6 {{#has number="5, 6"}}ss2{{else}}l4{{/has}}">
+                    {{> "story/story-grid" }}
+                </div>
+
+                {{!-- ad --}}
+                {{!-- {{#has number="6"}}<div class="col s12">{{> "ad/ad-home-medium"}}</div>{{/has}} --}}
+                {{#has number="12"}}<div class="col s12">{{> "ad/ad-home-footer"}}</div>{{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+</section>
+
+{{!-- Pagination - partials/pagination.hbs --}}
+{{"pagination"}}

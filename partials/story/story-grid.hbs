@@ -18,24 +18,9 @@
     </a>
     <section class="story-body u-paddingTop15">
         <a href="{{url}}"><h2 class="story-title u-contentTitle u-fontSize22 u-lineHeight1">{{title}}</h2></a>
-        <a href="{{url}}"><p class="story-excerpt u-fontSizeSmall u-marginBottom20">{{excerpt words="12"}}</p></a>
+        <a href="{{url}}"><p class="story-excerpt u-fontSizeBase u-marginBottom20 u-textColorNormal">{{excerpt words="30"}}</p></a>
 
-        {{!-- Author Meta --}}
-        <div class="u-flexCenter u-fontSize15">
-            {{^is "author"}}
-
-            {{#primary_author}}
-            <img class=" u-image avatar-image img-s u-round lazyload" style="margin-right:5px" data-src="{{#if profile_image}}{{img_url profile_image size="xxs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{name}}"/>
-            <a href="{{url}}" class="link--underline u-textColorDarker" style="margin-right:5px">{{name}}</a>
-            {{/primary_author}}
-
-            <time class="datetime u-textCapitalize u-textColorNormal" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMMM DD, YYYY"}}</time>
-            {{else}}
-
-            {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
-            {{> "helper/helper-datetime"}}
-            {{/is}}
-
-        </div>
+        {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+        {{> "helper/helper-author-meta"}}
     </section>
 </article>

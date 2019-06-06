@@ -12,6 +12,9 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{!--  Font -> PT Serif && Source sans Pro --}}
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+
     {{!-- Styles'n'Scripts --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
     <style>{{> "styles"}}</style>
@@ -20,7 +23,6 @@
     {{ghost_head}}
 </head>
 <body class="{{block "special_body_class"}}">
-
     {{!-- Header Content --}}
     {{>"header"}}
 
@@ -35,12 +37,7 @@
     {{> "widget/search"}}
 
     {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    {{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> --}}
-    <script
-        src="https://code.jquery.com/jquery-3.2.1.min.js"
-        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous">
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
@@ -52,27 +49,21 @@
         <script>var maxPages = parseInt('{{pagination.pages}}');</script>
     {{/if}}
 
-    {{!-- The main JavaScript --}}
-    <script src="{{asset "scripts/main.js"}}" defer></script>
-
     {{!-- Content APi --}}
     <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js" defer></script>
-
+    {{!-- The main JavaScript --}}
+    <script src="{{asset "scripts/main.js"}}" defer></script>
+    {{!-- Search --}}
+    <script src="{{asset "scripts/search.js"}}" defer></script>
+    {{!-- Pagination --}}
     {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer></script>{{/if}}
-    {{!-- <script src="{{asset "scripts/search.js"}}" defer></script> --}}
 
     {{!-- script --}}
     {{{block "scripts"}}}
 
     {{!-- Loandig Bar --}}
     <div class="loadingBar"></div>
-
     {{!-- Return home top page scroll --}}
-    <a href="#" class="rocket u-hide-before-lg u-hide">
-        <span class="svgIcon u-block">{{> "icons/rocket"}}</span>
-    </a>
-
-    {{!--  Font Merriweather && Source sans Pro --}}
-    <script>WebFontConfig ={google:{families:['Merriweather:300,400,700','Source+Sans+Pro:300,400,600,700']}};(function(){var wf=document.createElement('script');wf.src='https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js';wf.type='text/javascript';wf.async='true';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(wf,s);})();</script>
+    <a href="#" class="rocket u-hide-before-lg u-hide"><span class="svgIcon u-block">{{> "icons/rocket"}}</span></a>
 </body>
 </html>

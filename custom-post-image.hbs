@@ -6,11 +6,6 @@
 {{#post}}
 
 {{#contentFor "simply_image_post"}}
-    <div class="u-container u-maxWidth740 u-paddingTop30">
-        {{!-- Meta - partials/helper/helper-meta.hbs --}}
-        {{> "helper/helper-author-meta"}}
-    </div>
-
     <div class="pif-wrap u-relative">
         {{!-- Article image --}}
         {{#if feature_image}}
@@ -26,12 +21,8 @@
         />
         {{/if}}
 
-        <header class="post-header u-container u-maxWidth740 u-absolute zindex3">
-            {{!-- Article Title --}}
-            <h1 class="post-title u-fontSize40 u-contentTitle u-md-fontSizeLarger">{{title}}</h1>
-            {{!-- Article Excerpt  --}}
-            {{#if custom_excerpt}}<p class="post-excerpt u-textColorNormal">{{custom_excerpt}}</p>{{/if}}
-        </header>
+        {{!-- Article Header - paertials/article/article-header.hbs --}}
+        {{> "article/article-header"}}
         {{!-- bg --}}
         <div class="u-absolute0 zindex2 pif-grad"></div>
     </div>

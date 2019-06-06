@@ -1,15 +1,17 @@
 {{#if @labs.subscribers}}
-<aside class="post-newsletter u-marginAuto u-textAlignCenter u-marginBottom20">
-    <h5 class="newsletter-title u-fontSize28 u-fontWeightBold u-paddingBottom10">{{t "Want more stuff like this?"}}</h5>
-    <label for="subscribeEmail" class="newsletter-description u-fontSizeSmall" style="color: #5f5f5f">{{t "Get the best viral stories straight into your inbox!"}}</label>
+<aside class="post-newsletter u-textAlignCenter u-marginBottom20">
+    <div class="post-newsletter-wrap u-marginAuto">
+        <h5 class="newsletter-title u-fontSize28 u-fontWeightBold u-marginBottom15">{{t "Want more stuff like this?"}}</h5>
+        <label for="subscribeEmail" class="newsletter-description u-fontSizeSmall u-block">{{t "Get the best viral stories straight into your inbox!"}}</label>
 
-    {{subscribe_form
-    form_class="simply-subscribe-tracking newsletter-form u-marginAuto u-flex u-paddingTop30 u-paddingBottom20"
-    input_id="subscribeEmail"
-    input_class="form--input u-block u-fontSize20"
-    button_class="form--btn u-relative u-overflowHidden u-fontSizeLarge i-send"
-    placeholder=(t "Your email address")
-    autofocus=""
-    }}
+        {{subscribe_form
+        form_class="simply-subscribe-tracking newsletter-form"
+        input_id="subscribeEmail"
+        input_class="subscribe-input u-block u-fontSizeSmall"
+        button_class="subscribe-btn u-relative u-fontSize20 u-textUppercase u-fontWeightSemibold u-block"
+        placeholder=(t "Your email address")
+        autofocus=""
+        }}
+    </div>
 </aside>
 {{/if}}

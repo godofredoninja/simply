@@ -7,27 +7,20 @@
 {{#post}}
 
 {{#contentFor "simply_default_post"}}
-    <header class="post-header u-container u-maxWidth740 u-paddingTop30">
-        {{!-- Meta - partials/helper/helper-meta.hbs --}}
-        {{> "helper/helper-author-meta"}}
-        {{!-- Article Title --}}
-        <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-md-fontSizeLarger">{{title}}</h1>
-        {{!-- Article Excerpt  --}}
-        {{#if custom_excerpt}}<p class="post-excerpt u-textColorNormal u-marginBottom20">{{custom_excerpt}}</p>{{/if}}
-    </header>
+    {{!-- Article Header - paertials/article/article-header.hbs --}}
+    {{> "article/article-header"}}
 
     {{#if feature_image}}
-        <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1000">
+        <figure class="post-image u-block u-marginAuto u-sizeFullHeight u-sizeFullWidth u-maxWidth1100">
             <img
                 srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
                         {{img_url feature_image size="l"}} 1000w,
                         {{img_url feature_image size="xl"}} 2000w"
-                sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 1000px"
+                sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
                 src="{{img_url feature_image size="xl"}}"
                 alt="{{title}}"
-                class="u-block u-marginAuto"
-                data-action="zoom"
+                class="u-block u-marginAuto post-zoom-img"
             />
         </figure>
     {{/if}}

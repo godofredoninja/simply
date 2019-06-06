@@ -7,15 +7,15 @@
 {{#post}}
 <section class="spc-header u-relative u-overflowHidden">
     {{#if feature_image}}
-        <img
-            srcset="{{img_url feature_image size="s"}} 300w,
+        <img class="u-absolute u-image u-block blur-up lazyload"
+            src="{{img_url feature_image size="s"}}"
+            srcset="{{img_url feature_image size="s"}}"
+            data-srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
                     {{img_url feature_image size="l"}} 1000w,
                     {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
-            src="{{img_url feature_image size="xl"}}"
+            data-sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
             alt="{{title}}"
-            class="u-absolute u-image u-block"
         />
     {{/if}}
 

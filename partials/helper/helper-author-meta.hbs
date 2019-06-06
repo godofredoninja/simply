@@ -1,18 +1,18 @@
 <div class="hh u-flex u-flexCenter u-relative zindex4">
     {{!-- Author Avatar --}}
     {{#primary_author}}
-    <a href="{{url}}" class="hh-avatar u-flex0 u-relative avatar-image {{#is "post"}}godo-tracking img-md{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Avatar" data-event-non-interaction="true"{{/is}}>
-        <img class="u-absolute u-image u-block u-round lazyload" data-src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Go to the profile of "}} {{name}}"/>
+    <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}" class="hh-avatar u-flex0 u-relative avatar-image {{#is "post"}}godo-tracking img-md{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Avatar" data-event-non-interaction="true"{{/is}}>
+        <img class="u-absolute u-image u-block u-round" src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Go to the profile of "}} {{name}}"/>
     </a>
-    {{!-- <a href="{{url}}" class="avatar-image u-bgCover {{#is "post"}}img-md{{/is}} {{^if profile_image}}no-avatar{{/if}}" style="background-image:url({{img_url profile_image size="xs"}})"></a> --}}
     {{/primary_author}}
 
-    <div class="hh-right u-flex1 u-overflowHidden u-fontSizeSmall">
+    <div class="hh-right u-flex1 u-overflowHidden u-fontSize15">
 
         {{#primary_author}}
-            <a href="{{url}}" class="hh-author-name link--underline u-textColorDarker {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="true"{{/is}}>{{name}}</a>
+            {{!-- Author Name --}}
+            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}" class="hh-author-name link--underline u-primary-color u-textCapitalize {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Profile" data-event-non-interaction="true"{{/is}}>{{name}}</a>
 
-            {{!-- Follow Author--}}
+            {{!-- Author Social Media (Facebook - twitter) - Show only in Post --}}
             {{#is "post"}}{{#has any="facebook, twitter"}}
                 <div class="hh-follow u-inlineBlock">
                     <span class="hh-follow-toggle hh-btn button--primary">{{t "Follow"}}</span>
@@ -25,15 +25,10 @@
             {{/has}}{{/is}}
         {{/primary_author}}
 
-        {{!-- Primary Tag --}}
+        {{!-- Primary Tag - Show when you are not in the post --}}
         {{^is "post"}}{{#if primary_tag}}{{#primary_tag}}
-            <span class="u-textColorNormal">{{t "in"}}</span> <a href="{{url}}" class="hh-tag link--underline u-textColorDarker">{{name}}</a>
+            <span class="u-textColorNormal">{{t "in"}}</span> <a href="{{url}}" title="{{t "Go to"}} {{name}}" class="hh-tag link--underline u-primary-color u-textCapitalize">{{name}}</a>
         {{/primary_tag}}{{/if}}{{/is}}
-
-        {{!-- In post add author's description --}}
-        {{#is "post"}}{{#if primary_author.bio}}
-            <div class="hh-author-bio u-block u-fontSize15 u-textColorNormal u-noWrapWithEllipsis">{{primary_author.bio}}</div>
-        {{/if}}{{/is}}
 
         {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
         {{> "helper/helper-datetime"}}

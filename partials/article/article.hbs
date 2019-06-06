@@ -3,9 +3,6 @@
     {{!-- Ad --}}
     {{> "ad/ad-article-header"}}
 
-    {{!-- Podcast Post Format --}}
-    {{{block "simply_podcast_post"}}}
-
     {{!-- Image Post Format --}}
     {{{block "simply_image_post"}}}
 
@@ -15,14 +12,10 @@
     {{!-- Image post Format default or Image Normal --}}
     {{{block "simply_default_post"}}}
 
-    <section class="u-container u-maxWidth740 u-relative">
-        {{!-- Share post --}}
-        {{> "article/article-share"}}
-
+    <div class="u-container u-maxWidth740 u-relative">
         {{!-- Content of Post --}}
-        <div class="post-body u-relative">{{content}}</div>
-    </section>
-
+        <div id="post-body" class="post-body u-relative">{{content}}</div>
+    </div>
 
     <footer class="post-footer u-container u-maxWidth740 u-paddingTop20 u-paddingBottom20">
         {{!-- Email subscribe form at the bottom of the page --}}
