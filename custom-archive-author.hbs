@@ -1,0 +1,45 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}archive-author{{/contentFor}}
+
+<div class="u-container u-marginBottom40">
+    <div class="u-marginAuto u-maxWidth1000">
+
+        <div class="row u-marginTop30">
+            {{#post}}
+            <div class="col s12 u-marginBottom40 u-paddingBottom10 u-textAlignCenter">
+                <h1 class="u-marginBottom30 u-md-fontSizeLarger u-fontSizeLargest">{{title}}</h1>
+                {{#if custom_excerpt}}<p class="archive-author-e u-fontSize22 u-marginAuto u-maxWidth740">{{custom_excerpt}}</p>{{/if}}
+            </div>
+            {{/post}}
+
+            {{#get "authors" limit="all"}}
+            {{#foreach authors}}
+
+            <article class="author-card u-flexColumnTop u-marginBottom30 u-relative col s12 m6 l4">
+                <div class="u-flex--1">
+                    <h2 class="author-card-name u-fontSize22 u-contentTitle"><a href="{{url}}">{{name}}</a></h2>
+                    {{#if bio}}<p class="author-card-bio">{{bio}}</p>{{/if}}
+                </div>
+
+                <div class="u-relative u-textAlignCenter u-paddingTop15 u-flex u-flexCenter">
+                    <div class="author-card-media u-flex1">
+                        {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
+                        {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
+                        {{#if website}}<a href="{{website}}" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
+                    </div>
+
+                    <img class="author-card-avatar u-image u-round" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+                </div>
+
+                {{!-- Link --}}
+                <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{name}}"></a>
+            </article>
+
+            {{/foreach}}
+            {{/get}}
+        </div>
+    </div>
+</div>

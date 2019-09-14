@@ -1,0 +1,15 @@
+// Error page
+// ==========================================================================
+.errorPage {
+  font-family: 'Roboto Mono', monospace;
+
+  &-text {
+    margin-top: 60px;
+    white-space: pre-wrap;
+  }
+
+  &-wrap {
+    color: rgba(0, 0, 0, .4);
+    padding: 7vw 4vw;
+  }
+}

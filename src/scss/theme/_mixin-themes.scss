@@ -1,0 +1,72 @@
+// Full Color Change
+@mixin colorFull($theme) {
+  // Header - menu
+  .u-bgheader { background-color: map-get($theme, header-bg-color) }
+
+  .u-menu-color a {
+    color: map-get($theme, header-color)
+  }
+
+  .menu-burger span { background-color: map-get($theme, header-color) }
+
+  .u-menu-color a:hover,
+  .u-menu-color a.nav-current {
+    color: map-get($theme, header-color-hover)
+  }
+
+  .menu-burger:hover span { background-color: map-get($theme, header-color-hover) }
+
+  .header-logo {
+    color: map-get($theme, header-logo-color)
+  }
+
+  // Color links
+  @if map-has-key($theme, color-link) {
+    .u-primary-color,
+    .link--accent {
+      color: map-get($theme, color-link)
+    }
+  }
+
+  // Primary Color button
+  @if map-has-key($theme, button-primary) {
+    .button--primary {
+      color: map-get($theme, button-primary);
+      border-color: map-get($theme, button-primary)
+    }
+  }
+
+  // Newsletter
+  @if map-has-key($theme, newsletter-color) {
+    .godo-n-q-d,.godo-ne-form label,.ne-t { color: map-get($theme, newsletter-color) }
+    .godo-ne-button:hover { background-color: map-get($theme, newsletter-color) }
+  }
+
+  @if map-has-key($theme, newsletter-color-bg) {
+    .ne-body::after,
+    .ne-body::before,
+    .ne-t::before { background-color: map-get($theme, newsletter-color-bg) }
+  }
+  // Podcast
+  @if map-has-key($theme, podcast-button) {
+    .listen-btn {
+      color: map-get($theme, podcast-button);
+      border-color: map-get($theme, podcast-button)
+    }
+    .listen-btn:hover { background-color: map-get($theme, podcast-button) }
+  }
+
+  // Mark in Post
+  @if map-has-key($theme, mark-color) {
+    mark { background-image: map-get($theme, mark-color) }
+  }
+
+  // subscribe btn
+  @if map-has-key($theme, subscribe-color-btn) {
+    .newsletter-form .button { background-color: map-get($theme, subscribe-color-btn) }
+  }
+
+  @if map-has-key($theme, subscribe-color-btn-hover) {
+    .newsletter-form .button:hover { background-color: map-get($theme, subscribe-color-btn-hover) }
+  }
+}

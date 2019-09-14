@@ -3,32 +3,30 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}is-subscribe{{/contentFor}}
 
-<section class="subscribe u-flexColumn u-flexCenter {{#if success}}subscribe-success{{/if}}">
-    <div class="subscribe-wrap u-flex1 u-flexCenter u-marginTop30 u-marginBottom15 u-flexColumn">
-        <div class="subscribe-card u-textAlignCenter u-relative">
+<div class="newsletter u-maxWidth740 u-marginAuto {{#if success}}newsletter-success{{/if}}">
+    <div class="newsletter-wrap u-textAlignCenter u-marginAuto">
 
-        {{^if success}}
+    {{^if success}}
 
-            <h1 class="subscribe-title u-fontSize28 u-fontWeightBold u-marginBottom15">{{t "Sign up for my newsletter!"}}</h1>
-            <h2 class="u-fontWeightNormal subscribe-description u-fontSizeSmall u-block">{{t "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox"}}</h2>
+        <h1 class="newsletter-title u-fontSize28 u-fontWeightBold u-marginBottom15">{{t "Sign up for my newsletter!"}}</h1>
+        <h2 class="newsletter-description u-fontSizeSmall u-block u-fontWeightNormal">{{t "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox"}}</h2>
 
-            {{subscribe_form
-                form_class="subscribe-form"
-                input_class="subscribe-input u-block u-fontSizeSmall"
-                button_class="subscribe-btn u-marginTop15 u-marginBottom15 u-marginTop20 u-marginAuto"
-                placeholder=(t "Your email address")
-                autofocus="true"
-            }}
+        <form class="newsletter-form" action="/subscribe/" method="post">
+            <input type="hidden" name="confirm" />
+            <input type="hidden" name="location" />
+            <input type="hidden" name="referrer" />
+            <input class="u-marginBottom15" type="email" name="email" placeholder="{{t 'Your email address'}}" autocomplete="off" aria-label="{{t 'Your email address'}}" aria-describedby="button-subscribe" required/>
+            <button id="button-subscribe" class="button button--large button--filled u-textUppercase u-sizeFullWidth">{{t 'Subscribe'}}</button>
+        </form>
 
-        {{else}}
+    {{else}}
 
-            <h1 class="subscribe-title u-fontSize28 u-fontWeightBold u-marginBottom15">{{t "Subscribed!"}}</h1>
-            <h2 class="u-fontWeightNormal subscribe-description u-fontSizeSmall u-block">{{t "You've successfully subscribed"}} {{t "with the email address"}} {{email}}</h2>
+        <h1 class="newsletter-title u-fontSize28 u-fontWeightBold u-marginBottom15">{{t "Subscribed!"}}</h1>
+        <h2 class="newsletter-description u-fontSizeSmall u-block u-fontWeightNormal">{{t "You've successfully subscribed"}} {{t "with the email address"}} <span class="u-fontWeightSemibold">{{email}}</span></h2>
 
-            <a href="{{#if subscribed_url}}{{subscribed_url}}{{else}}{{@site.url}}{{/if}}" class="button u-marginAuto u-flex0 u-marginTop15 u-marginBottom15 u-marginTop20">ok</a>
+        <a href="{{#if subscribed_url}}{{subscribed_url}}{{else}}{{@site.url}}{{/if}}" class="button button--filled u-marginTop20">ok</a>
 
-        {{/if}}
+    {{/if}}
 
-        </div>
     </div>
-</section>
+</div>

@@ -1,26 +1,19 @@
-<article class="story u-relative">
-    <a href="{{url}}"  class="story-image u-relative u-borderLighter u-bgColorGrayLight u-block u-overflowHidden">
-        {{!-- Imagenes --}}
-        {{#if feature_image}}
-            <img class="story-img u-absolute u-image u-block blur-up lazyload"
-                src="{{img_url feature_image size="m"}}"
-                srcset="{{img_url feature_image size="xxs"}}"
-                data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
-                data-sizes="(max-width: 1000px) 400px, 600px"
-                alt="{{title}}"
-            />
-        {{else}}
-            <div class="u-absolute0 u-block u-bgCover not-image"></div>
-        {{/if}}
+<a href="{{url}}"  class="story-image u-relative u-borderLighter u-bgColorGrayLight u-block u-overflowHidden">
+    {{!-- Imagenes --}}
+    {{#if feature_image}}
+        <img class="story-img u-absolute u-image u-block blur-up lazyload"
+            src="{{img_url feature_image size="l"}}"
+            srcset="{{img_url feature_image size="xxs"}}"
+            data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+            data-sizes="(max-width: 1000px) 400px, 600px"
+            alt="{{title}}"
+        />
+    {{/if}}
+</a>
+<div class="story-body u-paddingTop15">
+    <a href="{{url}}"><h2 class="story-title u-contentTitle u-fontSize22 u-lineHeight1">{{title}}</h2></a>
+    <a href="{{url}}"><p class="story-excerpt u-fontSizeBase u-marginBottom20 u-textColorNormal">{{excerpt words="30"}}</p></a>
 
-        {{!-- icon star if is featured post --}}
-        {{#if featured}}<span class="story-icon-featured u-absolute u-textColorWhite i-star-line"></span>{{/if}}
-    </a>
-    <section class="story-body u-paddingTop15">
-        <a href="{{url}}"><h2 class="story-title u-contentTitle u-fontSize22 u-lineHeight1">{{title}}</h2></a>
-        <a href="{{url}}"><p class="story-excerpt u-fontSizeBase u-marginBottom20 u-textColorNormal">{{excerpt words="30"}}</p></a>
-
-        {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
-        {{> "helper/helper-author-meta"}}
-    </section>
-</article>
+    {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+    {{> "helper/helper-author-meta"}}
+</div>

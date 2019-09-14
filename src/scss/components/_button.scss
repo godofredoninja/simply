@@ -1,0 +1,91 @@
+// Buttons
+// -----------------------------------------------------------------------------
+.button {
+  background: $button-color-background;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  color: $button-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $primary-font;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  height: $button-height;
+  letter-spacing: 0;
+  line-height: $button-height - 2;
+  padding: 0 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  transition: .1s background-color, .1s border-color, .1s color, .1s fill;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:focus { outline: none }
+
+  &:hover {
+    background: $button-hover-color-background;
+    color: $button-hover-color;
+  }
+
+  .icon {
+    position: relative;
+    top: -1px
+  }
+
+  &--primary {
+    border: 1px solid rgba(0, 0, 0, 0.68);
+    color: rgba(0, 0, 0, 0.84);
+  }
+
+  &--large {
+    font-size: 1rem;
+    height: 44px;
+    line-height: 42px;
+    padding: 0 18px;
+  }
+
+  &--dark {
+    background: rgba(0, 0, 0, .84);
+    border-color: rgba(0, 0, 0, .84);
+    color: rgba(255, 255, 255, .97);
+
+    &:hover {
+      background: #000;
+      border-color: #000;
+      color: rgba(255, 255, 255, .97);
+    }
+  }
+
+  &--filled {
+    color: #fff;
+    background: $button-filled-background;
+
+    &:hover {
+      color: #fff;
+      background: darken($button-filled-background, 2%)
+    }
+  }
+
+  &--circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    line-height: 34px;
+    padding: 0;
+  }
+}
+
+.buttonSet {
+  > .button {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    vertical-align: middle;
+
+    &:last-child { margin-right: 0 }
+  }
+}

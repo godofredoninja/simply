@@ -14,6 +14,8 @@
     {{ghost_head}}
 </head>
 <body class="u-bgWhite">
+    {{!-- Icons --}}
+    {{> "icons/icons-symbol-defs"}}
 
     {{!-- Header Content --}}
     {{>"header"}}
@@ -28,7 +30,7 @@
         </section>
 
         {{!-- Articles style Card --}}
-        {{#get "posts" limit="6" include="tags" as |recents| }}
+        {{#get "posts" limit="6" as |recents| }}
 
         <div class="u-bgWhite u-paddingTop30 u-paddingBottom20">
             <div class="u-container u-maxWidth1040">
@@ -49,27 +51,31 @@
     {{!-- Search box --}}
     {{>"widget/search"}}
 
-    {{!-- Blog URL --}}
-    <script>var siteUrl = '{{@site.url}}';</script>
-
-    <script type="text/javascript">
+    <script>
         var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
         var emojiRandom = emoji[Math.floor(Math.random()*emoji.length)];
         document.getElementById('emoji').innerHTML = emojiRandom;
     </script>
 
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    {{!-- Content APi --}}
-    <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js" defer></script>
-
-    {{!-- Scripts --}}
+    {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
 
-    {{!-- The main JavaScript --}}
-    <script type="text/javascript" src="{{asset "scripts/main.js"}}" defer></script>
+    {{!-- Footer Content --}}
+    {{>"footer"}}
 
-    {{!-- Search --}}
-    <script src="{{asset "scripts/search.js"}}" defer></script>
+    {{!-- Back to top --}}
+    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
+        {{> "icons/arrow-top"}}
+        <p class="back-to-top-text u-fontSizeBase u-fontWeightSemibold">{{t "INDEX"}}</p>
+    </div>
+
+    {{!-- Blog URL --}}
+    <script>
+        var siteUrl = '{{@site.url}}';
+        var siteSearch = '{{asset "scripts/search.js"}}';
+    </script>
+
+    {{!-- Main scripts --}}
+    <script src="{{asset "scripts/main.js"}}" defer async></script>
 </body>
 </html>

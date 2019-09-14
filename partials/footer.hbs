@@ -1,14 +1,12 @@
 <footer class="footer u-fontSizeSmaller u-fontWeightSemibold u-paddingTop20 {{#is "post"}}u-bgWhite{{/is}}">
     <div class="u-container u-maxWidth1000">
 
-        <aside class="follow followMe u-fontSize20 u-flex u-hide-before-md">
-            {{#if @site.facebook}}<a href="{{facebook_url}}" class="godo-tracking i-facebook" title="Facebook {{@site.facebook}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
-            {{#if @site.twitter}}<a href="{{twitter_url}}" class="godo-tracking i-twitter" title="Twitter {{@site.twitter}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
-        </aside>
+        {{!-- Social Media - partilas/widget/social-media.hbs --}}
+        {{> "widget/social-media"}}
 
         <div class="footer-wrap u-paddingBottom20 u-paddingTop20 u-textAlignCenter">
             &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>
-            Design with <i class="i-favorite animated infinite pulse" style="color:red;display:inline-block"></i> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+            Design with <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-favorite"></use></svg> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
         </div>
     </div>
 </footer>

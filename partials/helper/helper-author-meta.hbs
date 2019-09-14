@@ -15,11 +15,37 @@
             {{!-- Author Social Media (Facebook - twitter) - Show only in Post --}}
             {{#is "post"}}{{#has any="facebook, twitter"}}
                 <div class="hh-follow u-inlineBlock">
-                    <span class="hh-follow-toggle hh-btn button--primary">{{t "Follow"}}</span>
+                    <span class="hh-follow-toggle button button--primary">{{t "Follow"}}</span>
                     {{!-- Author Facebook and Twitter --}}
                     <div class="hh-follow-show u-inlineBlock" style="display:none">
-                        {{#if facebook}}<a class="hh-btn hh-fb u-textColorWhite godo-tracking" href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Facebook" data-event-non-interaction="true"><i class="i-facebook"></i> Facebook</a>{{/if}}
-                        {{#if twitter}}<a class="hh-btn hh-tw u-textColorWhite godo-tracking" href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="noopener noreferrer" data-event-category="Article" data-event-action="Author - {{name}}" data-event-label="Twitter" data-event-non-interaction="true"><i class="i-twitter"></i> Twitter</a>{{/if}}
+                        {{#if facebook}}
+                            <a class="button bg-facebook u-textColorWhite godo-tracking"
+                                href="{{facebook_url}}"
+                                title="Facebook"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-event-category="Article"
+                                data-event-action="Author - {{name}}"
+                                data-event-label="Facebook"
+                                data-event-non-interaction="true">
+                                <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+                                Facebook
+                            </a>
+                        {{/if}}
+                        {{#if twitter}}
+                            <a class="button bg-twitter u-textColorWhite godo-tracking"
+                                href="{{twitter_url}}"
+                                title="{{twitter}}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-event-category="Article"
+                                data-event-action="Author - {{name}}"
+                                data-event-label="Twitter"
+                                data-event-non-interaction="true">
+                                <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+                                Twitter
+                            </a>
+                        {{/if}}
                     </div>
                 </div>
             {{/has}}{{/is}}

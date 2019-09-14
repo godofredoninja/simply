@@ -1,11 +1,11 @@
-<div class="sidebar-items">
-    <h3 class="sidebar-title"><span>{{widgetTitle}}</span></h3>
+<div class="sidebar-items u-marginBottom30">
+    <h3 class="sidebar-title u-heading-border"><span>{{widgetTitle}}</span></h3>
 
     {{#foreach widgetPosts}}
     <div class="sp u-relative u-flex godo-tracking" data-event-category="Sidebar" data-event-action="Post" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true">
         <div class="sp-n u-flex0 u-fontSizeLarger">0{{@number}}</div>
         <div class="u-paddingLeft15 u-flex1 u-overflowHidden">
-            <h3 class="sp-t">{{title}}</h3>
+            <h3 class="sp-t u-lineClamp2">{{title}}</h3>
             {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
             {{> "helper/helper-datetime"}}
         </div>

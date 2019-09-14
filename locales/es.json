@@ -43,10 +43,13 @@
   "Unfortunately, this page doesn't exist": "Lamentablemente, esta página no existe",
   "Related Posts": "Artículos Relacionados",
   "Go to the profile of": "Ir al perfil de",
+  "Hi I'm": "Hola, yo soy",
   "Go to": "Ir a",
   "Stories": "Artículos",
-  "Navigate up/down": "Navegar arriba/abajo",
+  "Navigate up/down": "Arriba/Abajo",
   "Go to article": "Ir al artículo",
-  "Search new term": "Nueva búsqueda",
-  "Close search": "Cerrar búsqueda"
+  "Search new term": "Nueva Búsqueda",
+  "Close search": "Cerrar Búsqueda",
+  "No results found": "No se han encontrado resultados",
+  "GO TOP": "SUBIR"
 }

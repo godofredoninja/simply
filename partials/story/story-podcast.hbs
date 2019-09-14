@@ -15,13 +15,10 @@
         <div class="spc-c-body">
             {{> "helper/helper-author-meta"}}
             <h2 class="spc-c-title u-fontSize28 u-marginBottom15 u-paddingTop15"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
-            <a href="{{url}}" class="u-block"><p class="spc-c-excerpt u-marginBottom20 card-excerpt u-textColorNormal u-fontSizeBase">{{excerpt words="30"}}</p></a>
-            <a href="{{url}}" class="listen-btn button u-textUppercase u-fontSizeSmall u-relative zindex3">
-                <span class="listen-icon svg-icon">{{> "icons/icon-listen"}}</span>
-                {{t "Listen"}}
-            </a>
+            <p class="spc-c-excerpt u-marginBottom20 card-excerpt u-textColorNormal u-fontSizeBase">{{excerpt words="30"}}</p>
+            <a href="{{url}}" class="listen-btn button u-textUppercase u-relative zindex3">{{> "icons/icon-listen"}} {{t "Listen"}}</a>
         </div>
 
-        {{!-- <a href="{{url}}" class="u-absolute0 zindex2"></a> --}}
+        {{!-- <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{title}}"></a> --}}
     </div>
 </article>

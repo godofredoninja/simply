@@ -1,52 +1,51 @@
-<div id="post-comments" class="post-comments u-hide u-bgWhite u-paddingTop30 u-paddingBottom30">
+<div id="post-comments" class="post-comments js-comments u-hide u-bgWhite u-paddingTop30 u-paddingBottom30">
     <div class="u-container u-maxWidth1000 u-card">
         {{!-- Disqus Comments --}}
-        <div id="disqus_thread" class="simply-disqus u-hide"></div>
-        {{!-- Comments section for facebook --}}
-        <div class="fb-comments simply-facebook u-hide" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
+        <div id="disqus_thread"></div>
     </div>
 </div>
 
-
 {{#contentFor "scripts"}}
 <script>
-    var $boxComments = $('#post-comments');
+(function(d, s, id) {
+    if (typeof disqusShortName === 'undefined') return;
 
     var disqus_config = function () {
         this.page.url = '{{url absolute="true"}}';
         this.page.identifier = 'ghost-{{comment_id}}';
     };
 
-    (function(d, s, id) {
-        if (typeof disqusShortName !== 'undefined') {
-            $boxComments.removeClass('u-hide');
-            $('.simply-disqus').removeClass('u-hide');
+    var disqusComments = d.querySelectorAll('.js-comments');
+    disqusComments.forEach(function(item){item.classList.remove('u-hide')});
+
+    // Disqus Comments Count
+    var count = d.createElement(s);
+    count.src = 'https://'+disqusShortName+'.disqus.com/count.js';
+    count.id = 'dsq-count-scr';
+    count.async = true;
+    count.defer = true;
+    d.body.appendChild(count);
+
+    function loadDisqus() {
+        var currentScroll = d.scrollingElement.scrollTop;
+        var disqusTarget = d.getElementById('disqus_thread');
+
+        if( disqusTarget && (currentScroll > disqusTarget.getBoundingClientRect().top - 150) ) {
+            if (d.getElementById(id)) return;
+
             var js = d.createElement(s);
+            js.id = id;
             js.src = 'https://'+disqusShortName+'.disqus.com/embed.js';
             js.async = true;
+            js.defer = true;
             js.setAttribute('data-timestamp', +new Date());
+            d.body.appendChild(js);
 
-            /* Comments Count */
-            var count = d.createElement(s);
-            count.src = 'https://'+disqusShortName+'.disqus.com/count.js';
-            count.id = 'dsq-count-scr';
-            count.async = true;
-
-            (d.head || d.body).appendChild(js);
-            $('body').append(count);
-        } else if (typeof facebookLocaleComments !== 'undefined') {
-            $boxComments.removeClass('u-hide');
-            $('.simply-facebook').removeClass('u-hide');
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/'+facebookLocaleComments+'/sdk.js#xfbml=1&version=v3.1';
-            js.async = true;
-            fjs.parentNode.insertBefore(js, fjs);
-        } else {
-            $boxComments.remove();
+            window.removeEventListener('scroll', loadDisqus);
         }
-    }(document, 'script', 'facebook-jssdk'));
+    }
+
+    window.addEventListener('scroll', loadDisqus);
+}(document, 'script', 'disqus-js'));
 </script>
 {{/contentFor}}

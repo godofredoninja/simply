@@ -2,5 +2,5 @@
     <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD"}}</time>
     <span class="points"></span>
     <span class="readingTime" style="cursor:default" title="{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
-    {{#if featured}}<span class="i-star" style="padding-left:4px"></span>{{/if}}
+    {{#if featured}}<svg class="icon icon--star icon--xs"><use xlink:href="#icon-star"></use></svg>{{/if}}
 </div>

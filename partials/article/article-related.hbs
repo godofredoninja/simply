@@ -1,15 +1,10 @@
-{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" include="tags" as |post_related|}}
-{{#if post_related}}
+{{#if post.tags}}
+{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |post_related|}}
+
+{{!-- Ad - partials/ad/ad-article-medium.hbs --}}
+{{> "ad/ad-article-medium"}}
 
 <div class="post-related u-bgWhite u-paddingTop30 u-paddingBottom20">
-    {{!-- Title Post Related --}}
-    {{!-- <div class="u-container u-maxWidth1200 u-marginBottom40 u-textAlignCenter">
-        <h5 class="post-related-title u-textUppercase">{{t "Related Posts"}}</h5>
-    </div> --}}
-
-    {{!-- Ad - partials/ad/ad-article-medium.hbs --}}
-    {{> "ad/ad-article-medium"}}
-
     <div class="u-container u-maxWidth1200">
         <div class="row">
             {{#foreach post_related}}
@@ -22,5 +17,5 @@
     </div>
 </div>
 
-{{/if}}
 {{/get}}
+{{/if}}

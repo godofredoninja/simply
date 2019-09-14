@@ -1,3 +1,4 @@
+{{#if post.tags}}
 {{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}"}}
     <div class="related u-container">
         <div class="related-title"><span>{{t "Related Articles"}}</span></div>
@@ -20,3 +21,4 @@
 
     </div>
 {{/get}}
+{{/if}}

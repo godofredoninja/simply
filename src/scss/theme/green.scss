@@ -1,0 +1,29 @@
+/* stylelint-disable */
+$primary-color: #006400;
+
+$theme: (
+  primary-color: $primary-color,
+
+  header-bg-color: $primary-color,
+  header-color: #b5dda8,
+  header-color-hover: #fff,
+  header-colo-logo: #fff,
+
+  color-link: #006400,
+
+  button-primary: #006400,
+
+  // newsletter-color: #8da7d5,
+  // newsletter-color-bg: #8da7d6,
+
+  // podcast-button: #8da7d5,
+
+  // subscribe-color-btn: #8da7d5,
+  // subscribe-color-btn-hover: #9db5df,
+
+  // mark-color: linear-gradient(180deg,#ebf1ff,#ebf1ff)
+);
+
+@import "mixin-themes";
+
+@include colorFull($theme);

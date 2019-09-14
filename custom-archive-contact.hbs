@@ -1,0 +1,75 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}archive-contact u-bgWhite{{/contentFor}}
+
+<div class="u-container u-marginBottom40">
+    <article class="u-marginAuto u-paddingTop30 u-maxWidth1000 animated bounceInUp">
+        {{#post}}
+            <header class="u-marginAuto u-maxWidth740 u-marginBottom40 u-paddingBottom10 u-textAlignCenter">
+                <h1 class="u-marginBottom30 u-fontSize22 u-fontWeightNormal u-textColorNormal">{{title}}</h1>
+                {{#if custom_excerpt}}<p class="u-fontSizeLargest u-fontWeightSemibold u-md-fontSizeLarger">{{custom_excerpt}}</p>{{/if}}
+            </header>
+
+            {{!-- Content --}}
+            {{content}}
+        {{/post}}
+    </article>
+</div>
+
+{{!--
+<form action="https://formspree.io/hello@godofredo.ninja" class="u-marginBottom40 u-marginAuto u-maxWidth740" method="POST">
+    <div class="row">
+        <div class="col s12 m6 u-marginBottom30">
+            <input name="name" type="text" placeholder="Your Name" required>
+        </div>
+        <div class="col s12 m6 u-marginBottom30">
+            <input name="email" type="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="col s12 u-marginBottom30"><textarea name="message" placeholder="Type Message" required></textarea></div>
+        <div class="col s12 u-textAlignCenter u-marginBottom40"><button type="submit" class="button button--large button--dark">Send Message</button></div>
+    </div>
+</form>
+
+<div class="pae row u-textAlignCenter">
+    <div class="col s12 m6 l4 u-marginBottom30">
+        <div class="pae-icon">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+        </div>
+        <h4 class="pae-title">PHONE</h4>
+        <div class="pae-des u-fontSizeBase">
+            <p>+51 987 659 249</p>
+            <p>+51 01 424 0827</p>
+        </div>
+    </div>
+
+    <div class="col s12 m6 l4 u-marginBottom30">
+        <div class="pae-icon">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        </div>
+        <h4 class="pae-title">ADDRESS</h4>
+        <div class="pae-des u-fontSizeBase">
+            <p>Parque de la Reserva, Jr. Madre de Dios, Cercado de Lima, Perú</p>
+        </div>
+    </div>
+
+    <div class="col s12 m6 l4 u-marginBottom30">
+        <div class="pae-icon">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        </div>
+        <h4 class="pae-title">EMAIL</h4>
+        <div class="pae-des u-fontSizeBase">
+            <p>hello@godofredo.ninja</p>
+            <p>test@godofredo.ninja</p>
+        </div>
+    </div>
+</div>
+
+<div class="archive-contact-maps u-marginBottom40 u-textAlignCenter">
+    <div class="video-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1950.8026830541062!2d-77.03430964157232!3d-12.070645288547228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDA0JzE0LjMiUyA3N8KwMDEnNTkuNiJX!5e0!3m2!1ses!2spe!4v1566791013797!5m2!1ses!2spe" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+</div>
+--}}

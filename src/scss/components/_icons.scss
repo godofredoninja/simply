@@ -1,0 +1,16 @@
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  &--md {
+    width: 24px;
+    height: 24px;
+  }
+
+  &--gray { color: #777 }
+}

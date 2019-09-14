@@ -1,0 +1,13 @@
+// Footer
+// ==========================================================================
+.footer {
+  color: rgba(0, 0, 0, .6);
+  padding-bottom: 45px;
+
+  a {
+    color: rgba(0, 0, 0, .9);
+    &:hover { color: inherit }
+  }
+
+  .social-media { justify-content: center; }
+}

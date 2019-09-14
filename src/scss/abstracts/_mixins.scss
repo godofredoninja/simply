@@ -1,0 +1,64 @@
+// Font family
+// -----------------------------------------------------------------------------
+%primary-font {
+  font-family: $primary-font;
+}
+
+%secundary-font {
+  font-family: $secundary-font;
+}
+
+// Positon Absolute
+// -----------------------------------------------------------------------------
+%content-absolute-bottom {
+  bottom: 0;
+  left: 0;
+  margin: 30px;
+  max-width: 600px;
+  position: absolute;
+  z-index: 2;
+}
+
+%u-absolute0 {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+// flexbox
+// -----------------------------------------------------------------------------
+%flex { display: flex }
+%flex-align-items-center { align-items: center }
+%flex-direction-column { flex-direction: column }
+%flex-direction-row { flex-direction: row }
+%flex-justify-content-center { justify-content: center }
+
+// modal
+// -----------------------------------------------------------------------------
+%modal {
+  opacity: 0;
+  transition: opacity .2s ease-out .1s, visibility 0s .4s;
+  z-index: 100;
+  visibility: hidden;
+}
+
+%modal-bg { background-color: rgba(84, 102, 109, .6) }
+
+%modal-inner {
+  opacity: 0;
+  transform: scale(.6);
+  transition: transform .3s cubic-bezier(.06, .47, .38, .99), opacity .3s cubic-bezier(.06, .47, .38, .99);
+  overflow: hidden;
+}
+
+// Shadow
+// -----------------------------------------------------------------------------
+%box-shadow-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px;
+  overflow: hidden;
+}

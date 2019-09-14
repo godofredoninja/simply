@@ -1,32 +1,24 @@
 {{!< default}}
 
-{{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}}{{/contentFor}}
-
 <div class="u-container">
-    <div class="u-maxWidth1100 u-marginAuto">
-        <div class="row u-paddingTop30">
-            <div class="col s12 col-left">
-                <div class="feed-entry-content u-maxWidth740 u-marginAuto">
-                    <div class="feed-entry-wrap slist">
+    <div class="u-maxWidth1100 u-marginAuto row u-paddingTop30">
+        <div class="col s12 col-left">
+            <div class="feed-entry-content">
+                <div class="feed-entry-wrap slist">
 
-                        {{#foreach posts}}
-                            {{>"story/story-grid"}}
+                    {{#foreach posts}}
+                       <article class="story u-relative">{{>"story/story-grid"}}</article>
 
-                            {{!-- ad --}}
-                            {{#has number="5"}}{{> "ad/ad-loop-medium"}}{{/has}}
-                            {{#has number="10"}}{{> "ad/ad-loop-footer"}}{{/has}}
-                        {{/foreach}}
+                        {{!-- ad --}}
+                        {{#has number="5"}}{{> "ad/ad-loop-medium"}}{{/has}}
+                        {{#has number="10"}}{{> "ad/ad-loop-footer"}}{{/has}}
+                    {{/foreach}}
 
-                    </div>
                 </div>
-
-                {{!-- Pagination - partials/pagination.hbs --}}
-                {{"pagination"}}
             </div>
-
-            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
-            {{>"sidebar/sidebar"}}
         </div>
+
+        {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+        {{>"sidebar/sidebar"}}
     </div>
 </div>

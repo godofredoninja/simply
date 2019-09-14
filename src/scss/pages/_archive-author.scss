@@ -1,0 +1,28 @@
+// 1. Archive Author Page
+// -----------------------------------------------------------------------------
+.archive-author {
+  background: linear-gradient(to right, #E8F3EC 50%, #F6F1E4 50%)
+}
+
+.author-card {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .15);
+  background: #fff;
+  padding: 15px 12px;
+  height: 320px;
+
+  &-bio {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  &-avatar {
+    height: 80px;
+    width: 80px
+  }
+
+  &-media a {
+    padding: 5px;
+    position: relative;
+    z-index: 3
+  }
+}

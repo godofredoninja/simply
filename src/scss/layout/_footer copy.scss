@@ -1,0 +1,59 @@
+.footer .social-media {
+  justify-content: center;
+}
+
+// sft (simply footer )
+.sft {
+  background: #110f16;
+  color: #ccc;
+
+  // card
+  &-c {
+    padding: 15px;
+    border-radius: 4px;
+    // background: #2a2a2a;
+    background: #18151f;
+    font-size: 17px;
+    line-height: 1.6;
+    height: 100%;
+
+    p {
+      padding-bottom: 10px;
+    }
+  }
+
+  // title
+  &-t {
+    color: #f1f1f1;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+    margin-bottom: 12px;
+  }
+
+  // social
+  &-s a {
+    font-size: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 12px
+  }
+
+  // about
+  &--a a {
+    color: #6EE193;
+    font-weight: 600;
+    text-decoration: none;
+    &:hover { color: #fff }
+  }
+
+  // Parner
+  &--p a:hover { color: #6EE193; img { opacity: 1 !important } }
+}
+
+.g-yts {
+  padding: 10px;
+  background: #fff;
+  border-radius: 3px;
+  min-height: 68px;
+  line-height: 1;
+}

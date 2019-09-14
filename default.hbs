@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{!--  Font -> PT Serif && Source sans Pro --}}
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i|Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family={{#is "post, page"}}PT+Serif:400,400i,700,700i|{{/is}}Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
 
     {{!-- Styles'n'Scripts --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
@@ -23,8 +23,12 @@
     {{ghost_head}}
 </head>
 <body class="{{block "special_body_class"}}">
+    {{!-- Icons --}}
+    {{> "icons/icons-symbol-defs"}}
+
     {{!-- Header Content --}}
-    {{>"header"}}
+    {{> "header"}}
+    {{!-- {{>"header-home-image"}} --}}
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     <main class="main u-relative">{{{body}}}</main>
@@ -36,34 +40,33 @@
     {{!-- Search box --}}
     {{> "widget/search"}}
 
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     {{!-- Ghost outputs important scripts and data with this tag --}}
     {{ghost_foot}}
 
     {{!-- Blog URL --}}
-    <script>var siteUrl = '{{@site.url}}';</script>
+    <script>
+        var siteUrl = '{{@site.url}}';
+        var siteSearch = '{{asset "scripts/search.js"}}';
+        var sitePrismJs = '{{asset "scripts/prismjs.js"}}';
+        var sitePrismJscomponents = '/assets/scripts/components/';
+    </script>
 
-    {{#if pagination.pages}}
-        <script>var maxPages = parseInt('{{pagination.pages}}');</script>
-    {{/if}}
+    {{!-- Main scripts --}}
+    <script src="{{asset "scripts/main.js"}}" defer async></script>
 
-    {{!-- Content APi --}}
-    <script src="https://unpkg.com/@tryghost/content-api@1.0.0/umd/content-api.min.js" defer></script>
-    {{!-- The main JavaScript --}}
-    <script src="{{asset "scripts/main.js"}}" defer></script>
-    {{!-- Search --}}
-    <script src="{{asset "scripts/search.js"}}" defer></script>
-    {{!-- Pagination --}}
-    {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer></script>{{/if}}
+    {{!-- Paginastion --}}
+    {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}
 
     {{!-- script --}}
     {{{block "scripts"}}}
 
     {{!-- Loandig Bar --}}
     <div class="loadingBar"></div>
-    {{!-- Return home top page scroll --}}
-    <a href="#" class="rocket u-hide-before-lg u-hide"><span class="svgIcon u-block">{{> "icons/rocket"}}</span></a>
+
+    {{!-- Back to top --}}
+    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
+        {{> "icons/arrow-top"}}
+        <p class="back-to-top-text u-fontSizeBase u-fontWeightSemibold">{{t "GO TOP"}}</p>
+    </div>
 </body>
 </html>

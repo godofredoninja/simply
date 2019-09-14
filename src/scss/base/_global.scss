@@ -1,0 +1,420 @@
+/**
+  * 1. body
+  * 2. blockquote
+  * 3. cite - figcamption - figure
+  * 4. hr
+  * 5. image
+  * 6. ul ol
+  * 7. mark and q
+  * 8. Input Textarean
+  * 9. table
+  */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+//Default styles
+html {
+  box-sizing: border-box;
+  font-size: $font-size-root; // ignored
+}
+
+// 1. body
+// -----------------------------------------------------------------------------
+body {
+  @extend %primary-font;
+
+  color: $primary-text-color;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin: 0 auto;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+
+  // &.is-article .sft { padding-bottom: 4rem }
+
+  &.medium-zoom--opened {
+    .pa,
+    .header {
+      opacity: 0;
+      transition: transform .2s, opacity .2s, visibility 0s 2s, -webkit-transform .2s;
+      visibility: hidden;
+    }
+
+    .header { transform: translateY(-100%) }
+    .pa { transform: translateY(100%) }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:active,
+  &:focus,
+  &:hover {
+    outline: 0;
+  }
+}
+
+// 2. Blockquote
+// -----------------------------------------------------------------------------
+blockquote {
+  border-left: 5px solid currentColor;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 30px 0 0 -23px;
+  padding-bottom: 2px;
+  padding-left: 20px;
+  font-style: italic;
+
+  p:first-of-type { margin-top: 0 }
+}
+
+@media #{$lg-and-down} {
+  blockquote { margin-left: -5px; font-size: 21px }
+}
+
+// 3. cite - figcamption - figure
+// -----------------------------------------------------------------------------
+cite,
+figcaption {
+  color: rgba(0, 0, 0, .68);
+  display: block;
+  font-family: $primary-font;
+  font-feature-settings: "liga" on, "lnum" on;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.4;
+  margin-top: 10px;
+  text-align: center;
+  outline: 0;
+  width: 100%;
+}
+
+cite { text-align: left }
+figure { margin: 0 }
+
+// 4. hr
+// -----------------------------------------------------------------------------
+hr {
+  margin: 0;
+  position: relative;
+  background: none;
+  border: none;
+  text-align: center;
+  max-width: none;
+  line-height: 1;
+  height: auto;
+
+  &::before {
+    content: "\b7\b7\b7";
+    color: #1a1a1a;
+    font-size: 28px;
+    letter-spacing: 15px;
+    padding-left: 15px;
+    font-family: serif;
+  }
+}
+
+// 5. Image
+// -----------------------------------------------------------------------------
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  width: auto;
+
+  &:not([src]) {
+    visibility: hidden;
+  }
+}
+
+i {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// 6. List ol - ul
+// -----------------------------------------------------------------------------
+ol, ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+// 7. Mark and q
+// -----------------------------------------------------------------------------
+mark {
+  background-color: transparent !important;
+  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
+  color: rgba(0, 0, 0, .8);
+}
+
+q {
+  color: rgba(0, 0, 0, .44);
+  display: block;
+  font-size: 28px;
+  // font-style: italic;
+  font-weight: 400;
+  letter-spacing: -.014em;
+  line-height: 1.48;
+  padding-left: 8%;
+  text-align: left;
+  margin: 1.5rem 0 !important;
+
+  &::before, &::after { display: none; }
+}
+
+// 8. Input Textarean
+// -----------------------------------------------------------------------------
+textarea,
+input {
+  background: #fff;
+  border-radius: 3px;
+  border: 0;
+  color: #303030;
+  display: block;
+  font-size: 1rem;
+  margin: 0;
+  outline: none;
+  padding: 0 10px;
+  position: relative;
+  transition: box-shadow .08s ease-in, color .08s ease-in;
+  width: 100%;
+  box-shadow: 0 0 0 1px rgba(50, 50, 93, .1), 0 2px 5px 0 rgba(50, 50, 93, .05), 0 1px 1px 0 rgba(0, 0, 0, .05);
+
+  &:focus {
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 1px 0 rgba(0, 0, 0, .05), 0 0 0 4px rgba(0, 0, 0, .1);
+  }
+}
+
+/* stylelint-disable-next-line */
+textarea {
+  min-height: 160px;
+  padding: 15px 10px;
+}
+
+/* stylelint-disable-next-line */
+input {
+  height: $input-height-large;
+  line-height: $input-height-large;
+}
+
+.input--md {
+  height: $input-height;
+  line-height: $input-height;
+}
+
+// 9. table
+// -----------------------------------------------------------------------------
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 35px 0 0;
+  max-width: 100%;
+  overflow-x: auto;
+  // vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  -webkit-overflow-scrolling: touch;
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+  th {
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+}
+
+// 10. Links
+// -----------------------------------------------------------------------------
+.link {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+
+  &--accent {
+    color: rgba(0, 0, 0, .54);
+    text-decoration: none;
+  }
+
+  &--underline {
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// 11. Main .main
+// -----------------------------------------------------------------------------
+.main { min-height: 70vh }
+
+.main,
+.footer { transition: transform .5s ease; }
+
+// 12. warning success and Note
+// -----------------------------------------------------------------------------
+.warning {
+  background: #fbe9e7;
+  color: #d50000;
+  &::before { content: '⚠️'; }
+}
+
+.note {
+  background: #e1f5fe;
+  color: #0288d1;
+  &::before { content: '⭐'; }
+}
+
+.success {
+  background: #e0f2f1;
+  color: #00897b;
+  &::before { color: #00bfa5; content: '☑️'; }
+}
+
+.warning, .note, .success {
+  @extend %primary-font;
+
+  display: block;
+  font-size: 18px !important;
+  line-height: 1.58 !important;
+  padding: 12px 24px 12px 60px;
+
+  &::before {
+    float: left;
+    font-size: 24px;
+    margin-left: -36px;
+  }
+}
+
+// toltip
+// ==========================================================================
+// .with-tooltip {
+//   overflow: visible;
+//   position: relative;
+
+//   &::after {
+//     background: rgba(0, 0, 0, .85);
+//     border-radius: 4px;
+//     color: #fff;
+//     content: attr(data-tooltip);
+//     display: inline-block;
+//     font-size: 12px;
+//     font-weight: 600;
+//     left: 50%;
+//     line-height: 1.25;
+//     min-width: 130px;
+//     opacity: 0;
+//     padding: 4px 8px;
+//     pointer-events: none;
+//     position: absolute;
+//     text-align: center;
+//     text-transform: none;
+//     top: -30px;
+//     will-change: opacity, transform;
+//     z-index: 1;
+//   }
+
+//   &:hover::after {
+//     animation: tooltip .1s ease-out both;
+//   }
+// }
+
+// 13. Social Media Color
+// -----------------------------------------------------------------------------
+@each $social-name, $color in $social-colors {
+  // .c-#{$social-name} { color: $color !important; }
+  .bg-#{$social-name} { background-color: $color !important }
+}
+
+// 14. Back to Top
+// -----------------------------------------------------------------------------
+.back-to-top {
+  bottom: 100px;
+  right: 4%;
+  z-index: 5;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+
+  &-icon:hover {
+    rect { fill: #989898 }
+    polygon { stroke: #989898 }
+  }
+
+  &-text {
+    letter-spacing: 2px;
+    margin: 15px 0 0 0;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+
+  //
+  &.fade {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s;
+  }
+}
+
+svg {
+  height: auto;
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+// 15. Loanding Bar
+// -----------------------------------------------------------------------------
+.loadingBar {
+  background-color: #48e79a;
+  display: none;
+  height: 2px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  z-index: 800;
+}
+
+.is-loading .loadingBar {
+  animation: loading-bar 1s ease-in-out infinite;
+  animation-delay: .8s;
+  display: block;
+}
+
+// 16. LazyLoad Image Imate
+// -----------------------------------------------------------------------------
+.blur-up {
+  .lazyload { filter: blur(5px) }
+  .lazyloading { filter: blur(3px); transition: filter 1500ms }
+  .lazyloaded { filter: blur(0) }
+}
+
+// 17. z-index for image zoom
+// -----------------------------------------------------------------------------
+.medium-zoom-overlay { z-index: 50 }
+.medium-zoom-image--opened { z-index: 51 }

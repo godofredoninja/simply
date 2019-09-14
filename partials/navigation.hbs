@@ -7,7 +7,7 @@
         data-event-non-interaction="true"
         itemprop="name"
         role="menuitem"{{/is}}>
-        <a href="{{url absolute="true"}}" class="navigation-link u-fontSize15 u-fontWeightSemibold u-block {{#if current}}active{{/if}}" {{^is "amp"}}itemprop="url"{{/is}}>{{label}}</a>
+        <a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}" {{^is "amp"}}itemprop="url"{{/is}}>{{label}}</a>
     </li>
 {{/foreach}}
 

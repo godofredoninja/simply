@@ -1,0 +1,33 @@
+.sidebar {
+  /* stylelint-disable-next-line */
+  &-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: -.42px;
+    margin-bottom: 20px;
+
+    span { padding-bottom: 10px }
+  }
+}
+
+//Sidebar Post
+.sp {
+  margin-bottom: 16px;
+
+  // Number
+  &-n { color: rgba(0, 0, 0, .15); font-family: $secundary-font }
+
+  // title
+  &-t {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    letter-spacing: -.18px;
+  }
+
+  &:hover .sp-t { text-decoration: underline }
+
+  .icon {
+    height: 12px;
+    margin-top: -5px;
+  }
+}

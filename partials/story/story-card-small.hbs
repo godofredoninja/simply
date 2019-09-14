@@ -1,7 +1,6 @@
 <div class="cr u-overflowHidden u-flexColumnTop u-relative u-flex1 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Related Posts" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true"{{/is}}>
     {{#if feature_image}}
     <a href="{{url}}" class="cr-img u-relative u-overflowHidden u-sizeFullWidth u-block">
-        {{!-- <div class="u-absolute0 u-bgCover u-bgColorGrayLight simply-lazy" data-src="{{feature_image}}"></div> --}}
         <img class="cr-imagen u-absolute u-image u-block blur-up lazyload"
             src="{{img_url feature_image size="s"}}"
             srcset="{{img_url feature_image size="xxs"}}"
@@ -14,15 +13,8 @@
 
     <div class="cr-inner u-padding15 u-flexColumnTop">
         <div class="cr-body">
-            {{!-- {{#if primary_tag}}{{#primary_tag}}
-            <div class="cr-tag u-fontSizeSmaller u-lineHeight1 u-textUppercase u-fontWeightSemibold">
-                <a href="{{url absolute="true"}}" class="link--underline u-relative zindex4">{{name}}</a>
-            </div>
-            {{/primary_tag}}{{/if}} --}}
-
-            <a href="{{url}}"><h2 class="cr-t u-contentTitle u-fontSize22 u-overflowHidden">{{title}}</h2></a>
-
-            {{#unless feature_image}}<p class="cr-e u-textColorNormal"><a href="{{url}}">{{excerpt words="20"}}</a></p>{{/unless}}
+            <h2 class="cr-t u-contentTitle u-fontSize22 u-lineClamp2"><a href="{{url}}">{{title}}</a></h2>
+            {{#unless feature_image}}<p class="cr-e u-textColorNormal">{{excerpt words="20"}}</p>{{/unless}}
         </div>
 
         {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
@@ -30,5 +22,5 @@
     </div>
 
     {{!-- Link --}}
-    {{!-- <a href="{{url}}" class="u-absolute0 zindex3"></a> --}}
+    <a href="{{url}}" class="u-absolute0 zindex3" aria-label="{{title}}"></a>
 </div>
