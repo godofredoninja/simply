@@ -27,12 +27,12 @@
   "< 1 min read": "&lt; 1 минуты на чтение",
   "1 min read": "1 минута на чтение",
   "% min read": "% минут на чтение",
-  "shares": "shares",
+  "shares": "Подлились",
   "Comments": "Коментарии",
   "Next article": "Следующая статья",
   "Prev article": "Предидущая статья",
   "in": "в",
-  "Latest Articles": "Latest Articles",
+  "Latest Articles": "Последние посты",
   "Featured Articles": "Featured Articles",
   "Tag Cloud": "Облако тегов",
   "Follow": "Follow",
@@ -47,8 +47,8 @@
   "Stories": "Истории",
   "Navigate up/down": "Navigate up/down",
   "Go to article": "Go to article",
-  "Search new term": "Search new term",
+  "Search new term": "Поиск",
   "Close search": "Закрыть поиск",
   "No results found": "No results found",
-  "GO TOP": "GO TOP"
+  "GO TOP": "Вверх"
 }
