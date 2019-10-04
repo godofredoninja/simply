@@ -233,7 +233,7 @@ Read more about the search engine [Read More](https://github.com/HauntedThemes/g
 - `de` — German - By [dkbast](https://github.com/dkbast)
 - `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz)
 - `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
--  ru —  Russian - By [Partizan007](https://github.com/partizan007)
+- `ru` —  Russian - By [Partizan007](https://github.com/partizan007)
 
 ![simply theme ghost Language](./documentation/language.jpg)
 
