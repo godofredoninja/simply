@@ -421,7 +421,7 @@ html {
 }
 
 body {
-  color: rgba(0, 0, 0, 0.84);
+  color: #212529;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -806,11 +806,11 @@ svg {
 }
 
 .u-menu-color a {
-  color: #000;
+  color: #111;
 }
 
 .u-menu-color a.nav-current, .u-menu-color a:hover {
-  color: #555;
+  color: #2ECC71;
 }
 
 .u-primary-color {
@@ -1364,12 +1364,12 @@ p {
   * 7. breakpoints
   */
 .header {
-  height: 60px;
+  height: 64px;
   top: 0;
   position: sticky;
   transition: transform .3s;
   z-index: 20;
-  box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #ddd;
 }
 
 .header-left {
@@ -1399,14 +1399,9 @@ p {
 }
 
 .mainMenu li a {
-  padding: 10px;
-  text-transform: uppercase;
+  padding: 12px;
   font-weight: 600;
-  font-size: 15px;
-}
-
-.mainMenu li:first-child a {
-  padding-left: 0;
+  font-size: 1rem;
 }
 
 .menu-burger {
@@ -1418,7 +1413,7 @@ p {
 }
 
 .menu-burger span {
-  background-color: #000;
+  background-color: #111;
   display: block;
   height: 2px;
   left: 14px;
@@ -1544,7 +1539,7 @@ p {
 .sideNav {
   color: #000;
   height: 100vh;
-  padding: 60px 20px;
+  padding: 64px 20px;
   transform: translateX(100%);
   transition: 0.4s;
   will-change: transform;
@@ -1560,7 +1555,7 @@ p {
   background: #fff;
   overflow: auto;
   padding: 20px 0;
-  top: 60px;
+  top: 64px;
 }
 
 .sideNav-section {
@@ -2303,7 +2298,7 @@ body.has-cover .header {
 }
 
 body.has-cover .main {
-  margin-top: -62px;
+  margin-top: -66px;
 }
 
 body.is-transparent .header {

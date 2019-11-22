@@ -6,7 +6,8 @@ $primary-color: #00A034;
 
 $newsletter-color: #3aa14d;
 
-$primary-text-color:   rgba(0, 0, 0, .84);
+$primary-text-color:   #212529;
+$primary-text-color-title: #111;
 
 // social colors
 $social-colors: (
@@ -85,9 +86,9 @@ $container-xl:             1200px;
 
 // Header
 // ==========================================================================
-$header-color: #000;
-$header-color-hover: #555;
-$header-height: 60px;
+$header-color: $primary-text-color-title;
+$header-color-hover: #2ECC71;
+$header-height: 64px;
 
 // Post
 // ==========================================================================
