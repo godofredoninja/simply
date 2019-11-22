@@ -33,9 +33,14 @@ $social-colors: (
 // 2. Fonts
 // ==========================================================================
 
-$primary-font:    'Source Sans Pro', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; // font default page and titles
-$secundary-font: 'PT Serif', Mercury SSm A,Mercury SSm B,Georgia,serif; // font for content
-// $code-font:       'Source Code Pro', monospace; // font for code and pre
+//$primary-font:    'Source Sans Pro', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; // font default page and titles
+//$secundary-font: 'PT Serif', Mercury SSm A,Mercury SSm B,Georgia,serif; // font for content
+
+// font default page and titles
+$primary-font:    'Inter', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+
+// font for content
+$secundary-font: 'Domine', Mercury SSm A,Mercury SSm B,Georgia,serif;
 
 //  3. Buttons And Inputs
 // -----------------------------------------------------------------------------

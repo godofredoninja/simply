@@ -12,12 +12,16 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    {{!--  Font -> Inter=400,600,700 Domine=400 --}}
+    {{> "fonts"}}
+
     {{!--  Font -> PT Serif && Source sans Pro --}}
-    <link href="https://fonts.googleapis.com/css?family={{#is "post, page"}}PT+Serif:400,400i,700,700i|{{/is}}Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Domine:400,700&display=swap" rel="stylesheet"> --}}
+
 
     {{!-- Styles'n'Scripts --}}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
-    <style>{{> "styles"}}</style>
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
+    {{!-- <style>{{> "styles"}}</style> --}}
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}

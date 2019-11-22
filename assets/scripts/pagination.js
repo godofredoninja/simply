@@ -1,5 +1,90 @@
-/*!
- * simply v0.2.5
- * Copyright 2019 GodoFredoNinja <hello@godofredo.ninja> (https://github.com/godofredoninja/simply)
- * Licensed under GPLv3
- */!function o(s,l,u){function c(r,e){if(!l[r]){if(!s[r]){var t="function"==typeof require&&require;if(!e&&t)return t(r,!0);if(f)return f(r,!0);var n=new Error("Cannot find module '"+r+"'");throw n.code="MODULE_NOT_FOUND",n}var i=l[r]={exports:{}};s[r][0].call(i.exports,function(e){return c(s[r][1][e]||e)},i,i.exports,o,s,l,u)}return l[r].exports}for(var f="function"==typeof require&&require,e=0;e<u.length;e++)c(u[e]);return c}({1:[function(e,r,t){"use strict";!function(t,n){var i=n.querySelector("link[rel=next]");if(i){var o=n.querySelector(".feed-entry-content");if(o){var r=300,s=!1,l=!1,u=t.scrollY,c=t.innerHeight,f=n.documentElement.scrollHeight;t.addEventListener("scroll",d,{passive:!0}),t.addEventListener("resize",h),v()}}function a(){if(404===this.status)return t.removeEventListener("scroll",d),void t.removeEventListener("resize",h);var e=this.response.querySelector(".feed-entry-wrap");o.appendChild(e),t.history.pushState(null,n.title,i.href),n.title=this.response.title;var r=this.response.querySelector("link[rel=next]");r?i.href=r.href:(t.removeEventListener("scroll",d),t.removeEventListener("resize",h)),f=n.documentElement.scrollHeight,l=s=!1}function e(){if(!l)if(u+c<=f-r)s=!1;else{l=!0;var e=new t.XMLHttpRequest;e.responseType="document",e.addEventListener("load",a),e.open("GET",i.href),e.send(null)}}function v(){s||t.requestAnimationFrame(e),s=!0}function d(){u=t.scrollY,v()}function h(){c=t.innerHeight,f=n.documentElement.scrollHeight,v()}}(window,document)},{}]},{},[1]);
+(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+(function (window, document) {
+  // Next link Element
+  var nextElement = document.querySelector('link[rel=next]');
+  if (!nextElement) return; // Post Feed element
+
+  var feedElement = document.querySelector('.feed-entry-content');
+  if (!feedElement) return;
+  var buffer = 300;
+  var ticking = false;
+  var loading = false;
+  var lastScrollY = window.scrollY;
+  var lastWindowHeight = window.innerHeight;
+  var lastDocumentHeight = document.documentElement.scrollHeight;
+
+  function onPageLoad() {
+    if (this.status === 404) {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+      return;
+    } // append contents
+
+
+    var postElements = this.response.querySelector('.feed-entry-wrap');
+    feedElement.appendChild(postElements); // push state
+
+    window.history.pushState(null, document.title, nextElement.href); // Change Title
+
+    document.title = this.response.title; // set next link
+
+    var resNextElement = this.response.querySelector('link[rel=next]');
+
+    if (resNextElement) {
+      nextElement.href = resNextElement.href;
+    } else {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onResize);
+    } // sync status
+
+
+    lastDocumentHeight = document.documentElement.scrollHeight;
+    ticking = false;
+    loading = false;
+  }
+
+  function onUpdate() {
+    // Retur if already loading
+    if (loading) return; // return if not scroll to the bottom
+
+    if (lastScrollY + lastWindowHeight <= lastDocumentHeight - buffer) {
+      ticking = false;
+      return;
+    }
+
+    loading = true;
+    var xhr = new window.XMLHttpRequest();
+    xhr.responseType = 'document';
+    xhr.addEventListener('load', onPageLoad);
+    xhr.open('GET', nextElement.href);
+    xhr.send(null);
+  }
+
+  function requestTick() {
+    ticking || window.requestAnimationFrame(onUpdate);
+    ticking = true;
+  }
+
+  function onScroll() {
+    lastScrollY = window.scrollY;
+    requestTick();
+  }
+
+  function onResize() {
+    lastWindowHeight = window.innerHeight;
+    lastDocumentHeight = document.documentElement.scrollHeight;
+    requestTick();
+  }
+
+  window.addEventListener('scroll', onScroll, {
+    passive: true
+  });
+  window.addEventListener('resize', onResize);
+  requestTick();
+})(window, document);
+
+},{}]},{},[1])
+
+//# sourceMappingURL=map/pagination.js.map

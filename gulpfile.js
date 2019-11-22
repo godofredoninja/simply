@@ -99,10 +99,10 @@ const script = () => {
   }))
 }
 
-// const copyFonts = () => {
-//   return gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
-//     .pipe(gulp.dest('assets/fonts'))
-// }
+const copyFonts = () => {
+  return gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
+    .pipe(gulp.dest('assets/fonts'))
+}
 
 const image = () => {
   return gulp.src('src/img/**/*.*')
@@ -163,8 +163,8 @@ const watch = () => {
   gulp.watch('**/*.hbs').on('change', p => $.livereload.changed(p))
 }
 
-// const compile = gulp.parallel(style, script, copyFonts, image)
-const compile = gulp.parallel(style, script, image)
+const compile = gulp.parallel(style, script, copyFonts, image)
+// const compile = gulp.parallel(style, script, image)
 
 /**
  * Public tasks
