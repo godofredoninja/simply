@@ -12,6 +12,8 @@ const gulpLoadPlugins = require('gulp-load-plugins')
 const rename = require('gulp-rename')
 
 const pxtorem = require('postcss-pxtorem')
+const stripCssComments = require('gulp-strip-css-comments')
+const replace = require('gulp-replace')
 
 const browserify = require('browserify')
 // const babelify = require('babelify')
@@ -54,6 +56,7 @@ const style = () => {
     .pipe($.if(!isProduction, $.sourcemaps.init()))
     .pipe($.sass({ outputStyle: 'expanded' }).on('error', $.sass.logError))
     .pipe($.if(isProduction, $.postcss([autoprefixer(), pxtorem(), mqpacker(), cssnano()])))
+    .pipe($.if(isProduction, stripCssComments({ preserve: false })))
     .pipe($.if(isProduction, $.header(comments)))
     .pipe($.if(!isProduction, $.sourcemaps.write('./map')))
     .pipe(gulp.dest('assets/styles'))
@@ -65,6 +68,7 @@ const styleTheme = () => {
     .pipe($.plumber())
     .pipe($.sass({ outputStyle: 'expanded' }).on('error', $.sass.logError))
     .pipe($.postcss([autoprefixer(), mqpacker(), cssnano()]))
+    .pipe(stripCssComments({ preserve: false }))
     .pipe(gulp.dest('assets/styles/theme'))
 }
 
@@ -94,6 +98,11 @@ const script = () => {
       .pipe($.livereload())
   }))
 }
+
+// const copyFonts = () => {
+//   return gulp.src('src/fonts/**/*.{ttf,woff,eof,svg}')
+//     .pipe(gulp.dest('assets/fonts'))
+// }
 
 const image = () => {
   return gulp.src('src/img/**/*.*')
@@ -138,6 +147,9 @@ const copyMainStyle = () => {
 const copyAmpStyle = () => {
   return gulp.src('assets/styles/amp.css')
     .pipe($.plumber())
+    .pipe(replace('@charset "UTF-8";', ''))
+    .pipe(stripCssComments({ preserve: false }))
+    .pipe($.postcss([cssnano()]))
     .pipe(rename('amp-styles.hbs'))
     .pipe(gulp.dest('partials/amp'))
 }
@@ -151,6 +163,7 @@ const watch = () => {
   gulp.watch('**/*.hbs').on('change', p => $.livereload.changed(p))
 }
 
+// const compile = gulp.parallel(style, script, copyFonts, image)
 const compile = gulp.parallel(style, script, image)
 
 /**
