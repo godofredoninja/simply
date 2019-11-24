@@ -4,11 +4,11 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}} is-frontpage{{/contentFor}}
 
-<section class="feed-entry-content u-container u-marginTop30">
+<section class="feed-entry-content u-marginTop30">
     {{!-- Ad --}}
     {{> "ad/ad-home-top"}}
 
-    <div class="feed-entry-wrap u-maxWidth1100 u-marginAuto">
+    <div class="feed-entry-wrap u-maxWidth1100 container">
         <div class="row">
             {{#foreach posts}}
                 {{!-- <div class="col s12 m6 {{#has number="1"}}l12 ss1{{else has number="5, 6"}}s6 ss2{{else}}l4{{/has}}"></div> --}}

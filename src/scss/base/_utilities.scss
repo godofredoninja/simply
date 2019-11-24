@@ -176,8 +176,10 @@
 .u-flexWrap { flex-wrap: wrap }
 
 .u-flexCenter {
-  @extend %flex;
-  @extend %flex-align-items-center;
+  // @extend %flex;
+  // @extend %flex-align-items-center;
+  display: flex;
+  align-items: center;
 }
 
 .u-flexColumn {
@@ -266,7 +268,10 @@
 }
 
 // hide before
-@media #{$md-and-down} { .u-hide-before-md { display: none !important } }
+@media #{$md-and-down} {
+  .u-hide-before-md { display: none !important }
+  .u-md-block { display: block !important; }
+}
 
 @media #{$lg-and-down} { .u-hide-before-lg { display: none !important } }
 

@@ -32,7 +32,9 @@
 
     {{!-- Header Content --}}
     {{> "header"}}
-    {{!-- {{>"header-home-image"}} --}}
+
+    {{!-- Subscribe and tag -> this will be below the header --}}
+    {{> "widget/subscribe-menu-tag"}}
 
     {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
     <main class="main u-relative">{{{body}}}</main>

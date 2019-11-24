@@ -1,7 +1,8 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: #00A034;
+// $primary-color: #00A034;
+$primary-color: #2ECC71;
 // $primary-color-hover: #00ab6b;
 
 $newsletter-color: #3aa14d;
@@ -58,6 +59,8 @@ $button-hover-color-background: rgba(0, 0, 0, .1);
 
 $button-filled-background: #1C9963;
 
+$button-outline-success: #28a745;
+
 // 3. Typography
 // ==========================================================================
 
@@ -87,7 +90,7 @@ $container-xl:             1200px;
 // Header
 // ==========================================================================
 $header-color: $primary-text-color-title;
-$header-color-hover: #2ECC71;
+$header-color-hover: $primary-color;
 $header-height: 64px;
 
 // Post

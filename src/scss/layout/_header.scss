@@ -87,6 +87,41 @@
   &-logo-img { height: 60px; }
 }
 
+// Blog Header
+// -----------------------------------------------------------------------------
+
+.godo-header {
+  // margin-top: 70px;
+  padding: 20px 0;
+  background: #F0FCF5;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  h4 {
+    margin-right: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 2px;
+      height: 24px;
+      background-color: $primary-color;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+// 5. Header breakpoints media query down Medium
+// -----------------------------------------------------------------------------
+
+@media #{$md-and-down} {
+  .godo-header {
+    h4::after { display: none }
+    .col.m8 { margin-bottom: 20px; }
+  }
+}
+
 // 5. Header breakpoints media query down large
 // -----------------------------------------------------------------------------
 @media #{$lg-and-down} {

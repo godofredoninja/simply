@@ -2,7 +2,7 @@
 // -----------------------------------------------------------------------------
 .button {
   background: $button-color-background;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid transparent;
   box-sizing: border-box;
   color: $button-color;
@@ -42,11 +42,26 @@
     color: rgba(0, 0, 0, 0.84);
   }
 
+  &--outline-success {
+    color: $button-outline-success;
+    background-color: transparent;
+    background-image: none;
+    border-color: $button-outline-success;
+
+    &:active,
+    &:hover {
+      background-color: $button-outline-success;
+      border-color: $button-outline-success;
+      color: #fff;
+    }
+  }
+
   &--large {
-    font-size: 1rem;
-    height: 44px;
-    line-height: 42px;
+    font-size: 20px;
+    height: 48px;
+    line-height: 46px;
     padding: 0 18px;
+    font-weight: 600;
   }
 
   &--dark {
