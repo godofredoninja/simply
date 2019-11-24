@@ -1,10 +1,9 @@
 // 1. Points for divider
 // -----------------------------------------------------------------------------
-.points {
-  font-size: 1rem;
-  padding-right: .3em;
-  padding-left: .3em;
-  &::before { content: '\00B7' }
+.bull {
+  margin: 0 .3em;
+  opacity: .6;
+  // &::before { content: '\00B7' }
 }
 
 // Avatar Image
@@ -76,6 +75,20 @@
     justify-content: space-between !important;
     flex-grow: 1;
   }
+}
+
+// Story Featured For Home Page
+// -----------------------------------------------------------------------------
+.godo-f-story {
+  padding: 8% 0;
+
+  &-excerpt {
+    @extend %secundary-font;
+
+    max-height: 2.8em;
+  }
+
+  &-date { color: rgba(255, 255, 255, 0.7); }
 }
 
 // 5. Breakpoint Media Query for Story

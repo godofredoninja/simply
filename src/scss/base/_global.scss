@@ -408,10 +408,14 @@ svg {
 
 // 16. LazyLoad Image Imate
 // -----------------------------------------------------------------------------
+// .blur-up {
+//   .lazyload { filter: blur(5px) }
+//   .lazyloading { filter: blur(3px); transition: filter 1500ms }
+//   .lazyloaded { filter: blur(0) }
+// }
+
 .blur-up {
-  .lazyload { filter: blur(5px) }
-  .lazyloading { filter: blur(3px); transition: filter 1500ms }
-  .lazyloaded { filter: blur(0) }
+  animation: fadeIn 3s ease-out;
 }
 
 // 17. z-index for image zoom

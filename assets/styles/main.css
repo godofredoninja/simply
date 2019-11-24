@@ -338,11 +338,11 @@ template {
   display: none;
 }
 
-body, .warning, .note, .success, .u-contentTitle, h1, h2, h3, h4, h5, h6, .kg-bookmark-container, .godo-ne-form {
+body, .warning, .note, .success, .u-contentTitle, h1, h2, h3, h4, h5, h6, .button, .kg-bookmark-container, .godo-ne-form {
   font-family: "Inter", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
-.post-excerpt, .post-body, .topic-st, .ne-e {
+.godo-f-story-excerpt, .post-excerpt, .post-body, .topic-st, .ne-e {
   font-family: "Domine", Mercury SSm A, Mercury SSm B, Georgia, serif;
 }
 
@@ -784,17 +784,8 @@ svg {
   display: block;
 }
 
-.blur-up .lazyload {
-  filter: blur(5px);
-}
-
-.blur-up .lazyloading {
-  filter: blur(3px);
-  transition: filter 1500ms;
-}
-
-.blur-up .lazyloaded {
-  filter: blur(0);
+.blur-up {
+  animation: fadeIn 3s ease-out;
 }
 
 .medium-zoom-overlay {
@@ -810,6 +801,10 @@ svg {
 }
 
 .u-menu-color a.nav-current, .u-menu-color a:hover {
+  color: #2ECC71;
+}
+
+.u-textSuccess {
   color: #2ECC71;
 }
 
@@ -876,6 +871,10 @@ svg {
 
 .u-bgheader {
   background-color: #fff;
+}
+
+.u-primaryGradient {
+  background: linear-gradient(135deg, rgba(16, 43, 123, 0.7), rgba(46, 204, 113, 0.7));
 }
 
 .u-clear::after {
@@ -979,6 +978,9 @@ svg {
   .u-md-fontSizeLarger {
     font-size: 32px !important;
   }
+  .u-md-fontSize36 {
+    font-size: 36px;
+  }
 }
 
 .u-contentTitle {
@@ -1030,9 +1032,17 @@ svg {
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
-  line-height: 1.1;
   max-height: 2.3em;
-  margin-bottom: 8px;
+}
+
+.u-underline::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 3px;
+  margin: 5px 0 24px 0;
+  background-color: #2ECC71;
 }
 
 .u-marginAuto {
@@ -1782,10 +1792,9 @@ p {
   color: rgba(0, 0, 0, 0.68);
   cursor: pointer;
   display: inline-block;
-  font-family: "Inter", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-  font-size: 14px;
+  font-size: 1rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   height: 37px;
   letter-spacing: 0;
   line-height: 35px;
@@ -1802,11 +1811,6 @@ p {
 
 .button:focus {
   outline: none;
-}
-
-.button:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.68);
 }
 
 .button .icon {
@@ -1830,6 +1834,17 @@ p {
   background-color: #28a745;
   border-color: #28a745;
   color: #fff;
+}
+
+.button--success {
+  color: #fff;
+  background: #2ECC71;
+  border-color: #2ECC71;
+}
+
+.button--success:hover {
+  background: #21A75A;
+  border-color: #21A75A;
 }
 
 .button--large {
@@ -2000,6 +2015,15 @@ p {
   }
   to {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -2179,14 +2203,9 @@ body.has-search .search-inner {
   }
 }
 
-.points {
-  font-size: 1rem;
-  padding-right: .3em;
-  padding-left: .3em;
-}
-
-.points::before {
-  content: '\00B7';
+.bull {
+  margin: 0 .3em;
+  opacity: .6;
 }
 
 .avatar-image {
@@ -2267,6 +2286,18 @@ body.has-search .search-inner {
 .cr-inner {
   justify-content: space-between !important;
   flex-grow: 1;
+}
+
+.godo-f-story {
+  padding: 8% 0;
+}
+
+.godo-f-story-excerpt {
+  max-height: 2.8em;
+}
+
+.godo-f-story-date {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 @media only screen and (max-width: 766px) {

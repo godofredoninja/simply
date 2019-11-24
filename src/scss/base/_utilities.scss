@@ -10,6 +10,8 @@
   }
 }
 
+.u-textSuccess { color: $text-success; }
+
 .u-primary-color {
   color: rgba(0, 0, 0, .84);
   fill: rgba(0, 0, 0, .84);
@@ -53,6 +55,7 @@
 .u-bgColorGrayLight { background-color: #f0f0f0 }
 .u-bgDark { background-color: #110f16 }
 .u-bgheader { background-color: #fff }
+.u-primaryGradient { background: linear-gradient(135deg, rgba($accent-color, .7), rgba($primary-color, .7)) }
 
 // Clear
 .u-clear::after {
@@ -90,6 +93,7 @@
 @media #{$md-and-down} {
   .u-md-fontSizeBase { font-size: 18px !important }
   .u-md-fontSizeLarger { font-size: 32px !important }
+  .u-md-fontSize36 { font-size: 36px }
 }
 
 .u-contentTitle {
@@ -124,9 +128,20 @@
   overflow: hidden;
   text-overflow: ellipsis;
   //
-  line-height: 1.1;
+  // line-height: 1.1;
   max-height: 2.3em;
-  margin-bottom: 8px;
+  // margin-bottom: 8px;
+}
+
+// Underline
+.u-underline::after {
+  content: "";
+  display: block;
+  position: relative;
+  width: 60px;
+  height: 3px;
+  margin: 5px 0 24px 0;
+  background-color: $primary-color;
 }
 
 // Margin

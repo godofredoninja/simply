@@ -3,6 +3,7 @@
 
 // $primary-color: #00A034;
 $primary-color: #2ECC71;
+$accent-color: #102B7B;
 // $primary-color-hover: #00ab6b;
 
 $newsletter-color: #3aa14d;
@@ -10,6 +11,8 @@ $newsletter-color: #3aa14d;
 $primary-text-color:   #212529;
 $primary-text-color-title: #111;
 $divider-color: #6C757D;
+
+$text-success: $primary-color;
 
 // social colors
 $social-colors: (
@@ -60,6 +63,8 @@ $button-hover-color-background: rgba(0, 0, 0, .1);
 
 $button-filled-background: #1C9963;
 
+$button-success: $primary-color;
+$button-success-hover: #21A75A;
 $button-outline-success: #28a745;
 
 // 3. Typography

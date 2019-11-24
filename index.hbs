@@ -4,7 +4,13 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}{{#is "home"}}is-home{{/is}} is-frontpage{{/contentFor}}
 
-<section class="feed-entry-content">
+{{!-- Featured Story --}}
+
+{{#get "posts" filter="featured:true" limit="1" as |godo_featured_post| }}
+    {{#if godo_featured_post}} {{#foreach godo_featured_post}}{{> "story/story-featured"}} {{/foreach}}{{/if}}
+{{/get}}
+
+<section class="feed-entry-content u-paddingTop30">
     {{!-- Ad --}}
     {{> "ad/ad-home-top"}}
 
