@@ -1,5 +1,5 @@
 // 1. Colors
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 // $primary-color: #00A034;
 $primary-color: #2ECC71;
@@ -9,6 +9,7 @@ $newsletter-color: #3aa14d;
 
 $primary-text-color:   #212529;
 $primary-text-color-title: #111;
+$divider-color: #6C757D;
 
 // social colors
 $social-colors: (
@@ -33,7 +34,7 @@ $social-colors: (
 );
 
 // 2. Fonts
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 //$primary-font:    'Source Sans Pro', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; // font default page and titles
 //$secundary-font: 'PT Serif', Mercury SSm A,Mercury SSm B,Georgia,serif; // font for content
@@ -62,7 +63,7 @@ $button-filled-background: #1C9963;
 $button-outline-success: #28a745;
 
 // 3. Typography
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 $font-size-root:  16px;
 
@@ -77,8 +78,9 @@ $headings-font-family:     $primary-font;
 $headings-font-weight:     700;
 $headings-line-height:     1.1;
 $headings-color: #121212;
+
 // Container
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 $grid-gutter-width:        24px;
 
@@ -88,23 +90,28 @@ $container-lg:             970px;
 $container-xl:             1200px;
 
 // Header
-// ==========================================================================
+// -----------------------------------------------------------------------------
 $header-color: $primary-text-color-title;
 $header-color-hover: $primary-color;
 $header-height: 64px;
 
+// category nav
+$category-nav-color: $divider-color;
+$category-nav-color-hover: $primary-color;
+$category-nav-border-color: #e2e2e2;
+
 // Post
-// ==========================================================================
+// -----------------------------------------------------------------------------
 $font-size-post: 1.25rem;
 $font-size-post-ecerpt: 1.5rem;
 
 // 3. Media Query Ranges
-// ==========================================================================
+// -----------------------------------------------------------------------------
 $num-cols: 12;
 $container-gutter-width: 12px;
 
 // 3. Media Query Ranges
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 $sm:            640px;
 $md:            766px;

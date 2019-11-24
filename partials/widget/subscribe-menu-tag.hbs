@@ -19,3 +19,22 @@
 </div>
 
 {{/if}}
+
+{{!-- Tags Cloud Menu or category --}}
+{{#get "tags" limit="6" include="count.posts" order="count.posts desc" as |category_nav|}}
+{{#if category_nav}}
+
+<section class="category-nav u-paddingTop20 u-paddingBottom20">
+    <div class="container">
+        <ul class="u-flexWrap u-flex u-justify-content-center">
+            <li class="u-textUppercase">{{#link href="/" activeClass="active u-fontWeightSemibold"}}{{t "All"}}{{/link}}</li>
+
+            {{#foreach category_nav}}
+                <li class="u-textUppercase">{{#link href=(url) activeClass="active u-fontWeightSemibold"}}{{name}}{{/link}}</li>
+            {{/foreach}}
+        </ul>
+    </div>
+</section>
+
+{{/if}}
+{{/get}}

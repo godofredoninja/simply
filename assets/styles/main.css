@@ -1156,6 +1156,10 @@ svg {
   flex-wrap: wrap;
 }
 
+.u-justify-content-center {
+  justify-content: center;
+}
+
 .u-flexCenter {
   display: flex;
   align-items: center;
@@ -1621,6 +1625,22 @@ p {
   height: 24px;
   background-color: #2ECC71;
   transform: translateY(-50%);
+}
+
+.category-nav ul li {
+  margin: 5px 10px 5px 0;
+}
+
+.category-nav ul li a {
+  border: 1px solid #e2e2e2;
+  color: #6C757D;
+  display: inline-block;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+
+.category-nav ul li a.active, .category-nav ul li a:hover {
+  color: #2ECC71;
 }
 
 @media only screen and (max-width: 766px) {

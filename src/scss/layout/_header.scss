@@ -112,6 +112,33 @@
   }
 }
 
+// Category Nav for top page
+// -----------------------------------------------------------------------------
+
+.category-nav {
+  ul li {
+    margin: 5px 10px 5px 0;
+
+    // &:not(:last-child) {
+    //   margin-right: 15px;
+    //   margin-bottom: 10px;
+    // }
+
+    a {
+      border: 1px solid $category-nav-border-color;
+      color: $category-nav-color;
+      display: inline-block;
+      font-size: 14px;
+      padding: 6px 10px;
+
+      &.active,
+      &:hover {
+        color: $category-nav-color-hover;
+      }
+    }
+  }
+}
+
 // 5. Header breakpoints media query down Medium
 // -----------------------------------------------------------------------------
 
