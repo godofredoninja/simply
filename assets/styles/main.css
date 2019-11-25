@@ -339,10 +339,10 @@ template {
 }
 
 body, .warning, .note, .success, .u-contentTitle, h1, h2, h3, h4, h5, h6, .button, .kg-bookmark-container, .godo-ne-form {
-  font-family: "Inter", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: "Rubik", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
 }
 
-.godo-f-story-excerpt, .post-excerpt, .post-body, .topic-st, .ne-e {
+.story-excerpt, .godo-f-story-excerpt, .post-excerpt, .post-body, .topic-st, .ne-e {
   font-family: "Domine", Mercury SSm A, Mercury SSm B, Georgia, serif;
 }
 
@@ -426,7 +426,7 @@ body {
   font-style: normal;
   font-weight: 400;
   letter-spacing: 0;
-  line-height: 1.4;
+  line-height: 1.5;
   margin: 0 auto;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
@@ -481,7 +481,7 @@ cite,
 figcaption {
   color: rgba(0, 0, 0, 0.68);
   display: block;
-  font-family: "Inter", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+  font-family: "Rubik", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   font-feature-settings: "liga" on, "lnum" on;
   font-size: 15px;
   font-style: normal;
@@ -634,7 +634,7 @@ table tr:nth-child(2n) {
 table th {
   letter-spacing: 0.2px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .link {
@@ -806,6 +806,10 @@ svg {
 
 .u-textSuccess {
   color: #2ECC71;
+}
+
+.u-textMuted {
+  color: #6C757D;
 }
 
 .u-primary-color {
@@ -994,6 +998,10 @@ svg {
 
 .u-fontWeightNormal {
   font-weight: 400;
+}
+
+.u-fontWeightMedium {
+  font-weight: 500;
 }
 
 .u-fontWeightSemibold {
@@ -1192,8 +1200,8 @@ svg {
 .u-container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .u-maxWidth1200 {
@@ -1353,15 +1361,15 @@ p {
 .row {
   flex-wrap: wrap;
   flex: 0 1 auto;
-  margin-left: -12px;
-  margin-right: -12px;
+  margin-left: -16px;
+  margin-right: -16px;
 }
 
 .row .col {
   flex: 0 0 auto;
   box-sizing: border-box;
-  padding-left: 12px;
-  padding-right: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .row .col.s1 {
@@ -1570,13 +1578,13 @@ p {
 
 .mainMenu li a {
   padding: 12px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
 }
 
 .menu-burger {
   height: 48px;
-  margin-right: -12px;
+  margin-right: -16px;
   position: relative;
   transition: transform .4s;
   width: 48px;
@@ -1739,7 +1747,7 @@ p {
 
 .sp-t {
   font-size: 1.0625rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -.18px;
 }
 
@@ -1794,7 +1802,7 @@ p {
   display: inline-block;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   height: 37px;
   letter-spacing: 0;
   line-height: 35px;
@@ -1852,7 +1860,7 @@ p {
   height: 48px;
   line-height: 46px;
   padding: 0 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .button--dark {
@@ -2263,12 +2271,32 @@ body.has-search .search-inner {
   margin-bottom: 50px;
 }
 
+.story-title {
+  color: #111;
+  line-height: 1.15em;
+  margin: 0 0 .4em;
+}
+
 .story-image {
   height: 200px;
 }
 
-.story-excerpt {
-  margin-top: 7px;
+.story-category {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.story-category a {
+  background-color: #102B7B;
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  color: white;
 }
 
 .cr {
@@ -2309,14 +2337,6 @@ body.has-search .search-inner {
 }
 
 @media only screen and (min-width: 766px) {
-  .story-excerpt {
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-    display: -webkit-box;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    max-height: 4.3em;
-  }
   .slist .story {
     display: flex;
   }
@@ -2342,19 +2362,18 @@ body.has-search .search-inner {
 @media only screen and (min-width: 1000px) {
   .ss1 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
   }
   .ss1 .story-title {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
   .ss1 .story-image {
-    height: 350px;
-    flex-basis: 59%;
+    height: auto;
+    flex: 1 1 auto;
+    min-height: 380px;
   }
   .ss1 .story-body {
-    padding: 0;
-    flex-basis: 39%;
+    padding: 0 0 0 2rem;
+    flex-basis: 34.33333%;
   }
   .ss2 .story-image {
     height: 270px;
@@ -2603,7 +2622,7 @@ body.is-transparent:not(.has-menu) .nav-logo, body.is-transparent:not(.has-menu)
   background-color: #fff;
   color: #000;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .instagram-btn:hover {
@@ -2853,7 +2872,7 @@ body.is-transparent:not(.has-menu) .nav-logo, body.is-transparent:not(.has-menu)
 }
 
 .kg-bookmark-title {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   font-size: 1.25rem;
 }
@@ -3139,7 +3158,7 @@ body.is-image .hh .button--primary {
   font-size: 1.2rem;
   letter-spacing: 2px;
   margin: 20px 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .archive-contact-maps::before {
@@ -3185,7 +3204,7 @@ body.is-image .hh .button--primary {
 .spc-h-e {
   color: #fecd35;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 5px;
   margin-top: 5px;
   text-transform: uppercase;
@@ -3353,7 +3372,7 @@ body.is-image .hh .button--primary {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 500;
   color: #3aa14d;
 }
 
@@ -3361,7 +3380,7 @@ body.is-image .hh .button--primary {
   display: block;
   margin: 15px 0 0;
   font-size: 0.8125rem;
-  font-weight: 600;
+  font-weight: 500;
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -3419,7 +3438,7 @@ body.is-image .hh .button--primary {
 .godo-n-q-d {
   color: #3aa14d;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   line-height: 1.3em;
   margin: 6px 0 0 0;

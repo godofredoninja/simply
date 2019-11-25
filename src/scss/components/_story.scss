@@ -56,8 +56,37 @@
 .story {
   margin-bottom: 50px;
 
+  &-title {
+    color: $primary-text-color-title;
+    line-height: 1.15em;
+    margin: 0 0 .4em;
+  }
+
   &-image { height: 200px }
-  &-excerpt { margin-top: 7px }
+
+  &-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    a {
+      background-color: #102B7B;
+      border-radius: 3px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      line-height: 1;
+      color: white;
+    }
+  }
+
+  &-excerpt {
+    @extend %secundary-font;
+
+    // margin-top: 7px
+  }
 }
 
 // 4. Story Card Small
@@ -102,16 +131,16 @@
 }
 
 @media #{$md-and-up} {
-  .story {
-    &-excerpt {
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 3;
-      display: -webkit-box;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      max-height: 4.3em
-    }
-  }
+  // .story {
+  //   &-excerpt {
+  //     -webkit-box-orient: vertical;
+  //     -webkit-line-clamp: 3;
+  //     display: -webkit-box;
+  //     text-overflow: ellipsis;
+  //     overflow: hidden;
+  //     max-height: 4.3em
+  //   }
+  // }
 
   // Storly List
   .slist {
@@ -143,13 +172,20 @@
   // large story - home page
   .ss1 {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
     .story {
-      &-title { font-size: 2.5rem }
-      &-image { height: 350px; flex-basis: 59% }
-      &-body { padding: 0; flex-basis: 39% }
+      &-title { font-size: 2.25rem }
+
+      &-image {
+        height: auto;
+        flex: 1 1 auto;
+        min-height: 380px;
+      }
+
+      &-body {
+        padding: 0 0 0 2rem;
+        flex-basis: 34.33333%;
+      }
     }
   }
 

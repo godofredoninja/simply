@@ -572,7 +572,7 @@ table tr:nth-child(2n) {
 table th {
   letter-spacing: 0.2px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .header {
@@ -585,7 +585,7 @@ table th {
 .logo-link {
   color: #fff;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .follow a {
@@ -611,7 +611,7 @@ table th {
 }
 
 .article-meta a {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .sidebar {
@@ -683,7 +683,7 @@ table th {
   color: rgba(0, 0, 0, 0.6);
   display: inline-block;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   height: 37px;
   line-height: 35px;
   margin: 0 8px 8px 0;
@@ -778,7 +778,7 @@ amp-social-share.rounded {
   color: rgba(0, 0, 0, 0.84);
   display: inline-block;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   padding-bottom: 20px;
 }
 
@@ -792,7 +792,7 @@ amp-social-share.rounded {
 .story h3 {
   flex: 1;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 500;
   margin: 0 0 0 10px;
 }
 
@@ -814,7 +814,7 @@ amp-social-share.rounded {
 }
 
 .kg-bookmark-title {
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   font-size: 1.125rem;
 }
@@ -845,7 +845,7 @@ amp-social-share.rounded {
 .footer {
   background-color: #fafafa;
   color: rgba(0, 0, 0, 0.44);
-  font-weight: 600;
+  font-weight: 500;
   padding-top: 20px;
   padding-bottom: 45px;
 }

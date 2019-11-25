@@ -10,7 +10,8 @@
   }
 }
 
-.u-textSuccess { color: $text-success; }
+.u-textSuccess { color: $text-success }
+.u-textMuted { color: $text-muted; }
 
 .u-primary-color {
   color: rgba(0, 0, 0, .84);
@@ -106,7 +107,7 @@
 // font weight
 .u-fontWeightThin { font-weight: 300 }
 .u-fontWeightNormal { font-weight: 400 }
-// .u-fontWeightMedium { font-weight: 500 }
+.u-fontWeightMedium { font-weight: 500 }
 .u-fontWeightSemibold { font-weight: 600 }
 .u-fontWeightBold { font-weight: 700 }
 

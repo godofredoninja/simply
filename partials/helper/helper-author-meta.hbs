@@ -52,9 +52,9 @@
         {{/primary_author}}
 
         {{!-- Primary Tag - Show when you are not in the post --}}
-        {{^is "post"}}{{#if primary_tag}}{{#primary_tag}}
+        {{!-- {{^is "post"}}{{#if primary_tag}}{{#primary_tag}}
             <span class="u-textColorNormal">{{t "in"}}</span> <a href="{{url}}" title="{{t "Go to"}} {{name}}" class="hh-tag link--underline u-primary-color u-textCapitalize">{{name}}</a>
-        {{/primary_tag}}{{/if}}{{/is}}
+        {{/primary_tag}}{{/if}}{{/is}} --}}
 
         {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
         {{> "helper/helper-datetime"}}

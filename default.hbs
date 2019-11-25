@@ -12,12 +12,8 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{!--  Font -> Inter=400,600,700 Domine=400 --}}
-    {{> "fonts"}}
-
-    {{!--  Font -> PT Serif && Source sans Pro --}}
-    {{!-- <link href="https://fonts.googleapis.com/css?family=Domine:400,700&display=swap" rel="stylesheet"> --}}
-
+    {{!--  Font -> Rubix=400,600,700 Domine=400 --}}
+    <link href="https://fonts.googleapis.com/css?family=Domine|Rubik:400,500,700&display=swap" rel="stylesheet">
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
@@ -72,7 +68,7 @@
     {{!-- Back to top --}}
     <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
         {{> "icons/arrow-top"}}
-        <p class="back-to-top-text u-fontSizeBase u-fontWeightSemibold">{{t "GO TOP"}}</p>
+        <p class="back-to-top-text u-fontSizeBase u-fontWeightMedium">{{t "GO TOP"}}</p>
     </div>
 </body>
 </html>

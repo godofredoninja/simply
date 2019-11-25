@@ -1,6 +1,6 @@
-<div class="u-flexCenter {{#if class}}{{class}}{{else}}u-textColorNormal u-fontSizeSmaller{{/if}}">
-    <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date published_at format="MMM DD YYYY"}}</time>
-    <span class="bull">•</span>
+<div class="u-flexCenter {{#if class}}{{class}}{{else}}u-textMuted u-fontSizeSmaller{{/if}}">
+    <time class="datetime u-textCapitalize" datetime="{{date format=" YYYY-MM-DD "}}">{{date format="MMM D"}}</time>
+    <span class="bull">&bull;</span>
     <span class="readingTime" style="cursor:default" title="{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
     {{#if featured}}<svg class="icon icon--star icon--xs"><use xlink:href="#icon-star"></use></svg>{{/if}}
 </div>
