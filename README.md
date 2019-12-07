@@ -20,6 +20,8 @@ It is available for free so you can use on your site. If you have any suggestion
 
 You can see Simply in action on my Page [Demo](https://godofredo.ninja)
 
+If for some reason I'm using a theme other than simply. then you can see the screenshots in [behance](https://www.behance.net/gallery/89129849/Simply-Home-Page-free-theme-for-Ghost)
+
 ## Featured
 
 - Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) (en - es - de - tr - fr-CA - ru)
