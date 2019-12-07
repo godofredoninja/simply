@@ -4,7 +4,7 @@
   @extend %primary-font;
 
   background: $button-color-background;
-  border-radius: 5px;
+  border-radius: 4px;
   border: 1px solid transparent;
   box-sizing: border-box;
   color: $button-color;
@@ -13,7 +13,7 @@
   // font-family: $primary-font;
   font-size: 1rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
   height: $button-height;
   letter-spacing: 0;
   line-height: $button-height - 2;
@@ -40,8 +40,14 @@
   }
 
   &--primary {
-    border: 1px solid rgba(0, 0, 0, 0.68);
-    color: rgba(0, 0, 0, 0.84);
+    background: $button-primary;
+    border: 1px solid $button-primary;
+    color: #fff;
+
+    &:hover {
+      background: $button-primary-background;
+      color: $button-primary-color;
+    }
   }
 
   &--outline-success {
@@ -77,6 +83,23 @@
     font-weight: 500;
   }
 
+  &--xs {
+    height: 25px;
+    line-height: 23px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    padding: 0 6px;
+  }
+
+  &--s {
+    font-size: 15px;
+    height: 28px;
+    line-height: 26px;
+    padding: 0 10px;
+  }
+
   &--dark {
     background: rgba(0, 0, 0, .84);
     border-color: rgba(0, 0, 0, .84);
@@ -105,6 +128,31 @@
     border-radius: 50%;
     line-height: 34px;
     padding: 0;
+  }
+
+  // Tags
+  &--tags {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 99em;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.54);
+    padding: 0 12px 0 6px;
+
+    &::before {
+      box-shadow: rgba(0, 0, 0, 0.2) 3px 3px 16px;
+      color: #fff;
+      background: #111;
+      height: 25px;
+      content: '#';
+      width: 25px;
+      display: inline-block;
+      border-radius: 50%;
+      line-height: 25px;
+      font-size: 18px;
+      margin-right: 5px;
+    }
+
+    &:hover { background-color: rgba(0, 0, 0, 0.1) }
   }
 }
 

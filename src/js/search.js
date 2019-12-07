@@ -23,8 +23,6 @@ import GhostSearch from './app/app.search'
   // -----------------------------------------------------------------------------
   const mySearchSettings = {
     on: {
-      beforeFetch: () => domBody.classList.add('is-loading'),
-      afterFetch: () => setTimeout(() => { domBody.classList.remove('is-loading') }, 4000),
       afterDisplay: results => {
         searchResultActive()
 
@@ -62,16 +60,16 @@ import GhostSearch from './app/app.search'
     // Dont use key functions
     if (window.innerWidth < 768) return
 
-    const searchLInk = searchResults.querySelectorAll('a')
+    const allLink = searchResults.querySelectorAll('a')
 
-    if (!searchLInk.length) return
+    if (!allLink.length) return
 
-    const searchLinkActive = searchResults.querySelector('a.search-result--active')
-    searchLinkActive && searchLinkActive.classList.remove('search-result--active')
+    const linkActive = searchResults.querySelector('a.search-result--active')
+    linkActive && linkActive.classList.remove('search-result--active')
 
-    searchLInk[t].classList.add('search-result--active')
+    allLink[t].classList.add('search-result--active')
 
-    const n = searchLInk[t].offsetTop
+    const n = allLink[t].offsetTop
     let o = 0
 
     e === 'down' && n > searchResultsHeight.outer / 2 ? o = n - searchResultsHeight.outer / 2 : e === 'up' && (o = n < searchResultsHeight.scroll - searchResultsHeight.outer / 2 ? n - searchResultsHeight.outer / 2 : searchResultsHeight.scroll)

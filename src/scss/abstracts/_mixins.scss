@@ -4,9 +4,21 @@
   font-family: $primary-font;
 }
 
-%secundary-font {
-  font-family: $secundary-font;
+%secondary-font {
+  font-family: $secondary-font;
 }
+
+// Color
+// -----------------------------------------------------------------------------
+%primary-text-title {
+  // @extend %primary-font;
+  font-family: $primary-font;
+  color: $primary-text-color-title;
+  font-weight: 500;
+}
+
+%text-muted { color: $text-muted }
+%text-success { color: $text-success }
 
 // Positon Absolute
 // -----------------------------------------------------------------------------
@@ -27,13 +39,41 @@
   top: 0;
 }
 
+%u-image {
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  width: 100%;
+}
+
 // flexbox
 // -----------------------------------------------------------------------------
 %flex { display: flex }
 %flex-align-items-center { align-items: center }
-%flex-direction-column { flex-direction: column }
-%flex-direction-row { flex-direction: row }
+// %flex-direction-column { flex-direction: column }
+// %flex-direction-row { flex-direction: row }
 %flex-justify-content-center { justify-content: center }
+
+%flexColumnTop {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+%align-items-center {
+  display: flex;
+  align-items: center;
+}
+
+%flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+%flex-direction-column {
+  display: flex;
+  flex-direction: column
+}
 
 // modal
 // -----------------------------------------------------------------------------
@@ -50,7 +90,13 @@
   opacity: 0;
   transform: scale(.6);
   transition: transform .3s cubic-bezier(.06, .47, .38, .99), opacity .3s cubic-bezier(.06, .47, .38, .99);
-  overflow: hidden;
+  // overflow: hidden;
+}
+
+%modal-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform .8s cubic-bezier(.26, .63, 0, .96);
 }
 
 // Shadow
@@ -61,4 +107,12 @@
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px;
   overflow: hidden;
+}
+
+// LineClamp
+%lineClamp {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

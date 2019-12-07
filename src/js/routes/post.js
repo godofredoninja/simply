@@ -50,8 +50,9 @@ export default {
 
     // Instagram Feed
     // -----------------------------------------------------------------------------
-    if (typeof instagramFeed === 'object' && instagramFeed !== null && qs('.instagram')) {
-      instagram(instagramFeed)
+    const instagramBox = qs('.js-instagram')
+    if (typeof instagramFeed === 'object' && instagramFeed !== null && instagramBox) {
+      instagram(instagramFeed, instagramBox)
     }
 
     // Post Share

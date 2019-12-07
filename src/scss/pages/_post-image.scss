@@ -1,22 +1,24 @@
 // pif => post image format
 // -----------------------------------------------------------------------------
-.pif-wrap { min-height: 460px }
-.pif-grad { background: rgba(0, 0, 0, 0.4) }
 
-body.is-image {
+.pif {
+  min-height: 460px;
+
+  &-grad { background: rgba(0, 0, 0, 0.4) }
+
   .post-header { padding: 100px 10px 80px }
+  .post-title { font-size: 50px }
 
   .post-title,
   .post-excerpt,
-  .hh .u-textColorNormal,
   .hh-author-name { color: #fff }
 
   .hh { margin-top: 40px; }
 
-  .hh .button--primary { border-color: #fff; color: #fff }
+  .hh-date { color: rgba(255, 255, 255, 0.7) }
 }
 
 @media #{$lg-and-up} {
-  .pif-wrap { min-height: 100vh }
+  .pif { min-height: 100vh }
   .pif-grad { height: 80%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)) }
 }

@@ -1,4 +1,7 @@
 .instagram {
+  padding: 20px 0;
+  overflow: hidden;
+
   &-hover {
     background-color: rgba(0, 0, 0, .3);
     opacity: 0;
@@ -10,7 +13,7 @@
     &:hover > .instagram-hover { opacity: 1 }
     span { margin: 0 5px }
 
-    @media #{$sm-and-down} { height: 150px; }
+    @media #{$md-and-down} { height: 150px; }
   }
 
   &-name {
@@ -18,14 +21,6 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 10;
-  }
-
-  &-btn {
-    background-color: #fff;
-    color: #000;
-    font-size: 20px;
-    font-weight: 500;
-
-    &:hover { background-color: #fff }
+    position: absolute;
   }
 }

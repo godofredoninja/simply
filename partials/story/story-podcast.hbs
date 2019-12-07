@@ -1,4 +1,4 @@
-<article class="col s12 m6 l12 u-flex">
+<article class="col s12 u-flex">
     <div class="spc-c u-relative u-marginBottom30 u-sizeFullWidth">
         <a href="{{url}}" class="spc-c-img u-relative u-bgColorGrayLight u-block">
             {{#if feature_image}}
@@ -14,9 +14,9 @@
 
         <div class="spc-c-body">
             {{> "helper/helper-author-meta"}}
-            <h2 class="spc-c-title u-fontSize28 u-marginBottom15 u-paddingTop15"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
-            <p class="spc-c-excerpt u-marginBottom20 card-excerpt u-textColorNormal u-fontSizeBase">{{excerpt words="30"}}</p>
-            <a href="{{url}}" class="listen-btn button u-textUppercase u-relative zindex3">{{> "icons/icon-listen"}} {{t "Listen"}}</a>
+            <h2 class="spc-c-title u-fontSizeLarger u-contentTitle u-marginBottom20 u-paddingTop15"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
+            <p class="spc-c-excerpt u-marginBottom20 u-fontSizeBase">{{excerpt words="30"}}</p>
+            <a href="{{url}}" class="listen-btn button button--outline-success u-textUppercase u-relative zindex3">{{> "icons/icon-listen"}} {{t "Listen"}}</a>
         </div>
 
         {{!-- <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{title}}"></a> --}}

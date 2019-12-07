@@ -44,7 +44,7 @@ pre {
 /* stylelint-disable-next-line */
 code,
 pre {
-  font-family: "Operator Mono Medium", "Dank Mono", "Fira Code", Menlo, Courier, monospace;
+  font-family: "Cascadia Code", "Operator Mono Medium", "Fira Code", Menlo, Courier, monospace;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
@@ -67,7 +67,7 @@ pre {
 /* ---------------------------------------------------------- */
 pre[class*="language-"] {
   padding: 1.25rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
   overflow: auto;
   border-radius: 8px;
 }

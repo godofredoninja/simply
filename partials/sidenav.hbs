@@ -2,9 +2,7 @@
     <div class="sideNav-wrap u-absolute0">
         {{!-- Menu --}}
         <nav class="sideNav-menu sideNav-section">
-            <ul class="u-unstyled" role="menu">
-                {{navigation}}
-            </ul>
+            {{navigation}}
         </nav>
 
         <div class="sideNav-section">
@@ -12,8 +10,8 @@
             {{> "widget/social-media"}}
         </div>
 
-        <div class="sideNav-copyright u-textColorNormal u-fontSizeSmaller u-fontWeightMedium u-textAlignCenter u-paddingTop20 u-paddingLeft20 u-paddingRight20">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> Design with <i class="i-favorite animated infinite pulse" style="color:red;display:inline-block"></i> by <a href="https://goo.gl/Jf1tZe" title="Developer Web FullStack.">@GodoFredoNinja</a>
+        <div class="sideNav-copyright u-textMuted u-fontSizeSmaller u-textAlignCenter u-paddingTop20 u-paddingLeft20 u-paddingRight20">
+            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> Design by <a href="https://goo.gl/Jf1tZe" title="Developer Web FullStack.">@GodoFredoNinja</a>
         </div>
     </div>
 </aside>

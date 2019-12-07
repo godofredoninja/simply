@@ -30,12 +30,9 @@
   }
 
   &-close {
-    background: #fff;
-    border-radius: 50%;
     position: absolute;
     right: 20px;
     top: 8px;
-    padding: 5px;
   }
 
   &-form {
@@ -112,9 +109,7 @@ body.has-search {
     transition: opacity .3s ease;
 
     &-inner {
-      opacity: 1;
-      transform: scale(1);
-      transition: transform .8s cubic-bezier(.26, .63, 0, .96);
+      @extend %modal-active;
     }
   }
 }

@@ -1,0 +1,28 @@
+// Sidebar Sticky
+// -----------------------------------------------------------------------------
+// .post-sticky {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   //
+//   max-width: 118px;
+//   padding-top: 2rem;
+// }
+
+.sticky-top-wrap {
+  flex: 1;
+
+  .sticky {
+    position: sticky;
+    top: 100px;
+    bottom: 0;
+    transition: visibility 0s linear 0s, opacity .3s 0s;
+  }
+}
+
+// .sticky.is-hidden {
+//   visibility: hidden;
+//   opacity: 0;
+//   transition: visibility 0s linear .3s, opacity .3s 0s;
+// }

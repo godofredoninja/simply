@@ -28,10 +28,10 @@
     feedElement.appendChild(postElements)
 
     // push state
-    window.history.pushState(null, document.title, nextElement.href)
+    // window.history.pushState(null, document.title, nextElement.href)
 
     // Change Title
-    document.title = this.response.title
+    // document.title = this.response.title
 
     // set next link
     const resNextElement = this.response.querySelector('link[rel=next]')

@@ -1,11 +1,19 @@
 // 01. Variables
-// ==========================================================================
-$code-color:#c7254e;
+// -----------------------------------------------------------------------------
+// font default page and titles
+$primary-font: 'Rubik', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+
+// font for content
+$secondary-font: 'Domine', Mercury SSm A,Mercury SSm B,Georgia,serif;
+
 $header-height: 50px;
-$primary-color: #00A034;
-$primary-font: "Source Sans Pro", Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
-$secundary-font:  "PT Serif", Mercury SSm A, Mercury SSm B, Georgia, serif;
-$container-gutter-width: 16px;
+
+$primary-color: #212529;
+$secondary-color: #6C757D;
+$complementary-color: #00a562;
+$title-color: #111;
+
+// .u-bgColor { background-color: $primary-color }
 
 @import "node_modules/normalize.css/normalize";
 
@@ -13,14 +21,12 @@ $container-gutter-width: 16px;
   font-family: $primary-font;
 }
 
-%secundary-font {
-  font-family: $secundary-font;
+%secondary-font {
+  font-family: $secondary-font;
 }
 
-// .u-bgColor { background-color: $primary-color }
-
 // 02. Utilities
-// ==========================================================================
+// -----------------------------------------------------------------------------
 .u-flexCenter { align-items: center; display: flex; }
 .u-block { display: block }
 .u-relative { position: relative }
@@ -29,24 +35,40 @@ $container-gutter-width: 16px;
 .u-flex1 { flex: 1 1 auto }
 .u-absolute { position: absolute }
 .u-textCenter { text-align: center }
+.u-marginTop30 { margin-top: 30px; }
 
 .u-container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $container-gutter-width;
-  padding-right: $container-gutter-width;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 // 03. Global
-// ==========================================================================
+// -----------------------------------------------------------------------------
 
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
+body {
+  @extend %primary-font;
+
+  // font-family: $primary-font;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+  color: $primary-color;
+}
+
 a {
-  color: rgba(0, 0, 0, .84);
+  color: $complementary-color;
   text-decoration: none;
+  word-break: break-word;
 
   &:active,
   &:hover {
@@ -54,75 +76,51 @@ a {
   }
 }
 
-body {
-  @extend %primary-font;
-  // font-family: $primary-font;
-  font-size: 1.0625rem;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 1.4em;
-  text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
-  color: rgba(0, 0, 0, .84);
-}
-
 blockquote {
-  border-left: 3px solid #000;
-  color: #000;
-  font-family: Georgia, Merriweather; //stylelint-disable-line
-  font-size: 1.25rem;
-  font-weight: 400;
-  // letter-spacing: -.003em;
-  line-height: 1.4;
-  margin: 30px 0 0 -5px;
+  border-left: 4px solid $primary-color;
+  font-size: 18px;
+  font-style: italic;
+  margin-left: -5px;
+  margin-right: 0;
   padding-bottom: 2px;
   padding-left: 20px;
-  font-style: italic;
+}
 
-  // p:first-of-type { margin-top: 0 }
+figure {
+  margin: 0;
+  padding: 0;
 }
 
 img {
   object-fit: cover;
-  object-position: center;
-}
-
-figure {
-  margin: 20px 0 0;
-  padding: 0;
+  object-position: center
 }
 
 figcaption {
   @extend %primary-font;
-  //
-  color: #7d7d7d;
+
+  color: $secondary-color;
   display: block;
-  font-feature-settings: "liga" on, "lnum" on;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 1.4;
   margin-top: 10px;
-  outline: 0;
-  position: relative;
   text-align: center;
-  top: 0;
   width: 100%;
 }
 
+// 05.typography - Titles
+// -----------------------------------------------------------------------------
+
 h1, h2, h3, h4, h5, h6 {
   @extend %primary-font;
-  // font-family: $primary-font;
+
+  color: $title-color;
   font-style: normal;
-  font-weight: bold;
-  letter-spacing: -.028em;
-  text-rendering: geometricPrecision;
-  line-height: 1.1;
+  font-weight: 700;
+  line-height: 1.2;
   margin: 25px 0 0;
-  // color: #000
+  word-break: break-word;
 }
 
 h1 { font-size: 2rem }
@@ -132,68 +130,71 @@ h4 { font-size: 1.375rem }
 h5 { font-size: 1.25rem }
 h6 { font-size: 1.125rem }
 
-hr {
-  margin: 40px auto;
-  background: 0 0;
-  border: none;
-  text-align: center;
-  max-width: none;
-  line-height: 1;
-  height: auto;
+strong { font-weight: 700 }
+p { margin: 20px 0 0 0 }
 
-  &::before {
-    // color: rgba(0, 0, 0, .6);
-    // content: '...';
-    // display: inline-block;
-    // font-family: $primary-font;
-    // font-size: 28px;
-    // font-weight: 400;
-    // letter-spacing: .6em;
-    // position: relative;
-    // top: -25px;
-    content: "\00b7 \00b7 \00b7";
-    padding-left: 21px;
-    color: #666;
-    font-size: 21px;
-    font-weight: 700;
-    letter-spacing: 21px;
-    font-family: georgia, serif;
-  }
+// 06. <hr> <Mark>
+// -----------------------------------------------------------------------------
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 1rem 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 mark {
   background-color: transparent;
   background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
-  // color: rgba(0, 0, 0, .8);
+  color: rgba(0, 0, 0, .8);
 }
 
-// p {
-//   margin: 20px 0 0 0;
-// }
+// 07. Code and pre
+// -----------------------------------------------------------------------------
 
-ol, ul {
-  list-style: none;
-  list-style-image: none;
-  margin: 0;
-  padding: 0;
+// colors
+$whitegrey : #e5eff5;
+$darkgrey : #2a3644;
+
+code,
+pre {
+  font-family: Menlo, Courier, monospace;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 4;
+  hyphens: none;
 }
 
 p code {
-  background: #2a3644;
-  color: #e5eff5;
+  background: $darkgrey;
   border-radius: 2px;
+  color: $whitegrey;
   padding: 1px 6px;
-  font-size: 0.875rem;
+  font-size: 14px;
 }
 
 pre {
-  background: #2a3644;
-  color: #e5eff5;
-  border-radius: 3px;
-  padding: 10px;
   overflow-x: auto;
-  font-size: 0.875rem;
+  margin: 0;
+  padding: 20px;
+  border: none;
+  color: $whitegrey;
+  font-size: 14px;
+  line-height: 1.6em;
+  background: $darkgrey;
+
+  code {
+    padding: 0;
+    background: transparent;
+  }
 }
+
+// 08. Svg
+// -----------------------------------------------------------------------------
 
 svg {
   width: 100%;
@@ -204,7 +205,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/* Tables */
+// 09. Table
+// -----------------------------------------------------------------------------
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -237,14 +239,8 @@ table {
   }
 }
 
-// stylelint-disable
-// iframe,
-// amp-iframe,
-// .fluid-width-video-wrapper { margin-top: 30px }
-// stylelint-enable
-
-// 04. Header
-// ==========================================================================
+// 10. Header
+// -----------------------------------------------------------------------------
 .header {
   position: relative;
   width: 100%;
@@ -263,57 +259,49 @@ table {
   font-weight: 500;
 }
 
-// 10 Follow ME
-// ==========================================================================
-.follow {
+// 11. Social Media
+// -----------------------------------------------------------------------------
+.social-media {
   a {
-    margin: 0 5px;
-    width: 22px;
+    background: $primary-color;
+    border-radius: 4px;
+    color: #fff;
     display: inline-block;
+    height: 36px;
+    margin: 0 2px;
+    padding: 8px;
     vertical-align: middle;
+    width: 36px;
   }
 
   svg {
-    fill: rgba(0, 0, 0, 0.8);
+    fill: #fff;
     stroke: none;
   }
 }
 
-.copyright {
-  font-size: 0.875rem;
-
-  // a { color: rgba(0, 0, 0, .7) }
-}
-
-// 06. Post Meta
-// ==========================================================================
-.article-meta {
-  color: #999;
-  margin: 10px 0;
-  font-size: 0.875rem;
-
-  a {
-    font-weight: 500;
-    // color: #222;
-  }
-}
-
-// 05. Sidebar
-// ==========================================================================
+// 12. Sidebar or Sidenav
+// -----------------------------------------------------------------------------
 
 .sidebar {
   width: 280px;
   background: #fff;
 
-  ul { margin: 18px 0 20px }
+  ul {
+    list-style: none;
+    list-style-image: none;
+    margin: 18px 0 20px;
+    padding: 0;
+  }
 
   ul li a {
-    margin-bottom: 5px;
     padding: 6px 20px;
+    font-weight: 500;
+    font-size: 1rem;
     display: block;
   }
 
-  .follow { padding: 20px; border-top: 1px solid #ddd }
+  .social-media { padding: 20px; border-top: 1px solid #ddd }
 }
 
 .close-sidebar {
@@ -323,286 +311,6 @@ table {
   text-align: right;
   padding-right: 20px;
   color: #fff;
-}
-
-// 07. Article
-// ==========================================================================
-
-.main {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.article {
-  padding: 25px 16px;
-
-  &-title { line-height: 1.04; margin-top: 0 }
-
-  &-excerpt {
-    @extend %secundary-font;
-    //
-    margin-bottom: 20px;
-    margin-top: 10px;
-    color: #7d7d7d;
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-
-  &-image {
-    margin-left: -$container-gutter-width;
-    margin-right: -$container-gutter-width;
-
-    // img {
-    //   object-fit: cover;
-    //   object-position: top;
-    // }
-  }
-
-  /* stylelint-disable */
-  // amp-img,
-  // amp-anim {
-  //   position: relative;
-  //   left: 50%;
-  //   display: block;
-  //   padding: 0;
-  //   min-width: 0;
-  //   max-width: 112%;
-  //   width: calc(100% + 32px);
-  //   height: auto;
-  //   transform: translateX(-50%);
-  // }
-  /* stylelint-enable */
-
-  &-tags {
-    padding: 30px 0 0;
-
-    /* stylelint-disable-next-line */
-    a {
-      background: rgba(0, 0, 0, 0.08);
-      border-radius: 3px;
-      color: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      font-size: 14px;
-      font-weight: 500;
-      height: 37px;
-      line-height: 35px;
-      margin: 0 8px 8px 0;
-      padding: 0 16px;
-    }
-  }
-}
-
-.article-body {
-  @extend %secundary-font;
-  // font-family: $secundary-font;
-  line-height: 1.7em;
-
-  & > * { margin-top: 25px }
-
-  /* stylelint-disable-next-line */
-  a:not(.kg-bookmark-container) {
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, .65);
-    text-decoration: none;
-    word-break: break-word;
-  }
-  // a { text-decoration: underline }
-
-  ul,
-  ol {
-    counter-reset: post;
-    // margin-top: 20px;
-
-    li {
-      margin: 8px;
-      margin-left: 30px;
-      position: relative;
-
-      &::before {
-        box-sizing: border-box;
-        display: inline-block;
-        margin-left: -22px;
-        position: absolute;
-        text-align: right;
-      }
-    }
-  }
-
-  ul > li::before {
-    content: "\2022";
-    opacity: .8;
-    // font-family: Georgia, Arial, system-ui; // stylelint-disable-line
-    transform: scale(1.1);
-  }
-
-  ol > li::before {
-    content: counter(post) ".";
-    counter-increment: post;
-    padding-right: 12px;
-  }
-
-  .kg-embed-card,
-  pre {
-    margin-right: -16px;
-    margin-left: -16px;
-  }
-}
-
-// stylelint-disable
-.share {
-  margin: 15px 0 0;
-}
-
-amp-social-share.custom-style {
-  background-color: #008080;
-  background-image: url('https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-}
-
-amp-social-share.rounded {
-  border-radius: 10%;
-  background-size: 85%;
-}
-
-// stylelint-enable
-
-// 0.8 Article Related
-// ==========================================================================
-.related {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  margin-top: 30px;
-  background: #fafafa;
-
-  &-title {
-    border-bottom: 1px solid rgba(0, 0, 0, .15);
-    margin-bottom: 30px;
-
-    span {
-      border-bottom: 1px solid rgba(0, 0, 0, .54);
-      color: rgba(0, 0, 0, .84);
-      display: inline-block;
-      font-size: 18px;
-      font-weight: 500;
-      padding-bottom: 20px;
-    }
-  }
-}
-
-.story {
-  border-bottom: 1px solid #ddd;
-  display: flex;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
-
-  h3 {
-    flex: 1;
-    font-size: 1.125rem;
-    font-weight: 500;
-    margin: 0 0 0 10px;
-  }
-}
-
-.story-image {
-  flex: 0 1 auto;
-  margin: 0;
-  width: 130px;
-
-  // img {
-  //   object-fit: cover;
-  // }
-}
-
-// .story {
-//   // padding-bottom: 2px;
-//   &-border {
-//     @extend %primary-font;
-//     // font-family: $secundary-font;
-//     border-left: 3px solid #CC116E;
-//     bottom: 0;
-//     color: rgba(0, 0, 0, .2);
-//     font-size: 36px;
-//     font-weight: 500;
-//     left: 0;
-//     padding: 15px 10px 10px;
-//     top: 0;
-//     -webkit-text-fill-color: transparent;
-//     -webkit-text-stroke-width: 1.5px;
-//     -webkit-text-stroke-color: #888;
-//   }
-
-//   &:nth-child(3n) { .story-border { border-color: darken(orange, 2%); } }
-//   &:nth-child(3n+2) { .story-border { border-color: #26a8ed } }
-
-//   &-link {
-//     background-color: #fff;
-//     border-bottom: 1px solid rgba(0, 0, 0, .08);
-//     box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
-//     min-height: 50px;
-//     padding: 15px 15px 15px 55px;
-//   }
-
-//   &-title {
-//     line-height: 1.1;
-//     font-size: 18px;
-//     font-weight: 400;
-//     margin: 0;
-//   }
-// }
-
-// Bookmark card
-// -----------------------------------------------------------------------------
-.kg-bookmark {
-  &-container {
-    @extend %primary-font;
-
-    display: flex;
-    flex-direction: column;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-  }
-
-  &-content {
-    padding: 20px;
-    order: 1;
-  }
-
-  &-title {
-    font-weight: 500;
-    line-height: 1.2;
-    font-size: 1.125rem;
-  }
-
-  &-description {
-    color: rgba(0, 0, 0, .54);
-    line-height: 1.4;
-    margin-top: 10px;
-    font-size: 0.875rem;
-  }
-
-  &-metadata {
-    display: flex;
-    align-items: center;
-    font-size: 0.875rem;
-    margin-top: 10px;
-  }
-
-  &-icon { margin-right: 5px }
-
-  &-author::after {
-    content: "•";
-    margin: 0 6px;
-  }
-}
-
-// 0.9 Footer
-// ==========================================================================
-.footer {
-  background-color: #fafafa;
-  color: rgba(0, 0, 0, .44);
-  font-weight: 500;
-  padding-top: 20px;
-  padding-bottom: 45px;
 }
 
 // Btn menu
@@ -629,4 +337,208 @@ amp-social-share.rounded {
     &:first-child { transform: translate(0, -6px); }
     &:last-child { transform: translate(0, 6px); }
   }
+}
+
+//  13. Content Main
+// -----------------------------------------------------------------------------
+
+.main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// 14. Article
+// -----------------------------------------------------------------------------
+
+.article {
+  padding-top: 25px;
+
+  &-title { margin-top: 0 }
+
+  &-excerpt {
+    @extend %secondary-font;
+
+    margin-bottom: 20px;
+    margin-top: 15px;
+    color: $secondary-color;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.article-meta {
+  color: $secondary-color;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.article-body {
+  font-family: $secondary-font;
+  line-height: 1.7em;
+  font-size: 18px;
+  padding: 20px 1rem;
+
+  & > * { margin-bottom: 28px }
+
+  /* stylelint-disable-next-line */
+  a:not(.kg-bookmark-container) {
+    word-break: break-word;
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    padding-left: 20px;
+
+    li { margin-bottom: 5px; }
+  }
+}
+
+// 15. Buttons for Tag
+// -----------------------------------------------------------------------------
+
+.button--tags {
+  border-radius: 3px;
+  color: $primary-color;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 37px;
+  line-height: 35px;
+  margin: 0 8px 8px 0;
+  padding: 0 10px;
+  border: 2px solid $primary-color;
+
+  &::before { content: '#'; }
+}
+
+// 16. Share
+// -----------------------------------------------------------------------------
+
+.share-title {
+  display: block;
+  margin-bottom: 8px;
+}
+
+// stylelint-disable
+amp-social-share.custom-style {
+  background-color: #008080;
+  background-image: url('https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+amp-social-share.rounded {
+  border-radius: 10%;
+  background-size: 85%;
+}
+// stylelint-enable
+
+// 17. Related Article
+// -----------------------------------------------------------------------------
+
+.related {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  background: #efefef;
+
+  &-title {
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    color: $primary-color;
+    font-weight: 500;
+    font-size: 20px;
+  }
+}
+
+.story {
+  // padding-bottom: 2px;
+  &-border {
+    border-left: 3px solid #CC116E;
+    bottom: 0;
+    color: rgba(0, 0, 0, .2);
+    font-size: 36px;
+    font-weight: 700;
+    left: 0;
+    padding: 15px 10px 10px;
+    top: 0;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: #888;
+  }
+
+  &:nth-child(3n) { .story-border { border-color: darken(orange, 2%); } }
+  &:nth-child(3n+2) { .story-border { border-color: #26a8ed } }
+
+  &-link {
+    background-color: #fff;
+    border-bottom: 1px solid #e2e0e0;
+    box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
+    min-height: 50px;
+    padding: 15px 15px 15px 55px;
+  }
+
+  &-title {
+    color: $primary-color;
+    line-height: 1.2;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+  }
+}
+
+// 18. Bookmark card
+// -----------------------------------------------------------------------------
+.kg-bookmark {
+  &-container {
+    @extend %primary-font;
+
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  &-content {
+    padding: 20px;
+    order: 1;
+  }
+
+  &-title {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 1.125rem;
+  }
+
+  &-description {
+    color: $secondary-color;
+    line-height: 1.4;
+    margin-top: 10px;
+    font-size: 0.875rem;
+  }
+
+  &-metadata {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+
+  &-icon { margin-right: 5px }
+
+  &-author::after {
+    content: "•";
+    margin: 0 6px;
+  }
+}
+
+// 19. Footer
+// -----------------------------------------------------------------------------
+.footer {
+  background-color: #efefef;
+  color: rgba(0, 0, 0, .44);
+  padding-top: 20px;
+  font-size: 15px;
+  padding-bottom: 45px;
 }

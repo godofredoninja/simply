@@ -14,13 +14,11 @@ class GhostSearch {
     const defaults = {
       url: siteUrl,
       key: '',
-      version: 'v2',
+      version: 'v3',
       input: '#search-field',
       results: '#search-results',
-      button: '',
       defaultValue: '',
       template: result => `<a href="${siteUrl}/${result.slug}/">${result.title}</a>`,
-      trigger: 'focus',
       options: {
         keys: [
           'title'
@@ -43,9 +41,9 @@ class GhostSearch {
       },
       on: {
         beforeDisplay: function () { },
-        afterDisplay: function (results) { }, //eslint-disable-line
-        beforeFetch: function () { },
-        afterFetch: function (results) { }, //eslint-disable-line
+        afterDisplay: function (results) { },
+        beforeFetch: () => document.body.classList.add('is-loading'),
+        afterFetch: () => setTimeout(() => { document.body.classList.remove('is-loading') }, 4000)
       }
     }
 
@@ -85,8 +83,6 @@ class GhostSearch {
         browse[key] = parameters[key]
       }
     }
-
-    // browse.limit = 'all'
 
     ghostAPI[this.api.resource]
       .browse(browse)
@@ -140,24 +136,10 @@ class GhostSearch {
       this.displayResults(data)
     }
 
-    if (this.button !== '') {
-      const button = document.querySelectorAll(this.button)[0]
-      if (button.tagName === 'INPUT' && button.type === 'submit') {
-        button.closest('form').addEventListener('submit', e => {
-          e.preventDefault()
-        })
-      }
-      button.addEventListener('click', e => {
-        e.preventDefault()
-        this.on.beforeDisplay()
-        this.displayResults(data)
-      })
-    } else {
-      document.querySelectorAll(this.input)[0].addEventListener('keyup', () => {
-        this.on.beforeDisplay()
-        this.displayResults(data)
-      })
-    }
+    document.querySelectorAll(this.input)[0].addEventListener('keyup', () => {
+      this.on.beforeDisplay()
+      this.displayResults(data)
+    })
   }
 
   checkArgs () {
@@ -165,24 +147,22 @@ class GhostSearch {
       console.log('Input not found.')
       return false
     }
+
     if (!document.querySelectorAll(this.results).length) {
       console.log('Results not found.')
       return false
     }
-    if (this.button !== '') {
-      if (!document.querySelectorAll(this.button).length) {
-        console.log('Button not found.')
-        return false
-      }
-    }
+
     if (this.url === '') {
-      console.log('Content API Client Library url missing. Please set the url. Must not end in a trailing slash.')
+      console.log('Content API Client Library host missing. Please set the host. Must not end in a trailing slash.')
       return false
     }
+
     if (this.key === '') {
       console.log('Content API Client Library key missing. Please set the key. Hex string copied from the "Integrations" screen in Ghost Admin.')
       return false
     }
+
     return true
   }
 
@@ -208,19 +188,11 @@ class GhostSearch {
       }
     }
 
-    if (this.trigger === 'focus') {
-      document.querySelectorAll(this.input)[0].addEventListener('focus', () => {
-        if (!this.check) {
-          this.fetch()
-        }
-      })
-    } else if (this.trigger === 'load') {
-      window.onload = () => {
-        if (!this.check) {
-          this.fetch()
-        }
+    document.querySelectorAll(this.input)[0].addEventListener('focus', () => {
+      if (!this.check) {
+        this.fetch()
       }
-    }
+    })
   }
 }
 

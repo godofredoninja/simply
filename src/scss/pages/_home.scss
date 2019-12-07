@@ -1,38 +1,42 @@
 .homeHero {
+  margin-bottom: 50px;
+
   &-container {
-    @extend %flex-justify-content-center;
+    // @extend %flex-justify-content-center;
     @extend %flex-direction-row;
 
     align-items: stretch;
     width: 100%;
     max-width: 1232px;
 
-    .hh-avatar { display: none; }
+    .hh-author { display: none; }
   }
 
   // Card Left home
   &-largeCard {
     flex: 0 1 auto;
-    height: 100%;
     margin-right: 24px;
     width: 100%;
   }
 
   &-mediumCard {
     flex: 0 1 auto;
-    height: 100%;
     width: 100%;
-    max-width: 323px;
+    max-width: 300px;
+    margin-left: 24px;
   }
 
   // small
   &-smallCardWrap {
-    height: 100%;
-    margin-right: 24px;
+    min-width: 370px;
   }
 
-  &-smallCard:not(:last-child) {
-    margin-bottom: 20px;
+  &-smallCard {
+    min-height: 100px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -41,57 +45,53 @@
   &-img { height: 160px }
 
   &-title {
+    @extend %lineClamp;
+
     margin-bottom: 10px;
-    max-height: 84px;
-    line-height: 1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
+    max-height: 85px;
+    line-height: 1.2;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
   }
 
   &-excerpt {
-    overflow: hidden;
+    @extend %secondary-font;
+    @extend %lineClamp;
+
     max-height: 4.4em;
-    // line-height: 1.2;
-    text-overflow: ellipsis;
-    display: -webkit-box;
     -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    font-size: 17px;
   }
 
   // Small card
   &-smallCard {
     &-img {
-      width: 100px;
-      height: 100px;
+      width: 33%;
+      // height: 100px;
       margin-right: 20px;
     }
 
     &-title {
-      overflow: hidden;
-      margin-bottom: 5px;
+      @extend %lineClamp;
+
+      font-size: 18px;
+      margin-bottom: 10px;
       max-height: 2.1em;
-      text-overflow: ellipsis;
-      font-size: 1.1875rem;
-      display: -webkit-box;
       -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
     }
 
     &-body {
       min-width: 0;
-      width: 265px;
+      // width: 280px;
       justify-content: space-between;
     }
   }
 }
 
 @media #{$md-and-down} {
+  .homeHero { margin-bottom: 40px; }
   .homeHero-container { flex-direction: column }
-  .homeHero-largeCard { margin-bottom: 40px }
-  .homeHero-smallCardWrap { margin-right: 0 }
+  .homeHero-largeCard { margin: 0 0 40px 0 }
+  .homeHero-smallCardWrap { margin-right: 0; min-width: auto; }
   .hhp-img { height: 200px }
   .hhp-smallCard-body { flex: 1 1 auto; margin-right: 20px }
   .homeHero-smallCard { flex-direction: row-reverse }

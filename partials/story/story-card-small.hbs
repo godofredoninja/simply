@@ -13,8 +13,12 @@
 
     <div class="cr-inner u-padding15 u-flexColumnTop">
         <div class="cr-body">
-            <h2 class="cr-t u-contentTitle u-fontSize22 u-lineClamp2"><a href="{{url}}">{{title}}</a></h2>
-            {{#unless feature_image}}<p class="cr-e u-textColorNormal">{{excerpt words="20"}}</p>{{/unless}}
+            {{#if feature_image}}
+                <h2 class="cr-t u-fontSize21 u-lineClamp2 u-contentTitle" style="margin-bottom:5px"><a href="{{url}}">{{title}}</a></h2>
+            {{else}}
+                <h2 class="cr-t u-fontSize21 u-contentTitle"><a href="{{url}}">{{title}}</a></h2>
+                <p class="cr-e u-paddingTop15">{{excerpt words="20"}}</p>
+            {{/if}}
         </div>
 
         {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}

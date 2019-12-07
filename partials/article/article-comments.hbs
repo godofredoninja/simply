@@ -1,4 +1,4 @@
-<div id="post-comments" class="post-comments js-comments u-hide u-bgWhite u-paddingTop30 u-paddingBottom30">
+<div id="post-comments" class="post-comments js-comments u-hide u-bgColorGrayLight u-paddingTop30 u-paddingBottom30 u-contentTitle">
     <div class="u-container u-maxWidth1000 u-card">
         {{!-- Disqus Comments --}}
         <div id="disqus_thread"></div>
@@ -15,24 +15,17 @@
         this.page.identifier = 'ghost-{{comment_id}}';
     };
 
-    var disqusComments = d.querySelectorAll('.js-comments');
-    disqusComments.forEach(function(item){item.classList.remove('u-hide')});
-
-    // Disqus Comments Count
-    var count = d.createElement(s);
-    count.src = 'https://'+disqusShortName+'.disqus.com/count.js';
-    count.id = 'dsq-count-scr';
-    count.async = true;
-    count.defer = true;
-    d.body.appendChild(count);
+    d.querySelector('.js-comments').classList.remove('u-hide')
+    /*var disqusComments = d.querySelectorAll('.js-comments');
+    disqusComments.forEach(function(item){item.classList.remove('u-hide')});*/
 
     function loadDisqus() {
         var currentScroll = d.scrollingElement.scrollTop;
         var disqusTarget = d.getElementById('disqus_thread');
 
-        if( disqusTarget && (currentScroll > disqusTarget.getBoundingClientRect().top - 150) ) {
-            if (d.getElementById(id)) return;
+        if (d.getElementById(id)) return;
 
+        if( disqusTarget && (currentScroll > disqusTarget.getBoundingClientRect().top - 150) ) {
             var js = d.createElement(s);
             js.id = id;
             js.src = 'https://'+disqusShortName+'.disqus.com/embed.js';
@@ -46,6 +39,15 @@
     }
 
     window.addEventListener('scroll', loadDisqus);
+
+    document.querySelector('.js-dark-mode').addEventListener('click', function() {
+        if (window.DISQUS) {
+            DISQUS.reset({
+                reload: true,
+                config: disqus_config
+            });
+        }
+    });
 }(document, 'script', 'disqus-js'));
 </script>
 {{/contentFor}}

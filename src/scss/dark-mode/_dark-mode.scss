@@ -1,0 +1,108 @@
+html[data-theme="dark"] {
+  body,
+  .sideNav-wrap {
+    background: #111;
+    color: #acacac;
+  }
+
+  .icon--sunny { display: block !important }
+  .icon--moon { display: none }
+
+  textarea,
+  input {
+    background-color: rgba(97, 97, 97, 0.25);
+    color: #fff;
+    border-color: #444;
+  }
+
+  .search-message,
+  hr { border-top-color: #2e2e2e; }
+  .subscribeBanner { background-color: #272626; }
+
+  .header-logo { color: #fff; }
+
+  .share-sticky,
+  .u-bgheader { background-color: #000; }
+
+  .u-menu-color a,
+  .post-title,
+  .site-archive-title,
+  .post-body h1,
+  .post-body h2,
+  .post-body h3,
+  .post-body h4,
+  .post-body h5,
+  .post-body h6,
+  .ne-t,
+  .author-card-name,
+  .u-contentTitle,
+  .search-results a,
+  .hh-author-name > a:hover,
+  b,
+  strong,
+  .kg-bookmark-title {
+    color: hsla(0, 0%, 100%, .9);
+  }
+
+  // .secondaryMenu .nav li a { color: #bbb }
+
+  .post-body a:not(.kg-bookmark-container):not(.button) { border-bottom-color: #3a3838 }
+  .medium-zoom-overlay { background: rgba(0, 0, 0, 0.5) !important }
+  .cr { background-color: #191919 }
+  .u-borderLighter { border-color: #1b1a1a }
+  .button--tags { color: hsla(0, 0%, 100%, .9) }
+  .u-bgColorGrayLight { background-color: #141414 }
+  .back-to-top { color: #6C757D }
+  .menu-burger span { background-color: #acacac; }
+  .circle { background-color: #1b1919; }
+
+  .search-wrap,
+  .m-subscribe-content {
+    background-color: #111;
+  }
+
+  .header,
+  .sideNav-section {
+    border-bottom-color: rgba(255, 255, 255, 0.2)
+  }
+
+  table th, table td { border-color: rgba(255, 255, 255, 0.2) }
+
+  .sp-n,
+  .story-excerpt,
+  .hhp-excerpt {
+    color: #888;
+  }
+
+  /* stylelint-disable-next-line */
+  .search-results a:hover, .search-results a.search-result--active {
+    background: #2b2b2b;
+    color: #fff;
+  }
+
+  .button--tags,
+  .post-share .share-link {
+    background-color: #2b2b2b;
+    color: hsla(0, 0%, 100%, .9);
+  }
+
+  .site-post-bg {
+    background-color: #141414;
+    border-color: transparent;
+  }
+
+  // .cr,
+  .author-card,
+  .spc-c,
+  .godo-ne,
+  .u-card,
+  .kg-bookmark-container,
+  table tr:nth-child(2n),
+  .topic-item {
+    background-color: #181818;
+  }
+
+  // .post-related {
+  //   background-color: #141414;
+  // }
+}

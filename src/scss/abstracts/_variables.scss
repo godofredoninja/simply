@@ -3,10 +3,11 @@
 
 // $primary-color: #00A034;
 $primary-color: #2ECC71;
+$primary-color-darken: #21A75A;
 $accent-color: #102B7B;
 // $primary-color-hover: #00ab6b;
 
-$newsletter-color: #3aa14d;
+$newsletter-color: $primary-color;
 
 $primary-text-color:   #212529;
 $primary-text-color-title: #111;
@@ -41,13 +42,13 @@ $social-colors: (
 // -----------------------------------------------------------------------------
 
 //$primary-font:    'Source Sans Pro', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; // font default page and titles
-//$secundary-font: 'PT Serif', Mercury SSm A,Mercury SSm B,Georgia,serif; // font for content
+//$secondary-font: 'PT Serif', Mercury SSm A,Mercury SSm B,Georgia,serif; // font for content
 
 // font default page and titles
 $primary-font:    'Rubik', Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
 
 // font for content
-$secundary-font: 'Domine', Mercury SSm A,Mercury SSm B,Georgia,serif;
+$secondary-font: 'Domine', Mercury SSm A,Mercury SSm B,Georgia,serif;
 
 //  3. Buttons And Inputs
 // -----------------------------------------------------------------------------
@@ -56,16 +57,18 @@ $input-height-large: 44px;
 
 $button-height: 37px;
 
-$button-color: rgba(0, 0, 0, .68);
-$button-color-background: rgba(0, 0, 0, .05);
+$button-color: inherit;
+$button-color-background: rgba(0, 0, 0, 0);
 
-$button-hover-color: rgba(0, 0, 0, .68);
-$button-hover-color-background: rgba(0, 0, 0, .1);
+$button-primary-color: #fff;
+$button-primary-background: #0D2261;
 
 $button-filled-background: #1C9963;
 
+$button-primary: $accent-color;
+
 $button-success: $primary-color;
-$button-success-hover: #21A75A;
+$button-success-hover: $primary-color-darken;
 $button-outline-success: #28a745;
 
 // 3. Typography
@@ -102,14 +105,25 @@ $header-color-hover: $primary-color;
 $header-height: 64px;
 
 // category nav
-$category-nav-color: $divider-color;
-$category-nav-color-hover: $primary-color;
+$secondary-menu-color: $divider-color;
+$secondary-menu-color-hover: $primary-color;
 $category-nav-border-color: #e2e2e2;
+
+// Footer
+// -----------------------------------------------------------------------------
+$footer-bg-color: #000;
+$footer-color: hsla(0, 0%, 100%, .7);
+$footer-color-subscribe: #ddd;
+$footer-color-input: #bbb;
+$footer-bg-input-color: #222;
 
 // Post
 // -----------------------------------------------------------------------------
-$font-size-post: 1.25rem;
-$font-size-post-ecerpt: 1.5rem;
+$font-size-post: 20px;
+$post-color-link: #00a562;
+
+$link-color: $primary-color;
+$link-color-hover: $primary-color-darken;
 
 // 3. Media Query Ranges
 // -----------------------------------------------------------------------------

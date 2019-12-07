@@ -38,7 +38,7 @@ body {
   // &.is-article .sft { padding-bottom: 4rem }
 
   &.medium-zoom--opened {
-    .pa,
+    .share-sticky,
     .header {
       opacity: 0;
       transition: transform .2s, opacity .2s, visibility 0s 2s, -webkit-transform .2s;
@@ -46,7 +46,7 @@ body {
     }
 
     .header { transform: translateY(-100%) }
-    .pa { transform: translateY(100%) }
+    .share-sticky { transform: translateY(100%) }
   }
 }
 
@@ -61,13 +61,21 @@ a {
   }
 }
 
+.link-more {
+  color: $link-color;
+
+  &:hover {
+    color: $link-color-hover;
+  }
+}
+
 // 2. Blockquote
 // -----------------------------------------------------------------------------
 blockquote {
   border-left: 5px solid currentColor;
-  font-size: 1.5rem;
+  font-size: 22px;
   line-height: 1.5;
-  margin: 30px 0 0 -23px;
+  margin: 30px 0 30px -23px;
   padding-bottom: 2px;
   padding-left: 20px;
   font-style: italic;
@@ -83,7 +91,8 @@ blockquote {
 // -----------------------------------------------------------------------------
 cite,
 figcaption {
-  color: rgba(0, 0, 0, .68);
+  @extend %text-muted;
+  // color: rgba(0, 0, 0, .68);
   display: block;
   font-family: $primary-font;
   font-feature-settings: "liga" on, "lnum" on;
@@ -104,23 +113,12 @@ figure { margin: 0 }
 // 4. hr
 // -----------------------------------------------------------------------------
 hr {
-  margin: 0;
-  position: relative;
-  background: none;
-  border: none;
-  text-align: center;
-  max-width: none;
-  line-height: 1;
-  height: auto;
-
-  &::before {
-    content: "\b7\b7\b7";
-    color: #1a1a1a;
-    font-size: 28px;
-    letter-spacing: 15px;
-    padding-left: 15px;
-    font-family: serif;
-  }
+  box-sizing: content-box;
+  height: 0;
+  margin: 2rem 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
 }
 
 // 5. Image
@@ -179,20 +177,27 @@ textarea,
 input {
   background: #fff;
   border-radius: 3px;
-  border: 0;
-  color: #303030;
+  border: 1px solid #ced4da;
+  color: #495057;
   display: block;
   font-size: 1rem;
   margin: 0;
   outline: none;
   padding: 0 10px;
   position: relative;
-  transition: box-shadow .08s ease-in, color .08s ease-in;
+  // transition: box-shadow .08s ease-in, color .08s ease-in;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
   width: 100%;
-  box-shadow: 0 0 0 1px rgba(50, 50, 93, .1), 0 2px 5px 0 rgba(50, 50, 93, .05), 0 1px 1px 0 rgba(0, 0, 0, .05);
+  // box-shadow: 0 0 0 1px rgba(50, 50, 93, .1), 0 2px 5px 0 rgba(50, 50, 93, .05), 0 1px 1px 0 rgba(0, 0, 0, .05);
 
   &:focus {
-    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 1px 0 rgba(0, 0, 0, .05), 0 0 0 4px rgba(0, 0, 0, .1);
+    // box-shadow: 0 0 0 1px rgba(0, 0, 0, .1), 0 1px 1px 0 rgba(0, 0, 0, .05), 0 0 0 4px rgba(0, 0, 0, .1);
+    // color: #495057;
+    // background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    // box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
   }
 }
 
@@ -275,41 +280,6 @@ table {
 .main,
 .footer { transition: transform .5s ease; }
 
-// 12. warning success and Note
-// -----------------------------------------------------------------------------
-.warning {
-  background: #fbe9e7;
-  color: #d50000;
-  &::before { content: '⚠️'; }
-}
-
-.note {
-  background: #e1f5fe;
-  color: #0288d1;
-  &::before { content: '⭐'; }
-}
-
-.success {
-  background: #e0f2f1;
-  color: #00897b;
-  &::before { color: #00bfa5; content: '☑️'; }
-}
-
-.warning, .note, .success {
-  @extend %primary-font;
-
-  display: block;
-  font-size: 18px !important;
-  line-height: 1.58 !important;
-  padding: 12px 24px 12px 60px;
-
-  &::before {
-    float: left;
-    font-size: 24px;
-    margin-left: -36px;
-  }
-}
-
 // toltip
 // ==========================================================================
 // .with-tooltip {
@@ -359,11 +329,9 @@ table {
   visibility: hidden;
   opacity: 0;
   transition: opacity 1s;
+  color: #111;
 
-  &-icon:hover {
-    rect { fill: #989898 }
-    polygon { stroke: #989898 }
-  }
+  &-icon:hover { color: #989898 }
 
   &-text {
     letter-spacing: 2px;
@@ -422,3 +390,38 @@ svg {
 // -----------------------------------------------------------------------------
 .medium-zoom-overlay { z-index: 50 }
 .medium-zoom-image--opened { z-index: 51 }
+
+/* 10. Subscribe Message and Overlay
+/* ---------------------------------------------------------- */
+
+.subscribe-success-message {
+  background: #000;
+  box-shadow: 0 2px 4px rgba(36, 50, 86, 0.06), 0 4px 14px rgba(36, 50, 86, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  left: 0;
+  padding: 18px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateY(-175%);
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+  z-index: 50;
+
+  .button {
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+  }
+}
+
+.subscribe-success .subscribe-success-message {
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.subscribe-success-message.close {
+  visibility: hidden;
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateY(-175%);
+}

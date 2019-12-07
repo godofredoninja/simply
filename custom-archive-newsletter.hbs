@@ -1,19 +1,22 @@
 {{!-- Layout --}}
 {{!< default}}
 
-{{#contentFor "special_body_class"}}is-subscribe u-bgWhite{{/contentFor}}
+{{#contentFor "special_body_class"}}is-subscribe{{/contentFor}}
 
 {{#post}}
 
 <article class="post ne">
-    <header class="ne-h u-container animated bounceInUp">
-        <div class="ne-inner u-maxWidth740 u-marginAuto u-relative u-flexColumn u-flexCenter u-textAlignCenter">
-            <h1 class="ne-t u-contentTitle">{{title}}</h1>
-            {{#if custom_excerpt}}<p class="ne-e u-textColorNormal">{{custom_excerpt}}</p>{{/if}}
+    <header class="ne-h container animated bounceInUp">
+        <div class="ne-inner u-maxWidth740 u-marginAuto u-relative u-flexColumnContentCenter u-flexCenter u-textAlignCenter">
+            <h1 class="ne-t u-underline u-md-fontSize36">{{title}}</h1>
+            {{#if custom_excerpt}}<p class="ne-e u-textMuted">{{custom_excerpt}}</p>{{/if}}
         </div>
     </header>
 
-    <section class="ne-body u-relative u-container"><div class="post-body u-maxWidth1000 u-marginAuto animated bounceInUp">{{content}}</div></section>
+    <section class="ne-body u-relative u-container">
+        <div class="circle"></div>
+        <div class="post-body u-maxWidth1000 u-marginAuto animated bounceInUp">{{content}}</div>
+    </section>
 </article>
 
 {{/post}}

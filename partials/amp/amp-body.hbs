@@ -1,12 +1,14 @@
 {{#post}}
 
 <article class="article">
-    <header class="article-header">
+    <header class="article-header u-container">
         {{!-- Title --}}
         <h1 class="article-title">{{title}}</h1>
 
         {{!-- Excerpt --}}
         {{#if custom_excerpt}}<p class="article-excerpt">{{custom_excerpt}}</p>{{/if}}
+
+        <hr>
 
         <div class="article-meta">
             {{!-- Author Name --}}
@@ -28,24 +30,26 @@
     {{!-- featured image --}}
     {{#if feature_image}}
         <figure class="article-image u-block u-marginTop30">
-            <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="400" layout="responsive" alt="{{title}}"></amp-img>
+            <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="350" layout="responsive" alt="{{title}}"></amp-img>
         </figure>
     {{/if}}
 
     {{!-- article body (all content) --}}
-    <div class="article-body"> {{amp_content}} </div>
+    <div class="article-body u-container"> {{amp_content}} </div>
 
     {{!-- Post All Tags (category) --}}
     {{#if tags}}
-        <div class="article-tags">
+        <div class="article-tags u-container u-marginTop30">
+            <span class="share-title">{{t "Tags"}}:</span>
             {{#foreach tags}}
-                <a href="{{url absolute="true"}}" title="{{name}}" class="button">{{name}}</a>
+                <a href="{{url absolute="true"}}" title="{{name}}" class="button--tags">{{name}}</a>
             {{/foreach}}
         </div>
     {{/if}}
 
     {{!-- Share social Media --}}
-    <footer class="share">
+    <footer class="share u-container u-marginTop30">
+        <span class="share-title">{{t "Share this"}}:</span>
         <amp-social-share class="rounded"
         type="email"
         width="36"

@@ -1,0 +1,41 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-home is-frontpage{{/contentFor}}
+
+<section class="homeHero">
+    <div class="homeHero-container u-container u-relative">
+
+        {{!-- Fisrt Large Post - partials/home/home-first-post.hbs --}}
+        {{#foreach posts limit="1"}} {{> "home/home-first-post"}} {{/foreach}}
+
+        {{!-- medium Post small - partials/home/home-small-post.hbs --}}
+        <div class="homeHero-smallCardWrap u-flexColumnTop">
+            {{#foreach posts from="2" to="4"}} {{> "home/home-small-post"}} {{/foreach}}
+        </div>
+
+        {{!-- Featured Post medium - partials/home/home-medium-post.hbs --}}
+        {{#get "posts" include="authors" filter="featured:true" limit="1" as |home_featured_post|}}
+            {{#if home_featured_post}}{{#foreach home_featured_post}} {{> "home/home-medium-post"}} {{/foreach}}{{/if}}
+        {{/get}}
+    </div>
+</section>
+
+<section class="feed-entry-content u-marginTop30">
+    <div class="feed-entry-wrap container">
+        <div class="row">
+            {{#foreach posts from="5" to="18"}}
+                {{#has number="5, 6, 17, 18"}}
+                    <div class="col s12 m6 ss2">{{> "story/story-grid" }}</div>
+                {{else has number="13, 16"}}
+                    <div class="col s12 l7 ss3 u-marginBottom15">{{> "story/story-cover" }}</div>
+                {{else has number="14, 15"}}
+                    <div class="col s12 l5 ss4 u-marginBottom15">{{> "story/story-cover" }}</div>
+                {{else}}
+                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+</section>

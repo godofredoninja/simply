@@ -1,0 +1,20 @@
+<div class="u-flex u-relative godo-tracking {{class}}"
+    data-event-category="Article"
+    data-event-action="{{storyTitle}}"
+    data-event-label="{{url absolute="true"}}"
+    data-event-non-interaction="true">
+
+    <a href="{{url}}" class="prev-next-image-link u-relative u-bgColorGrayLight u-flex0" aria-label="{{title}}">
+    {{#if feature_image}}
+        <img class="u-absolute u-image blur-up lazyload" data-src="{{img_url feature_image size="s"}}" alt="{{title}}"/>
+    {{/if}}
+    </a>
+
+    <div class="prev-next-body u-paddingLeft20 u-flex1">
+        <div class="u-fontSizeSmaller u-lineHeight1 u-textMuted u-marginBottom10">{{storyTitle}}</div>
+        <h2 class="prev-next-title u-contentTitle u-marginBottom10 u-fontSize21"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
+        <p class="prev-next-excerpt u-fontSizeSmall u-textMuted u-lineClamp2 u-lineHeightTight">{{excerpt words="25"}}</p>
+    </div>
+
+    <a href="{{url}}" aria-label="{{title}}" class="u-absolute0 zindex2"></a>
+</div>

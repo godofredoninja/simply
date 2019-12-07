@@ -32,12 +32,12 @@
       @extend %flex-justify-content-center;
 
       padding: calc(9vw + 55px) 4vw 120px;
-      font-size: 1.25rem;
+      font-size: 24px;
     }
 
     // title
     &-t {
-      font-size: 4rem;
+      font-size: 3rem;
       color: inherit;
     }
 
@@ -54,9 +54,9 @@
 
   // Description
   &-des {
+    @extend %secondary-font;
+
     margin: 40px auto 30px;
-    line-height: 1.4;
-    font-family: Georgia, 'Merriweather', serif;
     opacity: .8;
 
     em {
@@ -68,11 +68,12 @@
   // Buttons
   &-buttons .button {
     background: hsla(0, 0%, 100%, .9);
-    font-size: 1rem;
+    color: #000;
+    font-size: 14px;
+    padding: 0 10px;
 
     &:hover {
       background: #fff;
-      color: #000;
     }
 
     img {
@@ -99,26 +100,13 @@
     padding: 15px 20px;
     flex: 1 1 auto;
   }
-}
 
-// Button listen more
-.listen-btn {
-  border: 2px solid $primary-color;
-  color: #006400;
-  letter-spacing: 3px;
-  border-radius: 0;
-  line-height: 32px;
-  background: #fff;
-  font-size: 1rem;
-
-  &:hover {
-    color: #fff;
-    background-color: #006400;
-    transition: all .1s linear;
+  &-excerpt {
+    @extend %secondary-font;
   }
 }
 
-@media #{$lg-and-up} {
+@media #{$md-and-up} {
   .spc-c {
     display: flex;
 
@@ -128,5 +116,6 @@
     }
   }
 
-  .spc-h-inner { font-size: 1.875rem; }
+  .spc-h-inner { font-size: 28px; }
+  .spc-h-t { font-size: 4rem; }
 }

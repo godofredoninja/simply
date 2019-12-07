@@ -1,48 +1,46 @@
 {{!-- Layout --}}
 {{!< default}}
-<div class="u-container">
 
-<section class="topic u-maxWidth1100 u-paddingTop30 u-marginAuto">
-{{#post}}
-    <div class="topic-header u-marginBottom40 u-paddingTop10">
-        <h1 class="topic-t u-md-fontSizeLarger u-heading-border u-fontSize36"><span>{{title}}</span></h1>
-    </div>
-{{/post}}
+{{#contentFor "special_body_class"}}topic{{/contentFor}}
 
-{{#get "tags" limit="18" include="count.posts" order="count.posts desc"}}
+<section class="container">
+    {{#post}}
+        <div class="u-marginBottom40 site-archive u-textAlignCenter">
+            <h1 class="site-archive-title u-underline u-fontSizeLargest u-md-fontSize36 u-contentTitle"><span>{{title}}</span></h1>
+            <div class="site-archive-des u-fontSize20 u-marginAuto u-maxWidth740">{{content}}</div>
+        </div>
+    {{/post}}
 
-<div class="row">
-
+    <div class="row">
+    {{#get "tags" limit="18" include="count.posts" order="count.posts desc"}}
     {{#foreach tags}}
 
-    <article class="col s12 m6 l4 u-marginBottom40 u-relative">
-        <figure class="topic-img u-relative u-bgColorGrayLight">
-            {{!-- Imagenes --}}
-            {{#if feature_image}}
-                <img class="u-absolute u-image u-block blur-up lazyload"
-                    src="{{img_url feature_image size="l"}}"
-                    srcset="{{img_url feature_image size="xxs"}}"
-                    data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
-                    data-sizes="(max-width: 1000px) 400px, 600px"
-                    alt="{{name}}"
-                />
-            {{else}}
-                <div class="u-absolute0 u-block " style="background-image: url({{asset "images/not-image.jpg"}})"></div>
-            {{/if}}
-        </figure>
-        <header class="topic-h u-paddingTop20">
-            <h2 class="topic-st u-fontWeightMedium u-fontSize20 u-paddingBottom10"><a href="{{url}}">{{name}}</a></h2>
-            {{#if description}}<p class="topic-d u-fontSizeSmall u-lineClamp2">{{description}}</p>{{/if}}
-            <p class="u-fontSize15 u-textColorNormal">{{count.posts}} {{t "Stories"}}</p>
-        </header>
-        <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{name}}"></a>
-    </article>
+    <div class="col s12 m6 l4 u-marginBottom30">
+        <article class="topic-item u-relative u-flexColumnTop">
+            <header class="topic-header u-flex1 u-flexCenter u-paddingRight20 u-paddingLeft20 u-spaceBetween">
+                <h2 class="topic-name u-contentTitle u-fontSize20 u-textCapitalize"><a href="{{url}}" class="u-block">{{name}}</a></h2>
+                <p class="u-fontSize15 u-textMuted">{{count.posts}} {{t "Stories"}}</p>
+            </header>
+
+            <figure class="topic-img u-flex0 u-relative">
+                {{#if feature_image}}
+                    <img class="u-absolute u-image u-block blur-up lazyload"
+                        src="{{img_url feature_image size="l"}}"
+                        srcset="{{img_url feature_image size="xxs"}}"
+                        data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+                        data-sizes="(max-width: 1000px) 400px, 600px"
+                        alt="{{name}}"
+                    />
+                {{else}}
+                    <div class="u-absolute0 u-block u-bgCover" style="background-image: url({{asset "images/not-image.jpg"}})"></div>
+                {{/if}}
+            </figure>
+
+            <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{name}}"></a>
+        </article>
+    </div>
 
     {{/foreach}}
-
-</div>
-
-{{/get}}
-
+    {{/get}}
+    </div>
 </section>
-</div>

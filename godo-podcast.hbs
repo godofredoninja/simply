@@ -10,20 +10,17 @@
     {{#if feature_image}}{{> "helper/helper-image-cover"}}{{/if}}
 
     <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex3 u-textAlignCenter">
-        <h1 class="spc-h-t u-md-fontSizeLarger animated bounceIn">{{title}}</h1>
+        <h1 class="spc-h-t animated bounceIn">{{title}}</h1>
         {{content}}
     </div>
 </section>
 {{/post}}
 
-{{!-- ad --}}
-{{> "ad/ad-podcast-top"}}
-
-<section class="u-container">
+<div class="u-container">
     <div class="feed-entry-content u-maxWidth1000 u-marginAuto u-paddingTop30">
         <div class="feed-entry-wrap row">
-            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+            {{!-- Sidebar - partials/story/story-podcast.hbs --}}
             {{#foreach posts}} {{>"story/story-podcast"}} {{/foreach}}
         </div>
     </div>
-</section>
+</div>

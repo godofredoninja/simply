@@ -1,29 +1,19 @@
 /* stylelint-disable */
 $primary-color: #6ac8cf;
+$accent-color: #102B7B;
 
 $theme: (
   primary-color: $primary-color,
-
+  button-primary: #102B7B,
+  color-link: #30b0b9,
+  mark-color: linear-gradient(180deg,#dff6f8,#dff6f8),
   header-bg-color: $primary-color,
-  header-color: #116468,
-  header-color-hover: #fff,
-  header-colo-logo: #fff,
-
-  color-link: #277d83,
-
-  button-primary: #277d83,
-
-  newsletter-color: #36aeb7,
-  newsletter-color-bg: #6bc9d0,
-
-  podcast-button: #277d83,
-
-  // subscribe-color-btn: red,
-  // subscribe-color-btn-hover: blue,
-
-  mark-color: linear-gradient(180deg,#dff6f8,#dff6f8)
+  //   header-color: #116468,
+  //   header-color-hover: #fff,
 );
 
 @import "mixin-themes";
 
 @include colorFull($theme);
+
+.u-primaryGradient { background: linear-gradient(135deg, rgba($accent-color, .7), rgba($primary-color, .5)) }

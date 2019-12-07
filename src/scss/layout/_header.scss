@@ -16,9 +16,23 @@
   z-index: 20;
   // box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15);
   border-bottom: 1px solid #ddd;
+  // transform: translateY(0);
 
   &-left { margin-right: 20px }
-  &.nav-up { transform: translateY(-100%) }
+
+  &-action {
+    margin-left: 15px;
+
+    a {
+      padding: 10px 7px;
+    }
+
+    .icon {
+      height: 28px;
+      width: 28px;
+    }
+  }
+  // &.is-visible { transform: translateY(-100%) }
 
   &-logo {
     color: #000;
@@ -27,12 +41,12 @@
     img { height: 100% }
   }
 
-  .nav-search { padding: 10px 0 10px 7px }
+  // .nav-search { padding: 10px 0 10px 7px }
 }
 
 // 2. Main Menu
 // -----------------------------------------------------------------------------
-.mainMenu {
+.mainMenu ul {
   @extend %flex;
   // display: flex;
   overflow: hidden;
@@ -90,13 +104,13 @@
 // Blog Header
 // -----------------------------------------------------------------------------
 
-.godo-header {
+.subscribeBanner {
   // margin-top: 70px;
   padding: 20px 0;
   background: #F0FCF5;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
-  h4 {
+  &-title {
     margin-right: 20px;
 
     &::after {
@@ -115,25 +129,28 @@
 // Category Nav for top page
 // -----------------------------------------------------------------------------
 
-.category-nav {
-  ul li {
-    margin: 5px 10px 5px 0;
+.secondaryMenu {
+  .nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
-    // &:not(:last-child) {
-    //   margin-right: 15px;
-    //   margin-bottom: 10px;
-    // }
+    li {
+      margin: 5px 10px 5px 0;
 
-    a {
-      border: 1px solid $category-nav-border-color;
-      color: $category-nav-color;
-      display: inline-block;
-      font-size: 14px;
-      padding: 6px 10px;
+      a {
+        color: $secondary-menu-color;
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 10px;
+        text-transform: uppercase;
 
-      &.active,
-      &:hover {
-        color: $category-nav-color-hover;
+        &.nav-current,
+        &:hover {
+          color: $secondary-menu-color-hover;
+        }
+
+        &.nav-current { font-weight: 500 }
       }
     }
   }
@@ -143,10 +160,12 @@
 // -----------------------------------------------------------------------------
 
 @media #{$md-and-down} {
-  .godo-header {
+  .subscribeBanner {
     h4::after { display: none }
     .col.m8 { margin-bottom: 20px; }
   }
+
+  .secondaryMenu ul li a { border: 1px solid $category-nav-border-color; }
 }
 
 // 5. Header breakpoints media query down large

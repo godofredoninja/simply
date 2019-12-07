@@ -1,4 +1,4 @@
-/* global searchSettings followSocialMedia siteSearch */
+/* global searchSettings followSocialMedia siteSearch localStorage */
 
 import { qs, qsa } from '../app/app.variables'
 import { loadScript } from '../app/app.load-style-script'
@@ -22,37 +22,75 @@ export default {
       document.body.classList.toggle('has-menu')
     })
 
+    // Active Dark Mode
+    // -----------------------------------------------------------------------------
+    const jsDarkMode = qs('.js-dark-mode')
+    if (jsDarkMode) {
+      jsDarkMode.addEventListener('click', el => {
+        el.preventDefault()
+
+        const dd = document.documentElement
+        const dataTheme = dd.getAttribute('data-theme')
+
+        if (dataTheme === 'light') {
+          dd.setAttribute('data-theme', 'dark')
+          localStorage.setItem('selected-theme', 'dark')
+        } else {
+          dd.setAttribute('data-theme', 'light')
+          localStorage.setItem('selected-theme', 'light')
+        }
+      })
+    }
+
     //  Scroll to a certain element for ID
     // -----------------------------------------------------------------------------
-    qsa('.js-scroll-id').forEach(item => item.addEventListener('click', function (e) {
-      e.preventDefault()
-      const destiny = qs(this.getAttribute('href'))
+    // qsa('.js-scroll-id').forEach(item => item.addEventListener('click', function (e) {
+    //   e.preventDefault()
+    //   const destiny = qs(this.getAttribute('href'))
 
-      destiny.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'nearest'
-      })
+    //   destiny.scrollIntoView({
+    //     behavior: 'smooth',
+    //     block: 'nearest',
+    //     inline: 'nearest'
+    //   })
+    // }))
+
+    //  Toggle modal subscribe
+    // -----------------------------------------------------------------------------
+    qsa('.js-m-subscribe-toggle').forEach(item => item.addEventListener('click', function (e) {
+      e.preventDefault()
+
+      qs('.m-subscribe').classList.toggle('active')
     }))
 
     // Scroll Back to top animate
     // -----------------------------------------------------------------------------
-    qs('.js-back-to-top').addEventListener('click', e => {
-      e.preventDefault()
+    const backToTop = qs('.js-back-to-top')
 
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
+    if (backToTop) {
+      backToTop.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        if (window) {
+          try {
+            // The New API.
+            window.scroll({
+              top: 0,
+              left: 0,
+              behavior: 'smooth'
+            })
+          } catch (error) {
+            // For older browsers.
+            window.scrollTo(0, 0)
+          }
+        }
       })
-
-      // document.body.scrollIntoView({ behavior: 'smooth' })
-    })
+    }
 
     // Load Search
     // -----------------------------------------------------------------------------
     if (typeof searchSettings !== 'undefined' && typeof siteSearch !== 'undefined') {
-      loadScript('https://unpkg.com/@tryghost/content-api@1.2.8/umd/content-api.min.js', () => {
+      loadScript('https://unpkg.com/@tryghost/content-api@1.3.4/umd/content-api.min.js', () => {
         loadScript(siteSearch)
       })
     }

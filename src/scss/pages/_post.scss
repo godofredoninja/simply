@@ -1,22 +1,17 @@
 /**
 * 1. post
 * 2. post body
-* 3. Gallery and Image
+* 3. video Responsive
+* 4. Previous and Next post
+* 5. Post Related
 */
 
 // 1. Post
 // -----------------------------------------------------------------------------
 .post {
-  &-title {
-    line-height: 1.04;
-  }
-
-  &-excerpt {
-    @extend %secundary-font;
-
-    font-size: $font-size-post-ecerpt;
-    letter-spacing: 0.005em;
-  }
+  &-title { color: $primary-text-color-title }
+  &-image { margin-top: 50px }
+  &-excerpt { @extend %secondary-font; }
 }
 
 // 2. post content body
@@ -25,9 +20,9 @@
   @extend %flex;
   @extend %flex-direction-column;
   @extend %flex-align-items-center;
-  @extend %secundary-font;
+  @extend %secondary-font;
 
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: $font-size-post;
   font-weight: 400;
 
@@ -41,13 +36,16 @@
     }
   }
 
-  a:not(.kg-bookmark-container) {
-    box-shadow: inset 0 -2px 0 currentColor;
+  a:not(.kg-bookmark-container):not(.button) {
+    // box-shadow: inset 0 -2px 0 currentColor;
+    // transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    color: $post-color-link;
     text-decoration: none;
     word-break: break-word;
-    transition: color 80ms ease-in, box-shadow 130ms ease-in-out;
+    transition: color, border-color .2s linear;
+    border-bottom: 1px solid #f1f1f1;
 
-    &:hover { color: #9a9a9a }
+    &:hover { border-bottom-color: $post-color-link }
   }
 
   img:not(.kg-bookmark-icon) {
@@ -57,19 +55,18 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-style: normal;
-    //
-    letter-spacing: -.03em;
-    line-height: 1.04;
+    color: $primary-text-color-title;
   }
+
+  blockquote { margin: 30px 0 30px -23px }
 
   ul,
   ol {
     counter-reset: post;
 
     li {
-      // line-height: 1.8;
       margin-bottom: 5px;
       margin-left: 30px;
 
@@ -100,6 +97,33 @@
   h1, h2, h3, h4, h5, h6 {
     & + p { margin-top: 0 }
   }
+
+  // warning success and Note
+  .warning {
+    background: #fbe9e7;
+    color: #d50000;
+  }
+
+  .note {
+    background: #e1f5fe;
+    color: #0288d1;
+  }
+
+  .success {
+    background: #e0f2f1;
+    color: #00897b;
+  }
+
+  .warning, .note, .success {
+    padding: 20px;
+    border-radius: 5px;
+
+    // stylelint-disable-next-line
+    a {
+      color: inherit !important;
+      border-color: inherit !important;
+    }
+  }
 }
 
 // fisrt p
@@ -117,120 +141,7 @@
 //   text-transform: uppercase;
 // }
 
-// 3. Gallery and Image
-// -----------------------------------------------------------------------------
-.kg-gallery {
-  &-container {
-    @extend %flex;
-    @extend %flex-direction-column;
-
-    max-width: 1100px;
-    width: 100vw;
-  }
-
-  &-row {
-    @extend %flex;
-    @extend %flex-direction-row;
-    @extend %flex-justify-content-center;
-
-    &:not(:first-of-type) { margin: 0.75em 0 0 0 }
-  }
-
-  &-image {
-    /* stylelint-disable-next-line */
-    img {
-      display: block;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-    }
-
-    &:not(:first-of-type) { margin: 0 0 0 0.75em }
-  }
-}
-
-.kg-embed-card, .kg-gallery-container {
-  @extend %flex;
-  @extend %flex-direction-column;
-}
-
-.kg-embed-card {
-  @extend %flex-align-items-center;
-
-  max-width: 100%;
-}
-
-.kg-width-full .kg-image { max-width: 100vw }
-.kg-width-wide .kg-image { max-width: 1000px }
-
-// Bookmark card
-// -----------------------------------------------------------------------------
-.kg-bookmark {
-  &-container {
-    @extend %primary-font;
-    @extend %flex;
-    @extend %box-shadow-card;
-  }
-
-  &-content {
-    @extend .u-flexColumnTop;
-
-    flex-grow: 1;
-    flex-basis: 100%;
-    padding: 20px;
-  }
-
-  &-title {
-    font-weight: 500;
-    line-height: 1.2;
-    font-size: 1.25rem;
-  }
-
-  &-description {
-    @extend .u-lineClamp2;
-
-    color: rgba(0, 0, 0, .54);
-    line-height: 1.4;
-    max-height: 4em;
-    margin-top: 10px;
-    font-size: 1rem;
-  }
-
-  &-metadata {
-    @extend %flex;
-    @extend %flex-align-items-center;
-
-    font-size: 0.9375rem;
-    color: rgba(0, 0, 0, .84);
-  }
-
-  &-thumbnail {
-    flex-grow: 1;
-    min-width: 33%;
-    position: relative;
-    min-height: 150px;
-  }
-
-  /* stylelint-disable-next-line */
-  &-thumbnail img {
-    @extend .u-absolute0;
-    @extend .u-image;
-  }
-
-  &-icon {
-    width: 22px;
-    height: 22px;
-    margin-right: 8px;
-  }
-
-  &-author::after {
-    content: "•";
-    margin: 0 6px;
-    color: rgba(0, 0, 0, 0.54);
-  }
-}
-
-// Video Responsive
+// 3. Video Responsive
 // -----------------------------------------------------------------------------
 .video-responsive {
   display: block;
@@ -261,83 +172,19 @@
   }
 }
 
-// Sidebar Sticky
+// 4. Previous and Next post
 // -----------------------------------------------------------------------------
-.post-sticky {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  //
-  max-width: 118px;
-  padding-top: 2rem;
+
+.prev-next {
+  &-image-link { width: 35% }
+  &-body { min-height: 120px }
 }
 
-.sticky-top-wrap {
-  flex: 1;
-
-  .sticky {
-    position: sticky;
-    top: 100px;
-    bottom: 0;
-    transition: visibility 0s linear 0s, opacity .3s 0s;
-  }
-}
-
-.sticky.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear .3s, opacity .3s 0s;
-}
-
-// post share
+// 5. Post Related
 // -----------------------------------------------------------------------------
-.post-share .button {
-  display: block;
-  margin-bottom: 5px;
-  color: #fff;
-}
 
-// Post Actions
-// -----------------------------------------------------------------------------
-.pa {
-  background-color: #fff;
-  bottom: 0;
-  box-shadow: 0 0 1px rgba(0, 0, 0, .44);
-  height: 44px;
-  left: 0;
-  position: fixed;
-  right: 0;
-  transform: translateY(100%);
-  transition: transform .3s;
-  z-index: 20;
-
-  &.is-visible { transform: translateY(0) }
-  &-share { justify-content: flex-end }
-
-  &-wrap {
-    max-width: 1200px;
-    padding-left: 8px;
-    padding-right: 8px;
-    height: 44px;
-  }
-
-  .separator {
-    background: rgba(0, 0, 0, .15);
-    height: 24px;
-    margin: 0 15px;
-    width: 1px;
-  }
-
-  .button {
-    margin-bottom: 0;
-    height: 28px;
-    line-height: 26px;
-  }
-}
-
-.nextPost {
-  max-width: 260px;
+.post-related {
+  padding: 5% 0 30px 0;
 }
 
 // Media Query
@@ -366,17 +213,5 @@
     }
 
     iframe { width: 100% !important; }
-  }
-
-  // Image
-  .kg-width-wide .kg-image { width: 100%; }
-
-  .pa-share { justify-content: center }
-}
-
-@media #{$sm-and-down} {
-  .kg-bookmark {
-    &-container { flex-direction: column }
-    &-content { order: 1 }
   }
 }

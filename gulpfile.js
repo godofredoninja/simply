@@ -157,7 +157,7 @@ const copyAmpStyle = () => {
 const watch = () => {
   $.livereload.listen()
   gulp.watch('src/scss/**', style)
-  // gulp.watch('src/scss/theme/**', styleTheme)
+  gulp.watch('src/scss/theme/**', styleTheme)
   gulp.watch('src/js/**', script)
   gulp.watch('src/img/**/*.*', image)
   gulp.watch('**/*.hbs').on('change', p => $.livereload.changed(p))
@@ -170,7 +170,7 @@ const compile = gulp.parallel(style, script, image)
  * Public tasks
  */
 
-const build = gulp.series(clean, compile)
+const build = gulp.series(clean, compile, styleTheme)
 
 const release = gulp.series(build, styleTheme, copyMainStyle, copyAmpStyle, copyPrismJs, archive)
 

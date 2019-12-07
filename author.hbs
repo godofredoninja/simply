@@ -22,7 +22,7 @@
     />
     {{/if}}
 
-    <article class="cover-wrap u-relative u-maxWidth1040 u-container u-sizeFullWidth u-textAlignCenter zindex3">
+    <article class="cover-wrap container u-flexColumnTop u-relative u-textAlignCenter zindex3">
 
         {{!-- author avatar --}}
         <figure class="author-avatar animated bounceInDown u-round  u-relative u-marginAuto">
@@ -30,44 +30,38 @@
         </figure>
 
         {{!-- Author name --}}
-        <h1 class="cover-title animated bounceIn u-fontSize36 u-marginTop30">{{name}}</h1>
+        <h1 class="cover-title animated bounceIn u-fontSize40 u-md-fontSize36 u-marginTop20 u-underline">{{name}}</h1>
 
         {{!-- author biography --}}
-        {{#if bio}}<p class="cover-des u-marginAuto u-marginTop30 u-fontSize22">{{bio}}</p>{{/if}}
+        {{#if bio}}<p class="cover-des u-marginAuto u-marginBottom30 u-fontSize20">{{bio}}</p>{{/if}}
 
         {{!-- Author (Location - website - RSS) --}}
-        <div class="author-meta u-marginTop30">
+        <div class="author-meta buttonSet">
             {{#if location}}
-                <span class="author-location"><svg class="icon"><use xlink:href="#icon-location"></use></svg> {{location}}</span>
+                <span class="author-location button"><svg class="icon"><use xlink:href="#icon-map"></use></svg> {{location}}</span>
             {{/if}}
 
             {{#if website}}
-                <span class="author-link">
-                    <a href="{{website}}" class="link--underline" target="_blank" rel="noopener noreferrer">
-                        <svg class="icon"><use xlink:href="#icon-link"></use></svg>
-                        {{website}}
-                    </a>
-                </span>
+                <a href="{{website}}" class="author-link button" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon"><use xlink:href="#icon-link"></use></svg>
+                    {{website}}
+                </a>
             {{/if}}
 
-            <span class="author-stats">
-                <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" class="link--underline" target="_blank" rel="noopener noreferrer">
+            <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" class="author-stats button" target="_blank" rel="noopener noreferrer">
                 <svg class="icon"><use xlink:href="#icon-rss"></use></svg>
-                {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</a>
-            </span>
+                {{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+            </a>
         </div>
 
         {{!-- Author Facebook and Twitter --}}
         <div class="author-follow buttonSet u-marginTop30">
-            {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" class="button button--large" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg> Facebook</a>{{/if}}
-            {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" class="button button--large" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>{{/if}}
+            {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" class="button u-textColorWhite bg-facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg> Facebook</a>{{/if}}
+            {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" class="button u-textColorWhite bg-twitter" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg> Twitter</a>{{/if}}
         </div>
     </article>
 </div>
 {{/author}}
-
-{{!-- ad --}}
-{{> "ad/ad-author-top"}}
 
 {{!-- The tag below includes the post loop - partials/loop.hbs --}}
 {{>"loop"}}

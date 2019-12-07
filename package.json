@@ -2,7 +2,7 @@
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -12,7 +12,7 @@
     "desktop": "screenshot.jpg"
   },
   "author": {
-    "name": "GodoFredoNinja",
+    "name": "GodoFredo",
     "email": "hello@godofredo.ninja",
     "url": "https://godofredo.ninja"
   },
@@ -39,7 +39,7 @@
     "email": "hello@godofredo.ninja"
   },
   "config": {
-    "posts_per_page": 12,
+    "posts_per_page": 18,
     "image_sizes": {
       "xxs": {
         "width": 30
@@ -69,6 +69,7 @@
     "lint:scss": "stylelint \"src/scss/**/*.{css,sass,scss,sss,less}\"",
     "lint": "yarn lint:js && yarn lint:scss",
     "test": "yarn lint && gscan .",
+    "scan": "gscan .",
     "build": "gulp build",
     "release": "gulp release --production",
     "dev": "gulp develop"

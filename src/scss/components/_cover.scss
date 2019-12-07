@@ -22,12 +22,6 @@ body.has-cover {
     min-height: 600px;
     background: rgba(0, 0, 0, 0.9);
     // transition: all 1s ease;
-
-    .button {
-      border-color: #fff;
-      color: #fff;
-      background: transparent;
-    }
   }
 
   .header { transition: all 1s ease }
@@ -46,6 +40,16 @@ body.is-transparent {
     }
 
     .menu-burger span { background: #fff }
-    .nav-logo, .u-menu-color a { color: #fff }
+    .header-logo, .u-menu-color a { color: #fff }
+  }
+}
+
+// Class Temporal
+
+.site-archive {
+  padding: 4% 0;
+
+  &-des {
+    @extend %secondary-font;
   }
 }

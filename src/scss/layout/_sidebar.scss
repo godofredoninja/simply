@@ -1,27 +1,27 @@
 .sidebar {
   /* stylelint-disable-next-line */
   &-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    letter-spacing: -.42px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
 
-    span { padding-bottom: 10px }
+    span { padding-bottom: 10px; display: inline-block; }
   }
 }
 
 //Sidebar Post
 .sp {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 
   // Number
-  &-n { color: rgba(0, 0, 0, .15); font-family: $secundary-font }
+  &-n { color: rgba(0, 0, 0, .15); }
 
   // title
   &-t {
-    font-size: 1.0625rem;
-    font-weight: 500;
-    letter-spacing: -.18px;
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.4;
   }
 
   &:hover .sp-t { text-decoration: underline }

@@ -28,26 +28,18 @@
 .hh {
   line-height: 1.3;
 
-  &-avatar { margin-right: 10px }
+  &-author {
+    margin-right: 10px;
 
-  &-follow {
-    margin-left: 10px;
-    vertical-align: text-bottom;
+    li:not(:first-child) { margin-left: -6px }
 
-    &:hover {
-      .hh-follow-show { display: inline-block !important }
-      .hh-follow-toggle { display: none }
+    &-name > a:hover {
+      text-decoration: underline;
+      color: #111;
     }
   }
-
-  .button {
-    height: 20px;
-    line-height: 18px;
-    padding: 0 5px;
-
-    .icon { height: 15px }
-  }
 }
+
 // icon star Featured Story
 .icon--xs { height: 12px; margin-top: -5px }
 
@@ -57,7 +49,7 @@
   margin-bottom: 50px;
 
   &-title {
-    color: $primary-text-color-title;
+    // color: $primary-text-color-title;
     line-height: 1.15em;
     margin: 0 0 .4em;
   }
@@ -68,25 +60,30 @@
     position: absolute;
     top: 15px;
     right: 15px;
-
-    a {
-      background-color: #102B7B;
-      border-radius: 3px;
-      padding: 6px 10px;
-      font-size: 12px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      line-height: 1;
-      color: white;
-    }
   }
 
-  &-excerpt {
-    @extend %secundary-font;
+  &-excerpt { @extend %secondary-font; }
+}
 
-    // margin-top: 7px
+// Story Cover
+// -----------------------------------------------------------------------------
+
+.ss4 + .ss3 { margin-bottom: 40px; }
+
+.story-cover {
+  &-body {
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: 30px 40px;
   }
+
+  &-image {
+    height: 350px;
+  }
+
+  .hh-author-name a { color: #fff !important; }
+  .hh-date { color: rgba(255, 255, 255, 0.8) }
 }
 
 // 4. Story Card Small
@@ -112,7 +109,7 @@
   padding: 8% 0;
 
   &-excerpt {
-    @extend %secundary-font;
+    @extend %secondary-font;
 
     max-height: 2.8em;
   }
@@ -131,25 +128,30 @@
 }
 
 @media #{$md-and-up} {
-  // .story {
-  //   &-excerpt {
-  //     -webkit-box-orient: vertical;
-  //     -webkit-line-clamp: 3;
-  //     display: -webkit-box;
-  //     text-overflow: ellipsis;
-  //     overflow: hidden;
-  //     max-height: 4.3em
-  //   }
-  // }
+  .story {
+    &-excerpt {
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
+      display: -webkit-box;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      max-height: 6em
+    }
+  }
 
   // Storly List
   .slist {
-    .story { display: flex }
+    .story {
+      display: flex;
+      flex: 1;
+      margin-bottom: 30px;
+      min-height: 200px;
+    }
     .story-title { font-size: 24px }
 
     .story-image {
-      flex: 0 0 50%;
-      height: 250px;
+      flex: 0 0 45%;
+      height: auto;
       margin-right: 20px;
       // border-radius: 5px
     }
@@ -171,9 +173,11 @@
 @media #{$lg-and-up} {
   // large story - home page
   .ss1 {
-    display: flex;
+    // display: flex;
 
     .story {
+      display: flex;
+
       &-title { font-size: 2.25rem }
 
       &-image {
@@ -185,6 +189,7 @@
       &-body {
         padding: 0 0 0 2rem;
         flex-basis: 34.33333%;
+        justify-content: center;
       }
     }
   }
@@ -193,7 +198,12 @@
   .ss2 {
     .story {
       &-image { height: 270px }
-      &-title { font-size: 1.75rem }
+      &-title { font-size: 28px }
     }
   }
+
+  // Story Cover
+  .ss3 .story-cover-body { right: 30% }
+  .ss3 + .ss4 { padding-left: 0 }
+  .ss4 + .ss4 { padding-right: 0 }
 }

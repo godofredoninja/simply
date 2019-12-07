@@ -2,19 +2,14 @@
 // -----------------------------------------------------------------------------
 .author {
   &-avatar {
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
   }
 
-  &-meta span {
-    display: inline-block;
+  &-meta .button {
+    color: rgba(255, 255, 255, 0.7);
     font-size: 18px;
-    margin: 10px;
-    word-wrap: break-word;
-  }
-}
 
-@media #{$md-and-down} {
-  .author-meta span { display: block; }
-  .author-avatar { margin-top: 20px; }
+    &:hover { color: #fff; }
+  }
 }
