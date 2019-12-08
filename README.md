@@ -2,6 +2,7 @@
 
 [![Ghost version](https://img.shields.io/badge/Ghost-3.x-brightgreen.svg)](https://github.com/TryGhost/Ghost)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/godofredoninja)
+[![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-%23FF813F)](https://www.buymeacoffee.com/GodoFredoNinja)
 
 > *Simple and Elegant Theme.*
 
@@ -20,7 +21,7 @@ It is available for free so you can use on your site. If you have any suggestion
 
 You can see Simply in action on my Page [Demo](https://godofredo.ninja)
 
-If for some reason I'm using a theme other than simply. then you can see the screenshots in [behance](https://www.behance.net/gallery/89129849/Simply-Home-Page-free-theme-for-Ghost)
+If for some reason I'm using a theme other than simply. then you can see the screenshots in [behance](http://bit.ly/simply-from-github-to-behance)
 
 ## Featured
 
