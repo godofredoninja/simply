@@ -1,0 +1,28 @@
+<article class="godo-f-story u-relative u-overflowHidden">
+    {{!-- Featured Image --}}
+    {{#if feature_image}}
+        <img class="u-absolute0 u-image"
+            {{!-- srcset="{{img_url feature_image size="xxs"}}" --}}
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 800px) 400px, (max-width: 1170px) 700px, 1400px"
+            src="{{img_url feature_image size="m"}}"
+            alt="{{title}}"
+        />
+        <div class="u-primaryGradient u-absolute0 zindex2"></div>
+    {{/if}}
+
+    <div class="container u-relative zindex3">
+        <div class="row">
+            <div class="col s12 m10 l8">
+                <p class="text-success u-marginBottom15 u-fontSizeSmaller u-fontWeightMedium u-textUppercase">{{t "featured story"}}</p>
+                <h1 class="u-underline u-relative u-fontSizeLargest u-lineHeightTight u-fontWeightMedium u-md-fontSize36"><a href="{{url}}" class="u-textColorWhite">{{title}}</a></h1>
+                <p class="godo-f-story-excerpt u-marginBottom20 u-textColorWhite u-fontSize20 u-fontWeightThin u-lineClamp2">{{excerpt words="30"}}</p>
+                {{> "helper/helper-datetime" class="godo-f-story-date u-marginBottom15 u-fontSizeSmall"}}
+                <a href="{{url}}" class="button button--success">{{t "Read post"}}</a>
+            </div>
+        </div>
+    </div>
+</article>

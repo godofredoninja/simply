@@ -1,12 +1,14 @@
 {{#if post.tags}}
 {{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |post_related|}}
 
-{{!-- Ad - partials/ad/ad-article-medium.hbs --}}
-{{> "ad/ad-article-medium"}}
-
-<div class="post-related u-bgWhite u-paddingTop30 u-paddingBottom20">
+<div class="post-related u-bgColorGrayLight">
     <div class="u-container u-maxWidth1200">
         <div class="row">
+
+            <div class="col s12 u-marginBottom40 u-textAlignCenter">
+                <h3 class="u-contentTitle u-fontSizeLarger">{{{t "Related <span class='text-success'>Articles</span>"}}}</h3>
+            </div>
+
             {{#foreach post_related}}
             <div class="col s12 m6 l4 u-flex">
                 {{!-- Meta - partials/story/story-card-small.hbs --}}

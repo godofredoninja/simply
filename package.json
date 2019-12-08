@@ -2,17 +2,17 @@
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "engines": {
-    "ghost": ">=2.0.0",
-    "ghost-api": "v2"
+    "ghost": ">=3.0.0",
+    "ghost-api": "v3"
   },
   "license": "GPLv3",
   "screenshots": {
     "desktop": "screenshot.jpg"
   },
   "author": {
-    "name": "GodoFredoNinja",
+    "name": "GodoFredo",
     "email": "hello@godofredo.ninja",
     "url": "https://godofredo.ninja"
   },
@@ -39,7 +39,7 @@
     "email": "hello@godofredo.ninja"
   },
   "config": {
-    "posts_per_page": 12,
+    "posts_per_page": 18,
     "image_sizes": {
       "xxs": {
         "width": 30

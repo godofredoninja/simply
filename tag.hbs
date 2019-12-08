@@ -6,16 +6,13 @@
 {{!-- custom Styles For tag <body> --}}
 {{#contentFor "special_body_class"}}is-tag{{/contentFor}}
 
-<section class="tag u-paddingTop30">
-    <div class="cover-wrap u-maxWidth1040 u-container u-sizeFullWidth u-textAlignCenter u-marginBottom40">
-        <h1 class="cover-title u-contentTitle u-md-fontSizeLarger u-fontSizeLargest">{{name}}</h1>
-        {{#if description}}<p class="cover-des u-fontSizeLarge u-fontWeightThin u-marginTop20 u-marginAuto">{{description}}</p>{{/if}}
+<section class="tag site-archive">
+    <div class="container u-textAlignCenter">
+        <h1 class="site-archive-title u-textCapitalize u-fontSizeJumbo u-md-fontSize36 u-underline u-fontWeightMedium">{{name}}</h1>
+        {{#if description}}<p class="site-archive-des u-fontSize20">{{description}}</p>{{/if}}
     </div>
 </section>
 {{/tag}}
-
-{{!-- ad --}}
-{{> "ad/ad-tag-top"}}
 
 {{!-- The tag below includes the post loop - partials/loop.hbs --}}
 {{>"loop"}}

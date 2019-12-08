@@ -1,0 +1,35 @@
+<article class="story-cover u-relative">
+    <figure class="story-cover-image u-relative u-bgDark u-block u-overflowHidden">
+        <a href="{{url}}" class="u-block u-sizeFullHeight">
+            {{!-- Imagenes --}}
+            {{#if feature_image}}
+                <img class="story-img u-absolute u-image u-block blur-up lazyload"
+                    src="{{img_url feature_image size="m"}}"
+                    srcset="{{img_url feature_image size="xxs"}}"
+                    data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+                    data-sizes="(max-width: 1000px) 400px, 600px"
+                    alt="{{title}}"
+                />
+
+                {{!--bg Gradient --}}
+                <div class="bg-darkOpacity u-absolute0 zindex2"></div>
+            {{/if}}
+        </a>
+
+        {{!-- Category --}}
+        {{#if primary_tag}}{{#primary_tag}}
+            <span class="story-category zindex4"><a href="{{url}}" title="{{t "Go to"}} {{name}}" class="button button--primary button--xs">{{name}}</a></span>
+        {{/primary_tag}}{{/if}}
+    </figure>
+
+    <div class="story-cover-body u-absolute zindex3">
+        {{!-- Helper Date Time and Reading --}}
+        {{!-- {{> "helper/helper-datetime" class="story-date u-marginBottom10 u-fontSize15 u-lineHeight1"}} --}}
+
+        {{!-- Title --}}
+        <h2 class="story-title u-fontSizeLarger u-fontWeightMedium u-textColorWhite"><a href="{{url}}" class="u-block">{{title}}</a></h2>
+
+        {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+        {{> "helper/helper-author-meta"}}
+    </div>
+</article>

@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<!--
+    Design by:
+    ——————————
+        GODO FREDO
+        ✉ https://godofredo.ninja
+        ✎ @GodoFredoNinja
+        ✈ Lima - Perú
+-->
+<html lang="{{@site.lang}}" data-theme="light">
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -12,8 +20,10 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{!--  Font -> PT Serif && Source sans Pro --}}
-    <link href="https://fonts.googleapis.com/css?family={{#is "post, page"}}PT+Serif:400,400i,700,700i|{{/is}}Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet">
+    {{!--  Font -> Rubix=400,600,700 Domine=400 --}}
+    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
+    {{!-- <link href="https://fonts.googleapis.com/css?family=Domine|Rubik:400,500,700&display=swap" rel="stylesheet"> --}}
 
     {{!-- Styles'n'Scripts --}}
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
@@ -21,27 +31,59 @@
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
+
+    <script>
+        if (typeof(Storage) !== 'undefined') {
+            if (localStorage.getItem('selected-theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
 </head>
 <body class="{{block "special_body_class"}}">
-    {{!-- Icons --}}
-    {{> "icons/icons-symbol-defs"}}
+    <div class="site-wrapper u-flexColumnTop">
+        {{!-- Header Content --}}
+        {{> "header"}}
 
-    {{!-- Header Content --}}
-    {{> "header"}}
-    {{!-- {{>"header-home-image"}} --}}
+        {{!-- Subscribe and tag -> this will be below the header --}}
+        {{#is "index, home, tag"}}{{> "widget/subscribe-and-secondary-menu"}}{{/is}}
 
-    {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-    <main class="main u-relative">{{{body}}}</main>
+        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+        <main class="main u-relative {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
-    {{!-- Footer Content --}}
-    {{>"footer"}}
-    {{!-- {{>"footer-two"}} --}}
+        {{!-- Instagram --}}
+        {{#is "post"}}<div class="instagram js-instagram u-hide u-relative u-bgColorGrayLight"></div>{{/is}}
+
+        {{!-- Footer Content --}}
+        {{>"footer"}}
+    </div>
 
     {{!-- Search box --}}
     {{> "widget/search"}}
 
-    {{!-- Ghost outputs important scripts and data with this tag --}}
-    {{ghost_foot}}
+    {{!-- Subscribe Modal --}}
+    {{> "widget/modal-subscribe"}}
+
+    {{!-- Loandig Bar --}}
+    <div class="loadingBar"></div>
+
+    {{!-- Back to top --}}
+    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
+        {{> "icons/back-to-top"}}
+        <p class="back-to-top-text u-fontSizeBase u-fontWeightMedium">{{t "GO TOP"}}</p>
+    </div>
+
+    {{!-- notification Subscribe --}}
+    {{#if @labs.members}}
+    <div class="subscribe-success-message u-flexCenter u-justify-content-center">
+        <span class="u-fontSize22" style="margin-right:10px">🎉</span> {{t "You've successfully subscribed to"}} {{@site.title}}!
+        <div class="notification-close button button--success">OK</div>
+    </div>
+
+    {{!-- Icons --}}
+    {{> "icons/icons-symbol-defs"}}
 
     {{!-- Blog URL --}}
     <script>
@@ -51,22 +93,42 @@
         var sitePrismJscomponents = '/assets/scripts/components/';
     </script>
 
+    {{!-- Ghost outputs important scripts and data with this tag --}}
+    {{ghost_foot}}
+
     {{!-- Main scripts --}}
-    <script src="{{asset "scripts/main.js"}}" defer async></script>
+    <script src="{{asset "scripts/main.js"}}"></script>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+
+        function ready() {
+            if (action == 'subscribe') { document.body.classList.add('subscribe-success'); }
+
+            document.querySelector('.notification-close').addEventListener('click', function() {
+                this.parentNode.classList.add('close');
+            });
+        }
+        window.addEventListener('load', ready, false);
+    </script>
+    {{/if}}
 
     {{!-- Paginastion --}}
     {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}
 
     {{!-- script --}}
     {{{block "scripts"}}}
-
-    {{!-- Loandig Bar --}}
-    <div class="loadingBar"></div>
-
-    {{!-- Back to top --}}
-    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
-        {{> "icons/arrow-top"}}
-        <p class="back-to-top-text u-fontSizeBase u-fontWeightSemibold">{{t "GO TOP"}}</p>
-    </div>
 </body>
 </html>

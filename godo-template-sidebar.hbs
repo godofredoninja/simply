@@ -1,19 +1,14 @@
 {{!< default}}
 
-<div class="u-container">
-    <div class="u-maxWidth1100 u-marginAuto row u-paddingTop30">
+<div class="container u-paddingTop30">
+    <div class="row">
         <div class="col s12 col-left">
             <div class="feed-entry-content">
                 <div class="feed-entry-wrap slist">
-
                     {{#foreach posts}}
-                       <article class="story u-relative">{{>"story/story-grid"}}</article>
-
-                        {{!-- ad --}}
-                        {{#has number="5"}}{{> "ad/ad-loop-medium"}}{{/has}}
-                        {{#has number="10"}}{{> "ad/ad-loop-footer"}}{{/has}}
+                        {{!-- Story - partials/story/story-grid.hbs --}}
+                        {{>"story/story-grid"}}
                     {{/foreach}}
-
                 </div>
             </div>
         </div>

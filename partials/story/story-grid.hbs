@@ -1,19 +1,37 @@
-<a href="{{url}}"  class="story-image u-relative u-borderLighter u-bgColorGrayLight u-block u-overflowHidden">
-    {{!-- Imagenes --}}
-    {{#if feature_image}}
-        <img class="story-img u-absolute u-image u-block blur-up lazyload"
-            src="{{img_url feature_image size="l"}}"
-            srcset="{{img_url feature_image size="xxs"}}"
-            data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
-            data-sizes="(max-width: 1000px) 400px, 600px"
-            alt="{{title}}"
-        />
-    {{/if}}
-</a>
-<div class="story-body u-paddingTop15">
-    <a href="{{url}}"><h2 class="story-title u-contentTitle u-fontSize22 u-lineHeight1">{{title}}</h2></a>
-    <a href="{{url}}"><p class="story-excerpt u-fontSizeBase u-marginBottom20 u-textColorNormal">{{excerpt words="30"}}</p></a>
+<article class="story u-relative">
+    <figure class="story-image u-relative u-borderLighter u-bgColorGrayLight u-block u-overflowHidden">
+        <a href="{{url}}" class="u-block">
+            {{!-- Imagenes --}}
+            {{#if feature_image}}
+                <img class="story-img u-absolute u-image u-block blur-up lazyload"
+                    src="{{img_url feature_image size="l"}}"
+                    srcset="{{img_url feature_image size="xxs"}}"
+                    data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+                    data-sizes="(max-width: 1000px) 400px, 600px"
+                    alt="{{title}}"
+                />
+            {{/if}}
+        </a>
 
-    {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
-    {{> "helper/helper-author-meta"}}
-</div>
+        {{!-- Category --}}
+        {{#if primary_tag}}{{#primary_tag}}
+            <span class="story-category"><a href="{{url}}" title="{{t "Go to"}} {{name}}" class="button button--primary button--xs">{{name}}</a></span>
+        {{/primary_tag}}{{/if}}
+    </figure>
+
+    <div class="story-body u-paddingTop20 u-flexColumnTop">
+        {{!-- Helper Date Time and Reading --}}
+        {{!-- {{> "helper/helper-datetime" class="story-date u-marginBottom10 u-fontSize15 u-lineHeight1 u-textMuted"}} --}}
+
+        <h2 class="story-title u-fontSizeLarge u-contentTitle"><a href="{{url}}" class="u-block">{{title}}</a></h2>
+        <p class="story-excerpt u-fontSizeBase u-marginBottom20">
+            <a href="{{url}}" class="u-block">{{excerpt words="30"}}</a>
+        </p>
+
+        {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
+        {{> "helper/helper-author-meta"}}
+
+        {{!-- Read more --}}
+        {{!-- <a href="{{url}}" class="link-more u-fontSize15 u-fontWeightMedium">{{t "Read more"}}</a> --}}
+    </div>
+</article>

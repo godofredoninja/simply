@@ -1,13 +1,5 @@
-{{!-- Navigation template --}}
-{{#foreach navigation}}
-    <li {{^is "amp"}} class="godo-tracking"
-        data-event-category="Header"
-        data-event-action="Menu"
-        data-event-label="{{label}}"
-        data-event-non-interaction="true"
-        itemprop="name"
-        role="menuitem"{{/is}}>
-        <a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}" {{^is "amp"}}itemprop="url"{{/is}}>{{label}}</a>
-    </li>
-{{/foreach}}
-
+<ul class="nav" role="menu">
+    {{#foreach navigation}}
+    <li role="menuitem"><a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>

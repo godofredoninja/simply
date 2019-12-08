@@ -1,0 +1,42 @@
+{{!-- Email subscribe form at the Top of the page --}}
+{{#if @labs.members}}
+
+<div class="subscribeBanner">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m8 u-flexCenter u-md-block">
+                <div class="subscribeBanner-title u-fontWeightMedium u-relative u-fontSize28 u-paddingRight20">{{t "Newsletter"}}</div>
+                <div>{{t "Stay up to date! Get all the latest & greatest posts delivered straight to your inbox"}}</div>
+            </div>
+            <div class="col s12 m4 u-textAlignRight">
+                <div class="button button--large button--outline-success u-md-block js-m-subscribe-toggle">
+                    {{t "Subscribe"}}
+                    <svg class="icon icon--md"><use xlink:href="#icon-arrow"></use></svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{/if}}
+
+{{!-- secondary Navigation or category --}}
+<div class="secondaryMenu u-paddingTop20 u-paddingBottom20">
+    <nav class="container">
+    {{#if @site.secondary_navigation}}
+        {{navigation type="secondary"}}
+    {{else}}
+        {{!-- Tags Cloud Menu or category --}}
+        {{#get "tags" limit="6" include="count.posts" order="count.posts desc" as |category_nav|}}
+        {{#if category_nav}}
+            <ul class="nav">
+                <li>{{#link href="/" activeClass="nav-current"}}{{t "All"}}{{/link}}</li>
+                {{#foreach category_nav}}
+                <li>{{#link href=(url) activeClass="nav-current"}}{{name}}{{/link}}</li>
+                {{/foreach}}
+            </ul>
+        {{/if}}
+        {{/get}}
+    {{/if}}
+    </nav>
+</div>

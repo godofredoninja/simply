@@ -1,29 +1,36 @@
 <!DOCTYPE html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.lang}}" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>{{t "Page not found"}}</title>
 
     {{!--  Font Source sans Pro && roboto mono --}}
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono|Rubik:400,500,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
-</head>
-<body class="u-bgWhite">
-    {{!-- Icons --}}
-    {{> "icons/icons-symbol-defs"}}
 
+    <script>
+        if (typeof(Storage) !== 'undefined') {
+            if (localStorage.getItem('selected-theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        }
+    </script>
+</head>
+<body class="u-bgColorGrayLight">
     {{!-- Header Content --}}
     {{>"header"}}
 
     <main class="u-paddingBottom30 u-paddingTop30">
         {{!-- Content Emojis --}}
         <section class="errorPage u-lineHeight1">
-            <div class="errorPage-wrap u-marginAuto u-maxWidth1000 u-textAlignCenter">
+            <div class="errorPage-wrap u-marginAuto u-maxWidth1000 u-textAlignCenter u-textMuted">
                 <div id="emoji" class="errorPage-emoji" style="font-size:100px">(>_<)</div>
                 <div class="errorPage-text">{{t "Unfortunately, this page doesn't exist"}}</div>
             </div>
@@ -32,11 +39,11 @@
         {{!-- Articles style Card --}}
         {{#get "posts" limit="6" as |recents| }}
 
-        <div class="u-bgWhite u-paddingTop30 u-paddingBottom20">
-            <div class="u-container u-maxWidth1040">
+        <div class="u-paddingTop30 u-paddingBottom20">
+            <div class="container">
                 <div class="row">
                     {{#foreach recents}}
-                    <div class="col s12 m6 l4 u-flex">
+                    <div class="col s12 m6 l4">
                         {{!-- Meta - partials/story/story-card-small.hbs --}}
                         {{> "story/story-card-small"}}
                     </div>
@@ -51,8 +58,14 @@
     {{!-- Search box --}}
     {{>"widget/search"}}
 
+    {{!-- Subscribe Modal --}}
+    {{> "widget/modal-subscribe"}}
+
+    {{!-- Icons --}}
+    {{> "icons/icons-symbol-defs"}}
+
     <script>
-        var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(≥o≤)', '(˚Δ˚)', '(·_·)', '(;-;)']
+        var emoji = ['(·.·)', '(>_<)', '(^-^*)', '(˚Δ˚)', '(·_·)', '(;-;)']
         var emojiRandom = emoji[Math.floor(Math.random()*emoji.length)];
         document.getElementById('emoji').innerHTML = emojiRandom;
     </script>
@@ -62,12 +75,6 @@
 
     {{!-- Footer Content --}}
     {{>"footer"}}
-
-    {{!-- Back to top --}}
-    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
-        {{> "icons/arrow-top"}}
-        <p class="back-to-top-text u-fontSizeBase u-fontWeightSemibold">{{t "INDEX"}}</p>
-    </div>
 
     {{!-- Blog URL --}}
     <script>

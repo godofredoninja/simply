@@ -1,0 +1,40 @@
+<div class="share-sticky u-textAlignRight is-visible">
+    <div class="share-sticky-wrap buttonSet u-container u-maxWidth1200">
+        <span class="u-textMuted u-fontSize15 u-paddingRight10 u-hide-before-md">{{t "Share this article"}}:</span>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Facebook"
+            class="godo-tracking button button--s bg-facebook u-textColorWhite js-share"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Facebook - Sticky Footer"
+            data-event-non-interaction="true">
+            <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+            {{t "Share"}}
+        </a>
+        <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="{{t "Share on"}} Twitter"
+            class="godo-tracking button button--s bg-twitter u-textColorWhite js-share"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Twitter - Sticky Footer"
+            data-event-non-interaction="true">
+            <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+            Tweet
+        </a>
+        <a href="whatsapp://send?text={{url absolute="true"}}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="godo-tracking button button--s u-textColorWhite bg-whatsapp u-hide-after-lg"
+            data-event-category="Article"
+            data-event-action="Share"
+            data-event-label="Whatsapp - Sticky Footer"
+            data-event-non-interaction="true">
+            <svg class="icon"><use xlink:href="#icon-whatsapp"></use></svg>
+            {{t "Send"}}
+        </a>
+    </div>
+</div>
