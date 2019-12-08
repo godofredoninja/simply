@@ -21,11 +21,38 @@
 
 {{/post}}
 
-{{!-- Im Noob For JavaScrip :( Help me please --}}
 {{#contentFor "scripts"}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
 <script>
-    document.getElementById('godo-form').addEventListener('submit', function () {
-        document.getElementById('fieldEmail').value = '';
-    }, false);
+$(document).ready(function() {
+    var $form = $('#godo-form');
+
+    $form.submit(function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            type: $form.attr('method'),
+            url: $form.attr('action').replace('/post?', '/post-json?').concat('&c=?'),
+            data: $form.serialize(),
+            cache: false,
+            dataType: 'jsonp',
+            contentType: 'application/json; charset=utf-8',
+
+            success: function(data) {
+                if (data.result === 'success') {
+                    $('.godo-ne-input').removeClass('error');
+                    $('.godo-ne-success').removeClass('u-hide');
+                    $form.addClass('u-hide');
+                    $('.godo-ne-input').val('');
+                } else {
+                    $('.godo-ne-input').addClass('error');
+                }
+            }
+        });
+
+        return false;
+    });
+});
 </script>
 {{/contentFor}}
