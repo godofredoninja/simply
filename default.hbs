@@ -34,9 +34,10 @@
 
     <script>
         if (typeof(Storage) !== 'undefined') {
-            if (localStorage.getItem('selected-theme') === 'dark') {
+            var selectTheme = localStorage.getItem('selected-theme');
+            if (selectTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark')
-            } else {
+            } else if (selectTheme === 'light') {
                 document.documentElement.setAttribute('data-theme', 'light');
             }
         }
