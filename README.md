@@ -585,6 +585,7 @@ routes:
 - `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
 - `ru` —  Russian - By [Partizan007](https://github.com/partizan007)
 - `vi`— Vietnamese - By [ping](https://github.com/everping)
+- `fr`— French - By [ping](https://github.com/StanGirard)
 
 ![simply theme ghost Language](./documentation/language.jpg)
 
