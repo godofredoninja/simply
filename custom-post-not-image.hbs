@@ -21,12 +21,22 @@
 
         <hr>
         <div class="prev-next">
-            {{#next_post in="primary_tag"}}
-                    {{> "story/story-previous-next" storyTitle=(t "Next article") class="u-marginBottom30"}}
-            {{/next_post}}
-            {{#prev_post in="primary_tag"}}
-                    {{> "story/story-previous-next" storyTitle=(t "Previous article") class=""}}
-            {{/prev_post}}
+            {{#has tag="#series"}}
+                {{#next_post in="primary_tag"}}
+                        {{> "story/story-previous-next" storyTitle=(t "Next article") class="u-marginBottom30"}}
+                {{/next_post}}
+                {{#prev_post in="primary_tag"}}
+                        {{> "story/story-previous-next" storyTitle=(t "Previous article") class=""}}
+                {{/prev_post}}
+            {{else}}
+                {{#next_post}}
+                        {{> "story/story-previous-next" storyTitle=(t "Next article") class="u-marginBottom30"}}
+                {{/next_post}}
+                {{#prev_post}}
+                        {{> "story/story-previous-next" storyTitle=(t "Previous article") class=""}}
+                {{/prev_post}}
+            {{/has}}
+
         </div>
         <hr>
     </footer>
