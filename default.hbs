@@ -49,7 +49,11 @@
         {{> "header"}}
 
         {{!-- Subscribe and tag -> this will be below the header --}}
-        {{#is "index, home, tag"}}{{> "widget/subscribe-and-secondary-menu"}}{{/is}}
+        {{#if @labs.members}}
+            {{#is "index, home, tag"}}
+                {{> "widget/subscribe-and-secondary-menu"}}
+            {{/is}}
+        {{/if}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="main u-relative {{{block "special_site_main_class"}}}">{{{body}}}</main>
