@@ -581,7 +581,7 @@ routes:
 - `en` — English default language
 - `es` — Español
 - `de` — German - By [dkbast](https://github.com/dkbast)
-- `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz)
+- `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz) - [@tolgaaaltas](https://github.com/tolgaaaltas)
 - `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
 - `ru` —  Russian - By [Partizan007](https://github.com/partizan007)
 - `vi`— Vietnamese - By [ping](https://github.com/everping)
