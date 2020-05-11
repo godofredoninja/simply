@@ -25,7 +25,7 @@ If for some reason I'm using a theme other than simply. then you can see the scr
 
 ## Featured
 
-- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) (en - es - de - tr - fr-CA - ru - vi)
+- Support for different [languages](http://themes.ghost.org/docs/i18n#section-how-to-add-any-language) :us: :es: :de:  :tr:  :fr:  :ru:  :vietnam: :it: 
 - Light Mode / Dark Mode
 - [AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost) Template
 - Very fast search engine
@@ -586,6 +586,7 @@ routes:
 - `ru` —  Russian - By [Partizan007](https://github.com/partizan007)
 - `vi`— Vietnamese - By [ping](https://github.com/everping)
 - `fr`— French - By [ping](https://github.com/StanGirard)
+- `it`— Italian - By [Marco Sanson](https://github.com/marcosanson)
 
 ![simply theme ghost Language](./documentation/language.jpg)
 
