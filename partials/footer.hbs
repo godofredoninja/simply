@@ -19,11 +19,12 @@
                 <div class="footer-items footer-tags u-flex--1">
                     <h3 class="footer-items-title u-underline u-fontSize22">{{t "Tags"}}</h3>
                     <div class="buttonSet">
-                    {{#get "tags" limit="10" order="desc"}}
+                        {{#get "tags" limit="10" order="desc"}}
                         {{#foreach tags}}
-                            <a href="{{url absolute="true"}}" title="{{name}}" class="u-textCapitalize button button--outline-success">{{name}}</a>
+                        <a href="{{url absolute="true"}}" title="{{name}}"
+                            class="u-textCapitalize button button--outline-success">{{name}}</a>
                         {{/foreach}}
-                    {{/get}}
+                        {{/get}}
                     </div>
                 </div>
             </div>
@@ -37,31 +38,42 @@
 
                     {{!-- Form --}}
                     <form class="f-form" data-members-form="subscribe">
-                        <input
-                            class="f-form-input u-block subscribe-email u-marginBottom15"
-                            data-members-email
-                            placeholder="{{t "youremail@example.com"}}"
-                            aria-label="{{t "youremail@example.com"}}"
-                            aria-describedby="f-form-subscribe-btn"
-                            autocomplete="off"
-                            required
-                        />
+                        <input class="f-form-input u-block subscribe-email u-marginBottom15" data-members-email
+                            placeholder="{{t "youremail@example.com"}}" aria-label="{{t "youremail@example.com"}}"
+                            aria-describedby="f-form-subscribe-btn" autocomplete="off" required />
 
                         <button id="f-form-subscribe-btn" class="button button--success u-sizeFullWidth" type="submit">
                             <span class="button-text u-fontSizeBase">{{t "Subscribe"}}</span>
                             {{> "icons/loader"}}
                         </button>
-                        <div class="message-success u-paddingTop15 u-hide">{{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}</div>
-                        <div class="message-error u-paddingTop15 u-hide">{{t "Please enter a valid email address!"}}</div>
+                        <div class="message-success u-paddingTop15 u-hide">
+                            {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
+                        </div>
+                        <div class="message-error u-paddingTop15 u-hide">{{t "Please enter a valid email address!"}}
+                        </div>
                     </form>
                 </div>
             </div>
             {{/if}}
 
+
+            {{!-- Footer Menu --}}
+            {{#if @site.secondary_navigation}}
+            <div class="col s12 u-textAlignCenter">
+                <nav class="footer-menu u-marginBottom30 ">
+                    {{navigation type="secondary"}}
+                </nav>
+            </div>
+            {{/if}}
+
+
+
             {{!-- Copy --}}
             <div class="col s12 u-paddingTop20 u-textAlignCenter u-fontSizeSmaller">
                 &copy; {{date format="YYYY"}} {{@site.title}}.
-                Design with <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+                Design with <svg class="icon animated infinite pulse" style="color:red;width:15px">
+                    <use xlink:href="#icon-heart"></use>
+                </svg> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
             </div>
         </div>
     </section>
