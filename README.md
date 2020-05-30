@@ -587,6 +587,7 @@ routes:
 - `vi`— Vietnamese - By [ping](https://github.com/everping)
 - `fr`— French - By [ping](https://github.com/StanGirard)
 - `it`— Italian - By [Marco Sanson](https://github.com/marcosanson)
+- `id`— Indonesian - By [Adryan Eka Vandra](https://github.com/adryanev)
 
 ![simply theme ghost Language](./documentation/language.jpg)
 
