@@ -1,0 +1,51 @@
+{
+  "name": "dev",
+  "description": "package.json for dev",
+  "version": "0.0.1",
+  "licence": "MIT",
+  "browserslist": [
+    "defaults"
+  ],
+  "cssnano": {
+    "preset": "advanced"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "prod": "gulp production --production",
+    "dev": "gulp development",
+    "lint:js": "standard js/**/*.js gulpfile.js",
+    "test": "yarn lint && gscan .",
+    "scan": "gscan ../"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babelify": "^10.0.0",
+    "beeper": "^2.0.0",
+    "browserify": "^16.5.1",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "del": "^5.1.0",
+    "gscan": "^3.5.4",
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-if": "^3.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.0.1",
+    "merge-stream": "^2.0.0",
+    "postcss-discard-comments": "^4.0.2",
+    "pump": "^3.0.0",
+    "standard": "^14.3.4",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {}
+}

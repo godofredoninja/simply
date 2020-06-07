@@ -2,7 +2,7 @@
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
@@ -60,65 +60,5 @@
         "width": 2000
       }
     }
-  },
-  "browserslist": [
-    "defaults"
-  ],
-  "scripts": {
-    "lint:js": "standard src/js/**/*.js gulpfile.js",
-    "lint:scss": "stylelint \"src/scss/**/*.{css,sass,scss,sss,less}\"",
-    "lint": "yarn lint:js && yarn lint:scss",
-    "test": "yarn lint && gscan .",
-    "scan": "gscan .",
-    "build": "gulp build",
-    "release": "gulp release --production",
-    "dev": "gulp develop"
-  },
-  "cssnano": {
-    "preset": "advanced"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/plugin-transform-runtime": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "@babel/runtime": "^7.6.0",
-    "autoprefixer": "^9.6.1",
-    "babelify": "^10.0.0",
-    "browserify": "^16.5.0",
-    "css-mqpacker": "^7.0.0",
-    "cssnano": "^4.1.10",
-    "cssnano-preset-advanced": "^4.0.7",
-    "del": "^5.1.0",
-    "gscan": "^3.1.1",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-header": "^2.0.9",
-    "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^6.1.0",
-    "gulp-livereload": "^4.0.1",
-    "gulp-load-plugins": "^2.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-rename": "^1.4.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-strip-css-comments": "^2.0.0",
-    "gulp-uglify": "^3.0.2",
-    "gulp-zip": "^5.0.0",
-    "merge-stream": "^2.0.0",
-    "postcss-pxtorem": "^4.0.1",
-    "standard": "^14.1.0",
-    "stylelint": "^12.0.0",
-    "stylelint-config-standard": "^19.0.0",
-    "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0"
-  },
-  "dependencies": {
-    "fuzzysort": "^1.1.4",
-    "lazysizes": "^5.2.0-beta1",
-    "medium-zoom": "^1.0.4",
-    "normalize.css": "^8.0.1",
-    "prismjs": "^1.17.1"
   }
 }
