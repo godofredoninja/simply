@@ -20,19 +20,18 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{!--  Font -> Rubix=400,600,700 Domine=400 --}}
-    <link href="https://fonts.googleapis.com/css?family=Domine&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500,700&display=swap" rel="stylesheet">
-    {{!-- <link href="https://fonts.googleapis.com/css?family=Domine|Rubik:400,500,700&display=swap" rel="stylesheet"> --}}
+    {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
-    {{!-- Styles'n'Scripts --}}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
-    <style>{{> "styles"}}</style>
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
+    {{!-- <style>{{> "styles"}}</style> --}}
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 
-    <script>
+    {{!-- <script>
         if (typeof(Storage) !== 'undefined') {
             var selectTheme = localStorage.getItem('selected-theme');
             if (selectTheme === 'dark') {
@@ -41,7 +40,7 @@
                 document.documentElement.setAttribute('data-theme', 'light');
             }
         }
-    </script>
+    </script> --}}
 </head>
 <body class="{{block "special_body_class"}}">
     <div class="site-wrapper u-flexColumnTop">

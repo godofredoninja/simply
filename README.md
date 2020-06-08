@@ -83,12 +83,12 @@ $ cd path/to/ghost && ghost restart --development
 
 - `yarn dev` — Compile assets when file changes are made, start [livereload](http://livereload.com/)
 - `yarn build` — Compile and optimize the files in your assets directory
-- `yarn release` — Compile assets for production and generate a `zip`
+- `yarn prod` — Compile assets for production and generate a `zip`
 
 #### Additional commands
 
 - `yarn lint:js` — [Standard](https://standardjs.com/), Check for errors in the script.
-- `yarn lint:scss` — [Stylelint](https://stylelint.io/), Check for errors in the styles.
+- `yarn lint:sass` — [Stylelint](https://stylelint.io/), Check for errors in the styles.
 - `yarn lint` — check error in script and styles.
 - `yarn scan` — [Ghost Scan](https://github.com/TryGhost/gscan) check for errors, deprecations and other compatibility issues.
 - `yarn test` — Check the script errors and styles then check the theme if it is compatible with the latest version of Ghost.
@@ -105,10 +105,11 @@ To continue with the configuration [Read](https://github.com/GodoFredoNinja/simp
 - [Prismjs](http://prismjs.com/)
 - [Medium Zoom](https://github.com/francoischalifour/medium-zoom)
 - [Lazysizes](https://github.com/aFarkas/lazysizes)
-- [Fonts](https://fonts.google.com/?query=domine&selection.family=Domine|Rubik)
+- [Inter font Family](https://github.com/rsms/inter/)
+- [PT Serif font Family](https://fonts.google.com/specimen/PT+Serif)
 - [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
 - [Safari Dark - Mockup](https://www.uplabs.com/posts/safari-dark-mode)
 
 ## Copyright & License
 
-Copyright (c) 2017-2019 GodoFredo - Released under the [GPLv3 license](LICENSE)
+Copyright (c) 2017-2020 GodoFredo - Released under the [GPLv3 license](LICENSE)
