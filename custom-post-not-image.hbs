@@ -7,7 +7,7 @@
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
 <article class="post u-marginBottom40 u-relative">
-    {{!-- Article Header - paertials/article/article-header.hbs --}}
+    {{!-- Article Header - partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
     <div class="post-wrap u-maxWidth1000 u-relative u-marginAuto">
@@ -22,11 +22,11 @@
         <hr>
         <div class="prev-next">
             {{#prev_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
+            {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
             {{/prev_post}}
 
             {{#next_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
+            {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
             {{/next_post}}
         </div>
         <hr>
@@ -39,9 +39,9 @@
 {{> "article/article-related"}}
 
 {{#post}}
-    {{!-- post Commets --}}
-    {{> "article/article-comments"}}
+{{!-- post Comments --}}
+{{> "article/article-comments"}}
 
-    {{!-- Share Article - Facebook Twitter Whatsapp --}}
-    {{> "article/article-share-sticky"}}
+{{!-- Share Article - Facebook Twitter Whatsapp --}}
+{{> "article/article-share-sticky"}}
 {{/post}}

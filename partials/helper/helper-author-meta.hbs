@@ -1,20 +1,20 @@
 <div class="hh u-flex u-flexCenter u-relative zindex4 u-flex1">
     <ul class="hh-author u-flex u-flexWrap u-flex0">
         {{#foreach authors}}
-        <li class="hh-author-item u-realtive">
-            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}" class="u-relative u-block avatar-image {{#is "post"}}img-md{{/is}}">
-                <img
-                    class="u-absolute u-image u-block u-round"
+        <li class="hh-author-item u-relative">
+            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}"
+                class="u-relative u-block avatar-image {{#is "post"}}img-md{{/is}}">
+                <img class="u-absolute u-image u-block u-round"
                     src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
-                    alt="{{t "Go to the profile of "}} {{name}}"
-                />
+                    alt="{{t "Go to the profile of "}} {{name}}" />
             </a>
         </li>
         {{/foreach}}
     </ul>
 
     <div class="hh-right u-flex1 u-overflowHidden">
-        <div class="hh-author-name u-fontSize15 u-noWrapWithEllipsis">{{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors}}{{/has}}</div>
+        <div class="hh-author-name u-fontSize15 u-noWrapWithEllipsis">
+            {{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors}}{{/has}}</div>
 
         {{> "helper/helper-datetime"}}
     </div>
