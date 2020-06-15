@@ -1,0 +1,65 @@
+
+.dropdown
+  position: relative
+
+  &.is-active,
+  &.is-hoverable:hover
+    .dropdown-menu
+      opacity: 1
+      pointer-events: auto
+      transform: scale(1) translateY(0)
+      transition: all .2s cubic-bezier(.4,.01,.165,.99)
+      visibility: visible
+
+.dropdown-menu
+  left: -1.5rem
+  min-width: 12rem
+  opacity: 0
+  padding-top: 4px
+  position: absolute
+  top: 100%
+  transform: scale(.9) translateY(-20px)
+  transition: all .3s cubic-bezier(.4,.01,.165,.99),opacity .2s cubic-bezier(.4,.01,.165,.99)
+  visibility: hidden
+  z-index: 20
+
+.dropdown-content
+  background-color: #fff
+  border-radius: 3px
+  box-shadow: 0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.35)
+  padding-bottom: .5rem
+  padding-top: .5rem
+  position: relative
+
+  &::after
+    content: ''
+    display: block
+    width: 14px
+    height: 14px
+    background: #fff
+    transform: rotate(45deg) translate(6px,6px)
+    box-shadow: -1px -1px 1px -1px rgba(0,0,0,.54)
+    position: absolute
+    bottom: 100%
+    // left: 50%
+    left: 2.5rem
+    // margin-left: -7px
+
+.dropdown-item
+  display: block
+  font-size: 1rem
+  line-height: 1.5
+  padding: 0.5rem 1.25rem
+  position: relative
+
+a.dropdown-item
+  white-space: nowrap
+  width: 100%
+  font-weight: 500
+
+.dropdown-divider
+  background-color: #ededed
+  border: none
+  display: block
+  height: 1px
+  margin: 0.625rem 0

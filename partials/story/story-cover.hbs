@@ -1,33 +1,46 @@
-<article class="story-cover u-relative">
-    <figure class="story-cover-image u-relative u-bgDark u-block u-overflowHidden">
-        <a href="{{url}}" class="u-block u-sizeFullHeight">
+<article class="story-cover relative overflow-hidden">
+    <figure class="story-cover-image relative u-bgDark block overflow-hidden">
+        <a href="{{url}}" class="block h-full">
             {{!-- Imagenes --}}
             {{#if feature_image}}
-                <img class="story-img u-absolute u-image u-block blur-up lazyload"
+                {{!-- <img class="story-img absolute u-image block blur-up lazyload"
                     src="{{img_url feature_image size="m"}}"
                     srcset="{{img_url feature_image size="xxs"}}"
                     data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
                     data-sizes="(max-width: 1000px) 400px, 600px"
                     alt="{{title}}"
+                /> --}}
+                <img class="story-img absolute u-image block blur-up lazyload"
+                    src="{{img_url feature_image size="m"}}"
+                    {{!-- srcset="{{img_url feature_image size="xxs"}}" --}}
+                    srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+                    sizes="(max-width: 1000px) 400px, 600px"
+                    alt="{{title}}"
                 />
 
                 {{!--bg Gradient --}}
-                <div class="bg-darkOpacity u-absolute0 zindex2"></div>
+                <div class="bg-black bg-opacity-40 inset-0 absolute inset-0 z-2"></div>
             {{/if}}
         </a>
 
         {{!-- Category --}}
         {{#if primary_tag}}{{#primary_tag}}
-            <span class="story-category zindex4"><a href="{{url}}" title="{{t "Go to"}} {{name}}" class="button button--primary button--xs">{{name}}</a></span>
+        <span class="absolute right-0 top-0 z-4">
+            <a href="{{url}}" title="{{t "Go to"}} {{name}}" class="button is-x-small is-dark-blue mt-3 mr-3">
+                {{name}}
+            </a>
+        </span>
         {{/primary_tag}}{{/if}}
     </figure>
 
-    <div class="story-cover-body u-absolute zindex3">
+    <div class="story-cover-body absolute left-0 right-0 bottom-0 z-3 m-6 lg:m-8">
         {{!-- Helper Date Time and Reading --}}
         {{!-- {{> "helper/helper-datetime" class="story-date u-marginBottom10 u-fontSize15 u-lineHeight1"}} --}}
 
         {{!-- Title --}}
-        <h2 class="story-title u-fontSizeLarger u-fontWeightMedium u-textColorWhite"><a href="{{url}}" class="u-block">{{title}}</a></h2>
+        <h2 class="story-title text-3xl font-bold text-white font-sans leading-tight lg:text-32">
+            <a href="{{url}}" class="block">{{title}}</a>
+        </h2>
 
         {{!-- Author - Primary Tag - Datetime - Read time - partials/helper/helper-by-line.hbs --}}
         {{> "helper/helper-author-meta"}}

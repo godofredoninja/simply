@@ -1,0 +1,49 @@
+.u-image
+  @extend %u-image
+.flexColumnTop
+  @extend %flex-column-top
+.noWrapWithEllipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// Avatar Image
+// -----------------------------------------------------------------------------
+.avatar
+  height: 2.25rem
+  width: 2.25rem
+  &.is-44x44
+    height: 2.75rem
+    width: 2.75rem
+  &.is-24x24
+    height: 1.5rem
+    width: 1.5rem
+
+// Line Clamp
+// -----------------------------------------------------------------------------
+
+.lineClamp-2
+  @extend %line-clamp
+
+  -webkit-line-clamp: 2
+  max-height: 2.7em
+
+// Hidden responsive
+// --------------------------------------------------
+
++tablet
+  .hide-before-md
+    display: none !important
+
++desktop
+  .hide-before-lg
+    display: none !important
+
+// hide after
++mobile-up
+  .hide-after-md
+    display: none !important
+
++desktop-up
+  .hide-after-lg
+    display: none !important

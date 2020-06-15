@@ -23,6 +23,7 @@ const merge = require('merge-stream')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const comments = require('postcss-discard-comments')
+const tailwindcss = require('tailwindcss')
 
 // sass
 const sass = require('gulp-sass')
@@ -80,7 +81,8 @@ function styles (done) {
     src('sass/*.sass'),
     gulpif(!isProduction, sourcemaps.init()),
     sass({ outputStyle: 'expanded' }).on('error', sass.logError),
-    gulpif(isProduction, postcss([autoprefixer(), cssnano(), comments({ removeAll: true })])),
+    gulpif(!isProduction, postcss([tailwindcss()])),
+    gulpif(isProduction, postcss([tailwindcss(), autoprefixer(), cssnano(), comments({ removeAll: true })])),
     gulpif(isProduction, header(BuildComments)),
     gulpif(!isProduction, sourcemaps.write('./map')),
     dest(`${pathBase}assets/styles`),
@@ -146,8 +148,8 @@ function zipper (done) {
   ], handleError(done))
 }
 
-const cssWatcher = () => watch('scss/**', styles)
-const jsWatcher = () => watch('js/**', scripts)
+const cssWatcher = () => watch('sass/**', styles)
+const jsWatcher = () => watch(['js/**', '*.js'], scripts)
 const imgWatcher = () => watch('img/**', images)
 const hbsWatcher = () => watch([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`], hbs)
 

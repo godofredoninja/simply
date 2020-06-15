@@ -1,0 +1,24 @@
+$icon-dimensions: 1.5rem
+$icon-dimensions-small: 1rem
+$icon-dimensions-medium: 1.25rem
+$icon-dimensions-large: 3rem
+
+.icon
+  // align-items: center
+  // display: inline-flex
+  // justify-content: center
+  display: inline-block;
+  width: $icon-dimensions;
+  height: $icon-dimensions;
+  vertical-align: middle;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+
+  &.is-small
+    width: $icon-dimensions-small
+    height: $icon-dimensions-small
+  &.is-medium
+    width: $icon-dimensions-medium
+    height: $icon-dimensions-medium
+

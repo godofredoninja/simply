@@ -1,24 +1,22 @@
-<header class="post-header u-container u-maxWidth740 u-paddingTop30 u-relative zindex3">
+<header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
     {{!-- Article Title --}}
-    <h1 class="post-title u-marginBottom20 u-fontSizeLargest u-md-fontSize36">{{title}}</h1>
+    <h1 class="post-title mb-6 text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
     {{!-- Article Excerpt  --}}
-    {{#if custom_excerpt}}<p class="post-excerpt u-marginBottom30 u-fontSize22 u-textMuted">{{custom_excerpt}}</p>{{/if}}
+    {{#if custom_excerpt}}<p class="post-excerpt mb-8 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
 
-    <hr>
-
-    <div class="u-flex post-share">
+    <div class="post-share flex">
         {{!-- Meta - partials/helper/helper-meta.hbs --}}
         {{> "helper/helper-author-meta"}}
 
         {{!-- Share --}}
-        <aside class="post-shasre u-flex0 u-flexCenter u-hide-before-md">
-            <span class="share-label u-textMuted u-fontSizeSmaller">{{t "Share"}}:</span>
+        <aside class="post-shasre flex items-center flex-none hide-before-md">
+            <span class="share-label text-gray-500 text-sm mr-2">{{t "Share"}}:</span>
             {{!-- Share on Twitter --}}
             <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="{{t "Share on"}} Twitter"
-                class="share-link button button--circle godo-tracking js-share">
+                class="godo-tracking js-share text-gray-900 mr-2">
                 <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
             </a>
             {{!-- Share on Linkeding --}}
@@ -26,7 +24,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="{{t "Share on"}} Linkedin"
-                class="share-link button button--circle godo-tracking js-share">
+                class="godo-tracking js-share text-gray-900 mr-2">
                 <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
             </a>
             {{!-- Share on Facebook --}}
@@ -34,7 +32,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="{{t "Share on"}} Facebook"
-                class="share-link button button--circle godo-tracking js-share">
+                class="godo-tracking js-share text-gray-900">
                 <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
             </a>
         </aside>

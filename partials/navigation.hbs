@@ -1,5 +1,90 @@
-<ul class="nav" role="menu">
-    {{#foreach navigation}}
-    <li role="menuitem"><a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}">{{label}}</a></li>
-    {{/foreach}}
-</ul>
+{{#if isSecondary}}
+
+<nav class="menu-secondary">
+    <ul itemscope role="menu">
+
+        {{#foreach navigation}}
+        <li role="menuitem">
+            <a href="{{url absolute="true"}}"
+                class="godo-tracking"
+                data-event-category="Header"
+                data-event-action="Menu Dropdown"
+                data-event-label="{{label}}"
+                data-event-non-interaction="true">
+                {{label}}
+            </a>
+        </li>
+        {{/foreach}}
+
+    </ul>
+</nav>
+
+{{else isSidenav}}
+
+<nav class="menu-secondary">
+    <ul class="nav">
+
+        {{#foreach navigation}}
+        <li role="menuitem">
+            <a href="{{url absolute="true"}}"
+                class="godo-tracking {{#if current}}active{{/if}}"
+                data-event-category="Header"
+                data-event-action="Menu Sidenav"
+                data-event-label="{{label}}"
+                data-event-non-interaction="true">
+                {{label}}
+            </a>
+        </li>
+        {{/foreach}}
+
+    </ul>
+</nav>
+
+{{else}}
+
+{{!-- Primary Menu --}}
+<nav class="mainMenu relative flex flex-auto items-center pr-5 hide-before-lg">
+    <ul itemscope
+        itemtype="http://www.schema.org/SiteNavigationElement"
+        role="menu"
+        class="nav flex whitespace-no-wrap">
+
+        {{#foreach navigation}}
+        <li itemprop="name" role="menuitem" class="{{#if @first}}ml-0{{else}}ml-5{{/if}}">
+            <a itemprop="url"
+                href="{{url absolute="true"}}"
+                class="mainMenu-link godo-tracking {{#if current}}active text-primary font-semibold{{else}}hover:text-primary font-medium{{/if}}"
+                data-event-category="Header"
+                data-event-action="Menu"
+                data-event-label="{{label}}"
+                data-event-non-interaction="true">
+                {{label}}
+            </a>
+        </li>
+        {{/foreach}}
+
+        {{!-- DropDown Menu  --}}
+        <li class="dropdown is-hoverable ml-5 {{^has any="@site.facebook, @site.twitter"}}hidden{{/has}}">
+            <a href="#" class="mainMenu-link dropdown-trigger hover:text-primary font-medium">
+                <span>{{t "More"}}</span>
+                <svg class="icon is-small transform rotate-90"><use xlink:href="#icon-arrow-forward"></use></svg>
+            </a>
+            <div class="dropdown-menu whitespace-normal" id="dropdown-menu" role="menu">
+                <div class="dropdown-content">
+                    <div class="js-dropdown-menu">
+                        <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a>
+                        <a href="#" class="dropdown-item hover:text-primary">Other dropdown item</a>
+                        <a href="#" class="dropdown-item is-active hover:text-primary">Active dropdown item</a>
+                        <a href="#" class="dropdown-item hover:text-primary">Other dropdown item</a>
+                    </div>
+                    {{#has any="@site.facebook, @site.twitter"}}
+                    <hr class="dropdown-divider">
+                    {{/has}}
+                    {{!-- Social Media - partials/widget/social-media.hbs --}}
+                    {{> "widget/social-media" class="social-media" classItems="dropdown-item block hover:text-gray-500"}}
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+{{/if}}

@@ -1,0 +1,105 @@
+// 2. post content body
+// -----------------------------------------------------------------------------
+.post-body
+  @extend %font-serif
+
+  display: flex
+  align-items: center
+  flex-direction: column
+  font-size: $font-size-post
+  // line-height: 1.6
+
+  & > *
+    margin-top: 1rem
+    margin-bottom: 1rem
+    min-width: 100%
+    &:first-child
+      margin-top: 2rem
+
+  a:not(.kg-bookmark-container):not(.button)
+    color: $post-color-link
+    text-decoration: none
+    word-break: break-word
+    transition: color, border-color .2s linear
+    border-bottom: 1px solid #f1f1f1
+    &:hover
+      border-bottom-color: $post-color-link
+
+  img:not(.kg-bookmark-icon)
+    display: block
+    margin-left: auto
+    margin-right: auto
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    margin-top: 2rem
+    font-style: normal
+    color: $primary-text-color-title
+    & + p
+      margin-top: 0
+
+  blockquote
+    margin: 2rem 0 2rem -1.5rem
+
+  ul,
+  ol
+    counter-reset: post
+    li
+      margin-bottom: 0.25rem
+      margin-left: 2rem
+      &::before
+        box-sizing: border-box
+        display: inline-block
+        margin-left: -22px
+        position: absolute
+        text-align: right
+
+  ul > li::before
+    content: "\2022"
+    opacity: .9
+    transform: scale(1.1)
+  ol > li::before
+    content: counter(post) "."
+    counter-increment: post
+    padding-right: 12px
+
+// Previous and Next post
+// -----------------------------------------------------------------------------
+
+.prev-next
+  min-height: 7.5rem
+
+// Media Query
+// -----------------------------------------------------------------------------
+
++tablet
+  .post-body
+    font-size: 1.125rem
+    & > *
+      margin-top: 1.75rem
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+      margin-top: 3rem
+
+    h2
+      font-size: 2rem
+    h3
+      font-size: 1.75rem
+    h4
+      font-size: 1.375rem
+
+    q
+      font-size: 1.375rem
+      letter-spacing: -.008em
+      line-height: 1.4
+    iframe
+      width: 100% !important
+

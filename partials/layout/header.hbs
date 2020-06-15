@@ -1,0 +1,59 @@
+<header class="header bg-header w-full text-sm flex items-center sticky top-0 z-20 px-4">
+    <div class="header-wrap max-w-extreme mx-auto flex items-center flex-auto">
+        {{!-- Logo --}}
+        <div class="header-left flex-auto mr-5 md:flex-none">
+            <a href="{{@site.url}}"
+                class="header-logo inline-block leading-none godo-tracking"
+                data-event-category="Header"
+                data-event-action="Logo"
+                data-event-label="Click"
+                data-event-non-interaction="true">
+                {{#if @site.logo}}
+                    <img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}"/>
+                {{else}}
+                    <span class="text-3xl font-semibold">{{@site.title}}</span>
+                {{/if}}
+            </a>
+        </div>
+
+        {{!-- Navigation --}}
+        <div class="header-center">
+            {{#if @site.navigation}}{{navigation}}{{/if}}
+        </div>
+
+        <div class="header-right flex-auto flex justify-end u-menu-color">
+
+            <div class="header-action flex items-center">
+                {{!-- Light and Dark Mode --}}
+                <a href="javascript:;" class="js-dark-mode hover:text-gray-500 mr-3" aria-label="Dark and Light Mode" >
+                    <svg class="icon icon--moon hidden"><use xlink:href="#icon-moon"></use></svg>
+                    <svg class="icon icon--sunny"><use xlink:href="#icon-sunny"></use></svg>
+                </a>
+
+                {{!-- Toggle Searcg --}}
+                <a href="javascript:;"
+                    aria-label="Toggle Search"
+                    class="js-search-open hover:text-gray-500 u-hide godo-tracking"
+                    data-event-category="Header"
+                    data-event-action="Search"
+                    data-event-label="Click"
+                    data-event-non-interaction="true">
+                    <svg class="icon icon--search"><use xlink:href="#icon-search"></use></svg>
+                </a>
+
+                {{!-- Member --}}
+                {{#if @member}}
+                {{else}}
+                    <a class="button mr-2 ml-3 text-sm font-medium" href="{{@site.url}}/signin/">{{t "Log in"}}</a>
+                    <a class="button is-primary text-sm font-medium" href="{{@site.url}}/signup/">{{t "Subscribe"}}</a>
+                {{/if}}
+
+                {{!-- Toggle Menu --}}
+                <div class="js-menu-toggle menu-burger relative hide-after-lg"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{{!-- Menu Mobile --}}
+{{!-- {{>"sidenav"}} --}}

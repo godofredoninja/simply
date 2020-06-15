@@ -1,0 +1,34 @@
+// 1. Header
+// --------------------------------------------------
+
+.header
+  // border-bottom: 1px solid #ddd
+  height: $header-height
+  transition: transform .3s;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .05)
+  // box-shadow: 0 2px 2px -2px rgba(0, 0, 0, .15)
+
+.bg-header
+  background-color: #fff
+
+// 2. Main Menu
+// -----------------------------------------------------------------------------
+.mainMenu-link
+  font-size: 1rem;
+  height: $header-height
+  display: flex
+  align-items: center
+  position: relative
+  // border-bottom: 0.125rem solid transparent
+
+  &.active
+    // border-bottom-color: $primary-color;
+    &::after
+      background-color: $primary-color
+      border-radius: 3px
+      bottom: 0
+      content: ''
+      height: 2px
+      left: 0
+      position: absolute
+      right: 0
