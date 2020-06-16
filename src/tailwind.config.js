@@ -13,6 +13,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       black: '#000',
+      dark: '#110f16',
       white: '#fff',
       // primary: '#2ecc71',
       primary: 'var(--color-primary)',
@@ -60,10 +61,15 @@ module.exports = {
         40: '0.4'
       },
       maxWidth: {
-        740: '740px',
-        1100: '1100px',
-        extreme: '1300px'
+        740: '46.25rem',
+        1000: '62.5rem',
+        1100: '68.75rem',
+        extreme: '81.25rem'
+      },
+      minHeight: {
+        'lg': '32rem'
       }
+
     }
   },
   variants: {},

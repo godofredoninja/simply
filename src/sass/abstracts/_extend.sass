@@ -1,5 +1,10 @@
+// color
+%gray-500
+  color: $gray-500
+%gray-900
+  color: $gray-900
+
 // Fonts
-// --------------------------------------------------
 %font-sans
   font-family: $font-sans
 %font-serif
@@ -19,11 +24,48 @@
   height: 100%
   width: 100%
 
+%inset-0
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+
+%image-inset
+  object-fit: cover
+  object-position: center
+  height: 100%
+  width: 100%
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  position: absolute
+
+// card
+%card
+  background: #fff
+  border: 1px solid rgba(0, 0, 0, 0.1)
+  border-radius: 5px
+  box-shadow: rgba(0, 0, 0, 0.1) 0 1px 4px
+  overflow: hidden
+
 // flex
+%flex
+  display: flex
+
 %flex-column-top
   display: flex
   flex-direction: column
   justify-content: flex-start
-%align-items-center
+
+%flex-align-items-center
   display: flex
   align-items: center
+
+%flex-direction-column
+  display: flex;
+  flex-direction: column
+
+%flex-direction-row
+  display: flex
+  flex-direction: row

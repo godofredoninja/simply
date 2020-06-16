@@ -1,27 +1,27 @@
 <footer class="footer">
-    <section class="container">
+    <section class="mx-auto max-w-extreme px-4">
         <div class="row">
             {{!-- About --}}
-            <div class="col s12 m6 l4 u-marginBottom30 u-flexColumnTop">
-                <div class="footer-items u-flexColumnTop u-flex--1">
-                    <h3 class="footer-items-title u-underline u-fontSize22">{{t "About Us"}}</h3>
-                    <div class="footer-b u-flex--1">
-                        <p>{{@site.description}}</p>
+            <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
+                <div class="footer-items flexColumnTop flex-grow">
+                    <h3 class="footer-items-title is-underline text-22">{{t "About Us"}}</h3>
+                    <div class="footer-b flex-grow mb-4">
+                        <p class="mb-4 text-lg">{{@site.description}}</p>
                     </div>
 
                     {{!-- Social Media - partilas/widget/social-media.hbs --}}
-                    {{> "widget/social-media"}}
+                    {{> "widget/social-media" class="footer-social-media"}}
                 </div>
             </div>
 
             {{!-- Tag Cloud --}}
-            <div class="col s12 m6 l4 u-marginBottom30 u-flexColumnTop">
-                <div class="footer-items footer-tags u-flex--1">
-                    <h3 class="footer-items-title u-underline u-fontSize22">{{t "Tags"}}</h3>
-                    <div class="buttonSet">
+            <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
+                <div class="footer-items footer-tags flex-grow">
+                    <h3 class="footer-items-title is-underline text-22">{{t "Tags"}}</h3>
+                    <div class="buttons">
                     {{#get "tags" limit="10" order="desc"}}
                         {{#foreach tags}}
-                            <a href="{{url absolute="true"}}" title="{{name}}" class="u-textCapitalize button button--outline-success">{{name}}</a>
+                            <a href="{{url absolute="true"}}" title="{{name}}" class="button is-primary is-outlined capitalize">{{name}}</a>
                         {{/foreach}}
                     {{/get}}
                     </div>
@@ -30,15 +30,15 @@
 
             {{!-- members subscribe --}}
             {{#if @labs.members}}
-            <div class="col s12 m6 l4 u-marginBottom30 u-flexColumnTop">
-                <div class="footer-items u-flex--1">
-                    <h3 class="footer-items-title u-underline u-fontSize22">{{t "Subscribe"}}</h3>
-                    <p class="u-marginBottom15">{{t "Get the best viral stories straight into your inbox!"}}</p>
+            <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
+                <div class="footer-items flex-grow">
+                    <h3 class="footer-items-title is-underline text-22">{{t "Subscribe"}}</h3>
+                    <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
 
                     {{!-- Form --}}
                     <form class="f-form" data-members-form="subscribe">
                         <input
-                            class="f-form-input u-block subscribe-email u-marginBottom15"
+                            class="f-form-input u-block subscribe-email mb-4"
                             data-members-email
                             placeholder="{{t "youremail@example.com"}}"
                             aria-label="{{t "youremail@example.com"}}"
@@ -59,9 +59,12 @@
             {{/if}}
 
             {{!-- Copy --}}
-            <div class="col s12 u-paddingTop20 u-textAlignCenter u-fontSizeSmaller">
+            <div class="col s12 pt-5 text-center text-base font-medium">
                 &copy; {{date format="YYYY"}} {{@site.title}}.
-                Design with <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg> by <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+                Design with
+                <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
+                by
+                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
             </div>
         </div>
     </section>

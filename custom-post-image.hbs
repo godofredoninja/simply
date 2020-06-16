@@ -4,40 +4,40 @@
 {{#post}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-article is-image{{/contentFor}}
+{{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post u-marginBottom40 u-relative">
-    <div class="pif u-relative u-bgDark">
+<article class="post mb-10 relative">
+    <div class="postImage relative bg-dark min-h-lg lg:h-screen">
         {{#if feature_image}}
             {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
             {{> "helper/helper-image-cover"}}
             {{!-- bg --}}
-            <div class="u-absolute0 zindex2 pif-grad"></div>
+            <div class="postImage-gradient absolute inset-0 z-2 bg-black bg-opacity-40"></div>
         {{/if}}
 
-        <header class="post-header u-container u-maxWidth740 u-paddingTop30 u-relative zindex3">
+        <header class="post-header mx-auto max-w-740 px-4 p-24 relative z-3">
             {{!-- Article Title --}}
-            <h1 class="post-title u-marginBottom20 u-fontSizeLargest u-md-fontSizeLarger">{{title}}</h1>
+            <h1 class="post-title mb-5 text-white text-4xl lg:text-5xl">{{title}}</h1>
             {{!-- Article Excerpt  --}}
-            {{#if custom_excerpt}}<p class="post-excerpt u-marginBottom30 u-fontSize22">{{custom_excerpt}}</p>{{/if}}
+            {{#if custom_excerpt}}<p class="post-excerpt mb-8 text-2xl text-white leading-snug">{{custom_excerpt}}</p>{{/if}}
 
             {{> "helper/helper-author-meta"}}
         </header>
     </div>
 
-    <div class="post-wrap u-maxWidth1000 u-relative u-marginAuto">
+    <div class="post-wrap max-w-1100 relative mx-auto">
         {{!-- All Content --}}
-        <div id="post-body" class="post-body u-container u-maxWidth740 u-relative">{{content}}</div>
+        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
     </div>
 
-    <footer class="post-footer u-container u-maxWidth740">
-        {{!-- Tags (category) --}}
+    <footer class="post-footer px-4 mx-auto max-w-740">
+        {{!-- Tags (category) - partials/article/article-tags.hbs --}}
         {{> "article/article-tags"}}
 
         <hr>
         <div class="prev-next">
             {{#prev_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
+                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="mb-8"}}
             {{/prev_post}}
 
             {{#next_post}}

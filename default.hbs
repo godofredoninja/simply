@@ -61,27 +61,27 @@
     </div>
 
     {{!-- Search box --}}
-    {{> "widget/search"}}
+    {{!-- {{> "widget/search"}} --}}
 
     {{!-- Subscribe Modal --}}
-    {{> "widget/modal-subscribe"}}
+    {{!-- {{> "widget/modal-subscribe"}} --}}
 
     {{!-- Loandig Bar --}}
-    <div class="loadingBar"></div>
+    {{!-- <div class="loadingBar"></div> --}}
 
     {{!-- Back to top --}}
-    <div class="back-to-top js-back-to-top u-hide-before-lg u-pointer u-fixed">
+    <div class="back-to-top js-back-to-top hide-before-lg fixed cursor-pointer z-20 right-0 bottom-0">
         {{> "icons/back-to-top"}}
-        <p class="back-to-top-text u-fontSizeBase u-fontWeightMedium">{{t "GO TOP"}}</p>
+        <p class="back-to-top-text font-medium uppercase text-base transform rotate-180">{{t "GO TOP"}}</p>
     </div>
 
     {{!-- notification Subscribe --}}
-    {{#if @labs.members}}
+    {{!-- {{#if @labs.members}}
     <div class="subscribe-success-message u-flexCenter u-justify-content-center">
         <span class="u-fontSize22" style="margin-right:10px">🎉</span> {{t "You've successfully subscribed to"}} {{@site.title}}!
         <div class="notification-close button button--success">OK</div>
     </div>
-    {{/if}}
+    {{/if}} --}}
 
     {{!-- Icons --}}
     {{> "icons/icons-symbol-defs"}}

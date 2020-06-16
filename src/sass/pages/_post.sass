@@ -1,13 +1,11 @@
 // 2. post content body
 // -----------------------------------------------------------------------------
 .post-body
+  @extend %flex-direction-column
   @extend %font-serif
 
-  display: flex
   align-items: center
-  flex-direction: column
   font-size: $font-size-post
-  // line-height: 1.6
 
   & > *
     margin-top: 1rem
@@ -26,7 +24,7 @@
       border-bottom-color: $post-color-link
 
   img:not(.kg-bookmark-icon)
-    display: block
+    // display: block
     margin-left: auto
     margin-right: auto
 
