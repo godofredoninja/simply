@@ -10,41 +10,16 @@
     {{!-- Article Header - partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
-    {{#if feature_image}}
-    <figure class="post-image block mx-auto max-w-740 mt-12 px-4">
-        <img class="block mx-auto w-full simply-zoom"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
-            src="{{img_url feature_image size="xl"}}"
-            alt="{{title}}"
-        />
-    </figure>
-    {{/if}}
+    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+    {{> "article/article-featured-image" image=feature_image class="block mx-auto max-w-740 mt-12 px-4"}}
 
     <div class="post-wrap max-w-1100 relative mx-auto">
         {{!-- All Content --}}
         <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
     </div>
 
-    <footer class="post-footer px-4 mx-auto max-w-740">
-        {{!-- Tags (category) - partials/article/article-tags.hbs --}}
-        {{> "article/article-tags"}}
-
-        <hr>
-        <div class="prev-next">
-            {{#prev_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="mb-8"}}
-            {{/prev_post}}
-
-            {{#next_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-            {{/next_post}}
-        </div>
-        <hr>
-    </footer>
+    {{!-- [tags, prev_post, next_post] - partials/article/article-footer.hbs --}}
+    {{> "article/article-footer"}}
 </article>
 
 {{/post}}

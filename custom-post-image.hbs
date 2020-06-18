@@ -7,13 +7,9 @@
 {{#contentFor "special_body_class"}}is-article has-cover is-head-transparent{{/contentFor}}
 
 <article class="post mb-10 relative">
-    <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:h-screen py-24">
-        {{#if feature_image}}
-            {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
-            {{> "helper/helper-image-cover"}}
-            {{!-- bg --}}
-            <div class="postImage-gradient absolute inset-0 z-2 bg-black bg-opacity-40"></div>
-        {{/if}}
+    <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:min-h-screen py-24">
+        {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
+        {{> "helper/helper-image-cover" background=feature_image gradient=" "}}
 
         <header class="post-header mx-auto max-w-740 px-4 p-24 relative z-3">
             {{!-- Article Title --}}
@@ -30,22 +26,8 @@
         <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
     </div>
 
-    <footer class="post-footer px-4 mx-auto max-w-740">
-        {{!-- Tags (category) - partials/article/article-tags.hbs --}}
-        {{> "article/article-tags"}}
-
-        <hr>
-        <div class="prev-next">
-            {{#prev_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="mb-8"}}
-            {{/prev_post}}
-
-            {{#next_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-            {{/next_post}}
-        </div>
-        <hr>
-    </footer>
+    {{!-- [tags, prev_post, next_post] - partials/article/article-footer.hbs --}}
+    {{> "article/article-footer"}}
 </article>
 {{/post}}
 

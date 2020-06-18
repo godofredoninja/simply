@@ -6,33 +6,18 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post u-marginBottom40 u-relative">
-    {{!-- Article Header - paertials/article/article-header.hbs --}}
+<article class="post mb-10 pt-8 lg:pt-10 relative">
+    {{!-- Article Header - partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
-    <div class="post-wrap u-maxWidth1000 u-relative u-marginAuto">
+    <div class="post-wrap max-w-1100 relative mx-auto">
         {{!-- All Content --}}
-        <div id="post-body" class="post-body u-container u-maxWidth740 u-relative">{{content}}</div>
+        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
     </div>
 
-    <footer class="post-footer u-container u-maxWidth740">
-        {{!-- Tags (category) --}}
-        {{> "article/article-tags"}}
-
-        <hr>
-        <div class="prev-next">
-            {{#prev_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
-            {{/prev_post}}
-
-            {{#next_post}}
-                {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-            {{/next_post}}
-        </div>
-        <hr>
-    </footer>
+    {{!-- [tags, prev_post, next_post] - partials/article/article-footer.hbs --}}
+    {{> "article/article-footer"}}
 </article>
-
 {{/post}}
 
 {{!-- Article related - partials/article/article-related.hbs --}}

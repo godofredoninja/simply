@@ -1,10 +1,8 @@
 <header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
-    {{!-- Article Title --}}
-    <h1 class="post-title mb-6 text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
-    {{!-- Article Excerpt  --}}
-    {{#if custom_excerpt}}<p class="post-excerpt mb-8 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
+    <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
+    {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
 
-    <div class="post-share flex">
+    <div class="post-share flex mt-8">
         {{!-- Meta - partials/helper/helper-meta.hbs --}}
         {{> "helper/helper-author-meta"}}
 
