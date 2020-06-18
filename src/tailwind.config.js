@@ -61,6 +61,10 @@ module.exports = {
         40: '0.4',
         60: '0.6'
       },
+      opacity: {
+        90: '0.9',
+        80: '0.8'
+      },
       maxWidth: {
         740: '46.25rem',
         1000: '62.5rem',
@@ -69,8 +73,13 @@ module.exports = {
       },
       minHeight: {
         lg: '32rem'
+      },
+      height: {
+        88: '22rem'
+      },
+      padding: {
+        vw8: '8vw'
       }
-
     }
   },
   variants: {},

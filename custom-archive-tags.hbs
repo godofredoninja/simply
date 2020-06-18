@@ -3,44 +3,57 @@
 
 {{#contentFor "special_body_class"}}topic{{/contentFor}}
 
-<section class="container">
-    {{#post}}
-        <div class="u-marginBottom40 site-archive u-textAlignCenter">
-            <h1 class="site-archive-title u-underline u-fontSizeLargest u-md-fontSize36 u-contentTitle"><span>{{title}}</span></h1>
-            <div class="site-archive-des u-fontSize20 u-marginAuto u-maxWidth740">{{content}}</div>
-        </div>
-    {{/post}}
-
-    <div class="row">
-    {{#get "tags" limit="18" include="count.posts" order="count.posts desc"}}
-    {{#foreach tags}}
-
-    <div class="col s12 m6 l4 u-marginBottom30">
-        <article class="topic-item u-relative u-flexColumnTop">
-            <header class="topic-header u-flex1 u-flexCenter u-paddingRight20 u-paddingLeft20 u-spaceBetween">
-                <h2 class="topic-name u-contentTitle u-fontSize20 u-textCapitalize"><a href="{{url}}" class="u-block">{{name}}</a></h2>
-                <p class="u-fontSize15 u-textMuted">{{count.posts}} {{t "Stories"}}</p>
-            </header>
-
-            <figure class="topic-img u-flex0 u-relative">
-                {{#if feature_image}}
-                    <img class="u-absolute u-image u-block blur-up lazyload"
-                        src="{{img_url feature_image size="l"}}"
-                        srcset="{{img_url feature_image size="xxs"}}"
-                        data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
-                        data-sizes="(max-width: 1000px) 400px, 600px"
-                        alt="{{name}}"
-                    />
-                {{else}}
-                    <div class="u-absolute0 u-block u-bgCover" style="background-image: url({{asset "images/not-image.jpg"}})"></div>
-                {{/if}}
-            </figure>
-
-            <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{name}}"></a>
-        </article>
+{{#post}}
+<header class="topic-header">
+    <div class="px-4 py-vw8 mx-auto max-w-3xl text-center text-white">
+        <h1 class="underscore is-center capitalize text-4xl lg:text-5xl font-semibold">{{title}}</h1>
+        <div class="text-lg mt-8 text-xl">{{content}}</div>
     </div>
+</header>
+{{/post}}
 
-    {{/foreach}}
-    {{/get}}
+<section class="container mx-auto py-8 lg:py-16">
+    <div class="max-w-1100 mx-auto">
+
+        {{#get "tags" limit="18" filter="visibility:public" include="count.posts" order="count.posts desc"}}
+
+        <div class="row">
+
+            {{#foreach tags}}
+            <div class="col s12 m6 l4 mb-8 flex">
+                <article class="topic-story relative bg-dark overflow-hidden rounded w-full h-88">
+                    {{#if feature_image}}
+                    <a href="{{url}}">
+                        <img class="image-inset blur-up lazyload"
+                            src="{{img_url feature_image size="l"}}"
+                            srcset="{{img_url feature_image size="xxs"}}"
+                            data-srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
+                            data-sizes="(max-width: 1000px) 400px, 600px"
+                            alt="{{name}}"
+                        />
+                    </a>
+                    {{else}}
+                    <div class="absolute inset-0 bg-cover" style="background-image: url({{asset "images/not-image.jpg"}})"></div>
+                    {{/if}}
+
+                    <header class="absolute text-white z-4 text-center w-full px-4 lg:px-8 py-12 {{#if @even}}bottom-0{{else}}top-0{{/if}}">
+                        <p class="text-sm uppercase mb-3 opacity-90 tracking-widest font-medium">{{count.posts}} {{t "Stories"}}</p>
+                        <h2 class="text-32 capitalize font-semibold tracking-wide"><a href="{{url}}">{{name}}</a></h2>
+                    </header>
+
+                    <div class="absolute inset-0 z-2 bg-black bg-opacity-50"></div>
+                    <a href="{{url}}" class="absolute inset-0 z-4" aria-label="{{name}}"></a>
+                </article>
+            </div>
+            {{/foreach}}
+
+        </div>
+
+        {{/get}}
+
     </div>
 </section>
+
+<style>
+.topic-header {background: url({{asset "images/bg-setup.svg"}}) bottom no-repeat,linear-gradient(60deg,#2e2ea2,#138395)}
+</style>

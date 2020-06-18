@@ -19,7 +19,7 @@
                 <div class="footer-items footer-tags flex-grow">
                     <h3 class="footer-items-title underscore text-22">{{t "Tags"}}</h3>
                     <div class="buttons">
-                    {{#get "tags" limit="10" order="desc"}}
+                    {{#get "tags" limit="10" filter="visibility:public" order="desc"}}
                         {{#foreach tags}}
                             <a href="{{url absolute="true"}}" title="{{name}}" class="button is-primary is-outlined capitalize">{{name}}</a>
                         {{/foreach}}

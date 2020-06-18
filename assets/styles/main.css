@@ -826,6 +826,10 @@ q::before, q::after {
   display: none;
 }
 
+.simply-main {
+  min-height: 50vh;
+}
+
 .video-responsive {
   display: block;
   height: 0;
@@ -2156,6 +2160,10 @@ a.dropdown-item {
   }
 }
 
+.topic-story {
+  text-shadow: 0 5px 18px rgba(0, 0, 0, 0.5);
+}
+
 /* purgecss end ignore */
 
 .space-y-0 > :not(template) ~ :not(template){
@@ -2786,6 +2794,14 @@ a.dropdown-item {
   --divide-opacity: 0.75;
 }
 
+.divide-opacity-80 > :not(template) ~ :not(template){
+  --divide-opacity: 0.8;
+}
+
+.divide-opacity-90 > :not(template) ~ :not(template){
+  --divide-opacity: 0.9;
+}
+
 .divide-opacity-100 > :not(template) ~ :not(template){
   --divide-opacity: 1;
 }
@@ -3152,6 +3168,14 @@ a.dropdown-item {
   --bg-opacity: 0.75;
 }
 
+.bg-opacity-80{
+  --bg-opacity: 0.8;
+}
+
+.bg-opacity-90{
+  --bg-opacity: 0.9;
+}
+
 .bg-opacity-100{
   --bg-opacity: 1;
 }
@@ -3180,6 +3204,14 @@ a.dropdown-item {
   --bg-opacity: 0.75;
 }
 
+.hover\:bg-opacity-80:hover{
+  --bg-opacity: 0.8;
+}
+
+.hover\:bg-opacity-90:hover{
+  --bg-opacity: 0.9;
+}
+
 .hover\:bg-opacity-100:hover{
   --bg-opacity: 1;
 }
@@ -3206,6 +3238,14 @@ a.dropdown-item {
 
 .focus\:bg-opacity-75:focus{
   --bg-opacity: 0.75;
+}
+
+.focus\:bg-opacity-80:focus{
+  --bg-opacity: 0.8;
+}
+
+.focus\:bg-opacity-90:focus{
+  --bg-opacity: 0.9;
 }
 
 .focus\:bg-opacity-100:focus{
@@ -3584,6 +3624,14 @@ a.dropdown-item {
   --border-opacity: 0.75;
 }
 
+.border-opacity-80{
+  --border-opacity: 0.8;
+}
+
+.border-opacity-90{
+  --border-opacity: 0.9;
+}
+
 .border-opacity-100{
   --border-opacity: 1;
 }
@@ -3604,6 +3652,14 @@ a.dropdown-item {
   --border-opacity: 0.75;
 }
 
+.hover\:border-opacity-80:hover{
+  --border-opacity: 0.8;
+}
+
+.hover\:border-opacity-90:hover{
+  --border-opacity: 0.9;
+}
+
 .hover\:border-opacity-100:hover{
   --border-opacity: 1;
 }
@@ -3622,6 +3678,14 @@ a.dropdown-item {
 
 .focus\:border-opacity-75:focus{
   --border-opacity: 0.75;
+}
+
+.focus\:border-opacity-80:focus{
+  --border-opacity: 0.8;
+}
+
+.focus\:border-opacity-90:focus{
+  --border-opacity: 0.9;
 }
 
 .focus\:border-opacity-100:focus{
@@ -4520,6 +4584,10 @@ a.dropdown-item {
 
 .h-64{
   height: 16rem;
+}
+
+.h-88{
+  height: 22rem;
 }
 
 .h-auto{
@@ -5990,6 +6058,14 @@ a.dropdown-item {
   opacity: 0.75;
 }
 
+.opacity-80{
+  opacity: 0.8;
+}
+
+.opacity-90{
+  opacity: 0.9;
+}
+
 .opacity-100{
   opacity: 1;
 }
@@ -6010,6 +6086,14 @@ a.dropdown-item {
   opacity: 0.75;
 }
 
+.hover\:opacity-80:hover{
+  opacity: 0.8;
+}
+
+.hover\:opacity-90:hover{
+  opacity: 0.9;
+}
+
 .hover\:opacity-100:hover{
   opacity: 1;
 }
@@ -6028,6 +6112,14 @@ a.dropdown-item {
 
 .focus\:opacity-75:focus{
   opacity: 0.75;
+}
+
+.focus\:opacity-80:focus{
+  opacity: 0.8;
+}
+
+.focus\:opacity-90:focus{
+  opacity: 0.9;
 }
 
 .focus\:opacity-100:focus{
@@ -6172,6 +6264,10 @@ a.dropdown-item {
 
 .p-px{
   padding: 1px;
+}
+
+.p-vw8{
+  padding: 8vw;
 }
 
 .py-0{
@@ -6362,6 +6458,16 @@ a.dropdown-item {
 .px-px{
   padding-left: 1px;
   padding-right: 1px;
+}
+
+.py-vw8{
+  padding-top: 8vw;
+  padding-bottom: 8vw;
+}
+
+.px-vw8{
+  padding-left: 8vw;
+  padding-right: 8vw;
 }
 
 .pt-0{
@@ -6668,6 +6774,22 @@ a.dropdown-item {
   padding-left: 1px;
 }
 
+.pt-vw8{
+  padding-top: 8vw;
+}
+
+.pr-vw8{
+  padding-right: 8vw;
+}
+
+.pb-vw8{
+  padding-bottom: 8vw;
+}
+
+.pl-vw8{
+  padding-left: 8vw;
+}
+
 .placeholder-transparent::placeholder{
   color: transparent;
 }
@@ -6868,6 +6990,14 @@ a.dropdown-item {
   --placeholder-opacity: 0.75;
 }
 
+.placeholder-opacity-80::placeholder{
+  --placeholder-opacity: 0.8;
+}
+
+.placeholder-opacity-90::placeholder{
+  --placeholder-opacity: 0.9;
+}
+
 .placeholder-opacity-100::placeholder{
   --placeholder-opacity: 1;
 }
@@ -6886,6 +7016,14 @@ a.dropdown-item {
 
 .focus\:placeholder-opacity-75:focus::placeholder{
   --placeholder-opacity: 0.75;
+}
+
+.focus\:placeholder-opacity-80:focus::placeholder{
+  --placeholder-opacity: 0.8;
+}
+
+.focus\:placeholder-opacity-90:focus::placeholder{
+  --placeholder-opacity: 0.9;
 }
 
 .focus\:placeholder-opacity-100:focus::placeholder{
@@ -7458,6 +7596,14 @@ a.dropdown-item {
   --text-opacity: 0.75;
 }
 
+.text-opacity-80{
+  --text-opacity: 0.8;
+}
+
+.text-opacity-90{
+  --text-opacity: 0.9;
+}
+
 .text-opacity-100{
   --text-opacity: 1;
 }
@@ -7478,6 +7624,14 @@ a.dropdown-item {
   --text-opacity: 0.75;
 }
 
+.hover\:text-opacity-80:hover{
+  --text-opacity: 0.8;
+}
+
+.hover\:text-opacity-90:hover{
+  --text-opacity: 0.9;
+}
+
 .hover\:text-opacity-100:hover{
   --text-opacity: 1;
 }
@@ -7496,6 +7650,14 @@ a.dropdown-item {
 
 .focus\:text-opacity-75:focus{
   --text-opacity: 0.75;
+}
+
+.focus\:text-opacity-80:focus{
+  --text-opacity: 0.8;
+}
+
+.focus\:text-opacity-90:focus{
+  --text-opacity: 0.9;
 }
 
 .focus\:text-opacity-100:focus{
@@ -10938,6 +11100,14 @@ a.dropdown-item {
     --divide-opacity: 0.75;
   }
 
+  .sm\:divide-opacity-80 > :not(template) ~ :not(template){
+    --divide-opacity: 0.8;
+  }
+
+  .sm\:divide-opacity-90 > :not(template) ~ :not(template){
+    --divide-opacity: 0.9;
+  }
+
   .sm\:divide-opacity-100 > :not(template) ~ :not(template){
     --divide-opacity: 1;
   }
@@ -11304,6 +11474,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .sm\:bg-opacity-80{
+    --bg-opacity: 0.8;
+  }
+
+  .sm\:bg-opacity-90{
+    --bg-opacity: 0.9;
+  }
+
   .sm\:bg-opacity-100{
     --bg-opacity: 1;
   }
@@ -11332,6 +11510,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .sm\:hover\:bg-opacity-80:hover{
+    --bg-opacity: 0.8;
+  }
+
+  .sm\:hover\:bg-opacity-90:hover{
+    --bg-opacity: 0.9;
+  }
+
   .sm\:hover\:bg-opacity-100:hover{
     --bg-opacity: 1;
   }
@@ -11358,6 +11544,14 @@ a.dropdown-item {
 
   .sm\:focus\:bg-opacity-75:focus{
     --bg-opacity: 0.75;
+  }
+
+  .sm\:focus\:bg-opacity-80:focus{
+    --bg-opacity: 0.8;
+  }
+
+  .sm\:focus\:bg-opacity-90:focus{
+    --bg-opacity: 0.9;
   }
 
   .sm\:focus\:bg-opacity-100:focus{
@@ -11736,6 +11930,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .sm\:border-opacity-80{
+    --border-opacity: 0.8;
+  }
+
+  .sm\:border-opacity-90{
+    --border-opacity: 0.9;
+  }
+
   .sm\:border-opacity-100{
     --border-opacity: 1;
   }
@@ -11756,6 +11958,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .sm\:hover\:border-opacity-80:hover{
+    --border-opacity: 0.8;
+  }
+
+  .sm\:hover\:border-opacity-90:hover{
+    --border-opacity: 0.9;
+  }
+
   .sm\:hover\:border-opacity-100:hover{
     --border-opacity: 1;
   }
@@ -11774,6 +11984,14 @@ a.dropdown-item {
 
   .sm\:focus\:border-opacity-75:focus{
     --border-opacity: 0.75;
+  }
+
+  .sm\:focus\:border-opacity-80:focus{
+    --border-opacity: 0.8;
+  }
+
+  .sm\:focus\:border-opacity-90:focus{
+    --border-opacity: 0.9;
   }
 
   .sm\:focus\:border-opacity-100:focus{
@@ -12672,6 +12890,10 @@ a.dropdown-item {
 
   .sm\:h-64{
     height: 16rem;
+  }
+
+  .sm\:h-88{
+    height: 22rem;
   }
 
   .sm\:h-auto{
@@ -14142,6 +14364,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .sm\:opacity-80{
+    opacity: 0.8;
+  }
+
+  .sm\:opacity-90{
+    opacity: 0.9;
+  }
+
   .sm\:opacity-100{
     opacity: 1;
   }
@@ -14162,6 +14392,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .sm\:hover\:opacity-80:hover{
+    opacity: 0.8;
+  }
+
+  .sm\:hover\:opacity-90:hover{
+    opacity: 0.9;
+  }
+
   .sm\:hover\:opacity-100:hover{
     opacity: 1;
   }
@@ -14180,6 +14418,14 @@ a.dropdown-item {
 
   .sm\:focus\:opacity-75:focus{
     opacity: 0.75;
+  }
+
+  .sm\:focus\:opacity-80:focus{
+    opacity: 0.8;
+  }
+
+  .sm\:focus\:opacity-90:focus{
+    opacity: 0.9;
   }
 
   .sm\:focus\:opacity-100:focus{
@@ -14324,6 +14570,10 @@ a.dropdown-item {
 
   .sm\:p-px{
     padding: 1px;
+  }
+
+  .sm\:p-vw8{
+    padding: 8vw;
   }
 
   .sm\:py-0{
@@ -14514,6 +14764,16 @@ a.dropdown-item {
   .sm\:px-px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .sm\:py-vw8{
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+
+  .sm\:px-vw8{
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .sm\:pt-0{
@@ -14820,6 +15080,22 @@ a.dropdown-item {
     padding-left: 1px;
   }
 
+  .sm\:pt-vw8{
+    padding-top: 8vw;
+  }
+
+  .sm\:pr-vw8{
+    padding-right: 8vw;
+  }
+
+  .sm\:pb-vw8{
+    padding-bottom: 8vw;
+  }
+
+  .sm\:pl-vw8{
+    padding-left: 8vw;
+  }
+
   .sm\:placeholder-transparent::placeholder{
     color: transparent;
   }
@@ -15020,6 +15296,14 @@ a.dropdown-item {
     --placeholder-opacity: 0.75;
   }
 
+  .sm\:placeholder-opacity-80::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .sm\:placeholder-opacity-90::placeholder{
+    --placeholder-opacity: 0.9;
+  }
+
   .sm\:placeholder-opacity-100::placeholder{
     --placeholder-opacity: 1;
   }
@@ -15038,6 +15322,14 @@ a.dropdown-item {
 
   .sm\:focus\:placeholder-opacity-75:focus::placeholder{
     --placeholder-opacity: 0.75;
+  }
+
+  .sm\:focus\:placeholder-opacity-80:focus::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .sm\:focus\:placeholder-opacity-90:focus::placeholder{
+    --placeholder-opacity: 0.9;
   }
 
   .sm\:focus\:placeholder-opacity-100:focus::placeholder{
@@ -15610,6 +15902,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .sm\:text-opacity-80{
+    --text-opacity: 0.8;
+  }
+
+  .sm\:text-opacity-90{
+    --text-opacity: 0.9;
+  }
+
   .sm\:text-opacity-100{
     --text-opacity: 1;
   }
@@ -15630,6 +15930,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .sm\:hover\:text-opacity-80:hover{
+    --text-opacity: 0.8;
+  }
+
+  .sm\:hover\:text-opacity-90:hover{
+    --text-opacity: 0.9;
+  }
+
   .sm\:hover\:text-opacity-100:hover{
     --text-opacity: 1;
   }
@@ -15648,6 +15956,14 @@ a.dropdown-item {
 
   .sm\:focus\:text-opacity-75:focus{
     --text-opacity: 0.75;
+  }
+
+  .sm\:focus\:text-opacity-80:focus{
+    --text-opacity: 0.8;
+  }
+
+  .sm\:focus\:text-opacity-90:focus{
+    --text-opacity: 0.9;
   }
 
   .sm\:focus\:text-opacity-100:focus{
@@ -19019,6 +19335,14 @@ a.dropdown-item {
     --divide-opacity: 0.75;
   }
 
+  .md\:divide-opacity-80 > :not(template) ~ :not(template){
+    --divide-opacity: 0.8;
+  }
+
+  .md\:divide-opacity-90 > :not(template) ~ :not(template){
+    --divide-opacity: 0.9;
+  }
+
   .md\:divide-opacity-100 > :not(template) ~ :not(template){
     --divide-opacity: 1;
   }
@@ -19385,6 +19709,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .md\:bg-opacity-80{
+    --bg-opacity: 0.8;
+  }
+
+  .md\:bg-opacity-90{
+    --bg-opacity: 0.9;
+  }
+
   .md\:bg-opacity-100{
     --bg-opacity: 1;
   }
@@ -19413,6 +19745,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .md\:hover\:bg-opacity-80:hover{
+    --bg-opacity: 0.8;
+  }
+
+  .md\:hover\:bg-opacity-90:hover{
+    --bg-opacity: 0.9;
+  }
+
   .md\:hover\:bg-opacity-100:hover{
     --bg-opacity: 1;
   }
@@ -19439,6 +19779,14 @@ a.dropdown-item {
 
   .md\:focus\:bg-opacity-75:focus{
     --bg-opacity: 0.75;
+  }
+
+  .md\:focus\:bg-opacity-80:focus{
+    --bg-opacity: 0.8;
+  }
+
+  .md\:focus\:bg-opacity-90:focus{
+    --bg-opacity: 0.9;
   }
 
   .md\:focus\:bg-opacity-100:focus{
@@ -19817,6 +20165,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .md\:border-opacity-80{
+    --border-opacity: 0.8;
+  }
+
+  .md\:border-opacity-90{
+    --border-opacity: 0.9;
+  }
+
   .md\:border-opacity-100{
     --border-opacity: 1;
   }
@@ -19837,6 +20193,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .md\:hover\:border-opacity-80:hover{
+    --border-opacity: 0.8;
+  }
+
+  .md\:hover\:border-opacity-90:hover{
+    --border-opacity: 0.9;
+  }
+
   .md\:hover\:border-opacity-100:hover{
     --border-opacity: 1;
   }
@@ -19855,6 +20219,14 @@ a.dropdown-item {
 
   .md\:focus\:border-opacity-75:focus{
     --border-opacity: 0.75;
+  }
+
+  .md\:focus\:border-opacity-80:focus{
+    --border-opacity: 0.8;
+  }
+
+  .md\:focus\:border-opacity-90:focus{
+    --border-opacity: 0.9;
   }
 
   .md\:focus\:border-opacity-100:focus{
@@ -20753,6 +21125,10 @@ a.dropdown-item {
 
   .md\:h-64{
     height: 16rem;
+  }
+
+  .md\:h-88{
+    height: 22rem;
   }
 
   .md\:h-auto{
@@ -22223,6 +22599,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .md\:opacity-80{
+    opacity: 0.8;
+  }
+
+  .md\:opacity-90{
+    opacity: 0.9;
+  }
+
   .md\:opacity-100{
     opacity: 1;
   }
@@ -22243,6 +22627,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .md\:hover\:opacity-80:hover{
+    opacity: 0.8;
+  }
+
+  .md\:hover\:opacity-90:hover{
+    opacity: 0.9;
+  }
+
   .md\:hover\:opacity-100:hover{
     opacity: 1;
   }
@@ -22261,6 +22653,14 @@ a.dropdown-item {
 
   .md\:focus\:opacity-75:focus{
     opacity: 0.75;
+  }
+
+  .md\:focus\:opacity-80:focus{
+    opacity: 0.8;
+  }
+
+  .md\:focus\:opacity-90:focus{
+    opacity: 0.9;
   }
 
   .md\:focus\:opacity-100:focus{
@@ -22405,6 +22805,10 @@ a.dropdown-item {
 
   .md\:p-px{
     padding: 1px;
+  }
+
+  .md\:p-vw8{
+    padding: 8vw;
   }
 
   .md\:py-0{
@@ -22595,6 +22999,16 @@ a.dropdown-item {
   .md\:px-px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .md\:py-vw8{
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+
+  .md\:px-vw8{
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .md\:pt-0{
@@ -22901,6 +23315,22 @@ a.dropdown-item {
     padding-left: 1px;
   }
 
+  .md\:pt-vw8{
+    padding-top: 8vw;
+  }
+
+  .md\:pr-vw8{
+    padding-right: 8vw;
+  }
+
+  .md\:pb-vw8{
+    padding-bottom: 8vw;
+  }
+
+  .md\:pl-vw8{
+    padding-left: 8vw;
+  }
+
   .md\:placeholder-transparent::placeholder{
     color: transparent;
   }
@@ -23101,6 +23531,14 @@ a.dropdown-item {
     --placeholder-opacity: 0.75;
   }
 
+  .md\:placeholder-opacity-80::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .md\:placeholder-opacity-90::placeholder{
+    --placeholder-opacity: 0.9;
+  }
+
   .md\:placeholder-opacity-100::placeholder{
     --placeholder-opacity: 1;
   }
@@ -23119,6 +23557,14 @@ a.dropdown-item {
 
   .md\:focus\:placeholder-opacity-75:focus::placeholder{
     --placeholder-opacity: 0.75;
+  }
+
+  .md\:focus\:placeholder-opacity-80:focus::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .md\:focus\:placeholder-opacity-90:focus::placeholder{
+    --placeholder-opacity: 0.9;
   }
 
   .md\:focus\:placeholder-opacity-100:focus::placeholder{
@@ -23691,6 +24137,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .md\:text-opacity-80{
+    --text-opacity: 0.8;
+  }
+
+  .md\:text-opacity-90{
+    --text-opacity: 0.9;
+  }
+
   .md\:text-opacity-100{
     --text-opacity: 1;
   }
@@ -23711,6 +24165,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .md\:hover\:text-opacity-80:hover{
+    --text-opacity: 0.8;
+  }
+
+  .md\:hover\:text-opacity-90:hover{
+    --text-opacity: 0.9;
+  }
+
   .md\:hover\:text-opacity-100:hover{
     --text-opacity: 1;
   }
@@ -23729,6 +24191,14 @@ a.dropdown-item {
 
   .md\:focus\:text-opacity-75:focus{
     --text-opacity: 0.75;
+  }
+
+  .md\:focus\:text-opacity-80:focus{
+    --text-opacity: 0.8;
+  }
+
+  .md\:focus\:text-opacity-90:focus{
+    --text-opacity: 0.9;
   }
 
   .md\:focus\:text-opacity-100:focus{
@@ -27100,6 +27570,14 @@ a.dropdown-item {
     --divide-opacity: 0.75;
   }
 
+  .lg\:divide-opacity-80 > :not(template) ~ :not(template){
+    --divide-opacity: 0.8;
+  }
+
+  .lg\:divide-opacity-90 > :not(template) ~ :not(template){
+    --divide-opacity: 0.9;
+  }
+
   .lg\:divide-opacity-100 > :not(template) ~ :not(template){
     --divide-opacity: 1;
   }
@@ -27466,6 +27944,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .lg\:bg-opacity-80{
+    --bg-opacity: 0.8;
+  }
+
+  .lg\:bg-opacity-90{
+    --bg-opacity: 0.9;
+  }
+
   .lg\:bg-opacity-100{
     --bg-opacity: 1;
   }
@@ -27494,6 +27980,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .lg\:hover\:bg-opacity-80:hover{
+    --bg-opacity: 0.8;
+  }
+
+  .lg\:hover\:bg-opacity-90:hover{
+    --bg-opacity: 0.9;
+  }
+
   .lg\:hover\:bg-opacity-100:hover{
     --bg-opacity: 1;
   }
@@ -27520,6 +28014,14 @@ a.dropdown-item {
 
   .lg\:focus\:bg-opacity-75:focus{
     --bg-opacity: 0.75;
+  }
+
+  .lg\:focus\:bg-opacity-80:focus{
+    --bg-opacity: 0.8;
+  }
+
+  .lg\:focus\:bg-opacity-90:focus{
+    --bg-opacity: 0.9;
   }
 
   .lg\:focus\:bg-opacity-100:focus{
@@ -27898,6 +28400,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .lg\:border-opacity-80{
+    --border-opacity: 0.8;
+  }
+
+  .lg\:border-opacity-90{
+    --border-opacity: 0.9;
+  }
+
   .lg\:border-opacity-100{
     --border-opacity: 1;
   }
@@ -27918,6 +28428,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .lg\:hover\:border-opacity-80:hover{
+    --border-opacity: 0.8;
+  }
+
+  .lg\:hover\:border-opacity-90:hover{
+    --border-opacity: 0.9;
+  }
+
   .lg\:hover\:border-opacity-100:hover{
     --border-opacity: 1;
   }
@@ -27936,6 +28454,14 @@ a.dropdown-item {
 
   .lg\:focus\:border-opacity-75:focus{
     --border-opacity: 0.75;
+  }
+
+  .lg\:focus\:border-opacity-80:focus{
+    --border-opacity: 0.8;
+  }
+
+  .lg\:focus\:border-opacity-90:focus{
+    --border-opacity: 0.9;
   }
 
   .lg\:focus\:border-opacity-100:focus{
@@ -28834,6 +29360,10 @@ a.dropdown-item {
 
   .lg\:h-64{
     height: 16rem;
+  }
+
+  .lg\:h-88{
+    height: 22rem;
   }
 
   .lg\:h-auto{
@@ -30304,6 +30834,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .lg\:opacity-80{
+    opacity: 0.8;
+  }
+
+  .lg\:opacity-90{
+    opacity: 0.9;
+  }
+
   .lg\:opacity-100{
     opacity: 1;
   }
@@ -30324,6 +30862,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .lg\:hover\:opacity-80:hover{
+    opacity: 0.8;
+  }
+
+  .lg\:hover\:opacity-90:hover{
+    opacity: 0.9;
+  }
+
   .lg\:hover\:opacity-100:hover{
     opacity: 1;
   }
@@ -30342,6 +30888,14 @@ a.dropdown-item {
 
   .lg\:focus\:opacity-75:focus{
     opacity: 0.75;
+  }
+
+  .lg\:focus\:opacity-80:focus{
+    opacity: 0.8;
+  }
+
+  .lg\:focus\:opacity-90:focus{
+    opacity: 0.9;
   }
 
   .lg\:focus\:opacity-100:focus{
@@ -30486,6 +31040,10 @@ a.dropdown-item {
 
   .lg\:p-px{
     padding: 1px;
+  }
+
+  .lg\:p-vw8{
+    padding: 8vw;
   }
 
   .lg\:py-0{
@@ -30676,6 +31234,16 @@ a.dropdown-item {
   .lg\:px-px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .lg\:py-vw8{
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+
+  .lg\:px-vw8{
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .lg\:pt-0{
@@ -30982,6 +31550,22 @@ a.dropdown-item {
     padding-left: 1px;
   }
 
+  .lg\:pt-vw8{
+    padding-top: 8vw;
+  }
+
+  .lg\:pr-vw8{
+    padding-right: 8vw;
+  }
+
+  .lg\:pb-vw8{
+    padding-bottom: 8vw;
+  }
+
+  .lg\:pl-vw8{
+    padding-left: 8vw;
+  }
+
   .lg\:placeholder-transparent::placeholder{
     color: transparent;
   }
@@ -31182,6 +31766,14 @@ a.dropdown-item {
     --placeholder-opacity: 0.75;
   }
 
+  .lg\:placeholder-opacity-80::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .lg\:placeholder-opacity-90::placeholder{
+    --placeholder-opacity: 0.9;
+  }
+
   .lg\:placeholder-opacity-100::placeholder{
     --placeholder-opacity: 1;
   }
@@ -31200,6 +31792,14 @@ a.dropdown-item {
 
   .lg\:focus\:placeholder-opacity-75:focus::placeholder{
     --placeholder-opacity: 0.75;
+  }
+
+  .lg\:focus\:placeholder-opacity-80:focus::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .lg\:focus\:placeholder-opacity-90:focus::placeholder{
+    --placeholder-opacity: 0.9;
   }
 
   .lg\:focus\:placeholder-opacity-100:focus::placeholder{
@@ -31772,6 +32372,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .lg\:text-opacity-80{
+    --text-opacity: 0.8;
+  }
+
+  .lg\:text-opacity-90{
+    --text-opacity: 0.9;
+  }
+
   .lg\:text-opacity-100{
     --text-opacity: 1;
   }
@@ -31792,6 +32400,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .lg\:hover\:text-opacity-80:hover{
+    --text-opacity: 0.8;
+  }
+
+  .lg\:hover\:text-opacity-90:hover{
+    --text-opacity: 0.9;
+  }
+
   .lg\:hover\:text-opacity-100:hover{
     --text-opacity: 1;
   }
@@ -31810,6 +32426,14 @@ a.dropdown-item {
 
   .lg\:focus\:text-opacity-75:focus{
     --text-opacity: 0.75;
+  }
+
+  .lg\:focus\:text-opacity-80:focus{
+    --text-opacity: 0.8;
+  }
+
+  .lg\:focus\:text-opacity-90:focus{
+    --text-opacity: 0.9;
   }
 
   .lg\:focus\:text-opacity-100:focus{
@@ -35181,6 +35805,14 @@ a.dropdown-item {
     --divide-opacity: 0.75;
   }
 
+  .xl\:divide-opacity-80 > :not(template) ~ :not(template){
+    --divide-opacity: 0.8;
+  }
+
+  .xl\:divide-opacity-90 > :not(template) ~ :not(template){
+    --divide-opacity: 0.9;
+  }
+
   .xl\:divide-opacity-100 > :not(template) ~ :not(template){
     --divide-opacity: 1;
   }
@@ -35547,6 +36179,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .xl\:bg-opacity-80{
+    --bg-opacity: 0.8;
+  }
+
+  .xl\:bg-opacity-90{
+    --bg-opacity: 0.9;
+  }
+
   .xl\:bg-opacity-100{
     --bg-opacity: 1;
   }
@@ -35575,6 +36215,14 @@ a.dropdown-item {
     --bg-opacity: 0.75;
   }
 
+  .xl\:hover\:bg-opacity-80:hover{
+    --bg-opacity: 0.8;
+  }
+
+  .xl\:hover\:bg-opacity-90:hover{
+    --bg-opacity: 0.9;
+  }
+
   .xl\:hover\:bg-opacity-100:hover{
     --bg-opacity: 1;
   }
@@ -35601,6 +36249,14 @@ a.dropdown-item {
 
   .xl\:focus\:bg-opacity-75:focus{
     --bg-opacity: 0.75;
+  }
+
+  .xl\:focus\:bg-opacity-80:focus{
+    --bg-opacity: 0.8;
+  }
+
+  .xl\:focus\:bg-opacity-90:focus{
+    --bg-opacity: 0.9;
   }
 
   .xl\:focus\:bg-opacity-100:focus{
@@ -35979,6 +36635,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .xl\:border-opacity-80{
+    --border-opacity: 0.8;
+  }
+
+  .xl\:border-opacity-90{
+    --border-opacity: 0.9;
+  }
+
   .xl\:border-opacity-100{
     --border-opacity: 1;
   }
@@ -35999,6 +36663,14 @@ a.dropdown-item {
     --border-opacity: 0.75;
   }
 
+  .xl\:hover\:border-opacity-80:hover{
+    --border-opacity: 0.8;
+  }
+
+  .xl\:hover\:border-opacity-90:hover{
+    --border-opacity: 0.9;
+  }
+
   .xl\:hover\:border-opacity-100:hover{
     --border-opacity: 1;
   }
@@ -36017,6 +36689,14 @@ a.dropdown-item {
 
   .xl\:focus\:border-opacity-75:focus{
     --border-opacity: 0.75;
+  }
+
+  .xl\:focus\:border-opacity-80:focus{
+    --border-opacity: 0.8;
+  }
+
+  .xl\:focus\:border-opacity-90:focus{
+    --border-opacity: 0.9;
   }
 
   .xl\:focus\:border-opacity-100:focus{
@@ -36915,6 +37595,10 @@ a.dropdown-item {
 
   .xl\:h-64{
     height: 16rem;
+  }
+
+  .xl\:h-88{
+    height: 22rem;
   }
 
   .xl\:h-auto{
@@ -38385,6 +39069,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .xl\:opacity-80{
+    opacity: 0.8;
+  }
+
+  .xl\:opacity-90{
+    opacity: 0.9;
+  }
+
   .xl\:opacity-100{
     opacity: 1;
   }
@@ -38405,6 +39097,14 @@ a.dropdown-item {
     opacity: 0.75;
   }
 
+  .xl\:hover\:opacity-80:hover{
+    opacity: 0.8;
+  }
+
+  .xl\:hover\:opacity-90:hover{
+    opacity: 0.9;
+  }
+
   .xl\:hover\:opacity-100:hover{
     opacity: 1;
   }
@@ -38423,6 +39123,14 @@ a.dropdown-item {
 
   .xl\:focus\:opacity-75:focus{
     opacity: 0.75;
+  }
+
+  .xl\:focus\:opacity-80:focus{
+    opacity: 0.8;
+  }
+
+  .xl\:focus\:opacity-90:focus{
+    opacity: 0.9;
   }
 
   .xl\:focus\:opacity-100:focus{
@@ -38567,6 +39275,10 @@ a.dropdown-item {
 
   .xl\:p-px{
     padding: 1px;
+  }
+
+  .xl\:p-vw8{
+    padding: 8vw;
   }
 
   .xl\:py-0{
@@ -38757,6 +39469,16 @@ a.dropdown-item {
   .xl\:px-px{
     padding-left: 1px;
     padding-right: 1px;
+  }
+
+  .xl\:py-vw8{
+    padding-top: 8vw;
+    padding-bottom: 8vw;
+  }
+
+  .xl\:px-vw8{
+    padding-left: 8vw;
+    padding-right: 8vw;
   }
 
   .xl\:pt-0{
@@ -39063,6 +39785,22 @@ a.dropdown-item {
     padding-left: 1px;
   }
 
+  .xl\:pt-vw8{
+    padding-top: 8vw;
+  }
+
+  .xl\:pr-vw8{
+    padding-right: 8vw;
+  }
+
+  .xl\:pb-vw8{
+    padding-bottom: 8vw;
+  }
+
+  .xl\:pl-vw8{
+    padding-left: 8vw;
+  }
+
   .xl\:placeholder-transparent::placeholder{
     color: transparent;
   }
@@ -39263,6 +40001,14 @@ a.dropdown-item {
     --placeholder-opacity: 0.75;
   }
 
+  .xl\:placeholder-opacity-80::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .xl\:placeholder-opacity-90::placeholder{
+    --placeholder-opacity: 0.9;
+  }
+
   .xl\:placeholder-opacity-100::placeholder{
     --placeholder-opacity: 1;
   }
@@ -39281,6 +40027,14 @@ a.dropdown-item {
 
   .xl\:focus\:placeholder-opacity-75:focus::placeholder{
     --placeholder-opacity: 0.75;
+  }
+
+  .xl\:focus\:placeholder-opacity-80:focus::placeholder{
+    --placeholder-opacity: 0.8;
+  }
+
+  .xl\:focus\:placeholder-opacity-90:focus::placeholder{
+    --placeholder-opacity: 0.9;
   }
 
   .xl\:focus\:placeholder-opacity-100:focus::placeholder{
@@ -39853,6 +40607,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .xl\:text-opacity-80{
+    --text-opacity: 0.8;
+  }
+
+  .xl\:text-opacity-90{
+    --text-opacity: 0.9;
+  }
+
   .xl\:text-opacity-100{
     --text-opacity: 1;
   }
@@ -39873,6 +40635,14 @@ a.dropdown-item {
     --text-opacity: 0.75;
   }
 
+  .xl\:hover\:text-opacity-80:hover{
+    --text-opacity: 0.8;
+  }
+
+  .xl\:hover\:text-opacity-90:hover{
+    --text-opacity: 0.9;
+  }
+
   .xl\:hover\:text-opacity-100:hover{
     --text-opacity: 1;
   }
@@ -39891,6 +40661,14 @@ a.dropdown-item {
 
   .xl\:focus\:text-opacity-75:focus{
     --text-opacity: 0.75;
+  }
+
+  .xl\:focus\:text-opacity-80:focus{
+    --text-opacity: 0.8;
+  }
+
+  .xl\:focus\:text-opacity-90:focus{
+    --text-opacity: 0.9;
   }
 
   .xl\:focus\:text-opacity-100:focus{
