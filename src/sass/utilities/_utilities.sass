@@ -1,7 +1,7 @@
 .u-image
   @extend %u-image
 .image-inset
-  @extent %image-inset
+  @extend %image-inset
 .flexColumnTop
   @extend %flex-column-top
 .noWrapWithEllipsis
@@ -25,6 +25,9 @@
   &.is-24x24
     height: 1.5rem
     width: 1.5rem
+  &.is-100x100
+    height: 6.25rem
+    width: 6.25rem
 
 // Line Clamp
 // -----------------------------------------------------------------------------
@@ -37,17 +40,21 @@
 
 // Line Clamp
 // -----------------------------------------------------------------------------
-.is-underline::after
-  content: ""
-  display: block
-  position: relative
-  width: 4rem
-  border-radius: 0.25rem
-  height: 0.25rem
-  margin: 0.5rem 0 1.5rem 0
-  background-color: $primary-color
-  background-color: var(--color-primary)
-
+.underscore
+  &::after
+    content: ""
+    display: block
+    position: relative
+    width: 4.5rem
+    border-radius: 0.25rem
+    height: 0.25rem
+    margin: 0.5rem 0 1.5rem 0
+    background-color: $primary-color
+    background-color: var(--color-primary)
+  &.is-center
+    &::after
+      margin-left: auto
+      margin-right: auto
 
 // Hidden responsive
 // --------------------------------------------------

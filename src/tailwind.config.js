@@ -20,7 +20,7 @@ module.exports = {
       secondary: '#102b7b',
       title: '#111',
       gray: {
-        100: 'rgba(0, 0, 0, .08)',
+        100: '#fafafa',
         // 200: '#eeeeee',
         200: '#F3F5F9',
         300: '#e0e0e0',
@@ -58,7 +58,8 @@ module.exports = {
         44: '2.75rem'
       },
       backgroundOpacity: {
-        40: '0.4'
+        40: '0.4',
+        60: '0.6'
       },
       maxWidth: {
         740: '46.25rem',
@@ -67,7 +68,7 @@ module.exports = {
         extreme: '81.25rem'
       },
       minHeight: {
-        'lg': '32rem'
+        lg: '32rem'
       }
 
     }

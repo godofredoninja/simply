@@ -162,6 +162,13 @@ q
     top: 0
     width: 100%
 
+// Social Media Color
+// -----------------------------------------------------------------------------
+@each $social-name, $color in $social-colors
+  // .c-#{$social-name} { color: $color !important; }
+  .bg-#{$social-name}
+    background-color: $color !important
+
 // LazyLoad Image Imate
 // -----------------------------------------------------------------------------/ }
 @keyframes fadeIn

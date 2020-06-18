@@ -9,6 +9,15 @@
 %unselectable
   +unselectable
 
+=ltr-property($property, $spacing, $right: true)
+  $normal: if($right, "right", "left")
+  $opposite: if($right, "left", "right")
+  @if $rtl
+    #{$property}-#{$opposite}: $spacing
+  @else
+    #{$property}-#{$normal}: $spacing
+
+
 // Responsiveness
 
 =mobile-up

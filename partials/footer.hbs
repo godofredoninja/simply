@@ -4,7 +4,7 @@
             {{!-- About --}}
             <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
                 <div class="footer-items flexColumnTop flex-grow">
-                    <h3 class="footer-items-title is-underline text-22">{{t "About Us"}}</h3>
+                    <h3 class="footer-items-title underscore text-22">{{t "About Us"}}</h3>
                     <div class="footer-b flex-grow mb-4">
                         <p class="mb-4 text-lg">{{@site.description}}</p>
                     </div>
@@ -17,7 +17,7 @@
             {{!-- Tag Cloud --}}
             <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
                 <div class="footer-items footer-tags flex-grow">
-                    <h3 class="footer-items-title is-underline text-22">{{t "Tags"}}</h3>
+                    <h3 class="footer-items-title underscore text-22">{{t "Tags"}}</h3>
                     <div class="buttons">
                     {{#get "tags" limit="10" order="desc"}}
                         {{#foreach tags}}
@@ -32,7 +32,7 @@
             {{#if @labs.members}}
             <div class="col s12 m6 l4 mb-12 md:mb-8 flexColumnTop">
                 <div class="footer-items flex-grow">
-                    <h3 class="footer-items-title is-underline text-22">{{t "Subscribe"}}</h3>
+                    <h3 class="footer-items-title underscore text-22">{{t "Subscribe"}}</h3>
                     <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
 
                     {{!-- Form --}}

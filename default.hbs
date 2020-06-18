@@ -43,21 +43,23 @@
     </script> --}}
 </head>
 <body class="{{block "special_body_class"}}">
-    <div class="site-wrapper flexColumnTop">
-        {{!-- Header Content ./partials/layout/header.hbs --}}
-        {{> "layout/header"}}
+    <div class="simply">
+        <div class="simply-viewport flexColumnTop">
+            {{!-- Header Content ./partials/layout/header.hbs --}}
+            {{> "layout/header"}}
 
-        {{!-- Subscribe and tag -> this will be below the header --}}
-        {{!-- {{#is "index, home, tag"}}{{> "widget/subscribe-and-secondary-menu"}}{{/is}} --}}
+            {{!-- Subscribe and tag -> this will be below the header --}}
+            {{!-- {{#is "index, home, tag"}}{{> "widget/subscribe-and-secondary-menu"}}{{/is}} --}}
 
-        {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        <main class="main relative {{{block "special_site_main_class"}}}">{{{body}}}</main>
+            {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
+            <main class="simply-main relative {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
-        {{!-- Instagram --}}
-        {{!-- {{#is "post"}}<div class="instagram js-instagram u-hide u-relative u-bgColorGrayLight"></div>{{/is}} --}}
+            {{!-- Instagram --}}
+            {{!-- {{#is "post"}}<div class="instagram js-instagram u-hide u-relative u-bgColorGrayLight"></div>{{/is}} --}}
 
-        {{!-- Footer Content --}}
-        {{>"footer"}}
+            {{!-- Footer Content --}}
+            {{>"footer"}}
+        </div>
     </div>
 
     {{!-- Search box --}}

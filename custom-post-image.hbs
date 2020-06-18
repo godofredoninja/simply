@@ -4,10 +4,10 @@
 {{#post}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-article{{/contentFor}}
+{{#contentFor "special_body_class"}}is-article has-cover is-head-transparent{{/contentFor}}
 
 <article class="post mb-10 relative">
-    <div class="postImage relative bg-dark min-h-lg lg:h-screen">
+    <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:h-screen py-24">
         {{#if feature_image}}
             {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
             {{> "helper/helper-image-cover"}}

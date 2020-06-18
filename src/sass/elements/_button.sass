@@ -1,12 +1,11 @@
 $button-color: rgba(0,0,0,.68)
 $button-background-color: #fff
-$button-family: false
 
 $button-border-color: rgba(0,0,0,.54)
 $button-border-width: 1px
 
-// $button-padding-vertical: calc(0.5em - #{$button-border-width})
-// $button-padding-horizontal: 1em
+$button-padding-vertical: calc(0.5em - #{$button-border-width})
+$button-padding-horizontal: 1em
 
 $button-hover-color: rgba(0,0,0,.84)
 $button-hover-border-color: rgba(0,0,0,.84)
@@ -16,22 +15,7 @@ $button-focus-border-color: #3273dc
 $button-focus-box-shadow-size: 0 0 0 0.125em
 $button-focus-box-shadow-color: rgba(#3273dc, 0.25)
 
-// $button-active-color: #363636
 $button-active-border-color: rgba(0,0,0,.68)
-
-// $button-text-color: $text
-// $button-text-decoration: underline
-// $button-text-hover-background-color: $background
-// $button-text-hover-color: $text-strong
-
-// $button-disabled-background-color: $scheme-main
-// $button-disabled-border-color: $border
-// $button-disabled-shadow: none
-// $button-disabled-opacity: 0.5
-
-// $button-static-color: $text-light
-// $button-static-background-color: $scheme-main-ter
-// $button-static-border-color: $border
 
 // The button sizes use mixins so they can be used at different breakpoints
 =button-small
@@ -54,13 +38,13 @@ $button-active-border-color: rgba(0,0,0,.68)
 .button
   @extend %control
   @extend %unselectable
+  @extend %font-sans
+
   background-color: $button-background-color
   border-color: $button-border-color
   border-width: $button-border-width
   color: $button-color
   cursor: pointer
-  @if $button-family
-    font-family: $button-family
   justify-content: center
   padding: 0 .875em
   text-align: center
@@ -70,48 +54,61 @@ $button-active-border-color: rgba(0,0,0,.68)
   &:hover
     border-color: $button-hover-border-color
     color: $button-hover-color
-  // &:focus
-  //   border-color: $button-focus-border-color
-  //   color: $button-focus-color
-  //   &:not(:active)
-  //     box-shadow: $button-focus-box-shadow-size $button-focus-box-shadow-color
   &:active
     border-color: $button-active-border-color
-    // color: $button-active-color
 
-  // Primary
-  &.is-primary
-    background-color: $primary-color;
-    border-color: transparent;
-    color: #fff;
+  .icon
+    &,
+    &.is-small,
+    &.is-medium,
+    &.is-large
+      height: 1.5em
+      width: 1.5em
+    &:first-child:not(:last-child)
+      +ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}), false)
+      +ltr-property("margin", $button-padding-horizontal / 4)
+    &:last-child:not(:first-child)
+      +ltr-property("margin", $button-padding-horizontal / 4, false)
+      +ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}))
+    &:first-child:last-child
+      margin-left: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
+      margin-right: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
 
-    &:hover
-      background-color: darken($primary-color, 2.5%)
+  // Generate Buttons
+  @each $name, $pair in $colors
+    $color: nth($pair, 1)
+    $color-invert: nth($pair, 2)
 
-  &.is-dark-blue
-    background-color: $dark-blue-500
-    border-color: transparent;
-    color: #fff;
+    &.is-#{$name}
+      background-color: $color
+      border-color: transparent
+      color: $color-invert
+      &:hover
+        background-color: darken($color, 2.5%)
+        border-color: transparent
+        @if length($pair) == 3
+          $color-light: nth($pair, 3)
+          color: $color-light
+        @else
+          color: $color-invert
 
-    &:hover
-      background-color: lighten($dark-blue-500, 4%)
+
+      &.is-outlined
+        background-color: transparent
+        border-color: $color
+        color: $color
+
+        &:hover
+          background-color: $color
+          border-color: $color
+          color: $color-invert
+
 
   // Sizes
   &.is-small
     +button-small
   &.is-x-small
     +button-x-small
-
-  &.is-primary
-    &.is-outlined
-      background-color: transparent
-      border-color: $primary-color
-      color: $primary-color
-      &:hover
-        background-color: $primary-color;
-        border-color: $primary-color;
-        color: #fff;
-
 
   // circle
   &.is-circle

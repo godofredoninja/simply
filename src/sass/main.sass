@@ -12,7 +12,8 @@ $ppp: #2ecc71
 
 // Abstracts
 // -----------------------------------------------------------------------------
-@import abstracts/variables
+@import utilities/function
+@import "abstracts/variables.scss"
 @import abstracts/extend
 @import abstracts/mixins
 
@@ -31,13 +32,13 @@ $ppp: #2ecc71
 
 // elements
 // -----------------------------------------------------------------------------
-@import "elements/button"
-@import "elements/container"
-@import "elements/icon"
+@import elements/button
+@import elements/container
+@import elements/icon
 // @import "elements/image"
-@import "elements/notification"
+@import elements/notification
 // @import "elements/progress"
-@import "elements/table"
+@import elements/table
 
 // Components
 // -----------------------------------------------------------------------------
@@ -45,6 +46,11 @@ $ppp: #2ecc71
 @import components/story
 @import components/bookmark
 @import components/gallery
+@import components/animated
+
+// Helper
+// -----------------------------------------------------------------------------
+@import helper/hero-cover
 
 // Layout
 // -----------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+// Header Transparent
+.is-head-transparent
+  .header
+    // border: none
+    background-color: rgba(255, 255, 255, 0)
+
+    &:not(.has-menu)
+      text-shadow: rgba(0,0,0,.1) 0 1px 1px
+      box-shadow: none
+      border-bottom: 1px solid hsla(0, 0%, 100%, .1)
+
+      .menu-burger span
+        background: #fff
+
+      .header-logo,
+      .mainMenu-link,
+        color: #fff
+
+      .button.is-white
+        background-color: transparent
+        color: #fff
+
+//
+.has-cover
+  .simply-hero-cover
+    // margin-top: -($header-height + 0.0625rem)
+    margin-top: -$header-height

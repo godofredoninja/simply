@@ -25,7 +25,7 @@
 
             <div class="header-action flex items-center">
                 {{!-- Light and Dark Mode --}}
-                <a href="javascript:;" class="js-dark-mode hover:text-gray-500 mr-3" aria-label="Dark and Light Mode" >
+                <a href="javascript:;" class="js-dark-mode button is-white" aria-label="Dark and Light Mode">
                     <svg class="icon icon--moon hidden"><use xlink:href="#icon-moon"></use></svg>
                     <svg class="icon icon--sunny"><use xlink:href="#icon-sunny"></use></svg>
                 </a>
@@ -33,7 +33,7 @@
                 {{!-- Toggle Searcg --}}
                 <a href="javascript:;"
                     aria-label="Toggle Search"
-                    class="js-search-open hover:text-gray-500 u-hide godo-tracking"
+                    class="js-search-open button is-white godo-tracking"
                     data-event-category="Header"
                     data-event-action="Search"
                     data-event-label="Click"
@@ -44,7 +44,7 @@
                 {{!-- Member --}}
                 {{#if @member}}
                 {{else}}
-                    <a class="button mr-2 ml-3 text-sm font-medium" href="{{@site.url}}/signin/">{{t "Log in"}}</a>
+                    <a class="button is-white mr-2 ml-3 text-sm font-medium" href="{{@site.url}}/signin/">{{t "Log in"}}</a>
                     <a class="button is-primary text-sm font-medium" href="{{@site.url}}/signup/">{{t "Subscribe"}}</a>
                 {{/if}}
 
