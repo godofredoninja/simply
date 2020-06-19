@@ -6,6 +6,7 @@ import 'lazysizes'
 import loadScript from './components/load-script'
 import videoResponsive from './components/video-responsive'
 import resizeImagesInGalleries from './components/resize-images-galleries'
+import mediumZoomImg from './components/medium-zoom'
 
 const simplySetup = () => {
   /* All Video Responsive
@@ -15,6 +16,10 @@ const simplySetup = () => {
   /* Gallery Card
   /* ---------------------------------------------------------- */
   resizeImagesInGalleries()
+
+  /* medium-zoom
+  /* ---------------------------------------------------------- */
+  mediumZoomImg('.post-body img')
 
   /* highlight prismjs
   /* ---------------------------------------------------------- */

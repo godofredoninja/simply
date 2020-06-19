@@ -830,6 +830,14 @@ q::before, q::after {
   min-height: 50vh;
 }
 
+.medium-zoom-overlay {
+  z-index: 50;
+}
+
+.medium-zoom-image--opened {
+  z-index: 51;
+}
+
 .video-responsive {
   display: block;
   height: 0;
