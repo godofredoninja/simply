@@ -1,7 +1,15 @@
-/* global sitePrismJscomponents Prism */
-import 'prismjs'
+/* global prismJsComponents */
+
+// https://ghost.org/tutorials/code-syntax-highlighting/
+// https://cdnjs.com/libraries/prism/
+
+import Prism from 'prismjs'
 import 'prismjs/plugins/autoloader/prism-autoloader'
 
-if (typeof sitePrismJscomponents !== 'undefined') {
-  Prism.plugins.autoloader.languages_path = sitePrismJscomponents
-}
+(prism => {
+  prism.highlightAll()
+
+  if (typeof prismJsComponents === 'undefined') return
+
+  prism.plugins.autoloader.languages_path = prismJsComponents
+})(Prism)

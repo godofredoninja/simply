@@ -92,7 +92,7 @@ function styles (done) {
 
 // Scripts
 function scripts (done) {
-  const files = ['main']
+  const files = ['main', 'prismjs']
 
   merge(files.map(function (file) {
     return pump([

@@ -49,6 +49,7 @@
   },
   "dependencies": {
     "lazysizes": "^5.2.2",
+    "prismjs": "^1.20.0",
     "tailwindcss": "^1.4.6"
   }
 }
