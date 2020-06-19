@@ -1,36 +1,24 @@
+{{!-- Layout --}}
 {{!< default}}
 
-{{#contentFor "special_body_class"}}is-article{{/contentFor}}
-
-{{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
 
-<article class="post u-marginBottom40 u-relative">
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-    <header class="post-header u-container u-maxWidth740 u-paddingTop30">
-        <h1 class="post-title u-fontSize40 u-paddingTop20 u-contentTitle u-paddingBottom2 u-fontWeightBold u-md-fontSizeLarger">{{title}}</h1>
+<article class="post mb-10 pt-8 lg:p-16 relative">
+    <header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
+        <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
+        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
     </header>
 
-    {{!-- Figure --}}
-    {{#if feature_image}}
-        <figure class="post-image u-block u-marginAuto u-marginTop30 u-maxWidth1100">
-            <img
-                srcset="{{img_url feature_image size="s"}} 300w,
-                        {{img_url feature_image size="m"}} 600w,
-                        {{img_url feature_image size="l"}} 1000w,
-                        {{img_url feature_image size="xl"}} 2000w"
-                sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 1000px"
-                src="{{img_url feature_image size="xl"}}"
-                alt="{{title}}"
-                class="u-block u-marginAuto"
-            />
-        </figure>
-    {{/if}}
+    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+    {{> "article/article-featured-image" image=feature_image class="block mx-auto max-w-1000 mt-12"}}
 
-    <section id="post-body" class="post-body u-container u-maxWidth740 u-relative u-clear">
-        {{content}}
-    </section>
-
+    <div class="post-wrap max-w-1100 relative mx-auto">
+        {{!-- All Content --}}
+        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
+    </div>
 </article>
 
 {{/post}}
