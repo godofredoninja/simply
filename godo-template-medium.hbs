@@ -1,0 +1,57 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-home is-frontpage{{/contentFor}}
+
+{{#is "paged"}}
+
+<div class="site-post feed-entry-content container mx-auto pt-12">
+    <div class="feed-entry-wrap max-w-1100 mx-auto">
+        <div class="row">
+            {{#foreach posts visibility="all"}}
+                {{#has number="7, 8"}}
+                    <div class="col s12 m6 ss2">{{> "story/story-grid"}}</div>
+                {{else}}
+                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{else}}
+
+<section class="homeHero pt-10">
+    <div class="homeHero-container container mx-auto flex flex-col items-stretch md:flex-row md:flex-wrap lg: lg:flex-nowrap">
+
+        {{!-- Fisrt Large Post - partials/home/home-first-post.hbs --}}
+        {{#foreach posts limit="1"}} {{> "home/home-first-post"}} {{/foreach}}
+
+        {{!-- Post small - partials/home/home-small-post.hbs --}}
+        <div class="homeHero-smallCardWrap flex flex-col md:w-3/6 lg:w-full">
+            {{#foreach posts from="2" to="4"}} {{> "home/home-small-post"}} {{/foreach}}
+        </div>
+
+        {{!-- Post medium - partials/home/home-medium-post.hbs --}}
+        {{#foreach posts from="5" to="5"}} {{> "home/home-medium-post"}} {{/foreach}}
+    </div>
+</section>
+
+<div class="site-post feed-entry-content container mx-auto pt-12">
+    <div class="feed-entry-wrap max-w-1100 mx-auto">
+        <div class="row">
+            {{#foreach posts from="6" to="14"}}
+                {{#has number="12, 13"}}
+                    <div class="col s12 m6 ss2">{{> "story/story-grid" }}</div>
+                {{else has number="14"}}
+                    <div class="col s12 m6 l12 ss1">{{> "story/story-grid"}}</div>
+                {{else}}
+                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{/is}}

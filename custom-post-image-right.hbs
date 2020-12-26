@@ -1,0 +1,52 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#post}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article is-article-image-right{{/contentFor}}
+
+<article class="post mb-10 relative">
+    <div class="lg:mx-12 flex flex-col-reverse md:flex-row">
+        <div class="flex flex-col justify-center md:w-3/6">
+            <header class="post-header px-4 max-w-740 pt-8 lg:mr-16 md:pb-8">
+                {{#if primary_tag}}
+                <div class="mb-3 text-gray-500 tracking-wider text-sm font-medium">
+                    {{#primary_tag}}<a class="uppercase hover:underline" href="{{url}}">{{name}}</a>{{/primary_tag}}
+                </div>
+                {{/if}}
+
+                <h1 class="post-title text-32 md:text-4xl text-title lg:text-5xl">{{title}}</h1>
+                {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
+
+                {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
+                <div class="flex mt-8">{{> "components/author-meta"}}</div>
+            </header>
+        </div>
+
+        {{#if feature_image}}
+        <figure class="post-image md:w-3/6">
+            <img class="block w-full object-cover h-88 lg:h-98"
+                srcset="{{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w,
+                        {{img_url feature_image size="xl"}} 2000w"
+                sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+                src="{{img_url feature_image size="xl"}}"
+                alt="{{title}}"
+            />
+        </figure>
+        {{/if}}
+    </div>
+
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
+</article>
+
+{{/post}}
+
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
+{{> "article/article-related"}}
+
+{{!-- Post Commets --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

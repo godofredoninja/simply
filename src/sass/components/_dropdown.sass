@@ -1,19 +1,37 @@
+// When the dropdown is aligned to the right side
+=is-right
+  .dropdown-menu
+    right: -1.5rem
+    left: auto
+  .dropdown-content::after
+    right: 2rem
+    left: auto
 
+// When it is active or hovering, the menu will be displayed
+=is-active-and-hover
+  .dropdown-menu
+    opacity: 1
+    pointer-events: auto
+    transform: scale(1) translateY(0)
+    transition: all .2s cubic-bezier(.4,.01,.165,.99)
+    visibility: visible
+
+// dropdown aligned by default to the left side
 .dropdown
   position: relative
 
   &.is-active,
   &.is-hoverable:hover
-    .dropdown-menu
-      opacity: 1
-      pointer-events: auto
-      transform: scale(1) translateY(0)
-      transition: all .2s cubic-bezier(.4,.01,.165,.99)
-      visibility: visible
+    +is-active-and-hover
+
+  // is Right
+  &.is-right
+    +is-right
 
 .dropdown-menu
   left: -1.5rem
   min-width: 12rem
+  max-width: 18rem
   opacity: 0
   padding-top: 4px
   position: absolute
@@ -24,7 +42,7 @@
   z-index: 20
 
 .dropdown-content
-  background-color: #fff
+  background-color: var(--dropdown-bg)
   border-radius: 3px
   box-shadow: 0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.35)
   padding-bottom: .5rem
@@ -36,7 +54,7 @@
     display: block
     width: 14px
     height: 14px
-    background: #fff
+    background: var(--dropdown-bg)
     transform: rotate(45deg) translate(6px,6px)
     box-shadow: -1px -1px 1px -1px rgba(0,0,0,.54)
     position: absolute
@@ -58,7 +76,8 @@ a.dropdown-item
   font-weight: 500
 
 .dropdown-divider
-  background-color: #ededed
+  background-color: var(--border-color)
+  // background-color: #ededed
   border: none
   display: block
   height: 1px

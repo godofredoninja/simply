@@ -1,0 +1,96 @@
+<footer class="footer pt-10">
+    <section class="mx-auto max-w-extreme px-4">
+        <div class="row">
+            {{!-- About --}}
+            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
+                <div class="footer-items flexColumnTop flex-grow">
+                    <h3 class="footer-items-title underscore text-22">{{t "About Us"}}</h3>
+                    <div class="footer-b flex-grow mb-4">
+                        <p class="mb-4 text-base">{{@site.description}}</p>
+                    </div>
+
+                    {{!-- Social Media - partilas/widget/social-media.hbs --}}
+                    {{> "widget/social-media" class="footer-social-media"}}
+                </div>
+            </div>
+
+            {{!-- Tag Cloud --}}
+            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
+                <div class="footer-items footer-tags flex-grow px-4">
+                    <h3 class="footer-items-title underscore text-22">{{t "Tags"}}</h3>
+
+                    {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
+                    <div class="my-3 flex items-center justify-between leading-tight">
+                        <a href="{{url absolute="true"}}"
+                            title="{{name}}"
+                            class="capitalize pl-3 border-l-4 border-primary"
+                            {{#if accent_color}}style="border-color:{{accent_color}}"{{/if}}>{{name}}</a>
+                        <div class="footer-arrow"></div>
+                    </div>
+                    {{/foreach}}{{/get}}
+                </div>
+            </div>
+
+            {{!-- members subscribe --}}
+            {{#if @labs.members}}
+            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
+                <div class="footer-items flex-grow">
+                    <h3 class="footer-items-title underscore text-22">{{t "Subscribe"}}</h3>
+                    <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
+
+                    {{!-- Form subscribe --}}
+                    <form class="max-w-sm simply-form" data-members-form="subscribe">
+                        <input
+                            class="footer-form-input"
+                            data-members-email
+                            type="email"
+                            placeholder="{{t "youremail@example.com"}}"
+                            aria-label="{{t "youremail@example.com"}}"
+                            autocomplete="off"
+                            required
+                        />
+
+                        <button class="button is-primary w-full mt-4" type="submit">
+                            <span class="button-content">Continue</span>
+                            <span class="button-loader hidden">{{> "icons/loader"}}</span>
+                        </button>
+
+                        {{!-- success --}}
+                        <div class="message-success mx-auto max-w-xl w-full bg-success text-white p-2 rounded-md mt-4 hidden text-sm">
+                            {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
+                        </div>
+
+                        {{!-- error --}}
+                        <div class="message-error mx-auto max-w-xl w-full bg-danger text-white p-2 rounded-md mt-4 hidden text-sm">
+                            {{t "Please enter a valid email address!"}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+            {{/if}}
+        </div>
+
+        {{#if @site.secondary_navigation}}
+        <div class="footer-bottom flex flex-col text-center py-8 mt-8 lg:items-baseline lg:flex-row lg:text-left">
+            {{!-- Copy --}}
+            <div class="text-sm flex-none lg:max-w-xs">
+                &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
+                <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
+                by
+                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+            </div>
+
+            {{!-- Footer Menu --}}
+            <div class="flex-1 text-sm py-4 lg:text-right lg:py-0 lg:ml-6">{{navigation type="secondary"}}</div>
+        </div>
+        {{else}}
+        <div class="footer-bottom text-center py-8 mt-8 text-sm">
+            &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
+            <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
+            by
+            <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+        </div>
+        {{/if}}
+
+    </section>
+</footer>

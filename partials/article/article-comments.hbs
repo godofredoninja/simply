@@ -1,4 +1,4 @@
-<div id="post-comments" class="post-comments js-comments bg-gray-200 pt-8 pb-8">
+<div id="post-comments" class="post-comments js-comments bg-gray-200 pt-8 pb-8 hidden">
     <div class="mx-auto px-4 max-w-1000">
         <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
             {{!-- Disqus Comments --}}
@@ -17,7 +17,7 @@
         this.page.identifier = 'ghost-{{comment_id}}';
     };
 
-    d.querySelector('.js-comments').classList.remove('u-hide')
+    d.querySelector('.js-comments').classList.remove('hidden')
     /*var disqusComments = d.querySelectorAll('.js-comments');
     disqusComments.forEach(function(item){item.classList.remove('u-hide')});*/
 

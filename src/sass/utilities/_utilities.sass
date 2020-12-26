@@ -9,6 +9,13 @@
   text-overflow: ellipsis
   white-space: nowrap
 
+// Gradient
+// $primary-color: #2ECC71
+// $accent-color: #102B7B
+
+.u-primaryGradient
+  background: linear-gradient(135deg, rgba($dark-blue-500, .7), rgba($primary-color, .7))
+
 // Card
 // -----------------------------------------------------------------------------
 .card
@@ -29,14 +36,29 @@
     height: 6.25rem
     width: 6.25rem
 
+//  Hover animation
+// -----------------------------------------------------------------------------
+.has-overlay
+  .overlay-toggle
+    opacity: 0
+    visibility: hidden
+    transition: opacity .3s ease;
+
+  &:hover .overlay-toggle
+    opacity: 1
+    visibility: visible
+
 // Line Clamp
 // -----------------------------------------------------------------------------
+.lineClamp
+  @extend  %line-clamp
 
 .lineClamp-2
   @extend %line-clamp
 
   -webkit-line-clamp: 2
-  max-height: 2.7em
+  // max-height: 2.7em
+  max-height: 2.8em
 
 // Line Clamp
 // -----------------------------------------------------------------------------
@@ -45,9 +67,10 @@
     content: ""
     display: block
     position: relative
-    width: 4.5rem
+    width: 1.5em
     border-radius: 0.25rem
-    height: 0.25rem
+    // height: 0.1875rem
+    height: .15em
     margin: 0.5rem 0 1.5rem 0
     background-color: $primary-color
     background-color: var(--color-primary)
@@ -57,7 +80,7 @@
       margin-right: auto
 
 // Hidden responsive
-// --------------------------------------------------
+// -----------------------------------------------------------------------------
 
 +tablet
   .hide-before-md

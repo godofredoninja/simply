@@ -1,0 +1,22 @@
+.search
+  &-form
+    input
+      border: none
+      width: 100%
+      box-shadow: none
+      background: transparent
+
+      &:focus
+        box-shadow: none
+
+  &-results
+    overflow: auto
+    // max-height: calc(100vh - 15rem)
+    max-height: calc(100vh - 12rem)
+    -webkit-overflow-scrolling: touch
+
+    a
+      &:hover,
+      &.is-active
+        // background: #dedede
+        background: rgba(170, 170, 170, .35)

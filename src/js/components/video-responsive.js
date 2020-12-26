@@ -1,3 +1,5 @@
+import getAll from '../app/get-all'
+
 export default () => {
   /* Iframe SRC video */
   const selectors = [
@@ -9,7 +11,7 @@ export default () => {
     'iframe[src*="kickstarter.com"][src*="video.html"]'
   ]
 
-  const iframes = document.querySelectorAll(selectors.join(','))
+  const iframes = getAll(selectors.join(','))
 
   if (!iframes.length) return
 

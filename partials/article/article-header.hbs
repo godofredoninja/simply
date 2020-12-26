@@ -1,38 +1,20 @@
-<header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
+<header class="post-header px-4 mx-auto max-w-740 relative z-3">
+    {{#if primary_tag}}
+    <div class="mb-3 text-gray-500 tracking-wider text-sm font-medium">
+        {{#primary_tag}}
+        <a class="uppercase hover:underline" href="{{url}}">{{name}}</a>
+        {{/primary_tag}}
+    </div>
+    {{/if}}
+
     <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
-    {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
+    {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
 
-    <div class="post-share flex mt-8">
-        {{!-- Meta - partials/helper/helper-meta.hbs --}}
-        {{> "helper/helper-author-meta"}}
+    <div class="post-share flex flex-col md:flex-row mt-8">
+        {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
+        {{> "components/author-meta"}}
 
-        {{!-- Share --}}
-        <aside class="post-shasre flex items-center flex-none hide-before-md">
-            <span class="share-label text-gray-500 text-sm mr-2">{{t "Share"}}:</span>
-            {{!-- Share on Twitter --}}
-            <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="{{t "Share on"}} Twitter"
-                class="godo-tracking js-share text-gray-900 mr-2">
-                <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
-            </a>
-            {{!-- Share on Linkeding --}}
-            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="{{t "Share on"}} Linkedin"
-                class="godo-tracking js-share text-gray-900 mr-2">
-                <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
-            </a>
-            {{!-- Share on Facebook --}}
-            <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="{{t "Share on"}} Facebook"
-                class="godo-tracking js-share text-gray-900">
-                <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
-            </a>
-        </aside>
+        {{!-- Social Share - ./partials/components/social-share --}}
+        {{> "components/social-share" class="order-first mb-6 md:mb-0 md:order-none"}}
     </div>
 </header>

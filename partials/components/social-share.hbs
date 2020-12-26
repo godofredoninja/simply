@@ -1,0 +1,27 @@
+<aside class="post-shasre flex items-center flex-none md:justify-end{{#if class}} {{class}}{{/if}}">
+    <span class="share-label text-gray-500 text-sm mr-2">{{t "Share"}}:</span>
+    {{!-- Share on Twitter --}}
+    <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{{t "Share on"}} Twitter"
+        class="godo-tracking js-share text-gray-900 mr-2">
+        <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    {{!-- Share on Linkeding --}}
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{{t "Share on"}} Linkedin"
+        class="godo-tracking js-share text-gray-900 mr-2">
+        <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
+    </a>
+    {{!-- Share on Facebook --}}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="{{t "Share on"}} Facebook"
+        class="godo-tracking js-share text-gray-900">
+        <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+</aside>

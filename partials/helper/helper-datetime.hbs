@@ -1,6 +1,0 @@
-<div class="hh-date flex items-center{{#if class}} {{class}}{{else}} text-gray-500 text-sm{{/if}}">
-    <time class="datetime capitalize" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
-    <span class="bull mx-1">&bull;</span>
-    <span class="readingTime cursor-default" title="{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
-    {{#if featured}}<svg class="icon icon--star is-small ml-1"><use xlink:href="#icon-star"></use></svg>{{/if}}
-</div>

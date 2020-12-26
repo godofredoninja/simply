@@ -7,26 +7,17 @@
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
 <article class="post mb-10 pt-8 lg:pt-10 relative">
-    {{!-- Article Header - partials/article/article-header.hbs --}}
+    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
-    <div class="post-wrap max-w-1100 relative mx-auto">
-        {{!-- All Content --}}
-        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
-    </div>
-
-    {{!-- [tags, prev_post, next_post] - partials/article/article-footer.hbs --}}
-    {{> "article/article-footer"}}
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
 </article>
+
 {{/post}}
 
-{{!-- Article related - partials/article/article-related.hbs --}}
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
 {{> "article/article-related"}}
 
-{{#post}}
-    {{!-- post Commets --}}
-    {{> "article/article-comments"}}
-
-    {{!-- Share Article - Facebook Twitter Whatsapp --}}
-    {{> "article/article-share-sticky"}}
-{{/post}}
+{{!-- Post Commets --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

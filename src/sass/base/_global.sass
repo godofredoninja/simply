@@ -19,8 +19,9 @@ html
 
 body
   // @extend %primary-font
-
-  color: $primary-text-color
+  background-color: var(--bg)
+  color: var(--body-color)
+  // color: $primary-text-color
   font-size: 1rem
   font-style: normal
   font-weight: 400
@@ -39,12 +40,19 @@ a
   &:hover
     outline: 0
 
+.link
+  color: var(--color-link)
+  &.is-hover:hover
+    color: var(--color-link-hover)
+
+
 // 1. Blockquote
 // --------------------------------------------------
 
 blockquote
   border-left: 0.25rem solid currentColor
-  color: $gray-900
+  // color: $gray-900
+  color: var(--title-color)
   font-size: 1.375rem
   font-style: italic
   line-height: 1.5
@@ -68,13 +76,14 @@ figcaption
   // @extend %text-muted
   @extend %font-sans
 
-  color: rgba(0, 0, 0, .68)
+  // color: rgba(0, 0, 0, .68)
+  color: var(--gray-500)
   display: block
   // font-family: $primary-font
   font-feature-settings: 'liga' on, 'lnum' on
-  font-size: 1rem
+  font-size: 0.875rem
   font-style: normal
-  font-weight: 400
+  font-weight: 500
   letter-spacing: 0
   line-height: 1.4
   margin-top: .625rem
@@ -92,7 +101,8 @@ figure
 
 hr
   border: 0
-  border-top: 1px solid rgba(0, 0, 0, .1)
+  // border-top: 1px solid rgba(0, 0, 0, .1)
+  border-top: 1px solid var(--border-color)
   box-sizing: content-box
   height: 0
   margin: 2rem 0
@@ -173,18 +183,54 @@ q
 
 // Social Media Color
 // -----------------------------------------------------------------------------
-@each $social-name, $color in $social-colors
-  // .c-#{$social-name} { color: $color !important; }
-  .bg-#{$social-name}
-    background-color: $color !important
+// @each $social-name, $color in $social-colors
+//   // .c-#{$social-name} { color: $color !important; }
+//   .bg-#{$social-name}
+//     background-color: $color !important
 
-// LazyLoad Image Imate
-// -----------------------------------------------------------------------------/ }
-@keyframes fadeIn
-  0%
-    opacity: 0
-  100%
-    opacity: 1
 
 .blur-up
-  animation: fadeIn 1.5s ease-out
+  opacity: 0
+
+  &.lazyloaded
+    opacity: 1
+    transition: opacity .5s ease-in-out
+    // opacity .5s ease
+
+// 15. Loanding Bar
+// -----------------------------------------------------------------------------
+.loadingBar
+  background-color: #48e79a
+  height: 2px
+  transform: translateX(100%)
+  z-index: 800
+
+.is-loading .loadingBar
+  animation: loading-bar 1s ease-in-out infinite
+  animation-delay: .8s
+  display: block
+
+// Medium Zoom - Header Animation
+// -----------------------------------------------------------------------------
+.medium-zoom--opened
+  .header
+    opacity: 0
+    transition: transform .2s, opacity .2s, visibility 0s 2s, -webkit-transform .2s
+    visibility: hidden
+    transform: translateY(-100%)
+
+// Subscribe Message
+// -----------------------------------------------------------------------------
+
+.subscribe-success-message
+  transform: translateY(-175%)
+  transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s
+
+.subscribe-success .subscribe-success-message
+  visibility: visible
+  transform: translateY(0)
+
+.subscribe-success-message.close
+  visibility: hidden
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+  transform: translateY(-175%)

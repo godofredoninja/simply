@@ -1,6 +1,6 @@
-<div class="js-social-media {{class}}">
+<div class="js-social-media social-media{{#if class}} {{class}}{{/if}}">
     {{#if @site.facebook}}
-    <a class="godo-tracking {{classItems}}"
+    <a class="godo-tracking p-2 inline-block hover:text-facebook"
         data-event-category="Header"
         data-event-action="Social"
         data-event-label="Facebook"
@@ -11,12 +11,11 @@
         target="_blank"
         rel="noopener noreferrer">
         <svg class="icon icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
-        <span>Facebook</span>
     </a>
     {{/if}}
 
     {{#if @site.twitter}}
-    <a class="godo-tracking {{classItems}}"
+    <a class="godo-tracking p-2 inline-block hover:text-twitter"
         data-event-category="Header"
         data-event-action="Social"
         data-event-label="Twitter"
@@ -27,7 +26,6 @@
         target="_blank"
         rel="noopener noreferrer">
         <svg class="icon icon--twitter"><use xlink:href="#icon-twitter"></use></svg>
-        <span>Twitter</span>
     </a>
     {{/if}}
 </div>

@@ -6,11 +6,11 @@ $blue :#3eb0ef;
 :not(pre) > code {
   border-radius: 3px;
   white-space: normal;
-  // background: $whitegrey;
-  background: rgba(212, 53, 159, 0.03);
+  background: $whitegrey;
+  // background: rgba(212, 53, 159, 0.03);
   text-shadow: none;
-  // color: $darkgrey;
-  color: #b32585;
+  color: $darkgrey;
+  // color: #b32585;
   font-size: .8em;
   padding: .2rem .33rem;
   vertical-align: 1%;
@@ -47,7 +47,7 @@ pre {
 /* stylelint-disable-next-line */
 code,
 pre {
-  font-family: "Fira Code", Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-family: Space Mono, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;

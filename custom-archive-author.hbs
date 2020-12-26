@@ -2,40 +2,41 @@
 {{!< default}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}archive-author{{/contentFor}}
-{{#contentFor "special_site_main_class"}}site-archive{{/contentFor}}
+{{#contentFor "special_body_class"}}archive-author bg-gray-150 {{/contentFor}}
 
-<div class="container">
-    <section class="row">
-        {{#post}}
-        <header class="col s12 u-marginBottom40 u-paddingBottom10 u-textAlignCenter">
-            <h1 class="site-archive-title u-underline u-fontSizeLargest u-md-fontSize36 u-contentTitle">{{title}}</h1>
-            {{#if custom_excerpt}}<p class="site-archive-des u-fontSize20 u-marginAuto u-maxWidth740">{{custom_excerpt}}</p>{{/if}}
-        </header>
-        {{/post}}
+{{#post}}
+<header class="author-header">
+    <div class="px-4 py-vw6 mx-auto max-w-3xl text-center">
+        <h1 class="text-5xl text-title">{{title}}</h1>
+        <div class="mt-5 text-lg text-gray-500">{{content}}</div>
+    </div>
+</header>
+{{/post}}
+
+<div class="container px-4 mx-auto pb-12">
+    <section class="row flex-row justify-center">
 
         {{#get "authors" limit="all"}}
         {{#foreach authors}}
 
-        <div class="col s12 m6 l4 u-flexColumnTop">
-            <article class="author-card u-marginBottom30 u-relative u-flexColumnTop u-flex--1">
-                <header class="u-flex--1">
-                    <h2 class="author-card-name u-fontSizeLarge u-textCapitalize"><a href="{{url}}">{{name}}</a></h2>
-                    {{#if bio}}<p class="author-card-bio u-paddingTop15">{{bio}}</p>{{/if}}
+        <div class="col s12 m6 l4 flex flex-col">
+            <article class="author-card mb-8 relative flex flex-col p-5 bg-blank shadow-lg rounded-lg flex-1">
+                <header class="flex-1">
+                    <h2 class="author-card-name capitalize text-2xl font-semibold underscore"><a href="{{url}}">{{name}}</a></h2>
+                    {{#if bio}}<p class="author-card-bio text-gray-600">{{bio}}</p>{{/if}}
                 </header>
 
-                <footer class="u-relative u-textAlignCenter u-paddingTop20 u-flex u-flexCenter">
+                <footer class="relative text-center pt-5 flex items-center justify-between">
                     <div class="author-card-media u-flex1">
-                        {{#if facebook}}<a href="{{facebook_url}}" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
-                        {{#if twitter}}<a href="{{twitter_url}}" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
-                        {{#if website}}<a href="{{website}}" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
+                        {{#if facebook}}<a href="{{facebook_url}}" class="p-2 hover:text-facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
+                        {{#if twitter}}<a href="{{twitter_url}}" class="p-2 hover:text-twitter" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
+                        {{#if website}}<a href="{{website}}" class="p-2" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon icon--md"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
                     </div>
 
-                    <img class="author-card-avatar u-image u-round" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+                    <a href="{{url}}">
+                        <img class="author-card-avatar u-image rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+                    </a>
                 </footer>
-
-                {{!-- Link --}}
-                <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{name}}"></a>
             </article>
         </div>
 

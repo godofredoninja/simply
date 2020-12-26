@@ -1,17 +1,20 @@
-<aside class="sideNav u-fixed u-absolute0 u-hide-after-lg u-bgheader">
-    <div class="sideNav-wrap u-absolute0">
-        {{!-- Menu --}}
-        <nav class="sideNav-menu sideNav-section">
-            {{navigation}}
-        </nav>
+<div class="nav-mob fixed inset-0 pt-16 pb-5 bg-header h-screen z-10 w-full text-center lg:hidden">
+    <div class="nav-mob-wrap absolute inset-0 top-16 py-5 overflow-auto flex justify-between flex-col">
 
-        <div class="sideNav-section">
-            {{!-- Social Media - partilas/widget/social-media.hbs --}}
-            {{> "widget/social-media"}}
+        <div class="py-4 flex justify-center md:hidden buttons">
+            {{!-- Light and Dark Mode --}}
+            <a role="button" class="js-dark-mode button is-white" aria-label="Dark and Light Mode">
+                    <svg class="icon icon--moon m-0" style="margin-right:calc(-0.5em - 1px)"><use xlink:href="#icon-moon"></use></svg>
+                    <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
+                </a>
+
+           {{#if @labs.members}}{{#unless @member}}<a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>{{/unless}}{{/if}}
         </div>
 
-        <div class="sideNav-copyright u-textMuted u-fontSizeSmaller u-textAlignCenter u-paddingTop20 u-paddingLeft20 u-paddingRight20">
-            &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a> Design by <a href="https://goo.gl/Jf1tZe" title="Developer Web FullStack.">@GodoFredoNinja</a>
-        </div>
+        {{!-- Navigation for Mobile --}}
+        {{#if @site.navigation}}<div class="py-4">{{navigation navigationMobile=true}}</div>{{/if}}
+
+        {{!-- Social Media - partilas/widget/social-media.hbs --}}
+        {{> "widget/social-media" class="nav-mob-social-media social-media is-inline py-4"}}
     </div>
-</aside>
+</div>

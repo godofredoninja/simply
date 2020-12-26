@@ -6,22 +6,24 @@
 
   align-items: center
   font-size: $font-size-post
+  line-height: 1.6
 
   & > *
     margin-top: 1rem
     margin-bottom: 1rem
     min-width: 100%
     &:first-child
-      margin-top: 2rem
+      margin-top: 2.5rem
 
-  a:not(.kg-bookmark-container):not(.button)
-    color: $post-color-link
-    text-decoration: none
+  a:not(.kg-bookmark-container):not(.button):not(.anchor):not(.not-link):not(.gh-members-popup-close)
+    // color: var(--color-primary-dark)
+    text-decoration: underline
     word-break: break-word
-    transition: color, border-color .2s linear
-    border-bottom: 1px solid #f1f1f1
-    &:hover
-      border-bottom-color: $post-color-link
+    // transition: color, border-color .2s linear
+    // border-bottom: 1px solid #f1f1f1
+    // &:hover
+    //   color: var(--color-primary)
+    //   border-bottom-color: var(--color-primary-dark)
 
   img:not(.kg-bookmark-icon)
     // display: block
@@ -36,7 +38,9 @@
   h6
     margin-top: 2rem
     font-style: normal
-    color: $primary-text-color-title
+    color: var(--title-color)
+    margin-bottom: 0.75rem
+
     & + p
       margin-top: 0
 
@@ -68,8 +72,22 @@
 // Previous and Next post
 // -----------------------------------------------------------------------------
 
-.prev-next
+.prev-next > div
   min-height: 7.5rem
+
+// Post Upgrade
+// -----------------------------------------------------------------------------
+
+.post-upgrade:before
+  display: block
+  position: absolute
+  top: -9rem
+  left: 0
+  height: 8rem
+  width: 100%
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff)
+  content: ''
+  pointer-events: none
 
 // Media Query
 // -----------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 .footer
   background-color: $footer-bg-color
   color: $footer-color
-  padding: 4% 0
+  // padding: 4% 0
 
   a:hover:not(.button)
     color: #fff
@@ -10,9 +10,22 @@
     color: rgba(255, 255, 255, 0.95)
     font-weight: 600
 
-.footer-social-media
-  a
-    display: inline-block
-    margin-right: 0.25rem
-  span
-    display: none
+  &-bottom
+    border-top: 1px solid rgba(255, 255, 255 , .1)
+
+  &-arrow
+    width: 0
+    height: 0
+    border: 4px solid transparent
+    border-left-color: #fff
+
+.footer-form-input
+  background-color: $footer-bg-input-color
+  color: $footer-color-input
+  border-color: transparent
+
+  &::placeholder
+    color: $footer-color-input
+
+// .menu-secondary li.separator::after
+//   content: '/'

@@ -1,0 +1,119 @@
+{{!< ../default}}
+
+<div class="p-vw6 px-4">
+    {{!-- <div class="account-box mx-auto max-w-xl w-full text-center"> --}}
+
+{{#if @member.paid}}
+
+{{!-- Logged in, paying member: Show account info --}}
+<div class="subscriber-box mx-auto max-w-xl w-full">
+
+    {{#foreach @member.subscriptions}}
+        <div class="subscription">
+            <div class="subscriber-header flex items-start justify-between">
+                <div class="subscription-title">
+                    {{#if @first}}
+                        <h1 class="text-3xl mb-6 font-semibold text-title">Your account</h1>
+                    {{/if}}
+                    {{#if cancel_at_period_end}}
+                        <p>
+                            {{!-- Hey! You have an active <strong>{{@site.title}}</strong> account with access to all areas. Get in touch if have any problems or need some help getting things updated, and thanks for subscribing. --}}
+                            <strong class="subscription-expiration-warning text-danger">Your subscription will expire on {{date current_period_end format="DD MMM YYYY"}}.</strong> If you change your mind in the meantime you can turn auto-renew back on to continue your subscription.
+                        </p>
+                    {{else}}
+                        <p>
+                            Hey! You have an active <strong>{{@site.title}}</strong> account with access to all areas. Get in touch if have any problems or need some help getting things updated, and thanks for subscribing.
+                        </p>
+                    {{/if}}
+                </div>
+                {{#if @first}}
+                    <div class="subscriber-avatar w-32 h-32 relative rounded-full overflow-hidden flex-none mt-4 ml-5">
+                        <span class="absolute inset-0 text-gray-400">{{> "icons/avatar"}}</span>
+                        {{#if @member.avatar_image}}
+                            <img src="{{@member.avatar_image}}" class="image-inset" alt="" />
+                        {{/if}}
+                    </div>
+                {{/if}}
+            </div>
+            <hr>
+            <div class="subscriber-details">
+                <div class="row">
+                    <div class="col s12 m6 pb-5 subscriber-detail">
+                        <label class="uppercase text-sm font-semibold block pb-1">Email address</label>
+                        <span class="subscriber-detail-content text-gray-700 text-sm">{{@member.email}}</span>
+                    </div>
+
+                    <div class=" col s12 m6 pb-5 subscriber-detail">
+                        <label class="uppercase text-sm font-semibold block pb-1">Your plan</label>
+                        <span class="subscriber-detail-content text-gray-700 text-sm">{{plan.currency_symbol}}{{price plan.amount}}/{{plan.interval}}</span>
+                    </div>
+
+                    <div class="col s12 m6 pb-5 subscriber-detail">
+                        <label class="uppercase text-sm font-semibold block pb-1">Card</label>
+                        <span class="subscriber-detail-content text-gray-700 text-sm">**** **** **** {{default_payment_card_last4}}</span>
+                    </div>
+
+                    <div class="col s12 m6 pb-5 subscriber-detail">
+                        <label class="uppercase text-sm font-semibold block pb-1">
+                            {{#if cancel_at_period_end}}
+                                Expires
+                            {{else}}
+                                Next bill date
+                            {{/if}}
+                        </label>
+                        <span class="subscriber-detail-content text-gray-700 text-sm">{{date current_period_end format="DD MMM YYYY"}}</span>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="subscription-actions my-8 flex justify-between">
+                <li class="mr-3 w-1/2">
+                    <a href="javascript:"
+                        class="button is-primary is-outlined"
+                        data-members-edit-billing
+                        data-members-success="{{@site.url}}/account/?stripe=billing-update-success"
+                        data-members-cancel="{{@site.url}}/account/?stripe=billing-update-cancel">Edit billing info</a></li>
+                <li class="w-1/2">
+                    {{!-- {{cancel_link}} --}}
+                    {{!-- {{cancel_link
+                        class="button is-primary"
+                        errorClass="cancel-error"
+                        cancelLabel="Cancel!"
+                        continueLabel="Continue!"
+                    }} --}}
+                    <a class="cancel-link button is-primary" data-members-continue-subscription="sub_*****" href="javascript:">Continue!</a>
+                    <span class="cancel-error text-danger block mt-2" data-members-error></span>
+                </li>
+            </ul>
+        </div>
+    {{/foreach}}
+</div>
+
+
+{{else if @member}}
+
+{{!-- Logged in, not paying: Link to checkout --}}
+{{!-- <div class="p-vw6 px-4"> --}}
+    <div class="account-box mx-auto max-w-xl w-full text-center">
+        <div class="subscriber-avatar w-32 h-32 relative rounded-full overflow-hidden mx-auto">
+            <span class="absolute inset-0 text-gray-400">{{> "icons/avatar"}}</span>
+            {{#if @member.avatar_image}}
+                <img src="{{@member.avatar_image}}" class="image-inset" alt=""/>
+            {{/if}}
+        </div>
+        <h1 class="account-box-title text-3xl my-6 font-semibold">Currently, you're not a subscriber</h1>
+        <p>Hey there! <strong>{{#if @member.name}}{{@member.name}}{{else}}{{@member.email}}{{/if}}</strong> is subscribed to free updates from {{@site.title}}, but doesn't have a paid subscription to unlock full access.</p>
+        <div class="authbox-signup mt-8">
+            <a class="button is-primary is-medium" href="{{@site.url}}/signup/">Subscribe now</a>
+        </div>
+    </div>
+{{!-- </div> --}}
+
+{{else}}
+
+    {{!-- Not logged in: Redirect to signin --}}
+    <script>window.location = '{{@site.url}}/signin/';</script>
+
+{{/if}}
+
+</div>

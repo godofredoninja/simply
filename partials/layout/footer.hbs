@@ -1,0 +1,32 @@
+<footer class="footer-light py-10 lg:pt-16 text-center lg:text-left {{#is "post"}}bg-gray-200{{/is}}">
+    <section class="mx-auto max-w-extreme px-4">
+        <div class="flex flex-col lg:flex-row justify-between">
+            <div class="flex flex-col lg:flex-row lg:items-center">
+                <div class="footer-logo text-3xl font-semibold leading-none">
+                    <a href="{{@site.url}}" class="inline-block">
+                    {{#if @site.logo}}
+                        <img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}" class="max-h-8"/>
+                    {{else}}
+                        {{@site.title}}
+                    {{/if}}
+                    </a>
+                </div>
+
+                {{!-- Social Media - partilas/widget/social-media.hbs --}}
+                {{> "widget/social-media" class="footer-social-media social-media is-inline my-5 lg:my-0 lg:ml-10"}}
+            </div>
+
+            <div class="footer-copy lg:text-right text-sm">
+                &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.
+                <div class="mt-2">
+                    Design with
+                    <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
+                    by
+                    <a href="https://godofredo.ninja" class="link" title="Developer FullStack.">@GodoFredoNinja</a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+</footer>

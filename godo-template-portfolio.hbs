@@ -1,0 +1,75 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-portfolio{{/contentFor}}
+
+{{#page}}
+
+<header class="topic-header">
+    <div class="px-4 py-10 lg:pt-12 lg:pb-8 mx-auto max-w-3xl text-center">
+        {{#if excerpt}} <div class="mb-4 text-base text-gray-500">{{excerpt}}</div>{{/if}}
+        <h1 class="underscore is-center capitalize text-5xl text-title">{{title}}</h1>
+    </div>
+</header>
+
+{{#if tags}}
+<ul class="list-inline text-center px-4" role="group" aria-label="{{t "Filter Control"}}">
+    <li class="js-filter-btn inline-block border-b-2 border-transparent border-primary hover:border-primary cursor-pointer mb-2" data-filter="all">{{t "All"}}</li>
+    {{#foreach tags}}<li class="js-filter-btn inline-block border-b-2 border-transparent hover:border-primary cursor-pointer mb-2 ml-4" data-filter="{{slug}}">{{name}}</li>{{/foreach}}
+</ul>
+{{/if}}
+
+{{/page}}
+
+<div class="site-post feed-entry-content py-12 px-4">
+    <div class="mx-auto max-w-1100 feed-entry-wrap">
+        <div class="row flex-row justify-center">
+
+        {{#foreach posts}}
+            <div class="col s12 m6 l4 js-filter-items" {{#if primary_tag}}data-id="{{primary_tag.slug}}"{{/if}}>
+            {{> "story/story-portfolio"}}
+            </div>
+        {{/foreach}}
+
+        </div>
+    </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+(function () {
+  var filterBtn = document.querySelectorAll('.js-filter-btn');
+
+  if (!filterBtn.length) return;
+
+  function filterSelection(str) {
+    var allCard = document.querySelectorAll('.js-filter-items');
+
+    if (!allCard.length) return;
+
+    for (var i = 0; i < allCard.length; i++) {
+      var portfolioCard = allCard[i];
+
+      portfolioCard.classList.add('hidden');
+
+      if (portfolioCard.getAttribute('data-id') === str || str === 'all') {
+        portfolioCard.classList.remove('hidden');
+      }
+    }
+  }
+
+  filterBtn.forEach(function (btn) {
+    return btn.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      var current = document.querySelector('.js-filter-btn.border-primary');
+      current.classList.remove('border-primary');
+      this.classList.add('border-primary');
+      var dataFilter = btn.getAttribute('data-filter');
+      filterSelection(dataFilter);
+    });
+  });
+})();
+</script>
+{{/contentFor}}

@@ -1,0 +1,35 @@
+// modal
+// -----------------------------------------------------------------------------
+%modal
+  opacity: 0
+  transition: opacity .2s ease-out .1s, visibility 0s .4s
+  z-index: 100
+  visibility: hidden
+
+
+%modal-inner
+  opacity: 0
+  transform: scale(.6)
+  transition: transform .3s cubic-bezier(.06, .47, .38, .99), opacity .3s cubic-bezier(.06, .47, .38, .99)
+  // overflow: hidden
+
+
+%modal-active
+  opacity: 1
+  transform: scale(1)
+  transition: transform .8s cubic-bezier(.26, .63, 0, .96)
+
+
+.modal
+  @extend %modal
+
+  &-content
+    @extend %modal-inner
+
+  &.is-active
+    opacity: 1
+    visibility: visible
+    transition: opacity .3s ease
+
+    .modal-content
+      @extend %modal-active

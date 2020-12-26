@@ -1,0 +1,71 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-doc bg-gray-150{{/contentFor}}
+
+{{#post}}
+
+<div class="container mx-auto flex flex-col lg:flex-row pb-16">
+    {{!-- Navigating the documentation --}}
+    <div class="sidebar w-56 flex-none order-2 lg:order-none">
+        <div class="sticky top-16 pr-5">
+            <nav class="py-12 overflow-y-auto max-h-(screen-16)">
+                <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "Getting Started"}}</div>
+
+                <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu" class="leading-tight text-base">
+                    {{#get "posts" filter="tags:{{tags.[0].slug}}" limit="all" order="published_at asc"}}
+                    {{!-- {{#get "posts" filter="tags:{{primary_tag.slug}}" limit="all" order="published_at asc"}} --}}
+                    {{#foreach posts}}
+                        <li itemprop="name" role="menuitem" >
+                            {{#link
+                                href=(url absolute="true")
+                                class="menu-link py-2 flex hover:text-primary relative transition duration-200 ease-in-out"
+                                activeClass="is-active text-primary alv pl-4 font-medium"
+                                itemprop="url"}}{{title}}{{/link}}
+                        </li>
+                    {{/foreach}}
+                    {{/get}}
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    {{!-- content of the documentation --}}
+    <article class="py-8 md:p-12 bg-blank shadow rounded">
+        <div class="max-w-740">
+            <header><h1 class="text-title">{{title}}</h1></header>
+
+            <section class="post-body font-sans js-kusi-doc">
+                {{content}}
+            </section>
+
+            <hr class="my-10">
+            <div class="flex justify-between text-gray-500">
+                <div>
+                {{#prev_post in="primary_tag"}}
+                    <a href="{{url}}" class="hover:underline">← {{title}}</a>
+                {{/prev_post}}
+                </div>
+
+                <div>
+                {{#next_post in="primary_tag"}}
+                    <a href="{{url}}" class="hover:underline">{{title}} →</a>
+                {{/next_post}}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    {{!-- Table of Contents --}}
+    <aside class="js-sidebar-right flex flex-col w-56 flex-none pt-8 pl-5 mb-12 order-2 lg:order-none">
+        <div class="sticky top-24 js-sidebar-wrap">
+            <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "On this page"}}</div>
+            <ul class="text-sm js-table-content leading-tight"></ul>
+        </div>
+    </aside>
+</div>
+
+{{/post}}
+
+{{#contentFor "scripts"}}<script src="{{asset "scripts/kusi-doc-post.js"}}" async defer></script>{{/contentFor}}

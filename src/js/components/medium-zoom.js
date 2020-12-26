@@ -1,7 +1,9 @@
 import mediumZoom from 'medium-zoom'
 
+import getAll from '../app/get-all'
+
 export default img => {
-  document.querySelectorAll(img).forEach(el => !el.closest('a') && el.classList.add('simply-zoom'))
+  getAll(img).forEach(el => !el.closest('a') && el.classList.add('simply-zoom'))
 
   mediumZoom('.simply-zoom', {
     margin: 20,

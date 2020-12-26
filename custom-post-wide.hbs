@@ -1,0 +1,26 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#post}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article is-article-wide{{/contentFor}}
+
+<article class="post mb-10 pt-8 lg:pt-10 relative">
+    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
+    {{> "article/article-header"}}
+
+    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+    {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="block mx-auto mt-12 max-w-1000"}}{{/if}}
+
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
+</article>
+
+{{/post}}
+
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
+{{> "article/article-related"}}
+
+{{!-- Post Commets --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

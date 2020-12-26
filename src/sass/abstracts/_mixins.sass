@@ -9,6 +9,12 @@
 %unselectable
   +unselectable
 
+=placeholder
+  $placeholders: ':-moz' ':-webkit-input' '-moz' '-ms-input'
+  @each $placeholder in $placeholders
+    &:#{$placeholder}-placeholder
+      @content
+
 =ltr-property($property, $spacing, $right: true)
   $normal: if($right, "right", "left")
   $opposite: if($right, "left", "right")

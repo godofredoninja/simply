@@ -2,6 +2,9 @@ const { series, watch, src, dest, parallel } = require('gulp')
 const pump = require('pump')
 const del = require('del')
 
+const rename = require('gulp-rename')
+const replace = require('gulp-replace')
+
 // gulp plugins and utils
 const livereload = require('gulp-livereload')
 const beeper = require('beeper')
@@ -70,7 +73,8 @@ const handleError = done => {
 // hbs
 function hbs (done) {
   pump([
-    src([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`]),
+    // src([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`]),
+    src([`${pathBase}**/*.hbs`]),
     livereload()
   ], handleError(done))
 }
@@ -92,7 +96,7 @@ function styles (done) {
 
 // Scripts
 function scripts (done) {
-  const files = ['main', 'prismjs']
+  const files = ['main', 'prismjs', 'kusi-doc-post', 'pagination', 'search']
 
   merge(files.map(function (file) {
     return pump([
@@ -127,6 +131,24 @@ function images (done) {
   ], handleError(done))
 }
 
+function copyAmpStyle (done) {
+  pump([
+    src(`${pathBase}assets/styles/amp.css`),
+    replace('@charset "UTF-8";', ''),
+    postcss([cssnano(), comments({ removeAll: true })]),
+    rename('amp-styles.hbs'),
+    dest(`${pathBase}/partials/amp`)
+  ], handleError(done))
+}
+
+function copyMainStyle (done) {
+  pump([
+    src(`${pathBase}assets/styles/main.css`),
+    rename('main-styles.hbs'),
+    dest(`${pathBase}/partials`)
+  ], handleError(done))
+}
+
 // ZIP
 function zipper (done) {
   const filename = `${name}-v${version}.zip`
@@ -151,13 +173,14 @@ function zipper (done) {
 const cssWatcher = () => watch('sass/**', styles)
 const jsWatcher = () => watch(['js/**', '*.js'], scripts)
 const imgWatcher = () => watch('img/**', images)
+// const hbsWatcher = () => watch([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`], hbs)
 const hbsWatcher = () => watch([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`], hbs)
 
 const compile = parallel(styles, scripts, images)
 const watcher = parallel(cssWatcher, jsWatcher, imgWatcher, hbsWatcher)
 
 const build = series(clean, compile)
-const production = series(build, zipper)
+const production = series(build, copyAmpStyle, copyMainStyle, zipper)
 const development = series(build, serve, watcher)
 
 module.exports = { build, development, production }

@@ -1,3 +1,5 @@
+import getAll from '../app/get-all'
+
 /**
  * Gallery card support
  * Used on any individual post/page
@@ -7,7 +9,7 @@
  */
 
 export default () => {
-  const images = document.querySelectorAll('.kg-gallery-image > img')
+  const images = getAll('.kg-gallery-image > img')
 
   if (!images.length) return
 

@@ -1,0 +1,46 @@
+{{!-- Layout --}}
+{{!< default}}
+
+<header class="author-header">
+    <div class="px-4 py-vw6 mx-auto max-w-3xl text-center">
+        <h1 class="text-3xl md:text-4xl text-title">{{t "The full archive"}}</h1>
+        <div class="mt-5 text-lg text-gray-500">{{t "There are {total} posts in total" total=pagination.total}}</div>
+    </div>
+</header>
+
+<div class="site-post feed-entry-content container mx-auto pb-10">
+    <div class="feed-entry-wrap max-w-740 mx-auto">
+
+        {{#foreach posts}}
+        <article class="archive-post archive-date-{{date format="M"}}">
+            <div class="archive-label text-primary px-6 mt-4 mb-2 text-2xl font-bold">{{date format="MMMM YYYY"}}</div>
+            <a class="archive-link px-6 block text-title hover:text-dark hover:bg-warning rounded" href="{{url}}">
+                <div class="border-t border-gray-200 py-6">
+                    <h2 class="archive-title text-xl md:text-2xl font-bold">{{title}}</h2>
+                    {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+                    {{> "components/datetime" class="mt-2 text-gray-500 text-sm"}}
+                </div>
+            </a>
+        </article>
+        {{/foreach}}
+    </div>
+</div>
+
+{{!-- https://forum.ghost.org/t/monthly-archive-index-pages/12110/2 --}}
+
+<style>
+    .archive-date-1 + .archive-date-1 .archive-label,
+    .archive-date-2 + .archive-date-2 .archive-label,
+    .archive-date-3 + .archive-date-3 .archive-label,
+    .archive-date-4 + .archive-date-4 .archive-label,
+    .archive-date-5 + .archive-date-5 .archive-label,
+    .archive-date-6 + .archive-date-6 .archive-label,
+    .archive-date-7 + .archive-date-7 .archive-label,
+    .archive-date-8 + .archive-date-8 .archive-label,
+    .archive-date-9 + .archive-date-9 .archive-label,
+    .archive-date-10 + .archive-date-10 .archive-label,
+    .archive-date-11 + .archive-date-11 .archive-label,
+    .archive-date-12 + .post-date-12 .archive-label {
+        display: none;
+    }
+</style>

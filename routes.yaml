@@ -1,0 +1,79 @@
+routes:
+  /signup/: members\signup
+  /signin/: members\signin
+  /account/: members\account
+  /membership/: members\membership
+
+  /featured/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: 12
+    template: godo-template-featured
+    # Optional for metada for seo
+    # data: page.home-featured
+
+  /archive/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: all
+    template: godo-archive
+
+  /grid/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: 12
+    template: godo-template-grid
+
+  /sidebar/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: 12
+    template: godo-template-sidebar
+
+  /medium/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    template: godo-template-medium
+    limit: 14
+
+  /personal/:
+    template: godo-home-personal
+    data: page.godo-personal
+
+  /personal-portfolio/:
+    template: godo-home-personal-portfolio
+    data: page.godo-personal-portfolio
+
+collections:
+  # PortFolio
+  /portafolio/:
+    permalink: /portafolio/{slug}/
+    filter: 'tag:[hash-portfolio]'
+    data: page.porftfolio
+    template: godo-template-portfolio
+    limit: all
+
+  # Podcast
+  /podcast/:
+    permalink: /podcast/{slug}/
+    filter: 'tag:[hash-podcast]'
+    data: page.podcast
+    template: godo-podcast
+    limit: 10
+
+  # Documentation
+  /documentation/:
+    permalink: /documentation/{slug}/
+    filter: 'tag:[hash-kusi-doc]'
+    data: page.documentation
+    template: godo-home-kusi-doc
+
+  # Default
+  /:
+    permalink: /{slug}/
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]'
+    template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/

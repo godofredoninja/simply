@@ -1,8 +1,10 @@
-{{#get "posts" limit="5" filter="tags:[{{post.tags}}]+id:-{{post.id}}"}}
+{{#if primary_tag}}
+{{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+{{#if related_posts}}
     <div class="related u-container">
-        <div class="related-title">{{t "Related Articles"}}</div>
+        <div class="related-title">{{t "Related Articles"}}:</div>
 
-        {{#foreach posts}}
+        {{#foreach related_posts}}
         <div class="story">
             <a href="{{url absolute="true"}}amp" class="story-link u-block u-relative">
                 <span class="story-border u-flexCenter u-absolute">{{@number}}</span>
@@ -12,4 +14,4 @@
         {{/foreach}}
 
     </div>
-{{/get}}
+{{/if}}{{/get}}{{/if}}

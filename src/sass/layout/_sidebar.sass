@@ -1,0 +1,32 @@
+// Sidebar
+// -----------------------------------------------------------------------------
+
+.sidebar
+  // border-right: 1px solid var(--border-color)
+
+// body
+//   background-color: #f8fafc
+
+// Sidebar Menu
+// -----------------------------------------------------------------------------
+
+.sidebar .menu-link.is-active::before
+  content: " "
+  width: 8px
+  height: 8px
+  border-radius: 10px
+  position: absolute
+  left: -1px
+  top: 50%
+  margin-top: -5px
+  background-color: var(--color-primary)
+  animation: scaleIn .7s forwards
+
+
+@keyframes scaleIn
+  0%
+    transform: scale(.5)
+    opacity: 0
+  to
+    transform: scale(1)
+    opacity: 1

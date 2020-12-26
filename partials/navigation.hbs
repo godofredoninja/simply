@@ -1,39 +1,16 @@
 {{#if isSecondary}}
 
 <nav class="menu-secondary">
-    <ul itemscope role="menu">
+    <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu">
 
         {{#foreach navigation}}
-        <li role="menuitem">
-            <a href="{{url absolute="true"}}"
-                class="godo-tracking"
-                data-event-category="Header"
-                data-event-action="Menu Dropdown"
+        <li itemprop="name" role="menuitem" class="inline-block {{#unless @last}}separator{{/unless}}">
+            <a itemprop="url" href="{{url absolute="true"}}"
+                class="godo-tracking hover:text-primary font-medium p-2 inline-block"
+                data-event-category="Footer"
+                data-event-action="Menu"
                 data-event-label="{{label}}"
-                data-event-non-interaction="true">
-                {{label}}
-            </a>
-        </li>
-        {{/foreach}}
-
-    </ul>
-</nav>
-
-{{else isSidenav}}
-
-<nav class="menu-secondary">
-    <ul class="nav">
-
-        {{#foreach navigation}}
-        <li role="menuitem">
-            <a href="{{url absolute="true"}}"
-                class="godo-tracking {{#if current}}active{{/if}}"
-                data-event-category="Header"
-                data-event-action="Menu Sidenav"
-                data-event-label="{{label}}"
-                data-event-non-interaction="true">
-                {{label}}
-            </a>
+                data-event-non-interaction="true">{{label}}</a>
         </li>
         {{/foreach}}
 
@@ -42,15 +19,27 @@
 
 {{else}}
 
+{{!-- Navigation for Mobile --}}
+{{#if navigationMobile}}
+
+<ul>
+    {{#foreach navigation}}
+    <li>
+        <a href="{{url absolute="true"}}" class="block px-5 py-2 font-medium text-22 leading-tight">{{label}}</a>
+    </li>
+    {{/foreach}}
+</ul>
+
+{{else}}
+
 {{!-- Primary Menu --}}
-<nav class="mainMenu relative flex flex-auto items-center pr-5 hide-before-lg">
+<nav class="header-center mainMenu relative flex items-center pr-5 flex-grow overflow-auto lg:overflow-visible">
     <ul itemscope
         itemtype="http://www.schema.org/SiteNavigationElement"
-        role="menu"
-        class="nav flex whitespace-no-wrap">
+        class="nav whitespace-no-wrap hidden lg:flex">
 
         {{#foreach navigation}}
-        <li itemprop="name" role="menuitem" class="{{#if @first}}ml-0{{else}}ml-5{{/if}}">
+        <li itemprop="name" class="{{#if @first}}ml-0{{else}}ml-5{{/if}}">
             <a itemprop="url"
                 href="{{url absolute="true"}}"
                 class="mainMenu-link godo-tracking {{#if current}}active text-primary font-semibold{{else}}hover:text-primary font-medium{{/if}}"
@@ -71,20 +60,15 @@
             </a>
             <div class="dropdown-menu whitespace-normal" id="dropdown-menu" role="menu">
                 <div class="dropdown-content">
-                    <div class="js-dropdown-menu">
-                        <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a>
-                        <a href="#" class="dropdown-item hover:text-primary">Other dropdown item</a>
-                        <a href="#" class="dropdown-item is-active hover:text-primary">Active dropdown item</a>
-                        <a href="#" class="dropdown-item hover:text-primary">Other dropdown item</a>
-                    </div>
-                    {{#has any="@site.facebook, @site.twitter"}}
+                    <div class="js-dropdown-menu">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
                     <hr class="dropdown-divider">
-                    {{/has}}
                     {{!-- Social Media - partials/widget/social-media.hbs --}}
-                    {{> "widget/social-media" class="social-media" classItems="dropdown-item block hover:text-gray-500"}}
+                    {{> "widget/social-media" class="social-media"}}
                 </div>
             </div>
         </li>
     </ul>
 </nav>
+
+{{/if}}
 {{/if}}

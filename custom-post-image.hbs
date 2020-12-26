@@ -8,36 +8,33 @@
 
 <article class="post mb-10 relative">
     <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:min-h-screen py-24">
-        {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
-        {{> "helper/helper-image-cover" background=feature_image gradient=" "}}
+        {{!-- Featured Media - partials/components/media-cover.hbs --}}
+        {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
 
         <header class="post-header mx-auto max-w-740 px-4 p-24 relative z-3">
-            {{!-- Article Title --}}
+            {{#if primary_tag}}
+            <div class="mb-3 text-white tracking-wider text-sm">
+                {{#primary_tag}}
+                <a class="uppercase hover:underline" href="{{url}}">{{name}}</a>
+                {{/primary_tag}}
+            </div>
+            {{/if}}
+
             <h1 class="post-title mb-5 text-white text-4xl lg:text-5xl">{{title}}</h1>
-            {{!-- Article Excerpt  --}}
             {{#if custom_excerpt}}<p class="post-excerpt mb-8 text-2xl text-white leading-snug">{{custom_excerpt}}</p>{{/if}}
 
-            {{> "helper/helper-author-meta"}}
+            {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
+            {{> "components/author-meta"}}
         </header>
     </div>
 
-    <div class="post-wrap max-w-1100 relative mx-auto">
-        {{!-- All Content --}}
-        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
-    </div>
-
-    {{!-- [tags, prev_post, next_post] - partials/article/article-footer.hbs --}}
-    {{> "article/article-footer"}}
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
 </article>
 {{/post}}
 
-{{!-- Article related - partials/article/article-related.hbs --}}
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
 {{> "article/article-related"}}
 
-{{#post}}
-    {{!-- post Commets --}}
-    {{> "article/article-comments"}}
-
-    {{!-- Share Article - Facebook Twitter Whatsapp --}}
-    {{> "article/article-share-sticky"}}
-{{/post}}
+{{!-- Post Commets --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

@@ -1,15 +1,16 @@
 /* global searchSettings */
 
-import GhostSearch from './app/app.search'
+import GhostSearch from './lib/ghost-search'
 
-((window, document) => {
-  const qs = document.querySelector.bind(document)
-  const qsa = document.querySelectorAll.bind(document)
+(function (document) {
+  const $body = document.body
+  const $input = document.querySelector('#search-field')
+  const $results = document.querySelector('#search-results')
+  const $searchMessage = document.querySelector('.js-search-message')
 
-  const domBody = document.body
-  const searchInput = qs('#search-field')
-  const searchResults = qs('#search-results')
-  const searchMessage = qs('.js-search-message')
+  const classIsActive = 'is-active'
+
+  let allSearchLinksLength = 0
 
   let searchResultsHeight = {
     outer: 0,
@@ -17,29 +18,32 @@ import GhostSearch from './app/app.search'
   }
 
   // SHow icon search in header
-  qs('.js-search-open').classList.remove('u-hide')
+  document.querySelector('a[data-target=modal-search]').classList.remove('hidden')
 
   // Variable for search
   // -----------------------------------------------------------------------------
-  const mySearchSettings = {
-    on: {
-      afterDisplay: results => {
-        searchResultActive()
 
-        searchResultsHeight = {
-          outer: searchResults.offsetHeight,
-          scroll: searchResults.scrollHeight
-        }
+  const afterDisplaySearch = results => {
+    // Active class to link search
+    searchResultActive()
 
-        // Show message if dont have results
-        if (results.total === 0 && searchInput.value !== '') {
-          searchMessage.classList.remove('u-hide')
-        } else {
-          searchMessage.classList.add('u-hide')
-        }
-      }
+    allSearchLinksLength = results.length
+
+    searchResultsHeight = {
+      outer: $results.offsetHeight,
+      scroll: $results.scrollHeight
+    }
+
+    if (results.total === 0 && $input.value !== '') {
+      $searchMessage.classList.remove('hidden')
+      $body.removeEventListener('keydown', mySearchKey)
+    } else {
+      $searchMessage.classList.add('hidden')
+      $body.addEventListener('keydown', mySearchKey)
     }
   }
+
+  const mySearchSettings = { on: { afterDisplay: results => afterDisplaySearch(results) } }
 
   // join user settings
   Object.assign(mySearchSettings, searchSettings)
@@ -47,129 +51,95 @@ import GhostSearch from './app/app.search'
   // when the Enter key is pressed
   // -----------------------------------------------------------------------------
   function enterKey () {
-    const link = searchResults.querySelector('a.search-result--active')
+    const link = $results.querySelector(`a.${classIsActive}`)
     link && link.click()
   }
 
   // Attending the active class to the search link
   // -----------------------------------------------------------------------------
-  function searchResultActive (t, e) {
-    t = t || 0
-    e = e || 'up'
+  function searchResultActive (index, upDown) {
+    index = index || 0
+    upDown = upDown || 'up'
 
-    // Dont use key functions
-    if (window.innerWidth < 768) return
+    const allSearchLinks = $results.querySelectorAll('a')
 
-    const allLink = searchResults.querySelectorAll('a')
+    // Return if there are no results
+    if (!allSearchLinks.length) return
 
-    if (!allLink.length) return
+    // Remove All class Active
+    allSearchLinks.forEach(element => element.classList.remove(classIsActive))
 
-    const linkActive = searchResults.querySelector('a.search-result--active')
-    linkActive && linkActive.classList.remove('search-result--active')
+    // Add class active
+    allSearchLinks[index].classList.add(classIsActive)
 
-    allLink[t].classList.add('search-result--active')
+    // Scroll for results box
+    const linkOffSetTop = allSearchLinks[index].offsetTop
+    let scrollPosition = 0
 
-    const n = allLink[t].offsetTop
-    let o = 0
+    upDown === 'down' && linkOffSetTop > searchResultsHeight.outer / 2 ? scrollPosition = linkOffSetTop - searchResultsHeight.outer / 2 : upDown === 'up' && (scrollPosition = linkOffSetTop < searchResultsHeight.scroll - searchResultsHeight.outer / 2 ? linkOffSetTop - searchResultsHeight.outer / 2 : searchResultsHeight.scroll)
 
-    e === 'down' && n > searchResultsHeight.outer / 2 ? o = n - searchResultsHeight.outer / 2 : e === 'up' && (o = n < searchResultsHeight.scroll - searchResultsHeight.outer / 2 ? n - searchResultsHeight.outer / 2 : searchResultsHeight.scroll)
-
-    searchResults.scrollTo(0, o)
-  }
-
-  // Clear Input for write new letters
-  // -----------------------------------------------------------------------------
-  function clearInput () {
-    searchInput.focus()
-    searchInput.setSelectionRange(0, searchInput.value.length)
-  }
-
-  // Search close with Key
-  // -----------------------------------------------------------------------------
-  function searchClose () {
-    domBody.classList.remove('has-search')
-    document.removeEventListener('keyup', mySearchKey)
+    $results.scrollTo(0, scrollPosition)
   }
 
   // Reacted to the up or down keys
   // -----------------------------------------------------------------------------
   function arrowKeyUpDown (keyNumber) {
-    let e
+    let upDown
     let indexTheLink = 0
 
-    const resultActive = searchResults.querySelector('.search-result--active')
+    const resultActive = $results.querySelector('.is-active')
+
     if (resultActive) {
       indexTheLink = [].slice.call(resultActive.parentNode.children).indexOf(resultActive)
     }
 
-    searchInput.blur()
+    $input.blur()
 
+    // 38 === UP
     if (keyNumber === 38) {
-      e = 'up'
+      upDown = 'up'
+
       if (indexTheLink <= 0) {
-        searchInput.focus()
+        $input.focus()
         indexTheLink = 0
       } else {
         indexTheLink -= 1
       }
     } else {
-      e = 'down'
-      if (indexTheLink >= searchResults.querySelectorAll('a').length - 1) {
-        indexTheLink = searchResults.querySelectorAll('a').length - 1
+      upDown = 'down'
+
+      if (indexTheLink >= allSearchLinksLength - 1) {
+        indexTheLink = 0
       } else {
-        indexTheLink = indexTheLink + 1
+        indexTheLink += 1
       }
     }
 
-    searchResultActive(indexTheLink, e)
+    searchResultActive(indexTheLink, upDown)
   }
 
   // Adding functions to the keys
   // -----------------------------------------------------------------------------
   function mySearchKey (e) {
-    e.preventDefault()
-
     const keyNumber = e.keyCode
 
     /**
-      * 38 => Top
+      * 38 => Up
       * 40 => down
-      * 27 => escape
       * 13 => enter
-      * 191 => /
       **/
 
-    if (keyNumber === 27) {
-      searchClose()
-    } else if (keyNumber === 13) {
-      searchInput.blur()
+    if (keyNumber === 13) {
+      $input.blur()
       enterKey()
     } else if (keyNumber === 38 || keyNumber === 40) {
       arrowKeyUpDown(keyNumber)
-    } else if (keyNumber === 191) {
-      clearInput()
+      e.preventDefault()
     }
   }
-
-  // Open Search
-  // -----------------------------------------------------------------------------
-  qsa('.js-search-open').forEach(item => item.addEventListener('click', function (e) {
-    e.preventDefault()
-    domBody.classList.add('has-search')
-    searchInput.focus()
-    window.innerWidth > 768 && document.addEventListener('keyup', mySearchKey)
-  }))
-
-  // Close Search
-  // -----------------------------------------------------------------------------
-  qsa('.js-search-close').forEach(item => item.addEventListener('click', function (e) {
-    e.preventDefault()
-    domBody.classList.remove('has-search')
-    document.removeEventListener('keyup', mySearchKey)
-  }))
 
   // Search
   // -----------------------------------------------------------------------------
   /* eslint-disable no-new */
   new GhostSearch(mySearchSettings)
-})(window, document)
+})(document)
