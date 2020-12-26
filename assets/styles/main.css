@@ -2852,7 +2852,8 @@ body.is-transparent:not(.has-menu) .u-menu-color a {
   -webkit-box-align: stretch;
   align-items: stretch;
   width: 100%;
-  max-width: 1232px
+  max-width: 1232px;
+  padding: 50px;
 }
 
 .homeHero-container .hh-author {
