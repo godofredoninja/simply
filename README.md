@@ -588,6 +588,7 @@ routes:
 - `fr`— French - By [ping](https://github.com/StanGirard)
 - `it`— Italian - By [Marco Sanson](https://github.com/marcosanson)
 - `id`— Indonesian - By [Adryan Eka Vandra](https://github.com/adryanev)
+- `pt-BR`— Brazilian  - By [Daniel Pereira](https://github.com/danieldeev)
 
 ![simply theme ghost Language](./documentation/language.jpg)
 
