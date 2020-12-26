@@ -8,6 +8,7 @@
         ✈ Lima - Perú
 -->
 <html lang="{{@site.lang}}" data-theme="light">
+
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -26,14 +27,14 @@
     {{!-- <link href="https://fonts.googleapis.com/css?family=Domine|Rubik:400,500,700&display=swap" rel="stylesheet"> --}}
 
     {{!-- Styles'n'Scripts --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}" />
     {{!-- <style>{{> "styles"}}</style> --}}
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
 
     <script>
-        if (typeof(Storage) !== 'undefined') {
+        if (typeof (Storage) !== 'undefined') {
             var selectTheme = localStorage.getItem('selected-theme');
             if (selectTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark')
@@ -43,6 +44,7 @@
         }
     </script>
 </head>
+
 <body class="{{block "special_body_class"}}">
     <div class="site-wrapper u-flexColumnTop">
         {{!-- Header Content --}}
@@ -50,9 +52,9 @@
 
         {{!-- Subscribe and tag -> this will be below the header --}}
         {{#if @labs.members}}
-            {{#is "index, home, tag"}}
-                {{> "widget/subscribe-and-secondary-menu"}}
-            {{/is}}
+        {{#is "index, home, tag"}}
+        {{> "widget/subscribe-and-secondary-menu"}}
+        {{/is}}
         {{/if}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
@@ -71,7 +73,7 @@
     {{!-- Subscribe Modal --}}
     {{> "widget/modal-subscribe"}}
 
-    {{!-- Loandig Bar --}}
+    {{!-- Loading Bar --}}
     <div class="loadingBar"></div>
 
     {{!-- Back to top --}}
@@ -83,7 +85,8 @@
     {{!-- notification Subscribe --}}
     {{#if @labs.members}}
     <div class="subscribe-success-message u-flexCenter u-justify-content-center">
-        <span class="u-fontSize22" style="margin-right:10px">🎉</span> {{t "You've successfully subscribed to"}} {{@site.title}}!
+        <span class="u-fontSize22" style="margin-right:10px">🎉</span> {{t "You've successfully subscribed to"}}
+        {{@site.title}}!
         <div class="notification-close button button--success">OK</div>
     </div>
     {{/if}}
@@ -124,7 +127,7 @@
         function ready() {
             if (action == 'subscribe') { document.body.classList.add('subscribe-success'); }
 
-            document.querySelector('.notification-close').addEventListener('click', function() {
+            document.querySelector('.notification-close').addEventListener('click', function () {
                 this.parentNode.classList.add('close');
             });
         }
@@ -132,10 +135,12 @@
     </script>
     {{/if}}
 
-    {{!-- Paginastion --}}
-    {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}
+    {{!-- Pagination --}}
+    {{#if pagination.pages}}
+    <script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}
 
     {{!-- script --}}
     {{{block "scripts"}}}
 </body>
+
 </html>
