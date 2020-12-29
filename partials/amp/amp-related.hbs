@@ -1,5 +1,5 @@
 {{#if primary_tag}}
-{{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="3" as |related_posts|}}
+{{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{comment_id}}" limit="3" as |related_posts|}}
 {{#if related_posts}}
     <div class="related u-container">
         <div class="related-title">{{t "Related Articles"}}:</div>

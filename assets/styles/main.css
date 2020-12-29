@@ -14,6 +14,7 @@
   --color-link: #0abe51;
   --color-link-hover: #21a75a;
   --border-color: #e2ecec;
+  --color-mark: #e4f7df;
   --gray-100: #fafafa;
   --gray-150: #f8fafc;
   --gray-200: #F3F5F9;
@@ -35,6 +36,7 @@
   --body-color: #acacac;
   --title-color: hsla(0,0%,100%,.9);
   --border-color: #2e2e2e;
+  --color-mark: #31422d;
   --header-color: #fff;
   --header-bg: #000;
   --gray-100: #141414;
@@ -797,7 +799,7 @@ a:active, a:focus, a:hover {
   color: var(--color-link-hover);
 }
 
-blockquote {
+blockquote:not(.pullquote) {
   border-left: 0.25rem solid currentColor;
   color: var(--title-color);
   font-size: 1.375rem;
@@ -808,8 +810,13 @@ blockquote {
   padding-left: 1.25rem;
 }
 
-blockquote p:first-of-type {
+blockquote:not(.pullquote) p:first-of-type {
   margin-top: 0;
+}
+
+.pullquote {
+  margin: 2rem 0 !important;
+  padding-left: 8%;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -864,25 +871,8 @@ img:not([src]) {
 }
 
 mark {
-  background-color: transparent;
-  background-image: linear-gradient(to bottom, #d7fdd3, #d7fdd3);
-  color: #292929;
-}
-
-q {
-  color: rgba(0, 0, 0, 0.44);
-  display: block;
-  font-size: 1.75rem;
-  font-weight: 400;
-  letter-spacing: -.014em;
-  line-height: 1.48;
-  margin: 1.5rem 0 !important;
-  padding-left: 8%;
-  text-align: left;
-}
-
-q::before, q::after {
-  display: none;
+  background: var(--color-mark);
+  color: inherit;
 }
 
 .simply-main {
@@ -2652,6 +2642,49 @@ a > code[class*="language-"] {
   content: counter(post) ".";
   counter-increment: post;
   padding-right: 12px;
+}
+
+.warning {
+  background: #fbe9e7;
+  color: #d50000;
+}
+
+.warning::before {
+  content: '⚠️';
+}
+
+.note {
+  background: #e1f5fe;
+  color: #0288d1;
+}
+
+.note::before {
+  content: '🔵';
+}
+
+.success {
+  background: #e0f2f1;
+  color: #00897b;
+}
+
+.success::before {
+  content: '✅';
+}
+
+.warning,
+.note,
+.success {
+  font-size: 1.125rem !important;
+  letter-spacing: 0.02em;
+  padding: 0.75rem 1.5rem 0.75rem 2.85rem;
+  border-radius: 0.25rem;
+}
+
+.warning::before,
+.note::before,
+.success::before {
+  float: left;
+  margin-left: -2.25rem;
 }
 
 .prev-next > div {

@@ -1,5 +1,5 @@
 // 2. post content body
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 .post-body
   @extend %flex-direction-column
   @extend %font-serif
@@ -69,14 +69,48 @@
     counter-increment: post
     padding-right: 12px
 
+// warning success and Note
+// --------------------------------------------------
+
+.warning
+  background: #fbe9e7
+  color: #d50000
+
+  &::before
+    content: '⚠️'
+
+.note
+  background: #e1f5fe
+  color: #0288d1
+  &::before
+    content: '🔵'
+
+.success
+  background: #e0f2f1
+  color: #00897b
+  &::before
+    content: '✅'
+
+.warning,
+.note,
+.success
+  font-size: 1.125rem !important
+  letter-spacing: 0.02em
+  padding: 0.75rem 1.5rem 0.75rem 2.85rem
+  border-radius: 0.25rem
+
+  &::before
+    float: left
+    margin-left: -2.25rem
+
 // Previous and Next post
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 
 .prev-next > div
   min-height: 7.5rem
 
 // Post Upgrade
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 
 .post-upgrade:before
   display: block
@@ -90,7 +124,7 @@
   pointer-events: none
 
 // Media Query
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 
 +tablet
   .post-body

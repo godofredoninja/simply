@@ -49,7 +49,7 @@ a
 // 1. Blockquote
 // --------------------------------------------------
 
-blockquote
+blockquote:not(.pullquote)
   border-left: 0.25rem solid currentColor
   // color: $gray-900
   color: var(--title-color)
@@ -62,6 +62,10 @@ blockquote
 
   p:first-of-type
     margin-top: 0
+
+.pullquote
+  margin: 2rem 0 !important
+  padding-left: 8%
 
 +desktop-up
   blockquote
@@ -130,40 +134,24 @@ img
 //   margin: 0
 //   padding: 0
 
-// 6. Mark and q
+// 6. Mark
 // --------------------------------------------------
 
 mark
-  background-color: transparent
-  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1))
-  color: $primary-text-color
-
-q
-  color: rgba(0, 0, 0, .44)
-  display: block
-  font-size: 1.75rem
-  font-weight: 400
-  letter-spacing: -.014em
-  line-height: 1.48
-  margin: 1.5rem 0 !important
-  padding-left: 8%
-  text-align: left
-
-  &::before,
-  &::after
-    display: none
+  background: var(--color-mark)
+  color: inherit
 
 .simply
   &-main
     min-height: 50vh
 
 // z-index for image zoom
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 .medium-zoom-overlay { z-index: 50 }
 .medium-zoom-image--opened { z-index: 51 }
 
 // Video Responsive
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 .video-responsive
   display: block
   height: 0
@@ -182,7 +170,7 @@ q
     width: 100%
 
 // Social Media Color
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 // @each $social-name, $color in $social-colors
 //   // .c-#{$social-name} { color: $color !important; }
 //   .bg-#{$social-name}
@@ -198,7 +186,7 @@ q
     // opacity .5s ease
 
 // 15. Loanding Bar
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 .loadingBar
   background-color: #48e79a
   height: 2px
@@ -211,7 +199,7 @@ q
   display: block
 
 // Medium Zoom - Header Animation
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 .medium-zoom--opened
   .header
     opacity: 0
@@ -220,7 +208,7 @@ q
     transform: translateY(-100%)
 
 // Subscribe Message
-// -----------------------------------------------------------------------------
+// --------------------------------------------------
 
 .subscribe-success-message
   transform: translateY(-175%)
