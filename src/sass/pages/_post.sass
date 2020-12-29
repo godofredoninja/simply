@@ -69,31 +69,44 @@
     counter-increment: post
     padding-right: 12px
 
+// has first letter Big
+// --------------------------------------------------
+
+.has-first-letter:first-letter
+  float: left
+  font-size: 4rem
+  font-weight: 700
+  line-height: .83
+  margin-left: -5px
+  margin-right: 0.5rem
+  padding-top: 0.5rem
+  text-transform: uppercase
+
 // warning success and Note
 // --------------------------------------------------
 
-.warning
+.is-warning
   background: #fbe9e7
   color: #d50000
 
   &::before
     content: '⚠️'
 
-.note
+.is-note
   background: #e1f5fe
   color: #0288d1
   &::before
     content: '🔵'
 
-.success
+.is-success
   background: #e0f2f1
   color: #00897b
   &::before
     content: '✅'
 
-.warning,
-.note,
-.success
+.is-warning,
+.is-note,
+.is-success
   font-size: 1.125rem !important
   letter-spacing: 0.02em
   padding: 0.75rem 1.5rem 0.75rem 2.85rem
@@ -146,10 +159,11 @@
     h4
       font-size: 1.375rem
 
-    q
-      font-size: 1.375rem
-      letter-spacing: -.008em
-      line-height: 1.4
+    blockquote
+      margin-left: 0
     iframe
       width: 100% !important
+
+  .has-first-letter:first-letter
+    font-size: 3.25rem
 
