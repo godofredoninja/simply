@@ -5,7 +5,7 @@
 </p>
 <p align="center">
     <a href="https://godofredo.ninja/ghost-theme/simply/docs/">Docs</a> |
-    <a href="https://godofredo.ninja/ghost-theme/simply/showcase">Showcase</a> |
+    <a href="https://godofredo.ninja/ghost-theme/simply/showcase">showcase</a> |
     <a href="https://github.com/godofredoninja/simply/graphs/contributors">Contributing</a> |
     <a href="https://www.paypal.me/godofredoninja">Paypal</a> |
     <a href="https://twitter.com/godofredoninja">Twitter</a>
