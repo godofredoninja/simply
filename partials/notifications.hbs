@@ -27,7 +27,7 @@
     var stripe = getParameterByName('stripe');
     var success = getParameterByName('success');
 
-    function ready() {
+    function notificationReady() {
         var $body = document.body;
         var hasNotification = 'has-notification';
 
@@ -56,18 +56,16 @@
             $body.classList.add('billing-cancel', hasNotification);
         }
 
-        var $notificationClose = document.querySelectorAll('.notification-close');
-
-        $notificationClose.forEach(function(item){ item.addEventListener('click', function() {
+        document.querySelector('.notification-close').addEventListener('click', function() {
             this.parentNode.classList.add('close');
             var uri = window.location.toString();
             if (uri.indexOf('?') > 0) {
                 var clean_uri = uri.substring(0, uri.indexOf('?'));
                 window.history.replaceState({}, document.title, clean_uri);
             }
-        })});
+        });
     }
 
-    window.addEventListener('load', ready, false);
+    window.addEventListener('load', notificationReady, false);
 </script>
 {{/contentFor}}
