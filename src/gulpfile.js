@@ -144,6 +144,8 @@ function copyAmpStyle (done) {
 function copyMainStyle (done) {
   pump([
     src(`${pathBase}assets/styles/main.css`),
+    replace('@charset "UTF-8";', ''),
+    postcss([cssnano(), comments({ removeAll: true })]),
     rename('main-styles.hbs'),
     dest(`${pathBase}/partials`)
   ], handleError(done))

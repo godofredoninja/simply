@@ -10,7 +10,7 @@
                     <h3 class="text-title text-32">{{{t "Related <span class='text-primary'>Articles</span>"}}}</h3>
                 </div>
 
-                {{#foreach post_related}}
+                {{#foreach post_related visibility="all"}}
                 <div class="col s12 m6 l4 flex">
                     {{!-- Meta - partials/story/story-card-small.hbs --}}
                     {{> "story/story-card-small"}}

@@ -6,7 +6,7 @@
             <div class="col s12 l7">
                 <div class="feed-entry-content">
                     <div class="feed-entry-wrap slist">
-                        {{#foreach posts}}
+                        {{#foreach posts visibility="all"}}
                             {{!-- Story - partials/story/story-grid.hbs --}}
                             {{>"story/story-post"}}
                         {{/foreach}}

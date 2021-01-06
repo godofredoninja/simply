@@ -2,12 +2,12 @@
     <section class="mx-auto max-w-extreme px-4">
         <div class="flex flex-col lg:flex-row justify-between">
             <div class="flex flex-col lg:flex-row lg:items-center">
-                <div class="footer-logo text-3xl font-semibold leading-none">
+                <div class="footer-logo leading-none">
                     <a href="{{@site.url}}" class="inline-block">
                     {{#if @site.logo}}
                         <img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}" class="max-h-8"/>
                     {{else}}
-                        {{@site.title}}
+                        <span class="font-bold text-title text-3xl">{{@site.title}}</span>
                     {{/if}}
                     </a>
                 </div>

@@ -6,7 +6,7 @@
 
 {{!-- Featured Story --}}
 {{#get "posts" limit="1" filter="featured:true" as |godo_featured_post| }}
-    {{#if godo_featured_post}} {{#foreach godo_featured_post}}{{> "story/story-featured"}} {{/foreach}}{{/if}}
+    {{#if godo_featured_post}} {{#foreach godo_featured_post visibility="all"}}{{> "story/story-featured"}} {{/foreach}}{{/if}}
 {{/get}}
 
 <div class="site-post feed-entry-content container mx-auto pt-10">
