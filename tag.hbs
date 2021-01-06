@@ -13,7 +13,7 @@
         <div class="text-center font-medium mt-8">
             <a class="hover:text-primary" href="{{@site.url}}">{{t "Home"}}</a>
             <svg class="icon h-3 w-3"><use xlink:href="#icon-arrow-forward"></use></svg>
-            <span class="text-gray-500">{{{t 'Posts Tagged "{tag-name}"' tag-name=name }}}</span>
+            <span class="text-gray-500">{{t "Posts Tagged"}} "{{name}}"</span>
         </div>
 
         {{#if description}}<p class="text-xl mt-5 font-serif max-w-xl mx-auto">{{description}}</p>{{/if}}
