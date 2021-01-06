@@ -8,7 +8,7 @@
   font-size: $font-size-post
   line-height: 1.6
 
-  & > *
+  > *
     margin-top: 1rem
     margin-bottom: 1rem
     min-width: 100%
@@ -41,7 +41,7 @@
     color: var(--title-color)
     margin-bottom: 0.75rem
 
-    & + p
+    + p
       margin-top: 0
 
   blockquote
@@ -72,7 +72,7 @@
 // has first letter Big
 // --------------------------------------------------
 
-.has-first-letter:first-letter
+.has-first-letter::first-letter
   float: left
   font-size: 4rem
   font-weight: 700
@@ -107,10 +107,10 @@
 .is-warning,
 .is-note,
 .is-success
+  border-radius: 0.25rem
   font-size: 1.125rem !important
   letter-spacing: 0.02em
   padding: 0.75rem 1.5rem 0.75rem 2.85rem
-  border-radius: 0.25rem
 
   &::before
     float: left
@@ -125,16 +125,16 @@
 // Post Upgrade
 // --------------------------------------------------
 
-.post-upgrade:before
-  display: block
-  position: absolute
-  top: -9rem
-  left: 0
-  height: 8rem
-  width: 100%
+.post-upgrade::before
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff)
   content: ''
+  display: block
+  height: 8rem
+  left: 0
   pointer-events: none
+  position: absolute
+  top: -9rem
+  width: 100%
 
 // Media Query
 // --------------------------------------------------
@@ -142,7 +142,7 @@
 +tablet
   .post-body
     font-size: 1.125rem
-    & > *
+    > *
       margin-top: 1.75rem
     h1,
     h2,
@@ -164,6 +164,6 @@
     iframe
       width: 100% !important
 
-  .has-first-letter:first-letter
+  .has-first-letter::first-letter
     font-size: 3.25rem
 

@@ -15,7 +15,7 @@
     "dev": "gulp development",
     "lint:js": "standard js/**/*.js gulpfile.js",
     "lint:sass": "stylelint sass/**/*.sass",
-    "lint": "yarn lint:js && yarn lint:scss",
+    "lint": "yarn lint:js && yarn lint:sass",
     "test": "yarn lint && gscan .",
     "scan": "gscan ../"
   },

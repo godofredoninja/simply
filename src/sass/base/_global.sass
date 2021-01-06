@@ -42,6 +42,7 @@ a
 
 .link
   color: var(--color-link)
+
   &.is-hover:hover
     color: var(--color-link-hover)
 
@@ -97,6 +98,7 @@ figcaption
 
 cite
   text-align: left
+
 figure
   margin: 0
 
@@ -147,8 +149,12 @@ mark
 
 // z-index for image zoom
 // --------------------------------------------------
-.medium-zoom-overlay { z-index: 50 }
-.medium-zoom-image--opened { z-index: 51 }
+
+.medium-zoom-overlay
+  z-index: 50
+
+.medium-zoom-image--opened
+  z-index: 51
 
 // Video Responsive
 // --------------------------------------------------
@@ -159,6 +165,7 @@ mark
   padding: 0 0 56.25%
   position: relative
   width: 100%
+
   video,
   iframe
     border: 0
@@ -176,7 +183,6 @@ mark
 //   .bg-#{$social-name}
 //     background-color: $color !important
 
-
 .blur-up
   opacity: 0
 
@@ -187,6 +193,7 @@ mark
 
 // 15. Loanding Bar
 // --------------------------------------------------
+
 .loadingBar
   background-color: #48e79a
   height: 2px
@@ -203,9 +210,9 @@ mark
 .medium-zoom--opened
   .header
     opacity: 0
+    transform: translateY(-100%)
     transition: transform .2s, opacity .2s, visibility 0s 2s, -webkit-transform .2s
     visibility: hidden
-    transform: translateY(-100%)
 
 // Subscribe Message
 // --------------------------------------------------
@@ -215,10 +222,10 @@ mark
   transition: all 0.35s cubic-bezier(0.19, 1, 0.22, 1) 0.5s
 
 .subscribe-success .subscribe-success-message
-  visibility: visible
   transform: translateY(0)
+  visibility: visible
 
 .subscribe-success-message.close
-  visibility: hidden
-  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
   transform: translateY(-175%)
+  transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+  visibility: hidden

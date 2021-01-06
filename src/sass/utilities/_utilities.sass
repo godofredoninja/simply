@@ -23,6 +23,7 @@
 
 // Avatar Image
 // -----------------------------------------------------------------------------
+
 .avatar
   height: 2.25rem
   width: 2.25rem
@@ -38,11 +39,12 @@
 
 //  Hover animation
 // -----------------------------------------------------------------------------
+
 .has-overlay
   .overlay-toggle
     opacity: 0
-    visibility: hidden
     transition: opacity .3s ease;
+    visibility: hidden
 
   &:hover .overlay-toggle
     opacity: 1
@@ -64,16 +66,16 @@
 // -----------------------------------------------------------------------------
 .underscore
   &::after
-    content: ""
-    display: block
-    position: relative
-    width: 1.5em
-    border-radius: 0.25rem
     // height: 0.1875rem
-    height: .15em
-    margin: 0.5rem 0 1.5rem 0
     background-color: $primary-color
     background-color: var(--color-primary)
+    border-radius: 0.25rem
+    content: ''
+    display: block
+    height: .15em
+    margin: 0.5rem 0 1.5rem
+    position: relative
+    width: 1.5em
   &.is-center
     &::after
       margin-left: auto
@@ -91,6 +93,7 @@
     display: none !important
 
 // hide after
+
 +mobile-up
   .hide-after-md
     display: none !important

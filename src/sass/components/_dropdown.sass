@@ -30,38 +30,36 @@
 
 .dropdown-menu
   left: -1.5rem
-  min-width: 12rem
   max-width: 18rem
+  min-width: 12rem
   opacity: 0
   padding-top: 4px
   position: absolute
   top: 100%
   transform: scale(.9) translateY(-20px)
-  transition: all .3s cubic-bezier(.4,.01,.165,.99),opacity .2s cubic-bezier(.4,.01,.165,.99)
+  transition: all .3s cubic-bezier(.4, .01, .165, .99),opacity .2s cubic-bezier(.4, .01, .165, .99)
   visibility: hidden
   z-index: 20
 
 .dropdown-content
   background-color: var(--dropdown-bg)
   border-radius: 3px
-  box-shadow: 0 1px 2px rgba(0,0,0,.25),0 0 1px rgba(0,0,0,.35)
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .25),0 0 1px rgba(0, 0, 0, .35)
   padding-bottom: .5rem
   padding-top: .5rem
   position: relative
 
   &::after
+    background: var(--dropdown-bg)
+    bottom: 100%
+    box-shadow: -1px -1px 1px -1px rgba(0, 0, 0, .54)
     content: ''
     display: block
-    width: 14px
     height: 14px
-    background: var(--dropdown-bg)
-    transform: rotate(45deg) translate(6px,6px)
-    box-shadow: -1px -1px 1px -1px rgba(0,0,0,.54)
-    position: absolute
-    bottom: 100%
-    // left: 50%
     left: 2.5rem
-    // margin-left: -7px
+    position: absolute
+    transform: rotate(45deg) translate(6px, 6px)
+    width: 14px
 
 .dropdown-item
   display: block
@@ -71,14 +69,13 @@
   position: relative
 
 a.dropdown-item
+  font-weight: 500
   white-space: nowrap
   width: 100%
-  font-weight: 500
 
 .dropdown-divider
   background-color: var(--border-color)
-  // background-color: #ededed
-  border: none
+  border: 0
   display: block
   height: 1px
   margin: 0.625rem 0

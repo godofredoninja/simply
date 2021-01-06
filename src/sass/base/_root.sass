@@ -49,7 +49,7 @@
   --blank: #111
   --body-color: #acacac
   // title
-  --title-color: hsla(0,0%,100%,.9)
+  --title-color: hsla(0, 0%, 100%, .9)
   // border
   --border-color: #2e2e2e
   --color-mark: #31422d
@@ -65,7 +65,7 @@
   --gray-500: #6c757d
   --gray-600: #A1A1AA
   --gray-700: #9e9a9a
-  --gray-900: hsla(0,0%,100%,.9)
+  --gray-900: hsla(0, 0%, 100%, .9)
 
   // story
   --story-color: #888
@@ -80,7 +80,7 @@
   // form
   input,
   textarea
-    background-color: rgba(97,97,97,.25)
+    background-color: rgba(97, 97, 97, .25)
     color: #fff
     border-color: #444
 
@@ -94,24 +94,26 @@
   table td
     border-color: rgba(255, 255, 255, 0.2)
 
+  .post-body strong
+    color: hsla(0, 0%, 100%, 0.9)
+
   .medium-zoom-overlay
     background: rgba(0, 0, 0, 0.5) !important
 
-  .post-upgrade:before
+  .post-upgrade::before
     background: linear-gradient(180deg, rgba(255, 255, 255, 0), #111)
 
-  // BUttons
-  .button
+  .button,
   .button.is-light
     background-color: #2b2b2b
-    color: hsla(0,0%,100%,.9)
+    color: hsla(0, 0%, 100%, .9)
     &:hover
       background-color: #2b2b2b
       color: #fff
 
   .button.is-white
     background-color: transparent
-    color: hsla(0,0%,100%,.9)
+    color: hsla(0, 0%, 100%, .9)
     &:hover
       background-color: transparent
-      color: hsla(0,0%,100%,.9)
+      color: hsla(0, 0%, 100%, .9)

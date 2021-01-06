@@ -28,32 +28,32 @@ $primary-text-color-title: $gray-900;
 //   whatsapp: #64d448
 // );
 
-$white:   #fff;
-$black:   #191919;
-$dark:    #2f2f2f;
-$success: hsl(141, 53%,  53%);
-$warning: hsl(48,  100%, 67%);
-$danger:  hsl(348, 86%, 61%);
+$white: #fff;
+$black: #191919;
+$dark: #2f2f2f;
+$success: hsl(141, 53%, 53%);
+$warning: hsl(48, 100%, 67%);
+$danger: hsl(348, 86%, 61%);
 
 // Buttons Colors
 // background - color - color hover
 $colors: (
   "white"     : ($white, $black, $gray-500),
   "black"     : ($black, $white),
-  "light"     : (#f2f2f2, rgba(0,0,0,.7)),
+  "light"     : (#f2f2f2, rgba(0, 0, 0, .7)),
   "primary"   : ($primary-color, $white),
   "dark-blue" : ($dark-blue-500, $white),
   "sucecess"  : ($success, $white),
-  "warning"   : ($warning, rgba(0,0,0,.7)),
+  "warning"   : ($warning, rgba(0, 0, 0, .7)),
   "danger"    : ($danger, $white),
-  "transparent": (transparent, hsla(0,0%,100%,.7), $white)
+  "transparent": (transparent, hsla(0, 0%, 100%, .7), $white)
 );
 
 // form
-$form-colors : (
+$form-colors: (
   "primary"   : ($primary-color, $white),
   "sucecess"  : ($success, $white),
-  "warning"   : ($warning, rgba(0,0,0,.7)),
+  "warning"   : ($warning, rgba(0, 0, 0, .7)),
   "danger"    : ($danger, $white)
 );
 
@@ -65,16 +65,16 @@ $font-serif: 'PT Serif', Mercury SSm A, Mercury SSm B, Georgia, serif;
 // 3. Typography
 // --------------------------------------------------
 
-$font-size-root:  16px;
+$font-size-root: 16px;
 
 $size-normal: 1rem;
 
-$font-size-h1:    2.25rem;
-$font-size-h2:    2rem;
-$font-size-h3:    1.75rem;
-$font-size-h4:    1.5rem;
-$font-size-h5:    1.375rem;
-$font-size-h6:    1.125rem;
+$font-size-h1: 2.25rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.375rem;
+$font-size-h6: 1.125rem;
 
 $headings-font-weight: 700;
 $headings-line-height: 1.1;
@@ -83,9 +83,9 @@ $headings-color: $primary-text-color;
 // 4. Container
 // --------------------------------------------------
 
-$mobile:     640px;
-$tablet:     768px;
-$desktop:    1000px;
+$mobile: 640px;
+$tablet: 768px;
+$desktop: 1000px;
 $widescreen: 1230px;
 
 // 6. Grid

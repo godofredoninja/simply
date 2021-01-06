@@ -1,7 +1,7 @@
 // colors
-$whitegrey : #e5eff5;
-$darkgrey : #343f44;
-$blue :#3eb0ef;
+$whitegrey: #e5eff5;
+$darkgrey: #343f44;
+$blue: #3eb0ef;
 
 :not(pre) > code {
   border-radius: 3px;
@@ -21,7 +21,7 @@ pre {
   margin: 0;
   padding: 20px;
   max-width: 100%;
-  border: none;
+  border: 0;
   color: $whitegrey;
   font-size: 0.875rem;
   line-height: 1.6em;
@@ -77,7 +77,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-  border: none;
+  border: 0;
   // background: #2a3644;
   // background: #1d1d35;
 }

@@ -8,16 +8,17 @@
 
   &-row
     @extend %flex-direction-row
-
+    //
     &:not(:first-of-type)
-      margin: 0.75em 0 0 0
+      margin: 0.75em 0 0
 
   &-image
     img
       display: block
+      height: 100%
       margin: 0
       width: 100%
-      height: 100%
+
     &:not(:first-of-type)
       margin: 0 0 0 0.75em
 
@@ -31,6 +32,7 @@
 
 .kg-width-full .kg-image
   max-width: 100vw
+
 .kg-width-wide .kg-image
   max-width: 1000px
 
@@ -43,6 +45,7 @@
     width: 100%
 
 // In tablet
+
 +tablet
   .kg-width-wide .kg-image
     width: 100%
