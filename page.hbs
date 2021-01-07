@@ -6,10 +6,10 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post mb-10 pt-8 lg:p-16 relative">
+<article class="post mb-4 pt-8 lg:p-16 relative">
     <header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
         <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
-        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl font-medium text-gray-500">{{custom_excerpt}}</p>{{/if}}
+        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl text-gray-500">{{custom_excerpt}}</p>{{/if}}
     </header>
 
     {{!-- Post Image - partials/article/article-featured-image.hbs --}}
