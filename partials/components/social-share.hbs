@@ -4,24 +4,36 @@
     <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
         target="_blank"
         rel="noopener noreferrer"
+        class="godo-tracking js-share text-gray-900 mr-2"
         aria-label="{{t "Share on"}} Twitter"
-        class="godo-tracking js-share text-gray-900 mr-2">
+        data-event-category="Article"
+        data-event-action="Share"
+        data-event-label="Twitter"
+        data-event-non-interaction="true">
         <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
     </a>
     {{!-- Share on Linkeding --}}
     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
         target="_blank"
         rel="noopener noreferrer"
+        class="godo-tracking js-share text-gray-900 mr-2"
         aria-label="{{t "Share on"}} Linkedin"
-        class="godo-tracking js-share text-gray-900 mr-2">
+        data-event-category="Article"
+        data-event-action="Linkedin"
+        data-event-label="Twitter"
+        data-event-non-interaction="true">
         <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
     </a>
     {{!-- Share on Facebook --}}
     <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
         target="_blank"
         rel="noopener noreferrer"
+        class="godo-tracking js-share text-gray-900"
         aria-label="{{t "Share on"}} Facebook"
-        class="godo-tracking js-share text-gray-900">
+        data-event-category="Article"
+        data-event-action="Share"
+        data-event-label="Facebook"
+        data-event-non-interaction="true">
         <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
     </a>
 </aside>
