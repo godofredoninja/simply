@@ -1,11 +1,11 @@
 <div class="notification flex items-center justify-center p-4 fixed top-0 shadow-lg bg-dark z-20 mx-auto right-0 left-0 text-white invisible">
     <div class="notification-subscribe hidden"><span class="text-22 mr-3">🎉</span> {{t "You've successfully subscribed to"}} {{@site.title}}!</div>
-    <span class="notification-signup hidden">Great! Next, complete checkout for full access to {{@site.title}}</span>
-    <span class="notification-signin hidden">Welcome back! You've successfully signed in.</span>
-    <span class="notification-signin-failure hidden text-danger font-semibold">Unable to sign you in. Please try again.</span>
-    <span class="notification-checkout hidden">Success! Your account is fully activated, you now have access to all content.</span>
-    <span class="notification-billing-update hidden">Success! Your billing info is updated.</span>
-    <span class="notification-billing-update-cancel hidden">Billing info update failed.</span>
+    <span class="notification-signup hidden">{{t "Great! Next, complete checkout for full access to"}} {{@site.title}}</span>
+    <span class="notification-signin hidden">{{t "Welcome back! You've successfully signed in."}}</span>
+    <span class="notification-signin-failure hidden text-danger font-semibold">{{t "Unable to sign you in. Please try again."}}</span>
+    <span class="notification-checkout hidden">{{t "Success! Your account is fully activated, you now have access to all content."}}</span>
+    <span class="notification-billing-update hidden">{{t "Success! Your billing info is updated."}}</span>
+    <span class="notification-billing-update-cancel hidden">{{t "Billing info update failed."}}</span>
     <div class="notification-close button is-small is-primary ml-3">OK</div>
 </div>
 
