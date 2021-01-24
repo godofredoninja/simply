@@ -39,6 +39,7 @@ module.exports = {
       twitter: '#55acee',
       youtube: '#FF0000',
       linkedin: '#007bb6',
+      instagram: '#b900b4',
       whatsapp: '#64d448'
     },
     screens: {
@@ -134,8 +135,13 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  purge: [
-    '../**/*.hbs',
-    './js/**/*.js'
-  ]
+  purge: {
+    content: [
+      '../**/*.hbs',
+      './js/**/*.js'
+    ],
+    options: {
+      safelist: ['hover:text-youtube', 'hover:text-instagram']
+    }
+  }
 }
