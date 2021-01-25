@@ -1,8 +1,8 @@
 routes:
-  /signup/: members\signup
-  /signin/: members\signin
-  /account/: members\account
-  /membership/: members\membership
+  /signup/: members/signup
+  /signin/: members/signin
+  /account/: members/account
+  /membership/: members/membership
 
   /featured/:
     controller: channel
@@ -62,10 +62,9 @@ collections:
     limit: 10
 
   # Documentation
-  /documentation/:
-    permalink: /documentation/{slug}/
+  /docs/:
+    permalink: /docs/{slug}/
     filter: 'tag:[hash-kusi-doc]'
-    data: page.documentation
     template: godo-home-kusi-doc
 
   # Default

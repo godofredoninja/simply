@@ -27,8 +27,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> --}}
 
     {{!-- Styles --}}
-    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
-    {{!-- <style>{{> "main-styles"}}</style> --}}
+    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
+    <style>{{> "main-styles"}}</style>
 
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -68,7 +68,7 @@
     {{!-- Icons --}}
     {{> "icons/icons-symbol-defs"}}
 
-    {{!-- Blog URL --}}
+    {{!-- Scripts URL --}}
     <script>
         var siteUrl = '{{@site.url}}';
         var siteSearch = '{{asset "scripts/search.js"}}';
