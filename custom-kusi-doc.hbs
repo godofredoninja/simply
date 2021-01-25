@@ -32,11 +32,11 @@
     </div>
 
     {{!-- content of the documentation --}}
-    <article class="py-8 md:p-12 bg-blank shadow rounded">
+    <article class="py-8 md:p-12 bg-blank shadow rounded flex-grow">
         <div class="max-w-740">
             <header><h1 class="text-title">{{title}}</h1></header>
 
-            <section class="post-body font-sans js-kusi-doc">
+            <section class="post-body font-sans has-sidebar js-kusi-doc">
                 {{content}}
             </section>
 
@@ -59,7 +59,7 @@
 
     {{!-- Table of Contents --}}
     <aside class="js-sidebar-right flex flex-col w-56 flex-none pt-8 pl-5 mb-12 order-2 lg:order-none">
-        <div class="sticky top-24 js-sidebar-wrap">
+        <div class="sticky top-24 js-sidebar-wrap hidden">
             <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "On this page"}}</div>
             <ul class="text-sm js-table-content leading-tight"></ul>
         </div>

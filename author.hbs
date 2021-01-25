@@ -32,14 +32,14 @@
         <div class="author-meta buttons justify-center">
             {{#if location}}
                 <span class="author-location button is-transparent">
-                    <svg class="icon"><use xlink:href="#icon-map"></use></svg>
+                    <svg class="icon is-stroke"><use xlink:href="#icon-map"></use></svg>
                     <span>{{location}}</span>
                 </span>
             {{/if}}
 
             {{#if website}}
                 <a href="{{website}}" class="author-link button is-transparent" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon"><use xlink:href="#icon-link"></use></svg>
+                    <svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg>
                     <span>{{website}}</span>
                 </a>
             {{/if}}
@@ -53,14 +53,14 @@
         {{!-- Author Facebook and Twitter --}}
         <div class="author-follow buttons justify-center mt-8">
             {{#if facebook}}
-            <a href="{{facebook_url}}" title="Facebook" class="button text-white bg-facebook hover:text-white" target="_blank" rel="noopener noreferrer">
+            <a href="{{facebook_url}}" title="Facebook" class="button text-white bg-facebook hover:text-white border-0" target="_blank" rel="noopener noreferrer">
                 <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
                 <span>Facebook</span>
                 </a>
             {{/if}}
 
             {{#if twitter}}
-            <a href="{{twitter_url}}" title="{{twitter}}" class="button text-white bg-twitter hover:text-white" target="_blank" rel="noopener noreferrer">
+            <a href="{{twitter_url}}" title="{{twitter}}" class="button text-white bg-twitter hover:text-white border-0" target="_blank" rel="noopener noreferrer">
                 <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
                 <span>Twitter</span>
             </a>
