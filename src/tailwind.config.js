@@ -39,7 +39,7 @@ module.exports = {
       twitter: '#55acee',
       youtube: '#FF0000',
       linkedin: '#007bb6',
-      instagram: '#b900b4',
+      instagram: '#bf32a8',
       whatsapp: '#64d448'
     },
     screens: {

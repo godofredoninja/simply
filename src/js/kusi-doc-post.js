@@ -39,8 +39,8 @@ const setup = () => {
   // Links To Titles
   function linkToTile (link, el) {
     link.setAttribute('aria-hidden', 'true')
-    link.innerHTML = '<svg class="fill-current w-5 h-5" aria-hidden="true"><use xlink:href="#icon-link"></use></svg>'
-    link.classList = 'anchor px-3 inline-block invisible opacity-0 -ml-10 text-gray-500'
+    link.innerHTML = '<svg class="icon is-stroke" aria-hidden="true"><use xlink:href="#icon-link"></use></svg>'
+    link.classList = 'anchor px-3 inline-block invisible opacity-0 -ml-12 text-gray-500'
 
     el.insertBefore(link, el.childNodes[0])
   }

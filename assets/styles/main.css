@@ -1674,9 +1674,13 @@ textarea.has-fixed-size {
   fill: currentColor;
   height: 1.5rem;
   stroke-width: 0;
-  stroke: currentColor;
   vertical-align: middle;
   width: 1.5rem;
+}
+
+.icon.is-stroke {
+  fill: none;
+  stroke: currentColor;
 }
 
 .icon.is-small {
@@ -4000,7 +4004,7 @@ a > code[class*="language-"] {
 
 .divide-instagram > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-divide-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-divide-opacity));
 }
 
 .divide-whatsapp > :not([hidden]) ~ :not([hidden]){
@@ -4315,7 +4319,7 @@ a > code[class*="language-"] {
 
 .bg-instagram{
   --tw-bg-opacity: 1;
-  background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+  background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
 }
 
 .bg-whatsapp{
@@ -4449,7 +4453,7 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:bg-instagram{
   --tw-bg-opacity: 1;
-  background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+  background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
 }
 
 .group:hover .group-hover\:bg-whatsapp{
@@ -4583,7 +4587,7 @@ a > code[class*="language-"] {
 
 .focus-within\:bg-instagram:focus-within{
   --tw-bg-opacity: 1;
-  background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+  background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
 }
 
 .focus-within\:bg-whatsapp:focus-within{
@@ -4717,7 +4721,7 @@ a > code[class*="language-"] {
 
 .hover\:bg-instagram:hover{
   --tw-bg-opacity: 1;
-  background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+  background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
 }
 
 .hover\:bg-whatsapp:hover{
@@ -4851,7 +4855,7 @@ a > code[class*="language-"] {
 
 .focus\:bg-instagram:focus{
   --tw-bg-opacity: 1;
-  background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+  background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
 }
 
 .focus\:bg-whatsapp:focus{
@@ -5036,8 +5040,8 @@ a > code[class*="language-"] {
 }
 
 .from-instagram{
-  --tw-gradient-from: #b900b4;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-from: #bf32a8;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .from-whatsapp{
@@ -5158,7 +5162,7 @@ a > code[class*="language-"] {
 }
 
 .via-instagram{
-  --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .via-whatsapp{
@@ -5278,7 +5282,7 @@ a > code[class*="language-"] {
 }
 
 .to-instagram{
-  --tw-gradient-to: #b900b4;
+  --tw-gradient-to: #bf32a8;
 }
 
 .to-whatsapp{
@@ -5426,8 +5430,8 @@ a > code[class*="language-"] {
 }
 
 .hover\:from-instagram:hover{
-  --tw-gradient-from: #b900b4;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-from: #bf32a8;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .hover\:from-whatsapp:hover{
@@ -5548,7 +5552,7 @@ a > code[class*="language-"] {
 }
 
 .hover\:via-instagram:hover{
-  --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .hover\:via-whatsapp:hover{
@@ -5668,7 +5672,7 @@ a > code[class*="language-"] {
 }
 
 .hover\:to-instagram:hover{
-  --tw-gradient-to: #b900b4;
+  --tw-gradient-to: #bf32a8;
 }
 
 .hover\:to-whatsapp:hover{
@@ -5816,8 +5820,8 @@ a > code[class*="language-"] {
 }
 
 .focus\:from-instagram:focus{
-  --tw-gradient-from: #b900b4;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-from: #bf32a8;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .focus\:from-whatsapp:focus{
@@ -5938,7 +5942,7 @@ a > code[class*="language-"] {
 }
 
 .focus\:via-instagram:focus{
-  --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+  --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
 }
 
 .focus\:via-whatsapp:focus{
@@ -6058,7 +6062,7 @@ a > code[class*="language-"] {
 }
 
 .focus\:to-instagram:focus{
-  --tw-gradient-to: #b900b4;
+  --tw-gradient-to: #bf32a8;
 }
 
 .focus\:to-whatsapp:focus{
@@ -6571,7 +6575,7 @@ a > code[class*="language-"] {
 
 .border-instagram{
   --tw-border-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-border-opacity));
 }
 
 .border-whatsapp{
@@ -6705,7 +6709,7 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:border-instagram{
   --tw-border-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-border-opacity));
 }
 
 .group:hover .group-hover\:border-whatsapp{
@@ -6839,7 +6843,7 @@ a > code[class*="language-"] {
 
 .focus-within\:border-instagram:focus-within{
   --tw-border-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-border-opacity));
 }
 
 .focus-within\:border-whatsapp:focus-within{
@@ -6973,7 +6977,7 @@ a > code[class*="language-"] {
 
 .hover\:border-instagram:hover{
   --tw-border-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-border-opacity));
 }
 
 .hover\:border-whatsapp:hover{
@@ -7107,7 +7111,7 @@ a > code[class*="language-"] {
 
 .focus\:border-instagram:focus{
   --tw-border-opacity: 1;
-  border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+  border-color: rgba(191, 50, 168, var(--tw-border-opacity));
 }
 
 .focus\:border-whatsapp:focus{
@@ -12925,7 +12929,7 @@ a > code[class*="language-"] {
 
 .placeholder-instagram::placeholder{
   --tw-placeholder-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+  color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
 }
 
 .placeholder-whatsapp::placeholder{
@@ -13059,7 +13063,7 @@ a > code[class*="language-"] {
 
 .focus\:placeholder-instagram:focus::placeholder{
   --tw-placeholder-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+  color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
 }
 
 .focus\:placeholder-whatsapp:focus::placeholder{
@@ -16507,7 +16511,7 @@ a > code[class*="language-"] {
 }
 
 .ring-offset-instagram{
-  --tw-ring-offset-color: #b900b4;
+  --tw-ring-offset-color: #bf32a8;
 }
 
 .ring-offset-whatsapp{
@@ -16627,7 +16631,7 @@ a > code[class*="language-"] {
 }
 
 .focus-within\:ring-offset-instagram:focus-within{
-  --tw-ring-offset-color: #b900b4;
+  --tw-ring-offset-color: #bf32a8;
 }
 
 .focus-within\:ring-offset-whatsapp:focus-within{
@@ -16747,7 +16751,7 @@ a > code[class*="language-"] {
 }
 
 .focus\:ring-offset-instagram:focus{
-  --tw-ring-offset-color: #b900b4;
+  --tw-ring-offset-color: #bf32a8;
 }
 
 .focus\:ring-offset-whatsapp:focus{
@@ -16940,7 +16944,7 @@ a > code[class*="language-"] {
 
 .ring-instagram{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+  --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
 }
 
 .ring-whatsapp{
@@ -17074,7 +17078,7 @@ a > code[class*="language-"] {
 
 .focus-within\:ring-instagram:focus-within{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+  --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
 }
 
 .focus-within\:ring-whatsapp:focus-within{
@@ -17208,7 +17212,7 @@ a > code[class*="language-"] {
 
 .focus\:ring-instagram:focus{
   --tw-ring-opacity: 1;
-  --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+  --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
 }
 
 .focus\:ring-whatsapp:focus{
@@ -17566,7 +17570,7 @@ a > code[class*="language-"] {
 
 .text-instagram{
   --tw-text-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-text-opacity));
+  color: rgba(191, 50, 168, var(--tw-text-opacity));
 }
 
 .text-whatsapp{
@@ -17700,7 +17704,7 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:text-instagram{
   --tw-text-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-text-opacity));
+  color: rgba(191, 50, 168, var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:text-whatsapp{
@@ -17834,7 +17838,7 @@ a > code[class*="language-"] {
 
 .focus-within\:text-instagram:focus-within{
   --tw-text-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-text-opacity));
+  color: rgba(191, 50, 168, var(--tw-text-opacity));
 }
 
 .focus-within\:text-whatsapp:focus-within{
@@ -17968,7 +17972,7 @@ a > code[class*="language-"] {
 
 .hover\:text-instagram:hover{
   --tw-text-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-text-opacity));
+  color: rgba(191, 50, 168, var(--tw-text-opacity));
 }
 
 .hover\:text-whatsapp:hover{
@@ -18102,7 +18106,7 @@ a > code[class*="language-"] {
 
 .focus\:text-instagram:focus{
   --tw-text-opacity: 1;
-  color: rgba(185, 0, 180, var(--tw-text-opacity));
+  color: rgba(191, 50, 168, var(--tw-text-opacity));
 }
 
 .focus\:text-whatsapp:focus{
@@ -23591,7 +23595,7 @@ a > code[class*="language-"] {
 
   .sm\:divide-instagram > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-divide-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-divide-opacity));
   }
 
   .sm\:divide-whatsapp > :not([hidden]) ~ :not([hidden]){
@@ -23906,7 +23910,7 @@ a > code[class*="language-"] {
 
   .sm\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .sm\:bg-whatsapp{
@@ -24040,7 +24044,7 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .group:hover .sm\:group-hover\:bg-whatsapp{
@@ -24174,7 +24178,7 @@ a > code[class*="language-"] {
 
   .sm\:focus-within\:bg-instagram:focus-within{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .sm\:focus-within\:bg-whatsapp:focus-within{
@@ -24308,7 +24312,7 @@ a > code[class*="language-"] {
 
   .sm\:hover\:bg-instagram:hover{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .sm\:hover\:bg-whatsapp:hover{
@@ -24442,7 +24446,7 @@ a > code[class*="language-"] {
 
   .sm\:focus\:bg-instagram:focus{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .sm\:focus\:bg-whatsapp:focus{
@@ -24627,8 +24631,8 @@ a > code[class*="language-"] {
   }
 
   .sm\:from-instagram{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:from-whatsapp{
@@ -24749,7 +24753,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:via-instagram{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:via-whatsapp{
@@ -24869,7 +24873,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:to-instagram{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .sm\:to-whatsapp{
@@ -25017,8 +25021,8 @@ a > code[class*="language-"] {
   }
 
   .sm\:hover\:from-instagram:hover{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:hover\:from-whatsapp:hover{
@@ -25139,7 +25143,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:hover\:via-instagram:hover{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:hover\:via-whatsapp:hover{
@@ -25259,7 +25263,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:hover\:to-instagram:hover{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .sm\:hover\:to-whatsapp:hover{
@@ -25407,8 +25411,8 @@ a > code[class*="language-"] {
   }
 
   .sm\:focus\:from-instagram:focus{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:focus\:from-whatsapp:focus{
@@ -25529,7 +25533,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:focus\:via-instagram:focus{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .sm\:focus\:via-whatsapp:focus{
@@ -25649,7 +25653,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:focus\:to-instagram:focus{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .sm\:focus\:to-whatsapp:focus{
@@ -26162,7 +26166,7 @@ a > code[class*="language-"] {
 
   .sm\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .sm\:border-whatsapp{
@@ -26296,7 +26300,7 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .group:hover .sm\:group-hover\:border-whatsapp{
@@ -26430,7 +26434,7 @@ a > code[class*="language-"] {
 
   .sm\:focus-within\:border-instagram:focus-within{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .sm\:focus-within\:border-whatsapp:focus-within{
@@ -26564,7 +26568,7 @@ a > code[class*="language-"] {
 
   .sm\:hover\:border-instagram:hover{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .sm\:hover\:border-whatsapp:hover{
@@ -26698,7 +26702,7 @@ a > code[class*="language-"] {
 
   .sm\:focus\:border-instagram:focus{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .sm\:focus\:border-whatsapp:focus{
@@ -32516,7 +32520,7 @@ a > code[class*="language-"] {
 
   .sm\:placeholder-instagram::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .sm\:placeholder-whatsapp::placeholder{
@@ -32650,7 +32654,7 @@ a > code[class*="language-"] {
 
   .sm\:focus\:placeholder-instagram:focus::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .sm\:focus\:placeholder-whatsapp:focus::placeholder{
@@ -36085,7 +36089,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:ring-offset-instagram{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .sm\:ring-offset-whatsapp{
@@ -36205,7 +36209,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:focus-within\:ring-offset-instagram:focus-within{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .sm\:focus-within\:ring-offset-whatsapp:focus-within{
@@ -36325,7 +36329,7 @@ a > code[class*="language-"] {
   }
 
   .sm\:focus\:ring-offset-instagram:focus{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .sm\:focus\:ring-offset-whatsapp:focus{
@@ -36518,7 +36522,7 @@ a > code[class*="language-"] {
 
   .sm\:ring-instagram{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .sm\:ring-whatsapp{
@@ -36652,7 +36656,7 @@ a > code[class*="language-"] {
 
   .sm\:focus-within\:ring-instagram:focus-within{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .sm\:focus-within\:ring-whatsapp:focus-within{
@@ -36786,7 +36790,7 @@ a > code[class*="language-"] {
 
   .sm\:focus\:ring-instagram:focus{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .sm\:focus\:ring-whatsapp:focus{
@@ -37144,7 +37148,7 @@ a > code[class*="language-"] {
 
   .sm\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .sm\:text-whatsapp{
@@ -37278,7 +37282,7 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .group:hover .sm\:group-hover\:text-whatsapp{
@@ -37412,7 +37416,7 @@ a > code[class*="language-"] {
 
   .sm\:focus-within\:text-instagram:focus-within{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .sm\:focus-within\:text-whatsapp:focus-within{
@@ -37546,7 +37550,7 @@ a > code[class*="language-"] {
 
   .sm\:hover\:text-instagram:hover{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .sm\:hover\:text-whatsapp:hover{
@@ -37680,7 +37684,7 @@ a > code[class*="language-"] {
 
   .sm\:focus\:text-instagram:focus{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .sm\:focus\:text-whatsapp:focus{
@@ -43052,7 +43056,7 @@ a > code[class*="language-"] {
 
   .md\:divide-instagram > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-divide-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-divide-opacity));
   }
 
   .md\:divide-whatsapp > :not([hidden]) ~ :not([hidden]){
@@ -43367,7 +43371,7 @@ a > code[class*="language-"] {
 
   .md\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .md\:bg-whatsapp{
@@ -43501,7 +43505,7 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .group:hover .md\:group-hover\:bg-whatsapp{
@@ -43635,7 +43639,7 @@ a > code[class*="language-"] {
 
   .md\:focus-within\:bg-instagram:focus-within{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .md\:focus-within\:bg-whatsapp:focus-within{
@@ -43769,7 +43773,7 @@ a > code[class*="language-"] {
 
   .md\:hover\:bg-instagram:hover{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .md\:hover\:bg-whatsapp:hover{
@@ -43903,7 +43907,7 @@ a > code[class*="language-"] {
 
   .md\:focus\:bg-instagram:focus{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .md\:focus\:bg-whatsapp:focus{
@@ -44088,8 +44092,8 @@ a > code[class*="language-"] {
   }
 
   .md\:from-instagram{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:from-whatsapp{
@@ -44210,7 +44214,7 @@ a > code[class*="language-"] {
   }
 
   .md\:via-instagram{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:via-whatsapp{
@@ -44330,7 +44334,7 @@ a > code[class*="language-"] {
   }
 
   .md\:to-instagram{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .md\:to-whatsapp{
@@ -44478,8 +44482,8 @@ a > code[class*="language-"] {
   }
 
   .md\:hover\:from-instagram:hover{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:hover\:from-whatsapp:hover{
@@ -44600,7 +44604,7 @@ a > code[class*="language-"] {
   }
 
   .md\:hover\:via-instagram:hover{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:hover\:via-whatsapp:hover{
@@ -44720,7 +44724,7 @@ a > code[class*="language-"] {
   }
 
   .md\:hover\:to-instagram:hover{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .md\:hover\:to-whatsapp:hover{
@@ -44868,8 +44872,8 @@ a > code[class*="language-"] {
   }
 
   .md\:focus\:from-instagram:focus{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:focus\:from-whatsapp:focus{
@@ -44990,7 +44994,7 @@ a > code[class*="language-"] {
   }
 
   .md\:focus\:via-instagram:focus{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .md\:focus\:via-whatsapp:focus{
@@ -45110,7 +45114,7 @@ a > code[class*="language-"] {
   }
 
   .md\:focus\:to-instagram:focus{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .md\:focus\:to-whatsapp:focus{
@@ -45623,7 +45627,7 @@ a > code[class*="language-"] {
 
   .md\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .md\:border-whatsapp{
@@ -45757,7 +45761,7 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .group:hover .md\:group-hover\:border-whatsapp{
@@ -45891,7 +45895,7 @@ a > code[class*="language-"] {
 
   .md\:focus-within\:border-instagram:focus-within{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .md\:focus-within\:border-whatsapp:focus-within{
@@ -46025,7 +46029,7 @@ a > code[class*="language-"] {
 
   .md\:hover\:border-instagram:hover{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .md\:hover\:border-whatsapp:hover{
@@ -46159,7 +46163,7 @@ a > code[class*="language-"] {
 
   .md\:focus\:border-instagram:focus{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .md\:focus\:border-whatsapp:focus{
@@ -51977,7 +51981,7 @@ a > code[class*="language-"] {
 
   .md\:placeholder-instagram::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .md\:placeholder-whatsapp::placeholder{
@@ -52111,7 +52115,7 @@ a > code[class*="language-"] {
 
   .md\:focus\:placeholder-instagram:focus::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .md\:focus\:placeholder-whatsapp:focus::placeholder{
@@ -55546,7 +55550,7 @@ a > code[class*="language-"] {
   }
 
   .md\:ring-offset-instagram{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .md\:ring-offset-whatsapp{
@@ -55666,7 +55670,7 @@ a > code[class*="language-"] {
   }
 
   .md\:focus-within\:ring-offset-instagram:focus-within{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .md\:focus-within\:ring-offset-whatsapp:focus-within{
@@ -55786,7 +55790,7 @@ a > code[class*="language-"] {
   }
 
   .md\:focus\:ring-offset-instagram:focus{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .md\:focus\:ring-offset-whatsapp:focus{
@@ -55979,7 +55983,7 @@ a > code[class*="language-"] {
 
   .md\:ring-instagram{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .md\:ring-whatsapp{
@@ -56113,7 +56117,7 @@ a > code[class*="language-"] {
 
   .md\:focus-within\:ring-instagram:focus-within{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .md\:focus-within\:ring-whatsapp:focus-within{
@@ -56247,7 +56251,7 @@ a > code[class*="language-"] {
 
   .md\:focus\:ring-instagram:focus{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .md\:focus\:ring-whatsapp:focus{
@@ -56605,7 +56609,7 @@ a > code[class*="language-"] {
 
   .md\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .md\:text-whatsapp{
@@ -56739,7 +56743,7 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .group:hover .md\:group-hover\:text-whatsapp{
@@ -56873,7 +56877,7 @@ a > code[class*="language-"] {
 
   .md\:focus-within\:text-instagram:focus-within{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .md\:focus-within\:text-whatsapp:focus-within{
@@ -57007,7 +57011,7 @@ a > code[class*="language-"] {
 
   .md\:hover\:text-instagram:hover{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .md\:hover\:text-whatsapp:hover{
@@ -57141,7 +57145,7 @@ a > code[class*="language-"] {
 
   .md\:focus\:text-instagram:focus{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .md\:focus\:text-whatsapp:focus{
@@ -62513,7 +62517,7 @@ a > code[class*="language-"] {
 
   .lg\:divide-instagram > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-divide-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-divide-opacity));
   }
 
   .lg\:divide-whatsapp > :not([hidden]) ~ :not([hidden]){
@@ -62828,7 +62832,7 @@ a > code[class*="language-"] {
 
   .lg\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .lg\:bg-whatsapp{
@@ -62962,7 +62966,7 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .group:hover .lg\:group-hover\:bg-whatsapp{
@@ -63096,7 +63100,7 @@ a > code[class*="language-"] {
 
   .lg\:focus-within\:bg-instagram:focus-within{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .lg\:focus-within\:bg-whatsapp:focus-within{
@@ -63230,7 +63234,7 @@ a > code[class*="language-"] {
 
   .lg\:hover\:bg-instagram:hover{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .lg\:hover\:bg-whatsapp:hover{
@@ -63364,7 +63368,7 @@ a > code[class*="language-"] {
 
   .lg\:focus\:bg-instagram:focus{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .lg\:focus\:bg-whatsapp:focus{
@@ -63549,8 +63553,8 @@ a > code[class*="language-"] {
   }
 
   .lg\:from-instagram{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:from-whatsapp{
@@ -63671,7 +63675,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:via-instagram{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:via-whatsapp{
@@ -63791,7 +63795,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:to-instagram{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .lg\:to-whatsapp{
@@ -63939,8 +63943,8 @@ a > code[class*="language-"] {
   }
 
   .lg\:hover\:from-instagram:hover{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:hover\:from-whatsapp:hover{
@@ -64061,7 +64065,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:hover\:via-instagram:hover{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:hover\:via-whatsapp:hover{
@@ -64181,7 +64185,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:hover\:to-instagram:hover{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .lg\:hover\:to-whatsapp:hover{
@@ -64329,8 +64333,8 @@ a > code[class*="language-"] {
   }
 
   .lg\:focus\:from-instagram:focus{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:focus\:from-whatsapp:focus{
@@ -64451,7 +64455,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:focus\:via-instagram:focus{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .lg\:focus\:via-whatsapp:focus{
@@ -64571,7 +64575,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:focus\:to-instagram:focus{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .lg\:focus\:to-whatsapp:focus{
@@ -65084,7 +65088,7 @@ a > code[class*="language-"] {
 
   .lg\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .lg\:border-whatsapp{
@@ -65218,7 +65222,7 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .group:hover .lg\:group-hover\:border-whatsapp{
@@ -65352,7 +65356,7 @@ a > code[class*="language-"] {
 
   .lg\:focus-within\:border-instagram:focus-within{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .lg\:focus-within\:border-whatsapp:focus-within{
@@ -65486,7 +65490,7 @@ a > code[class*="language-"] {
 
   .lg\:hover\:border-instagram:hover{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .lg\:hover\:border-whatsapp:hover{
@@ -65620,7 +65624,7 @@ a > code[class*="language-"] {
 
   .lg\:focus\:border-instagram:focus{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .lg\:focus\:border-whatsapp:focus{
@@ -71438,7 +71442,7 @@ a > code[class*="language-"] {
 
   .lg\:placeholder-instagram::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .lg\:placeholder-whatsapp::placeholder{
@@ -71572,7 +71576,7 @@ a > code[class*="language-"] {
 
   .lg\:focus\:placeholder-instagram:focus::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .lg\:focus\:placeholder-whatsapp:focus::placeholder{
@@ -75007,7 +75011,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:ring-offset-instagram{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .lg\:ring-offset-whatsapp{
@@ -75127,7 +75131,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:focus-within\:ring-offset-instagram:focus-within{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .lg\:focus-within\:ring-offset-whatsapp:focus-within{
@@ -75247,7 +75251,7 @@ a > code[class*="language-"] {
   }
 
   .lg\:focus\:ring-offset-instagram:focus{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .lg\:focus\:ring-offset-whatsapp:focus{
@@ -75440,7 +75444,7 @@ a > code[class*="language-"] {
 
   .lg\:ring-instagram{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .lg\:ring-whatsapp{
@@ -75574,7 +75578,7 @@ a > code[class*="language-"] {
 
   .lg\:focus-within\:ring-instagram:focus-within{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .lg\:focus-within\:ring-whatsapp:focus-within{
@@ -75708,7 +75712,7 @@ a > code[class*="language-"] {
 
   .lg\:focus\:ring-instagram:focus{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .lg\:focus\:ring-whatsapp:focus{
@@ -76066,7 +76070,7 @@ a > code[class*="language-"] {
 
   .lg\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .lg\:text-whatsapp{
@@ -76200,7 +76204,7 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .group:hover .lg\:group-hover\:text-whatsapp{
@@ -76334,7 +76338,7 @@ a > code[class*="language-"] {
 
   .lg\:focus-within\:text-instagram:focus-within{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .lg\:focus-within\:text-whatsapp:focus-within{
@@ -76468,7 +76472,7 @@ a > code[class*="language-"] {
 
   .lg\:hover\:text-instagram:hover{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .lg\:hover\:text-whatsapp:hover{
@@ -76602,7 +76606,7 @@ a > code[class*="language-"] {
 
   .lg\:focus\:text-instagram:focus{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .lg\:focus\:text-whatsapp:focus{
@@ -81974,7 +81978,7 @@ a > code[class*="language-"] {
 
   .xl\:divide-instagram > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-divide-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-divide-opacity));
   }
 
   .xl\:divide-whatsapp > :not([hidden]) ~ :not([hidden]){
@@ -82289,7 +82293,7 @@ a > code[class*="language-"] {
 
   .xl\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .xl\:bg-whatsapp{
@@ -82423,7 +82427,7 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:bg-instagram{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .group:hover .xl\:group-hover\:bg-whatsapp{
@@ -82557,7 +82561,7 @@ a > code[class*="language-"] {
 
   .xl\:focus-within\:bg-instagram:focus-within{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .xl\:focus-within\:bg-whatsapp:focus-within{
@@ -82691,7 +82695,7 @@ a > code[class*="language-"] {
 
   .xl\:hover\:bg-instagram:hover{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .xl\:hover\:bg-whatsapp:hover{
@@ -82825,7 +82829,7 @@ a > code[class*="language-"] {
 
   .xl\:focus\:bg-instagram:focus{
     --tw-bg-opacity: 1;
-    background-color: rgba(185, 0, 180, var(--tw-bg-opacity));
+    background-color: rgba(191, 50, 168, var(--tw-bg-opacity));
   }
 
   .xl\:focus\:bg-whatsapp:focus{
@@ -83010,8 +83014,8 @@ a > code[class*="language-"] {
   }
 
   .xl\:from-instagram{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:from-whatsapp{
@@ -83132,7 +83136,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:via-instagram{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:via-whatsapp{
@@ -83252,7 +83256,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:to-instagram{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .xl\:to-whatsapp{
@@ -83400,8 +83404,8 @@ a > code[class*="language-"] {
   }
 
   .xl\:hover\:from-instagram:hover{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:hover\:from-whatsapp:hover{
@@ -83522,7 +83526,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:hover\:via-instagram:hover{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:hover\:via-whatsapp:hover{
@@ -83642,7 +83646,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:hover\:to-instagram:hover{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .xl\:hover\:to-whatsapp:hover{
@@ -83790,8 +83794,8 @@ a > code[class*="language-"] {
   }
 
   .xl\:focus\:from-instagram:focus{
-    --tw-gradient-from: #b900b4;
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-from: #bf32a8;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:focus\:from-whatsapp:focus{
@@ -83912,7 +83916,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:focus\:via-instagram:focus{
-    --tw-gradient-stops: var(--tw-gradient-from), #b900b4, var(--tw-gradient-to, rgba(185, 0, 180, 0));
+    --tw-gradient-stops: var(--tw-gradient-from), #bf32a8, var(--tw-gradient-to, rgba(191, 50, 168, 0));
   }
 
   .xl\:focus\:via-whatsapp:focus{
@@ -84032,7 +84036,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:focus\:to-instagram:focus{
-    --tw-gradient-to: #b900b4;
+    --tw-gradient-to: #bf32a8;
   }
 
   .xl\:focus\:to-whatsapp:focus{
@@ -84545,7 +84549,7 @@ a > code[class*="language-"] {
 
   .xl\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .xl\:border-whatsapp{
@@ -84679,7 +84683,7 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:border-instagram{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .group:hover .xl\:group-hover\:border-whatsapp{
@@ -84813,7 +84817,7 @@ a > code[class*="language-"] {
 
   .xl\:focus-within\:border-instagram:focus-within{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .xl\:focus-within\:border-whatsapp:focus-within{
@@ -84947,7 +84951,7 @@ a > code[class*="language-"] {
 
   .xl\:hover\:border-instagram:hover{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .xl\:hover\:border-whatsapp:hover{
@@ -85081,7 +85085,7 @@ a > code[class*="language-"] {
 
   .xl\:focus\:border-instagram:focus{
     --tw-border-opacity: 1;
-    border-color: rgba(185, 0, 180, var(--tw-border-opacity));
+    border-color: rgba(191, 50, 168, var(--tw-border-opacity));
   }
 
   .xl\:focus\:border-whatsapp:focus{
@@ -90899,7 +90903,7 @@ a > code[class*="language-"] {
 
   .xl\:placeholder-instagram::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .xl\:placeholder-whatsapp::placeholder{
@@ -91033,7 +91037,7 @@ a > code[class*="language-"] {
 
   .xl\:focus\:placeholder-instagram:focus::placeholder{
     --tw-placeholder-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-placeholder-opacity));
+    color: rgba(191, 50, 168, var(--tw-placeholder-opacity));
   }
 
   .xl\:focus\:placeholder-whatsapp:focus::placeholder{
@@ -94468,7 +94472,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:ring-offset-instagram{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .xl\:ring-offset-whatsapp{
@@ -94588,7 +94592,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:focus-within\:ring-offset-instagram:focus-within{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .xl\:focus-within\:ring-offset-whatsapp:focus-within{
@@ -94708,7 +94712,7 @@ a > code[class*="language-"] {
   }
 
   .xl\:focus\:ring-offset-instagram:focus{
-    --tw-ring-offset-color: #b900b4;
+    --tw-ring-offset-color: #bf32a8;
   }
 
   .xl\:focus\:ring-offset-whatsapp:focus{
@@ -94901,7 +94905,7 @@ a > code[class*="language-"] {
 
   .xl\:ring-instagram{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .xl\:ring-whatsapp{
@@ -95035,7 +95039,7 @@ a > code[class*="language-"] {
 
   .xl\:focus-within\:ring-instagram:focus-within{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .xl\:focus-within\:ring-whatsapp:focus-within{
@@ -95169,7 +95173,7 @@ a > code[class*="language-"] {
 
   .xl\:focus\:ring-instagram:focus{
     --tw-ring-opacity: 1;
-    --tw-ring-color: rgba(185, 0, 180, var(--tw-ring-opacity));
+    --tw-ring-color: rgba(191, 50, 168, var(--tw-ring-opacity));
   }
 
   .xl\:focus\:ring-whatsapp:focus{
@@ -95527,7 +95531,7 @@ a > code[class*="language-"] {
 
   .xl\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .xl\:text-whatsapp{
@@ -95661,7 +95665,7 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:text-instagram{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .group:hover .xl\:group-hover\:text-whatsapp{
@@ -95795,7 +95799,7 @@ a > code[class*="language-"] {
 
   .xl\:focus-within\:text-instagram:focus-within{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .xl\:focus-within\:text-whatsapp:focus-within{
@@ -95929,7 +95933,7 @@ a > code[class*="language-"] {
 
   .xl\:hover\:text-instagram:hover{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .xl\:hover\:text-whatsapp:hover{
@@ -96063,7 +96067,7 @@ a > code[class*="language-"] {
 
   .xl\:focus\:text-instagram:focus{
     --tw-text-opacity: 1;
-    color: rgba(185, 0, 180, var(--tw-text-opacity));
+    color: rgba(191, 50, 168, var(--tw-text-opacity));
   }
 
   .xl\:focus\:text-whatsapp:focus{

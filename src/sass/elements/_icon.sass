@@ -11,9 +11,13 @@ $icon-dimensions-large: 3rem
   fill: currentColor
   height: $icon-dimensions
   stroke-width: 0
-  stroke: currentColor
+  // stroke: currentColor
   vertical-align: middle
   width: $icon-dimensions
+
+  &.is-stroke
+    fill: none
+    stroke: currentColor
 
   &.is-small
     height: $icon-dimensions-small
