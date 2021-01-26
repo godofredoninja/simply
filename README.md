@@ -74,8 +74,8 @@
   - [Contact](https://godofredo.ninja/ghost-theme/simply/contact-page/)
   - 404
 - Archive
-  - [Authors Page](https://godofredo.ninja/ghost-theme/simply/archive-authors-and-tags-page/#authors-page)
-  - [Tags Page](https://godofredo.ninja/ghost-theme/simply/archive-authors-and-tags-page/#tags-page)
+  - [Authors Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#authors-page)
+  - [Tags Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#tags-page)
 - [Podcasts Page](https://godofredo.ninja/ghost-theme/simply/podcasts-page/)
 - [Portfolio Page](https://godofredo.ninja/ghost-theme/simply/portfolio-page/)
 - [Kusi Doc](https://godofredo.ninja/ghost-theme/simply/kusi-doc/) for the documentation of your project
