@@ -33,7 +33,7 @@
                             alt="{{name}}"
                         />
                     </a>
-                    <div class="absolute inset-0 z-2 bg-black bg-opacity-40"></div>
+                    <div class="absolute inset-0 z-2 topic-bg-gradient"></div>
                     {{/if}}
 
                     <header class="relative text-white z-4 text-center w-full px-4 py-16 lg:px-6">
@@ -55,4 +55,5 @@
 
 <style>
 .topic-header {background: url({{asset "images/bg-setup.svg"}}) bottom no-repeat,linear-gradient(60deg,#2e2ea2,#138395)}
+.topic-bg-gradient {background: linear-gradient(135deg,rgb(6 10 25 / 70%),rgb(5 17 19 / 60%))}
 </style>
