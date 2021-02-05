@@ -60,12 +60,14 @@
     {{!-- Table of Contents --}}
     <aside class="js-sidebar-right flex flex-col w-56 flex-none pt-8 pl-5 mb-12 order-2 lg:order-none">
         <div class="sticky top-24 js-sidebar-wrap hidden">
-            <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "On this page"}}</div>
-            <ul class="text-sm js-table-content leading-tight"></ul>
+            <div class="pt-4 pb-10 overflow-y-auto max-h-(screen-16)">
+                <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "On this page"}}</div>
+                <ul class="text-sm js-table-content leading-tight"></ul>
+            </div>
         </div>
     </aside>
 </div>
 
 {{/post}}
 
-{{#contentFor "scripts"}}<script src="{{asset "scripts/kusi-doc-post.js"}}" async defer></script>{{/contentFor}}
+{{#contentFor "scripts"}}<script src="{{asset "scripts/kusi-doc-post.js"}}"></script>{{/contentFor}}
