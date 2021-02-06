@@ -5,18 +5,18 @@
 
 <div class="dropdown is-right h-16 flex items-center md:ml-3">
     {{!-- https://ghost.org/docs/members/member-data/ --}}
-    <a href="javascript:" class="dropdown-trigger relative w-8 h-8 inline-block overflow-hidden rounded-full" id="account-menu" type="checkbox" name="menu">
+    <a href="javascript:" aria-label="Toggle Account" class="dropdown-trigger relative w-8 h-8 inline-block overflow-hidden rounded-full" id="account-menu">
         <span class="absolute inset-0 text-gray-400">{{> "icons/avatar"}}</span>
-        {{#if @member.avatar_image}}<img class="image-inset" src="{{@member.avatar_image}}"/>{{/if}}
+        {{#if @member.avatar_image}}<img class="image-inset" alt="" src="{{@member.avatar_image}}"/>{{/if}}
     </a>
 
-    <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-menu" role="menu">
         <ul class="dropdown-content">
             <li class="py-2 px-5">
                 <div class="flex items-center">
                     <div class="flex-none relative overflow-hidden rounded-full h-12 w-12">
                         <span class="absolute inset-0 text-gray-400">{{> "icons/avatar"}}</span>
-                        {{#if @member.avatar_image}}<img class="image-inset" src="{{@member.avatar_image}}"/>{{/if}}
+                        {{#if @member.avatar_image}}<img class="image-inset" alt="" src="{{@member.avatar_image}}"/>{{/if}}
                     </div>
 
                     <div class="account-info flex-1 pl-2 overflow-hidden leading-tight">

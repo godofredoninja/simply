@@ -20,16 +20,6 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <noscript><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
-    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> --}}
-
-    {{!-- Styles --}}
-    {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/> --}}
-    <style>{{> "main-styles"}}</style>
-
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.querySelector('html').classList.add('dark');
@@ -37,6 +27,16 @@
             document.querySelector('html').classList.remove('dark');
         }
     </script>
+
+    {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> --}}
+
+    {{!-- Styles --}}
+    <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>
+    {{!-- <style>{{> "main-styles"}}</style> --}}
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
@@ -47,7 +47,7 @@
         {{> "layout/header"}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        <main class="simply-main relative {{{block "special_site_main_class"}}}">{{{body}}}</main>
+        <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
         {{>"layout/footer"}}
