@@ -1,15 +1,15 @@
 <div class="post-wrap max-w-1100 relative mx-auto">
     <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">
         {{#if access}}{{content}}{{else}}
-        <p>Hey there!</p>
-        <p>You don't have access to this post on <strong>{{@site.title}}</strong> at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive! Subscribing only takes a few seconds and will give you immediate access.</p>
+        <p>{{t "Hey there!"}}</p>
+        <p>{{{t "You don't have access to this post on <strong>{siteTitle}</strong> at the moment, but if you upgrade your account you'll be able to see the whole thing, as well as all the other posts in the archive! Subscribing only takes a few seconds and will give you immediate access." siteTitle=@site.title}}}</p>
 
         <div class="post-upgrade px-4 py-10 text-center rounded bg-primary text-white font-sans relative shadow-lg">
             {{#if @member}}
-            <p class="opacity-90 text-2xl font-serif">This post is for paying subscribers only</p>
-            <p class=" mt-8"><a class="button is-medium font-medium border-0 text-primary hover:text-primary-dark" data-portal="account/plans" href="#">{{t "Upgrade"}}</a></p>
+            <p class="opacity-90 text-2xl font-serif">{{t "This post is for paying subscribers only"}}</p>
+            <p class=" mt-8"><a class="button is-medium font-medium border-0 text-primary hover:text-primary-dark" data-portal="account/plans" href="#">{{t "Subscribe now"}}</a></p>
             {{else}}
-            <p class="opacity-90 text-2xl font-serif">Read the rest of this story with a free account.</p>
+            <p class="opacity-90 text-2xl font-serif">{{t "Read the rest of this story with a free account."}}</p>
             <p class=" mt-8"><a class="button is-medium font-medium border-0 text-primary hover:text-primary-dark" data-portal="signup" href="#">{{t "Subscribe"}}</a></p>
             <p class=" mt-8 text-base">
                 <span class="opacity-90">{{t "Already have an account?"}}</span>
