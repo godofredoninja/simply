@@ -2527,29 +2527,8 @@ a > code[class*="language-"] {
   transition: background-color 2s;
 }
 
-.sidebar .menu-link.is-active::before {
-  animation: scaleIn .7s forwards;
-  background-color: var(--color-primary);
-  border-radius: 10px;
-  content: ' ';
-  height: 8px;
-  left: -1px;
-  margin-top: -5px;
-  position: absolute;
-  top: 50%;
-  width: 8px;
-}
-
-@keyframes scaleIn {
-  0% {
-    transform: scale(0.5);
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+.menu-link.is-active .menu-link-bg {
+  opacity: .1;
 }
 
 .post-body {

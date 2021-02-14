@@ -11,7 +11,7 @@
     <div class="sidebar w-64 flex-none border-r border-gray-300 order-2 lg:order-none" style="border-color: var(--border-color)">
         <div class="sticky top-16 pr-5">
             <nav class="py-12 overflow-y-auto lg:max-h-(screen-16) scroll-transparent">
-                <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "Getting Started"}}</div>
+                <div class="uppercase font-medium text-sm text-gray-600 mb-3">{{t "Getting Started"}}</div>
 
                 <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu" class="leading-tight text-base">
                     {{#get "posts" filter="tags:{{tags.[0].slug}}" limit="all" order="published_at asc"}}
@@ -20,9 +20,12 @@
                         <li itemprop="name" role="menuitem" >
                             {{#link
                                 href=(url absolute="true")
-                                class="menu-link py-2 flex hover:text-primary relative transition duration-200 ease-in-out"
-                                activeClass="is-active text-primary alv pl-4 font-medium"
-                                itemprop="url"}}{{title}}{{/link}}
+                                class="menu-link p-2 flex hover:text-primary relative transition-colors duration-200"
+                                activeClass="is-active text-primary pl-4 font-medium"
+                                itemprop="url"}}
+                                <span class="menu-link-bg rounded-md absolute inset-0 bg-primary opacity-0"></span>
+                                <span class="relative">{{title}}</span>
+                            {{/link}}
                         </li>
                     {{/foreach}}
                     {{/get}}
@@ -61,7 +64,7 @@
     <aside class="js-sidebar-right flex flex-col w-64 flex-none pt-8 pl-5 mb-12 order-2 lg:order-none lg:hidden xl:flex">
         <div class="sticky top-24 js-sidebar-wrap hidden">
             <div class="pt-4 pb-10 overflow-y-auto scroll-transparent lg:max-h-(screen-16)">
-                <div class="uppercase font-medium text-sm text-gray-500 mb-3">{{t "On this page"}}</div>
+                <div class="uppercase font-medium text-sm text-gray-600 mb-3">{{t "On this page"}}</div>
                 <ul class="text-sm js-table-content leading-tight"></ul>
             </div>
         </div>
