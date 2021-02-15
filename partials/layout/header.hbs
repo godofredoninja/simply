@@ -9,7 +9,8 @@
                 data-event-label="Click"
                 data-event-non-interaction="true">
                 {{#if @site.logo}}
-                    <img src="{{img_url @site.logo size="m"}}" class="header-logo-img max-h-8" alt="{{@site.title}}" width="115" height="30"/>
+                    <img src="{{img_url @site.logo size="m"}}" class="header-logo-img max-h-8 logo-default" alt="{{@site.title}}" width="115" height="30"/>
+                    {{!-- <img src="{{asset "images/logo-dark-mode.png"}}" class="header-logo-img max-h-8 hidden logo-dark-mode" alt="" width="115" height="30"/> --}}
                 {{else}}
                     <span class="text-2xl font-bold">{{@site.title}}</span>
                 {{/if}}
