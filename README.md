@@ -3,11 +3,16 @@
     <img src="https://user-images.githubusercontent.com/10253167/103450308-a2757c00-4c82-11eb-8bc3-29b09520fc58.png" width="150px" alt="Simply free theme for Ghost" />
   </a>
 </p>
+
 <p align="center">
-    <a href="https://godofredo.ninja/ghost-theme/simply/introduction">Docs</a> |
-    <a href="https://godofredo.ninja/ghost-theme/showcase/">Showcase</a> |
-    <a href="https://github.com/godofredoninja/simply/graphs/contributors">Contributing</a> |
-    <a href="https://www.paypal.me/godofredoninja">PayPal</a> |
+    <a href="https://godofredo.ninja/ghost-theme/simply/introduction">Docs</a>
+    ·
+    <a href="https://godofredo.ninja/ghost-theme/showcase/">Showcase</a>
+    ·
+    <a href="https://github.com/godofredoninja/simply/graphs/contributors">Contributing</a>
+    ·
+    <a href="https://www.paypal.me/godofredoninja">PayPal</a>
+    ·
     <a href="https://twitter.com/godofredoninja">Twitter</a>
     <br /><br />
     <a href="https://github.com/TryGhost/Ghost">
@@ -16,10 +21,11 @@
     <a href="https://www.paypal.me/godofredoninja">
         <img src="https://img.shields.io/badge/donate-paypal-blue.svg" alt="Donate" />
     </a>
-    <a href="https://www.buymeacoffee.com/GodoFredoNinja">
-        <img src="https://img.shields.io/badge/-Buy%20Me%20A%20Coffee-%23FF813F" alt="Buy Me A Coffee" />
+    <a href="https://opencollective.com/simply">
+        <img src="https://opencollective.com/simply/tiers/badge.svg" alt="opencollective" />
     </a>
 </p>
+
 <p align="center">
     Hello :sunglasses:
     <br />
@@ -27,6 +33,7 @@
     <br />
     It is available for free so you can use on your site.
 </p>
+
 <p align="center">
     <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url">
         <img src="https://user-images.githubusercontent.com/10253167/103444000-877b1b80-4c32-11eb-8377-7bedd46dbdf8.gif" alt="donate" />
@@ -93,6 +100,39 @@
 - Lazy Loading for images
 - Medium style image zoom
 - [Prism supported all syntax](https://prismjs.com/index.html#supported-languages)
+
+## Contributing
+
+Im always looking for contributors of all skill levels! If you're looking to ease your way into the project, try out a [good first issue](https://github.com/godofredoninja/simply/labels/%F0%9F%8C%B1%20good%20first%20issue).
+
+I greatly appreciate any help in maintaining to keep the documentation up to date. My English is not so good and I am trying to make the documentation more understandable.
+
+If you are interested in collaborating with Simply, take a look at the [Contributing Guide](https://github.com/godofredoninja/simply/blob/master/CONTRIBUTING.md).
+
+### Code Contributors
+
+This project exists thanks to all the people who contribute. [[Contribute](https://github.com/godofredoninja/simply/blob/master/CONTRIBUTING.md)].
+
+[![Simply Contributors](https://opencollective.com/simply/contributors.svg?width=890&button=false)](https://github.com/godofredoninja/simply/graphs/contributors)
+
+### Financial Contributors
+
+First I want to say thank you with all my heart and a million more Thank you. The [donation](https://www.paypal.me/godofredoninja) you have made has motivated me to continue working with the improvement and updating the theme.
+
+Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/simply/contribute)]
+
+- [CMS Critic](http://www.cmscritic.com/) :star: :star: :star: :star:
+- [A Boundless World](https://www.aboundlessworld.com/) :star: :star:
+- [Dana Ross](https://vaalin.com/)
+- Greg Rapp
+- Yannick Kordel
+- Bruno Brito Semedo
+- Ivan Rodriguez Segura
+- Rodrigo Franken Dutra
+- Diego Alcantara Zweifel
+- Andrew Wagner
+
+[![Individuals Financial](https://opencollective.com/simply/individuals.svg?width=890)](https://opencollective.com/simply)
 
 ## Credits
 
