@@ -1,26 +1,26 @@
 {{!-- Layout --}}
 {{!< default}}
 
-{{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-podcast has-cover is-transparent{{/contentFor}}
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-podcast has-cover is-head-transparent{{/contentFor}}
 
-{{#post}}
-<section class="spc-header u-relative u-overflowHidden u-bgDark">
-    {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
-    {{#if feature_image}}{{> "helper/helper-image-cover"}}{{/if}}
+{{#page}}
 
-    <div class="spc-h-inner u-textColorWhite u-maxWidth1040 u-container u-relative zindex3 u-textAlignCenter">
-        <h1 class="spc-h-t animated bounceIn">{{title}}</h1>
+<div class="spc-header simply-hero-cover flex items-center justify-center relative min-h-lg py-24 px-4 bg-dark overflow-hidden">
+
+    <article class="spc-h-inner max-w-4xl relative flex flex-col text-center z-3 pt-16 text-white text-2xl md:text-3xl animated bounceIn">
+        <h1 class="spc-h-t text-white text-5xl md:text-6xl">{{title}}</h1>
         {{content}}
-    </div>
-</section>
-{{/post}}
+    </article>
 
-<div class="u-container">
-    <div class="feed-entry-content u-maxWidth1000 u-marginAuto u-paddingTop30">
-        <div class="feed-entry-wrap row">
-            {{!-- Sidebar - partials/story/story-podcast.hbs --}}
-            {{#foreach posts}} {{>"story/story-podcast"}} {{/foreach}}
-        </div>
+    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+</div>
+
+{{/page}}
+
+<div class="feed-entry-content py-12 bg-gray-100 px-4">
+    <div class="mx-auto max-w-4xl feed-entry-wrap">
+        {{#foreach posts visibility="all"}} {{>"story/story-podcast"}} {{/foreach}}
     </div>
 </div>

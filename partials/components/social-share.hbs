@@ -1,0 +1,49 @@
+<aside class="post-shasre flex items-center flex-none md:justify-end{{#if class}} {{class}}{{/if}}">
+    <span class="share-label text-gray-500 text-sm mr-2">{{t "Share"}}:</span>
+    {{!-- Share on Twitter --}}
+    <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="godo-tracking text-gray-900 mr-2"
+        aria-label="{{t "Share on"}} Twitter"
+        data-event-category="Article"
+        data-event-action="Share"
+        data-event-label="{{Tracking_name}} - Twitter"
+        data-event-non-interaction="true">
+        <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
+    </a>
+    {{!-- Share on Linkedin --}}
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="godo-tracking text-gray-900 mr-2"
+        aria-label="{{t "Share on"}} Linkedin"
+        data-event-category="Article"
+        data-event-action="Linkedin"
+        data-event-label="{{Tracking_name}} - Linkedin"
+        data-event-non-interaction="true">
+        <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
+    </a>
+    {{!-- Share on Facebook --}}
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="godo-tracking text-gray-900"
+        aria-label="{{t "Share on"}} Facebook"
+        data-event-category="Article"
+        data-event-action="Share"
+        data-event-label="{{Tracking_name}} - Facebook"
+        data-event-non-interaction="true">
+        <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+    </a>
+    <a href="whatsapp://send?text={{url absolute="true"}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="godo-tracking text-gray-900 ml-2 md:hidden"
+        data-event-category="Article"
+        data-event-action="Share"
+        data-event-label="{{Tracking_name}} - Whatsapp"
+        data-event-non-interaction="true">
+        <svg class="icon"><use xlink:href="#icon-whatsapp"></use></svg>
+    </a>
+</aside>

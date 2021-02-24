@@ -1,30 +1,34 @@
-<div class="cr u-overflowHidden u-flexColumnTop u-relative u-flex1 {{#is "post"}}godo-tracking{{/is}}" {{#is "post"}}data-event-category="Article" data-event-action="Related Posts" data-event-label="{{url absolute="true"}}" data-event-non-interaction="true"{{/is}}>
+<div class="storySmall overflow-hidden flex flex-col relative mb-8 w-full {{#is "post"}}godo-tracking{{/is}}"
+    {{#is "post"}}data-event-category="Article"
+    data-event-action="Related Posts"
+    data-event-label="{{url absolute="true"}}"
+    data-event-non-interaction="true"{{/is}}>
+
     {{#if feature_image}}
-    <a href="{{url}}" class="cr-img u-relative u-overflowHidden u-sizeFullWidth u-block">
-        <img class="cr-imagen u-absolute u-image u-block blur-up lazyload"
-            src="{{img_url feature_image size="s"}}"
-            srcset="{{img_url feature_image size="xxs"}}"
+    <a href="{{url}}" class="storySmall-img-link h-40 relative overflow-hidden w-full block">
+        <img class="storySmall-img absolute u-image block blur-up lazyload"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
-            data-sizes="(max-width: 1000px) 400px, 600px"
+            data-sizes="auto"
             alt="{{title}}"
         />
     </a>
     {{/if}}
 
-    <div class="cr-inner u-padding15 u-flexColumnTop">
-        <div class="cr-body">
+    <div class="storySmall-inner p-4 flex flex-col justify-between flex-grow">
+        <div class="storySmall-body">
             {{#if feature_image}}
-                <h2 class="cr-t u-fontSize21 u-lineClamp2 u-contentTitle" style="margin-bottom:5px"><a href="{{url}}">{{title}}</a></h2>
+                <h2 class="text-22 lineClamp-2 text-title mb-2 leading-tight"><a href="{{url}}">{{title}}</a></h2>
             {{else}}
-                <h2 class="cr-t u-fontSize21 u-contentTitle"><a href="{{url}}">{{title}}</a></h2>
-                <p class="cr-e u-paddingTop15">{{excerpt words="20"}}</p>
+                <h2 class="text-22 text-title leading-tight"><a href="{{url}}">{{title}}</a></h2>
+                <p class="pt-4 mb-2">{{excerpt words="20"}}</p>
             {{/if}}
         </div>
 
-        {{!-- Datetime - ReadingTime - partials/helper/helper-datetime.hbs --}}
-        {{> "helper/helper-datetime"}}
+        {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+        {{> "components/datetime"}}
     </div>
 
     {{!-- Link --}}
-    <a href="{{url}}" class="u-absolute0 zindex3" aria-label="{{title}}"></a>
+    <a href="{{url}}" class="absolute inset-0 z-3" aria-label="{{title}}"></a>
 </div>

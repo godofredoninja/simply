@@ -11,14 +11,15 @@
     {{amp_ghost_head}}
 
     {{!-- Google Fonst --}}
-    <link href="https://fonts.googleapis.com/css?family=Domine|Rubik:400,500,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 
     {{!-- Only For dev --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/amp.css"}}"/>
-    <style>.u-bgColor{background-color:#161D25}</style> --}}
+    <style>.u-bgColor{background-color:#18181B}</style> --}}
 
     {{!-- Style Custom --}}
-    <style amp-custom>.u-bgColor{background-color:#161D25}{{> "amp/amp-styles"}}</style>
+    <style amp-custom>.u-bgColor{background-color:#18181B}{{> "amp/amp-styles"}}</style>
 
     {{!-- The AMP boilerplate --}}
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -33,11 +34,13 @@
     {{> "amp/amp-header"}}
 
     <main class="main">
+        {{#post}}
         {{!-- Content --}}
         {{> "amp/amp-body"}}
 
         {{!-- Related --}}
         {{> "amp/amp-related"}}
+        {{/post}}
     </main>
 
     {{!-- Sidenav --}}

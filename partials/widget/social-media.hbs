@@ -1,8 +1,31 @@
-<div class="js-social-media social-media u-flex">
-    {{#if @site.facebook}}<a class="godo-tracking" data-event-category="Header" data-event-action="Social" data-event-label="Facebook" data-event-non-interaction="true" title="Facebook {{@site.facebook}}" aria-label="Facebook {{@site.facebook}}" href="{{facebook_url}}" target="_blank" rel="noopener noreferrer">
+<div class="js-social-media social-media{{#if class}} {{class}}{{/if}}">
+    {{#if @site.facebook}}
+    <a class="godo-tracking p-2 inline-block hover:text-facebook"
+        data-event-category="Header"
+        data-event-action="Social"
+        data-event-label="Facebook"
+        data-event-non-interaction="true"
+        title="Facebook {{@site.facebook}}"
+        aria-label="Facebook {{@site.facebook}}"
+        href="{{facebook_url}}"
+        target="_blank"
+        rel="noopener noreferrer">
         <svg class="icon icon--facebook"><use xlink:href="#icon-facebook"></use></svg>
-    </a>{{/if}}
-    {{#if @site.twitter}}<a class="godo-tracking" data-event-category="Header" data-event-action="Social" data-event-label="Twitter" data-event-non-interaction="true" title="Twitter {{@site.twitter}}" aria-label="Twitter {{@site.twitter}}" href="{{twitter_url}}" target="_blank" rel="noopener noreferrer">
+    </a>
+    {{/if}}
+
+    {{#if @site.twitter}}
+    <a class="godo-tracking p-2 inline-block hover:text-twitter"
+        data-event-category="Header"
+        data-event-action="Social"
+        data-event-label="Twitter"
+        data-event-non-interaction="true"
+        title="Twitter {{@site.twitter}}"
+        aria-label="Twitter {{@site.twitter}}"
+        href="{{twitter_url}}"
+        target="_blank"
+        rel="noopener noreferrer">
         <svg class="icon icon--twitter"><use xlink:href="#icon-twitter"></use></svg>
-    </a>{{/if}}
+    </a>
+    {{/if}}
 </div>

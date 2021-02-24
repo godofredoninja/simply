@@ -1,0 +1,37 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#post}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article is-article-header-image{{/contentFor}}
+
+<article class="post mb-10 relative">
+    {{#if feature_image}}
+    <figure class="post-image mb-8">
+        <img class="block w-full object-cover h-88 lg:h-96"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{title}}"
+        />
+    </figure>
+    {{/if}}
+
+    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
+    {{> "article/article-header"}}
+
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
+</article>
+
+{{/post}}
+
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
+{{> "article/article-related"}}
+
+{{!-- Post Commets - partials/article/article-comments.hbd --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

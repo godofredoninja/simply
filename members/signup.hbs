@@ -1,0 +1,52 @@
+{{!< ../default}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-signup bg-gray-200{{/contentFor}}
+
+<div class="px-4 flex flex-col items-center justify-center py-vw6">
+
+    {{#if @member.paid}}
+
+        {{!-- Logged in, paying member: Redirect home --}}
+        <script>window.location = '{{@site.url}}';</script>
+
+    {{else if @member}}
+
+        {{!-- Logged in, not paying: Check out --}}
+        <script>window.location = '{{@site.url}}/membership/';</script>
+
+    {{else}}
+
+        <div class="text-center w-full max-w-xl p-6 md:p-12 my-12 md:my-0 mx-auto shadow-lg bg-white rounded-lg">
+            {{!-- Not logged in: Sign up --}}
+            <form class="signup-form simply-form max-w-sm mx-auto" data-members-form="signup">
+                <h1 class="signup-title text-32 text-title">Sign up with email</h1>
+                <p class="mt-8">Enter your email address to create an account.</p>
+                <div class="signup-box my-10">
+                    <input data-members-email type="email" placeholder="Type your email" required="true" autocomplete="false" class="text-center is-medium" />
+                    <button class="button is-medium is-primary is-large w-full mt-4" type="submit">
+                        <span class="button-content">Continue</span>
+                        <span class="button-loader hidden">{{> "icons/loader"}}</span>
+                    </button>
+                </div>
+                <p>Already have an account? <a class="link is-hover" href="{{@site.url}}/signin/">Sign in</a></p>
+
+                {{!-- success --}}
+                <div class="message-success fixed w-full top-16 left-0 right-0 px-4 z-2 hidden">
+                    <div class="mx-auto max-w-xl w-full bg-success text-white p-2 rounded-md mt-4">
+                        <strong>Great!</strong> Check your inbox and click the link to confirm your subscription
+                    </div>
+                </div>
+
+                {{!-- error --}}
+                <div class="message-error fixed w-full top-16 left-0 right-0 px-4 z-2 hidden">
+                    <div class="mx-auto max-w-xl w-full bg-danger text-white p-2 rounded-md mt-4">
+                        Please enter a valid email address!
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    {{/if}}
+
+</div>

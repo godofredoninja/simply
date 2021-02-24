@@ -1,19 +1,23 @@
 {{!< default}}
 
-<div class="container u-paddingTop30">
-    <div class="row">
-        <div class="col s12 col-left">
-            <div class="feed-entry-content">
-                <div class="feed-entry-wrap slist">
-                    {{#foreach posts}}
-                        {{!-- Story - partials/story/story-grid.hbs --}}
-                        {{>"story/story-grid"}}
-                    {{/foreach}}
+<div class="container mx-auto px-4 py-16">
+    <div class=" max-w-1100 mx-auto">
+        <div class="row">
+            <div class="col s12 l7">
+                <div class="feed-entry-content">
+                    <div class="feed-entry-wrap slist">
+                        {{#foreach posts visibility="all"}}
+                            {{!-- Story - partials/story/story-grid.hbs --}}
+                            {{>"story/story-post"}}
+                        {{/foreach}}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
-        {{>"sidebar/sidebar"}}
+            <div class="col s12 l1"></div>
+
+            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+            {{>"sidebar/sidebar"}}
+        </div>
     </div>
 </div>

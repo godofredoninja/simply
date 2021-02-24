@@ -1,5 +1,74 @@
-<ul class="nav" role="menu">
+{{#if isSecondary}}
+
+<nav class="menu-secondary">
+    <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu">
+
+        {{#foreach navigation}}
+        <li itemprop="name" role="menuitem" class="inline-block {{#unless @last}}separator{{/unless}}">
+            <a itemprop="url" href="{{url absolute="true"}}"
+                class="godo-tracking hover:text-primary font-medium p-2 inline-block"
+                data-event-category="Footer"
+                data-event-action="Menu"
+                data-event-label="{{label}}"
+                data-event-non-interaction="true">{{label}}</a>
+        </li>
+        {{/foreach}}
+
+    </ul>
+</nav>
+
+{{else}}
+
+{{!-- Navigation for Mobile --}}
+{{#if navigationMobile}}
+
+<ul>
     {{#foreach navigation}}
-    <li role="menuitem"><a href="{{url absolute="true"}}" class="{{link_class for=(url) class=(concat "nav-" slug)}}">{{label}}</a></li>
+    <li>
+        <a href="{{url absolute="true"}}" class="block px-5 py-2 font-medium text-22 leading-tight">{{label}}</a>
+    </li>
     {{/foreach}}
 </ul>
+
+{{else}}
+
+{{!-- Primary Menu --}}
+<nav class="header-center mainMenu relative flex items-center pr-5 flex-grow overflow-auto lg:overflow-visible">
+    <ul itemscope
+        itemtype="http://www.schema.org/SiteNavigationElement"
+        class="nav whitespace-no-wrap hidden lg:flex">
+
+        {{#foreach navigation}}
+        <li itemprop="name" class="{{#if @first}}ml-0{{else}}ml-5{{/if}}">
+            <a itemprop="url"
+                href="{{url absolute="true"}}"
+                class="mainMenu-link godo-tracking {{#if current}}active text-primary font-semibold{{else}}hover:text-primary font-medium{{/if}}"
+                data-event-category="Header"
+                data-event-action="Menu"
+                data-event-label="{{label}}"
+                data-event-non-interaction="true">
+                {{label}}
+            </a>
+        </li>
+        {{/foreach}}
+
+        {{!-- DropDown Menu  --}}
+        <li class="dropdown is-hoverable ml-5 {{^has any="@site.facebook, @site.twitter"}}hidden{{/has}}">
+            <a href="#" class="mainMenu-link dropdown-trigger hover:text-primary font-medium">
+                <span>{{t "More"}}</span>
+                <svg class="icon is-small transform rotate-90"><use xlink:href="#icon-arrow-forward"></use></svg>
+            </a>
+            <div class="dropdown-menu whitespace-normal">
+                <div class="dropdown-content">
+                    <div class="js-dropdown-menu">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
+                    <hr class="dropdown-divider">
+                    {{!-- Social Media - partials/widget/social-media.hbs --}}
+                    {{> "widget/social-media" class="social-media"}}
+                </div>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+{{/if}}
+{{/if}}

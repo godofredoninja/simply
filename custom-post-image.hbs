@@ -4,58 +4,37 @@
 {{#post}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-article is-image{{/contentFor}}
+{{#contentFor "special_body_class"}}is-article has-cover is-head-transparent{{/contentFor}}
 
-<article class="post u-marginBottom40 u-relative">
-    <div class="pif u-relative u-bgDark">
-        {{#if feature_image}}
-        {{!-- Featured Image - partials/helper/helper-image-cover.hbs --}}
-        {{> "helper/helper-image-cover"}}
-        {{!-- bg --}}
-        <div class="u-absolute0 zindex2 pif-grad"></div>
-        {{/if}}
+<article class="post mb-10 relative">
+    <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:min-h-screen py-24">
+        {{!-- Featured Media - partials/components/media-cover.hbs --}}
+        {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
 
-        <header class="post-header u-container u-maxWidth740 u-paddingTop30 u-relative zindex3">
-            {{!-- Article Title --}}
-            <h1 class="post-title u-marginBottom20 u-fontSizeLargest u-md-fontSizeLarger">{{title}}</h1>
-            {{!-- Article Excerpt  --}}
-            {{#if custom_excerpt}}<p class="post-excerpt u-marginBottom30 u-fontSize22">{{custom_excerpt}}</p>{{/if}}
+        <header class="post-header mx-auto max-w-740 px-4 p-24 relative z-3">
+            {{#if primary_tag}}
+            <div class="mb-3 text-white tracking-wider text-sm">
+                {{#primary_tag}}
+                <a class="uppercase hover:underline" href="{{url}}">{{name}}</a>
+                {{/primary_tag}}
+            </div>
+            {{/if}}
 
-            {{> "helper/helper-author-meta"}}
+            <h1 class="post-title mb-5 text-white text-4xl lg:text-5xl">{{title}}</h1>
+            {{#if custom_excerpt}}<p class="post-excerpt mb-8 text-2xl text-white leading-snug">{{custom_excerpt}}</p>{{/if}}
+
+            {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
+            {{> "components/author-meta"}}
         </header>
     </div>
 
-    <div class="post-wrap u-maxWidth1000 u-relative u-marginAuto">
-        {{!-- All Content --}}
-        <div id="post-body" class="post-body u-container u-maxWidth740 u-relative">{{content}}</div>
-    </div>
-
-    <footer class="post-footer u-container u-maxWidth740">
-        {{!-- Tags (category) --}}
-        {{> "article/article-tags"}}
-
-        <hr>
-        <div class="prev-next">
-            {{#prev_post}}
-            {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
-            {{/prev_post}}
-
-            {{#next_post}}
-            {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-            {{/next_post}}
-        </div>
-        <hr>
-    </footer>
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
 </article>
 {{/post}}
 
-{{!-- Article related - partials/article/article-related.hbs --}}
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
 {{> "article/article-related"}}
 
-{{#post}}
-{{!-- post Comments --}}
-{{> "article/article-comments"}}
-
-{{!-- Share Article - Facebook Twitter Whatsapp --}}
-{{> "article/article-share-sticky"}}
-{{/post}}
+{{!-- Post Commets - partials/article/article-comments.hbd --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

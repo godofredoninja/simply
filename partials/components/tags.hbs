@@ -1,0 +1,15 @@
+{{#if tags}}
+<div class="post-tags mb-8">
+    <div class="buttons">
+        {{#foreach tags}}
+        <a href="{{url absolute="true"}}"
+            title="{{name}}"
+            class="button is-light font-medium text-sm capitalize godo-tracking"
+            data-event-category="Article"
+            data-event-action="Tags"
+            data-event-label="{{name}}"
+            data-event-non-interaction="true">{{name}}</a>
+        {{/foreach}}
+    </div>
+</div>
+{{/if}}

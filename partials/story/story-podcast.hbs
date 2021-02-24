@@ -1,24 +1,21 @@
-<article class="col s12 u-flex">
-    <div class="spc-c u-relative u-marginBottom30 u-sizeFullWidth">
-        <a href="{{url}}" class="spc-c-img u-relative u-bgColorGrayLight u-block">
-            {{#if feature_image}}
-            <img class="u-absolute u-image u-block blur-up lazyload"
-                src="{{img_url feature_image size="m"}}"
-                srcset="{{img_url feature_image size="xxs"}}"
-                data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
-                data-sizes="(max-width: 1000px) 400px, 600px"
-                alt="{{title}}"
-            />
-            {{/if}}
-        </a>
+<article class="podcast-card flex flex-col md:flex-row w-full relative overflow-hidden mb-12">
+    <header class="podcast-card-header md:ml-4 p-5 order-2">
+        {{!-- Author - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+        {{> "components/author-meta"}}
 
-        <div class="spc-c-body">
-            {{> "helper/helper-author-meta"}}
-            <h2 class="spc-c-title u-fontSizeLarger u-contentTitle u-marginBottom20 u-paddingTop15"><a href="{{url}}" class="u-relative zindex3">{{title}}</a></h2>
-            <p class="spc-c-excerpt u-marginBottom20 u-fontSizeBase">{{excerpt words="30"}}</p>
-            <a href="{{url}}" class="listen-btn button button--outline-success u-textUppercase u-relative zindex3">{{> "icons/icon-listen"}} {{t "Listen"}}</a>
-        </div>
+        <h2 class="spc-c-title my-5 text-2xl text-title font-sans"><a href="{{url}}" class="relative z-3">{{title}}</a></h2>
+        <p class="spc-c-excerpt mb-5">{{excerpt words="30"}}</p>
+        <a href="{{url}}" class="listen-btn button is-primary relative z-3">{{> "icons/icon-listen"}} <span class="uppercase">{{t "Listen"}}</span></a>
+    </header>
 
-        {{!-- <a href="{{url}}" class="u-absolute0 zindex2" aria-label="{{title}}"></a> --}}
-    </div>
+    <a href="{{url}}" class="spc-c-img relative w-full md:w-1/3 flex-none bg-gray-200 story-image md:h-auto">
+        {{#if feature_image}}
+        <img class="absolute u-image block blur-up lazyload rounded-2xl"
+            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+            data-sizes="auto"
+            alt="{{title}}"
+        />
+        {{/if}}
+    </a>
 </article>

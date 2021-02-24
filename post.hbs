@@ -6,53 +6,21 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post u-marginBottom40 u-relative">
-    {{!-- Article Header - partials/article/article-header.hbs --}}
+<article class="post mb-10 pt-8 lg:pt-10 relative">
+    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
-    {{#if feature_image}}
-    <figure class="post-image u-block u-marginAuto u-sizeFullHeight u-sizeFullWidth u-maxWidth1000">
-        <img class="u-block u-marginAuto u-sizeFullWidth simply-zoom" srcset="{{img_url feature_image size="s"}} 300w,
-                        {{img_url feature_image size="m"}} 600w,
-                        {{img_url feature_image size="l"}} 1000w,
-                        {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
-            src="{{img_url feature_image size="xl"}}" alt="{{title}}" />
-    </figure>
-    {{/if}}
+    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+    {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="block mx-auto max-w-740 mt-12 px-4"}}{{/if}}
 
-    <div class="post-wrap u-maxWidth1000 u-relative u-marginAuto">
-        {{!-- All Content --}}
-        <div id="post-body" class="post-body u-container u-maxWidth740 u-relative">{{content}}</div>
-    </div>
-
-    <footer class="post-footer u-container u-maxWidth740">
-        {{!-- Tags (category) --}}
-        {{> "article/article-tags"}}
-
-        <hr>
-        <div class="prev-next">
-            {{#prev_post}}
-            {{> "story/story-previous-next" storyTitle=(t "Previous article") class="u-marginBottom30"}}
-            {{/prev_post}}
-
-            {{#next_post}}
-            {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
-            {{/next_post}}
-        </div>
-        <hr>
-    </footer>
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    {{> "article/article-body"}}
 </article>
 
 {{/post}}
 
-{{!-- Article related - partials/article/article-related.hbs --}}
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
 {{> "article/article-related"}}
 
-{{#post}}
-{{!-- post Comments --}}
-{{> "article/article-comments"}}
-
-{{!-- Share Article - Facebook Twitter Whatsapp --}}
-{{> "article/article-share-sticky"}}
-{{/post}}
+{{!-- Post Commets - partials/article/article-comments.hbd --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}

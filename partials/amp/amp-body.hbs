@@ -1,5 +1,3 @@
-{{#post}}
-
 <article class="article">
     <header class="article-header u-container">
         {{!-- Title --}}
@@ -7,8 +5,6 @@
 
         {{!-- Excerpt --}}
         {{#if custom_excerpt}}<p class="article-excerpt">{{custom_excerpt}}</p>{{/if}}
-
-        <hr>
 
         <div class="article-meta">
             {{!-- Author Name --}}
@@ -49,7 +45,7 @@
 
     {{!-- Share social Media --}}
     <footer class="share u-container u-marginTop30">
-        <span class="share-title">{{t "Share this"}}:</span>
+        <span class="share-title">{{t "Share"}}:</span>
         <amp-social-share class="rounded"
         type="email"
         width="36"
@@ -74,5 +70,3 @@
     </footer>
 
 </article>
-
-{{/post}}
