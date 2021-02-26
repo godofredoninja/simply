@@ -22,6 +22,7 @@ To set the publication language follow the steps below.
 - `it`— Italian - By [Marco Sanson](https://github.com/marcosanson)
 - `id`— Indonesian - By [Adryan Eka Vandra](https://github.com/adryanev)
 - `pt-BR`— Brazilian - By [Daniel Pereira](https://github.com/danieldeev)
+- `uz`— Uzbek - By [Shukrullo Turgunov](https://github.com/vodiylik)
 
 ## Add a New Language
 
