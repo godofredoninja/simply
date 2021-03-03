@@ -1,21 +1,17 @@
 {
-  "name": "simply",
-  "description": "simply theme for ghost by @GodoFredoNinja",
+  "name": "ignite-simply",
+  "description": "kingi",
   "demo": "https://godofredo.ninja",
   "version": "0.3.0",
   "engines": {
     "ghost": ">=3.0.0",
     "ghost-api": "v3"
   },
-  "license": "GPLv3",
+  "license": "UNLICENSED",
   "screenshots": {
     "desktop": "screenshot.jpg"
   },
-  "author": {
-    "name": "GodoFredo",
-    "email": "hello@godofredo.ninja",
-    "url": "https://godofredo.ninja"
-  },
+  "author": "Kingi",
   "gpm": {
     "type": "theme",
     "categories": [
@@ -30,10 +26,7 @@
     "ghost-theme",
     "GodoFredoNinja"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/godofredoninja/simply"
-  },
+  "repository": "https://github.com/IgniteStudiosLtd/simply",
   "bugs": {
     "url": "https://github.com/godofredoninja/simply/issues",
     "email": "hello@godofredo.ninja"
@@ -60,5 +53,7 @@
         "width": 2000
       }
     }
-  }
+  },
+  "main": "index.js",
+  "private": false
 }
