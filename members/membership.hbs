@@ -46,7 +46,7 @@
                 <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Yearly</h3>
                 <p class="text-gray-500">1 simple payment instead of 12, save on bank fees </p>
                 <div class="text-44 font-bold my-8 leading-none text-primary">
-                    <span>{{@price.currency_symbol}}{{@price.yearly}}</span>
+                    <span>{{price currency=@price.currency}} {{@price.yearly}}</span>
                     <span class="text-lg font-medium">/ year</span>
                 </div>
 
@@ -85,7 +85,7 @@
                 <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Monthly</h3>
                 <p class="text-gray-500">Get access to everything and lock in early adopter pricing for life</p>
                 <div class="text-44 font-bold my-8 leading-none">
-                    <span>{{@price.currency_symbol}}{{@price.monthly}}</span>
+                    <span>{{price currency=@price.currency}} {{@price.monthly}}</span>
                     <span class="text-lg text-gray-500 font-medium">/ month</span>
                 </div>
 
