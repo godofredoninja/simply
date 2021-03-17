@@ -6,13 +6,13 @@
 
 {{!-- Featured Story --}}
 {{#get "posts" limit="1" filter="featured:true" as |godo_featured_post| }}
-    {{#if godo_featured_post}} {{#foreach godo_featured_post visibility="all"}}{{> "story/story-featured"}} {{/foreach}}{{/if}}
+    {{#if godo_featured_post}} {{#foreach godo_featured_post}}{{> "story/story-featured"}} {{/foreach}}{{/if}}
 {{/get}}
 
 <div class="site-post feed-entry-content container mx-auto pt-10">
     <div class="feed-entry-wrap max-w-1100 mx-auto">
         <div class="row">
-            {{#foreach posts visibility="all"}}
+            {{#foreach posts}}
                 {{#has number="1"}}
                     <div class="col s12 m6 l12 ss1">{{> "story/story-grid"}}</div>
                 {{else has number="5, 6, 17, 18"}}
