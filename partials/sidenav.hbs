@@ -8,7 +8,7 @@
                     <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
                 </a>
 
-           {{#if @labs.members}}{{#unless @member}}<a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>{{/unless}}{{/if}}
+           {{#unless @member}}<a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>{{/unless}}
         </div>
 
         {{!-- Navigation for Mobile --}}
