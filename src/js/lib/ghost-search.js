@@ -14,7 +14,7 @@ class GhostSearch {
     const defaults = {
       url: window.location.origin,
       key: '',
-      version: 'v3',
+      version: 'v4',
       input: '#search-field',
       results: '#search-results',
       defaultValue: '',
