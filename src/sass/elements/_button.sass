@@ -100,6 +100,26 @@ $button-active-border-color: $gray-800
       margin-left: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
       margin-right: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
 
+  &.is-primary
+      background-color: var(--ghost-accent-color)
+      border-color: transparent
+      color: #fff
+      &:hover
+        background-color: var(--ghost-accent-color)
+        border-color: transparent
+        color: #fff
+        opacity: 0.92
+
+      &.is-outlined
+        background-color: transparent
+        border-color: var(--ghost-accent-color)
+        color: var(--ghost-accent-color)
+
+        &:hover
+          background-color: var(--ghost-accent-color)
+          border-color: var(--ghost-accent-color)
+          color: #fff
+
   // Generate Buttons
   @each $name, $pair in $colors
     $color: nth($pair, 1)

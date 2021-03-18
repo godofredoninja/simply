@@ -1,5 +1,6 @@
 
 \:root
+  --ghost-accent-color: #{$primary-color}
   // global
   --bg: #fff
   --body-color: #{$primary-text-color}
@@ -12,12 +13,12 @@
   // title
   --title-color: #{$gray-900}
 
-  --color-primary: #{$primary-color}
-  --color-primary-dark: #{$primary-color-darken}
+  --color-primary: var(--ghost-accent-color)
+  // --color-primary-dark: var(--ghost-accent-color-dark)
 
   // link
-  --color-link: #{$primary-color}
-  --color-link-hover: #{$primary-color-darken}
+  --color-link: var(--ghost-accent-color)
+  // --color-link-hover: var(--ghost-accent-color-dark)
 
   --border-color: #e2ecec
   --color-mark: #e4f7df

@@ -2,7 +2,7 @@
 // --------------------------------------------------
 
 $primary-color: #0abe51;
-$primary-color-darken: #21a75a;
+// $primary-color-darken: #21a75a;
 
 $dark-blue-500: #102b7b;
 
@@ -41,7 +41,7 @@ $colors: (
   "white"     : ($white, $black, $gray-500),
   "black"     : ($black, $white),
   "light"     : (#f2f2f2, rgba(0, 0, 0, .7)),
-  "primary"   : ($primary-color, $white),
+  // "primary"   : ($primary-color, $white),
   "dark-blue" : ($dark-blue-500, $white),
   "sucecess"  : ($success, $white),
   "warning"   : ($warning, rgba(0, 0, 0, .7)),

@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   // darkMode: 'class',
@@ -15,13 +16,15 @@ module.exports = {
       blank: 'var(--blank)',
       orange: '#f42',
       modal: 'rgba(84,102,109,.6)',
-      primary: 'var(--color-primary)',
-      'primary-dark': 'var(--color-primary-dark)',
+      primary: 'var(--ghost-accent-color)',
+      // 'primary-dark': 'var(--color-primary-dark)',
+      'dark-blue-500': '#102b7b',
       secondary: '#102b7b',
       title: 'var(--title-color)',
       success: '#48c774',
       warning: '#ffdd57',
       danger: '#f14668',
+      amber: colors.amber,
       gray: {
         100: 'var(--gray-100)',
         150: 'var(--gray-150)',
@@ -85,9 +88,10 @@ module.exports = {
         60: '0.6'
       },
       opacity: {
-        90: '0.9',
+        40: '0.4',
         80: '0.8',
-        40: '0.4'
+        90: '0.9',
+        92: '0.92'
       },
       maxWidth: {
         740: '46.25rem',

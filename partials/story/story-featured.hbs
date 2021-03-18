@@ -2,8 +2,8 @@
     <div class="max-w-1100 mx-auto relative z-3">
         <div class="row">
             <div class="col s12 m10 l8">
-                <p class="text-success mb-4 text-base font-semibold uppercase text-primary">{{t "featured story"}}</p>
-                <h1 class="underscore relative text-32 md:text-5xl font-semibold leading-tight"><a href="{{url}}" class="text-white">{{title}}</a></h1>
+                <p class="mb-4 text-base font-semibold uppercase text-amber-400">{{t "featured story"}}</p>
+                <h1 class="relative text-32 md:text-5xl font-semibold leading-tight mb-4"><a href="{{url}}" class="text-white">{{title}}</a></h1>
                 <p class="godo-f-story-excerpt mb-5 text-white font-normal lineClamp-2 text-xl">{{excerpt words="50"}}</p>
                 {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
                 {{> "components/datetime" class="godo-f-story-date mb-5 text-base text-white opacity-80"}}
@@ -24,5 +24,5 @@
         alt="{{title}}"
     />
     {{/if}}
-    <div class="u-primaryGradient absolute inset-0 z-2"></div>
+    <div class="u-primaryGradient absolute inset-0 z-2 opacity-80"></div>
 </article>
