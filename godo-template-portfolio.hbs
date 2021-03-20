@@ -8,13 +8,13 @@
 
 <header class="topic-header">
     <div class="px-4 py-10 lg:pt-12 lg:pb-8 mx-auto max-w-3xl text-center">
-        {{#if excerpt}} <div class="mb-4 text-base text-gray-500">{{excerpt}}</div>{{/if}}
-        <h1 class="underscore is-center capitalize text-5xl text-title">{{title}}</h1>
+        <h1 class="capitalize text-5xl text-title md:text-6xl">{{title}}</h1>
+        {{#if excerpt}} <div class="max-w-md mt-2 mx-auto text-base text-gray-500">{{excerpt}}</div>{{/if}}
     </div>
 </header>
 
 {{#if tags}}
-<ul class="list-inline text-center px-4" role="group" aria-label="{{t "Filter Control"}}">
+<ul class="list-inline text-center px-4 mt-4" role="group" aria-label="{{t "Filter Control"}}">
     <li class="js-filter-btn inline-block border-b-2 border-transparent border-primary hover:border-primary cursor-pointer mb-2" data-filter="all">{{t "All"}}</li>
     {{#foreach tags}}<li class="js-filter-btn inline-block border-b-2 border-transparent hover:border-primary cursor-pointer mb-2 ml-4" data-filter="{{slug}}">{{name}}</li>{{/foreach}}
 </ul>

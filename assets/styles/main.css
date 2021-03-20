@@ -4022,6 +4022,10 @@ a > code[class*="language-"] {
   --tw-divide-opacity: 0.1;
 }
 
+.divide-opacity-15 > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 0.15;
+}
+
 .divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 0.2;
 }
@@ -6708,6 +6712,10 @@ a > code[class*="language-"] {
   --tw-bg-opacity: 0.1;
 }
 
+.bg-opacity-15{
+  --tw-bg-opacity: 0.15;
+}
+
 .bg-opacity-20{
   --tw-bg-opacity: 0.2;
 }
@@ -6770,6 +6778,10 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:bg-opacity-10{
   --tw-bg-opacity: 0.1;
+}
+
+.group:hover .group-hover\:bg-opacity-15{
+  --tw-bg-opacity: 0.15;
 }
 
 .group:hover .group-hover\:bg-opacity-20{
@@ -6836,6 +6848,10 @@ a > code[class*="language-"] {
   --tw-bg-opacity: 0.1;
 }
 
+.focus-within\:bg-opacity-15:focus-within{
+  --tw-bg-opacity: 0.15;
+}
+
 .focus-within\:bg-opacity-20:focus-within{
   --tw-bg-opacity: 0.2;
 }
@@ -6900,6 +6916,10 @@ a > code[class*="language-"] {
   --tw-bg-opacity: 0.1;
 }
 
+.hover\:bg-opacity-15:hover{
+  --tw-bg-opacity: 0.15;
+}
+
 .hover\:bg-opacity-20:hover{
   --tw-bg-opacity: 0.2;
 }
@@ -6962,6 +6982,10 @@ a > code[class*="language-"] {
 
 .focus\:bg-opacity-10:focus{
   --tw-bg-opacity: 0.1;
+}
+
+.focus\:bg-opacity-15:focus{
+  --tw-bg-opacity: 0.15;
 }
 
 .focus\:bg-opacity-20:focus{
@@ -8033,6 +8057,10 @@ a > code[class*="language-"] {
   --tw-border-opacity: 0.1;
 }
 
+.border-opacity-15{
+  --tw-border-opacity: 0.15;
+}
+
 .border-opacity-20{
   --tw-border-opacity: 0.2;
 }
@@ -8095,6 +8123,10 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:border-opacity-10{
   --tw-border-opacity: 0.1;
+}
+
+.group:hover .group-hover\:border-opacity-15{
+  --tw-border-opacity: 0.15;
 }
 
 .group:hover .group-hover\:border-opacity-20{
@@ -8161,6 +8193,10 @@ a > code[class*="language-"] {
   --tw-border-opacity: 0.1;
 }
 
+.focus-within\:border-opacity-15:focus-within{
+  --tw-border-opacity: 0.15;
+}
+
 .focus-within\:border-opacity-20:focus-within{
   --tw-border-opacity: 0.2;
 }
@@ -8225,6 +8261,10 @@ a > code[class*="language-"] {
   --tw-border-opacity: 0.1;
 }
 
+.hover\:border-opacity-15:hover{
+  --tw-border-opacity: 0.15;
+}
+
 .hover\:border-opacity-20:hover{
   --tw-border-opacity: 0.2;
 }
@@ -8287,6 +8327,10 @@ a > code[class*="language-"] {
 
 .focus\:border-opacity-10:focus{
   --tw-border-opacity: 0.1;
+}
+
+.focus\:border-opacity-15:focus{
+  --tw-border-opacity: 0.15;
 }
 
 .focus\:border-opacity-20:focus{
@@ -12172,6 +12216,10 @@ a > code[class*="language-"] {
   opacity: 0.1;
 }
 
+.opacity-15{
+  opacity: 0.15;
+}
+
 .opacity-20{
   opacity: 0.2;
 }
@@ -12234,6 +12282,10 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:opacity-10{
   opacity: 0.1;
+}
+
+.group:hover .group-hover\:opacity-15{
+  opacity: 0.15;
 }
 
 .group:hover .group-hover\:opacity-20{
@@ -12300,6 +12352,10 @@ a > code[class*="language-"] {
   opacity: 0.1;
 }
 
+.focus-within\:opacity-15:focus-within{
+  opacity: 0.15;
+}
+
 .focus-within\:opacity-20:focus-within{
   opacity: 0.2;
 }
@@ -12364,6 +12420,10 @@ a > code[class*="language-"] {
   opacity: 0.1;
 }
 
+.hover\:opacity-15:hover{
+  opacity: 0.15;
+}
+
 .hover\:opacity-20:hover{
   opacity: 0.2;
 }
@@ -12426,6 +12486,10 @@ a > code[class*="language-"] {
 
 .focus\:opacity-10:focus{
   opacity: 0.1;
+}
+
+.focus\:opacity-15:focus{
+  opacity: 0.15;
 }
 
 .focus\:opacity-20:focus{
@@ -14131,6 +14195,10 @@ a > code[class*="language-"] {
   --tw-placeholder-opacity: 0.1;
 }
 
+.placeholder-opacity-15::placeholder{
+  --tw-placeholder-opacity: 0.15;
+}
+
 .placeholder-opacity-20::placeholder{
   --tw-placeholder-opacity: 0.2;
 }
@@ -14193,6 +14261,10 @@ a > code[class*="language-"] {
 
 .focus\:placeholder-opacity-10:focus::placeholder{
   --tw-placeholder-opacity: 0.1;
+}
+
+.focus\:placeholder-opacity-15:focus::placeholder{
+  --tw-placeholder-opacity: 0.15;
 }
 
 .focus\:placeholder-opacity-20:focus::placeholder{
@@ -18561,6 +18633,10 @@ a > code[class*="language-"] {
   --tw-ring-opacity: 0.1;
 }
 
+.ring-opacity-15{
+  --tw-ring-opacity: 0.15;
+}
+
 .ring-opacity-20{
   --tw-ring-opacity: 0.2;
 }
@@ -18625,6 +18701,10 @@ a > code[class*="language-"] {
   --tw-ring-opacity: 0.1;
 }
 
+.focus-within\:ring-opacity-15:focus-within{
+  --tw-ring-opacity: 0.15;
+}
+
 .focus-within\:ring-opacity-20:focus-within{
   --tw-ring-opacity: 0.2;
 }
@@ -18687,6 +18767,10 @@ a > code[class*="language-"] {
 
 .focus\:ring-opacity-10:focus{
   --tw-ring-opacity: 0.1;
+}
+
+.focus\:ring-opacity-15:focus{
+  --tw-ring-opacity: 0.15;
 }
 
 .focus\:ring-opacity-20:focus{
@@ -19722,6 +19806,10 @@ a > code[class*="language-"] {
   --tw-text-opacity: 0.1;
 }
 
+.text-opacity-15{
+  --tw-text-opacity: 0.15;
+}
+
 .text-opacity-20{
   --tw-text-opacity: 0.2;
 }
@@ -19784,6 +19872,10 @@ a > code[class*="language-"] {
 
 .group:hover .group-hover\:text-opacity-10{
   --tw-text-opacity: 0.1;
+}
+
+.group:hover .group-hover\:text-opacity-15{
+  --tw-text-opacity: 0.15;
 }
 
 .group:hover .group-hover\:text-opacity-20{
@@ -19850,6 +19942,10 @@ a > code[class*="language-"] {
   --tw-text-opacity: 0.1;
 }
 
+.focus-within\:text-opacity-15:focus-within{
+  --tw-text-opacity: 0.15;
+}
+
 .focus-within\:text-opacity-20:focus-within{
   --tw-text-opacity: 0.2;
 }
@@ -19914,6 +20010,10 @@ a > code[class*="language-"] {
   --tw-text-opacity: 0.1;
 }
 
+.hover\:text-opacity-15:hover{
+  --tw-text-opacity: 0.15;
+}
+
 .hover\:text-opacity-20:hover{
   --tw-text-opacity: 0.2;
 }
@@ -19976,6 +20076,10 @@ a > code[class*="language-"] {
 
 .focus\:text-opacity-10:focus{
   --tw-text-opacity: 0.1;
+}
+
+.focus\:text-opacity-15:focus{
+  --tw-text-opacity: 0.15;
 }
 
 .focus\:text-opacity-20:focus{
@@ -25302,6 +25406,10 @@ a > code[class*="language-"] {
     --tw-divide-opacity: 0.1;
   }
 
+  .sm\:divide-opacity-15 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 0.15;
+  }
+
   .sm\:divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 0.2;
   }
@@ -27988,6 +28096,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .sm\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
+  }
+
   .sm\:bg-opacity-20{
     --tw-bg-opacity: 0.2;
   }
@@ -28050,6 +28162,10 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:bg-opacity-10{
     --tw-bg-opacity: 0.1;
+  }
+
+  .group:hover .sm\:group-hover\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
   }
 
   .group:hover .sm\:group-hover\:bg-opacity-20{
@@ -28116,6 +28232,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .sm\:focus-within\:bg-opacity-15:focus-within{
+    --tw-bg-opacity: 0.15;
+  }
+
   .sm\:focus-within\:bg-opacity-20:focus-within{
     --tw-bg-opacity: 0.2;
   }
@@ -28180,6 +28300,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .sm\:hover\:bg-opacity-15:hover{
+    --tw-bg-opacity: 0.15;
+  }
+
   .sm\:hover\:bg-opacity-20:hover{
     --tw-bg-opacity: 0.2;
   }
@@ -28242,6 +28366,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:bg-opacity-10:focus{
     --tw-bg-opacity: 0.1;
+  }
+
+  .sm\:focus\:bg-opacity-15:focus{
+    --tw-bg-opacity: 0.15;
   }
 
   .sm\:focus\:bg-opacity-20:focus{
@@ -29313,6 +29441,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .sm\:border-opacity-15{
+    --tw-border-opacity: 0.15;
+  }
+
   .sm\:border-opacity-20{
     --tw-border-opacity: 0.2;
   }
@@ -29375,6 +29507,10 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:border-opacity-10{
     --tw-border-opacity: 0.1;
+  }
+
+  .group:hover .sm\:group-hover\:border-opacity-15{
+    --tw-border-opacity: 0.15;
   }
 
   .group:hover .sm\:group-hover\:border-opacity-20{
@@ -29441,6 +29577,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .sm\:focus-within\:border-opacity-15:focus-within{
+    --tw-border-opacity: 0.15;
+  }
+
   .sm\:focus-within\:border-opacity-20:focus-within{
     --tw-border-opacity: 0.2;
   }
@@ -29505,6 +29645,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .sm\:hover\:border-opacity-15:hover{
+    --tw-border-opacity: 0.15;
+  }
+
   .sm\:hover\:border-opacity-20:hover{
     --tw-border-opacity: 0.2;
   }
@@ -29567,6 +29711,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:border-opacity-10:focus{
     --tw-border-opacity: 0.1;
+  }
+
+  .sm\:focus\:border-opacity-15:focus{
+    --tw-border-opacity: 0.15;
   }
 
   .sm\:focus\:border-opacity-20:focus{
@@ -33452,6 +33600,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .sm\:opacity-15{
+    opacity: 0.15;
+  }
+
   .sm\:opacity-20{
     opacity: 0.2;
   }
@@ -33514,6 +33666,10 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:opacity-10{
     opacity: 0.1;
+  }
+
+  .group:hover .sm\:group-hover\:opacity-15{
+    opacity: 0.15;
   }
 
   .group:hover .sm\:group-hover\:opacity-20{
@@ -33580,6 +33736,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .sm\:focus-within\:opacity-15:focus-within{
+    opacity: 0.15;
+  }
+
   .sm\:focus-within\:opacity-20:focus-within{
     opacity: 0.2;
   }
@@ -33644,6 +33804,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .sm\:hover\:opacity-15:hover{
+    opacity: 0.15;
+  }
+
   .sm\:hover\:opacity-20:hover{
     opacity: 0.2;
   }
@@ -33706,6 +33870,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:opacity-10:focus{
     opacity: 0.1;
+  }
+
+  .sm\:focus\:opacity-15:focus{
+    opacity: 0.15;
   }
 
   .sm\:focus\:opacity-20:focus{
@@ -35411,6 +35579,10 @@ a > code[class*="language-"] {
     --tw-placeholder-opacity: 0.1;
   }
 
+  .sm\:placeholder-opacity-15::placeholder{
+    --tw-placeholder-opacity: 0.15;
+  }
+
   .sm\:placeholder-opacity-20::placeholder{
     --tw-placeholder-opacity: 0.2;
   }
@@ -35473,6 +35645,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:placeholder-opacity-10:focus::placeholder{
     --tw-placeholder-opacity: 0.1;
+  }
+
+  .sm\:focus\:placeholder-opacity-15:focus::placeholder{
+    --tw-placeholder-opacity: 0.15;
   }
 
   .sm\:focus\:placeholder-opacity-20:focus::placeholder{
@@ -39828,6 +40004,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .sm\:ring-opacity-15{
+    --tw-ring-opacity: 0.15;
+  }
+
   .sm\:ring-opacity-20{
     --tw-ring-opacity: 0.2;
   }
@@ -39892,6 +40072,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .sm\:focus-within\:ring-opacity-15:focus-within{
+    --tw-ring-opacity: 0.15;
+  }
+
   .sm\:focus-within\:ring-opacity-20:focus-within{
     --tw-ring-opacity: 0.2;
   }
@@ -39954,6 +40138,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:ring-opacity-10:focus{
     --tw-ring-opacity: 0.1;
+  }
+
+  .sm\:focus\:ring-opacity-15:focus{
+    --tw-ring-opacity: 0.15;
   }
 
   .sm\:focus\:ring-opacity-20:focus{
@@ -40989,6 +41177,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .sm\:text-opacity-15{
+    --tw-text-opacity: 0.15;
+  }
+
   .sm\:text-opacity-20{
     --tw-text-opacity: 0.2;
   }
@@ -41051,6 +41243,10 @@ a > code[class*="language-"] {
 
   .group:hover .sm\:group-hover\:text-opacity-10{
     --tw-text-opacity: 0.1;
+  }
+
+  .group:hover .sm\:group-hover\:text-opacity-15{
+    --tw-text-opacity: 0.15;
   }
 
   .group:hover .sm\:group-hover\:text-opacity-20{
@@ -41117,6 +41313,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .sm\:focus-within\:text-opacity-15:focus-within{
+    --tw-text-opacity: 0.15;
+  }
+
   .sm\:focus-within\:text-opacity-20:focus-within{
     --tw-text-opacity: 0.2;
   }
@@ -41181,6 +41381,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .sm\:hover\:text-opacity-15:hover{
+    --tw-text-opacity: 0.15;
+  }
+
   .sm\:hover\:text-opacity-20:hover{
     --tw-text-opacity: 0.2;
   }
@@ -41243,6 +41447,10 @@ a > code[class*="language-"] {
 
   .sm\:focus\:text-opacity-10:focus{
     --tw-text-opacity: 0.1;
+  }
+
+  .sm\:focus\:text-opacity-15:focus{
+    --tw-text-opacity: 0.15;
   }
 
   .sm\:focus\:text-opacity-20:focus{
@@ -46452,6 +46660,10 @@ a > code[class*="language-"] {
     --tw-divide-opacity: 0.1;
   }
 
+  .md\:divide-opacity-15 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 0.15;
+  }
+
   .md\:divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 0.2;
   }
@@ -49138,6 +49350,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .md\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
+  }
+
   .md\:bg-opacity-20{
     --tw-bg-opacity: 0.2;
   }
@@ -49200,6 +49416,10 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:bg-opacity-10{
     --tw-bg-opacity: 0.1;
+  }
+
+  .group:hover .md\:group-hover\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
   }
 
   .group:hover .md\:group-hover\:bg-opacity-20{
@@ -49266,6 +49486,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .md\:focus-within\:bg-opacity-15:focus-within{
+    --tw-bg-opacity: 0.15;
+  }
+
   .md\:focus-within\:bg-opacity-20:focus-within{
     --tw-bg-opacity: 0.2;
   }
@@ -49330,6 +49554,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .md\:hover\:bg-opacity-15:hover{
+    --tw-bg-opacity: 0.15;
+  }
+
   .md\:hover\:bg-opacity-20:hover{
     --tw-bg-opacity: 0.2;
   }
@@ -49392,6 +49620,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:bg-opacity-10:focus{
     --tw-bg-opacity: 0.1;
+  }
+
+  .md\:focus\:bg-opacity-15:focus{
+    --tw-bg-opacity: 0.15;
   }
 
   .md\:focus\:bg-opacity-20:focus{
@@ -50463,6 +50695,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .md\:border-opacity-15{
+    --tw-border-opacity: 0.15;
+  }
+
   .md\:border-opacity-20{
     --tw-border-opacity: 0.2;
   }
@@ -50525,6 +50761,10 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:border-opacity-10{
     --tw-border-opacity: 0.1;
+  }
+
+  .group:hover .md\:group-hover\:border-opacity-15{
+    --tw-border-opacity: 0.15;
   }
 
   .group:hover .md\:group-hover\:border-opacity-20{
@@ -50591,6 +50831,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .md\:focus-within\:border-opacity-15:focus-within{
+    --tw-border-opacity: 0.15;
+  }
+
   .md\:focus-within\:border-opacity-20:focus-within{
     --tw-border-opacity: 0.2;
   }
@@ -50655,6 +50899,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .md\:hover\:border-opacity-15:hover{
+    --tw-border-opacity: 0.15;
+  }
+
   .md\:hover\:border-opacity-20:hover{
     --tw-border-opacity: 0.2;
   }
@@ -50717,6 +50965,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:border-opacity-10:focus{
     --tw-border-opacity: 0.1;
+  }
+
+  .md\:focus\:border-opacity-15:focus{
+    --tw-border-opacity: 0.15;
   }
 
   .md\:focus\:border-opacity-20:focus{
@@ -54602,6 +54854,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .md\:opacity-15{
+    opacity: 0.15;
+  }
+
   .md\:opacity-20{
     opacity: 0.2;
   }
@@ -54664,6 +54920,10 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:opacity-10{
     opacity: 0.1;
+  }
+
+  .group:hover .md\:group-hover\:opacity-15{
+    opacity: 0.15;
   }
 
   .group:hover .md\:group-hover\:opacity-20{
@@ -54730,6 +54990,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .md\:focus-within\:opacity-15:focus-within{
+    opacity: 0.15;
+  }
+
   .md\:focus-within\:opacity-20:focus-within{
     opacity: 0.2;
   }
@@ -54794,6 +55058,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .md\:hover\:opacity-15:hover{
+    opacity: 0.15;
+  }
+
   .md\:hover\:opacity-20:hover{
     opacity: 0.2;
   }
@@ -54856,6 +55124,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:opacity-10:focus{
     opacity: 0.1;
+  }
+
+  .md\:focus\:opacity-15:focus{
+    opacity: 0.15;
   }
 
   .md\:focus\:opacity-20:focus{
@@ -56561,6 +56833,10 @@ a > code[class*="language-"] {
     --tw-placeholder-opacity: 0.1;
   }
 
+  .md\:placeholder-opacity-15::placeholder{
+    --tw-placeholder-opacity: 0.15;
+  }
+
   .md\:placeholder-opacity-20::placeholder{
     --tw-placeholder-opacity: 0.2;
   }
@@ -56623,6 +56899,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:placeholder-opacity-10:focus::placeholder{
     --tw-placeholder-opacity: 0.1;
+  }
+
+  .md\:focus\:placeholder-opacity-15:focus::placeholder{
+    --tw-placeholder-opacity: 0.15;
   }
 
   .md\:focus\:placeholder-opacity-20:focus::placeholder{
@@ -60978,6 +61258,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .md\:ring-opacity-15{
+    --tw-ring-opacity: 0.15;
+  }
+
   .md\:ring-opacity-20{
     --tw-ring-opacity: 0.2;
   }
@@ -61042,6 +61326,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .md\:focus-within\:ring-opacity-15:focus-within{
+    --tw-ring-opacity: 0.15;
+  }
+
   .md\:focus-within\:ring-opacity-20:focus-within{
     --tw-ring-opacity: 0.2;
   }
@@ -61104,6 +61392,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:ring-opacity-10:focus{
     --tw-ring-opacity: 0.1;
+  }
+
+  .md\:focus\:ring-opacity-15:focus{
+    --tw-ring-opacity: 0.15;
   }
 
   .md\:focus\:ring-opacity-20:focus{
@@ -62139,6 +62431,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .md\:text-opacity-15{
+    --tw-text-opacity: 0.15;
+  }
+
   .md\:text-opacity-20{
     --tw-text-opacity: 0.2;
   }
@@ -62201,6 +62497,10 @@ a > code[class*="language-"] {
 
   .group:hover .md\:group-hover\:text-opacity-10{
     --tw-text-opacity: 0.1;
+  }
+
+  .group:hover .md\:group-hover\:text-opacity-15{
+    --tw-text-opacity: 0.15;
   }
 
   .group:hover .md\:group-hover\:text-opacity-20{
@@ -62267,6 +62567,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .md\:focus-within\:text-opacity-15:focus-within{
+    --tw-text-opacity: 0.15;
+  }
+
   .md\:focus-within\:text-opacity-20:focus-within{
     --tw-text-opacity: 0.2;
   }
@@ -62331,6 +62635,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .md\:hover\:text-opacity-15:hover{
+    --tw-text-opacity: 0.15;
+  }
+
   .md\:hover\:text-opacity-20:hover{
     --tw-text-opacity: 0.2;
   }
@@ -62393,6 +62701,10 @@ a > code[class*="language-"] {
 
   .md\:focus\:text-opacity-10:focus{
     --tw-text-opacity: 0.1;
+  }
+
+  .md\:focus\:text-opacity-15:focus{
+    --tw-text-opacity: 0.15;
   }
 
   .md\:focus\:text-opacity-20:focus{
@@ -67602,6 +67914,10 @@ a > code[class*="language-"] {
     --tw-divide-opacity: 0.1;
   }
 
+  .lg\:divide-opacity-15 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 0.15;
+  }
+
   .lg\:divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 0.2;
   }
@@ -70288,6 +70604,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .lg\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
+  }
+
   .lg\:bg-opacity-20{
     --tw-bg-opacity: 0.2;
   }
@@ -70350,6 +70670,10 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:bg-opacity-10{
     --tw-bg-opacity: 0.1;
+  }
+
+  .group:hover .lg\:group-hover\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
   }
 
   .group:hover .lg\:group-hover\:bg-opacity-20{
@@ -70416,6 +70740,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .lg\:focus-within\:bg-opacity-15:focus-within{
+    --tw-bg-opacity: 0.15;
+  }
+
   .lg\:focus-within\:bg-opacity-20:focus-within{
     --tw-bg-opacity: 0.2;
   }
@@ -70480,6 +70808,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .lg\:hover\:bg-opacity-15:hover{
+    --tw-bg-opacity: 0.15;
+  }
+
   .lg\:hover\:bg-opacity-20:hover{
     --tw-bg-opacity: 0.2;
   }
@@ -70542,6 +70874,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:bg-opacity-10:focus{
     --tw-bg-opacity: 0.1;
+  }
+
+  .lg\:focus\:bg-opacity-15:focus{
+    --tw-bg-opacity: 0.15;
   }
 
   .lg\:focus\:bg-opacity-20:focus{
@@ -71613,6 +71949,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .lg\:border-opacity-15{
+    --tw-border-opacity: 0.15;
+  }
+
   .lg\:border-opacity-20{
     --tw-border-opacity: 0.2;
   }
@@ -71675,6 +72015,10 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:border-opacity-10{
     --tw-border-opacity: 0.1;
+  }
+
+  .group:hover .lg\:group-hover\:border-opacity-15{
+    --tw-border-opacity: 0.15;
   }
 
   .group:hover .lg\:group-hover\:border-opacity-20{
@@ -71741,6 +72085,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .lg\:focus-within\:border-opacity-15:focus-within{
+    --tw-border-opacity: 0.15;
+  }
+
   .lg\:focus-within\:border-opacity-20:focus-within{
     --tw-border-opacity: 0.2;
   }
@@ -71805,6 +72153,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .lg\:hover\:border-opacity-15:hover{
+    --tw-border-opacity: 0.15;
+  }
+
   .lg\:hover\:border-opacity-20:hover{
     --tw-border-opacity: 0.2;
   }
@@ -71867,6 +72219,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:border-opacity-10:focus{
     --tw-border-opacity: 0.1;
+  }
+
+  .lg\:focus\:border-opacity-15:focus{
+    --tw-border-opacity: 0.15;
   }
 
   .lg\:focus\:border-opacity-20:focus{
@@ -75752,6 +76108,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .lg\:opacity-15{
+    opacity: 0.15;
+  }
+
   .lg\:opacity-20{
     opacity: 0.2;
   }
@@ -75814,6 +76174,10 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:opacity-10{
     opacity: 0.1;
+  }
+
+  .group:hover .lg\:group-hover\:opacity-15{
+    opacity: 0.15;
   }
 
   .group:hover .lg\:group-hover\:opacity-20{
@@ -75880,6 +76244,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .lg\:focus-within\:opacity-15:focus-within{
+    opacity: 0.15;
+  }
+
   .lg\:focus-within\:opacity-20:focus-within{
     opacity: 0.2;
   }
@@ -75944,6 +76312,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .lg\:hover\:opacity-15:hover{
+    opacity: 0.15;
+  }
+
   .lg\:hover\:opacity-20:hover{
     opacity: 0.2;
   }
@@ -76006,6 +76378,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:opacity-10:focus{
     opacity: 0.1;
+  }
+
+  .lg\:focus\:opacity-15:focus{
+    opacity: 0.15;
   }
 
   .lg\:focus\:opacity-20:focus{
@@ -77711,6 +78087,10 @@ a > code[class*="language-"] {
     --tw-placeholder-opacity: 0.1;
   }
 
+  .lg\:placeholder-opacity-15::placeholder{
+    --tw-placeholder-opacity: 0.15;
+  }
+
   .lg\:placeholder-opacity-20::placeholder{
     --tw-placeholder-opacity: 0.2;
   }
@@ -77773,6 +78153,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:placeholder-opacity-10:focus::placeholder{
     --tw-placeholder-opacity: 0.1;
+  }
+
+  .lg\:focus\:placeholder-opacity-15:focus::placeholder{
+    --tw-placeholder-opacity: 0.15;
   }
 
   .lg\:focus\:placeholder-opacity-20:focus::placeholder{
@@ -82128,6 +82512,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .lg\:ring-opacity-15{
+    --tw-ring-opacity: 0.15;
+  }
+
   .lg\:ring-opacity-20{
     --tw-ring-opacity: 0.2;
   }
@@ -82192,6 +82580,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .lg\:focus-within\:ring-opacity-15:focus-within{
+    --tw-ring-opacity: 0.15;
+  }
+
   .lg\:focus-within\:ring-opacity-20:focus-within{
     --tw-ring-opacity: 0.2;
   }
@@ -82254,6 +82646,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:ring-opacity-10:focus{
     --tw-ring-opacity: 0.1;
+  }
+
+  .lg\:focus\:ring-opacity-15:focus{
+    --tw-ring-opacity: 0.15;
   }
 
   .lg\:focus\:ring-opacity-20:focus{
@@ -83289,6 +83685,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .lg\:text-opacity-15{
+    --tw-text-opacity: 0.15;
+  }
+
   .lg\:text-opacity-20{
     --tw-text-opacity: 0.2;
   }
@@ -83351,6 +83751,10 @@ a > code[class*="language-"] {
 
   .group:hover .lg\:group-hover\:text-opacity-10{
     --tw-text-opacity: 0.1;
+  }
+
+  .group:hover .lg\:group-hover\:text-opacity-15{
+    --tw-text-opacity: 0.15;
   }
 
   .group:hover .lg\:group-hover\:text-opacity-20{
@@ -83417,6 +83821,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .lg\:focus-within\:text-opacity-15:focus-within{
+    --tw-text-opacity: 0.15;
+  }
+
   .lg\:focus-within\:text-opacity-20:focus-within{
     --tw-text-opacity: 0.2;
   }
@@ -83481,6 +83889,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .lg\:hover\:text-opacity-15:hover{
+    --tw-text-opacity: 0.15;
+  }
+
   .lg\:hover\:text-opacity-20:hover{
     --tw-text-opacity: 0.2;
   }
@@ -83543,6 +83955,10 @@ a > code[class*="language-"] {
 
   .lg\:focus\:text-opacity-10:focus{
     --tw-text-opacity: 0.1;
+  }
+
+  .lg\:focus\:text-opacity-15:focus{
+    --tw-text-opacity: 0.15;
   }
 
   .lg\:focus\:text-opacity-20:focus{
@@ -88752,6 +89168,10 @@ a > code[class*="language-"] {
     --tw-divide-opacity: 0.1;
   }
 
+  .xl\:divide-opacity-15 > :not([hidden]) ~ :not([hidden]){
+    --tw-divide-opacity: 0.15;
+  }
+
   .xl\:divide-opacity-20 > :not([hidden]) ~ :not([hidden]){
     --tw-divide-opacity: 0.2;
   }
@@ -91438,6 +91858,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .xl\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
+  }
+
   .xl\:bg-opacity-20{
     --tw-bg-opacity: 0.2;
   }
@@ -91500,6 +91924,10 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:bg-opacity-10{
     --tw-bg-opacity: 0.1;
+  }
+
+  .group:hover .xl\:group-hover\:bg-opacity-15{
+    --tw-bg-opacity: 0.15;
   }
 
   .group:hover .xl\:group-hover\:bg-opacity-20{
@@ -91566,6 +91994,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .xl\:focus-within\:bg-opacity-15:focus-within{
+    --tw-bg-opacity: 0.15;
+  }
+
   .xl\:focus-within\:bg-opacity-20:focus-within{
     --tw-bg-opacity: 0.2;
   }
@@ -91630,6 +92062,10 @@ a > code[class*="language-"] {
     --tw-bg-opacity: 0.1;
   }
 
+  .xl\:hover\:bg-opacity-15:hover{
+    --tw-bg-opacity: 0.15;
+  }
+
   .xl\:hover\:bg-opacity-20:hover{
     --tw-bg-opacity: 0.2;
   }
@@ -91692,6 +92128,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:bg-opacity-10:focus{
     --tw-bg-opacity: 0.1;
+  }
+
+  .xl\:focus\:bg-opacity-15:focus{
+    --tw-bg-opacity: 0.15;
   }
 
   .xl\:focus\:bg-opacity-20:focus{
@@ -92763,6 +93203,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .xl\:border-opacity-15{
+    --tw-border-opacity: 0.15;
+  }
+
   .xl\:border-opacity-20{
     --tw-border-opacity: 0.2;
   }
@@ -92825,6 +93269,10 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:border-opacity-10{
     --tw-border-opacity: 0.1;
+  }
+
+  .group:hover .xl\:group-hover\:border-opacity-15{
+    --tw-border-opacity: 0.15;
   }
 
   .group:hover .xl\:group-hover\:border-opacity-20{
@@ -92891,6 +93339,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .xl\:focus-within\:border-opacity-15:focus-within{
+    --tw-border-opacity: 0.15;
+  }
+
   .xl\:focus-within\:border-opacity-20:focus-within{
     --tw-border-opacity: 0.2;
   }
@@ -92955,6 +93407,10 @@ a > code[class*="language-"] {
     --tw-border-opacity: 0.1;
   }
 
+  .xl\:hover\:border-opacity-15:hover{
+    --tw-border-opacity: 0.15;
+  }
+
   .xl\:hover\:border-opacity-20:hover{
     --tw-border-opacity: 0.2;
   }
@@ -93017,6 +93473,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:border-opacity-10:focus{
     --tw-border-opacity: 0.1;
+  }
+
+  .xl\:focus\:border-opacity-15:focus{
+    --tw-border-opacity: 0.15;
   }
 
   .xl\:focus\:border-opacity-20:focus{
@@ -96902,6 +97362,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .xl\:opacity-15{
+    opacity: 0.15;
+  }
+
   .xl\:opacity-20{
     opacity: 0.2;
   }
@@ -96964,6 +97428,10 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:opacity-10{
     opacity: 0.1;
+  }
+
+  .group:hover .xl\:group-hover\:opacity-15{
+    opacity: 0.15;
   }
 
   .group:hover .xl\:group-hover\:opacity-20{
@@ -97030,6 +97498,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .xl\:focus-within\:opacity-15:focus-within{
+    opacity: 0.15;
+  }
+
   .xl\:focus-within\:opacity-20:focus-within{
     opacity: 0.2;
   }
@@ -97094,6 +97566,10 @@ a > code[class*="language-"] {
     opacity: 0.1;
   }
 
+  .xl\:hover\:opacity-15:hover{
+    opacity: 0.15;
+  }
+
   .xl\:hover\:opacity-20:hover{
     opacity: 0.2;
   }
@@ -97156,6 +97632,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:opacity-10:focus{
     opacity: 0.1;
+  }
+
+  .xl\:focus\:opacity-15:focus{
+    opacity: 0.15;
   }
 
   .xl\:focus\:opacity-20:focus{
@@ -98861,6 +99341,10 @@ a > code[class*="language-"] {
     --tw-placeholder-opacity: 0.1;
   }
 
+  .xl\:placeholder-opacity-15::placeholder{
+    --tw-placeholder-opacity: 0.15;
+  }
+
   .xl\:placeholder-opacity-20::placeholder{
     --tw-placeholder-opacity: 0.2;
   }
@@ -98923,6 +99407,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:placeholder-opacity-10:focus::placeholder{
     --tw-placeholder-opacity: 0.1;
+  }
+
+  .xl\:focus\:placeholder-opacity-15:focus::placeholder{
+    --tw-placeholder-opacity: 0.15;
   }
 
   .xl\:focus\:placeholder-opacity-20:focus::placeholder{
@@ -103278,6 +103766,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .xl\:ring-opacity-15{
+    --tw-ring-opacity: 0.15;
+  }
+
   .xl\:ring-opacity-20{
     --tw-ring-opacity: 0.2;
   }
@@ -103342,6 +103834,10 @@ a > code[class*="language-"] {
     --tw-ring-opacity: 0.1;
   }
 
+  .xl\:focus-within\:ring-opacity-15:focus-within{
+    --tw-ring-opacity: 0.15;
+  }
+
   .xl\:focus-within\:ring-opacity-20:focus-within{
     --tw-ring-opacity: 0.2;
   }
@@ -103404,6 +103900,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:ring-opacity-10:focus{
     --tw-ring-opacity: 0.1;
+  }
+
+  .xl\:focus\:ring-opacity-15:focus{
+    --tw-ring-opacity: 0.15;
   }
 
   .xl\:focus\:ring-opacity-20:focus{
@@ -104439,6 +104939,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .xl\:text-opacity-15{
+    --tw-text-opacity: 0.15;
+  }
+
   .xl\:text-opacity-20{
     --tw-text-opacity: 0.2;
   }
@@ -104501,6 +105005,10 @@ a > code[class*="language-"] {
 
   .group:hover .xl\:group-hover\:text-opacity-10{
     --tw-text-opacity: 0.1;
+  }
+
+  .group:hover .xl\:group-hover\:text-opacity-15{
+    --tw-text-opacity: 0.15;
   }
 
   .group:hover .xl\:group-hover\:text-opacity-20{
@@ -104567,6 +105075,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .xl\:focus-within\:text-opacity-15:focus-within{
+    --tw-text-opacity: 0.15;
+  }
+
   .xl\:focus-within\:text-opacity-20:focus-within{
     --tw-text-opacity: 0.2;
   }
@@ -104631,6 +105143,10 @@ a > code[class*="language-"] {
     --tw-text-opacity: 0.1;
   }
 
+  .xl\:hover\:text-opacity-15:hover{
+    --tw-text-opacity: 0.15;
+  }
+
   .xl\:hover\:text-opacity-20:hover{
     --tw-text-opacity: 0.2;
   }
@@ -104693,6 +105209,10 @@ a > code[class*="language-"] {
 
   .xl\:focus\:text-opacity-10:focus{
     --tw-text-opacity: 0.1;
+  }
+
+  .xl\:focus\:text-opacity-15:focus{
+    --tw-text-opacity: 0.15;
   }
 
   .xl\:focus\:text-opacity-20:focus{
