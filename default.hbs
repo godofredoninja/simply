@@ -44,16 +44,20 @@
 <body class="{{block "special_body_class"}}">
     <div class="simply-viewport flexColumnTop">
         {{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
+        {{!-- Header Default --}}
         {{> "layout/header"}}
+
+        {{!-- Header With Drop Down --}}
+        {{!-- {{> "layout/header" hasDropDown=true}} --}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
-        {{!-- {{>"layout/footer"}} --}}
+        {{>"layout/footer"}}
 
         {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
-        {{>"layout/footer-dark"}}
+        {{!-- {{>"layout/footer-dark"}} --}}
 
         {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
         {{!-- {{>"layout/footer-not-menu"}} --}}
