@@ -4,7 +4,7 @@
             {{!-- About --}}
             <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
                 <div class="footer-items flexColumnTop flex-grow">
-                    <h3 class="footer-items-title underscore text-22">{{t "About Us"}}</h3>
+                    <h3 class="footer-items-title mb-6 text-22">{{t "About Us"}}</h3>
                     <div class="footer-b flex-grow mb-4">
                         <p class="mb-4 text-base">{{@site.description}}</p>
                     </div>
@@ -17,10 +17,9 @@
             {{!-- Tag Cloud --}}
             <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
                 <div class="footer-items footer-tags flex-grow px-4">
-                    <h3 class="footer-items-title underscore text-22">{{t "Tags"}}</h3>
-
+                    <h3 class="footer-items-title mb-6 text-22">{{t "Tags"}}</h3>
                     {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
-                    <div class="my-3 flex items-center justify-between leading-tight">
+                    <div class="mb-3 flex items-center justify-between leading-tight">
                         <a href="{{url absolute="true"}}"
                             title="{{name}}"
                             class="capitalize pl-3 border-l-4 border-primary"
@@ -34,7 +33,7 @@
             {{!-- members subscribe --}}
             <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
                 <div class="footer-items flex-grow">
-                    <h3 class="footer-items-title underscore text-22">{{t "Subscribe"}}</h3>
+                    <h3 class="footer-items-title mb-6 text-22">{{t "Subscribe"}}</h3>
                     <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
 
                     {{!-- Form subscribe --}}
@@ -71,7 +70,7 @@
         {{#if @site.secondary_navigation}}
         <div class="footer-bottom flex flex-col text-center py-8 mt-8 lg:items-baseline lg:flex-row lg:text-left">
             {{!-- Copy --}}
-            <div class="text-sm flex-none lg:max-w-xs">
+            <div class="text-sm flex-none lg:max-w-xs order-1 lg:order-none">
                 &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
                 <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
                 by

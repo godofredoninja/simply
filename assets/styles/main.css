@@ -2455,8 +2455,8 @@ a > code[class*="language-"] {
 }
 
 .footer {
-  background-color: #000;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: #111;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer a:hover:not(.button) {
@@ -2480,7 +2480,7 @@ a > code[class*="language-"] {
 }
 
 .footer-form-input {
-  background-color: #222;
+  background-color: rgba(97, 97, 97, 0.25);
   border-color: transparent;
   color: #bbb;
 }
