@@ -1,0 +1,66 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-frontpage{{/contentFor}}
+
+{{!-- Featured Story --}}
+{{#get "posts" limit="3" filter="featured:true" as |godo_featured_post| }}
+    {{#if godo_featured_post}}
+    <div class="relative overflow-hidden">
+        <div class="simply-slider flex overflow-hidden">
+            {{#foreach godo_featured_post}}
+                {{> "story/story-featured"}}
+            {{/foreach}}
+        </div>
+
+        <div class="simply-slider-prev absolute bottom-0 lg:bottom-1/2 right-16 lg:right-auto lg:left-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6 rotate-180 transform"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+
+        <div class="simply-slider-next absolute bottom-0 lg:bottom-1/2 right-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+    </div>
+    {{/if}}
+{{/get}}
+
+<div class="site-post feed-entry-content container mx-auto pt-10">
+    <div class="feed-entry-wrap max-w-1100 mx-auto">
+        <div class="row">
+            {{#foreach posts}}
+                {{#has number="1"}}
+                    <div class="col s12 m6 l12 ss1">{{> "story/story-grid"}}</div>
+                {{else has number="5, 6, 17, 18"}}
+                    <div class="col s12 m6 ss2">{{> "story/story-grid"}}</div>
+                {{else has number="13, 16"}}
+                    <div class="col s12 m6 l7 ss3 mb-4">{{> "story/story-cover"}}</div>
+                {{else has number="14, 15"}}
+                    <div class="col s12 m6 l5 ss4 mb-4">{{> "story/story-cover"}}</div>
+                {{else}}
+                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
+                {{/has}}
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{#contentFor "headers"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">{{/contentFor}}
+
+{{#contentFor "scripts"}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+    var slider = tns({
+        container: '.simply-slider',
+        loop: true,
+        mouseDrag: true,
+        items: 1,
+        nav: false,
+        speed: 400,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        prevButton: '.simply-slider-prev',
+        nextButton: '.simply-slider-next'
+    });
+</script>
+{{/contentFor}}

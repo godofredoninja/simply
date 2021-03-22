@@ -24162,7 +24162,7 @@ a > code[class*="language-"] {
 }
 
 .u-primaryGradient {
-  background: linear-gradient(135deg, #102b7b, var(--ghost-accent-color));
+  background: linear-gradient(135deg, #111, var(--ghost-accent-color));
 }
 
 .avatar {
