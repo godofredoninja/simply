@@ -1,0 +1,79 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-horizontal-slider{{/contentFor}}
+
+<div class="feed-entry-content">
+    <div class="feed-entry-wrap">
+        <div class="row is-gapless">
+            {{#foreach posts}}
+
+            <article class="col s12 m6 l4 relative story-cover min-h-lg">
+                {{#if feature_image}}
+                <figure class="story-cover-thumbnail overflow-hidden pt-96">
+                    <a href="{{url}}">
+                        <img class="image-inset lazyload opacity-0"
+                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                            data-srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w,
+                                {{img_url feature_image size="l"}} 1000w,
+                                {{img_url feature_image size="xl"}} 2000w"
+                            data-sizes="auto"
+                            alt="{{title}}" />
+                        <div class="simply-cover-gradient absolute inset-0 z-2"></div>
+                    </a>
+                </figure>
+                {{/if}}
+
+                <header class="absolute bottom-0 left-0 right-0 text-white px-4 py-10">
+                    {{!-- Category --}}
+                    {{#if primary_tag}}{{#primary_tag}}
+                    <div class="mb-4">
+                        <a href="{{url}}" title="{{t "Go to"}} {{name}}"
+                            class="relative z-3 button is-x-small is-dark-blue mt-3 mr-3"
+                            {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>{{name}}</a>
+                    </div>
+                    {{/primary_tag}}{{/if}}
+
+                    <h2 class="text-4xl mb-4 leading-tight"><a class="relative z-3" href="{{url}}">{{title}}</a></h2>
+
+                    {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+                    {{> "components/author-meta"}}
+                </header>
+
+            </article>
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{#contentFor "headers"}}
+<style>
+    .lazyload {opacity: 0;}
+    .lazyloaded {animation: showcase_image .6s .3s ease-in-out forwards;}
+    .story-cover-thumbnail {padding-top: 90%}
+    .simply-cover-gradient {
+        transition: background-color .5s ease-in-out;
+        background-color: transparent;
+        background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.9)),color-stop(60%,rgba(255,255,255,0)));
+        background-image: linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(255,255,255,0) 60%)
+        }
+    .story-cover:hover .simply-cover-gradient {background-color: rgba(0,0,0,.55)}
+
+    @media only screen and (min-width: 766px) {.story-cover-thumbnail {padding-top: 125%}}
+
+    @keyframes showcase_image {
+        0% {
+            -webkit-transform: scale(.85);
+            transform: scale(.85);
+            opacity: 0
+        }
+        100% {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+</style>
+{{/contentFor}}
