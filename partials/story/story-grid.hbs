@@ -12,14 +12,8 @@
             {{/if}}
         </a>
 
-        {{!-- Category --}}
-        {{#if primary_tag}}{{#primary_tag}}
-        <span class="absolute right-0 top-0">
-            <a href="{{url}}" title="{{t "Go to"}} {{name}}"
-                class="button is-x-small is-dark-blue mt-3 mr-3"
-                {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>{{name}}</a>
-        </span>
-        {{/primary_tag}}{{/if}}
+        {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
+        {{#if primary_tag}}<div class="absolute right-0 top-0">{{> "components/primary-tag"}}</div>{{/if}}
     </figure>
 
     <div class="story-body pt-5 flexColumnTop">

@@ -45,7 +45,7 @@
     </div>
 </div>
 
-{{#contentFor "headers"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">{{/contentFor}}
+{{#contentFor "header"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">{{/contentFor}}
 
 {{#contentFor "scripts"}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -60,7 +60,8 @@
         autoplay: true,
         autoplayButtonOutput: false,
         prevButton: '.simply-slider-prev',
-        nextButton: '.simply-slider-next'
+        nextButton: '.simply-slider-next',
+        mode: 'gallery'
     });
 </script>
 {{/contentFor}}
