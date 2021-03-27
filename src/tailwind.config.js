@@ -129,13 +129,13 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-  corePlugins: {
-    // Disable Grid
-    gridRow: false,
-    gridRowStart: false,
-    gridRowEnd: false,
-    gap: false
-  },
+  // corePlugins: {
+  //   // Disable Grid
+  //   gridRow: false,
+  //   gridRowStart: false,
+  //   gridRowEnd: false,
+  //   gap: false
+  // },
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
