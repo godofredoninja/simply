@@ -5,15 +5,15 @@
 
 {{#post}}
 <div class="simply-hero-cover u-primaryGradient overflow-hidden pt-16">
-    <div class="mx-auto container relative py-vw4 flex justify-between flex-col items-center lg:flex-row lg:px-5" style="min-height:25rem">
-        <div class="text-white lg:pr-5 flex-none text-center lg:text-left" style="max-width: 35rem">
-            <h1 class="text-6xl pt-5 font-serif">{{title}}</h1>
-            {{#if custom_excerpt}}<p class="mt-5 text-xl">{{custom_excerpt}}</p>{{/if}}
-            {{#unless @member}}<a data-portal="account/plans" class="button is-medium is-primary gh-portal-close mt-6" href="#">{{t "Get Started"}}</a>{{/unless}}
+    <div class="mx-auto container relative py-vw4 flex justify-between flex-col items-center md:flex-row md:px-5 min-h-lg">
+        <div class="text-white md:pr-5 flex-none text-center md:text-left md:max-w-md lg:max-w-xl">
+            <h1 class="text-5xl pt-5 font-serif lg:text-6xl">{{title}}</h1>
+            {{#if custom_excerpt}}<p class="mt-6 text-22">{{custom_excerpt}}</p>{{/if}}
+            {{#unless @member}}<a data-portal="account/plans" class="button is-medium is-primary gh-portal-close mt-12" href="#">{{t "Get Started"}}</a>{{/unless}}
         </div>
 
         {{#if feature_image}}
-        <figure class="relative max-w-lg w-full mt-10 lg:mt-0">
+        <figure class="relative max-w-lg w-full mt-10 md:mt-0" style="max-height: 25rem">
             <img class="blur-up lazyload object-cover w-full animated bounceIn"
                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-srcset="{{img_url feature_image size="s"}} 300w,
@@ -21,7 +21,6 @@
                         {{img_url feature_image size="l"}} 1000w,
                         {{img_url feature_image size="xl"}} 2000w"
                 data-sizes="auto"
-                style="max-height: 25rem"
                 alt="{{title}}" />
         </figure>
         {{/if}}
@@ -29,7 +28,7 @@
 </div>
 {{/post}}
 
-<div class="mx-auto container pt-10 lg:px-5">
+<div class="mx-auto container mt-12 lg:px-5">
     <div class="row">
 
         <div class="col s12 l7 feed-entry-content">
