@@ -42,19 +42,19 @@ $colors: (
   "black"     : ($black, $white),
   "light"     : (#f2f2f2, rgba(0, 0, 0, .7)),
   // "primary"   : ($primary-color, $white),
-  "dark-blue" : ($dark-blue-500, $white),
-  "sucecess"  : ($success, $white),
-  "warning"   : ($warning, rgba(0, 0, 0, .7)),
-  "danger"    : ($danger, $white),
+  // "dark-blue" : ($dark-blue-500, $white),
+  // "sucecess"  : ($success, $white),
+  // "warning"   : ($warning, rgba(0, 0, 0, .7)),
+  // "danger"    : ($danger, $white),
   "transparent": (transparent, hsla(0, 0%, 100%, .7), $white)
 );
 
 // form
 $form-colors: (
   "primary"   : ($primary-color, $white),
-  "sucecess"  : ($success, $white),
-  "warning"   : ($warning, rgba(0, 0, 0, .7)),
-  "danger"    : ($danger, $white)
+  // "sucecess"  : ($success, $white),
+  // "warning"   : ($warning, rgba(0, 0, 0, .7)),
+  // "danger"    : ($danger, $white)
 );
 
 // 2. Fonts

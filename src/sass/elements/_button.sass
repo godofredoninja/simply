@@ -120,6 +120,11 @@ $button-active-border-color: $gray-800
           border-color: var(--ghost-accent-color)
           color: #fff
 
+  &.is-dark-blue
+    background-color: $dark-blue-500
+    border-color: transparent
+    color: #fff
+
   // Generate Buttons
   @each $name, $pair in $colors
     $color: nth($pair, 1)
