@@ -14,7 +14,7 @@
 </header>
 
 {{#if tags}}
-<ul class="list-inline text-center px-4 mt-4" role="group" aria-label="{{t "Filter Control"}}">
+<ul class="list-inline text-center px-4 mt-4">
     <li class="js-filter-btn inline-block border-b-2 border-transparent border-primary hover:border-primary cursor-pointer mb-2" data-filter="all">{{t "All"}}</li>
     {{#foreach tags}}<li class="js-filter-btn inline-block border-b-2 border-transparent hover:border-primary cursor-pointer mb-2 ml-4" data-filter="{{slug}}">{{name}}</li>{{/foreach}}
 </ul>
