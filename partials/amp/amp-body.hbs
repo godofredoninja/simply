@@ -26,7 +26,7 @@
     {{!-- featured image --}}
     {{#if feature_image}}
         <figure class="article-image u-block u-marginTop30">
-            <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="350" layout="responsive" alt="{{title}}"></amp-img>
+            <amp-img src="{{img_url feature_image size="s" absolute="true"}}" width="600" height="350" layout="responsive" alt="{{title}}"></amp-img>
         </figure>
     {{/if}}
 
@@ -35,8 +35,7 @@
 
     {{!-- Post All Tags (category) --}}
     {{#if tags}}
-        <div class="article-tags u-container u-marginTop30">
-            <span class="share-title">{{t "Tags"}}:</span>
+        <div class="article-tags u-container u-marginTop20">
             {{#foreach tags}}
                 <a href="{{url absolute="true"}}" title="{{name}}" class="button--tags">{{name}}</a>
             {{/foreach}}
