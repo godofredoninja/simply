@@ -11,7 +11,7 @@
 - [Fast search](./settings.md#search/) functionality
 - [Layouts Header](./layouts.md#header)
   - Header Defautl
-  - [Header with DropDown Menu](./settings.md#dropdownmenu)
+  - [Header with DropDown Menu](./settings.md#header-with-dropdown-menu)
 - [Layouts Footer](./layouts.md#footer)
   - Footer Default
   - Footer Dark
