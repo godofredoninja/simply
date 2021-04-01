@@ -2,30 +2,10 @@
 
 > You don't have to add all the Simply configurations. only the ones you need
 
-- [Drop down Menu](#drop-down-menu)
 - [Social Media](#social-media)
 - [Search](#search)
+- [Logo Light / Dark Mode](#logo-light--dark-mode)
 - [Comments](#comments)
-
-## Drop down Menu
-
-You can add drop down menu in header
-
-![DropDown Menu](https://user-images.githubusercontent.com/10253167/105409346-5329c800-5bfe-11eb-9832-46618c3bdd87.jpg)
-
-➡️ `Dashboard -> Code injection -> Site Footer`
-
-```html
-<script>
-    var menuDropdown = {
-        'Menu 01': 'https://example.com',
-        'Menu 02': 'https://example.com',
-        'Menu 03': 'https://example.com',
-        'Menu 04': 'https://example.com',
-        'Menu 05': 'https://example.com'
-    };
-</script>
-```
 
 ## Social Media
 
@@ -228,6 +208,28 @@ OR - Adding parameters to the search
 The search engine that includes Simply is very powerful, supports almost all languages and you can customize to your liking.
 
 Read more about the search engine [Read More](https://github.com/HauntedThemes/ghost-search)
+
+## Logo Light / Dark Mode
+
+- Add your logo for dark mode in the folder `assets/images/logo-dark-mode.png`
+- Edit the file `./partials/layout/header.hbs` and uncomment this line
+
+```handlebars
+<img src="{{img_url @site.logo size="m"}}" class="header-logo-img max-h-8 logo-default" alt="{{@site.title}}" width="115" height="30"/>
+{{!-- <img src="{{asset "images/logo-dark-mode.png"}}" class="header-logo-img max-h-8 hidden logo-dark-mode" alt="" width="115" height="30"/> --}}
+```
+
+- Add the entyles in ➡️ `Dashboard -> Code injection -> Site Header`
+
+```html
+<style>
+  .is-head-transparent .logo-default,
+  .dark .logo-default { display: none !important }
+
+  .is-head-transparent:not(.has-menu) .logo-dark-mode,
+  .dark .logo-dark-mode { display: block }
+</style>
+```
 
 ## Comments
 

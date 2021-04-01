@@ -9,6 +9,9 @@
 5. [Grid](#grid) `godo-template-grid.hbs`
 6. [Personal](#personal) `godo-template-personal.hbs`
 7. [Archive Page](#archive-page) `godo-template-archive.hbs`
+8. [Featured with Slider](#featured-with-slider) `godo-template-featured-slider.hbs`
+9. [Medium with Sidebar](#medium-with-sidebar) `godo-template-medium-sidebar.hbs`
+10. [Photographer](#photographer) `godo-template-photographer.hbs`
 
 ---
 
@@ -276,6 +279,81 @@ collections:
   /:
     permalink: /{slug}/
     template: index
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+```
+
+## Featured with Slider
+
+![home featured](https://user-images.githubusercontent.com/10253167/113336280-c8470700-92eb-11eb-867b-c22a4c09c554.jpg)
+
+Here if it is necessary to change our `routes.yaml` in the following way.
+
+```yaml
+## routes.yaml
+
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    ## filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: 12
+    template: godo-template-featured-slider
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+```
+
+## Medium with Sidebar
+
+The template is inspired by the medium home page, you will have the facility to add a title, description and a featured image on the right side.
+
+![Simply Medium with sidebar](https://user-images.githubusercontent.com/10253167/113358306-2d5e2500-930b-11eb-92ee-d71717660777.jpg)
+
+- Create a new page
+- Choose your favorite title
+- Use the `URL` -> `medium-with-sidebar`
+
+```yaml
+## routes.yaml
+
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    ## filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    template: godo-template-medium-sidebar
+    data:
+      post: page.medium-with-sidebar
+    limit: 14
+
+taxonomies:
+  tag: /tag/{slug}/
+  author: /author/{slug}/
+```
+
+## Photographer
+
+If you are a photographer this template is exclusively for you. It has a slider of the last 3 featured articles, the articles will be ordered in columns of 3.
+
+![Home photographer](https://user-images.githubusercontent.com/10253167/113359817-2edd1c80-930e-11eb-8983-6269210c3d65.jpg)
+
+```yaml
+## routes.yaml
+
+routes:
+
+collections:
+  /:
+    permalink: /{slug}/
+    ## filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    limit: 12
+    template: godo-template-photographer
 
 taxonomies:
   tag: /tag/{slug}/

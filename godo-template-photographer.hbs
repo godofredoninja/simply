@@ -1,0 +1,109 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{!-- custom Styles For tag <body> --}}
+{{#contentFor "special_body_class"}}is-photographer has-cover is-head-transparent{{/contentFor}}
+
+{{!-- Featured Story --}}
+{{#get "posts" limit="3" include="tags" filter="featured:true" as |godo_featured_post| }}
+    {{#if godo_featured_post}}
+    <div class="simply-hero-cover relative bg-dark">
+        <div class="simply-slider flex overflow-hidden">
+
+            {{#foreach godo_featured_post}}
+                <article class="overflow-hidden bg-dark flex-none relative z-2">
+                    <div class="px-4 py-vw8 min-h-lg h-screen flex items-center justify-center">
+                        <div class="max-w-1100 mx-auto text-center">
+                            {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
+                            {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag" class=" relative z-3"}}</div>{{/if}}
+
+                            <h2 class="text-4xl md:text-7xl font-semibold leading-tight mb-4">
+                                <a href="{{url}}" class="text-white relative z-3">{{title}}</a>
+                            </h2>
+
+                            {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+                            {{> "components/datetime" class="relative z-3 text-white opacity-80 justify-center"}}
+                        </div>
+                    </div>
+
+                    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+                    <a href="{{url}}">{{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}</a>
+                </article>
+            {{/foreach}}
+
+        </div>
+
+        <div class="simply-slider-prev absolute bottom-0 lg:bottom-1/2 right-16 lg:right-auto lg:left-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6 rotate-180 transform"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+
+        <div class="simply-slider-next absolute bottom-0 lg:bottom-1/2 right-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+    </div>
+    {{/if}}
+{{/get}}
+
+<div class="feed-entry-content">
+    <div class="feed-entry-wrap">
+        <div class="row is-gapless">
+            {{#foreach posts}}
+
+            <article class="col s12 m6 l4 relative story-cover min-h-lg">
+
+                {{!-- Featured Media - partials/components/media-cover.hbs --}}
+                <figure class="story-cover-thumbnail overflow-hidden pt-96">
+                    <a href="{{url}}">{{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}</a>
+                </figure>
+
+                <header class="absolute bottom-0 left-0 right-0 text-white px-4 py-10">
+                    {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
+                    {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag" class="relative z-3"}}</div>{{/if}}
+
+                    <h2 class="text-4xl leading-tight mb-4"><a class="relative z-3" href="{{url}}">{{title}}</a></h2>
+
+                    {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+                    {{> "components/author-meta"}}
+                </header>
+
+            </article>
+            {{/foreach}}
+        </div>
+    </div>
+</div>
+
+{{#contentFor "header"}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+<style>
+    .story-cover-thumbnail {padding-top: 90%}
+    .story-cover-thumbnail .simply-cover-gradient {
+        transition: background-color .5s ease-in-out;
+        background-color: transparent;
+        background-image: -webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.9)),color-stop(60%,rgba(255,255,255,0)));
+        background-image: linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(255,255,255,0) 60%)
+        }
+    .story-cover:hover .story-cover-thumbnail .simply-cover-gradient {background-color: rgba(0,0,0,.55)}
+
+    @media only screen and (min-width: 766px) {.story-cover-thumbnail {padding-top: 125%}}
+</style>
+{{/contentFor}}
+
+
+{{#contentFor "scripts"}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script>
+    var slider = tns({
+        container: '.simply-slider',
+        loop: true,
+        mouseDrag: true,
+        items: 1,
+        nav: false,
+        speed: 400,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        prevButton: '.simply-slider-prev',
+        nextButton: '.simply-slider-next',
+        mode: 'gallery'
+    });
+</script>
+{{/contentFor}}

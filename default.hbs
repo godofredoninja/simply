@@ -7,7 +7,7 @@
         ✎ @GodoFredoNinja
         ✈ Lima - Perú
 -->
-<html lang="{{@site.locale}}" class="light">
+<html lang="{{@site.locale}}">
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -40,11 +40,18 @@
 
     {{!-- Ghost outputs important style and meta data with this tag --}}
     {{ghost_head}}
+
+    {{!-- Block for Headers --}}
+    {{{block "header"}}}
 </head>
 <body class="{{block "special_body_class"}}">
     <div class="simply-viewport flexColumnTop">
         {{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
+        {{!-- Header Default --}}
         {{> "layout/header"}}
+
+        {{!-- Header With Drop Down --}}
+        {{!-- {{> "layout/header" hasDropDown=true}} --}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
@@ -80,7 +87,7 @@
     {{ghost_foot}}
 
     {{!-- Notifications ./partials/notifications.hbs --}}
-    {{> "notifications"}}
+    {{!-- {{> "notifications"}} --}}
 
     {{!-- script --}}
     {{{block "scripts"}}}

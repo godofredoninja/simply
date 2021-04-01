@@ -18,7 +18,14 @@
         </div>
 
         {{!-- Navigation --}}
-        {{#if @site.navigation}}{{navigation}}{{/if}}
+        {{!-- Navigation --}}
+        {{#if @site.navigation}}
+            {{#if hasDropDown}}
+                {{navigation navigationDropDown=true}}
+            {{else}}
+                {{navigation}}
+            {{/if}}
+        {{/if}}
 
         <div class="header-right flex-none flex justify-end items-center u-menu-color">
             {{!-- Light and Dark Mode --}}

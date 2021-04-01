@@ -36,6 +36,17 @@ routes:
     template: godo-template-medium
     limit: 14
 
+  /featured-slider/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    template: godo-template-featured-slider
+
+  /photographer/:
+    controller: channel
+    filter: 'tag:-[hash-portfolio,hash-kusi-doc]'
+    template: godo-template-photographer
+    limit: 12
+
   /personal/:
     template: godo-home-personal
     data: page.godo-personal

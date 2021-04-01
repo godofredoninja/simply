@@ -1,25 +1,21 @@
 <article class="story relative mb-5 pb-5 border-b border-gray-100 md:border-0">
     <figure class="story-image relative border border-gray-300 bg-gray-200 block overflow-hidden">
-        <a href="{{url}}" class="block">
             {{#if feature_image}}
-            <img class="story-img absolute u-image block blur-up lazyload"
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
-                data-sizes="auto"
-                alt="{{title}}"
-            />
-            {{!-- <noscript><img class="story-img absolute u-image block" src="{{img_url feature_image size="s"}}"/></noscript> --}}
+            <a href="{{url}}" class="block">
+                <img class="story-img absolute u-image block blur-up lazyload"
+                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                    data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
+                    data-sizes="auto"
+                    alt="{{title}}"
+                />
+                {{!-- <noscript><img class="story-img absolute u-image block" src="{{img_url feature_image size="s"}}"/></noscript> --}}
+            </a>
+            {{else}}
+            <a href="{{url}}" class="block" aria-label="{{title}}"></a>
             {{/if}}
-        </a>
 
-        {{!-- Category --}}
-        {{#if primary_tag}}{{#primary_tag}}
-        <span class="absolute right-0 top-0">
-            <a href="{{url}}" title="{{t "Go to"}} {{name}}"
-                class="button is-x-small is-dark-blue mt-3 mr-3"
-                {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>{{name}}</a>
-        </span>
-        {{/primary_tag}}{{/if}}
+        {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
+        {{#if primary_tag}}<div class="absolute right-0 top-0">{{> "components/primary-tag"}}</div>{{/if}}
     </figure>
 
     <div class="story-body pt-5 flexColumnTop">
@@ -27,9 +23,12 @@
         {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
 
         <h2 class="story-title text-2xl font-sans text-title leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
+
+        {{#if excerpt}}
         <p class="story-excerpt mb-5 text-lg leading-normal text-gray-500">
             <a href="{{url}}" class="block">{{excerpt words="30"}}</a>
         </p>
+        {{/if}}
 
         {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
         {{> "components/author-meta"}}

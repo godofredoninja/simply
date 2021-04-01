@@ -1,3 +1,4 @@
+{{!-- Navigation Secondary for Footer --}}
 {{#if isSecondary}}
 
 <nav class="menu-secondary">
@@ -30,9 +31,9 @@
     {{/foreach}}
 </ul>
 
+{{!-- Primary Navigation --}}
 {{else}}
 
-{{!-- Primary Menu --}}
 <nav class="header-center mainMenu relative flex items-center pr-5 flex-grow overflow-auto lg:overflow-visible">
     <ul itemscope
         itemtype="http://www.schema.org/SiteNavigationElement"
@@ -52,7 +53,8 @@
         </li>
         {{/foreach}}
 
-        {{!-- DropDown Menu  --}}
+        {{!-- Has DropDown Menu --}}
+        {{#if navigationDropDown}}
         <li class="dropdown is-hoverable ml-5 {{^has any="@site.facebook, @site.twitter"}}hidden{{/has}}">
             <a href="#" class="mainMenu-link dropdown-trigger hover:text-primary font-medium">
                 <span>{{t "More"}}</span>
@@ -67,6 +69,8 @@
                 </div>
             </div>
         </li>
+        {{/if}}
+
     </ul>
 </nav>
 

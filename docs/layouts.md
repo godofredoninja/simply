@@ -2,9 +2,52 @@
 
 Simply comes with different header and footer styles.
 
+## Header
+
+Two different styles for Header
+
+### Header Default
+
+The default menu is very beautiful and you don't have to do anything to use it.
+
+![Header default Menu](https://user-images.githubusercontent.com/10253167/113360936-68af2280-9310-11eb-80d1-cea5abf6b54c.jpg)
+
+---
+
+### Header with DropDown Menu
+
+![Header with dropdown](https://user-images.githubusercontent.com/10253167/113361146-ea06b500-9310-11eb-970a-346a7040af5c.jpg)
+
+You can add drop down menu in header and for [Social Media](./settings.md#social-media)
+
+➡️ `Dashboard -> Settings -> Code injection -> Site Footer`
+
+```html
+<script>
+    var menuDropdown = {
+        'Menu 01': 'https://example.com',
+        'Menu 02': 'https://example.com',
+        'Menu 03': 'https://example.com',
+        'Menu 04': 'https://example.com',
+        'Menu 05': 'https://example.com'
+    };
+</script>
+```
+
+Edit the file `default.hbs` and uncomment `{{> "layout/header" hasDropDown=true}}`
+
+``` handlebars
+{{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
+{{!-- Header Default --}}
+{{> "layout/header"}}
+
+{{!-- Header With Drop Down --}}
+{{!-- {{> "layout/header" hasDropDown=true}} --}}
+```
+
 ## Footer
 
-Simply Comes with two page header styles
+Three different styles for Footer
 
 ### Footer Default
 
