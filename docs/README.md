@@ -7,6 +7,7 @@
 - [Membership](./members.md) Support using the new portal feature
 - Support for [different Languages](./languages.md)
 - Light Mode / Dark Mode
+- [Logo Light / Dark Mode](./settings.md#logo-light--dark-mode)
 - [Social accounts link](./settings.md#socialmedia)
 - [Fast search](./settings.md#search/) functionality
 - [Layouts Header](./layouts.md#header)

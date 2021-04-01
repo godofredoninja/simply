@@ -49,6 +49,7 @@
 - [Membership](https://godofredo.ninja/ghost-theme/simply/members) Support using the new portal feature
 - Support for [different Languages](https://godofredo.ninja/ghost-theme/simply/languages)
 - Light Mode / Dark Mode
+- [Logo Light / Dark Mode](https://godofredo.ninja/ghost-theme/simply/settings/#logo-light--dark-mode)
 - [Social accounts link](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
 - [Fast search](https://godofredo.ninja/ghost-theme/simply/settings/#search/) functionality
 - [Layouts Header](https://godofredo.ninja/ghost-theme/simply/layouts/#header)
