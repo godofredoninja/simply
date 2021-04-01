@@ -2,30 +2,9 @@
 
 > You don't have to add all the Simply configurations. only the ones you need
 
-- [Drop down Menu](#drop-down-menu)
 - [Social Media](#social-media)
 - [Search](#search)
 - [Comments](#comments)
-
-## Drop down Menu
-
-You can add drop down menu in header
-
-![DropDown Menu](https://user-images.githubusercontent.com/10253167/105409346-5329c800-5bfe-11eb-9832-46618c3bdd87.jpg)
-
-➡️ `Dashboard -> Code injection -> Site Footer`
-
-```html
-<script>
-    var menuDropdown = {
-        'Menu 01': 'https://example.com',
-        'Menu 02': 'https://example.com',
-        'Menu 03': 'https://example.com',
-        'Menu 04': 'https://example.com',
-        'Menu 05': 'https://example.com'
-    };
-</script>
-```
 
 ## Social Media
 

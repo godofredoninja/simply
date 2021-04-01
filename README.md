@@ -16,7 +16,7 @@
     <a href="https://twitter.com/godofredoninja">Twitter</a>
     <br /><br />
     <a href="https://github.com/TryGhost/Ghost">
-        <img src="https://img.shields.io/badge/Ghost-3.x-brightgreen.svg" alt="Ghost version" />
+        <img src="https://img.shields.io/badge/Ghost-4.x-brightgreen.svg" alt="Ghost version" />
     </a>
     <a href="https://www.paypal.me/godofredoninja">
         <img src="https://img.shields.io/badge/donate-paypal-blue.svg" alt="Donate" />
@@ -42,16 +42,18 @@
 
 &nbsp;
 
-[![Simply free theme for ghost](https://user-images.githubusercontent.com/10253167/103443986-4daa1500-4c32-11eb-941b-45a4cb54e615.jpg)](https://godofredo.ninja/ghost-theme/simply/)
+[![Simply free theme for ghost](https://user-images.githubusercontent.com/10253167/113333274-d6932400-92e7-11eb-8926-9dfed0b1b80e.jpg)](https://godofredo.ninja/ghost-theme/simply/)
 
 ## Featured
 
 - [Membership](https://godofredo.ninja/ghost-theme/simply/members) Support using the new portal feature
 - Support for [different Languages](https://godofredo.ninja/ghost-theme/simply/languages)
 - Light Mode / Dark Mode
-- [Drop Down Menu](https://godofredo.ninja/ghost-theme/simply/settings/#dropdownmenu)
 - [Social accounts link](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
 - [Fast search](https://godofredo.ninja/ghost-theme/simply/settings/#search/) functionality
+- [Layouts Header](https://godofredo.ninja/ghost-theme/simply/layouts/#header)
+  - Header Defautl
+  - [Header with DropDown Menu](https://godofredo.ninja/ghost-theme/simply/layouts/#header-with-dropdown-menu)
 - [Layouts Footer](https://godofredo.ninja/ghost-theme/simply/layouts/#footer)
   - Footer Default
   - Footer Dark
@@ -68,6 +70,9 @@
   - [Grid](https://godofredo.ninja/ghost-theme/simply/home/#grid)
   - [Personal](https://godofredo.ninja/ghost-theme/simply/home/#personal)
   - [Archive](https://godofredo.ninja/ghost-theme/simply/home/#archivepage)
+  - [Featured with Slider](https://godofredo.ninja/ghost-theme/simply/home/#featured-with-slider)
+  - [Medium with Sidebar](https://godofredo.ninja/ghost-theme/simply/home/#medium-with-sidebar)
+  - [Photographer](https://godofredo.ninja/ghost-theme/simply/home/#photographer)
 - Post Format
   - [Post Default](https://godofredo.ninja/ghost-theme/simply/post-format/#post-default)
   - [Post Full](https://godofredo.ninja/ghost-theme/simply/post-format/#post-full)
@@ -146,6 +151,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [Inter Font Family](https://github.com/rsms/inter/)
 - [PT Serif Font Family](https://fonts.google.com/specimen/PT+Serif)
 - [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
+- [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)
 
 ## Copyright & License
 

@@ -4,51 +4,56 @@
 
 ## General features
 
-- [Membership](https://github.com/godofredoninja/simply/blob/master/docs/members.md) Support using the new portal feature
-- Support for [different Languages](https://github.com/godofredoninja/simply/blob/master/docs/languages.md)
+- [Membership](./members.md) Support using the new portal feature
+- Support for [different Languages](./languages.md)
 - Light Mode / Dark Mode
-- [Drop Down Menu](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#dropdownmenu)
-- [Social accounts link](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#socialmedia)
-- [Fast search](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#search/) functionality
-- [Layouts Footer](https://github.com/godofredoninja/simply/blob/master/docs/layouts.md#footer)
+- [Social accounts link](./settings.md#socialmedia)
+- [Fast search](./settings.md#search/) functionality
+- [Layouts Header](./layouts.md#header)
+  - Header Defautl
+  - [Header with DropDown Menu](./settings.md#dropdownmenu)
+- [Layouts Footer](./layouts.md#footer)
   - Footer Default
   - Footer Dark
   - Footer Not Menu Secondary
 - Comments
-  - [Disqus Comments](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#disquscomments)
-  - [Facebook Comments](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#facebookcomments)
-  - [Hyvor Talk Comments](https://github.com/godofredoninja/simply/blob/master/docs/settings.md#hyvortalk)
+  - [Disqus Comments](./settings.md#disquscomments)
+  - [Facebook Comments](./settings.md#facebookcomments)
+  - [Hyvor Talk Comments](./settings.md#hyvortalk)
 - Home Page
-  - [Default](https://github.com/godofredoninja/simply/blob/master/docs/home.md#default)
-  - [Featured](https://github.com/godofredoninja/simply/blob/master/docs/home.md#featured)
-  - [Medium](https://github.com/godofredoninja/simply/blob/master/docs/home.md#medium)
-  - [Sidebar](https://github.com/godofredoninja/simply/blob/master/docs/home.md#sidebar)
-  - [Grid](https://github.com/godofredoninja/simply/blob/master/docs/home.md#grid)
-  - [Personal](https://github.com/godofredoninja/simply/blob/master/docs/home.md#personal)
-  - [Archive](https://github.com/godofredoninja/simply/blob/master/docs/home.md#archivepage)
+  - [Default](./home.md#default)
+  - [Featured](./home.md#featured)
+  - [Medium](./home.md#medium)
+  - [Sidebar](./home.md#sidebar)
+  - [Grid](./home.md#grid)
+  - [Personal](./home.md#personal)
+  - [Archive](./home.md#archivepage)
+  - [Featured with Slider](./home.md#featured-with-slider)
+  - [Medium with Sidebar](./home.md#medium-with-sidebar)
+  - [Photographer](./home.md#photographer)
 - Post Format
-  - [Post Default](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-default)
-  - [Post Full](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-full)
-  - [Post Wide](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-wide)
-  - [Post Header Image](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-header-image)
-  - [Post Image](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-image)
-  - [Post Image Right](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-image-right)
-  - [Post Sidebar](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-sidebar)
-  - [Post not Image](https://github.com/godofredoninja/simply/blob/master/docs/post-format.md#post-not-image)
+  - [Post Default](./post-format.md#post-default)
+  - [Post Full](./post-format.md#post-full)
+  - [Post Wide](./post-format.md#post-wide)
+  - [Post Header Image](./post-format.md#post-header-image)
+  - [Post Image](./post-format.md#post-image)
+  - [Post Image Right](./post-format.md#post-image-right)
+  - [Post Sidebar](./post-format.md#post-sidebar)
+  - [Post not Image](./post-format.md#post-not-image)
 - Page
-  - [Contact](https://github.com/godofredoninja/simply/blob/master/docs/contact-page.md)
+  - [Contact](./contact-page.md)
   - 404
 - Archive
-  - [Authors Page](https://github.com/godofredoninja/simply/blob/master/docs/authors-and-tags-page.md#authors-page)
-  - [Tags Page](https://github.com/godofredoninja/simply/blob/master/docs/authors-and-tags-page.md#tags-page)
-- [Podcasts Page](https://github.com/godofredoninja/simply/blob/master/docs/podcasts-page.md)
-- [Portfolio Page](https://github.com/godofredoninja/simply/blob/master/docs/portfolio-page.md)
-- [Kusi Doc](https://github.com/godofredoninja/simply/blob/master/docs/kusi-doc.md) for the documentation of your project
+  - [Authors Page](./authors-and-tags-page.md#authors-page)
+  - [Tags Page](./authors-and-tags-page.md#tags-page)
+- [Podcasts Page](./podcasts-page.md)
+- [Portfolio Page](./portfolio-page.md)
+- [Kusi Doc](./kusi-doc.md) for the documentation of your project
 - [AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost) Template
 - Related Articles
 - Social share buttons support for posts
 - Previous and next Post
-- Tracking [Google Tag Manager](https://github.com/godofredoninja/simply/blob/master/docs/tracking-google-tag-manager.md)
+- Tracking [Google Tag Manager](./tracking-google-tag-manager.md)
 - Pagination Infinite Scroll
 - Video Responsive
   - YouTube
