@@ -49,12 +49,12 @@
 - [Membership](https://godofredo.ninja/ghost-theme/simply/members) Support using the new portal feature
 - Support for [different Languages](https://godofredo.ninja/ghost-theme/simply/languages)
 - Light Mode / Dark Mode
-- [Logo Light / Dark Mode](https://godofredo.ninja/ghost-theme/simply/settings/#logo-light--dark-mode)
+- [Logo Light / Dark Mode](https://godofredo.ninja/ghost-theme/simply/settings/#logolightdarkmode)
 - [Social accounts link](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
 - [Fast search](https://godofredo.ninja/ghost-theme/simply/settings/#search/) functionality
 - [Layouts Header](https://godofredo.ninja/ghost-theme/simply/layouts/#header)
   - Header Defautl
-  - [Header with DropDown Menu](https://godofredo.ninja/ghost-theme/simply/layouts/#header-with-dropdown-menu)
+  - [Header with DropDown Menu](https://godofredo.ninja/ghost-theme/simply/layouts/#headerdefault)
 - [Layouts Footer](https://godofredo.ninja/ghost-theme/simply/layouts/#footer)
   - Footer Default
   - Footer Dark
