@@ -143,12 +143,13 @@ module.exports = {
     //
     gridColumn: false,
     gridColumnStart: false,
-    gridColumnEnd: false,
+    gridColumnEnd: false
   },
   future: {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
+  mode: 'jit',
   purge: {
     content: [
       '../**/*.hbs',
