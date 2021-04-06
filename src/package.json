@@ -20,9 +20,9 @@
     "scan": "gscan ../"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
+    "@babel/core": "^7.13.14",
     "@babel/plugin-transform-runtime": "^7.13.10",
-    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
     "@babel/runtime": "^7.13.10",
     "autoprefixer": "^10.2.5",
     "babelify": "^10.0.0",
@@ -46,7 +46,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.1.0",
     "merge-stream": "^2.0.0",
-    "postcss": "^8.2.8",
+    "postcss": "^8.2.9",
     "postcss-discard-comments": "^4.0.2",
     "pump": "^3.0.0",
     "standard": "^16.0.3",
@@ -57,10 +57,10 @@
   },
   "dependencies": {
     "fuzzysort": "^1.1.4",
-    "lazysizes": "^5.3.0",
+    "lazysizes": "^5.3.2",
     "medium-zoom": "^1.0.6",
     "normalize.css": "^8.0.1",
     "prismjs": "^1.23.0",
-    "tailwindcss": "^2.0.3"
+    "tailwindcss": "^2.1.1"
   }
 }
