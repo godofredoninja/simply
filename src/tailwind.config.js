@@ -149,7 +149,7 @@ module.exports = {
     removeDeprecatedGapUtilities: true,
     purgeLayersByDefault: true
   },
-  mode: 'jit',
+  // mode: 'jit',
   purge: {
     content: [
       '../**/*.hbs',
