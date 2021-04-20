@@ -33,7 +33,12 @@
                     <div id="post-body" class="post-body has-sidebar relative">{{content}}</div>
 
                     {{!-- Tags - ./partials/components/tags,hbs --}}
-                    <footer class="post-footer px-4 mx-auto max-w-740 pt-10">{{> "components/tags"}}</footer>
+                    <footer class="post-footer px-4 mx-auto max-w-740 pt-10">
+                        {{> "components/tags"}}
+
+                        {{!-- Social Share - ./partials/components/social-share --}}
+                        {{> "components/social-share" Tracking_name="Footer" class="block"}}
+                    </footer>
                 </article>
             </div>
 
