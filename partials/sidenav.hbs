@@ -1,18 +1,23 @@
-<div class="nav-mob fixed inset-0 pt-16 pb-5 bg-header h-screen z-10 w-full text-center lg:hidden">
-    <div class="nav-mob-wrap absolute inset-0 top-16 py-5 overflow-auto flex justify-between flex-col">
+<div class="nav-mob fixed inset-0 pt-16 bg-header h-screen z-10 w-full text-center overflow-y-auto lg:hidden">
+    <div class="nav-mob-wrap absolute inset-0 top-16 pt-5 flex flex-col">
 
-        <div class="py-4 flex justify-center md:hidden buttons">
-            {{!-- Light and Dark Mode --}}
+        {{#unless @member}}
+        <div class="py-4 flex justify-center md:hidden">
+            <a data-portal="signin" class="button mr-2 is-black text-sm font-medium" href="#">{{t "Log in"}}</a>
+            <a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>
+        </div>
+        {{/unless}}
+
+        {{!-- Light and Dark Mode --}}
+        <div class="py-4 justify-center">
             <a role="button" class="js-dark-mode button is-white" aria-label="Dark and Light Mode">
-                    <svg class="icon icon--moon m-0" style="margin-right:calc(-0.5em - 1px)"><use xlink:href="#icon-moon"></use></svg>
-                    <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
-                </a>
-
-           {{#unless @member}}<a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>{{/unless}}
+                <svg class="icon icon--moon m-0" style="margin-right:calc(-0.5em - 1px)"><use xlink:href="#icon-moon"></use></svg>
+                <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
+            </a>
         </div>
 
         {{!-- Navigation for Mobile --}}
-        {{#if @site.navigation}}<div class="py-4">{{navigation navigationMobile=true}}</div>{{/if}}
+        {{#if @site.navigation}}<div class="py-4 flex-auto">{{navigation navigationMobile=true}}</div>{{/if}}
 
         {{!-- Social Media - partilas/widget/social-media.hbs --}}
         {{> "widget/social-media" class="nav-mob-social-media social-media is-inline py-4"}}
