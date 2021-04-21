@@ -1,25 +1,21 @@
-<header class="header u-bgColor u-flexCenter u-container">
-    <div class="u-flex1">
+<header class="header h-16 flex items-center container justify-between">
+    {{!--
+        - Active Logo in AMP Page
+        - uncomment the lines below.
+        - but in the width and height properties (width="110" height="30")
+        - you have to add exact sizes of your reduced logo
+        - so you do not have problems with amp
 
-        {{!--
-            - Active Logo in AMP Page
-            - uncomment the lines below.
-            - but in the width and height properties (width="110" height="30")
-            - you have to add exact sizes of your reduced logo
-            - so you do not have problems with amp
+        - then comment page name
+    --}}
 
-            - then comment page name
-        --}}
+    {{!-- <a href="{{@site.url}}">
+        <amp-img src="{{@site.logo}}" width="110" height="30" alt="{{@site.title}}"></amp-img>
+    </a> --}}
 
-        {{!-- <a href="{{@site.url}}">
-            <amp-img src="{{@site.logo}}" width="110" height="30" alt="{{@site.title}}"></amp-img>
-        </a> --}}
-
-        {{!-- Name Page --}}
-        <a href="{{@site.url}}" class="logo-link">{{@site.title}}</a>
-    </div>
+    {{!-- Site Title --}}
+    <a href="{{@site.url}}" class="logo-link">{{@site.title}}</a>
 
     {{!-- Open Sidenav --}}
-    <button class="hamburgermenu" on="tap:sidenav.open" tabindex="0" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
-
+    <button class="hamburgermenu text-gray-500" on="tap:sidenav.open" tabindex="0" aria-label="Toggle Menu"><span></span><span></span><span></span></button>
 </header>

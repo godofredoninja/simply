@@ -6,13 +6,15 @@ $primary-font: Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, 
 // font for content
 $secondary-font: charter, Georgia, Cambria, 'Times New Roman', Times, serif
 
-$header-height: 50px
+$header-height: 4rem
 
 $primary-color: #292929
 $secondary-color: #757575
 $complementary-color: #005af0
-$title-color: #111
-$sidenar-link-color: #48525c
+$title-color: #18181b
+$sidenar-link-color: #292929
+
+$text-gray-500: #757575
 
 // .u-bgColor { background-color: $primary-color }
 
@@ -24,43 +26,7 @@ $sidenar-link-color: #48525c
 %secondary-font
   font-family: $secondary-font
 
-// 02. Utilities
-// -----------------------------------------------------------------------------
-.u-flexCenter
-  align-items: center
-  display: flex
-
-.u-block
-  display: block
-
-.u-relative
-  position: relative
-
-.u-overflowHidden
-  overflow: hidden
-
-.u-fontSizeSmaller
-  font-size: 0.875rem
-
-.u-flex1
-  flex: 1 1 auto
-
-.u-absolute
-  position: absolute
-
-.u-textCenter
-  text-align: center
-
-.u-marginTop30
-  margin-top: 2rem
-
-.u-container
-  margin-left: auto
-  margin-right: auto
-  padding-left: 1rem
-  padding-right: 1rem
-
-// 03. Global
+// 01. Global
 // -----------------------------------------------------------------------------
 
 *, *::before, *::after
@@ -75,7 +41,7 @@ body
   font-style: normal
   font-weight: 400
   letter-spacing: 0
-  line-height: 1.5em
+  line-height: 1.5
   text-rendering: optimizeLegibility
   text-size-adjust: 100%
 
@@ -126,12 +92,12 @@ h1, h2, h3, h4, h5, h6
   color: $title-color
   font-style: normal
   font-weight: 700
-  line-height: 1.2
+  line-height: 1.25
   margin: 1.5rem 0 0
   word-break: break-word
 
 h1
-  font-size: 2rem
+  font-size: 2.25rem
 
 h2
   font-size: 1.75rem
@@ -163,14 +129,14 @@ hr
   margin: 1rem 0
   overflow: visible
   border: 0
-  border-top: 1px solid rgba(0, 0, 0, 0.1)
+  border-top: 1px solid #e2ecec
 
 mark
   background-color: transparent
   background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1))
   color: rgba(0, 0, 0, 0.8)
 
-// 07. Code and pre
+// 02. Code and pre
 // -----------------------------------------------------------------------------
 
 // colors
@@ -187,11 +153,11 @@ pre
   word-spacing: normal
   word-wrap: normal
 
-code
-  background: $darkgrey
+\:not(pre) > code
+  background: $whitegrey
   border-radius: 2px
-  color: $whitegrey
-  font-size: 0.875rem
+  color: $darkgrey
+  font-size: 1rem
   padding: 1px 6px
 
 pre
@@ -203,12 +169,13 @@ pre
   margin: 0
   overflow-x: auto
   padding: 1.25rem
+  border-radius: 8px
 
   code
     background: transparent
     padding: 0
 
-// 08. Svg
+// 03. Svg
 // -----------------------------------------------------------------------------
 
 svg
@@ -218,7 +185,7 @@ svg
 svg:not(:root)
   overflow: hidden
 
-// 09. Table
+// 04. Table
 // -----------------------------------------------------------------------------
 table
   border-collapse: collapse
@@ -248,43 +215,35 @@ table
     letter-spacing: 0.2px
     text-transform: uppercase
 
-// 10. Header
+// 05. Utilities
+// -----------------------------------------------------------------------------
+
+@import amp/utilities
+
+
+// 06. Header
 // -----------------------------------------------------------------------------
 
 .header
-  position: relative
-  width: 100%
-  height: $header-height
-  line-height: 1
-
-// .blog-title {
-//   height: 50px;
-//   line-height: 0;
-// }
+  box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07)
 
 .logo-link
-  color: #fff
-  font-size: 1.5rem
+  color: #000
+  font-size: 1.75rem
   font-weight: 700
 
-// 11. Social Media
+// 07. Social Media
 // -----------------------------------------------------------------------------
 .social-media
   a
-    background: #D4D4D8
-    border-radius: 4px
     display: inline-block
     height: 2.5rem
-    margin: 0.5rem 0.25rem
+    margin: 0.5rem 0
     padding: 0.5rem
     vertical-align: middle
     width: 2.5rem
 
-  // svg
-  //   fill: #fff
-  //   stroke: none
-
-// 12. Sidebar or Sidenav
+// 07. Sidebar or Sidenav
 // -----------------------------------------------------------------------------
 
 .sidebar
@@ -304,17 +263,11 @@ table
     font-weight: 500
     padding: 0.5rem 1.25rem
 
-  .social-media
-    border-top: 1px solid #ddd
-    padding: 1.25rem
-
 .close-sidebar
-  color: #fff
   font-size: 1.5rem
-  height: $header-height
-  line-height: $header-height
-  padding-right: 1.25rem
-  text-align: right
+  // height: $header-height
+  // line-height: $header-height
+  outline: none
 
 // Btn menu
 .hamburgermenu
@@ -326,9 +279,10 @@ table
   position: relative
   transition: transform .4s
   width: 3rem
+  outline: none
 
   span
-    background-color: #fff
+    background-color: currentColor
     display: block
     height: 2px
     left: 0.875rem
@@ -343,42 +297,20 @@ table
     &:last-child
       transform: translate(0, 6px)
 
-//  13. Content Main
+//  08. Content Main
 // -----------------------------------------------------------------------------
 
 .main
   margin: 0 auto
   max-width: 32rem
 
-// 14. Article
+// 09. Article
 // -----------------------------------------------------------------------------
-
-.article
-  padding-top: 1.5rem
-
-  &-title
-    margin-top: 0
-
-  &-excerpt
-    @extend %secondary-font
-
-    color: $secondary-color
-    font-size: 1.25rem
-    line-height: 1.4
-    margin-bottom: 1.25rem
-    margin-top: 1rem
-
-.article-meta
-  color: $secondary-color
-  font-size: 0.875rem
-  font-weight: 500
-  margin: 0.875rem 0
 
 .article-body
   font-family: $secondary-font
   font-size: 1.125rem
   line-height: 1.7em
-  padding: 1.25rem 1rem
 
   > *
     margin-bottom: 1.5rem
@@ -394,28 +326,21 @@ table
     li
       margin-bottom: 5px
 
-// 15. Buttons for Tag
+// 10. Buttons for Tag
 // -----------------------------------------------------------------------------
 
-.button--tags
+.button-tags
   background-color: $complementary-color
   border-radius: 1.5625rem
   border: 0
   color: #fff
   display: inline-block
-  font-size: .875rem
-  font-weight: 500
   margin: 0.3125rem
   padding: 0.3125rem 1.25rem
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .15)
 
-// 16. Share
+// 11. Share
 // -----------------------------------------------------------------------------
-
-.share-title
-  display: block
-  font-size: 0.875rem
-  margin-bottom: 0.75rem
 
 // stylelint-disable
 amp-social-share.custom-style
@@ -431,50 +356,28 @@ amp-social-share.rounded
 
 // stylelint-enable
 
-// 17. Related Article
+// 12. Related Article
 // -----------------------------------------------------------------------------
-
-.related
-  margin-top: 1.25rem
-  padding-bottom: 1.25rem
-  padding-top: 2.5rem
-  // background: #efefef
-
-  &-title
-    font-size: 0.875rem
-    margin-bottom: 1.375rem
 
 .story
   &-link
-    display: flex
-    align-items: center
-    text-decoration: none
-    padding: 0 0 1.5em
-    margin: 0
-
     &-text
       font-size: 1rem
       font-weight: 700
-      color: #000
-      padding-left: 10px
-      line-height: 1.3
+      color: $title-color
 
     &-icon
       background-color: $complementary-color
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25)
-      display: flex
-      flex: none
       height: 2.5rem
-      justify-content: center
-      margin-right: .625em
-      padding: 0.5rem
+      text-align: center
       width: 2.5rem
       color: #fff
       font-size: 1.5rem
       font-weight: 500
 
 
-// 18. Bookmark card
+// 13. Bookmark card
 // -----------------------------------------------------------------------------
 
 .kg-bookmark
@@ -513,13 +416,26 @@ amp-social-share.rounded
     content: '•'
     margin: 0 6px
 
-// 19. Footer
-// -----------------------------------------------------------------------------
+// 14. warning success and Note
+// --------------------------------------------------
 
-.footer
-  // background-color: #efefef
-  color: $secondary-color
-  font-size: 0.875rem
-  font-weight: 500
-  padding-bottom: 2.875rem
-  padding-top: 1.25rem
+.is-warning
+  background: #fce8e6
+  color: #d50000
+
+.is-note
+  background: #e1f5fe
+  color: #01579b
+
+.is-success
+  background: #e0f2f1
+  color: #00796b
+
+.is-warning,
+.is-note,
+.is-success
+  // font-size: 1.125rem !important
+  border-left: .25rem solid currentColor
+  border-radius: 0.25rem
+  letter-spacing: 0.01em
+  padding: .75rem 1.25rem

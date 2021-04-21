@@ -1,13 +1,16 @@
-<amp-sidebar id="sidenav" class="sidebar" layout="nodisplay" side="right">
-    <div class="close-sidebar u-bgColor" role="button" aria-label="close sidebar" on="tap:sidenav.close" tabindex="0">✕</div>
+<amp-sidebar id="sidenav" class="sidebar flex flex-col" layout="nodisplay" side="right">
+    <div class="sidebar-header h-16 flex justify-between items-center px-4 text-gray-500">
+        <div class="text-lg">{{t "Menu"}}</div>
+        <div class="close-sidebar" role="button" aria-label="close sidebar" on="tap:sidenav.close" tabindex="0">✕</div>
+    </div>
 
     {{!-- Navigation --}}
-    {{#if @site.navigation}}
-        {{navigation navigationMobile=true}}
-    {{/if}}
+    <div class="flex-auto">
+        {{#if @site.navigation}}{{navigation navigationMobile=true}}{{/if}}
+    </div>
 
     {{!-- Social media --}}
-    <div class="social-media">
+    <div class="social-media px-4">
         {{#if @site.facebook}}
             <a href="{{facebook_url}}" target="_blank" rel="noopener noreferrer">{{> "amp/icon-facebook"}}</a>
         {{/if}}
