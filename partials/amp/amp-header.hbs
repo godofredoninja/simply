@@ -13,8 +13,13 @@
         <amp-img src="{{@site.logo}}" width="110" height="30" alt="{{@site.title}}"></amp-img>
     </a> --}}
 
-    {{!-- Site Title --}}
-    <a href="{{@site.url}}" class="logo-link">{{@site.title}}</a>
+    <a href="{{@site.url}}" class="logo-link">
+        {{#if @site.icon}}
+            <amp-img class="site-icon" src="{{img_url @site.icon size="s" absolute="true"}}" width="35" height="35" layout="fixed" alt="{{@site.title}}"></amp-img>
+        {{else}}
+            {{@site.title}}
+        {{/if}}
+    </a>
 
     {{!-- Open Sidenav --}}
     <button class="hamburgermenu text-gray-500" on="tap:sidenav.open" tabindex="0" aria-label="Toggle Menu"><span></span><span></span><span></span></button>

@@ -21,7 +21,7 @@
             </div>
 
             <div class="flex-auto">
-                <div class="text-sm font-medium"><a href="{{url}}">{{name}}</a></div>
+                <div class="text-sm font-medium"><a href="{{url}}" class="text-gray-800">{{name}}</a></div>
             {{/primary_author}}
                 <div class="flex items-center text-gray-500 text-sm">
                     <time class="capitalize" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>
@@ -34,7 +34,7 @@
 
     {{#if feature_image}}
     <figure class="article-image pt-8">
-        <amp-img src="{{img_url feature_image size="s" absolute="true"}}" width="600" height="350" layout="responsive" alt="{{title}}"></amp-img>
+        <amp-img src="{{img_url feature_image size="m" absolute="true"}}" width="600" height="350" layout="responsive" alt="{{title}}"></amp-img>
     </figure>
     {{/if}}
 
