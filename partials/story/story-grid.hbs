@@ -4,7 +4,10 @@
             <a href="{{url}}" class="block">
                 <img class="story-img absolute u-image block blur-up lazyload"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
+                    data-srcset="{{img_url feature_image size="xs"}} 100w,
+                        {{img_url feature_image size="s"}} 300w,
+                        {{img_url feature_image size="m"}} 600w,
+                        {{img_url feature_image size="l"}} 1000w"
                     data-sizes="auto"
                     alt="{{title}}"
                 />
@@ -22,7 +25,7 @@
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
         {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
 
-        <h2 class="story-title text-2xl font-sans text-title leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
+        <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
         {{#if excerpt}}
         <p class="story-excerpt mb-5 text-lg leading-normal text-gray-500">

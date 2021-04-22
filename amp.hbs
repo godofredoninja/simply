@@ -10,16 +10,13 @@
 
     {{amp_ghost_head}}
 
-    {{!-- Google Fonst --}}
-    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet"> --}}
-
     {{!-- Only For dev --}}
     {{!-- <link rel="stylesheet" type="text/css" href="{{asset "styles/amp.css"}}"/>
-    <style>.u-bgColor{background-color:#18181B}</style> --}}
+    <style>{{amp_style}}</style> --}}
 
     {{!-- Style Custom --}}
-    <style amp-custom>.u-bgColor{background-color:#18181B}{{> "amp/amp-styles"}}</style>
+    <style amp-custom>{{> "amp/amp-styles"}}{{amp_style}}</style>
+    {{!-- <style amp-custom>:root {--ghost-accent-color:#005af0}{{> "amp/amp-styles"}}</style> --}}
 
     {{!-- The AMP boilerplate --}}
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -28,6 +25,8 @@
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
 
     {{amp_components}}
+
+    {{#post}}{{#if feature_image}}<link rel="preload" href="{{img_url feature_image size="m" absolute="true"}}" as="image">{{/if}}{{/post}}
 </head>
 <body class="amp-template">
     {{!-- Header --}}
@@ -47,11 +46,13 @@
     {{> "amp/amp-sidebar"}}
 
     {{!-- Footer copyright --}}
-    <footer class="footer">
-        <section class="u-container copyright u-textCenter">
+    <footer class="footer text-gray-500 text-sm pt-8 pb-8">
+        <section class="container copyright text-center font-medium">
             &copy; {{date format="YYYY"}} <a href="{{@site.url}}">{{@site.title}}</a>
-            Design with ♥ by <a href="https://godofredo.ninja" title="Developer Web FullStack.">GodoFredo</a>
+            Design with ♥ by <a href="https://godofredo.ninja" aria-label="Design with love by GodoFredo">GodoFredo</a>
         </section>
     </footer>
+
+    {{amp_analytics}}
 </body>
 </html>

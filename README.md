@@ -130,6 +130,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [CMS Critic](http://www.cmscritic.com/) :star: :star: :star: :star:
 - [A Boundless World](https://www.aboundlessworld.com/) :star: :star:
 - [Dana Ross](https://vaalin.com/)
+- [Kip Ivan](https://github.com/Ingles-con-Kip)
 - Greg Rapp
 - Yannick Kordel
 - Bruno Brito Semedo

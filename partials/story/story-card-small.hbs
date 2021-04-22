@@ -5,11 +5,13 @@
     data-event-non-interaction="true"{{/is}}>
 
     {{#if feature_image}}
-    <a href="{{url}}" class="storySmall-img-link h-40 relative overflow-hidden w-full block">
-        <img class="storySmall-img absolute u-image block blur-up lazyload"
+    <a href="{{url}}" class="storySmall-img-link">
+        <img class="storySmall-img object-cover w-full h-40 blur-up lazyload"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
+            data-srcset="{{img_url feature_image size="xs"}} 100w,{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
             data-sizes="auto"
+            width="350"
+            height="160"
             alt="{{title}}"
         />
     </a>
