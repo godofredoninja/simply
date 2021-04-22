@@ -5,7 +5,7 @@
 
 {{#post}}
 <div class="simply-hero-cover u-primaryGradient overflow-hidden pt-16">
-    <div class="mx-auto container relative py-vw4 flex justify-between flex-col items-center md:flex-row md:px-5 min-h-lg">
+    <div class="mx-auto container py-12 relative flex justify-between flex-col items-center md:flex-row md:py-vw4 md:px-5">
         <div class="text-white md:pr-5 flex-none text-center md:text-left md:max-w-md lg:max-w-xl">
             <h1 class="text-5xl pt-5 font-serif lg:text-6xl">{{title}}</h1>
             {{#if custom_excerpt}}<p class="mt-6 text-22">{{custom_excerpt}}</p>{{/if}}
@@ -13,8 +13,8 @@
         </div>
 
         {{#if feature_image}}
-        <figure class="relative max-w-lg w-full mt-10 md:mt-0" style="max-height: 25rem">
-            <img class="blur-up lazyload object-cover w-full animated bounceIn"
+        <figure class="relative max-w-lg w-full mt-10 hidden md:flex md:mt-0">
+            <img class="blur-up lazyload object-cover object-center w-full max-h-96 animated bounceIn"
                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
@@ -22,7 +22,7 @@
                         {{img_url feature_image size="xl"}} 2000w"
                 data-sizes="auto"
                 width="512"
-                height="300"
+                height="384"
                 alt="{{title}}" />
         </figure>
         {{/if}}
