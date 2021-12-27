@@ -91,14 +91,14 @@ $button-active-border-color: $gray-800
       height: 1.5em
       width: 1.5em
     &:first-child:not(:last-child)
-      +ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}), false)
-      +ltr-property("margin", $button-padding-horizontal / 4)
+      +ltr-property("margin", calc(#{-1 * 0.5 * $button-padding-horizontal} - #{$button-border-width}), false)
+      +ltr-property("margin", $button-padding-horizontal * 0.25)
     &:last-child:not(:first-child)
-      +ltr-property("margin", $button-padding-horizontal / 4, false)
-      +ltr-property("margin", calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width}))
+      +ltr-property("margin", $button-padding-horizontal * 0.25, false)
+      +ltr-property("margin", calc(#{-1 * 0.5 * $button-padding-horizontal} - #{$button-border-width}))
     &:first-child:last-child
-      margin-left: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
-      margin-right: calc(#{-1 / 2 * $button-padding-horizontal} - #{$button-border-width})
+      margin-left: calc(#{-1 * 0.5 * $button-padding-horizontal} - #{$button-border-width})
+      margin-right: calc(#{-1 * 0.5 * $button-padding-horizontal} - #{$button-border-width})
 
   &.is-primary
       background-color: var(--ghost-accent-color)
@@ -181,7 +181,7 @@ $button-active-border-color: $gray-800
   .button
     margin-bottom: 0.5rem
     &:not(:last-child)
-      margin-right: .5rem;
+      margin-right: .5rem
   &:last-child
     margin-bottom: -0.5rem
   &:not(:last-child)

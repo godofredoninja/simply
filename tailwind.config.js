@@ -152,8 +152,9 @@ module.exports = {
   // mode: 'jit',
   purge: {
     content: [
-      '../**/*.hbs',
-      './js/**/*.js'
+      './*.hbs',
+      './partials/**/*.hbs',
+      './src/js/**/*.js'
     ],
     options: {
       safelist: ['hover:text-youtube', 'hover:text-instagram']

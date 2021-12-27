@@ -2,7 +2,7 @@
   "name": "simply",
   "description": "simply theme for ghost by @GodoFredoNinja",
   "demo": "https://godofredo.ninja",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "engines": {
     "ghost": ">=4.0.0",
     "ghost-api": "v4"
@@ -60,5 +60,66 @@
         "width": 2000
       }
     }
+  },
+  "browserslist": [
+    "defaults"
+  ],
+  "cssnano": {
+    "preset": "advanced"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "prod": "cross-env NODE_ENV=production gulp production --production",
+    "dev": "gulp development",
+    "lint:js": "standard src/js/**/*.js gulpfile.js",
+    "lint:sass": "stylelint src/sass/**/*.sass",
+    "lint": "yarn lint:js && yarn lint:sass",
+    "test": "yarn lint && gscan .",
+    "scan": "gscan ../"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@babel/plugin-transform-runtime": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/runtime": "^7.13.10",
+    "autoprefixer": "^10.2.5",
+    "babelify": "^10.0.0",
+    "beeper": "^2.1.0",
+    "browserify": "^17.0.0",
+    "cross-env": "^7.0.3",
+    "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
+    "del": "^6.0.0",
+    "gscan": "^4.0.1",
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-if": "^3.0.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-strip-comments": "^2.5.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-zip": "^5.1.0",
+    "merge-stream": "^2.0.0",
+    "postcss": "^8.2.9",
+    "postcss-discard-comments": "^4.0.2",
+    "pump": "^3.0.0",
+    "sass": "^1.45.1",
+    "standard": "^16.0.3",
+    "stylelint": "^13.12.0",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "fuzzysort": "^1.1.4",
+    "lazysizes": "^5.3.2",
+    "medium-zoom": "^1.0.6",
+    "normalize.css": "^8.0.1",
+    "prismjs": "^1.23.0",
+    "tailwindcss": "^2.1.1"
   }
 }

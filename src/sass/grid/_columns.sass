@@ -1,3 +1,5 @@
+@use "sass:math"
+
 $i: 1
 
 .row
@@ -23,7 +25,7 @@ $i: 1
     padding-right: $gutter-width
 
     @while $i <= $num-cols
-      $perc: unquote((100 / ($num-cols / $i)) + '%')
+      $perc: unquote(math.div(100, math.div($num-cols, $i)) + '%')
 
       &.s#{$i}
         flex: 0 0 $perc
@@ -35,7 +37,7 @@ $i: 1
       $i: 1
 
       @while $i <= $num-cols
-        $perc: unquote((100 / ($num-cols / $i)) + '%')
+        $perc: unquote(math.div(100, math.div($num-cols, $i)) + '%')
 
         &.m#{$i}
           flex: 0 0 $perc
@@ -47,7 +49,7 @@ $i: 1
       $i: 1
 
       @while $i <= $num-cols
-        $perc: unquote((100 / ($num-cols / $i)) + '%')
+        $perc: unquote(math.div(100, math.div($num-cols, $i)) + '%')
 
         &.l#{$i}
           flex: 0 0 $perc
