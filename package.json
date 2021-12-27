@@ -79,6 +79,15 @@
           "No Secondary Navigation"
         ],
         "default": "default"
+      },
+      "color_scheme": {
+        "type": "select",
+        "options": [
+          "Light",
+          "Dark",
+          "Auto"
+        ],
+        "default": "Auto"
       }
     }
   },

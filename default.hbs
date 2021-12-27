@@ -7,7 +7,7 @@
         ✎ @GodoFredoNinja
         ✈ Lima - Perú
 -->
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark"{{/match}}>
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -21,11 +21,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
+    {{#match @custom.color_scheme "Auto"}}
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.querySelector('html').classList.add('dark');
         } else {
             document.querySelector('html').classList.remove('dark');
         }
+    {{else}}
+        if (localStorage.theme === 'dark') {
+            document.querySelector('html').classList.add('dark');
+        } else if (localStorage.theme === 'light') {
+            document.querySelector('html').classList.remove('dark');
+        }
+    {{/match}}
     </script>
 
     {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
