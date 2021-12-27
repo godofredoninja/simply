@@ -59,6 +59,27 @@
       "xl": {
         "width": 2000
       }
+    },
+    "card_assets": true,
+    "custom": {
+      "header": {
+        "type": "select",
+        "options": [
+          "Sticky",
+          "Scroll Hide",
+          "None"
+        ],
+        "default": "Sticky"
+      },
+      "footer": {
+        "type": "select",
+        "options": [
+          "default",
+          "Dark",
+          "No Secondary Navigation"
+        ],
+        "default": "default"
+      }
     }
   },
   "browserslist": [

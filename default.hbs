@@ -57,13 +57,13 @@
         <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
-        {{>"layout/footer"}}
+        {{#match @custom.footer "default"}}{{>"layout/footer"}}{{/match}}
 
         {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
-        {{!-- {{>"layout/footer-dark"}} --}}
+        {{#match @custom.footer "Dark"}}{{>"layout/footer-dark"}}{{/match}}
 
         {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
-        {{!-- {{>"layout/footer-not-menu"}} --}}
+        {{#match @custom.footer "No Secondary Navigation"}}{{>"layout/footer-not-menu"}}{{/match}}
     </div>
 
     {{!-- Search box --}}
