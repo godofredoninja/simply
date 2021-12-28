@@ -87,6 +87,10 @@
           "Auto"
         ],
         "default": "Auto"
+      },
+      "comments_disqus_short_name": {
+        "type": "text",
+        "group": "post"
       }
     }
   },
