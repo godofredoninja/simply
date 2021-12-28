@@ -55,7 +55,7 @@
 
         {{!-- Has DropDown Menu --}}
         {{#if navigationDropDown}}
-        <li class="dropdown is-hoverable ml-5 {{^has any="@site.facebook, @site.twitter"}}hidden{{/has}}">
+        <li class="dropdown is-hoverable ml-5">
             <a href="#" class="mainMenu-link dropdown-trigger hover:text-primary font-medium">
                 <span>{{t "More"}}</span>
                 <svg class="icon is-small transform rotate-90"><use xlink:href="#icon-arrow-forward"></use></svg>
@@ -63,7 +63,7 @@
             <div class="dropdown-menu whitespace-normal">
                 <div class="dropdown-content">
                     <div class="js-dropdown-menu">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
-                    <hr class="dropdown-divider">
+                    {{#has any="@site.facebook, @site.twitter"}}<hr class="dropdown-divider">{{/has}}
                     {{!-- Social Media - partials/widget/social-media.hbs --}}
                     {{> "widget/social-media" class="social-media"}}
                 </div>

@@ -65,20 +65,19 @@
       "header": {
         "type": "select",
         "options": [
-          "Sticky",
-          "Scroll Hide",
-          "None"
+          "Default",
+          "Drop Down Menu"
         ],
-        "default": "Sticky"
+        "default": "Default"
       },
       "footer": {
         "type": "select",
         "options": [
-          "default",
+          "Default",
           "Dark",
           "No Secondary Navigation"
         ],
-        "default": "default"
+        "default": "Default"
       },
       "color_scheme": {
         "type": "select",
