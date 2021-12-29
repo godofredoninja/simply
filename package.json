@@ -108,7 +108,7 @@
     "lint:sass": "stylelint src/sass/**/*.sass",
     "lint": "yarn lint:js && yarn lint:sass",
     "test": "yarn lint && gscan .",
-    "scan": "gscan ../"
+    "scan": "gscan ."
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",
@@ -123,7 +123,7 @@
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "del": "^6.0.0",
-    "gscan": "^4.0.1",
+    "gscan": "^4.20.0",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
     "gulp-if": "^3.0.0",
