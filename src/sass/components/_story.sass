@@ -1,0 +1,103 @@
+// 2. Clases for Meta (Author - date - Read Time )
+// -----------------------------------------------------------------------------
+.hh
+  &-author
+    li:not(:first-child)
+      margin-left: -6px
+
+    &-name > a:hover
+      color: var(--gray-900)
+      text-decoration: underline
+
+// Story
+// -----------------------------------------------------------------------------
+
+.story
+  // &-title
+  //   margin: 0 0 .4em
+
+  &-image
+    height: 200px
+
+// Story Card Small
+// -----------------------------------------------------------------------------
+
+.storySmall
+  background: var(--story-small-bg)
+  border: 1px solid rgba(0, 0, 0, .04)
+  border-radius: 4px 4px 0 0
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .05)
+
+// Story Cover
+// -----------------------------------------------------------------------------
+
+.ss4 + .ss3
+  margin-bottom: 2.5rem
+
+.story-cover
+  &-image
+    height: 350px
+
+  .hh-author-name a
+    color: #fff !important
+
+  .hh-date
+    color: rgba(255, 255, 255, 0.8)
+
+// Story Post small
+// -----------------------------------------------------------------------------
+
+.sp-small:hover
+  .sp-small-title
+    color: var(--color-primary)
+
+
+// Breakpoint Media Query for Story
+// -----------------------------------------------------------------------------
+
++tablet-up
+  // story
+  .story-excerpt
+    display: -webkit-box
+    max-height: 6em
+    overflow: hidden
+    text-overflow: ellipsis
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 4
+
+  // story Cover
+  .ss3 + .ss4
+    padding-left: 0
+
+  .ss4 + .ss4
+    padding-right: 0
+
++desktop-up
+  // large story - home page
+  .ss1
+    .hh
+      flex: none
+    .story
+      display: flex
+      &-title
+        font-size: 2.25rem
+      &-image
+        flex: 1 1 auto
+        height: auto
+        min-height: 380px
+      &-body
+        flex-basis: 34.33333%
+        padding: 0 0 0 2rem
+        // justify-content: center
+
+  // medium story - home page
+  .ss2
+    .story
+      &-image
+        height: 270px
+      &-title
+        font-size: 1.75rem
+
+  // Story Cover
+  .ss3 .story-cover-body
+    right: 30%

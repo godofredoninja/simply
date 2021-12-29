@@ -92,7 +92,7 @@ $ git clone https://github.com/godofredoninja/simply.git
 $ git checkout dev
 
 # install the dependencies
-$ cd simply/src && yarn
+$ cd simply && yarn
 
 # run build & livereload task
 $ yarn dev

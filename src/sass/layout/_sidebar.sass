@@ -1,0 +1,47 @@
+// Sidebar
+// -----------------------------------------------------------------------------
+
+// .sidebar
+  // border-right: 1px solid var(--border-color)
+
+// body
+//   background-color: #f8fafc
+
+.scroll-transparent::-webkit-scrollbar
+  width: 5px
+  position: fixed
+  right: 0
+
+
+.scroll-transparent::-webkit-scrollbar-thumb
+  background: transparent
+  -webkit-transition: background-color 2s
+  transition: background-color 2s
+
+
+// Sidebar Menu
+// -----------------------------------------------------------------------------
+
+.menu-link.is-active .menu-link-bg
+  opacity: .1
+
+// .sidebar .menu-link.is-active::before
+//   animation: scaleIn .7s forwards
+//   background-color: var(--color-primary)
+//   border-radius: 10px
+//   content: ' '
+//   height: 8px
+//   left: -1px
+//   margin-top: -5px
+//   position: absolute
+//   top: 50%
+//   width: 8px
+
+
+// @keyframes scaleIn
+//   0%
+//     transform: scale(.5)
+//     opacity: 0
+//   to
+//     transform: scale(1)
+//     opacity: 1

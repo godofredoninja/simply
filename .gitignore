@@ -37,6 +37,3 @@ changelog.md.bk
 .cache-loader
 yarn-error.log
 yarn.lock
-
-# master
-src/

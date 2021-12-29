@@ -1,0 +1,21 @@
+.search
+  &-form
+    input
+      background: transparent
+      border: 0
+      box-shadow: none
+      width: 100%
+
+      &:focus
+        box-shadow: none
+
+  &-results
+    // max-height: calc(100vh - 15rem)
+    max-height: calc(100vh - 12rem)
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+
+    a
+      &:hover,
+      &.is-active
+        background: rgba(170, 170, 170, .35)

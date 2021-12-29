@@ -1,0 +1,42 @@
+// Show Mennsaje in memebers
+.simply-form
+  &.success
+    .message-success
+      display: block
+  &.error
+    .message-error
+      display: block
+
+  &.loanding
+    .button-content
+      display: none
+    .button-loader
+      animation: spin .8s linear infinite
+      display: block
+      display: inline-block
+
+@keyframes spin
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)
+
+//
+.plan-box
+  background-color: #fefefe
+  box-shadow: rgba(0, 0, 0, 0.13) 0 2px 20px 0
+
+  ul li
+    // padding-left: 1.25rem
+    color: #585858
+    margin-bottom: 0.75rem
+    position: relative
+
+    // &::before
+    //   display: block
+    //   position: absolute
+    //   left: 0
+    //   font-size: 1.2rem
+    //   font-weight: 600
+    //   color: var(--color-primary)
+    //   content: "✓"

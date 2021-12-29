@@ -1,0 +1,64 @@
+.is-doc
+  // background: #f8fafc
+
+  .post-body
+    // color: rgba(0,0,0,0.8)
+    // font-size: 1rem
+    // line-height: 1.625;
+
+    p
+      z-index: 2
+
+    h2
+      font-size: 1.75rem
+      // font-weight: 600
+
+      &::before
+        content: " "
+        display: block
+        margin-bottom: 1.5rem
+        border-top: 1px solid var(--border-color)
+        transition: border-color .3s
+
+    h3
+      line-height: 1.25
+      font-size: 1.375rem
+      font-weight: 600
+      opacity: .9
+
+    h1,
+    h2,
+    h3
+      padding-top: 6rem
+      margin-top: -5rem
+      // margin-bottom: 0
+
+    h4,
+    h5,
+    h6
+      opacity: .8
+      // margin-bottom: 0
+
+    h4
+      font-size: 1.25rem
+    h5
+      font-size: 1.125rem
+    h6
+      font-size: 1rem
+
+
+    //
+    blockquote
+      border-color: var(--border-color)
+      font-size: 1.125rem !important
+      margin-left: 0
+
+// hover-title
+
+.hover-title:hover .anchor
+  visibility: visible
+  opacity: 1
+
+// is footer
+.is-doc .footer-light
+  background: var(--bg)

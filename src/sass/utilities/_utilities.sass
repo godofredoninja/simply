@@ -1,0 +1,104 @@
+.u-image
+  @extend %u-image
+.image-inset
+  @extend %image-inset
+.flexColumnTop
+  @extend %flex-column-top
+.noWrapWithEllipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+// Gradient
+// $primary-color: #2ECC71
+// $accent-color: #102B7B
+
+.u-primaryGradient
+  // background: linear-gradient(135deg, rgba($dark-blue-500, .7), rgba($primary-color, .7))
+  background: linear-gradient(135deg, #111, var(--ghost-accent-color))
+
+// Card
+// -----------------------------------------------------------------------------
+.card
+  @extend %card
+
+// Avatar Image
+// -----------------------------------------------------------------------------
+
+.avatar
+  height: 2.25rem
+  width: 2.25rem
+  &.is-44x44
+    height: 2.75rem
+    width: 2.75rem
+  &.is-24x24
+    height: 1.5rem
+    width: 1.5rem
+  &.is-100x100
+    height: 6.25rem
+    width: 6.25rem
+
+//  Hover animation
+// -----------------------------------------------------------------------------
+
+.has-overlay
+  .overlay-toggle
+    opacity: 0
+    transition: opacity .3s ease
+    visibility: hidden
+
+  &:hover .overlay-toggle
+    opacity: 1
+    visibility: visible
+
+// Line Clamp
+// -----------------------------------------------------------------------------
+.lineClamp
+  @extend  %line-clamp
+
+.lineClamp-2
+  @extend %line-clamp
+
+  -webkit-line-clamp: 2
+  // max-height: 2.7em
+  max-height: 2.8em
+
+// Line Clamp
+// -----------------------------------------------------------------------------
+.underscore
+  &::after
+    // height: 0.1875rem
+    background-color: $primary-color
+    background-color: var(--color-primary)
+    border-radius: 0.25rem
+    content: ''
+    display: block
+    height: .15em
+    margin: 0.5rem 0 1.5rem
+    position: relative
+    width: 1.5em
+  &.is-center
+    &::after
+      margin-left: auto
+      margin-right: auto
+
+// Hidden responsive
+// -----------------------------------------------------------------------------
+
++tablet
+  .hide-before-md
+    display: none !important
+
++desktop
+  .hide-before-lg
+    display: none !important
+
+// hide after
+
++mobile-up
+  .hide-after-md
+    display: none !important
+
++desktop-up
+  .hide-after-lg
+    display: none !important

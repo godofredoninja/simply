@@ -1,0 +1,110 @@
+// $grey: #7A7A7A
+
+$grey: $gray-500
+
+// $input-link: hsl(217, 71%,  53%)
+$input-background: hsl(0, 0%, 96%)
+
+$text-strong: hsl(0, 0%, 21%)
+$radius: 0.25rem
+
+$input-background-color: #fff
+$input-border-color: #ced4da
+
+$input-radius: $radius
+$input-color: $text-strong
+$input-placeholder-color: rgba($input-color, .8)
+$input-hover-border-color: #80bdff
+$input-focus-border-color: #80bdff
+
+// $input-focus-box-shadow-size: 0 0 0 0.125em
+$input-focus-box-shadow-size: 0 0.625rem 1.25rem
+
+// $input-focus-box-shadow-color: rgba($input-link, 0.25)
+$input-focus-box-shadow-color: rgba(0, 0, 0, .1)
+
+$input-disabled-background-color: $input-background
+$input-disabled-border-color: $input-background
+$input-disabled-color: $grey
+$input-disabled-placeholder-color: rgba($input-disabled-color, 0.3)
+
+$input-shadow: inset 0 0.0625em 0.125em rgba(hsl(0, 0%, 4%), 0.05)
+
+
+$textarea-padding: $control-padding-horizontal
+$textarea-max-height: 40em
+$textarea-min-height: 8em
+
+$textarea-colors: $form-colors
+
+=input
+  @extend %control
+
+  background-color: $input-background-color
+  border-color: $input-border-color
+  border-radius: $input-radius
+  color: $input-color
+
+  +placeholder
+    color: $input-placeholder-color
+  &:hover
+    border-color: $input-hover-border-color
+  &:focus,
+  &:active
+    border-color: $input-focus-border-color
+    box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color
+  &[disabled],
+  fieldset[disabled] &
+    background-color: $input-disabled-background-color
+    border-color: $input-disabled-border-color
+    box-shadow: none
+    color: $input-disabled-color
+
+    +placeholder
+      color: $input-disabled-placeholder-color
+
+// Input
+%input
+  +input
+
+%input-textarea
+  @extend %input
+
+  box-shadow: $input-shadow
+  max-width: 100%
+  width: 100%
+  &[readonly]
+    box-shadow: none
+
+  // Colors
+  @each $name, $pair in $textarea-colors
+    $color: nth($pair, 1)
+    &.is-#{$name}
+      border-color: $color
+      &:focus,
+      &:active
+        box-shadow: $input-focus-box-shadow-size rgba($color, 0.25)
+
+  // sizes
+  &.is-medium
+    +control-medium
+
+input
+  @extend %input-textarea
+
+textarea
+  @extend %input-textarea
+
+  display: block
+  max-width: 100%
+  min-width: 100%
+  padding: $textarea-padding
+  resize: vertical
+  &:not([rows])
+    max-height: $textarea-max-height
+    min-height: $textarea-min-height
+  &[rows]
+    height: initial
+  // Modifiers
+  &.has-fixed-size
+    resize: none
