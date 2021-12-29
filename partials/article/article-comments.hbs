@@ -1,3 +1,5 @@
+{{#if @custom.comments_disqus_short_name}}
+
 <div id="post-comments" class="post-comments js-comments bg-gray-150 pt-8 pb-8 hidden">
     <div class="mx-auto px-4 max-w-1000">
         <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
@@ -10,8 +12,6 @@
 {{#contentFor "scripts"}}
 <script>
 (function(d, s, id) {
-    if (typeof disqusShortName === 'undefined') return;
-
     var disqus_config = function () {
         this.page.url = '{{url absolute="true"}}';
         this.page.identifier = 'ghost-{{comment_id}}';
@@ -30,7 +30,7 @@
         if( disqusTarget && (currentScroll > disqusTarget.getBoundingClientRect().top - 150) ) {
             var js = d.createElement(s);
             js.id = id;
-            js.src = 'https://'+disqusShortName+'.disqus.com/embed.js';
+            js.src = 'https://{{@custom.comments_disqus_short_name}}.disqus.com/embed.js';
             js.async = true;
             js.defer = true;
             js.setAttribute('data-timestamp', +new Date());
@@ -53,3 +53,5 @@
 }(document, 'script', 'disqus-js'));
 </script>
 {{/contentFor}}
+
+{{/if}}

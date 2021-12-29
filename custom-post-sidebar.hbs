@@ -19,14 +19,16 @@
                     </header>
 
                     {{#if feature_image}}
-                    <figure class="story-post-media relative overflow-hidden rounded-lg shadow-3xl">
-                        <img class="story-img block w-full object-cover object-center simply-zoom"
+                    <figure class="story-post-media relative">
+                        <img class="story-img block w-full object-cover object-center simply-zoom rounded-lg shadow-3xl overflow-hidden"
                             src="{{img_url feature_image size="m"}}"
                             srcset="{{img_url feature_image size="s"}} 300w,
                                     {{img_url feature_image size="m"}} 600w"
                             sizes="(max-width: 1000px) 400px, 600px"
-                            alt="{{title}}"
+                            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                         />
+
+                        {{#if feature_image_caption}}<figcaption class="post-figcaption">{{feature_image_caption}}</figcaption>{{/if}}
                     </figure>
                     {{/if}}
 

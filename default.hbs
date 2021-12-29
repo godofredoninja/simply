@@ -7,7 +7,7 @@
         ✎ @GodoFredoNinja
         ✈ Lima - Perú
 -->
-<html lang="{{@site.locale}}">
+<html lang="{{@site.locale}}"{{#match @custom.color_scheme "Dark"}} class="dark"{{/match}}>
 <head>
     {{!-- Document Settings --}}
     <meta charset="utf-8" />
@@ -21,11 +21,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script>
+    {{#match @custom.color_scheme "Auto"}}
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.querySelector('html').classList.add('dark');
         } else {
             document.querySelector('html').classList.remove('dark');
         }
+    {{else}}
+        if (localStorage.theme === 'dark') {
+            document.querySelector('html').classList.add('dark');
+        } else if (localStorage.theme === 'light') {
+            document.querySelector('html').classList.remove('dark');
+        }
+    {{/match}}
     </script>
 
     {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
@@ -47,23 +55,22 @@
 <body class="{{block "special_body_class"}}">
     <div class="simply-viewport flexColumnTop">
         {{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
-        {{!-- Header Default --}}
-        {{> "layout/header"}}
+        {{#match @custom.header "Default"}}{{> "layout/header"}}{{/match}}
 
         {{!-- Header With Drop Down --}}
-        {{!-- {{> "layout/header" hasDropDown=true}} --}}
+        {{#match @custom.header "Drop Down Menu"}}{{> "layout/header" hasDropDown=true}}{{/match}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
         <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
-        {{>"layout/footer"}}
+        {{#match @custom.footer "Default"}}{{>"layout/footer"}}{{/match}}
 
         {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
-        {{!-- {{>"layout/footer-dark"}} --}}
+        {{#match @custom.footer "Dark"}}{{>"layout/footer-dark"}}{{/match}}
 
         {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
-        {{!-- {{>"layout/footer-not-menu"}} --}}
+        {{#match @custom.footer "No Secondary Navigation"}}{{>"layout/footer-not-menu"}}{{/match}}
     </div>
 
     {{!-- Search box --}}

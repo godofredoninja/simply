@@ -51,7 +51,7 @@ a
 // 1. Blockquote
 // --------------------------------------------------
 
-blockquote:not(.pullquote)
+blockquote:not([class])
   border-left: 0.25rem solid currentColor
   // color: $gray-900
   color: var(--title-color)
@@ -96,6 +96,9 @@ figcaption
   outline: 0
   text-align: center
   width: 100%
+
+  a
+    text-decoration: underline
 
 cite
   text-align: left

@@ -29,16 +29,13 @@ const comments = require('postcss-discard-comments')
 const tailwindcss = require('tailwindcss')
 
 // sass
-const sass = require('gulp-sass')
+const sass = require('gulp-sass')(require('sass'))
 
 // environment
 const isProduction = process.argv.includes('--production') || process.env.NODE_ENV === 'production'
 
-// Path Base
-const pathBase = '../'
-
 // Data collection on the theme
-const { name, version, author, license, repository } = require(`${pathBase}package.json`)
+const { name, version, author, license, repository } = require('./package.json')
 
 // Build Comments
 const BuildComments = `/*!
@@ -50,9 +47,9 @@ const BuildComments = `/*!
 // clean assets
 const clean = () => {
   return del([
-    `${pathBase}assets`,
-    `${pathBase}partials/styles`,
-    `${pathBase}dist`
+    'assets',
+    'partials/styles',
+    'dis'
   ], { force: true })
 }
 
@@ -73,8 +70,7 @@ const handleError = done => {
 // hbs
 function hbs (done) {
   pump([
-    // src([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`]),
-    src([`${pathBase}**/*.hbs`]),
+    src(['*.hbs', 'partials/**/*.hbs']),
     livereload()
   ], handleError(done))
 }
@@ -82,14 +78,14 @@ function hbs (done) {
 // style
 function styles (done) {
   pump([
-    src('sass/*.sass'),
+    src('src/sass/*.sass'),
     gulpif(!isProduction, sourcemaps.init()),
     sass({ outputStyle: 'expanded' }).on('error', sass.logError),
     gulpif(!isProduction, postcss([tailwindcss()])),
     gulpif(isProduction, postcss([tailwindcss(), autoprefixer(), cssnano(), comments({ removeAll: true })])),
     gulpif(isProduction, header(BuildComments)),
     gulpif(!isProduction, sourcemaps.write('./map')),
-    dest(`${pathBase}assets/styles`),
+    dest('assets/styles'),
     livereload()
   ], handleError(done))
 }
@@ -103,7 +99,7 @@ function scripts (done) {
       browserify({
         basedir: '.',
         debug: true,
-        entries: `./js/${file}.js`,
+        entries: `./src/js/${file}.js`,
         cache: {},
         packageCache: {}
       }).transform('babelify', {
@@ -116,7 +112,7 @@ function scripts (done) {
       gulpif(isProduction, uglify()),
       gulpif(isProduction, header(BuildComments)),
       gulpif(!isProduction, sourcemaps.write('./map')),
-      dest(`${pathBase}assets/scripts`),
+      dest('assets/scripts'),
       livereload()
     ], handleError(done))
   }))
@@ -125,29 +121,29 @@ function scripts (done) {
 // Image
 function images (done) {
   pump([
-    src('img/**/*.*'),
-    dest(`${pathBase}assets/images`),
+    src('src/img/**/*.*'),
+    dest('assets/images'),
     livereload()
   ], handleError(done))
 }
 
 function copyAmpStyle (done) {
   pump([
-    src(`${pathBase}assets/styles/amp.css`),
+    src('assets/styles/amp.css'),
     replace('@charset "UTF-8";', ''),
     postcss([cssnano(), comments({ removeAll: true })]),
     rename('amp-styles.hbs'),
-    dest(`${pathBase}/partials/amp`)
+    dest('/partials/amp')
   ], handleError(done))
 }
 
 function copyMainStyle (done) {
   pump([
-    src(`${pathBase}assets/styles/main.css`),
+    src('assets/styles/main.css'),
     replace('@charset "UTF-8";', ''),
     postcss([cssnano(), comments({ removeAll: true })]),
     rename('main-styles.hbs'),
-    dest(`${pathBase}/partials`)
+    dest('partials')
   ], handleError(done))
 }
 
@@ -157,26 +153,26 @@ function zipper (done) {
 
   pump([
     src([
-      `${pathBase}assets/**`,
-      `${pathBase}locales/*.json`,
-      `${pathBase}**/*.hbs`,
-      `${pathBase}LICENSE`,
-      `${pathBase}package.json`,
-      `${pathBase}README.md`,
-      `!${pathBase}node_modules`, `!${pathBase}node_modules/**`,
-      `!${pathBase}dist`, `!${pathBase}dist/**`,
-      `!${pathBase}src`, `!${pathBase}src/**`
-    ], { base: pathBase }),
+      'assets/**',
+      'locales/*.json',
+      '*.hbs',
+      'partials/**',
+      'LICENSE',
+      'package.json',
+      'README.md',
+      '!node_modules', '!node_modules/**',
+      '!dist', '!dist/**',
+      '!src', '!src/**'
+    ], { base: '.' }),
     zip(filename),
-    dest(`${pathBase}dist`)
+    dest('dist')
   ], handleError(done))
 }
 
-const cssWatcher = () => watch('sass/**', styles)
-const jsWatcher = () => watch(['js/**', '*.js'], scripts)
-const imgWatcher = () => watch('img/**', images)
-// const hbsWatcher = () => watch([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`], hbs)
-const hbsWatcher = () => watch([`${pathBase}*.hbs`, `${pathBase}partials/**/*.hbs`], hbs)
+const cssWatcher = () => watch('src/sass/**', styles)
+const jsWatcher = () => watch(['src/js/**', '*.js'], scripts)
+const imgWatcher = () => watch('src/img/**', images)
+const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
 
 const compile = parallel(styles, scripts, images)
 const watcher = parallel(cssWatcher, jsWatcher, imgWatcher, hbsWatcher)
