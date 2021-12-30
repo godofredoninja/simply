@@ -131,6 +131,8 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [A Boundless World](https://www.aboundlessworld.com/) :star: :star:
 - [Dana Ross](https://vaalin.com/)
 - [Kip Ivan](https://github.com/Ingles-con-Kip)
+- [Wenjer India](http://qilinlab.com)
+- Etienne Triaud :star: :star:
 - Greg Rapp
 - Yannick Kordel
 - Bruno Brito Semedo
