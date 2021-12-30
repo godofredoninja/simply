@@ -37,7 +37,7 @@
                     {{/if}}
 
                     <header class="relative text-white z-4 text-center w-full px-4 py-16 lg:px-6">
-                        <div class="text-xs uppercase mb-3 opacity-90 tracking-widest font-medium">{{count.posts}} {{t "Stories"}}</div>
+                        <div class="text-xs uppercase mb-3 opacity-90 tracking-widest font-medium">{{plural count.posts empty=(t "No Stories") singular=(t "1 Story") plural=(t "% Stories")}}</div>
                         <h2 class="text-2xl capitalize font-semibold tracking-wide"><a href="{{url}}">{{name}}</a></h2>
                     </header>
 
