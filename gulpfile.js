@@ -133,7 +133,7 @@ function copyAmpStyle (done) {
     replace('@charset "UTF-8";', ''),
     postcss([cssnano(), comments({ removeAll: true })]),
     rename('amp-styles.hbs'),
-    dest('/partials/amp')
+    dest('partials/amp')
   ], handleError(done))
 }
 
