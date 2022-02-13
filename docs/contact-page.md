@@ -11,7 +11,7 @@
 ```html
 <form
     action="https://formspree.io/your@email.com"
-    class="max-w-740 mx-auto mb-16"
+    class="max-w-3xl mx-auto mb-16"
     method="POST">
 
     <div class="row">

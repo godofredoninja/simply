@@ -51,9 +51,12 @@ routes:
     template: godo-home-personal
     data: page.godo-personal
 
-  /personal-portfolio/:
-    template: godo-home-personal-portfolio
-    data: page.godo-personal-portfolio
+  /medium-sidebar/:
+    controller: channel
+    template: godo-template-medium-sidebar
+    data:
+      post: page.medium-with-sidebar
+    limit: 14
 
 collections:
   # PortFolio

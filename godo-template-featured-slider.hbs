@@ -1,9 +1,6 @@
 {{!-- Layout --}}
 {{!< default}}
 
-{{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}is-frontpage{{/contentFor}}
-
 {{!-- Featured Story --}}
 {{#get "posts" limit="3" filter="featured:true" as |godo_featured_post| }}
     {{#if godo_featured_post}}
@@ -25,26 +22,24 @@
     {{/if}}
 {{/get}}
 
-<div class="site-post feed-entry-content container mx-auto pt-10">
-    <div class="feed-entry-wrap max-w-1100 mx-auto">
-        <div class="row">
-            {{#foreach posts}}
-                {{#has number="6"}}
-                    <div class="col s12 m6 l12 ss1">{{> "story/story-grid"}}</div>
-                {{else has number="4,5"}}
-                    <div class="col s12 m6 ss2">{{> "story/story-grid"}}</div>
-                {{else}}
-                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
-                {{/has}}
-            {{/foreach}}
-        </div>
+<div class="site-post container mx-auto py-vmin8">
+    <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-6">
+        {{#foreach posts}}
+            {{#has number="6"}}
+                {{> "story/story-grid" story_class="ss1 grid lg:col-span-full lg:grid-cols-3 gap-6"}}
+            {{else has number="4,5"}}
+                {{> "story/story-grid" story_class="ss2 lg:col-span-6"}}
+            {{else}}
+                {{> "story/story-grid" story_class="lg:col-span-4"}}
+            {{/has}}
+        {{/foreach}}
     </div>
 </div>
 
-{{#contentFor "header"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">{{/contentFor}}
+{{#contentFor "header"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">{{/contentFor}}
 
 {{#contentFor "scripts"}}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     var slider = tns({
         container: '.simply-slider',

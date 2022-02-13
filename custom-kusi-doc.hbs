@@ -2,87 +2,65 @@
 {{!< default}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-doc{{/contentFor}}
+{{#contentFor "special_body_class"}}is-doc is-canvas-full{{/contentFor}}
 
 {{#post}}
 
-<div class="max-w-extreme mx-auto flex flex-col pb-16 px-4 lg:flex-row">
+<div class="kusi-doc max-w-extreme mx-auto px-4 relative grid gap-2 md:grid-cols-kusi2 lg:grid-cols-kusi3">
     {{!-- Navigating the documentation --}}
-    <div class="sidebar flex-none border-r border-gray-300 order-2 md:w-64 lg:order-none" style="border-color: var(--border-color)">
-        <div class="sticky top-16 pr-5">
-            <nav class="py-12 overflow-y-auto lg:max-h-(screen-16) scroll-transparent">
-                <div class="uppercase font-medium text-sm text-gray-600 mb-3 px-2">{{t "Getting Started"}}</div>
+    <nav class="sidebar sticky top-16 py-vmin8 overflow-auto hidden scroll-transparent md:block lg:max-h-(screen-16)">
+        <div class="uppercase font-medium text-sm mb-3 px-2">{{t "Getting Started"}}</div>
 
-                <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu" class="leading-tight text-base">
-                    {{#get "posts" filter="tags:{{tags.[0].slug}}" limit="all" order="published_at asc"}}
-                    {{!-- {{#get "posts" filter="tags:{{primary_tag.slug}}" limit="all" order="published_at asc"}} --}}
-                    {{#foreach posts}}
-                        <li itemprop="name" role="menuitem" >
-                            {{#link
-                                href=(url absolute="true")
-                                class="menu-link p-2 flex hover:text-primary relative transition-colors duration-200"
-                                activeClass="is-active text-primary pl-4 font-medium"
-                                itemprop="url"}}
-                                <span class="menu-link-bg rounded-md absolute inset-0 bg-primary opacity-0"></span>
-                                <span class="relative">{{title}}</span>
-                            {{/link}}
-                        </li>
-                    {{/foreach}}
-                    {{/get}}
-                </ul>
-            </nav>
-        </div>
-    </div>
+        <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu" class="leading-tight text-base">
+            {{#get "posts" filter="tags:{{tags.[0].slug}}" limit="all" order="published_at asc"}}
+            {{!-- {{#get "posts" filter="tags:{{primary_tag.slug}}" limit="all" order="published_at asc"}} --}}
+            {{#foreach posts}}
+                <li itemprop="name" role="menuitem" >
+                    {{#link
+                        href=(url absolute="true")
+                        class="p-2 text-gray-500 hover:text-primary block"
+                        activeClass="text-primary font-medium"
+                        itemprop="url"}}
+                        {{title}}
+                    {{/link}}
+                </li>
+            {{/foreach}}
+            {{/get}}
+        </ul>
+    </nav>
 
     {{!-- content of the documentation --}}
-    <article class="py-4 md:py-12 flex-grow">
-        <div class="max-w-2xl mx-auto md:px-4">
-            <header><h1 class="text-title">{{title}}</h1></header>
+    <article class="max-w-3xl mx-auto py-vmin8 md:px-4">
+        <section class="post-body godo-canvas pt-0 font-sans has-sidebar text-base leading-relaxed js-kusi-doc">
+            <h1 id="{{slug}}" class="text-title">{{title}}</h1>
+            {{#if custom_excerpt}}
+            <p class="post-excerpt text-xl text-gray-500">{{custom_excerpt}}</p>
+            <hr>
+            {{/if}}
+            {{content}}
 
-            <section class="post-body font-sans has-sidebar text-base leading-relaxed js-kusi-doc">
-                {{content}}
+            {{!-- Button to edit on GitHub - add link on Facebook description --}}
+            {{#if og_description}}
+            <p class="mt-10">
+                <a class="edit-on-github godo-tracking button"
+                    href="{{og_description}}"
+                    data-event-category="Kusi Doc"
+                    data-event-action="{{tags.[0].name}}"
+                    data-event-label="{{title}}"
+                    data-event-non-interaction="true">
+                    <svg class="icon mr-2"><use xlink:href="#icon-github"></use></svg>
+                    <span>Edit this page on GitHub</span>
+                </a>
+            </p>
+            {{/if}}
+        </section>
 
-                {{!-- Button to edit on GitHub - add link on Facebook description --}}
-                {{#if og_description}}
-                <p class="mt-10">
-                    <a class="edit-on-github godo-tracking button is-outlined is-primary"
-                        href="{{og_description}}"
-                        data-event-category="Kusi Doc"
-                        data-event-action="{{tags.[0].name}}"
-                        data-event-label="{{title}}"
-                        data-event-non-interaction="true">
-                        <svg class="icon mr-2"><use xlink:href="#icon-github"></use></svg>
-                        <span>Edit this page on GitHub</span>
-                    </a>
-                </p>
-                {{/if}}
-            </section>
-
-            <hr class="my-10">
-            <div class="flex justify-between text-gray-500">
-                <div>
-                {{#prev_post in="primary_tag"}}
-                    <a href="{{url}}" class="hover:underline">← {{title}}</a>
-                {{/prev_post}}
-                </div>
-
-                <div>
-                {{#next_post in="primary_tag"}}
-                    <a href="{{url}}" class="hover:underline">{{title}} →</a>
-                {{/next_post}}
-                </div>
-            </div>
-        </div>
     </article>
 
     {{!-- Table of Contents --}}
-    <aside class="js-sidebar-right flex flex-col flex-none pt-8 pl-5 mb-12 order-2 md:w-64 lg:order-none lg:hidden xl:flex">
-        <div class="sticky top-24 js-sidebar-wrap hidden">
-            <div class="pt-4 pb-10 overflow-y-auto scroll-transparent lg:max-h-(screen-16)">
-                <div class="uppercase font-medium text-sm text-gray-600 mb-3">{{t "On this page"}}</div>
-                <ul class="text-sm js-table-content leading-tight"></ul>
-            </div>
-        </div>
+    <aside class="js-sidebar-right hidden py-vmin8 sticky top-16 overflow-auto scroll-transparent lg:max-h-(screen-16)">
+        <div class="uppercase font-medium text-sm mb-3">{{t "On this page"}}</div>
+        <ul class="text-sm js-table-content leading-tight text-gray-500"></ul>
     </aside>
 </div>
 

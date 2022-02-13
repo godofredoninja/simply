@@ -1,12 +1,12 @@
 <article class="homeHero-smallCard flex relative {{#unless @last}}mb-5{{/unless}}">
      <div class="hhp-smallCard-img w-1/3 relative flex-none mr-5">
         {{#if feature_image}}
-        <img class="u-image inset-0 absolute" src="{{img_url feature_image size="s"}}" alt="{{title}}" width="122" height="100"/>
+        <img class="inset-image" src="{{img_url feature_image size="s"}}" alt="{{title}}" width="122" height="100"/>
         {{/if}}
     </div>
 
     <div class="hhp-smallCard-body flex flex-col justify-between">
-        <h2 class="hhp-smallCard-title text-lg mb-3 leading-tight font-semibold text-title lineClamp-2">
+        <h2 class="hhp-smallCard-title text-lg mb-3 leading-tight font-semibold text-title line-clamp-2">
             <a href="{{url}}">{{title}}</a>
         </h2>
 

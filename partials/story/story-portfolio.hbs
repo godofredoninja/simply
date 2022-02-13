@@ -1,7 +1,7 @@
-<article class="portfolio-card relative overflow-hidden mb-8 rounded-sm flex items-center justify-center h-90 has-overlay">
+<article class="portfolio-card js-filter-items relative overflow-hidden rounded-sm flex items-center justify-center h-96 has-overlay" {{#if primary_tag}}data-id="{{primary_tag.slug}}"{{/if}}>
     <a href="{{url}}">
         {{#if feature_image}}
-        <img class="image-inset"
+        <img class="inset-image"
             src="{{img_url feature_image size="m"}}"
             srcset="{{img_url feature_image size="s"}} 300w, {{img_url feature_image size="m"}} 600w, {{img_url feature_image size="l"}} 1000w"
             sizes="(max-width: 1000px) 400px, 800px"
@@ -11,7 +11,7 @@
 
         <div class="portfolio-card-body relative text-white z-4 text-center px-4 py-16 overlay-toggle">
             <h2 class="text-xl capitalize font-medium mb-4">{{title}}</h2>
-            <div class="tracking-wide"><span class="button is-small is-primary">{{t "View Project"}}</span></div>
+            <div class="tracking-wide"><span class="button text-sm is-primary">{{t "View Project"}}</span></div>
         </div>
 
         <div class="portfolio-card-bg absolute inset-0 z-2 bg-black bg-opacity-80 overlay-toggle"></div>

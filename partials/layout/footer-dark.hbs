@@ -1,93 +1,80 @@
 <footer class="footer pt-10">
-    <section class="mx-auto max-w-extreme px-4">
-        <div class="row">
+    <section class="mx-auto container">
+        <div class="row grid gap-16 lg:grid-cols-3 lg:gap-6">
             {{!-- About --}}
-            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
-                <div class="footer-items flexColumnTop flex-grow">
-                    <h3 class="footer-items-title mb-6 text-22">{{t "About Us"}}</h3>
-                    <div class="footer-b flex-grow mb-4">
-                        <p class="mb-4 text-base">{{@site.description}}</p>
-                    </div>
+            <div class="footer-items">
+                <h3 class="text-white mb-5 text-xl">{{t "About Us"}}</h3>
+                <p class="mb-4">{{@site.description}}</p>
 
-                    {{!-- Social Media - partilas/widget/social-media.hbs --}}
-                    {{> "widget/social-media" class="footer-social-media"}}
-                </div>
+                {{!-- Social Media - partilas/widget/social-media.hbs --}}
+                {{> "widget/social-media" class="footer-social-media"}}
             </div>
 
             {{!-- Tag Cloud --}}
-            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
-                <div class="footer-items footer-tags flex-grow px-4">
-                    <h3 class="footer-items-title mb-6 text-22">{{t "Tags"}}</h3>
-                    {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
-                    <div class="mb-3 flex items-center justify-between leading-tight">
-                        <a href="{{url absolute="true"}}"
-                            title="{{name}}"
-                            class="capitalize pl-3 border-l-4 border-primary"
-                            {{#if accent_color}}style="border-color:{{accent_color}}"{{/if}}>{{name}}</a>
-                        <div class="footer-arrow"></div>
-                    </div>
-                    {{/foreach}}{{/get}}
+            <div class="footer-items footer-tags leading-tight px-4">
+                <h3 class="text-white mb-5 text-xl">{{t "Tags"}}</h3>
+                {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
+                <div class="mb-3 flex items-center justify-between">
+                    <a href="{{url absolute="true"}}"
+                        title="{{name}}"
+                        class="capitalize pl-3 border-l-3 border-primary"
+                        {{#if accent_color}}style="border-color:{{accent_color}}"{{/if}}>
+                        {{name}}
+                    </a>
+                    <div class="footer-arrow"></div>
                 </div>
+                {{/foreach}}{{/get}}
             </div>
 
             {{!-- members subscribe --}}
-            <div class="col s12 m8 l4 mb-16 lg:mb-0 flexColumnTop">
-                <div class="footer-items flex-grow">
-                    <h3 class="footer-items-title mb-6 text-22">{{t "Subscribe"}}</h3>
-                    <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
+            <div class="footer-items">
+                <h3 class="text-white mb-5 text-xl">{{t "Subscribe"}}</h3>
+                <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
 
-                    {{!-- Form subscribe --}}
-                    <form class="max-w-sm simply-form" data-members-form="subscribe">
-                        <input
-                            class="footer-form-input"
-                            data-members-email
-                            type="email"
-                            placeholder="{{t "youremail@example.com"}}"
-                            aria-label="{{t "youremail@example.com"}}"
-                            autocomplete="off"
-                            required
-                        />
+                {{!-- Form subscribe --}}
+                <form class="simply-form" data-members-form="subscribe">
+                    <input
+                        class="footer-form-input"
+                        data-members-email
+                        type="email"
+                        placeholder="{{t "youremail@example.com"}}"
+                        aria-label="{{t "youremail@example.com"}}"
+                        autocomplete="off"
+                        required
+                    />
 
-                        <button class="button is-primary w-full mt-4" type="submit">
-                            <span class="button-content">Continue</span>
-                            <span class="button-loader hidden">{{> "icons/loader"}}</span>
-                        </button>
+                    <button class="button is-primary w-full mt-4" type="submit">
+                        <span class="button-content">Continue</span>
+                        {{> "icons/loader"}}
+                    </button>
 
-                        {{!-- success --}}
-                        <div class="message-success mx-auto max-w-xl w-full bg-success text-white p-2 rounded-md mt-4 hidden text-sm">
-                            {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
-                        </div>
+                    {{!-- success --}}
+                    <div class="message-success p-2 rounded-md mt-4 hidden text-sm">
+                        <span class="bg-success w-3 h-3 rounded-full inline-block"></span>
+                        {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
+                    </div>
 
-                        {{!-- error --}}
-                        <div class="message-error mx-auto max-w-xl w-full bg-danger text-white p-2 rounded-md mt-4 hidden text-sm">
-                            {{t "Please enter a valid email address!"}}
-                        </div>
-                    </form>
-                </div>
+                    {{!-- error --}}
+                    <div class="message-error p-2 rounded-md mt-4 hidden text-sm">
+                        <span class="bg-danger w-3 h-3 rounded-full inline-block"></span>
+                        {{t "Please enter a valid email address!"}}
+                    </div>
+                </form>
             </div>
         </div>
 
-        {{#if @site.secondary_navigation}}
-        <div class="footer-bottom flex flex-col text-center py-8 mt-8 lg:items-baseline lg:flex-row lg:text-left">
+
+        <div class="footer-bottom text-center text-sm py-8 mt-8{{#if @site.secondary_navigation}} flex flex-col justify-between lg:items-baseline lg:flex-row lg:text-left{{/if}}">
+            {{!-- Footer Menu --}}
+            {{#if @site.secondary_navigation}}<div class="py-4 lg:py-0 flex-none lg:order-1">{{navigation type="secondary"}}</div>{{/if}}
+
             {{!-- Copy --}}
-            <div class="text-sm flex-none lg:max-w-xs order-1 lg:order-none">
+            <div>
                 &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
-                <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
+                <svg class="icon is-small animate-pulse text-red-600"><use xlink:href="#icon-heart"></use></svg>
                 by
                 <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
             </div>
-
-            {{!-- Footer Menu --}}
-            <div class="flex-1 text-sm py-4 lg:text-right lg:py-0 lg:ml-6">{{navigation type="secondary"}}</div>
         </div>
-        {{else}}
-        <div class="footer-bottom text-center py-8 mt-8 text-sm">
-            &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
-            <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
-            by
-            <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
-        </div>
-        {{/if}}
-
     </section>
 </footer>

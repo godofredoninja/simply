@@ -1,4 +1,4 @@
-<div class="storySmall overflow-hidden flex flex-col relative mb-8 w-full shadow {{#is "post"}}godo-tracking{{/is}}"
+<div class="storySmall overflow-hidden flex flex-col relative mb-4 w-full {{#is "post"}}godo-tracking{{/is}}"
     {{#is "post"}}data-event-category="Article"
     data-event-action="Related Posts"
     data-event-label="{{url absolute="true"}}"
@@ -12,17 +12,17 @@
             data-sizes="auto"
             width="350"
             height="160"
-            alt="{{title}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
         />
     </a>
     {{/if}}
 
-    <div class="storySmall-inner p-4 flex flex-col justify-between flex-grow">
+    <div class="storySmall-inner py-4 flex flex-col justify-between flex-grow">
         <div class="storySmall-body">
             {{#if feature_image}}
-                <h2 class="text-22 lineClamp-2 text-title mb-2 leading-tight"><a href="{{url}}">{{title}}</a></h2>
+                <h2 class="text-xl line-clamp-2 text-title mb-2 leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
             {{else}}
-                <h2 class="text-22 text-title leading-tight"><a href="{{url}}">{{title}}</a></h2>
+                <h2 class="text-xl text-title leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
                 <p class="pt-4 mb-2">{{excerpt words="20"}}</p>
             {{/if}}
         </div>
@@ -32,5 +32,5 @@
     </div>
 
     {{!-- Link --}}
-    <a href="{{url}}" class="absolute inset-0 z-3" aria-label="{{title}}"></a>
+    {{!-- <a href="{{url}}" class="absolute inset-0 z-3" aria-label="{{title}}"></a> --}}
 </div>

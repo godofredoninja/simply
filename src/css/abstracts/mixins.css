@@ -1,0 +1,8 @@
+/* @mixin heading-text {
+  color: #242424;
+  font-size: 4em;
+}
+
+h1, h2, h3 {
+  @include heading-text;
+} */

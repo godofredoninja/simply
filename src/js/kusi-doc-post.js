@@ -7,7 +7,7 @@ const setup = () => {
 
   // Search the titles in the post
   // Return if no title exists
-  const argTitles = ['h1', 'h2', 'h3']
+  const argTitles = ['h2', 'h3']
   const titles = markdown.querySelectorAll(argTitles.join(','))
 
   if (!titles.length) return
@@ -16,7 +16,7 @@ const setup = () => {
   const jsTableOfContent = document.querySelector('.js-table-content')
   const sidebar = document.querySelector('.js-sidebar-right')
 
-  if (sidebar) document.querySelector('.js-sidebar-wrap').classList.remove('hidden')
+  if (sidebar) sidebar.classList.add('lg:block')
 
   // Table of Content sidebar right
   function tableOfContent (link, el) {
@@ -27,9 +27,9 @@ const setup = () => {
     const tocList = document.createElement('li')
 
     if (el.closest('h3')) {
-      link.classList = 'py-1 pl-3 block text-xs hover:text-primary'
+      link.classList = 'py-2 px-3 docstoc block hover:text-primary'
     } else {
-      link.classList = 'py-2 block hover:text-primary'
+      link.classList = 'py-2 px-3 block hover:text-primary'
     }
 
     tocList.appendChild(link)

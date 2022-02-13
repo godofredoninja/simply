@@ -4,14 +4,47 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}archive-contact{{/contentFor}}
 
-<article class="container mx-auto py-12 relative">
-    {{#post}}
-        <header class="mx-auto max-w-740 mb-10 text-center">
-            <h1 class=" font-normal mb-8 text-xl text-gray-600">{{title}}</h1>
-            {{#if custom_excerpt}}<p class="text-3xl text-title font-semibold">{{custom_excerpt}}</p>{{/if}}
-        </header>
+{{#post}}
+<article class="post-body godo-canvas mx-auto py-vmin8">
+    <header class="text-center">
+        <h1 class=" font-normal mb-8 text-xl text-gray-600">{{title}}</h1>
+        {{#if custom_excerpt}}<p class="text-3xl text-title font-semibold">{{custom_excerpt}}</p>{{/if}}
+    </header>
 
-        {{!-- Content --}}
-        {{content}}
-    {{/post}}
+    {{!-- Content --}}
+    {{content}}
+    {{!-- <form
+        action="https://formspree.io/your@email.com"
+        class="mt-10 grid md:grid-cols-2 gap-6"
+        method="POST">
+
+        <input name="name" class="col-span-1" type="text" placeholder="Your Name" required>
+        <input name="email" class="col-span-1" type="email" placeholder="Your Email" required>
+        <textarea name="message" class="col-span-full" placeholder="Type Message" required></textarea>
+        <div class="col-span-full text-center"><button type="submit" class="button is-primary">Send Message</button></div>
+    </form> --}}
+
+    {{!-- phone Andress Email --}}
+    {{!-- <div class="grid md:grid-cols-3 gap-6 text-center mt-20 kg-width-wide">
+        <div class="flex flex-col items-center">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="18"></line></svg>
+            <h4 class="my-5 text-lg">PHONE</h4>
+            <p>+51 987 659 249</p>
+            <p>+51 01 424 0827</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <h4 class="my-5 text-lg">ADDRESS</h4>
+                <p>Parque de la Reserva, Jr. Madre de Dios, Cercado de Lima, Perú</p>
+        </div>
+
+        <div class="flex flex-col items-center">
+            <svg viewBox="0 0 24 24" width="64" height="64" stroke="currentColor" stroke-width="1" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <h4 class="my-5 text-lg">EMAIL</h4>
+            <p>hello@godofredo.ninja</p>
+            <p>test@godofredo.ninja</p>
+        </div>
+    </div> --}}
 </article>
+{{/post}}

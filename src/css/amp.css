@@ -1,0 +1,921 @@
+/* https://github.com/TryGhost/Ghost/blob/main/core/frontend/apps/amp/lib/views/amp.hbs */
+
+/* 01. Narmalize css && utilities
+/* ---------------------------------------------------------- */
+
+@import "normalize.css/normalize";
+@import "./amp/utilities.css";
+
+/* 02. Variables
+/* ---------------------------------------------------------- */
+
+/* font default page and titles */
+$primary-font: Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+
+/* font for content */
+$secondary-font: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+
+$header-height: 4rem;
+
+$primary-color: #292929;
+$secondary-color: #757575;
+$complementary-color: var(--ghost-accent-color);
+$title-color: #18181b;
+$sidenar-link-color: #292929;
+
+$text-gray-500: #757575;
+
+/* 03. extend
+/* ---------------------------------------------------------- */
+
+%primary-font {
+  font-family: $primary-font;
+}
+
+%secondary-font {
+  font-family: $secondary-font;
+}
+
+/* 04. Global
+/* ---------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @extend %primary-font;
+
+  color: $primary-color;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+a {
+  color: $complementary-color;
+  text-decoration: none;
+  word-break: break-word;
+
+  &:active,
+  &:hover {
+    outline: 0;
+  }
+}
+
+blockquote {
+  border-left: 4px solid $primary-color;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-left: -5px;
+  margin-right: 0;
+  padding-bottom: 2px;
+  padding-left: 1.25rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  object-fit: cover;
+  object-position: center;
+}
+
+figcaption {
+  @extend %primary-font;
+
+  color: $secondary-color;
+  display: block;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* 05.typography - Titles
+/* ---------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %primary-font;
+
+  color: $title-color;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.5rem 0 0;
+  word-break: break-word;
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.375rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1.125rem; }
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  margin: 1.25rem 0 0;
+}
+
+/* 06. <hr> <Mark>
+/* ---------------------------------------------------------- */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 1rem 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid #e2ecec;
+}
+
+mark {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* 07. Code and pre
+/* ---------------------------------------------------------- */
+
+$whitegrey: #e5eff5;
+$darkgrey: #2a3644;
+
+code,
+pre {
+  font-family: Menlo, Courier, monospace;
+  hyphens: none;
+  tab-size: 4;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+:not(pre) > code {
+  background: $whitegrey;
+  border-radius: 2px;
+  color: $darkgrey;
+  font-size: 1rem;
+  padding: 1px 6px;
+}
+
+pre {
+  background: $darkgrey;
+  border: 0;
+  color: $whitegrey;
+  font-size: 0.875rem;
+  line-height: 1.6em;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1.25rem;
+  border-radius: 8px;
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+/* 08. SVG
+/* ---------------------------------------------------------- */
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* 08. SVG
+/* ---------------------------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1.25rem 0 0;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  -webkit-overflow-scrolling: touch;
+
+  th,
+  td {
+    border: 1px solid #dfe2e5;
+    padding: 0.5rem 0.875rem;
+  }
+
+  tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+  th {
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+}
+
+/* 09. Header
+/* ---------------------------------------------------------- */
+
+.header {
+  box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07);
+}
+
+.logo-link {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* 10. Social Media
+/* ---------------------------------------------------------- */
+
+.social-media a {
+  display: inline-block;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  vertical-align: middle;
+  width: 2.5rem;
+}
+
+/* 11. Sidenav
+/* ---------------------------------------------------------- */
+
+.sidebar {
+  background: #fff;
+  width: 18rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 1.125rem 0 1.25rem;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  color: $sidenar-link-color;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+}
+
+.close-sidebar {
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.hamburgermenu {
+  background-color: transparent;
+  border: 0;
+  height: 3rem;
+  margin-right: -1rem;
+  padding: 0;
+  position: relative;
+  transition: transform 0.4s;
+  width: 3rem;
+  outline: none;
+
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 2px;
+    left: 0.875rem;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 1.25rem;
+
+    &:first-child {
+      transform: translate(0, -6px);
+    }
+
+    &:last-child {
+      transform: translate(0, 6px);
+    }
+  }
+}
+
+/* 12. Conten main
+/* ---------------------------------------------------------- */
+
+.main {
+  margin: 0 auto;
+  max-width: 42.5rem;
+}
+
+/* 13. Article
+/* ---------------------------------------------------------- */
+
+.article-body {
+  font-family: $secondary-font;
+  font-size: 1.125rem;
+  line-height: 1.7em;
+}
+
+.article-body > * {
+  margin-bottom: 1.5rem;
+}
+
+.article-body a:not(.kg-bookmark-container) {
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.article-body ul, .article-body ol {
+  padding-left: 1.25rem;
+}
+
+.article-body ul li, .article-body ol li {
+  margin-bottom: 5px;
+}
+
+/* 14. Buttons for Tag
+/* ---------------------------------------------------------- */
+
+.button-tags {
+  background-color: $complementary-color;
+  border-radius: 1.5625rem;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  margin: 0.3125rem;
+  padding: 0.3125rem 1.25rem;
+}
+
+/* 15. share
+/* ---------------------------------------------------------- */
+
+amp-social-share.custom-style {
+  background-color: #008080;
+  background-image: url("https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+amp-social-share.rounded {
+  border-radius: 10%;
+  background-size: 85%;
+}
+
+/* 16. Related Article
+/* ---------------------------------------------------------- */
+
+.story-link-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: $title-color;
+}
+
+.story-link-icon {
+  background-color: $complementary-color;
+  height: 2.5rem;
+  text-align: center;
+  width: 2.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* 17. Bookmark card
+/* ---------------------------------------------------------- */
+
+.kg-bookmark-container {
+  @extend %primary-font;
+}
+
+.kg-bookmark {
+  &-container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-content {
+    order: 1;
+    padding: 1.25rem;
+  }
+
+  &-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  &-description {
+    color: $secondary-color;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 0.75rem;
+  }
+
+  &-metadata {
+    align-items: center;
+    display: flex;
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+  }
+
+  &-icon {
+    margin-right: 5px;
+  }
+
+  &-author::after {
+    content: "•";
+    margin: 0 6px;
+  }
+
+  &-publisher {
+    color: inherit;
+  }
+}
+
+/* 18. Embed card
+/* ---------------------------------------------------------- */
+
+.kg-embed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 19 gallery Card
+/* ---------------------------------------------------------- */
+
+.kg-image-card img {
+  margin: auto;
+}
+
+.kg-gallery-card + .kg-gallery-card {
+  margin-top: 0.75em;
+}
+
+.kg-gallery-container {
+  position: relative;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image {
+  width: 100%;
+  height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 0.75em;
+}
+
+/* 20. Toggle Card
+/* ---------------------------------------------------------- */
+
+.kg-toggle-card-icon {
+  display: none;
+}
+
+.kg-toggle-content {
+  margin-top: 0.8rem;
+}
+
+/* 21. Prodct card
+/* ---------------------------------------------------------- */
+
+.kg-product-card-container {
+  background: transparent;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgb(124 139 154 / 25%);
+}
+
+.kg-product-card-description p {
+  margin-top: 1.5em;
+}
+
+.kg-product-card-description ul {
+  margin-left: 24px;
+}
+
+.kg-product-card-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.kg-product-card-rating-star {
+  height: 28px;
+  width: 20px;
+  margin-right: 2px;
+}
+
+.kg-product-card-rating-star svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.15;
+}
+
+.kg-product-card-rating-active.kg-product-card-rating-star svg {
+  opacity: 1;
+}
+
+/* 22. ntf card
+/* ---------------------------------------------------------- */
+
+.kg-nft-card-container {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  text-decoration: none;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  box-shadow: 0 2px 6px -2px rgb(0 0 0 / 10%), 0 0 1px rgb(0 0 0 / 40%);
+  width: 100%;
+  max-width: 512px;
+  color: #15212A;
+  background: #fff;
+  border-radius: 5px;
+  transition: none;
+  margin: 0 auto;
+}
+
+.kg-nft-metadata {
+  padding: 2.0rem;
+}
+
+.kg-nft-image-container {
+  position: relative;
+}
+
+.kg-nft-image {
+  display: flex;
+  border-radius: 5px 5px 0 0;
+}
+
+.kg-nft-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.kg-nft-header h4.kg-nft-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0;
+  color: #15212A;
+}
+
+.kg-nft-header amp-img {
+  max-width: 114px;
+  max-height: 26px;
+}
+
+.kg-nft-opensea-logo {
+  margin-top: 2px;
+  width: 100px;
+}
+
+.kg-nft-creator {
+  font-family: inherit;
+  color: #95A1AD;
+}
+
+.kg-nft-creator span {
+  font-weight: 500;
+  color: #15212A;
+}
+
+.kg-nft-card p.kg-nft-description {
+  font-size: 1.4rem;
+  line-height: 1.4em;
+  margin: 2.0rem 0 0;
+  color: #222;
+}
+
+/* 23. Button Card
+/* ---------------------------------------------------------- */
+
+.kg-button-card {
+  display: flex;
+  position: static;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.kg-btn {
+  display: flex;
+  position: static;
+  align-items: center;
+  padding: 0 2.0rem;
+  height: 4.0rem;
+  line-height: 4.0rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.kg-btn:hover {
+  opacity: 0.85;
+}
+
+.kg-btn-accent {
+  background-color: var(--ghost-accent-color, #1292EE);
+  color: #fff;
+}
+
+/* 24. callout card
+/* ---------------------------------------------------------- */
+
+.kg-callout-card {
+  display: flex;
+  padding: 20px 28px;
+  border-radius: 3px;
+}
+
+.kg-callout-card-grey {
+  background: rgba(124, 139, 154, 0.13);
+}
+
+.kg-callout-card-white {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+}
+
+.kg-callout-card-blue {
+  background: rgba(33, 172, 232, 0.12);
+}
+
+.kg-callout-card-green {
+  background: rgba(52, 183, 67, 0.12);
+}
+
+.kg-callout-card-yellow {
+  background: rgba(240, 165, 15, 0.13);
+}
+
+.kg-callout-card-red {
+  background: rgba(209, 46, 46, 0.11);
+}
+
+.kg-callout-card-pink {
+  background: rgba(225, 71, 174, 0.11);
+}
+
+.kg-callout-card-purple {
+  background: rgba(135, 85, 236, 0.12);
+}
+
+.kg-callout-card-accent {
+  background: var(--ghost-accent-color);
+  color: #fff;
+}
+
+.kg-callout-card-accent a {
+  color: #fff;
+}
+
+.kg-callout-emoji {
+  padding-right: 16px;
+  line-height: 1.3;
+  font-size: 1.25em;
+}
+
+/* 25. Header Card
+/* ---------------------------------------------------------- */
+
+.kg-header-card {
+  padding: 6em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.kg-header-card.kg-size-small {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.kg-header-card.kg-size-large {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+.kg-header-card.kg-width-full {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.kg-header-card.kg-align-left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.kg-header-card.kg-style-dark {
+  background: #15171a;
+  color: #ffffff;
+}
+
+.kg-header-card.kg-style-light {
+  color: #15171a;
+  border: 1px solid rgba(124, 139, 154, 0.25);
+  border-width: 1px 0;
+}
+
+.kg-header-card.kg-style-accent {
+  background-color: var(--ghost-accent-color);
+}
+
+.kg-header-card.kg-style-image {
+  background-color: #e7e7eb;
+  background-size: cover;
+  background-position: center center;
+}
+
+.kg-header-card h2 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+.kg-header-card h2 strong {
+  font-weight: 800;
+}
+
+.kg-header-card.kg-size-small h2 {
+  font-size: 3em;
+}
+
+.kg-header-card.kg-size-large h2 {
+  font-size: 5em;
+}
+
+.kg-header-card h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+.kg-header-card h3 strong {
+  font-weight: 600;
+}
+
+.kg-header-card.kg-size-small h3 {
+  font-size: 1em;
+}
+
+.kg-header-card.kg-size-large h3 {
+  font-size: 1.5em;
+}
+
+.kg-header-card:not(.kg-style-light) h2,
+.kg-header-card:not(.kg-style-light) h3 {
+  color: #ffffff;
+}
+
+.kg-header-card a.kg-header-card-button {
+  display: flex;
+  position: static;
+  align-items: center;
+  padding: 0 1.2em;
+  height: 2.4em;
+  line-height: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+  background-color: var(--ghost-accent-color);
+  color: #ffffff;
+  margin: 1.75em 0 0;
+}
+
+.kg-header-card a.kg-header-card-button:hover {
+  opacity: 0.85;
+}
+
+.kg-header-card.kg-size-large a.kg-header-card-button {
+  margin-top: 2em;
+}
+
+.kg-header-card.kg-size-small a.kg-header-card-button {
+  margin-top: 1.5em;
+}
+
+.kg-header-card.kg-style-image a.kg-header-card-button,
+.kg-header-card.kg-style-dark a.kg-header-card-button {
+  background: #ffffff;
+  color: #15171a;
+}
+
+.kg-header-card.kg-style-accent a.kg-header-card-button {
+  background: #ffffff;
+  color: var(--ghost-accent-color);
+}
+
+/* 26. Audio Card
+/* ---------------------------------------------------------- */
+
+.kg-audio-card {
+  display: flex;
+  width: 100%;
+  box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+}
+
+.kg-audio-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  background: transparent;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 3px 0 0 3px;
+}
+
+.kg-audio-thumbnail.placeholder {
+  background: var(--ghost-accent-color);
+}
+
+.kg-audio-thumbnail.placeholder svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.kg-audio-player-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  --seek-before-width: 0%;
+  --volume-before-width: 100%;
+  --buffered-width: 0%;
+}
+
+.kg-audio-title {
+  width: 100%;
+  padding: 8px 12px 0;
+  border: none;
+  font-family: inherit;
+  font-size: 1.1em;
+  font-weight: 700;
+  background: transparent;
+}
+
+.kg-audio-player {
+  display: none;
+}
+
+.kg-width-full.kg-card-hascaption {
+  display: grid;
+  grid-template-columns: inherit;
+}
+

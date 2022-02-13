@@ -26,10 +26,15 @@ const merge = require('merge-stream')
 const cssnano = require('cssnano')
 const autoprefixer = require('autoprefixer')
 const comments = require('postcss-discard-comments')
+const simpleExtend = require('postcss-extend')
 const tailwindcss = require('tailwindcss')
+// const lol = require('postcss-advanced-variables')
+const postImport = require('postcss-import')
+const precss = require('precss')
+const postNesting = require('tailwindcss/nesting') // postcss-nested
 
 // sass
-const sass = require('gulp-sass')(require('sass'))
+// const sass = require('gulp-sass')(require('sass'))
 
 // environment
 const isProduction = process.argv.includes('--production') || process.env.NODE_ENV === 'production'
@@ -68,21 +73,35 @@ const handleError = done => {
 }
 
 // hbs
-function hbs (done) {
-  pump([
-    src(['*.hbs', 'partials/**/*.hbs']),
-    livereload()
-  ], handleError(done))
-}
+// function hbs (done) {
+//   pump([
+//     src(['*.hbs', 'partials/**/*.hbs']),
+//     livereload()
+//   ], handleError(done))
+// }
+
+const postcssPluginsDev = [
+  postImport(),
+  simpleExtend(),
+  precss(),
+  postNesting(),
+  tailwindcss()
+]
+
+const postcssPluginsPro = [
+  autoprefixer(),
+  cssnano(),
+  comments({ removeAll: true })
+]
 
 // style
 function styles (done) {
   pump([
-    src('src/sass/*.sass'),
+    src('src/css/*.css'),
     gulpif(!isProduction, sourcemaps.init()),
-    sass({ outputStyle: 'expanded' }).on('error', sass.logError),
-    gulpif(!isProduction, postcss([tailwindcss()])),
-    gulpif(isProduction, postcss([tailwindcss(), autoprefixer(), cssnano(), comments({ removeAll: true })])),
+    // sass({ outputStyle: 'expanded' }).on('error', sass.logError),
+    gulpif(!isProduction, postcss(postcssPluginsDev)),
+    gulpif(isProduction, postcss(postcssPluginsDev.concat(postcssPluginsPro))),
     gulpif(isProduction, header(BuildComments)),
     gulpif(!isProduction, sourcemaps.write('./map')),
     dest('assets/styles'),
@@ -169,16 +188,18 @@ function zipper (done) {
   ], handleError(done))
 }
 
-const cssWatcher = () => watch('src/sass/**', styles)
+const cssWatcher = () => watch('src/css/**', styles)
 const jsWatcher = () => watch(['src/js/**', '*.js'], scripts)
 const imgWatcher = () => watch('src/img/**', images)
-const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
+// const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs)
+const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], styles)
 
 const compile = parallel(styles, scripts, images)
 const watcher = parallel(cssWatcher, jsWatcher, imgWatcher, hbsWatcher)
 
 const build = series(clean, compile)
 const production = series(build, copyAmpStyle, copyMainStyle, zipper)
+// const production = series(build)
 const development = series(build, serve, watcher)
 
 module.exports = { build, development, production }

@@ -6,12 +6,13 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article is-article-wide{{/contentFor}}
 
-<article class="post mb-10 pt-8 lg:pt-10 relative">
+<article class="post py-vmin8 relative">
+    <header class="post-header godo-canvas">
     {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
     {{#if feature_image}}
-    <figure class="post-image block mx-auto mt-12 max-w-1000">
+    <figure class="post-image kg-width-wide w-full mt-12 ">
         <img class="mx-auto w-full simply-zoom"
             srcset="{{img_url feature_image size="s"}} 300w,
                     {{img_url feature_image size="m"}} 600w,
@@ -27,6 +28,7 @@
         {{#if feature_image_caption}}<figcaption class="post-figcaption">{{feature_image_caption}}</figcaption>{{/if}}
     </figure>
     {{/if}}
+    </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}
     {{> "article/article-body"}}

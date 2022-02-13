@@ -4,7 +4,7 @@
   if (!nextElement) return
 
   // Post Feed element
-  const feedElement = document.querySelector('.feed-entry-content')
+  const feedElement = document.querySelector('.js-feed-entry')
   if (!feedElement) return
 
   const buffer = 300
@@ -24,8 +24,13 @@
     }
 
     // append contents
-    const postElements = this.response.querySelector('.feed-entry-wrap')
-    feedElement.appendChild(postElements)
+    const postElements = this.response.querySelectorAll('.js-story')
+
+    postElements.forEach(function (item) {
+      feedElement.appendChild(document.importNode(item, true))
+    })
+
+    // feedElement.appendChild(postElements)
 
     // push state
     // window.history.pushState(null, document.title, nextElement.href)

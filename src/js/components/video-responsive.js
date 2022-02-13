@@ -16,10 +16,11 @@ export default () => {
   if (!iframes.length) return
 
   iframes.forEach(el => {
-    const parentForVideo = document.createElement('div')
-    parentForVideo.className = 'video-responsive'
-    el.parentNode.insertBefore(parentForVideo, el)
-    parentForVideo.appendChild(el)
+    el.classList.add('aspect-video', 'w-full')
+    // const parentForVideo = document.createElement('div')
+    // parentForVideo.className = 'video-responsive'
+    // el.parentNode.insertBefore(parentForVideo, el)
+    // parentForVideo.appendChild(el)
     el.removeAttribute('height')
     el.removeAttribute('width')
   })

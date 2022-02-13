@@ -1,0 +1,32 @@
+/* Card captions
+/* ---------------------------------------------------------- */
+
+.kg-width-full {
+  grid-column: full-start / full-end;
+
+  img {
+    width: 100%;
+  }
+
+  &.kg-card-hascaption {
+    display: grid;
+    grid-template-columns: inherit;
+  }
+
+  &.kg-card-hascaption img {
+    grid-column: 1 / -1;
+  }
+
+  &.kg-card-hascaption figcaption {
+    grid-column: main-start / main-end;
+  }
+}
+
+.kg-width-wide {
+  grid-column: wide-start / wide-end;
+
+  &.kg-card-hascaption img {
+    grid-column: wide-start / wide-end;
+  }
+}
+

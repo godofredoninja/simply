@@ -1,4 +1,4 @@
-<div class="nav-mob fixed inset-0 pt-16 bg-header h-screen z-10 w-full text-center overflow-y-auto lg:hidden">
+<div class="nav-mob fixed inset-0 pt-16 header-bg h-screen z-10 w-full text-center overflow-y-auto lg:hidden">
     <div class="nav-mob-wrap absolute inset-0 top-16 pt-5 flex flex-col">
 
         {{#unless @member}}
@@ -9,12 +9,12 @@
         {{/unless}}
 
         {{!-- Light and Dark Mode --}}
-        <div class="py-4 justify-center md:hidden">
+        {{!-- <div class="py-4 justify-center md:hidden">
             <a role="button" class="js-dark-mode button is-white" aria-label="Dark and Light Mode">
                 <svg class="icon icon--moon m-0" style="margin-right:calc(-0.5em - 1px)"><use xlink:href="#icon-moon"></use></svg>
                 <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
             </a>
-        </div>
+        </div> --}}
 
         {{!-- Navigation for Mobile --}}
         {{#if @site.navigation}}<div class="py-4 flex-auto">{{navigation navigationMobile=true}}</div>{{/if}}

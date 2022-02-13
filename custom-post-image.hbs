@@ -7,16 +7,12 @@
 {{#contentFor "special_body_class"}}is-article has-cover is-head-transparent{{/contentFor}}
 
 <article class="post mb-10 relative">
-    <div class="postImage relative simply-hero-cover bg-dark min-h-lg lg:min-h-screen py-24">
-        {{!-- Featured Media - partials/components/media-cover.hbs --}}
-        {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+    <header class="post-header postImage relative simply-hero-cover bg-dark min-h-lg lg:min-h-screen py-16 flex flex-col justify-center">
 
-        <header class="post-header mx-auto max-w-740 px-4 p-24 relative z-3">
+        <div class="mx-auto godo-canvas py-vmin8 relative z-3">
             {{#if primary_tag}}
             <div class="mb-3 text-white tracking-wider text-sm">
-                {{#primary_tag}}
-                <a class="uppercase hover:underline" href="{{url}}">{{name}}</a>
-                {{/primary_tag}}
+                {{#primary_tag}}<a class="uppercase hover:underline" href="{{url}}">{{name}}</a>{{/primary_tag}}
             </div>
             {{/if}}
 
@@ -25,8 +21,11 @@
 
             {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
             {{> "components/author-meta"}}
-        </header>
-    </div>
+        </div>
+
+        {{!-- Featured Media - partials/components/media-cover.hbs --}}
+        {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+    </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}
     {{> "article/article-body"}}

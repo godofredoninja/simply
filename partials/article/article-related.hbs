@@ -3,20 +3,15 @@
 {{#if post_related}}
 <div class="post-related bg-gray-150 py-10">
     <div class="container mx-auto">
-        <div class="max-w-1100 mx-auto">
-            <div class="row">
+        <div class="max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <h3 class="text-title text-32 col-span-full mb-10 text-center">
+                {{{t "Related <span class='text-primary'>Articles</span>"}}}
+            </h3>
 
-                <div class="col s12 mb-12 text-center">
-                    <h3 class="text-title text-32">{{{t "Related <span class='text-primary'>Articles</span>"}}}</h3>
-                </div>
-
-                {{#foreach post_related}}
-                <div class="col s12 m6 l4 flex">
-                    {{!-- Meta - partials/story/story-card-small.hbs --}}
-                    {{> "story/story-card-small"}}
-                </div>
-                {{/foreach}}
-            </div>
+            {{!-- Meta - partials/story/story-card-small.hbs --}}
+            {{#foreach post_related}}
+                {{> "story/story-card-small"}}
+            {{/foreach}}
         </div>
     </div>
 </div>

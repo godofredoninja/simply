@@ -263,7 +263,7 @@ Inside the file you have to delete all the content and add all the code that I l
 
 ```hbs
 <div id="post-comments" class="post-comments js-comments bg-gray-200 pt-4 pb-8">
-    <div class="mx-auto px-4 max-w-1000">
+    <div class="mx-auto px-4 max-w-5xl">
         <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
              <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
         </div>

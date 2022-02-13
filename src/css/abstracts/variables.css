@@ -1,0 +1,32 @@
+/* Colors
+/* ---------------------------------------------------------- */
+
+$primary-color: #0abe51;
+$dark-blue-500: #102b7b;
+
+$gray-100: #fafafa;
+$gray-150: #f8fafc;
+$gray-200: #F3F5F9;
+$gray-300: #e0e0e0;
+$gray-400: #bdbdbd;
+$gray-500: #757575;
+$gray-600: #52525B;
+$gray-700: #616161;
+$gray-800: #292929;
+$gray-900: #18181B;
+
+$primary-text-color: $gray-800;
+$primary-text-color-title: $gray-900;
+
+/* Header
+/* ---------------------------------------------------------- */
+
+$header-height: 4rem;
+
+/* Footer
+/* ---------------------------------------------------------- */
+
+$footer-bg-color: #111;
+$footer-color: hsla(0, 0%, 100%, .6);
+$footer-color-input: #bbb;
+$footer-bg-input-color: rgba(97, 97, 97, 0.25);

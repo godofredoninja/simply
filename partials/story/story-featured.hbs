@@ -1,27 +1,25 @@
 <article class="godo-f-story relative px-4 overflow-hidden py-vw8 bg-dark w-full flex-none">
     <div class="max-w-1100 mx-auto relative z-3">
-        <div class="row">
-            <div class="col s12 m10 l8">
-                <p class="mb-4 text-base font-semibold uppercase text-amber-400">{{t "featured story"}}</p>
-                <h2 class="relative text-32 md:text-5xl font-semibold leading-tight mb-4"><a href="{{url}}" class="text-white">{{title}}</a></h2>
-                <p class="godo-f-story-excerpt mb-5 text-white font-normal lineClamp-2 text-xl">{{excerpt words="50"}}</p>
-                {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-                {{> "components/datetime" class="godo-f-story-date mb-5 text-base text-white opacity-80"}}
+        <div class="lg:w-2/3">
+            <p class="mb-4 text-base font-semibold uppercase text-amber-400">{{t "featured story"}}</p>
+            <h2 class="relative text-32 md:text-5xl font-semibold leading-tight mb-4"><a href="{{url}}" class="text-white">{{title}}</a></h2>
+            <p class="godo-f-story-excerpt mb-5 text-white font-normal line-clamp-2 text-xl">{{excerpt words="50"}}</p>
+            {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+            {{> "components/datetime" class="godo-f-story-date mb-5 text-base text-white opacity-80"}}
 
-                <a href="{{url}}" class="button is-primary font-medium">{{t "Read post"}}</a>
-            </div>
+            <a href="{{url}}" class="button is-primary font-medium">{{t "Read post"}}</a>
         </div>
     </div>
 
     {{#if feature_image}}
-    <img class="u-image absolute inset-0"
+    <img class="inset-image"
         srcset="{{img_url feature_image size="s"}} 300w,
                 {{img_url feature_image size="m"}} 600w,
                 {{img_url feature_image size="l"}} 1000w,
                 {{img_url feature_image size="xl"}} 2000w"
         src="{{img_url feature_image size="m"}}"
         sizes="auto"
-        alt="{{title}}"
+        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
     />
     {{/if}}
     <div class="u-primaryGradient absolute inset-0 z-2 opacity-70"></div>

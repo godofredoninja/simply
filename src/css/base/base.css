@@ -1,0 +1,114 @@
+html {
+  @apply text-base;
+}
+
+body {
+  @apply
+    /* bg-base */
+    font-normal
+    leading-normal
+    /* text-base */
+    text-global;
+
+  color: var(--text-base);
+  background-color: var(--bg-base) ;
+  letter-spacing: 0;
+  margin: 0 auto;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  /* &:focus,
+  &:active,
+  &:hover {
+    outline: 0;
+  } */
+}
+
+/* 1. Blockquote
+/* ---------------------------------------------------------- */
+
+blockquote:not([class]) {
+  @apply text-2xl;
+
+  border-left: 3px solid currentColor;
+  line-height: 1.5;
+  /* margin: 2rem 0 2rem -1.5rem; */
+  /* padding-bottom: .125rem; */
+  padding-left: 4vmin;
+  margin-left: -.25rem;
+
+  /* p:first-of-type {
+    margin-top: 0;
+  } */
+
+  @media (min-width: theme("screens.sm")) {
+    font-size: 1.5rem;
+    margin-left: -4vmin;
+  }
+}
+
+/* 2. cite - figcamption - figure
+/* ---------------------------------------------------------- */
+
+cite,
+figcaption {
+  @apply
+    block
+    font-medium
+    text-center
+    text-gray-500
+    text-sm;
+
+  @extend %font-sans;
+
+  font-feature-settings: "liga" on, "lnum" on;
+  line-height: 1.4em;
+  padding: 1rem 1.25rem 0;
+  /* width: 100%; */
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+cite {
+  text-align: left;
+}
+
+/* 3. hr
+/* ---------------------------------------------------------- */
+
+hr {
+  border-top: 1px solid var(--border-color);
+  box-sizing: content-box;
+  margin: 2rem 0;
+}
+
+/* 4. Image
+/* ---------------------------------------------------------- */
+
+img {
+  vertical-align: middle;
+  width: auto;
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* 5. List ol - ul
+/* ---------------------------------------------------------- */
+
+/* 6. Mark
+/* ---------------------------------------------------------- */
+
+mark {
+  @apply bg-mark;
+
+  color: inherit;
+}

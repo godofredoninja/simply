@@ -1,9 +1,0 @@
-<aside class="sidebar col s12 l4 flex flex-col justify-start mt-12 lg:mt-0">
-    <div class="flex flex-col flex-1">
-
-        {{#get "posts" limit="3" filter="tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]+id:-{{comment_id}}" as |sidebar_latest_post| }}
-            {{> "sidebar/sidebar-post-card" widgetTitle=(t "Latest Posts") widgetPosts=sidebar_latest_post }}
-        {{/get}}
-
-    </div>
-</aside>

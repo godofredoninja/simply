@@ -12,46 +12,39 @@
 </header>
 {{/post}}
 
+{{#get "tags" limit="18" filter="visibility:public" include="count.posts" order="count.posts desc"}}
 <section class="container mx-auto py-8 lg:py-16">
-    <div class="max-w-1100 mx-auto">
+    <div class="max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        {{#get "tags" limit="18" filter="visibility:public" include="count.posts" order="count.posts desc"}}
+        {{#foreach tags}}
+        <article class="topic-story relative bg-dark overflow-hidden rounded-md" {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>
+            {{#if feature_image}}
+            <a href="{{url}}">
+                <img class="inset-image blur-up lazyload"
+                    src="{{img_url feature_image size="m"}}"
+                    srcset="{{img_url feature_image size="xxs"}}"
+                    data-srcset="{{img_url feature_image size="s"}} 300w,
+                                {{img_url feature_image size="m"}} 600w"
+                    data-sizes="(max-width: 1000px) 400px, 600px"
+                    alt="{{name}}"
+                />
+            </a>
+            <div class="absolute inset-0 z-2 topic-bg-gradient"></div>
+            {{/if}}
 
-        <div class="row">
+            <header class="relative text-white z-4 text-center w-full px-4 py-16 lg:px-6">
+                <div class="text-xs uppercase mb-3 opacity-90 tracking-widest font-medium">{{plural count.posts empty=(t "No Stories") singular=(t "1 Story") plural=(t "% Stories")}}</div>
+                <h2 class="text-2xl capitalize font-semibold tracking-wide"><a href="{{url}}">{{name}}</a></h2>
+            </header>
 
-            {{#foreach tags}}
-            <div class="col s12 m6 l4 mb-8 flex">
-                <article class="topic-story relative bg-dark overflow-hidden rounded-md w-full" {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>
-                    {{#if feature_image}}
-                    <a href="{{url}}">
-                        <img class="image-inset blur-up lazyload"
-                            src="{{img_url feature_image size="m"}}"
-                            srcset="{{img_url feature_image size="xxs"}}"
-                            data-srcset="{{img_url feature_image size="s"}} 300w,
-                                        {{img_url feature_image size="m"}} 600w"
-                            data-sizes="(max-width: 1000px) 400px, 600px"
-                            alt="{{name}}"
-                        />
-                    </a>
-                    <div class="absolute inset-0 z-2 topic-bg-gradient"></div>
-                    {{/if}}
-
-                    <header class="relative text-white z-4 text-center w-full px-4 py-16 lg:px-6">
-                        <div class="text-xs uppercase mb-3 opacity-90 tracking-widest font-medium">{{plural count.posts empty=(t "No Stories") singular=(t "1 Story") plural=(t "% Stories")}}</div>
-                        <h2 class="text-2xl capitalize font-semibold tracking-wide"><a href="{{url}}">{{name}}</a></h2>
-                    </header>
-
-                    <a href="{{url}}" class="absolute inset-0 z-4" aria-label="{{name}}"></a>
-                </article>
-            </div>
-            {{/foreach}}
-
-        </div>
-
-        {{/get}}
+            <a href="{{url}}" class="absolute inset-0 z-4" aria-label="{{name}}"></a>
+        </article>
+        {{/foreach}}
 
     </div>
 </section>
+
+{{/get}}
 
 <style>
 .topic-header {background: url({{asset "images/bg-setup.svg"}}) bottom no-repeat,linear-gradient(60deg,#2e2ea2,#138395)}

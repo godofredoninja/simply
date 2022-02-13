@@ -1,0 +1,37 @@
+
+.hh-author-name > a:hover {
+  color: var(--gray-900);
+  text-decoration: underline;
+}
+
+/* Story card small
+/* ---------------------------------------------------------- */
+
+/* .storySmall {
+  background: var(--story-small-bg);
+  border: 1px solid rgba(0, 0, 0, .04);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 1px 7px rgba(0, 0, 0, .05);
+} */
+
+/* Story grid card
+/* ---------------------------------------------------------- */
+
+.ss1 {
+  .story-title {
+    @apply lg:text-4xl;
+  }
+  .story-image {
+    @apply lg:col-span-2 lg:h-96 lg:pt-0;
+  }
+}
+
+.ss2 {
+  .story-image {
+    @apply lg:h-64;
+  }
+  .story-title {
+    @apply lg:text-3xl;
+  }
+}
+

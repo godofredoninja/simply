@@ -1,0 +1,32 @@
+.kg-card {
+  @extend %font-sans;
+}
+
+.kg-card:not(.kg-callout-card) {
+  @apply text-base;
+}
+
+/* Add extra margin before/after any cards,
+except for when immediately preceeded by a heading */
+.post-body :not(.kg-card):not([id]) + .kg-card {
+  margin-top: 6vmin;
+  margin-bottom: 0;
+}
+
+.post-body .kg-card + :not(.kg-card) {
+  margin-top: 6vmin;
+  margin-bottom: 0;
+}
+
+/* This keeps small embeds centered */
+.kg-embed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* This keeps small iamges centered */
+.kg-image-card img {
+  margin: auto;
+}

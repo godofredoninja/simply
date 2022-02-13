@@ -8,15 +8,15 @@
     </div>
 </header>
 
-<div class="site-post feed-entry-content container mx-auto pb-10">
-    <div class="feed-entry-wrap max-w-740 mx-auto">
+<div class="site-post container mx-auto pb-10">
+    <div class="feed-entry-wrap max-w-3xl mx-auto">
 
         {{#foreach posts}}
         <article class="archive-post archive-date-{{date format="M"}}">
             <div class="archive-label text-primary px-6 mt-4 mb-2 text-2xl font-bold capitalize">{{date format="MMMM YYYY"}}</div>
             <a class="archive-link px-6 block text-title hover:text-dark hover:bg-amber-300 rounded" href="{{url}}">
-                <div class="border-t border-gray-200 py-6">
-                    <h2 class="archive-title text-xl md:text-2xl font-bold">{{title}}</h2>
+                <div class="border-t border-gray-200 py-4">
+                    <h2 class="archive-title text-xl font-bold">{{title}}</h2>
                     {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
                     {{> "components/datetime" class="mt-2 text-gray-500 text-sm"}}
                 </div>
@@ -27,7 +27,7 @@
 </div>
 
 {{!-- https://forum.ghost.org/t/monthly-archive-index-pages/12110/2 --}}
-
+{{#contentFor "header"}}
 <style>
     .archive-date-1 + .archive-date-1 .archive-label,
     .archive-date-2 + .archive-date-2 .archive-label,
@@ -44,3 +44,4 @@
         display: none;
     }
 </style>
+{{/contentFor}}

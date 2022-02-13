@@ -6,17 +6,15 @@
 
 {{#is "paged"}}
 
-<div class="site-post feed-entry-content container mx-auto pt-12">
-    <div class="feed-entry-wrap max-w-1100 mx-auto">
-        <div class="row">
-            {{#foreach posts}}
-                {{#has number="7, 8"}}
-                    <div class="col s12 m6 ss2">{{> "story/story-grid"}}</div>
-                {{else}}
-                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
-                {{/has}}
-            {{/foreach}}
-        </div>
+<div class="site-post container mx-auto pt-12">
+    <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-6">
+        {{#foreach posts}}
+            {{#has number="7, 8"}}
+                {{> "story/story-grid" story_class="ss2 lg:col-span-6"}}
+            {{else}}
+                {{> "story/story-grid" story_class="lg:col-span-4"}}
+            {{/has}}
+        {{/foreach}}
     </div>
 </div>
 
@@ -29,7 +27,7 @@
         {{#foreach posts limit="1"}} {{> "home/home-first-post"}} {{/foreach}}
 
         {{!-- Post small - partials/home/home-small-post.hbs --}}
-        <div class="homeHero-smallCardWrap flex flex-col md:w-3/6 lg:w-full">
+        <div class="homeHero-smallCardWrap flex flex-col md:w-3/6 lg:w-full lg:max-w-sm">
             {{#foreach posts from="2" to="4"}} {{> "home/home-small-post"}} {{/foreach}}
         </div>
 
@@ -38,19 +36,17 @@
     </div>
 </section>
 
-<div class="site-post feed-entry-content container mx-auto pt-12">
-    <div class="feed-entry-wrap max-w-1100 mx-auto">
-        <div class="row">
-            {{#foreach posts from="6" to="14"}}
-                {{#has number="12, 13"}}
-                    <div class="col s12 m6 ss2">{{> "story/story-grid" }}</div>
-                {{else has number="14"}}
-                    <div class="col s12 m6 l12 ss1">{{> "story/story-grid"}}</div>
-                {{else}}
-                    <div class="col s12 m6 l4">{{> "story/story-grid"}}</div>
-                {{/has}}
-            {{/foreach}}
-        </div>
+<div class="site-post container mx-auto py-vmin8">
+    <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-6">
+        {{#foreach posts from="6" to="14"}}
+            {{#has number="12, 13"}}
+                {{> "story/story-grid" story_class="ss2 lg:col-span-6"}}
+            {{else has number="14"}}
+                {{> "story/story-grid" story_class="ss1 grid lg:col-span-full lg:grid-cols-3 gap-6"}}
+            {{else}}
+                {{> "story/story-grid" story_class="lg:col-span-4"}}
+            {{/has}}
+        {{/foreach}}
     </div>
 </div>
 

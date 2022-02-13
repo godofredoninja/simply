@@ -1,11 +1,11 @@
-<div class="hh flex items-center relative z-4 flex-auto leading-snug overflow-hidden">
+<div class="hh flex items-center flex-auto relative leading-snug z-4">
+
     {{#unless hide_avatar}}
-    <ul class="hh-author flex flex-wrap flex-none mr-3">
+    <ul class="flex flex-wrap flex-none mr-3 -space-x-2">
         {{#foreach authors}}
-        <li class="hh-author-item realtive">
-            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}" class="relative block avatar {{#is "post"}}is-45x45{{/is}}">
-                <img
-                    class="object-cover rounded-full h-full w-full"
+        <li>
+            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}">
+                <img class="object-cover rounded-full {{#is "post"}}h-10 w-10{{else}}h-9 w-9{{/is}}"
                     src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
                     alt="{{t "Go to the profile of "}} {{name}}"
                     width="36"
@@ -17,9 +17,9 @@
     </ul>
     {{/unless}}
 
-    <div class="hh-right flex-auto overflow-hidden">
-        <div class="hh-author-name text-sm noWrapWithEllipsis">
-        {{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors}}{{/has}}
+    <div class="flex-auto overflow-hidden">
+        <div class="hh-author-name text-sm truncate">
+        {{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors class="false"}}{{/has}}
         </div>
 
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}

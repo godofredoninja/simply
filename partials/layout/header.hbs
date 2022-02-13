@@ -1,4 +1,4 @@
-<header class="header bg-header w-full text-sm flex items-center sticky top-0 z-20">
+<header class="header js-header h-16 w-full text-sm flex items-center sticky top-0 z-20">
     <div class="header-wrap mx-auto flex items-center flex-auto px-4 w-full max-w-extreme">
         {{!-- Logo --}}
         <div class="header-left mr-5 flex flex-none items-center">
@@ -12,7 +12,7 @@
                     <img src="{{img_url @site.logo size="m"}}" class="header-logo-img max-h-8 logo-default" alt="{{@site.title}}" width="115" height="30"/>
                     {{!-- <img src="{{asset "images/logo-dark-mode.png"}}" class="header-logo-img max-h-8 hidden logo-dark-mode" alt="" width="115" height="30"/> --}}
                 {{else}}
-                    <span class="text-2xl font-bold">{{@site.title}}</span>
+                    <span class="text-3xl font-bold text-logo">{{@site.title}}</span>
                 {{/if}}
             </a>
         </div>
@@ -26,15 +26,16 @@
             {{/if}}
         {{/if}}
 
-        <div class="header-right flex-none flex justify-end items-center u-menu-color">
+        <div class="header-right flex-none flex justify-end items-center">
             {{!-- Light and Dark Mode --}}
-            <a role="button" class="js-dark-mode button is-white items-center hidden mr-2 md:flex" aria-label="Dark and Light Mode">
+            <a role="button" class="js-dark-mode button is-white items-center mr-2" aria-label="Dark and Light Mode">
                 <svg class="icon icon--moon m-0" style="margin-right:calc(-0.5em - 1px)"><use xlink:href="#icon-moon"></use></svg>
                 <svg class="icon icon--sunny m-0 hidden" style="margin-left:calc(-0.5em - 1px)"><use xlink:href="#icon-sunny"></use></svg>
             </a>
 
             {{!-- Toggle Searcg --}}
             <a href="javascript:;"
+                role="button"
                 aria-label="Toggle Search"
                 class="js-modal-button godo-tracking hidden button is-white mr-2"
                 data-target="modal-search"
@@ -50,7 +51,7 @@
             {{> "layout/account-menu"}}
 
             {{!-- Toggle Menu --}}
-            <div class="js-menu-toggle menu-burger button is-white relative ml-2 lg:hidden"><span></span><span></span><span></span></div>
+            <a href="javascript:;" role="button" aria-label="Show Navigation Menu" class="js-menu-toggle menu-burger button is-white relative lg:hidden"><span></span><span></span><span></span></a>
         </div>
     </div>
 </header>

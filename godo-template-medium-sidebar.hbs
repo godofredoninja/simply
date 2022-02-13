@@ -9,12 +9,12 @@
         <div class="text-white md:pr-5 flex-none text-center md:text-left md:max-w-md lg:max-w-xl">
             <h1 class="text-5xl pt-5 font-serif lg:text-6xl">{{title}}</h1>
             {{#if custom_excerpt}}<p class="mt-6 text-22">{{custom_excerpt}}</p>{{/if}}
-            {{#unless @member}}<a data-portal="account/plans" class="button is-medium is-primary gh-portal-close mt-12" href="#">{{t "Get Started"}}</a>{{/unless}}
+            {{#unless @member}}<a data-portal="account/plans" class="button is-medium is-primary mt-12" href="#">{{t "Get Started"}}</a>{{/unless}}
         </div>
 
         {{#if feature_image}}
         <figure class="relative max-w-lg w-full mt-10 hidden md:flex md:mt-0">
-            <img class="blur-up lazyload object-cover object-center w-full max-h-96 animated bounceIn"
+            <img class="blur-up lazyload object-cover object-center w-full max-h-96"
                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-srcset="{{img_url feature_image size="s"}} 300w,
                         {{img_url feature_image size="m"}} 600w,
@@ -23,77 +23,72 @@
                 data-sizes="auto"
                 width="512"
                 height="384"
-                alt="{{title}}" />
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
         </figure>
         {{/if}}
     </div>
 </div>
 {{/post}}
 
-<div class="mx-auto container mt-12 lg:px-5">
-    <div class="row">
+<div class="container mx-auto px-4 py-vmin8 grid gap-10 xl:gap-20 lg:grid-cols-sidebar">
+    <div>
+        <div class="js-feed-entry">
+            {{#foreach posts}}
 
-        <div class="col s12 l7 feed-entry-content">
-            <div class="feed-entry-wrap">
-                {{#foreach posts}}
-
-                <article class="mb-12 flex justify-between items-center">
-                    <header class="mr-5 w-full">
-                        <div class="mb-2 flex flex-row items-center">
-                            {{#primary_author}}
-                            <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}">
-                                <img class="w-5 h-5 object-cover rounded-full"
-                                    src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
-                                    width="20"
-                                    height="20"
-                                    alt="{{t "Go to the profile of "}} {{name}}"/>
-                            </a>
-
-                            <div class="ml-2 text-sm">
-                                <a href="{{url}}">{{name}}</a>
-                                {{/primary_author}}
-                                {{#if primary_tag}}<span class="text-gray-500">{{t "in"}}</span> <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{/if}}
-                            </div>
-                        </div>
-
-                        <a href="{{url}}">
-                            <h2 class="text-2xl lineClamp-2 text-title leading-tight">{{title}}</h2>
-                            {{#if excerpt}}<p class="mt-2 text-gray-500 text-base lineClamp-2">{{excerpt characters="150"}}</p>{{/if}}
+            <article class="js-story mb-12 flex justify-between items-center">
+                <header class="mr-5 w-full">
+                    <div class="mb-2 flex flex-row items-center">
+                        {{#primary_author}}
+                        <a href="{{url}}" title="{{t "Go to the profile of"}} {{name}}">
+                            <img class="w-5 h-5 object-cover rounded-full"
+                                src="{{#if profile_image}}{{img_url profile_image size="xs"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
+                                width="20"
+                                height="20"
+                                alt="{{t "Go to the profile of "}} {{name}}"/>
                         </a>
 
-                        {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-                        {{> "components/datetime" class="mt-3 text-gray-500 text-sm"}}
-                    </header>
+                        <div class="ml-2 text-sm">
+                            <a href="{{url}}">{{name}}</a>
+                            {{/primary_author}}
+                            {{#if primary_tag}}<span class="text-gray-500">{{t "in"}}</span> <a href="{{primary_tag.url}}">{{primary_tag.name}}</a>{{/if}}
+                        </div>
+                    </div>
 
-                    {{#if feature_image}}
-                    <a href="{{url}}" class="flex-none">
-                        <img class="block blur-up lazyload h-32 object-cover w-52"
-                            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                            data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
-                            data-sizes="auto"
-                            width="208"
-                            height="128"
-                            alt="{{title}}"/>
+                    <a href="{{url}}">
+                        <h2 class="text-2xl line-clamp-2 text-title leading-tight">{{title}}</h2>
+                        {{#if excerpt}}<p class="mt-2 text-gray-500 text-base line-clamp-2">{{excerpt characters="150"}}</p>{{/if}}
                     </a>
-                    {{/if}}
-                </article>
-                {{/foreach}}
-            </div>
+
+                    {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+                    {{> "components/datetime" class="mt-3 text-gray-500 text-sm"}}
+                </header>
+
+                {{#if feature_image}}
+                <a href="{{url}}" class="flex-none">
+                    <img class="block blur-up lazyload h-32 object-cover w-52"
+                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                        data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
+                        data-sizes="auto"
+                        width="208"
+                        height="128"
+                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
+                </a>
+                {{/if}}
+            </article>
+            {{/foreach}}
         </div>
-
-        <div class="col s12 l1"></div>
-
-        {{!-- sidebar --}}
-        <aside class="sidebar col s12 l4 flex flex-col flex-1 justify-start mt-12 lg:mt-0">
-            <div class="lg:sticky lg:top-28">
-                <h3 class="uppercase text-sm mb-4">{{t "Discover more of what matters to you"}}</h3>
-                <div class="buttons">
-                    {{#get "tags" limit="10" filter="visibility:public" order="count.posts desc"}}{{#foreach tags}}
-                        <a href="{{url absolute="true"}}" title="{{name}}" class="button is-light font-medium text-sm capitalize">{{name}}</a>
-                    {{/foreach}}{{/get}}
-                </div>
-                <hr>
-            </div>
-        </aside>
     </div>
+
+    {{!-- sidebar --}}
+    <aside class="sidebar flex flex-col justify-start">
+        <div class="lg:sticky lg:top-28">
+            <h3 class="uppercase text-sm font-semibold mb-4">{{t "Discover more of what matters to you"}}</h3>
+            <div class="buttons">
+                {{#get "tags" limit="10" filter="visibility:public" order="count.posts desc"}}{{#foreach tags}}
+                    <a href="{{url absolute="true"}}" title="{{name}}" class="button is-light font-medium text-sm capitalize">{{name}}</a>
+                {{/foreach}}{{/get}}
+            </div>
+            <hr>
+        </div>
+    </aside>
 </div>

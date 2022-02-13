@@ -2,7 +2,7 @@
     <a href="{{url}}" class="hhp-image">
         <div class="hhp-img mb-4 relative h-40">
             {{#if feature_image}}
-            <img class="u-image inset-0 absolute"
+            <img class="inset-image"
                 src="{{img_url feature_image size="s"}}"
                 srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
                 alt="{{title}}"
@@ -14,12 +14,12 @@
     </a>
 
     <div class="hhp-body mb-4">
-        <h1 class="hhp-title text-3xl text-title mb-3 lineClamp-2 overflow-hidden">
+        <h1 class="hhp-title text-2xl text-title mb-3 line-clamp-2">
             <a href="{{url}}" class="block">{{title}}</a>
         </h1>
 
         {{#if excerpt}}
-        <div class="hhp-excerpt text-lg leading-snug overflow-hidden lineClamp mb-3 text-gray-500">
+        <div class="hhp-excerpt text-lg leading-snug line-clamp-3 mb-3 text-gray-500">
             <a href="{{url}}">{{excerpt words="30"}}</a>
         </div>
         {{/if}}

@@ -13,34 +13,29 @@
 </header>
 {{/post}}
 
-<div class="container px-4 mx-auto pb-12">
-    <section class="row flex-row justify-center">
+{{#get "authors" limit="all"}}
 
-        {{#get "authors" limit="all"}}
-        {{#foreach authors}}
+<div class="container px-4 mx-auto pb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {{#foreach authors}}
+        <article class="author-card mb-4 relative flex flex-col p-5 bg-blank shadow-lg rounded-lg flex-1">
+            <header class="flex-1">
+                <h2 class="author-card-name capitalize text-2xl font-semibold underscore"><a href="{{url}}">{{name}}</a></h2>
+                {{#if bio}}<p class="author-card-bio text-gray-600">{{bio}}</p>{{/if}}
+            </header>
 
-        <div class="col s12 m6 l4 flex flex-col">
-            <article class="author-card mb-8 relative flex flex-col p-5 bg-blank shadow-lg rounded-lg flex-1">
-                <header class="flex-1">
-                    <h2 class="author-card-name capitalize text-2xl font-semibold underscore"><a href="{{url}}">{{name}}</a></h2>
-                    {{#if bio}}<p class="author-card-bio text-gray-600">{{bio}}</p>{{/if}}
-                </header>
+            <footer class="relative text-center pt-5 flex items-center justify-between">
+                <div class="author-card-media u-flex1">
+                    {{#if facebook}}<a href="{{facebook_url}}" class="p-2 hover:text-facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
+                    {{#if twitter}}<a href="{{twitter_url}}" class="p-2 hover:text-twitter" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
+                    {{#if website}}<a href="{{website}}" class="p-2" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
+                </div>
 
-                <footer class="relative text-center pt-5 flex items-center justify-between">
-                    <div class="author-card-media u-flex1">
-                        {{#if facebook}}<a href="{{facebook_url}}" class="p-2 hover:text-facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
-                        {{#if twitter}}<a href="{{twitter_url}}" class="p-2 hover:text-twitter" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
-                        {{#if website}}<a href="{{website}}" class="p-2" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
-                    </div>
-
-                    <a href="{{url}}">
-                        <img class="author-card-avatar u-image rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
-                    </a>
-                </footer>
-            </article>
-        </div>
-
-        {{/foreach}}
-        {{/get}}
-    </section>
+                <a href="{{url}}">
+                    <img class="author-card-avatar object-cover rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+                </a>
+            </footer>
+        </article>
+    {{/foreach}}
 </div>
+
+{{/get}}

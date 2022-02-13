@@ -1,0 +1,34 @@
+.spc {
+  &-h-e {
+    color: #fecd35;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+    margin-top: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  /* Description */
+  &-des {
+    /* @extend %font-serif; */
+
+    margin: 2.5rem auto;
+    opacity: .9;
+
+    em {
+      color: #fecd35;
+      font-style: italic;
+    }
+  }
+
+  /* Buttos */
+  &-buttons .button {
+    background: hsla(0, 0%, 100%, .9);
+    color: #000;
+
+    img {
+      height: 1.25rem;
+      margin: 0 0.5rem 0 0;
+    }
+  }
+}

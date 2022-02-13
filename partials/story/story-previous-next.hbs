@@ -6,7 +6,7 @@
 
     <a href="{{url}}" class="prev-next-image-link relative w-4/12 bg-gray-200 flex-none border border-gray-100" aria-label="{{title}}">
     {{#if feature_image}}
-        <img class="absolute rounded u-image blur-up lazyload"
+        <img class="rounded inset-image blur-up lazyload"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-src="{{img_url feature_image size="s"}}" alt="{{title}}"/>
     {{/if}}
@@ -16,7 +16,7 @@
         <a href="{{url}}">
         <div class="text-sm leading-none text-gray-500 mb-2 font-medium">{{#if storyTitle}}{{storyTitle}}{{/if}}</div>
         <h2 class="prev-next-title text-title mb-2 text-xl md:text-22">{{title}}</h2>
-        <p class="prev-next-excerpt text-base text-gray-500 lineClamp-2 leading-snug">{{excerpt words="25"}}</p>
+        <p class="prev-next-excerpt text-base text-gray-500 line-clamp-2 leading-snug">{{excerpt words="25"}}</p>
         </a>
     </div>
     {{!-- <a href="{{url}}" aria-label="{{title}}" class="absolute inset-0 z-2"></a> --}}

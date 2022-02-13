@@ -2,25 +2,21 @@
 {{!< default}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}is-error-page bg-gray-200{{/contentFor}}
+{{#contentFor "special_body_class"}}is-error-page bg-gray-100{{/contentFor}}
 
-<section class="errorPage leading-none py-12 lg:py-vw8">
-    <div class="errorPage-wrap container mx-auto text-center text-gray-500">
-        <div class="errorPage-emoji font-bold text-title text-8xl lg:text-9xl">404</div>
-        <div class="errorPage-text mt-10">{{t "Unfortunately, this page doesn't exist"}}</div>
+<section class="leading-none py-12 lg:py-vw8">
+    <div class="container mx-auto text-center text-gray-500">
+        <div class="font-bold text-title text-8xl lg:text-9xl">404</div>
+        <div class="mt-10">{{t "Unfortunately, this page doesn't exist"}}</div>
     </div>
 </section>
 
 {{#get "posts" limit="6" filter="tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]" as |recents| }}
     <div class="container mx-auto">
-        <div class="max-w-1100 mx-auto pb-8">
-            <div class="row">
-                {{#foreach recents}}
-                <div class="col s12 m6 l4">
-                    {{> "story/story-card-small"}}
-                </div>
-                {{/foreach}}
-            </div>
+        <div class="mx-auto max-w-1100 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {{#foreach recents}}
+                {{> "story/story-card-small"}}
+            {{/foreach}}
         </div>
     </div>
 {{/get}}

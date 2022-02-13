@@ -10,6 +10,9 @@ Simply uses [Gulp](https://gulpjs.com/) as a build tool and [Yarn](https://yarnp
 # clone this repo
 $ git clone https://github.com/godofredoninja/simply.git
 
+# Use branch Dev
+$ git checkout dev
+
 # install the dependencies
 $ cd simply && yarn
 
@@ -49,6 +52,6 @@ This is our preferred process for opening a PR on GitHub:
 2. Create a branch off of `dev` for your work: `git checkout -b my-feature-branch`
 3. Make some changes, committing them along the way
 4. When your changes are ready for review, push your branch: `git push origin my-feature-branch`
-5. Create a pull request from your branch to `master`
+5. Create a pull request from your branch to `simply/dev`
 6. No need to assign the pull request to anyone, we'll review it when we can
 7. When the changes have been reviewed and approved, someone will squash and merge for you

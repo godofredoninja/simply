@@ -1,0 +1,47 @@
+.footer {
+  background-color: $footer-bg-color;
+  color: $footer-color;
+
+  a:hover:not(.button) {
+    color: #fff;
+  }
+
+  &-bottom {
+    border-top: 1px solid rgba(255, 255, 255 , .1);
+  }
+
+  &-arrow {
+    border: 4px solid transparent;
+    border-left-color: #fff;
+    height: 0;
+    width: 0;
+  }
+}
+
+.footer-form-input {
+  background-color: $footer-bg-input-color;
+  border-color: transparent;
+  color: $footer-color-input;
+
+  &::placeholder {
+    color: $footer-color-input;
+  }
+}
+
+.simply-form {
+  &.error .message-error,
+  &.success .message-success {
+    display: block;
+  }
+
+
+  &.loanding {
+    .button-content {
+      display: none;
+    }
+
+    .button-loader {
+      display: inline-block;
+    }
+  }
+}

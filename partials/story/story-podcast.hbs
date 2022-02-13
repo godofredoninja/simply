@@ -1,16 +1,16 @@
-<article class="podcast-card flex flex-col md:flex-row w-full relative overflow-hidden mb-12">
+<article class="podcast-card js-story flex flex-col md:flex-row w-full relative overflow-hidden mb-12">
     <header class="podcast-card-header md:ml-4 p-5 order-2">
         {{!-- Author - Datetime - Read time - ./partials/components/author-meta.hbs --}}
         {{> "components/author-meta"}}
 
         <h2 class="spc-c-title my-5 text-2xl text-title font-sans"><a href="{{url}}" class="relative z-3">{{title}}</a></h2>
         <p class="spc-c-excerpt mb-5">{{excerpt words="30"}}</p>
-        <a href="{{url}}" class="listen-btn button is-primary relative z-3">{{> "icons/icon-listen"}} <span class="uppercase">{{t "Listen"}}</span></a>
+        <a href="{{url}}" class="listen-btn button is-primary relative z-3">{{> "icons/icon-listen"}} <span>{{t "Listen"}}</span></a>
     </header>
 
     <a href="{{url}}" class="spc-c-img relative w-full md:w-1/3 flex-none bg-gray-200 story-image md:h-auto">
         {{#if feature_image}}
-        <img class="absolute u-image block blur-up lazyload rounded-2xl"
+        <img class="inset-image blur-up lazyload rounded-2xl"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
             data-sizes="auto"

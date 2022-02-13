@@ -1,8 +1,8 @@
-<article class="story relative mb-5 pb-5 border-b border-gray-100 md:border-0">
-    <figure class="story-image relative border border-gray-300 bg-gray-200 block overflow-hidden">
+<article class="story js-story flex flex-col flex-grow relative mb-3{{#if story_class}} {{story_class}}{{/if}}">
+    <figure class="story-image mb-5 h-52 relative border border-gray-300 bg-gray-200 overflow-hidden">
             {{#if feature_image}}
-            <a href="{{url}}" class="block">
-                <img class="story-img absolute u-image block blur-up lazyload"
+            <a href="{{url}}">
+                <img class="story-img inset-image block blur-up lazyload"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                     data-srcset="{{img_url feature_image size="xs"}} 100w,
                         {{img_url feature_image size="s"}} 300w,
@@ -21,14 +21,14 @@
         {{#if primary_tag}}<div class="absolute right-0 top-0">{{> "components/primary-tag"}}</div>{{/if}}
     </figure>
 
-    <div class="story-body pt-5 flexColumnTop">
+    <div class="story-body flex flex-col flex-grow">
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
         {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
 
         <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
         {{#if excerpt}}
-        <p class="story-excerpt mb-5 text-lg leading-normal text-gray-500">
+        <p class="story-excerpt line-clamp-3 mb-5 text-lg leading-normal text-gray-500">
             <a href="{{url}}" class="block">{{excerpt words="30"}}</a>
         </p>
         {{/if}}

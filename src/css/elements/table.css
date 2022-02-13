@@ -1,0 +1,16 @@
+table {
+  @apply text-left font-sans text-sm overflow-x-auto w-auto block max-w-full;
+}
+
+table th {
+  @apply font-semibold border-b pr-4 py-3 border-slate-300;
+}
+
+table td {
+  @apply py-3 pr-4 whitespace-nowrap border-b border-slate-200;
+}
+
+table tr:last-child td {
+  @apply border-b-slate-300;
+}
+

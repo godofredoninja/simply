@@ -1,0 +1,18 @@
+.search-form input {
+  border: none;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.search-results {
+  max-height: calc(100vh - 12rem);
+
+  a {
+    &:hover,
+    &.is-active {
+      background: rgba(170, 170, 170, .35)
+    }
+  }
+}

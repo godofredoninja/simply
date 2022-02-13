@@ -18,7 +18,7 @@ export default (menuDropDown, box) => {
 
     const link = document.createElement('a')
     link.href = url
-    link.classList = 'dropdown-item hover:text-primary'
+    link.classList = 'dropdown-item block py-2 leading-tight px-5 hover:text-primary'
     link.innerText = name
     // link.innerHTML = `<a href="${url}" class="dropdown-item hover:text-primary">${name}</a>`
 

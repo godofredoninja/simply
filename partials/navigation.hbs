@@ -37,13 +37,13 @@
 <nav class="header-center mainMenu relative flex items-center pr-5 flex-grow overflow-auto lg:overflow-visible">
     <ul itemscope
         itemtype="http://www.schema.org/SiteNavigationElement"
-        class="nav whitespace-no-wrap hidden lg:flex">
+        class="nav hidden lg:flex whitespace-nowrap">
 
         {{#foreach navigation}}
-        <li itemprop="name" class="{{#if @first}}ml-0{{else}}ml-5{{/if}}">
+        <li itemprop="name">
             <a itemprop="url"
                 href="{{url absolute="true"}}"
-                class="mainMenu-link godo-tracking {{#if current}}active text-primary font-semibold{{else}}hover:text-primary font-medium{{/if}}"
+                class="mainMenu-link godo-tracking h-16 flex items-center p-3 text-base {{#if current}}active text-primary font-medium{{else}}text-header-link hover:text-primary{{/if}}"
                 data-event-category="Header"
                 data-event-action="Menu"
                 data-event-label="{{label}}"
@@ -55,15 +55,15 @@
 
         {{!-- Has DropDown Menu --}}
         {{#if navigationDropDown}}
-        <li class="dropdown is-hoverable ml-5">
-            <a href="#" class="mainMenu-link dropdown-trigger hover:text-primary font-medium">
+        <li class="dropdown is-hoverable">
+            <a href="#" class="mainMenu-link dropdown-trigger h-16 flex items-center p-3 text-base text-header-link hover:text-primary">
                 <span>{{t "More"}}</span>
                 <svg class="icon is-small transform rotate-90"><use xlink:href="#icon-arrow-forward"></use></svg>
             </a>
             <div class="dropdown-menu whitespace-normal">
                 <div class="dropdown-content">
-                    <div class="js-dropdown-menu">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
-                    {{#has any="@site.facebook, @site.twitter"}}<hr class="dropdown-divider">{{/has}}
+                    <div class="js-dropdown-menu text-base text-header-link">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
+                    {{#has any="@site.facebook, @site.twitter"}}<hr class="dropdown-divider my-3">{{/has}}
                     {{!-- Social Media - partials/widget/social-media.hbs --}}
                     {{> "widget/social-media" class="social-media"}}
                 </div>

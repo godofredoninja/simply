@@ -1,0 +1,60 @@
+.kg-bookmark {
+  &-card {
+    position: relative;
+  }
+
+  /* &-publisher {
+    color: var(--ghost-accent-color);
+  } */
+
+  &-content {
+    @apply flex flex-col grow order-1 p-5;
+  }
+
+  &-title {
+    @apply text-title text-xl font-semibold leading-tight;
+  }
+
+  &-description {
+    @apply text-gray-500 text-base line-clamp-2 mt-3;
+  }
+
+  &-metadata {
+    @apply text-sm flex items-center mt-3;
+  }
+
+  &-thumbnail {
+    flex-grow: 1;
+    min-height: 10rem;
+    min-width: 33%;
+    position: relative;
+  }
+
+  &-icon {
+    @apply w-5 h-5 mr-2;
+  }
+
+  &-author::after {
+    content: "•";
+    margin: 0 0.25rem;
+    opacity: .4;
+  }
+}
+
+.kg-bookmark-container {
+  @extend %card;
+
+  display: flex;
+  flex-direction: column;
+  text-decoration: none !important;
+}
+
+.kg-bookmark-thumbnail img {
+  @extend %inset-image;
+}
+
+@screen md {
+  .kg-bookmark-container {
+    flex-direction: row-reverse;
+  }
+}

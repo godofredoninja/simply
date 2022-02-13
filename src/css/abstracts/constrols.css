@@ -1,0 +1,43 @@
+$control-radius: 4px;
+$control-radius-small: 2px;
+
+$control-border-width: 1px;
+
+$control-height: 2.5em;
+$control-line-height: 1.5;
+
+$control-padding-vertical: calc(0.5em - $control-border-width);
+$control-padding-horizontal: calc(0.75em - $control-border-width);
+
+%control {
+  @apply text-base;
+
+  @extend %font-sans;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: $control-border-width solid transparent;
+  border-radius: $control-radius;
+  box-shadow: none;
+  display: inline-flex;
+  height: $control-height;
+  justify-content: flex-start;
+  line-height: $control-line-height;
+  padding: $control-padding-vertical $control-padding-horizontal;
+  position: relative;
+  vertical-align: top;
+
+  /* States */
+  /* &:focus,
+  &.is-focused,
+  &:active,
+  &.is-active {
+    outline: none;
+  } */
+
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+  }
+}

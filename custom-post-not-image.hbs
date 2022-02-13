@@ -6,9 +6,11 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post mb-10 pt-8 lg:pt-10 relative">
-    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
-    {{> "article/article-header"}}
+<article class="post py-vmin8 relative">
+    <header class="post-header godo-canvas">
+        {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
+        {{> "article/article-header"}}
+    </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}
     {{> "article/article-body"}}

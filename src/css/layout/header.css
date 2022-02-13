@@ -1,0 +1,101 @@
+.header {
+  transition: transform .3s;
+}
+
+.header-bg {
+  background-color: var(--header-bg);
+}
+
+.shadow-header {
+  box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07);
+}
+
+
+/* Header has Transparent
+/* ---------------------------------------------------------- */
+
+.header-right > .button.is-white {
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--header-text-link);
+}
+
+.has-cover .simply-hero-cover {
+  margin-top: -$header-height;
+}
+
+.is-head-transparent:not(.has-menu) {
+  --header-text-link: #fff;
+}
+
+/* Hamburger Button for Toggle menu
+/* ---------------------------------------------------------- */
+
+.menu-burger {
+  margin-right: -0.5rem;
+  transition: transform .4s;
+  width: 2.25rem;
+
+  span {
+    background-color: currentColor;
+    display: block;
+    height: 2px;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    transition: .4s;
+    width: 20px;
+
+    &:first-child {
+      transform: translate(0, -6px);
+    }
+    &:last-child {
+      transform: translate(0, 6px);
+    }
+  }
+}
+
+/* Menu Mobile
+/* ---------------------------------------------------------- */
+
+.nav-mob {
+  transform: translateX(100%);
+  transition: .4s;
+  will-change: transform;
+}
+
+/* when the menu is being shown
+/* ---------------------------------------------------------- */
+.has-menu {
+  overflow: hidden;
+
+  .nav-mob {
+    transform: translateX(0);
+  }
+
+  .menu-burger {
+    span:first-child {
+      transform: rotate(45deg) translate(0, 0);
+    }
+
+    span:nth-child(2) {
+      transform: scaleX(0);
+    }
+
+    span:last-child{
+      transform: rotate(-45deg) translate(0, 0);
+    }
+  }
+}
+
+/* Dark Mode
+/* ---------------------------------------------------------- */
+
+.dark {
+  .icon--sunny {
+    display: block !important;
+  }
+
+  .icon--moon{
+    display: none;
+  }
+}

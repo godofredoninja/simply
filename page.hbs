@@ -6,19 +6,16 @@
 {{!-- Class for <body> --}}
 {{#contentFor "special_body_class"}}is-article{{/contentFor}}
 
-<article class="post mb-4 pt-8 lg:p-16 relative">
-    <header class="post-header px-4 mx-auto max-w-740 u-paddingTop30 relative z-3">
-        <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title">{{title}}</h1>
-        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-xl text-gray-500">{{custom_excerpt}}</p>{{/if}}
+<article class="post py-vmin8 relative">
+    <header class="post-header godo-canvas">
+        <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{{title}}</h1>
+        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 text-gray-500">{{custom_excerpt}}</p>{{/if}}
+
+        {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+        {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="block mt-12 kg-width-wide"}}{{/if}}
     </header>
 
-    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
-    {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="block mx-auto max-w-1000 mt-12"}}{{/if}}
-
-    <div class="post-wrap max-w-1100 relative mx-auto">
-        {{!-- All Content --}}
-        <div id="post-body" class="post-body px-4 mx-auto max-w-740 relative">{{content}}</div>
-    </div>
+    <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">{{content}}</section>
 </article>
 
 {{/post}}

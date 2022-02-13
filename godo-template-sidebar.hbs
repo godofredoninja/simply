@@ -1,23 +1,17 @@
 {{!< default}}
 
-<div class="container mx-auto px-4 py-16">
-    <div class=" max-w-1100 mx-auto">
-        <div class="row">
-            <div class="col s12 l7">
-                <div class="feed-entry-content">
-                    <div class="feed-entry-wrap slist">
-                        {{#foreach posts}}
-                            {{!-- Story - partials/story/story-grid.hbs --}}
-                            {{>"story/story-post"}}
-                        {{/foreach}}
-                    </div>
-                </div>
+<div class="container mx-auto px-4 py-vmin8">
+    <div class="max-w-1100 max-w mx-auto grid gap-10 xl:gap-20 lg:grid-cols-sidebar">
+        <div>
+            <div class="js-feed-entry grid gap-16">
+                {{!-- Story - partials/story/story-grid.hbs --}}
+                {{#foreach posts}}{{>"story/story-post"}}{{/foreach}}
             </div>
 
-            <div class="col s12 l1"></div>
-
-            {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
-            {{>"sidebar/sidebar"}}
+            {{!-- Here Pagination --}}
         </div>
+
+        {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+        {{>"sidebar/sidebar"}}
     </div>
 </div>

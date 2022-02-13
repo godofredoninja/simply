@@ -1,0 +1,113 @@
+/* z-index for image zoom
+/* ---------------------------------------------------------- */
+
+.medium-zoom-overlay {
+  z-index: 50;
+}
+
+.medium-zoom-image--opened {
+  z-index: 51;
+}
+
+/* Img Blur lazyloaded
+/* ---------------------------------------------------------- */
+
+.blur-up {
+  opacity: 0;
+}
+
+.blur-up.lazyloaded {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Loanding Bar
+/* ---------------------------------------------------------- */
+
+.loadingBar {
+  background-color: #48e79a;
+  height: 2px;
+  transform: translateX(100%);
+  z-index: 800;
+}
+
+.is-loading .loadingBar {
+  animation: loading-bar 1s ease-in-out infinite;
+  animation-delay: 0.8s;
+  display: block;
+}
+
+/* Loanding Bar
+/* ---------------------------------------------------------- */
+
+.medium-zoom--opened .header {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: transform 0.2s, opacity 0.2s, visibility 0s 2s, -webkit-transform 0.2s;
+  visibility: hidden;
+}
+
+/* Inset Image
+/* ---------------------------------------------------------- */
+
+.inset-image {
+  @extend %inset-image;
+}
+
+/* Has overlay
+/* ---------------------------------------------------------- */
+
+.has-overlay {
+  .overlay-toggle {
+    opacity: 0;
+    transition: opacity .3s ease;
+    visibility: hidden;
+  }
+
+  &:hover .overlay-toggle {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/*  Link
+/* ---------------------------------------------------------- */
+
+.link {
+  color: var(--color-link);
+
+  &.is-hover:hover {
+    opacity: .92;
+  }
+}
+
+/* Primary Gradient
+/* ---------------------------------------------------------- */
+
+.u-primaryGradient {
+  background: linear-gradient(135deg, #111, var(--ghost-accent-color));
+  /* background: linear-gradient(135deg, rgba($dark-blue-500, .7), rgba($primary-color, .7)) */
+}
+
+/* Video Responsive
+/* ---------------------------------------------------------- */
+
+/* .video-responsive {
+  display: block;
+  height: 0;
+  overflow: hidden;
+  padding: 0 0 56.25%;
+  position: relative;
+  width: 100%;
+
+  video,
+  iframe {
+    border: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+} */

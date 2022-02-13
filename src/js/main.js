@@ -5,7 +5,7 @@ import 'lazysizes'
 
 import loadScript from './components/load-script'
 import videoResponsive from './components/video-responsive'
-import resizeImagesInGalleries from './components/resize-images-galleries'
+// import resizeImagesInGalleries from './components/resize-images-galleries'
 import mediumZoomImg from './components/medium-zoom'
 import simplyModal from './components/modal'
 
@@ -53,7 +53,7 @@ const simplySetup = () => {
 
   /* Gallery Card
   /* ---------------------------------------------------------- */
-  resizeImagesInGalleries()
+  // resizeImagesInGalleries()
 
   /* medium-zoom
   /* ---------------------------------------------------------- */
@@ -77,6 +77,7 @@ const simplySetup = () => {
     //   loadScript(siteSearch)
     // })
   }
+
   //
 }
 

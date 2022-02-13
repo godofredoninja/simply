@@ -1,5 +1,5 @@
 <div class="sidebar-items mb-8 lg:sticky lg:top-32">
-    <h3 class="sidebar-title underscore is-center text-lg text-center font-medium text-title"><span>{{widgetTitle}}</span></h3>
+    <h3 class="sidebar-title text-gray-500 uppercase text-sm text-center font-medium mb-8">{{widgetTitle}}</h3>
 
     {{#foreach widgetPosts}}
     <div class="sp-small relative {{#unless @last}}mb-5{{/unless}} has-overlay godo-tracking"
@@ -7,19 +7,18 @@
         data-event-action="Post"
         data-event-label="{{url absolute="true"}}"
         data-event-non-interaction="true">
-        {{!-- <div class="sp-n flex-none u-fontSizeLarger u-lineHeight1">0{{@number}}</div> --}}
         <a href="{{url}}" class="flex">
             {{#if feature_image}}
             <figure class="w-32 h-20 relative overflow-hidden rounded">
-                <img class="block w-full object-cover object-center inset-0 absolute h-full" src="{{img_url feature_image size="s"}}" alt="{{title}}" width="128" height="80"/>
+                <img class="inset-image" src="{{img_url feature_image size="s"}}" alt="{{title}}" width="128" height="80"/>
                 <span class="inset-0 bg-primary absolute flex items-center justify-center overlay-toggle">
                     <svg class="icon h-6 w-6 text-white"><use xlink:href="#icon-arrow"></use></svg>
                 </span>
             </figure>
             {{/if}}
 
-            <div class="pl-4 flex-1 overflow-hidden flex flex-col justify-center">
-                <h3 class="sp-small-title text-base font-semibold mb-1 leading-tight text-title">{{title}}</h3>
+            <div class="pl-4 flex-1 flex flex-col justify-center">
+                <h3 class="sp-small-title text-base font-semibold mb-2 leading-tight text-title line-clamp-2">{{title}}</h3>
 
                 <div class="hh-date flex items-center text-gray-500 text-sm">
                     <time class="datetime capitalize" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMM YYYY"}}</time>

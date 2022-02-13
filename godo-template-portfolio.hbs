@@ -22,17 +22,11 @@
 
 {{/page}}
 
-<div class="site-post feed-entry-content py-12 px-4">
-    <div class="mx-auto max-w-1100 feed-entry-wrap">
-        <div class="row flex-row justify-center">
-
+<div class="site-post py-vmin8 px-4">
+    <div class="mx-auto max-w-1100 feed-entry-wrap grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {{#foreach posts}}
-            <div class="col s12 m6 l4 js-filter-items" {{#if primary_tag}}data-id="{{primary_tag.slug}}"{{/if}}>
             {{> "story/story-portfolio"}}
-            </div>
         {{/foreach}}
-
-        </div>
     </div>
 </div>
 

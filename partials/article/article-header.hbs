@@ -1,20 +1,16 @@
-<header class="post-header px-4 mx-auto max-w-740 relative z-3">
-    {{#if primary_tag}}
-    <div class="mb-3 text-gray-500 tracking-wider text-sm font-medium">
-        {{#primary_tag}}
-        <a class="uppercase hover:underline" href="{{url}}">{{name}}</a>
-        {{/primary_tag}}
-    </div>
-    {{/if}}
+{{#if primary_tag}}
+<div class="mb-3 text-gray-500 tracking-wider text-sm font-medium">
+    {{#primary_tag}}<a class="uppercase hover:underline" href="{{url}}">{{name}}</a>{{/primary_tag}}
+</div>
+{{/if}}
 
-    <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{{title}}</h1>
-    {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 text-gray-500">{{custom_excerpt}}</p>{{/if}}
+<h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{{title}}</h1>
+{{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 text-gray-500">{{custom_excerpt}}</p>{{/if}}
 
-    <div class="post-share flex flex-col md:flex-row mt-8">
-        {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
-        {{> "components/author-meta"}}
+<div class="post-share flex flex-col md:flex-row mt-8">
+    {{!-- [Author, DateTime, Reading Time] - ./partials/components/author-meta.hbs --}}
+    {{> "components/author-meta"}}
 
-        {{!-- Social Share - ./partials/components/social-share --}}
-        {{> "components/social-share" class="order-first mb-6 md:mb-0 md:order-none" Tracking_name="Header"}}
-    </div>
-</header>
+    {{!-- Social Share - ./partials/components/social-share --}}
+    {{> "components/social-share" class="order-first mb-6 md:mb-0 md:order-none" Tracking_name="Header"}}
+</div>

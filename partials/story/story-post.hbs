@@ -1,4 +1,4 @@
-<article class="story-post mb-16">
+<article class="js-story story-post">
     <header class="story-post-header mb-5">
         <h2 class="text-4xl leading-tight text-title mb-5 hover:text-primary"><a href="{{url}}">{{title}}</a></h2>
         {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
@@ -8,7 +8,7 @@
     {{#if feature_image}}
     <figure class="story-post-media relative overflow-hidden rounded-lg shadow-3xl has-overlay h-56">
         <a href="{{url}}">
-            <img class="story-img absolute image-inset block blur-up lazyload"
+            <img class="story-img inset-image blur-up lazyload"
                 src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
                 data-srcset="{{img_url feature_image size="xs"}} 100w,
                     {{img_url feature_image size="s"}} 300w,

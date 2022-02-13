@@ -10,21 +10,40 @@ module.exports = {
     },
     colors: {
       transparent: 'transparent',
+      current: 'currentColor',
       black: '#000',
-      dark: '#110f16',
-      white: '#fff',
       blank: 'var(--blank)',
+      dark: '#110f16',
+      global: 'var(--text-global)',
+      mark: 'var(--color-mark)',
       orange: '#f42',
-      modal: 'rgba(84,102,109,.6)',
-      primary: 'var(--ghost-accent-color)',
-      // 'primary-dark': 'var(--color-primary-dark)',
+      white: '#fff',
       'dark-blue-500': '#102b7b',
+
+      // Logo & Header
+      logo: 'var(--header-text-link)',
+      'header-link': 'var(--header-text-link)',
+
+      // Primary
+      primary: 'var(--ghost-accent-color)',
       secondary: '#102b7b',
+      // 'primary-dark': 'var(--color-primary-dark)',
+
+      // Modal
+      modal: 'rgba(84,102,109,.6)',
+
+      // post
       title: 'var(--title-color)',
+
+      // Notes
       success: '#48c774',
       warning: '#ffdd57',
       danger: '#f14668',
       amber: colors.amber,
+      red: colors.red,
+      slate: colors.slate,
+
+      // color Gray
       gray: {
         100: 'var(--gray-100)',
         150: 'var(--gray-150)',
@@ -37,6 +56,7 @@ module.exports = {
         800: 'var(--gray-800)',
         900: 'var(--gray-900)'
       },
+
       // Social Media
       facebook: '#4267B2',
       twitter: '#55acee',
@@ -95,8 +115,6 @@ module.exports = {
         92: '0.92'
       },
       maxWidth: {
-        740: '46.25rem',
-        1000: '62.5rem',
         1100: '68.75rem',
         extreme: '81.25rem'
       },
@@ -104,18 +122,21 @@ module.exports = {
         lg: '32rem'
       },
       maxHeight: {
+        128: '32rem',
         '(screen-16)': 'calc(100vh - 4rem)'
       },
       height: {
-        88: '22rem',
-        90: '24rem',
-        96: '30rem',
-        98: '32rem'
+        128: '32rem',
+        88: '22rem'
+        // 90: '24rem',
+        // 96: '24rem'
+        // 98: '32rem'
       },
       padding: {
         vw8: '8vw',
         vw4: '4vw',
-        vw6: '6vw'
+        vw6: '6vw',
+        vmin8: '8vmin'
       },
       boxShadow: {
         '3xl': '0 36px 64px 0 rgba(0,0,0,.2)'
@@ -124,40 +145,29 @@ module.exports = {
         32: '8rem',
         24: '6rem',
         16: '4rem'
+      },
+      borderWidth: {
+        3: '0.1875rem'
+      },
+      gridTemplateColumns: {
+        sidebar: '1fr 22.5rem',
+        kusi2: 'calc(12.5rem + 4vmin) 1fr',
+        kusi3: 'calc(12.5rem + 4vmin) 1fr calc(13.75rem + 2vmin)'
       }
     }
   },
   variants: {},
-  plugins: [],
-  corePlugins: {
-    // Disable Grid
-    gridRow: false,
-    gridRowStart: false,
-    gridRowEnd: false,
-    gridTemplateColumns: false,
-    gridTemplateRows: false,
-    gap: false,
-    gridAutoFlow: false,
-    gridAutoColumns: false,
-    gridAutoRows: false,
-    //
-    gridColumn: false,
-    gridColumnStart: false,
-    gridColumnEnd: false
-  },
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true
-  },
-  // mode: 'jit',
-  purge: {
-    content: [
-      './*.hbs',
-      './partials/**/*.hbs',
-      './src/js/**/*.js'
-    ],
-    options: {
-      safelist: ['hover:text-youtube', 'hover:text-instagram']
-    }
-  }
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp')
+  ],
+  content: [
+    './*.hbs',
+    './partials/**/*.hbs',
+    './src/js/**/*.js'
+  ]
+  // safelist: [
+  //   'hover:text-youtube',
+  //   'hover:text-instagram'
+  // ]
 }

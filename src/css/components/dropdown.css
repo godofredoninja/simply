@@ -1,0 +1,42 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  left: -1.5rem;
+  max-width: 18rem;
+  min-width: 12rem;
+  opacity: 0;
+  padding-top: 0.25rem;
+  position: absolute;
+  top: 100%;
+  transform: scale(.9) translateY(-20px);
+  transition: all .3s cubic-bezier(.4, .01, .165, .99),opacity .2s cubic-bezier(.4, .01, .165, .99);
+  visibility: hidden;
+  z-index: 20;
+}
+
+.dropdown.is-right .dropdown-menu {
+  right: -1.5rem;
+  left: auto;
+}
+
+.dropdown.is-active .dropdown-menu,
+.dropdown.is-hoverable:hover .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translateY(0);
+  transition: all .2s cubic-bezier(.4,.01,.165,.99);
+  visibility: visible;
+}
+
+.dropdown-content {
+  @apply shadow-lg;
+
+  background-color: var(--dropdown-bg);
+  border-radius: 0.25rem;
+  /* box-shadow: 0 1px 2px rgba(0, 0, 0, .25),0 0 1px rgba(0, 0, 0, .35); */
+  padding-bottom: .5rem;
+  padding-top: .5rem;
+  position: relative;
+}

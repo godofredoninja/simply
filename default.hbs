@@ -53,7 +53,7 @@
     {{{block "header"}}}
 </head>
 <body class="{{block "special_body_class"}}">
-    <div class="simply-viewport flexColumnTop">
+    <div class="simply-viewport flex flex-col justify-start">
         {{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
         {{#match @custom.header "Default"}}{{> "layout/header"}}{{/match}}
 
@@ -61,7 +61,7 @@
         {{#match @custom.header "Drop Down Menu"}}{{> "layout/header" hasDropDown=true}}{{/match}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        <main class="simply-main relative min-h-lg {{{block "special_site_main_class"}}}">{{{body}}}</main>
+        <main class="simply-main relative min-h-lg">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
         {{#match @custom.footer "Default"}}{{>"layout/footer"}}{{/match}}
@@ -87,7 +87,7 @@
         var siteUrl = '{{@site.url}}';
         var siteSearch = '{{asset "scripts/search.js"}}';
         var prismJs = '{{asset "scripts/prismjs.js"}}';
-        var prismJsComponents = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/components/';
+        var prismJsComponents = 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/';
     </script>
 
     {{!-- Ghost outputs important scripts and data with this tag --}}

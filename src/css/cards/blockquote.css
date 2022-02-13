@@ -1,0 +1,17 @@
+.pullquote,
+.kg-blockquote-alt {
+  @apply text-gray-500;
+
+  font-size: 1.2em;
+  font-style: italic;
+  line-height: 1.7em;
+  padding: 0 1.2em;
+  text-align: center;
+}
+
+@screen md {
+  .kg-blockquote-alt {
+    font-size: 1.5em;
+    padding: 0 2em;
+  }
+}
