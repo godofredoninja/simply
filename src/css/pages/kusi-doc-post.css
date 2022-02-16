@@ -1,17 +1,17 @@
 .is-doc .post-body {
 
-  & > [id]:not(:first-child) {
+  /* & > [id]:not(:first-child) {
     margin: 3em 0 0;
-  }
+  } */
 
-  & > h1,
+  /* & > h1,
   & > h2,
   & > h3,
   & > h4,
   & > h5,
   & > h6, {
     scroll-margin-top: calc(4rem + 4vmin);
-  }
+  } */
 
 
   h2 { font-size: 1.75rem; }

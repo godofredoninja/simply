@@ -1,0 +1,84 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#post}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article{{/contentFor}}
+
+<article class="post py-vmin8 relative">
+    <header class="post-header godo-canvas">
+        {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
+        {{> "article/article-header"}}
+    </header>
+
+    {{!-- Article Body - partials/article/article-body.hbs --}}
+    <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">
+        {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+        {{#if feature_image}}{{> "article/article-featured-image" image=feature_image}}{{/if}}
+
+        {{content}}
+
+        {{!-- Table of Content --}}
+        <div class="godo-content-side top-0 bottom-0 absolute pr-8 row-start-1 hidden font-sans lg:block">
+            <div class="sticky top-20 overflow-auto scroll-transparent lg:max-h-(screen-16)">
+                <div class="uppercase font-medium text-sm mb-3">{{t "On this page"}}</div>
+                <div class="js-tocbot text-base space-y-4 leading-tight"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="post-footer godo-canvas pt-10">
+        {{!-- Tags - ./partials/components/tags,hbs --}}
+        {{> "components/tags"}}
+
+        {{!-- Social Share - ./partials/components/social-share --}}
+        {{> "components/social-share" Tracking_name="Footer"}}
+
+        {{!-- Previous and next article --}}
+        <div class="prev-next pb-8">
+            <hr class="my-10">
+            {{#prev_post}}
+                {{> "story/story-previous-next" storyTitle=(t "Previous article") class="mb-8"}}
+            {{/prev_post}}
+
+            {{#next_post}}
+                {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
+            {{/next_post}}
+        </div>
+    </footer>
+</article>
+
+{{/post}}
+
+{{!-- 6 Related Articles - partials/article/article-related.hbs --}}
+{{> "article/article-related"}}
+
+{{!-- Post Commets - partials/article/article-comments.hbd --}}
+{{#post}}{{> "article/article-comments"}}{{/post}}
+
+{{#contentFor "scripts"}}
+<script>
+function godoTocBot() {
+  var $markdown = document.querySelector('.post-body');
+  if (!$markdown) return;
+
+  var $titles = $markdown.querySelectorAll('h2[id]');
+
+  if (!$titles.length) return;
+
+  var $jsTocBot = document.querySelector('.js-tocbot');
+
+  $titles.forEach(function (el) {
+    var titleLink = document.createElement('a');
+    titleLink.href = '#' + el.getAttribute('id');
+    titleLink.textContent = el.textContent;
+    titleLink.classList = 'text-gray-500 block !no-underline hover:text-gray-900';
+
+    $jsTocBot.appendChild(titleLink);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', godoTocBot);
+</script>
+{{/contentFor}}

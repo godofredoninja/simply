@@ -1,1 +1,4 @@
 /* Sidebar */
+.godo-content-side {
+  grid-column: wide-start/main-start;
+}

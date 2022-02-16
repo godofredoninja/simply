@@ -3,6 +3,7 @@
 
 .kg-width-full {
   grid-column: full-start / full-end;
+  z-index: 2;
 
   img {
     width: 100%;
@@ -24,6 +25,7 @@
 
 .kg-width-wide {
   grid-column: wide-start / wide-end;
+  z-index: 2;
 
   &.kg-card-hascaption img {
     grid-column: wide-start / wide-end;
