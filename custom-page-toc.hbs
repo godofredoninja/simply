@@ -1,0 +1,57 @@
+{{!-- Layout --}}
+{{!< default}}
+
+{{#post}}
+
+{{!-- Class for <body> --}}
+{{#contentFor "special_body_class"}}is-article{{/contentFor}}
+
+<article class="post py-vmin8 relative">
+    <header class="post-header godo-canvas">
+        <h1 class="post-title text-32 md:text-4xl lg:text-44 text-title leading-tight">{{title}}</h1>
+        {{#if custom_excerpt}}<p class="post-excerpt mt-6 text-22 text-gray-500">{{custom_excerpt}}</p>{{/if}}
+
+    </header>
+
+    <section id="post-body" class="post-body godo-canvas mx-auto relative font-serif">
+        {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+        {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="kg-width-wide"}}{{/if}}
+
+        {{content}}
+
+        {{!-- Table of Content --}}
+        <div class="godo-content-side top-0 bottom-0 absolute pr-8 row-start-1 hidden font-sans lg:block">
+            <div class="sticky top-20 overflow-auto scroll-transparent lg:max-h-(screen-16)">
+                <div class="js-tocbot text-base space-y-4 leading-tight"></div>
+            </div>
+        </div>
+    </section>
+</article>
+
+{{/post}}
+
+{{#contentFor "scripts"}}
+<script>
+function godoTocBot() {
+  var $markdown = document.querySelector('.post-body');
+  if (!$markdown) return;
+
+  var $titles = $markdown.querySelectorAll('h2[id]');
+
+  if (!$titles.length) return;
+
+  var $jsTocBot = document.querySelector('.js-tocbot');
+
+  $titles.forEach(function (el) {
+    var titleLink = document.createElement('a');
+    titleLink.href = '#' + el.getAttribute('id');
+    titleLink.textContent = el.textContent;
+    titleLink.classList = 'text-gray-500 block !no-underline hover:text-gray-900';
+
+    $jsTocBot.appendChild(titleLink);
+  });
+};
+
+document.addEventListener('DOMContentLoaded', godoTocBot);
+</script>
+{{/contentFor}}

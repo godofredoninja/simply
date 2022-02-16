@@ -1584,6 +1584,9 @@ except for when immediately preceeded by a heading */
 .mr-2 {
   margin-right: 0.5rem;
 }
+.mt-6 {
+  margin-top: 1.5rem;
+}
 .mt-12 {
   margin-top: 3rem;
 }
@@ -1610,9 +1613,6 @@ except for when immediately preceeded by a heading */
 }
 .-mt-6 {
   margin-top: -1.5rem;
-}
-.mt-6 {
-  margin-top: 1.5rem;
 }
 .mb-12 {
   margin-bottom: 3rem;
@@ -2310,17 +2310,17 @@ except for when immediately preceeded by a heading */
 .text-base {
   font-size: 1rem;
 }
+.text-32 {
+  font-size: 2rem;
+}
+.text-22 {
+  font-size: 1.375rem;
+}
 .text-8xl {
   font-size: 6rem;
 }
 .text-5xl {
   font-size: 3rem;
-}
-.text-22 {
-  font-size: 1.375rem;
-}
-.text-32 {
-  font-size: 2rem;
 }
 .text-44 {
   font-size: 2.75rem;
@@ -2349,14 +2349,14 @@ except for when immediately preceeded by a heading */
 .leading-tight {
   line-height: 1.25;
 }
-.leading-relaxed {
-  line-height: 1.625;
-}
 .leading-snug {
   line-height: 1.375;
 }
 .leading-none {
   line-height: 1;
+}
+.leading-relaxed {
+  line-height: 1.625;
 }
 .leading-normal {
   line-height: 1.5;
@@ -2931,15 +2931,15 @@ except for when immediately preceeded by a heading */
   .lg\:text-5xl {
     font-size: 3rem;
   }
+  .lg\:text-44 {
+    font-size: 2.75rem;
+  }
   .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
   }
   .lg\:text-6xl {
     font-size: 4rem;
-  }
-  .lg\:text-44 {
-    font-size: 2.75rem;
   }
   .lg\:text-32 {
     font-size: 2rem;
