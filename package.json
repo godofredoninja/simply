@@ -94,19 +94,15 @@
         ],
         "default": "Auto"
       },
-      "email_subscribe": {
-        "type": "select",
-        "options": [
-            "Bottom of post",
-            "None"
-        ],
-        "default": "Footer",
+      "show_newsletter": {
+        "type": "boolean",
+        "default": false,
         "group": "post"
       },
-      "email_subscribe_text": {
-          "type": "text",
-          "default": "Sign up for more like this.",
-          "group": "post"
+      "newsletter_text": {
+        "type": "text",
+        "default": "Sign up for more like this",
+        "group": "post"
       },
       "comments_disqus_short_name": {
         "type": "text",

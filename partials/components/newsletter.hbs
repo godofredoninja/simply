@@ -1,0 +1,21 @@
+{{#if @custom.show_newsletter}}{{#unless @member}}{{#if access}}
+<div class="pt-vmin8">
+    <div class="border-t-3 border-primary bg-gray-100 p-8">
+        {{#if @custom.newsletter_text}}<h2 class="text-xl font-bold text-title mb-4">{{@custom.newsletter_text}}</h2>{{/if}}
+        <a class="flex flex-col justify-between md:flex-row md:items-center" href="#/portal" data-portal>
+            <div class="text-gray-500 border-b border-gray-400 flex-grow mr-10 py-1 w-full mb-4 md:mb-0">{{t "Enter your email"}}</div>
+            <div class="button is-primary rounded-full">
+                <svg class="stroke-current" width="38" height="38" fill="none">
+                    <rect x="26.25" y="9.25" width=".5" height="6.5" rx=".25"/>
+                    <rect x="29.75" y="12.25" width=".5" height="6.5" rx=".25" transform="rotate(90 29.75 12.25)"/>
+                    <path d="M19.5 12.5h-7a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-5"/>
+                    <path d="M11.5 14.5 19 20l4-3"/>
+                </svg>
+                <span>{{t "Subscribe"}}</span>
+            </div>
+        </a>
+
+        <p class="text-sm mt-5">{{t "No spam. No jibber jabber. Unsubscribe any time."}}</p>
+    </div>
+</div>
+{{/if}}{{/unless}}{{/if}}
