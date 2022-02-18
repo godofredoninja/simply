@@ -1,45 +1,59 @@
-<aside class="post-shasre flex items-center flex-none{{#unless class}} md:justify-end {{else}} {{class}}{{/unless}}">
+<aside class="post-shasre text-title flex items-center flex-none{{#unless class}} md:justify-end {{else}} {{class}}{{/unless}}">
     <span class="share-label text-gray-500 text-sm mr-2">{{t "Share"}}:</span>
     {{!-- Share on Twitter --}}
     <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
         target="_blank"
         rel="noopener noreferrer"
-        class="godo-tracking text-gray-900 mr-2"
+        class="godo-tracking"
+        title="{{t "Share on"}} Twitter"
         aria-label="{{t "Share on"}} Twitter"
         data-event-category="Article"
         data-event-action="Share"
         data-event-label="{{Tracking_name}} - Twitter"
         data-event-non-interaction="true">
-        <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
-    </a>
-    {{!-- Share on Linkedin --}}
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="godo-tracking text-gray-900 mr-2"
-        aria-label="{{t "Share on"}} Linkedin"
-        data-event-category="Article"
-        data-event-action="Linkedin"
-        data-event-label="{{Tracking_name}} - Linkedin"
-        data-event-non-interaction="true">
-        <svg class="icon"><use xlink:href="#icon-linkedin"></use></svg>
+        <svg width="30" height="30" class="fill-current"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 27a12 12 0 1 0 0-24 12 12 0 0 0 0 24zm4.95-16.17a2.67 2.67 0 0 0-4.6 1.84c0 .2.03.41.05.62a7.6 7.6 0 0 1-5.49-2.82 3 3 0 0 0-.38 1.34c.02.94.49 1.76 1.2 2.23a2.53 2.53 0 0 1-1.2-.33v.04c0 1.28.92 2.36 2.14 2.62-.23.05-.46.08-.71.1l-.21-.02-.27-.03a2.68 2.68 0 0 0 2.48 1.86A5.64 5.64 0 0 1 9 19.38a7.62 7.62 0 0 0 4.1 1.19c4.9 0 7.58-4.07 7.57-7.58v-.39c.52-.36.97-.83 1.33-1.38-.48.23-1 .37-1.53.43.56-.33.96-.86 1.15-1.48-.5.31-1.07.53-1.67.66z"/></svg>
     </a>
     {{!-- Share on Facebook --}}
     <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
         target="_blank"
         rel="noopener noreferrer"
-        class="godo-tracking text-gray-900"
+        class="godo-tracking"
+        title="{{t "Share on"}} Facebook"
         aria-label="{{t "Share on"}} Facebook"
         data-event-category="Article"
         data-event-action="Share"
         data-event-label="{{Tracking_name}} - Facebook"
         data-event-non-interaction="true">
-        <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
+        <svg width="30" height="30" viewBox="0 0 30 30" class="fill-current"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 27a12 12 0 1 0 0-24 12 12 0 0 0 0 24zm-1.23-6.03V15.6H12v-2.15h1.77v-1.6C13.77 10 14.85 9 16.42 9c.75 0 1.4.06 1.58.08v1.93h-1.09c-.85 0-1.02.43-1.02 1.05v1.38h2.04l-.27 2.15H15.9V21l-2.13-.03z"/></svg>
     </a>
+    {{!-- Share on Linkedin --}}
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{url absolute="true"}}&amp;title={{encode title}}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="godo-trackin"
+        title="{{t "Share on"}} Linkedin"
+        aria-label="{{t "Share on"}} Linkedin"
+        data-event-category="Article"
+        data-event-action="Linkedin"
+        data-event-label="{{Tracking_name}} - Linkedin"
+        data-event-non-interaction="true">
+        <svg width="30" height="30" class="fill-current"><path fill-rule="evenodd" clip-rule="evenodd" d="M27 15a12 12 0 1 1-24 0 12 12 0 0 1 24 0zm-14.61 5v-7.42h-2.26V20h2.26zm-1.13-8.44c.79 0 1.28-.57 1.28-1.28-.02-.73-.5-1.28-1.26-1.28-.78 0-1.28.55-1.28 1.28 0 .71.49 1.28 1.25 1.28h.01zM15.88 20h-2.5s.04-6.5 0-7.17h2.5v1.02l-.02.02h.02v-.02a2.5 2.5 0 0 1 2.25-1.18c1.64 0 2.87 1.02 2.87 3.22V20h-2.5v-3.83c0-.97-.36-1.62-1.26-1.62-.69 0-1.1.44-1.28.87-.06.15-.08.36-.08.58v4z"/></svg>
+    </a>
+
+    {{!-- <a href="#"
+        class="godo-trackin js-copy-link"
+        title="{{t "Copy Link"}}"
+        aria-label="{{t "Copy Link"}}"
+        data-event-category="Article"
+        data-event-action="Copy Link"
+        data-event-label="{{Tracking_name}} - Copy Link"
+        data-event-non-interaction="true">
+        <svg width="30" height="30"  class="fill-current"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 27a12 12 0 1 0 0-24 12 12 0 0 0 0 24zM9.29 16.28c-.2.36-.29.75-.29 1.17a2.57 2.57 0 0 0 .78 1.84l1.01.96c.53.5 1.17.75 1.92.75s1.38-.25 1.9-.75l1.2-1.15.75-.71.51-.5a2.51 2.51 0 0 0 .72-2.34.7.7 0 0 0-.03-.18 2.74 2.74 0 0 0-.23-.5v-.02l-.08-.14-.02-.03-.02-.01a.33.33 0 0 0-.07-.1c0-.02-.01-.03-.03-.05a.2.2 0 0 0-.03-.03l-.03-.04v-.01l-.02-.03-.04-.03a.85.85 0 0 1-.13-.13l-.43-.42-.06.06-.9.84-.05.09a.26.26 0 0 0-.03.1l.37.38c.04.03.08.07.1.11l.01.01.01.03.02.01.04.1.03.04.06.1v.02l.01.02c.03.1.05.2.05.33a1 1 0 0 1-.12.49c-.07.13-.15.22-.22.29l-.88.85-.61.57-.95.92c-.22.2-.5.3-.82.3-.31 0-.58-.1-.8-.3l-.98-.96a1.15 1.15 0 0 1-.3-.42 1.4 1.4 0 0 1-.04-.35c0-.1.01-.2.04-.3a1 1 0 0 1 .3-.49l1.5-1.46v-.24c0-.21 0-.42.04-.6a3.5 3.5 0 0 1 .92-1.72c-.41.1-.78.32-1.11.62l-.01.02-.01.01-2.46 2.33c-.2.21-.35.4-.44.6h-.02c0 .02 0 .02-.02.02v.02l-.01.01zm3.92-1.8a1.83 1.83 0 0 0 .02.97c0 .06 0 .13.02.19.06.17.14.34.22.5v.02l.06.12.02.03.01.02.08.1c0 .02.02.03.04.05l.08.1h.01c0 .01 0 .03.02.03l.14.14.43.41.08-.06.88-.84.05-.09.03-.1-.36-.37a.4.4 0 0 1-.12-.13v-.02l-.02-.02-.05-.09-.04-.04-.04-.1v-.02l-.02-.02a1.16 1.16 0 0 1 .06-.82c.09-.14.16-.24.23-.3l.9-.85.6-.58.93-.92c.23-.2.5-.3.82-.3a1.2 1.2 0 0 1 .82.3l1 .96c.13.15.23.29.28.42a1.43 1.43 0 0 1 0 .66c-.03.17-.12.33-.26.48l-1.54 1.45.02.25a3.28 3.28 0 0 1-.96 2.32 2.5 2.5 0 0 0 1.1-.62l.01-.01 2.46-2.34c.19-.2.35-.4.46-.6l.02-.02v-.02h.01a2.45 2.45 0 0 0 .21-1.82 2.53 2.53 0 0 0-.7-1.19l-1-.96a2.68 2.68 0 0 0-1.91-.75c-.75 0-1.38.25-1.9.76l-1.2 1.14-.76.72-.5.49c-.4.37-.64.83-.74 1.37z"/></svg>
+    </a> --}}
     <a href="whatsapp://send?text={{url absolute="true"}}"
         target="_blank"
         rel="noopener noreferrer"
-        class="godo-tracking text-gray-900 ml-2 md:hidden"
+        class="godo-tracking button is-black rounded-full text-xs w-6 h-6 md:hidden"
         aria-label="{{t "Share on"}} WhatSapp"
         data-event-category="Article"
         data-event-action="Share"

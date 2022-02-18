@@ -1659,6 +1659,9 @@ except for when immediately preceeded by a heading */
 .mr-10 {
   margin-right: 2.5rem;
 }
+.ml-1 {
+  margin-left: 0.25rem;
+}
 .block {
   display: block;
 }
@@ -1737,6 +1740,12 @@ except for when immediately preceeded by a heading */
 .h-96 {
   height: 24rem;
 }
+.h-7 {
+  height: 1.75rem;
+}
+.h-4 {
+  height: 1rem;
+}
 .max-h-128 {
   max-height: 32rem;
 }
@@ -1800,8 +1809,11 @@ except for when immediately preceeded by a heading */
 .w-4\/12 {
   width: 33.333333%;
 }
-.w-9\/12 {
-  width: 75%;
+.w-7 {
+  width: 1.75rem;
+}
+.w-4 {
+  width: 1rem;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -1936,6 +1948,16 @@ except for when immediately preceeded by a heading */
   margin-right: calc(-0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .self-start {
   align-self: flex-start;
 }
@@ -1979,17 +2001,6 @@ except for when immediately preceeded by a heading */
 }
 .rounded-2xl {
   border-radius: 1rem;
-}
-.rounded-3xl {
-  border-radius: 1.5rem;
-}
-.rounded-t-3xl {
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
-}
-.rounded-l-none {
-  border-top-left-radius: 0px;
-  border-bottom-left-radius: 0px;
 }
 .border-0 {
   border-width: 0px;
@@ -2035,9 +2046,6 @@ except for when immediately preceeded by a heading */
 }
 .border-gray-300 {
   border-color: var(--gray-300);
-}
-.border-gray-500 {
-  border-color: var(--gray-500);
 }
 .border-gray-400 {
   border-color: var(--gray-400);
@@ -2106,6 +2114,12 @@ except for when immediately preceeded by a heading */
 .bg-dark-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(16 43 123 / var(--tw-bg-opacity));
+}
+.bg-gray-900 {
+  background-color: var(--gray-900);
+}
+.bg-gray-800 {
+  background-color: var(--gray-800);
 }
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
@@ -2312,9 +2326,6 @@ except for when immediately preceeded by a heading */
 .pt-vmin8 {
   padding-top: 8vmin;
 }
-.pr-vmin8 {
-  padding-right: 8vmin;
-}
 .text-center {
   text-align: center;
 }
@@ -2457,9 +2468,6 @@ except for when immediately preceeded by a heading */
 }
 .text-logo {
   color: var(--header-text-link);
-}
-.text-gray-200 {
-  color: var(--gray-200);
 }
 .underline {
   text-decoration-line: underline;
