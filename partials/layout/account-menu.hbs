@@ -1,7 +1,7 @@
 {{#if @member}}
 {{!-- Button Updgrade --}}
 {{!-- {{#unless @member.paid}}<a class="button mr-2 text-sm font-medium hidden md:flex" href="{{@site.url}}/membership/">{{t "Upgrade"}}</a>{{/unless}} --}}
-{{#unless @member.paid}}<a data-portal="account/plans" class="button mr-2 text-sm font-medium hidden md:flex" href="#">{{t "Upgrade"}}</a>{{/unless}}
+{{#unless @member.paid}}<a data-portal="account/plans" class="button is-black mr-2 text-sm font-medium hidden md:flex" href="#">{{t "Upgrade"}}</a>{{/unless}}
 
 <div class="dropdown is-right h-16 flex items-center md:ml-3">
     {{!-- https://ghost.org/docs/members/member-data/ --}}
