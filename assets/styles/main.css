@@ -24,6 +24,9 @@
   /* story */
   --story-small-bg: #fff;
   --card-bg: #fff;
+
+  /* Drop Down */
+  --dropdown-text: #292929;
   --dropdown-bg: #fff;
 
   /* title */
@@ -62,6 +65,9 @@
   /* story */
   --story-small-bg: #131212;
   --card-bg: #131212;
+
+  /* Drop Down */
+  --dropdown-text: #fff;
   --dropdown-bg: #191b1f;
 
   /* title */
@@ -962,6 +968,7 @@ table tr:last-child td {
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 
+  color: var(--dropdown-text);
   background-color: var(--dropdown-bg);
   border-radius: 0.25rem;
   /* box-shadow: 0 1px 2px rgba(0, 0, 0, .25),0 0 1px rgba(0, 0, 0, .35); */

@@ -17,6 +17,9 @@
   /* story */
   --story-small-bg: #fff;
   --card-bg: #fff;
+
+  /* Drop Down */
+  --dropdown-text: $primary-text-color;
   --dropdown-bg: #fff;
 
   /* title */
@@ -57,6 +60,9 @@
   /* story */
   --story-small-bg: #131212;
   --card-bg: #131212;
+
+  /* Drop Down */
+  --dropdown-text: #fff;
   --dropdown-bg: #191b1f;
 
   /* title */
