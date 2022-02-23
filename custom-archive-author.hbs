@@ -2,38 +2,54 @@
 {{!< default}}
 
 {{!-- Class for <body> --}}
-{{#contentFor "special_body_class"}}archive-author bg-gray-150 {{/contentFor}}
+{{#contentFor "special_body_class"}}archive-author bg-gray-150{{/contentFor}}
 
 {{#post}}
-<header class="author-header">
-    <div class="px-4 py-12 md:py-vw6 mx-auto max-w-3xl text-center">
-        <h1 class="text-4xl lg:text-5xl text-title">{{title}}</h1>
-        <div class="mt-5 text-lg text-gray-500">{{content}}</div>
+<header class="author-header relative overflow-hidden text-center px-4 py-vw8">
+    <div class="mx-auto max-w-2xl relative z-2">
+        <h1 class="text-4xl text-black lg:text-6xl">{{title}}</h1>
+        <div class="mt-5 text-xl text-black opacity-70">{{content}}</div>
     </div>
+
+    {{#if feature_image}}
+    <img class="inset-image blur-up lazyload"
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-srcset="{{img_url feature_image size="s"}} 300w,
+                {{img_url feature_image size="m"}} 600w,
+                {{img_url feature_image size="l"}} 1000w,
+                {{img_url feature_image size="xl"}} 2000w"
+        data-sizes="auto"
+        width="1200"
+        height="628"
+        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{alt_title}}{{/if}}"
+    />
+    {{else}}
+    <img class="inset-image blur-up lazyload"
+        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        data-src="{{asset "images/simply-title.jpg"}}"
+        width="1200"
+        height="628"
+        alt="{{alt_title}}"
+    />
+    {{/if}}
 </header>
 {{/post}}
 
 {{#get "authors" limit="all"}}
 
-<div class="container px-4 mx-auto pb-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="container mx-auto grid gap-10 py-vmin8 md:grid-cols-2 lg:grid-cols-4">
     {{#foreach authors}}
-        <article class="author-card mb-4 relative flex flex-col p-5 bg-blank shadow-lg rounded-lg flex-1">
-            <header class="flex-1">
-                <h2 class="author-card-name capitalize text-2xl font-semibold underscore"><a href="{{url}}">{{name}}</a></h2>
-                {{#if bio}}<p class="author-card-bio text-gray-600">{{bio}}</p>{{/if}}
-            </header>
+        <article class="author-card flex flex-col text-center">
+            <img class="author-card-avatar object-cover mx-auto rounded-full w-52 h-52" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
 
-            <footer class="relative text-center pt-5 flex items-center justify-between">
-                <div class="author-card-media u-flex1">
-                    {{#if facebook}}<a href="{{facebook_url}}" class="p-2 hover:text-facebook" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
-                    {{#if twitter}}<a href="{{twitter_url}}" class="p-2 hover:text-twitter" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
-                    {{#if website}}<a href="{{website}}" class="p-2" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
-                </div>
+            <h2 class="author-card-name text-title capitalize text-2xl mt-5 hover:text-primary"><a href="{{url}}">{{name}}</a></h2>
+            {{#if bio}}<p class="author-card-bio text-gray-500 line-clamp-3 mt-3 leading-relaxed">{{bio}}</p>{{/if}}
 
-                <a href="{{url}}">
-                    <img class="author-card-avatar object-cover rounded-full w-20 h-20" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
-                </a>
-            </footer>
+            <div class="pt-5 space-x-2">
+                {{#if facebook}}<a href="{{facebook_url}}" class="button is-white" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
+                {{#if twitter}}<a href="{{twitter_url}}" class="button is-white" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
+                {{#if website}}<a href="{{website}}" class="button is-white" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
+            </div>
         </article>
     {{/foreach}}
 </div>
