@@ -18,10 +18,10 @@ export default (socialMediaData, boxSelector) => {
       const link = document.createElement('a')
       link.href = url
       link.title = urlTitle[1]
-      link.classList = `hover:text-${name} p-2 inline-block`
+      link.classList = 'p-2 inline-block hover:opacity-70'
       link.target = '_blank'
       link.rel = 'noopener noreferrer'
-      link.innerHTML = `<svg class="icon icon--${name}"><use xlink:href="#icon-${name}"></use></svg>`
+      link.innerHTML = `<svg class="icon"><use xlink:href="#icon-${name}"></use></svg>`
 
       element.appendChild(link)
     })

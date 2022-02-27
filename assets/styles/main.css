@@ -2624,6 +2624,11 @@ except for when immediately preceeded by a heading */
 .footer {
   background-color: #111;
   color: hsla(0, 0%, 100%, .6);
+
+  /* .button.is-white {
+    background: transparent;
+    color: $footer-color;
+  } */
 }
 .footer a:hover:not(.button) {
     color: #fff;
@@ -2690,19 +2695,14 @@ except for when immediately preceeded by a heading */
 .hover\:text-gray-700:hover {
   color: var(--gray-700);
 }
-.hover\:text-facebook:hover {
-  --tw-text-opacity: 1;
-  color: rgb(66 103 178 / var(--tw-text-opacity));
-}
-.hover\:text-twitter:hover {
-  --tw-text-opacity: 1;
-  color: rgb(85 172 238 / var(--tw-text-opacity));
-}
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
 .hover\:opacity-100:hover {
   opacity: 1;
+}
+.hover\:opacity-70:hover {
+  opacity: 0.7;
 }
 .focus\:outline-none:focus {
   outline: 2px solid transparent;

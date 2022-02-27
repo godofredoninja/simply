@@ -16,6 +16,11 @@
     height: 0;
     width: 0;
   }
+
+  /* .button.is-white {
+    background: transparent;
+    color: $footer-color;
+  } */
 }
 
 .footer-form-input {
