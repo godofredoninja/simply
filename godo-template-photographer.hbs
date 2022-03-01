@@ -1,7 +1,7 @@
 {{!-- Layout --}}
 {{!< default}}
 
-<div class="photographer">
+<div class="photographer pb-vmin8">
     <div class="js-feed-entry grid md:grid-cols-2 lg:grid-cols-3">
         {{#foreach posts}}
         <article class="js-story relative story-cover min-h-lg{{#unless feature_image}} bg-dark{{/unless}}">
@@ -24,6 +24,9 @@
         </article>
         {{/foreach}}
     </div>
+
+    {{!-- Pagination - partials/pagination.hbs --}}
+    {{pagination}}
 </div>
 
 {{#contentFor "header"}}

@@ -6,7 +6,7 @@
 
 {{#is "paged"}}
 
-<div class="site-post container mx-auto pt-12">
+<div class="site-post container mx-auto py-vmin8">
     <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-6">
         {{#foreach posts}}
             {{#has number="7, 8"}}
@@ -16,6 +16,9 @@
             {{/has}}
         {{/foreach}}
     </div>
+
+    {{!-- Pagination - partials/pagination.hbs --}}
+    {{pagination}}
 </div>
 
 {{else}}
@@ -48,6 +51,9 @@
             {{/has}}
         {{/foreach}}
     </div>
+
+    {{!-- Pagination - partials/pagination.hbs --}}
+    {{pagination}}
 </div>
 
 {{/is}}

@@ -1432,6 +1432,9 @@ except for when immediately preceeded by a heading */
 }
 /* Utilities
 /* ---------------------------------------------------------- */
+.pointer-events-none {
+  pointer-events: none;
+}
 .invisible {
   visibility: hidden;
 }
@@ -1945,6 +1948,11 @@ except for when immediately preceeded by a heading */
   margin-right: calc(-0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(-0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
 .self-start {
   align-self: flex-start;
 }
@@ -2253,11 +2261,14 @@ except for when immediately preceeded by a heading */
 .pb-10 {
   padding-bottom: 2.5rem;
 }
-.pt-12 {
-  padding-top: 3rem;
+.pb-vmin8 {
+  padding-bottom: 8vmin;
 }
 .pb-12 {
   padding-bottom: 3rem;
+}
+.pt-12 {
+  padding-top: 3rem;
 }
 .pt-3 {
   padding-top: 0.75rem;

@@ -1,0 +1,50 @@
+<nav class="pagination flex items-center mt-20 justify-center space-x-4" role="navigation">
+    {{#if prev}}
+    <a class="newer-posts button text-gray-600" href="{{page_url prev}}">
+        <svg class="icon transform rotate-180"><use xlink:href="#icon-arrow"></use></svg>
+    </a>
+    {{/if}}
+
+    <div class="page-nums space-x-4"></div>
+
+    {{#if next}}
+    <a class="older-posts button text-gray-600" href="{{page_url next}}">
+        <svg class="icon"><use xlink:href="#icon-arrow"></use></svg>
+    </a>
+    {{/if}}
+</nav>
+
+{{#contentFor "scripts"}}
+<script>
+    (function () {
+        var pageTotal = parseInt("{{pages}}");
+        var pageCurrent = parseInt("{{page}}");
+        var limitPage = 5;
+        var page = 1;
+        var pageNums = document.querySelector('.pagination .page-nums');
+        var dots = '<span class="first button pointer-events-none">...</span>';
+
+        if (pageCurrent >= limitPage) {
+            page = pageCurrent - 2;
+            pageNums.innerHTML += '<a class="first button" href="{{page_url}}page/' + 1 + '">1</a>';
+            pageNums.innerHTML += dots;
+        }
+
+        for (i = 0; i < limitPage; i++) {
+
+            if (page === pageCurrent) {
+                pageNums.innerHTML += '<a class="current button is-primary" href="{{page_url}}page/{{page}}">{{page}}</a>';
+            } else if (page <= pageTotal) {
+                pageNums.innerHTML += '<a class="button" href="{{page_url}}page/' + page + '">' + page + '</a>';
+            }
+
+            page++;
+        }
+
+        if (pageCurrent >= limitPage && pageTotal - 3 >= pageCurrent) {
+            pageNums.innerHTML += dots;
+            pageNums.innerHTML += '<a class="first button" href="{{page_url}}page/{{pages}}">{{pages}}</a>';
+        }
+    })();
+</script>
+{{/contentFor}}
