@@ -102,7 +102,7 @@
     {{!-- Main scripts --}}
     <script src="{{asset "scripts/main.js"}}"></script>
 
-    {{!-- Paginastion --}}
-    {{!-- {{#if pagination.pages}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}} --}}
+    {{!-- Pagination Infinite Scroll --}}
+    {{#match @custom.pagination "Infinite Scroll"}}{{#if pagination.next}}<script src="{{asset "scripts/pagination.js"}}" defer async></script>{{/if}}{{/match}}
 </body>
 </html>

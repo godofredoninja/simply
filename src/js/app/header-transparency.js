@@ -17,7 +17,6 @@ export default (coverClass, headTransparent) => {
     if (!hasCover) return
 
     lastScrollY >= 20 ? domBody.classList.remove(headTransparent) : domBody.classList.add(headTransparent)
-    console.log('joder')
   }, { passive: true })
 }
 

@@ -1,97 +1,57 @@
-((window, document) => {
+import InfiniteScroll from 'infinite-scroll'
+
+(function (document) {
   // Next link Element
   const nextElement = document.querySelector('link[rel=next]')
   if (!nextElement) return
 
   // Post Feed element
-  const feedElement = document.querySelector('.js-feed-entry')
-  if (!feedElement) return
+  const $feedElement = document.querySelector('.js-feed-entry')
+  if (!$feedElement) return
 
-  const buffer = 300
+  const $viewMoreButton = document.querySelector('.load-more-btn')
+  const $iconLoader = $viewMoreButton.querySelector('.icon')
+  const $label = $viewMoreButton.querySelector('.label')
 
-  let ticking = false
-  let loading = false
+  const infScroll = new InfiniteScroll($feedElement, {
+    append: '.js-story',
+    button: $viewMoreButton,
+    history: false,
+    debug: false,
+    hideNav: '.pagination',
+    path: '.pagination .older-posts'
+  })
 
-  let lastScrollY = window.scrollY
-  let lastWindowHeight = window.innerHeight
-  let lastDocumentHeight = document.documentElement.scrollHeight
+  infScroll.on('load', onPageLoad)
 
   function onPageLoad () {
-    if (this.status === 404) {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onResize)
-      return
+    if (infScroll.loadCount === 1) {
+      // after 3nd page loaded
+      // disable loading on scroll
+      infScroll.options.loadOnScroll = false
+      // show button
+      $viewMoreButton.classList.remove('hidden')
+      // remove event listener
+      infScroll.off(onPageLoad)
     }
-
-    // append contents
-    const postElements = this.response.querySelectorAll('.js-story')
-
-    postElements.forEach(function (item) {
-      feedElement.appendChild(document.importNode(item, true))
-    })
-
-    // feedElement.appendChild(postElements)
-
-    // push state
-    // window.history.pushState(null, document.title, nextElement.href)
-
-    // Change Title
-    // document.title = this.response.title
-
-    // set next link
-    const resNextElement = this.response.querySelector('link[rel=next]')
-    if (resNextElement) {
-      nextElement.href = resNextElement.href
-    } else {
-      window.removeEventListener('scroll', onScroll)
-      window.removeEventListener('resize', onResize)
-    }
-
-    // sync status
-    lastDocumentHeight = document.documentElement.scrollHeight
-    ticking = false
-    loading = false
   }
 
-  function onUpdate () {
-    // Retur if already loading
-    if (loading) return
+  infScroll.on('request', function () {
+    $label.classList.add('hidden')
+    $iconLoader.classList.remove('hidden')
+  })
 
-    // return if not scroll to the bottom
-    if (lastScrollY + lastWindowHeight <= lastDocumentHeight - buffer) {
-      ticking = false
-      return
-    }
+  infScroll.on('append', function () {
+    $label.classList.remove('hidden')
+    $iconLoader.classList.add('hidden')
+  })
 
-    loading = true
-
-    const xhr = new window.XMLHttpRequest()
-    xhr.responseType = 'document'
-
-    xhr.addEventListener('load', onPageLoad)
-
-    xhr.open('GET', nextElement.href)
-    xhr.send(null)
-  }
-
-  function requestTick () {
-    ticking || window.requestAnimationFrame(onUpdate)
-    ticking = true
-  }
-
-  function onScroll () {
-    lastScrollY = window.scrollY
-    requestTick()
-  }
-
-  function onResize () {
-    lastWindowHeight = window.innerHeight
-    lastDocumentHeight = document.documentElement.scrollHeight
-    requestTick()
-  }
-
-  window.addEventListener('scroll', onScroll, { passive: true })
-  window.addEventListener('resize', onResize)
-
-  requestTick()
-})(window, document)
+  $viewMoreButton.addEventListener('click', function () {
+    // load next page
+    infScroll.loadNextPage()
+    // enable loading on scroll
+    infScroll.options.loadOnScroll = true
+    // hide page
+    $viewMoreButton.classList.add('hidden')
+  })
+})(document)

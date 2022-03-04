@@ -94,6 +94,14 @@
         ],
         "default": "Auto"
       },
+      "pagination": {
+        "type": "select",
+        "options": [
+          "Infinite Scroll",
+          "Pagination Number"
+        ],
+        "default": "Infinite Scroll"
+      },
       "show_newsletter": {
         "type": "boolean",
         "default": false,
@@ -169,6 +177,7 @@
   },
   "dependencies": {
     "fuzzysort": "^1.1.4",
+    "infinite-scroll": "^4.0.1",
     "lazysizes": "^5.3.2",
     "medium-zoom": "^1.0.6",
     "normalize.css": "^8.0.1",
