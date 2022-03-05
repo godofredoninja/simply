@@ -102,6 +102,10 @@
         ],
         "default": "Infinite Scroll"
       },
+      "disable_member": {
+        "type": "boolean",
+        "default": true
+      },
       "show_newsletter": {
         "type": "boolean",
         "default": false,
