@@ -180,7 +180,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "fuzzysort": "^1.1.4",
+    "flexsearch": "^0.6.32",
     "infinite-scroll": "^4.0.1",
     "lazysizes": "^5.3.2",
     "medium-zoom": "^1.0.6",

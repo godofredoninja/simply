@@ -9,7 +9,7 @@
 .search-results {
   max-height: calc(100vh - 12rem);
 
-  a {
+  li {
     &:hover,
     &.is-active {
       background: rgba(170, 170, 170, .35)

@@ -1,6 +1,6 @@
 /* global searchSettings */
 
-import GhostSearch from './lib/ghost-search'
+import SearchinGhost from './lib/searchinghost'
 
 (function (document) {
   const $body = document.body
@@ -20,9 +20,6 @@ import GhostSearch from './lib/ghost-search'
   // SHow icon search in header
   document.querySelector('a[data-target=modal-search]').classList.remove('hidden')
 
-  // Variable for search
-  // -----------------------------------------------------------------------------
-
   const afterDisplaySearch = results => {
     // Active class to link search
     searchResultActive()
@@ -34,7 +31,7 @@ import GhostSearch from './lib/ghost-search'
       scroll: $results.scrollHeight
     }
 
-    if (results.total === 0 && $input.value !== '') {
+    if (allSearchLinksLength === 0 && $input.value !== '') {
       $searchMessage.classList.remove('hidden')
       $body.removeEventListener('keydown', mySearchKey)
     } else {
@@ -43,25 +40,27 @@ import GhostSearch from './lib/ghost-search'
     }
   }
 
-  const mySearchSettings = { on: { afterDisplay: results => afterDisplaySearch(results) } }
-
-  // join user settings
-  Object.assign(mySearchSettings, searchSettings)
-
-  // when the Enter key is pressed
-  // -----------------------------------------------------------------------------
-  function enterKey () {
-    const link = $results.querySelector(`a.${classIsActive}`)
-    link && link.click()
+  /* Customized search data
+  /* ---------------------------------------------------------- */
+  const mySearchSettings = {
+    key: searchSettings.key,
+    onSearchEnd: results => afterDisplaySearch(results)
   }
 
-  // Attending the active class to the search link
-  // -----------------------------------------------------------------------------
+  /* when the Enter key is pressed
+  /* ---------------------------------------------------------- */
+  function enterKey () {
+    const link = $results.querySelector(`li.${classIsActive}`)
+    link && link.firstChild.click()
+  }
+
+  /* Attending the active class to the search link
+  /* ---------------------------------------------------------- */
   function searchResultActive (index, upDown) {
     index = index || 0
     upDown = upDown || 'up'
 
-    const allSearchLinks = $results.querySelectorAll('a')
+    const allSearchLinks = $results.querySelectorAll('li')
 
     // Return if there are no results
     if (!allSearchLinks.length) return
@@ -81,13 +80,13 @@ import GhostSearch from './lib/ghost-search'
     $results.scrollTo(0, scrollPosition)
   }
 
-  // Reacted to the up or down keys
-  // -----------------------------------------------------------------------------
+  /* Reacted to the up or down keys
+  /* ---------------------------------------------------------- */
   function arrowKeyUpDown (keyNumber) {
     let upDown
     let indexTheLink = 0
 
-    const resultActive = $results.querySelector('.is-active')
+    const resultActive = $results.querySelector(`li.${classIsActive}`)
 
     if (resultActive) {
       indexTheLink = [].slice.call(resultActive.parentNode.children).indexOf(resultActive)
@@ -118,8 +117,8 @@ import GhostSearch from './lib/ghost-search'
     searchResultActive(indexTheLink, upDown)
   }
 
-  // Adding functions to the keys
-  // -----------------------------------------------------------------------------
+  /* Adding functions to the keys
+  /* ---------------------------------------------------------- */
   function mySearchKey (e) {
     const keyNumber = e.keyCode
 
@@ -138,8 +137,8 @@ import GhostSearch from './lib/ghost-search'
     }
   }
 
-  // Search
-  // -----------------------------------------------------------------------------
+  /* Search
+  /* ---------------------------------------------------------- */
   /* eslint-disable no-new */
-  new GhostSearch(mySearchSettings)
+  new SearchinGhost(mySearchSettings)
 })(document)

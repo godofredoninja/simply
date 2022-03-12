@@ -1154,7 +1154,7 @@ a > code[class*="language-"] {
 .search-results {
   max-height: calc(100vh - 12rem);
 }
-.search-results a:hover, .search-results a.is-active {
+.search-results li:hover, .search-results li.is-active {
       background: rgba(170, 170, 170, .35)
     }
 /* Pages
