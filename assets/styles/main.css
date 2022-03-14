@@ -622,6 +622,18 @@ h6 {
           animation-delay: 0.8s;
   display: block;
 }
+@-webkit-keyframes loading-bar {
+  0% { transform: translateX(-100%); }
+  40% { transform: translateX(0); }
+  60% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@keyframes loading-bar {
+  0% { transform: translateX(-100%); }
+  40% { transform: translateX(0); }
+  60% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
 /* Loanding Bar
 /* ---------------------------------------------------------- */
 .medium-zoom--opened .header {

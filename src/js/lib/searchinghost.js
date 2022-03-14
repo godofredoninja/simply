@@ -54,8 +54,8 @@ export default class SearchinGhost {
         }
       },
       cacheMaxAge: 1800,
-      onFetchStart: function () {},
-      onFetchEnd: function (posts) {},
+      onFetchStart: () => document.body.classList.add('is-loading'),
+      onFetchEnd: () => setTimeout(() => { document.body.classList.remove('is-loading') }, 4000),
       onIndexBuildStart: function () {},
       onIndexBuildEnd: function (index) {},
       onSearchStart: function () {},
