@@ -119,6 +119,7 @@ module.exports = {
         extreme: '81.25rem'
       },
       minHeight: {
+        96: '24rem',
         lg: '32rem'
       },
       maxHeight: {

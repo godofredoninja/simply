@@ -1774,6 +1774,9 @@ except for when immediately preceeded by a heading */
 .min-h-lg {
   min-height: 32rem;
 }
+.min-h-96 {
+  min-height: 24rem;
+}
 .min-h-screen {
   min-height: 100vh;
 }
