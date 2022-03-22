@@ -63,8 +63,7 @@
     "card_assets": {
       "exclude": [
         "bookmark",
-        "blockquote",
-        "gallery"
+        "blockquote"
       ]
     },
     "custom": {
