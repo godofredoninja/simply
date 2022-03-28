@@ -1,0 +1,41 @@
+{{!-- Featured Story --}}
+{{#get "posts" limit="3" filter="featured:true" as |godo_featured_post| }}
+    {{#if godo_featured_post}}
+    <div class="relative overflow-hidden">
+        <div class="simply-slider flex overflow-hidden">
+            {{#foreach godo_featured_post}}
+                {{> "story/story-featured"}}
+            {{/foreach}}
+        </div>
+
+        <div class="simply-slider-prev absolute bottom-0 lg:bottom-1/2 right-16 lg:right-auto lg:left-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6 rotate-180 transform"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+
+        <div class="simply-slider-next absolute bottom-0 lg:bottom-1/2 right-4 text-white cursor-pointer opacity-30 hover:opacity-100 focus:outline-none">
+            <svg class="w-12 h-12 fill-current -mt-6"><use xlink:href="#icon-arrow-forward"></use></svg>
+        </div>
+    </div>
+    {{/if}}
+{{/get}}
+
+{{#contentFor "header"}}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">{{/contentFor}}
+
+{{#contentFor "scripts"}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.js" integrity="sha512-j+F4W//4Pu39at5I8HC8q2l1BNz4OF3ju39HyWeqKQagW6ww3ZF9gFcu8rzUbyTDY7gEo/vqqzGte0UPpo65QQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var slider = tns({
+        container: '.simply-slider',
+        loop: true,
+        mouseDrag: true,
+        items: 1,
+        nav: false,
+        speed: 400,
+        autoplay: true,
+        autoplayButtonOutput: false,
+        prevButton: '.simply-slider-prev',
+        nextButton: '.simply-slider-next',
+        mode: 'gallery'
+    });
+</script>
+{{/contentFor}}

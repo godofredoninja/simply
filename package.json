@@ -105,6 +105,30 @@
         "type": "boolean",
         "default": true
       },
+      "publication_cover_title": {
+        "type": "text",
+        "group": "homepage"
+      },
+      "publication_cover_color": {
+        "type": "color",
+        "default": "#ffffff",
+        "group": "homepage"
+      },
+      "publication_cover_img": {
+        "type": "image",
+        "group": "homepage"
+      },
+      "publication_cover": {
+        "type": "select",
+        "options": [
+          "None",
+          "Featured",
+          "Featured Slider",
+          "Cover"
+        ],
+        "default": "Cover",
+        "group": "homepage"
+      },
       "show_newsletter": {
         "type": "boolean",
         "default": false,
