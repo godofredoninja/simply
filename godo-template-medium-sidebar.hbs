@@ -9,7 +9,6 @@
         <div class="md:pr-5 flex-none text-white text-center md:text-left md:max-w-md lg:max-w-xl">
             <h1 class="text-5xl lg:text-6xl">{{title}}</h1>
             {{#if custom_excerpt}}<p class="mt-6 text-22 opacity-80">{{custom_excerpt}}</p>{{/if}}
-            {{#unless @member}}<a data-portal="account/signup" class="button is-black not-dark text-xl mt-12" href="#/portal/signup">{{t "Get Started"}}</a>{{/unless}}
         </div>
 
         {{#if feature_image}}
