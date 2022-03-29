@@ -109,6 +109,10 @@
         "type": "text",
         "group": "homepage"
       },
+      "publication_cover_description": {
+        "type": "text",
+        "group": "homepage"
+      },
       "publication_cover_color": {
         "type": "color",
         "default": "#ffffff",

@@ -7,7 +7,7 @@
     <div class="mx-auto container relative flex justify-between flex-col items-center py-12 md:py-vw4 z-3 md:flex-row md:px-5">
         <div class="md:pr-5 flex-none text-center md:text-left md:max-w-md lg:max-w-xl" {{#if @custom.publication_cover_color}}style="color:{{@custom.publication_cover_color}}"{{/if}}>
             <h1 class="text-5xl lg:text-6xl">{{#if @custom.publication_cover_title}}{{@custom.publication_cover_title}}{{else}}{{@site.title}}{{/if}}</h1>
-            {{#if @site.description}}<p class="mt-6 text-22 opacity-80">{{@site.description}}</p>{{/if}}
+            {{#if @custom.publication_cover_description}}<p class="mt-6 text-22 opacity-80">{{@custom.publication_cover_description}}</p>{{/if}}
             {{#unless @member}}<a data-portal="account/signup" class="button is-black not-dark text-xl mt-12" href="#/portal/signup">{{t "Get Started"}}</a>{{/unless}}
         </div>
 
