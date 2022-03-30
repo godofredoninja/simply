@@ -41,6 +41,26 @@
   --gray-700: $gray-700;
   --gray-800: $gray-800;
   --gray-900: $gray-900;
+
+  /* Button */
+  --button-color: #292929;
+  --button-bg: #f2f2f2;
+  --button-hover-color: rgba(0,0,0,.7);
+  --button-hover-bg: #ececec;
+
+  /* Button white */
+  --button-white-color: #191919;
+  --button-white-bg: #fff;
+  --button-white-hover-color: #757575;
+  --button-white-hover-bg: #f9f9f9;
+
+  /* form */
+  --input-color: hsl(0, 0%, 21%);
+  --input-bg: #fff;
+  --input-border-color: #ced4da;
+  --input-hover-border-color: #80bdff;
+  --input-focus-border-color: #80bdff;
+  --placeholder-color: rgba(54, 54, 54, 0.8);
 }
 
 /* Dark mode
@@ -80,17 +100,25 @@
 
   --border-color: #2e2e2e;
 
-  input,
-  textarea {
-    background-color: rgba(97, 97, 97, .25);
-    color: #fff;
-    border-color: #444;
+  /* Button */
+  --button-color: hsla(0, 0%, 100%, .9);
+  --button-bg: #2b2b2b;
+  --button-hover-color: #fff;
+  --button-hover-bg: #2b2b2b;
 
-    &::placeholder {
-      color: #aaa;
-    }
-  }
+  /* BUtton white */
+  --button-white-color: hsla(0, 0%, 100%, .9);
+  --button-white-bg: transparent;
+  --button-white-hover-color: hsla(0, 0%, 100%, .9);
+  --button-white-hover-bg: transparent;
 
+  /* form */
+  --input-color: #fff;
+  --input-bg: rgba(97, 97, 97, .25);
+  --input-border-color: #444;
+  --placeholder-color: #aaa;
+
+  /* Table */
   table th,
   table td,
   table tr:last-child td {
@@ -99,27 +127,6 @@
 
   .medium-zoom-overlay {
     background: rgba(0, 0, 0, 0.5) !important;
-  }
-
-  .button:not(.is-primary) {
-    background-color: #2b2b2b;
-    color: hsla(0, 0%, 100%, .9);
-
-    &:hover {
-      background-color: #2b2b2b;
-      color: #fff;
-    }
-  }
-
-
-  .button.is-white {
-    background-color: transparent;
-    color: hsla(0, 0%, 100%, .9);
-
-    &:hover {
-      background-color: transparent;
-      color: hsla(0, 0%, 100%, .9);
-    }
   }
 
   :not(pre) > code {

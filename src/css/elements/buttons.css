@@ -1,23 +1,12 @@
-$button-color: #292929;
-$button-background-color: #f2f2f2;
-
-$button-border-color: transparent;
-$button-border-width: 1px;
-
-$button-hover-color: rgba(0,0,0,.7);
-/* $button-hover-border-color: $gray-800; */
-
-/* $button-active-border-color: $gray-800; */
-
 .button {
   @extend %control;
   /* @extend %font-sans; */
 
   user-select: none;
-  background-color: $button-background-color;
-  border-color: $button-border-color;
-  border-width: $button-border-width;
-  color: $button-color;
+  background-color: var(--button-bg);
+  border-color: transparent;
+  border-width: 1px;
+  color: var(--button-color);
   cursor: pointer;
   justify-content: center;
   padding: 0 .875em;
@@ -26,8 +15,8 @@ $button-hover-color: rgba(0,0,0,.7);
   text-decoration: none !important;
 
   &:hover{
-    background-color: #ececec;
-    color: $button-hover-color;
+    background-color: var(--button-hover-bg);
+    color: var(--button-hover-color);
   }
 
   & > .icon {
@@ -51,12 +40,12 @@ $button-hover-color: rgba(0,0,0,.7);
 }
 
 .button.is-white {
-  background-color: #fff;
-  color: #191919;
+  background-color: var(--button-white-bg);
+  color: var(--button-white-color);
 
   &:hover {
-    background-color: #f9f9f9;
-    color: #757575;
+    background-color: var(--button-white-hover-bg);
+    color: var(--button-white-hover-color);
   }
 }
 

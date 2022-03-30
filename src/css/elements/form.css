@@ -1,11 +1,4 @@
 $input-background: hsl(0, 0%, 96%);
-$input-background-color: #fff;
-$input-border-color: #ced4da;
-
-$input-color: hsl(0, 0%, 21%);
-$input-placeholder-color: rgba(54, 54, 54, 0.8);
-$input-hover-border-color: #80bdff;
-$input-focus-border-color: #80bdff;
 
 $input-focus-box-shadow-size: 0 0.625rem 1.25rem;
 
@@ -18,7 +11,6 @@ $input-disabled-placeholder-color: rgba(117, 117, 117, 0.3);
 
 $input-shadow: inset 0 0.0625em 0.125em rgb(10 10 10 / 5%);
 
-
 $textarea-padding: $control-padding-horizontal;
 $textarea-max-height: 40em;
 $textarea-min-height: 8em;
@@ -26,22 +18,22 @@ $textarea-min-height: 8em;
 %input {
   @extend %control;
 
-  background-color: $input-background-color;
-  border-color: $input-border-color;
-  color: $input-color;
+  background-color: var(--input-bg);
+  border-color: var(--input-border-color);
+  color: var(--input-color);
 
   &::placeholder {
-    color: $input-placeholder-color;
+    color: var(--placeholder-color);
   }
 
   &:hover {
-    border-color: $input-hover-border-color;
+    border-color: var(--input-hover-border-color);
   }
 
   &:focus,
   &:active {
     outline: none;
-    border-color: $input-focus-border-color;
+    border-color: var(--input-focus-border-color);
     box-shadow: $input-focus-box-shadow-size $input-focus-box-shadow-color;
   }
 

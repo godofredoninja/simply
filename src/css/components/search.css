@@ -1,5 +1,6 @@
 .search-form input {
   border: none;
+  background: transparent;
 
   &:focus {
     box-shadow: none;

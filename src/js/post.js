@@ -2,7 +2,7 @@
 
 import './main'
 
-import mediumZoom from './components/medium-zoom'
+import mediumZoom from 'medium-zoom'
 
 import loadScript from './util/load-script'
 import getAll from './util/get-all'

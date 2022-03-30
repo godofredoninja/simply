@@ -2,6 +2,11 @@
   background-color: $footer-bg-color;
   color: $footer-color;
 
+  --input-color: $footer-color-input;
+  --input-bg: $footer-bg-input-color;
+  --input-border-color: transparent;
+  --placeholder-color: $footer-color-input;
+
   a:hover:not(.button) {
     color: #fff;
   }
@@ -15,21 +20,6 @@
     border-left-color: #fff;
     height: 0;
     width: 0;
-  }
-
-  /* .button.is-white {
-    background: transparent;
-    color: $footer-color;
-  } */
-}
-
-.footer-form-input {
-  background-color: $footer-bg-input-color;
-  border-color: transparent;
-  color: $footer-color-input;
-
-  &::placeholder {
-    color: $footer-color-input;
   }
 }
 

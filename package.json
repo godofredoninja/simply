@@ -193,7 +193,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-zip": "^5.1.0",
     "merge-stream": "^2.0.0",
-    "postcss": "^8.4.5",
+    "postcss": "^8.4.12",
     "postcss-discard-comments": "^5.0.1",
     "postcss-extend": "^1.0.5",
     "postcss-import": "^14.0.2",
