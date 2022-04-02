@@ -10,8 +10,8 @@ import InfiniteScroll from 'infinite-scroll'
   if (!$feedElement) return
 
   const $viewMoreButton = document.querySelector('.load-more-btn')
-  const $iconLoader = $viewMoreButton.querySelector('.icon')
-  const $label = $viewMoreButton.querySelector('.label')
+  // const $iconLoader = $viewMoreButton.querySelector('.icon')
+  // const $label = $viewMoreButton.querySelector('.label')
 
   const infScroll = new InfiniteScroll($feedElement, {
     append: '.js-story',
@@ -30,21 +30,22 @@ import InfiniteScroll from 'infinite-scroll'
       // disable loading on scroll
       infScroll.options.loadOnScroll = false
       // show button
+      $viewMoreButton.classList.add('flex')
       $viewMoreButton.classList.remove('hidden')
       // remove event listener
       infScroll.off(onPageLoad)
     }
   }
 
-  infScroll.on('request', function () {
-    $label.classList.add('hidden')
-    $iconLoader.classList.remove('hidden')
-  })
+  // infScroll.on('request', function () {
+  //   $label.classList.add('hidden')
+  //   $iconLoader.classList.remove('hidden')
+  // })
 
-  infScroll.on('append', function () {
-    $label.classList.remove('hidden')
-    $iconLoader.classList.add('hidden')
-  })
+  // infScroll.on('append', function () {
+  //   $label.classList.remove('hidden')
+  //   $iconLoader.classList.add('hidden')
+  // })
 
   $viewMoreButton.addEventListener('click', function () {
     // load next page
@@ -52,6 +53,6 @@ import InfiniteScroll from 'infinite-scroll'
     // enable loading on scroll
     infScroll.options.loadOnScroll = true
     // hide page
-    $viewMoreButton.classList.add('hidden')
+    this.classList.add('hidden')
   })
 })(document)
