@@ -133,6 +133,15 @@
         "default": "Cover",
         "group": "homepage"
       },
+      "post_font": {
+        "type": "select",
+        "options": [
+          "font-sans",
+          "font-serif"
+        ],
+        "default": "font-serif",
+        "group": "post"
+      },
       "show_newsletter": {
         "type": "boolean",
         "default": false,

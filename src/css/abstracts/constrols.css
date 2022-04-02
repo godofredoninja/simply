@@ -14,7 +14,9 @@ $control-padding-horizontal: calc(0.75em - $control-border-width);
 
   @extend %font-sans;
 
+  /* stylelint-disable-next-line */
   -moz-appearance: none;
+  /* stylelint-disable-next-line */
   -webkit-appearance: none;
   align-items: center;
   border: $control-border-width solid transparent;

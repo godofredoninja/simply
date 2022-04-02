@@ -30,7 +30,7 @@
                 {{/if}}
             </header>
 
-            <section id="post-body" class="post-body relative font-serif godo-canvas">{{content}}</section>
+            <section id="post-body" class="post-body relative godo-canvas {{#match @custom.post_font "=" "font-serif"}}font-serif{{else}}font-sans{{/match}}">{{content}}</section>
 
             {{!-- Tags - ./partials/components/tags,hbs --}}
             <footer class="post-footer godo-canvas pt-10">

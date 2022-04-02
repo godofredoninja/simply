@@ -13,7 +13,7 @@
   li {
     &:hover,
     &.is-active {
-      background: rgba(170, 170, 170, .35)
+      background: rgba(170, 170, 170, .35);
     }
   }
 }
