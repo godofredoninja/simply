@@ -13,16 +13,17 @@ To set the publication language follow the steps below.
 
 - `en` — English default language
 - `es` — Español
-- `de` — German - By [dkbast](https://github.com/dkbast)
-- `tr` — Turkish - By [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz) , [@tolgaaaltas](https://github.com/tolgaaaltas)
-- `fr-CA` — Canadian French - By [Pascal Andy](https://github.com/pascalandy)
-- `ru` — Russian - By [Partizan007](https://github.com/partizan007)
-- `vi`— Vietnamese - By [ping](https://github.com/everping)
-- `fr`— French - By [ping](https://github.com/StanGirard)
-- `it`— Italian - By [Marco Sanson](https://github.com/marcosanson)
-- `id`— Indonesian - By [Adryan Eka Vandra](https://github.com/adryanev)
-- `pt-BR`— Brazilian - By [Daniel Pereira](https://github.com/danieldeev)
-- `uz`— Uzbek - By [Shukrullo Turgunov](https://github.com/vodiylik)
+- `de` — German by [dkbast](https://github.com/dkbast)
+- `tr` — Turkish by [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz) , [@tolgaaaltas](https://github.com/tolgaaaltas)
+- `fr-CA` — Canadian French by [Pascal Andy](https://github.com/pascalandy)
+- `ru` — Russian by [Partizan007](https://github.com/partizan007)
+- `vi`— Vietnamese by [ping](https://github.com/everping)
+- `fr`— French by [ping](https://github.com/StanGirard)
+- `it`— Italian by [Marco Sanson](https://github.com/marcosanson)
+- `id`— Indonesian by [Adryan Eka Vandra](https://github.com/adryanev)
+- `pt-BR`— Brazilian by [Daniel Pereira](https://github.com/danieldeev)
+- `uz`— Uzbek by [Shukrullo Turgunov](https://github.com/vodiylik)
+- `pl`— Polish by [Anarion](https://github.com/anarion80)
 
 ## Add a New Language
 

@@ -105,6 +105,17 @@
         "type": "boolean",
         "default": true
       },
+      "publication_cover": {
+        "type": "select",
+        "options": [
+          "None",
+          "Featured",
+          "Featured Slider",
+          "Cover"
+        ],
+        "default": "Cover",
+        "group": "homepage"
+      },
       "publication_cover_title": {
         "type": "text",
         "group": "homepage"
@@ -120,17 +131,6 @@
       },
       "publication_cover_img": {
         "type": "image",
-        "group": "homepage"
-      },
-      "publication_cover": {
-        "type": "select",
-        "options": [
-          "None",
-          "Featured",
-          "Featured Slider",
-          "Cover"
-        ],
-        "default": "Cover",
         "group": "homepage"
       },
       "post_font": {

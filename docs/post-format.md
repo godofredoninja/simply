@@ -10,6 +10,7 @@
 6. [Post Image Right](#post-image-right)
 7. [Post Sidebar](#post-sidebar)
 8. [Post not Image](#post-not-image)
+9. [Post toc](#post-toc)
 
 ![Ghost Post format dropdown](https://user-images.githubusercontent.com/10253167/104851634-40dd2080-58c4-11eb-8dc9-23912d907ddf.jpg)
 
@@ -74,3 +75,11 @@ The featured image will not be displayed in the Article.
 👉 Select the `Post Not Image` from the template drop down.
 
 ![Ghost post  not image](https://user-images.githubusercontent.com/10253167/104942891-fb335d00-5982-11eb-8c6d-db55cdb091d0.jpg)
+
+## Post Toc
+
+Has a list with a link to all the second titles and is located on the right side of the article.
+
+👉 Select the `Post Toc` from the template drop down.
+
+![Ghost post toc](https://user-images.githubusercontent.com/10253167/161864121-87d6c7c9-39cf-4b8c-aae4-c17abc3beb40.jpg)

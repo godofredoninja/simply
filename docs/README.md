@@ -4,23 +4,49 @@
 
 ## General features
 
-- [Membership](./members.md) Support using the new portal feature
-- Support for [different Languages](./languages.md)
-- Light Mode / Dark Mode
-- [Logo Light / Dark Mode](./settings.md#logo-light--dark-mode)
-- [Social accounts link](./settings.md#socialmedia)
-- [Fast search](./settings.md#search/) functionality
-- [Layouts Header](./layouts.md#header)
-  - Header Defautl
-  - [Header with DropDown Menu](./settings.md#header-with-dropdown-menu)
-- [Layouts Footer](./layouts.md#footer)
-  - Footer Default
-  - Footer Dark
-  - Footer Not Menu Secondary
-- Comments
-  - [Disqus Comments](./settings.md#disquscomments)
-  - [Facebook Comments](./settings.md#facebookcomments)
-  - [Hyvor Talk Comments](./settings.md#hyvortalk)
+- Simply Settings
+  - [Social Media](./settings.md#social-media)
+  - [Search](./settings.md#search)
+  - [Logo Light / Dark Mode](#logo-light--dark-mode)
+- Site wide
+  - [Header](./settings.md#header)
+    - Defautl
+    - DropDown Menu
+  - [Footer](./layouts.md#footer)
+    - Default
+    - Dark
+    - No Secondary Navigation
+  - [Color Scheme](./settings.md#color-scheme)
+    - Auto (default)
+    - Dark Mode
+    - Light Mode
+  - [Pagination](./settings.md#pagination)
+    - Infinite Scroll (default)
+    - Pagination Number
+  - [Membership](./members.md)
+    - [Disable Membership](./members.md#disable-membership)
+- [Homepage](./settings.md#homepage)
+  - [Publication cover](./settings.md#homepage)
+    - None
+    - Featured -> Latest Featured Article
+    - Featured Slider -> 3 Latest Articles
+    - Cover (default)
+      - Publication cover title
+      - Publication cover description
+      - Publication cover color
+      - Publication cover img
+- Post
+  - [Post Font](./settings.md#post-font)
+    - font-serif (default)
+    - font-sans
+  - [Newsletter](./settings.md#newsletter)
+    - Show / Hide
+    - Newsletter Text
+  - Comments
+    - [Disqus Comments](./settings.md#disquscomments)
+    - [Facebook Comments](./settings.md#facebookcomments)
+    - [Hyvor Talk Comments](./settings.md#hyvortalk)
+- [Publication Language](./languages.md)
 - Home Page
   - [Default](./home.md#default)
   - [Featured](./home.md#featured)
@@ -28,7 +54,7 @@
   - [Sidebar](./home.md#sidebar)
   - [Grid](./home.md#grid)
   - [Personal](./home.md#personal)
-  - [Archive](./home.md#archivepage)
+  - [Archive](./home.md#archive-page)
   - [Featured with Slider](./home.md#featured-with-slider)
   - [Medium with Sidebar](./home.md#medium-with-sidebar)
   - [Photographer](./home.md#photographer)
@@ -41,29 +67,39 @@
   - [Post Image Right](./post-format.md#post-image-right)
   - [Post Sidebar](./post-format.md#post-sidebar)
   - [Post not Image](./post-format.md#post-not-image)
+  - [Post Toc](./post-format.md#post-toc)
+- Page Format
+  - Page Default
+  - Page Toc
 - Page
   - [Contact](./contact-page.md)
+  - [Podcast](./podcast-page.md)
+  - [Portfolio](./portfolio-page.md)
   - 404
 - Archive
   - [Authors Page](./authors-and-tags-page.md#authors-page)
   - [Tags Page](./authors-and-tags-page.md#tags-page)
-- [Podcasts Page](./podcasts-page.md)
-- [Portfolio Page](./portfolio-page.md)
 - [Kusi Doc](./kusi-doc.md) for the documentation of your project
 - [AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost) Template
-- Related Articles
-- Social share buttons support for posts
-- Previous and next Post
-- Tracking [Google Tag Manager](./tracking-google-tag-manager.md)
-- Pagination Infinite Scroll
-- Video Responsive
-  - YouTube
-  - Vimeo
-  - kickstarter
-  - Dailymotion
+- Post and Page
+  - [Prism supported all syntax](https://prismjs.com/index.html#supported-languages)
+  - Medium style image zoom
+  - Video Responsive
+    - Video
+    - YouTube
+    - Vimeo
+    - kickstarter
+    - Dailymotion
+- Post Content
+  - Related Articles
+  - Social share buttons support for posts
+  - Previous and next Post
+- Sidebar
+  - 3 featured articles on the home page
+  - 3 lates articles
+  - Tag Cloud
 - Lazy Loading for images
-- Medium style image zoom
-- [Prism supported all syntax](https://prismjs.com/index.html#supported-languages)
+- Tracking [Google Tag Manager](./tracking-google-tag-manager.md)
 
 ## How to install
 
@@ -79,45 +115,3 @@ Follow these steps to upload the theme.
 - Click **Upload a theme** button.
 - Select the theme file `simply.zip`.
 - Once uploaded, click **Activate now** to activate the theme immediately.
-
-## Development
-
-Simply uses [Gulp](https://gulpjs.com/) as a build tool and [Yarn](https://yarnpkg.com/) to manage front-end packages.
-
-```bash
-# clone this repo
-$ git clone https://github.com/godofredoninja/simply.git
-
-# Use branch Dev
-$ git checkout dev
-
-# install the dependencies
-$ cd simply && yarn
-
-# run build & livereload task
-$ yarn dev
-
-# link to ghost themes dir
-$ ln -s $PWD path/to/ghost/content/themes/simply
-
-# restart ghost server
-$ cd path/to/ghost && ghost restart --development
-```
-
-### Font Icons
-
-Icons generated by [Icomoon](https://icomoon.io/app/#/select) and import  `src/svg-icons/selection.json`
-
-### Build commands
-
-- `yarn dev` — Compile assets when file changes are made, start [livereload](http://livereload.com/)
-- `yarn build` — Compile and optimize the files in your assets directory
-- `yarn prod` — Compile assets for production and generate a `dist/simply.zip`
-
-### Additional commands
-
-- `yarn lint:js` — [Standard](https://standardjs.com/), Check for errors in the script.
-- `yarn lint:sass` — [Stylelint](https://stylelint.io/), Check for errors in the styles.
-- `yarn lint` — Check error in script and styles.
-- `yarn scan` — [Ghost Scan](https://github.com/TryGhost/gscan) check for errors, deprecation and other compatibility issues.
-- `yarn test` — Check the script errors and styles then check the theme if it is compatible with the latest version of Ghost.

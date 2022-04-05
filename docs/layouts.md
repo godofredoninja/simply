@@ -4,7 +4,11 @@ Simply comes with different header and footer styles.
 
 ## Header
 
-Two different styles for Header
+Two different styles for Header.
+
+➡️ `Dashboard -> Site design -> Site-wide -> Header`
+
+![header simply](https://user-images.githubusercontent.com/10253167/161590741-a1718619-219a-4c11-b49b-76d7f52bf99e.jpg)
 
 ### Header Default
 
@@ -34,20 +38,13 @@ You can add drop down menu in header and for [Social Media](./settings.md#social
 </script>
 ```
 
-Edit the file `default.hbs` and uncomment `{{> "layout/header" hasDropDown=true}}`
-
-``` handlebars
-{{!-- Header Content with User Account ./partials/layout/header-user-account.hbs --}}
-{{!-- Header Default --}}
-{{> "layout/header"}}
-
-{{!-- Header With Drop Down --}}
-{{!-- {{> "layout/header" hasDropDown=true}} --}}
-```
-
 ## Footer
 
 Three different styles for Footer
+
+➡️ `Dashboard -> Site design -> Site-wide -> Footer`
+
+![footer simply](https://user-images.githubusercontent.com/10253167/161591381-b39853c3-7a6b-46c4-a6af-80ebb5133a8d.jpg)
 
 ### Footer Default
 
@@ -72,19 +69,6 @@ The default footer comes using the following style.
 - Copyright is on the left side
 - Secondary menu on the right side
 
-Edit the file `default.hbs` and uncomment `{{>"layout/footer-dark"}}`
-
-```handlebars
-{{!-- Footer Default ./partials/layout/footer.hbs --}}
-{{!-- {{>"layout/footer"}} --}}
-
-{{!-- Footer - dark ./partials/layout/footer-dark.hbs --}}
-{{>"layout/footer-dark"}}
-
-{{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
-{{!-- {{>"layout/footer-not-menu"}} --}}
-```
-
 ---
 
 ### Footer Not Menu
@@ -94,16 +78,3 @@ Edit the file `default.hbs` and uncomment `{{>"layout/footer-dark"}}`
 - Title or Logo is on the left side
 - Social media buttons are after the logo on the left side
 - Copyright is on the right side
-
-Edit the file `default.hbs` and uncomment `{{>"layout/footer-not-menu"}}`
-
-```handlebars
-{{!-- Footer Default ./partials/layout/footer.hbs --}}
-{{!-- {{>"layout/footer"}} --}}
-
-{{!-- Footer - dark ./partials/layout/footer-dark.hbs --}}
-{{!-- {{>"layout/footer-dark"}} --}}
-
-{{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
-{{>"layout/footer-not-menu"}}
-```
