@@ -46,8 +46,6 @@
 
 ## Featured
 
-## General features
-
 - Simply Settings
   - [Social Media](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
   - [Search](https://godofredo.ninja/ghost-theme/simply/settings/#search)
