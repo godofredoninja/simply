@@ -258,17 +258,17 @@ To have the [Facebook comments](https://developers.facebook.com/docs/plugins/com
 Inside the file you have to delete all the content and add all the code that I leave below.
 
 ```handlebars
-<div id="post-comments" class="post-comments js-comments bg-gray-200 pt-4 pb-8">
-    <div class="mx-auto px-4 max-w-5xl">
-        <div class="py-4 px-5 bg-white shadow rounded-md border border-gray-100">
-             <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
-        </div>
+<div id="post-comments" class="post-comments bg-gray-150 pt-8 pb-8">
+  <div class="mx-auto px-4 max-w-5xl">
+    <div class="py-4 px-5">
+      <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
     </div>
+  </div>
 </div>
 
 {{#contentFor "scripts"}}
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v9.0" nonce="Jb8hW4cJ"></script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v13.0" nonce="Jb8hW4cJ"></script>
 {{/contentFor}}
 ```
 
@@ -287,21 +287,19 @@ Make sure to replace `YOUR_WEBSITE_ID` in the code with your website ID.
 Inside the file you have to delete all the content and add all the code that I leave below.
 
 ```handlebars
-<div id="post-comments" class="post-comments js-comments bg-gray-200 pt-8 pb-8">
-    <div class="mx-auto px-4 max-w-4xl">
-        <div class="py-4">
-            <div id="hyvor-talk-view"></div>
-        </div>
-    </div>
+<div id="post-comments" class="post-comments pt-8 pb-8">
+  <div class="mx-auto px-4 max-w-5xl">
+    <div id="hyvor-talk-view"></div>
+  </div>
 </div>
 
 {{#contentFor "scripts"}}
 <script type="text/javascript">
-    var HYVOR_TALK_WEBSITE = YOUR_WEBSITE_ID; // DO NOT CHANGE THIS
-    var HYVOR_TALK_CONFIG = {
-        url: "{{url absolute="true"}}",
-        id: "ghost-{{comment_id}}"
-    };
+  var HYVOR_TALK_WEBSITE = YOUR_WEBSITE_ID; // DO NOT CHANGE THIS
+  var HYVOR_TALK_CONFIG = {
+    url: "{{url absolute="true"}}",
+    id: "ghost-{{comment_id}}"
+  };
 </script>
 <script async type="text/javascript" src="//talk.hyvor.com/web-api/embed"></script>
 {{/contentFor}}

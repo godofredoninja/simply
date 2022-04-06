@@ -4,11 +4,14 @@
 {{#contentFor "special_body_class"}}topic{{/contentFor}}
 
 {{#post}}
-<header class="topic-header">
-    <div class="px-4 py-12 mx-auto max-w-3xl text-center text-white md:py-vw6">
-        <h1 class="capitalize text-4xl lg:text-5xl font-semibold">{{title}}</h1>
-        <div class="mt-8 text-xl">{{content}}</div>
+<header class="relative overflow-hidden text-center text-white px-4 py-12 md:py-vw6 {{#unless feature_image}}topic-header{{/unless}}">
+    <div class="mx-auto max-w-2xl relative z-3">
+        <h1 class="capitalize text-4xl lg:text-5xl">{{title}}</h1>
+        <div class="mt-5 text-xl">{{content}}</div>
     </div>
+
+    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
 </header>
 {{/post}}
 
@@ -46,7 +49,9 @@
 
 {{/get}}
 
+{{#contentFor "header"}}
 <style>
 .topic-header {background: url({{asset "images/bg-setup.svg"}}) bottom no-repeat,linear-gradient(60deg,#2e2ea2,#138395)}
 .topic-bg-gradient {background: linear-gradient(135deg,rgb(6 10 25 / 70%),rgb(5 17 19 / 60%))}
 </style>
+{{/contentFor}}

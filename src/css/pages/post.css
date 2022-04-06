@@ -38,7 +38,7 @@
   }
 
   a {
-    @apply underline underline-offset-1 break-words;
+    @apply underline underline-offset-4 break-words;
     /* text-decoration: underline; */
     /* word-break: break-word; */
   }

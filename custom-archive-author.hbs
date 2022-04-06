@@ -11,27 +11,18 @@
         <div class="mt-5 text-xl text-black opacity-70">{{content}}</div>
     </div>
 
-    {{#if feature_image}}
-    <img class="inset-image blur-up lazyload"
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-srcset="{{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1000w,
-                {{img_url feature_image size="xl"}} 2000w"
-        data-sizes="auto"
-        width="1200"
-        height="628"
-        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{alt_title}}{{/if}}"
-    />
-    {{else}}
+    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+    {{> "components/media-cover" background=feature_image alt_title=title}}
+
+    {{#unless feature_image}}
     <img class="inset-image blur-up lazyload"
         src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
         data-src="{{asset "images/simply-title.jpg"}}"
         width="1200"
         height="628"
-        alt="{{alt_title}}"
+        alt="{{title}}"
     />
-    {{/if}}
+    {{/unless}}
 </header>
 {{/post}}
 

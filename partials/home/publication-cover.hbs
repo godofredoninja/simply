@@ -1,0 +1,38 @@
+{{!-- Cover Home page --}}
+{{#match @custom.publication_cover "Cover"}}
+<div class="relative overflow-hidden">
+    <div class="mx-auto container relative flex justify-between flex-col items-center py-12 md:py-vw4 z-3 md:flex-row md:px-5">
+        <div class="md:pr-5 flex-none text-center md:text-left md:max-w-md lg:max-w-xl" {{#if @custom.publication_cover_color}}style="color:{{@custom.publication_cover_color}}"{{/if}}>
+            <h1 class="text-5xl lg:text-6xl">{{#if @custom.publication_cover_title}}{{@custom.publication_cover_title}}{{else}}{{@site.title}}{{/if}}</h1>
+            {{#if @custom.publication_cover_description}}<p class="mt-6 text-22 opacity-80">{{@custom.publication_cover_description}}</p>{{/if}}
+            {{#if @custom.disable_member}}{{#unless @member}}<a data-portal="account/signup" class="button is-black not-dark text-xl mt-12" href="#/portal/signup">{{t "Get Started"}}</a>{{/unless}}{{/if}}
+        </div>
+
+        {{#if @custom.publication_cover_img}}
+        <figure class="relative max-w-lg w-full hidden md:flex mt-12 md:mt-0">
+            <img class="blur-up lazyload object-center w-full"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-srcset="{{img_url @custom.publication_cover_img size="s"}} 300w,
+                        {{img_url @custom.publication_cover_img size="m"}} 600w,
+                        {{img_url @custom.publication_cover_img size="l"}} 1000w,
+                        {{img_url @custom.publication_cover_img size="xl"}} 2000w"
+                data-sizes="auto"
+                width="512"
+                height="384"
+                alt="{{#if @custom.publication_cover_title}}{{@custom.publication_cover_title}}{{else}}{{@site.title}}{{/if}}"/>
+        </figure>
+        {{/if}}
+    </div>
+
+    {{!-- Featured Media - partials/components/media-cover.hbs --}}
+    {{> "components/media-cover" background=@site.cover_image alt_title=@site.title}}
+</div>
+{{/match}}
+
+{{!-- Featured Article - ./partials/story/story-featured.hbs --}}
+{{#match @custom.publication_cover "Featured"}}{{#get "posts" limit="1" filter="featured:true" as |godo_featured_post| }}
+    {{#if godo_featured_post}} {{#foreach godo_featured_post}}{{> "story/story-featured"}}{{/foreach}}{{/if}}
+{{/get}}{{/match}}
+
+{{!-- Last 5 featured articles slider - ./partials/home/featured-slider.hbs --}}
+{{#match @custom.publication_cover "Featured Slider"}}{{> "home/featured-slider"}}{{/match}}

@@ -7,9 +7,9 @@
 - Simply Settings
   - [Social Media](./settings.md#social-media)
   - [Search](./settings.md#search)
-  - [Logo Light / Dark Mode](#logo-light--dark-mode)
+  - [Logo Light / Dark Mode](./settings.md/#logo-light--dark-mode)
 - Site wide
-  - [Header](./settings.md#header)
+  - [Header](./layouts.md/#header)
     - Defautl
     - DropDown Menu
   - [Footer](./layouts.md#footer)

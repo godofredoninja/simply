@@ -22,4 +22,4 @@
 - Publish the page
 - To add the page to the navigation
 
-![Ghost - Simply Authors Page](https://user-images.githubusercontent.com/10253167/105208296-88f38180-5b16-11eb-9ba9-ea0a50aafb12.jpg)
+![Ghost - Simply Authors Page](https://user-images.githubusercontent.com/10253167/162016930-c93eb5b5-c816-4840-bc49-dfedbeb83d60.jpg)

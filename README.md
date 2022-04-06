@@ -42,27 +42,68 @@
 
 &nbsp;
 
-[![Simply free theme for ghost](https://user-images.githubusercontent.com/10253167/113333274-d6932400-92e7-11eb-8926-9dfed0b1b80e.jpg)](https://godofredo.ninja/ghost-theme/simply/)
+[![Simply free theme for ghost](https://user-images.githubusercontent.com/10253167/162076408-0356f347-6d0b-47ad-a640-e8ee7a2494af.jpg)](https://godofredo.ninja/ghost-theme/simply/)
 
 ## Featured
 
-- [Membership](https://godofredo.ninja/ghost-theme/simply/members) Support using the new portal feature
-- Support for [different Languages](https://godofredo.ninja/ghost-theme/simply/languages)
-- Light Mode / Dark Mode
-- [Logo Light / Dark Mode](https://godofredo.ninja/ghost-theme/simply/settings/#logolightdarkmode)
-- [Social accounts link](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
-- [Fast search](https://godofredo.ninja/ghost-theme/simply/settings/#search/) functionality
-- [Layouts Header](https://godofredo.ninja/ghost-theme/simply/layouts/#header)
-  - Header Defautl
-  - [Header with DropDown Menu](https://godofredo.ninja/ghost-theme/simply/layouts/#headerdefault)
-- [Layouts Footer](https://godofredo.ninja/ghost-theme/simply/layouts/#footer)
-  - Footer Default
-  - Footer Dark
-  - Footer Not Menu Secondary
-- Comments
-  - [Disqus Comments](https://godofredo.ninja/ghost-theme/simply/settings/#disquscomments)
-  - [Facebook Comments](https://godofredo.ninja/ghost-theme/simply/settings/#facebookcomments)
-  - [Hyvor Talk Comments](https://godofredo.ninja/ghost-theme/simply/settings/#hyvortalk)
+## General features
+
+- Simply Settings
+  - [Social Media](https://godofredo.ninja/ghost-theme/simply/settings/#socialmedia)
+  - [Search](https://godofredo.ninja/ghost-theme/simply/settings/#search)
+  - [Logo Light / Dark Mode](https://godofredo.ninja/ghost-theme/simply/settings/#logolightdarkmode)
+- Site wide
+  - [Header](https://godofredo.ninja/ghost-theme/simply/layouts/#header)
+    - Defautl
+    - DropDown Menu
+  - [Footer](https://godofredo.ninja/ghost-theme/simply/layouts/#footer)
+    - Default
+    - Dark
+    - No Secondary Navigation
+  - [Color Scheme](https://godofredo.ninja/ghost-theme/simply/settings/#colorscheme)
+    - Auto (default)
+    - Dark Mode
+    - Light Mode
+  - [Pagination](https://godofredo.ninja/ghost-theme/simply/settings/#pagination)
+    - Infinite Scroll (default)
+    - Pagination Number
+  - [Membership](https://godofredo.ninja/ghost-theme/simply/members/)
+    - [Disable Membership](https://godofredo.ninja/ghost-theme/simply/members/#disablemembership)
+- [Homepage](https://godofredo.ninja/ghost-theme/simply/settings/#homepage)
+  - [Publication cover](https://godofredo.ninja/ghost-theme/simply/settings/#homepage)
+    - None
+    - Featured -> Latest Featured Article
+    - Featured Slider -> 3 Latest Articles
+    - Cover (default)
+      - Publication cover title
+      - Publication cover description
+      - Publication cover color
+      - Publication cover img
+- Post
+  - [Post Font](https://godofredo.ninja/ghost-theme/simply/settings/#postfont)
+    - font-serif (default)
+    - font-sans
+  - [Newsletter](https://godofredo.ninja/ghost-theme/simply/settings/#newsletter)
+    - Show / Hide
+    - Newsletter Text
+  - Comments
+    - [Disqus Comments](https://godofredo.ninja/ghost-theme/simply/settings/#disquscomments)
+    - [Facebook Comments](https://godofredo.ninja/ghost-theme/simply/settings/#facebookcomments)
+    - [Hyvor Talk Comments](https://godofredo.ninja/ghost-theme/simply/settings/#hyvortalk)
+- [Publication Language](./languages.md)
+  - `en` — English default language
+  - `es` — Español
+  - `de` — German by [dkbast](https://github.com/dkbast)
+  - `tr` — Turkish by [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz) , [@tolgaaaltas](https://github.com/tolgaaaltas)
+  - `fr-CA` — Canadian French by [Pascal Andy](https://github.com/pascalandy)
+  - `ru` — Russian by [Partizan007](https://github.com/partizan007)
+  - `vi`— Vietnamese by [ping](https://github.com/everping)
+  - `fr`— French by [ping](https://github.com/StanGirard)
+  - `it`— Italian by [Marco Sanson](https://github.com/marcosanson)
+  - `id`— Indonesian by [Adryan Eka Vandra](https://github.com/adryanev)
+  - `pt-BR`— Brazilian by [Daniel Pereira](https://github.com/danieldeev)
+  - `uz`— Uzbek by [Shukrullo Turgunov](https://github.com/vodiylik)
+  - `pl`— Polish by [Anarion](https://github.com/anarion80)
 - Home Page
   - [Default](https://godofredo.ninja/ghost-theme/simply/home-page/#default)
   - [Featured](https://godofredo.ninja/ghost-theme/simply/home-page/#featured)
@@ -75,37 +116,47 @@
   - [Medium with Sidebar](https://godofredo.ninja/ghost-theme/simply/home-page/#mediumwithsidebar)
   - [Photographer](https://godofredo.ninja/ghost-theme/simply/home-page/#photographer)
 - Post Format
-  - [Post Default](https://godofredo.ninja/ghost-theme/simply/post-format/#post-default)
-  - [Post Full](https://godofredo.ninja/ghost-theme/simply/post-format/#post-full)
-  - [Post Wide](https://godofredo.ninja/ghost-theme/simply/post-format/#post-wide)
-  - [Post Header Image](https://godofredo.ninja/ghost-theme/simply/post-format/#post-header-image)
+  - [Post Default](https://godofredo.ninja/ghost-theme/simply/post-format/#postdefault)
+  - [Post Full](https://godofredo.ninja/ghost-theme/simply/post-format/#postfull)
+  - [Post Wide](https://godofredo.ninja/ghost-theme/simply/post-format/#postwide)
+  - [Post Header Image](https://godofredo.ninja/ghost-theme/simply/post-format/#postheaderimage)
   - [Post Image](https://godofredo.ninja/ghost-theme/simply/post-format/#post-image)
-  - [Post Image Right](https://godofredo.ninja/ghost-theme/simply/post-format/#post-image-right)
+  - [Post Image Right](https://godofredo.ninja/ghost-theme/simply/post-format/#postimageright)
   - [Post Sidebar](https://godofredo.ninja/ghost-theme/simply/post-format/#post-sidebar)
-  - [Post not Image](https://godofredo.ninja/ghost-theme/simply/post-format/#post-not-image)
+  - [Post not Image](https://godofredo.ninja/ghost-theme/simply/post-format/#postnotimage)
+  - [Post Toc](https://godofredo.ninja/ghost-theme/simply/post-format/#posttoc)
+- Page Format
+  - Page Default
+  - Page Toc
 - Page
   - [Contact](https://godofredo.ninja/ghost-theme/simply/contact-page/)
+  - [Podcast](https://godofredo.ninja/ghost-theme/simply/podcasts-page/)
+  - [Portfolio](https://godofredo.ninja/ghost-theme/simply/portfolio-page/)
   - 404
 - Archive
-  - [Authors Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#authors-page)
-  - [Tags Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#tags-page)
-- [Podcasts Page](https://godofredo.ninja/ghost-theme/simply/podcasts-page/)
-- [Portfolio Page](https://godofredo.ninja/ghost-theme/simply/portfolio-page/)
+  - [Authors Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#authorspage)
+  - [Tags Page](https://godofredo.ninja/ghost-theme/simply/authors-and-tags-page/#tagspage)
 - [Kusi Doc](https://godofredo.ninja/ghost-theme/simply/kusi-doc/) for the documentation of your project
 - [AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost) Template
-- Related Articles
-- Social share buttons support for posts
-- Previous and next Post
-- Tracking [Google Tag Manager](https://godofredo.ninja/ghost-theme/simply/#tracking-google-tag-manager)
-- Pagination Infinite Scroll
-- Video Responsive
-  - YouTube
-  - Vimeo
-  - kickstarter
-  - Dailymotion
+- Post and Page
+  - [Prism supported all syntax](https://prismjs.com/index.html#supported-languages)
+  - Medium style image zoom
+  - Video Responsive
+    - Video
+    - YouTube
+    - Vimeo
+    - kickstarter
+    - Dailymotion
+- Post Content
+  - Related Articles
+  - Social share buttons support for posts
+  - Previous and next Post
+- Sidebar
+  - 3 featured articles on the home page
+  - 3 lates articles
+  - Tag Cloud
 - Lazy Loading for images
-- Medium style image zoom
-- [Prism supported all syntax](https://prismjs.com/index.html#supported-languages)
+- Tracking [Google Tag Manager](https://godofredo.ninja/ghost-theme/simply/tracking-google-tag-manager/)
 
 ## Contributing
 
@@ -127,6 +178,13 @@ First I want to say thank you with all my heart and a million more Thank you. Th
 
 Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/simply/contribute)]
 
+- [Open Collective](https://opencollective.com/simply/contribute)
+- [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
+- Bitcoin: **3QF5D9QyV9YQdPJVu2HLN8fkdWVbmezd5J**
+- Ethereum: **0x503bAA618d29774f03c7053218999Ad567a9fc71**
+
+[![Individuals Financial](https://user-images.githubusercontent.com/10253167/103444000-877b1b80-4c32-11eb-8377-7bedd46dbdf8.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Y7UB5Q8GVN3HN&source=url)
+
 - [CMS Critic](http://www.cmscritic.com/) :star: :star: :star: :star:
 - [A Boundless World](https://www.aboundlessworld.com/) :star: :star:
 - [Dana Ross](https://vaalin.com/)
@@ -143,6 +201,12 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 
 [![Individuals Financial](https://opencollective.com/simply/individuals.svg?width=890)](https://opencollective.com/simply)
 
+## Sponsored
+
+- [Digital Ocean](https://m.do.co/c/710a27a3b3de) using my [referral link]((https://m.do.co/c/710a27a3b3de)) and you will get free a **$100 in credit over 60 days**
+
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=710a27a3b3de&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
+
 ## Credits
 
 - [Hodor AMP](https://github.com/godofredoninja/Hodor-AMP-Ghost)
@@ -156,7 +220,8 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [PT Serif Font Family](https://fonts.google.com/specimen/PT+Serif)
 - [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
 - [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)
+- [SearchinGhost](https://github.com/gmfmi/searchinGhost)
 
 ## Copyright & License
 
-Copyright (c) 2017-2021 GodoFredo - Released under the [GPLv3 license](LICENSE)
+Copyright (c) 2017-2022 GodoFredo - Released under the [GPLv3 license](LICENSE)

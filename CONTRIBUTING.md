@@ -10,17 +10,17 @@ Simply uses [Gulp](https://gulpjs.com/) as a build tool and [Yarn](https://yarnp
 # clone this repo
 $ git clone https://github.com/godofredoninja/simply.git
 
-# Use branch Dev
-$ git checkout dev
-
-# install the dependencies
-$ cd simply && yarn
-
-# run build & livereload task
-$ yarn dev
+# Go to the folder
+$ cd simply
 
 # link to ghost themes dir
 $ ln -s $PWD path/to/ghost/content/themes/simply
+
+# install the dependencies
+$ yarn install
+
+# run build & livereload task
+$ yarn dev
 
 # restart ghost server
 $ cd path/to/ghost && ghost restart --development
@@ -39,7 +39,7 @@ $ cd path/to/ghost && ghost restart --development
 ### Additional commands
 
 - `yarn lint:js` — [Standard](https://standardjs.com/), Check for errors in the script.
-- `yarn lint:sass` — [Stylelint](https://stylelint.io/), Check for errors in the styles.
+- `yarn lint:css` — [Stylelint](https://stylelint.io/), Check for errors in the styles.
 - `yarn lint` — Check error in script and styles.
 - `yarn scan` — [Ghost Scan](https://github.com/TryGhost/gscan) check for errors, deprecation and other compatibility issues.
 - `yarn test` — Check the script errors and styles then check the theme if it is compatible with the latest version of Ghost.
@@ -48,10 +48,45 @@ $ cd path/to/ghost && ghost restart --development
 
 This is our preferred process for opening a PR on GitHub:
 
-1. Fork this repository
-2. Create a branch off of `dev` for your work: `git checkout -b my-feature-branch`
-3. Make some changes, committing them along the way
-4. When your changes are ready for review, push your branch: `git push origin my-feature-branch`
-5. Create a pull request from your branch to `simply/dev`
-6. No need to assign the pull request to anyone, we'll review it when we can
-7. When the changes have been reviewed and approved, someone will squash and merge for you
+1. [Fork](http://help.github.com/fork-a-repo/) the repo, clone your fork, and configure the remotes:
+
+    ```bash
+    # Clone your fork
+    git clone https://github.com/<your-username>/simply.git
+
+    # Navigate to the newly cloned directory
+    cd simply
+
+    # Assign the original repo to a remote called "upstream"
+    git remote add upstream https://github.com/godofredoninja/simply.git
+    ```
+
+2. If you cloned a while ago, get the latest changes from upstream:
+
+    ```bash
+    git checkout master
+    git pull upstream master
+    ```
+
+3. Create a new topic branch (off the main project development branch) to contain your feature, change, or fix:
+
+    ```bash
+    git checkout -b <topic-branch-name>
+    ```
+
+4. Locally merge:
+
+    ```bash
+    git checkout master
+    git merge <topic-branch-name>
+    ```
+
+5. When your changes are ready for review, push your branch:
+
+    ```bash
+    git push origin master
+    ```
+
+6. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
+
+7. When the changes have been reviewed and approved, I will merge for you.

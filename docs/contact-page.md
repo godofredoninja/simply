@@ -21,4 +21,4 @@
 </form>
 ```
 
-![Ghost - Simply Contact Page](https://user-images.githubusercontent.com/10253167/105212544-9bbc8500-5b1b-11eb-8d1d-883427b092e1.jpg)
+![Ghost - Simply Contact Page](https://user-images.githubusercontent.com/10253167/162016633-7d328cc5-d5de-407a-bf03-57439985c024.jpg)
