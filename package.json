@@ -161,7 +161,12 @@
     "defaults"
   ],
   "cssnano": {
-    "preset": "advanced"
+    "preset": [
+      "advanced",
+      {
+        "reduceIdents": false
+      }
+    ]
   },
   "scripts": {
     "build": "gulp build",
@@ -185,10 +190,10 @@
     "beeper": "^2.1.0",
     "browserify": "^17.0.0",
     "cross-env": "^7.0.3",
-    "cssnano": "^5.0.14",
-    "cssnano-preset-advanced": "^5.1.9",
+    "cssnano": "^5.1.7",
+    "cssnano-preset-advanced": "^5.3.3",
     "del": "^6.0.0",
-    "gscan": "^4.22.0",
+    "gscan": "^4.27.0",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
     "gulp-if": "^3.0.0",
