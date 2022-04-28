@@ -1,3 +1,6 @@
+.custom-post-image .hh-author-name a{
+  color: #fff;
+}
 
 .hh-author-name > a:hover {
   color: var(--gray-900);
