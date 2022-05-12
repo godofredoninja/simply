@@ -42,10 +42,14 @@ import SearchinGhost from './lib/searchinghost'
 
   /* Customized search data
   /* ---------------------------------------------------------- */
+
   const mySearchSettings = {
-    key: searchSettings.key,
+    // key: searchSettings.key,
     onSearchEnd: results => afterDisplaySearch(results)
   }
+
+  // join user settings
+  Object.assign(mySearchSettings, searchSettings)
 
   /* when the Enter key is pressed
   /* ---------------------------------------------------------- */
