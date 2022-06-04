@@ -17,102 +17,43 @@
 </header>
 
 <section class="mb-24 px-4">
-    <div class="plan-wrap flex flex-col lg:flex-row justify-center max-w-1100 mx-auto items-center lg:items-stretch">
-        {{!-- Free Plan --}}
-        {{#unless @member}}
-        <div class="plan-box py-8 pl-10 pr-5 max-w-sm w-full">
-            <header class="plan-box-header">
-                <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Starter</h3>
-                <p class="text-gray-500">For people just starting</p>
-                <div class="text-44 font-bold my-8 leading-none">Free</div>
+    <div class="plan-wrap max-w-1100 mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-12">
 
-                <a class="button is-primary is-outlined is-medium" href="{{@site.url}}/signup/">Get Started</a>
-            </header>
-            <div class="plan-box-body mt-8 leading-tight">
-                <ul>
-                    {{!-- Add more lists to the free account --}}
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Weekly newsletter and podcast</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        {{/unless}}
+        {{#get "tiers" include="monthly_price,benefits" limit="all" as |tiers|}}
+            {{#foreach tiers}}
+                <div class="plan-box plab-box-{{name}} p-8 shadow-lg lg:col-span-4 bg-gray-100">
+                    <header class="plan-box-header">
+                        <h3 class="text-base font-semibold uppercase mb-2 text-title tracking-wide">{{name}}</h3>
+                        {{#if description}}<p class="text-gray-500">{{description}}</p>{{/if}}
 
-        {{!-- Yearly Plan --}}
-        <div class="plan-box py-8 pl-10 pr-5 border-4 border-primary max-w-sm w-full">
-            <header class="plan-box-header">
-                <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Yearly</h3>
-                <p class="text-gray-500">1 simple payment instead of 12, save on bank fees </p>
-                <div class="text-44 font-bold my-8 leading-none text-primary">
-                    <span>{{price currency=@price.currency}} {{@price.yearly}}</span>
-                    <span class="text-lg font-medium">/ year</span>
+                        {{#if monthly_price}}
+                            <div class="text-3xl my-8 leading-none text-title">
+                                <span class="font-semibold">{{price monthly_price currency=currency}}</span>
+                                <span class="text-base text-gray-500">/ Monthly</span>
+                            </div>
+
+                            <a href="javascript:" class="button is-primary" data-portal="signup/{{id}}/monthly">Choose this plan</a>
+                        {{else}}
+                            <a href="javascript:" class="button is-primary mt-8" data-portal="signup">Get Started</a>
+                        {{/if}}
+                    </header>
+
+                    {{#if benefits}}
+                    <div class="plan-box-body mt-8 leading-tight">
+                        <ul>
+                        {{#foreach benefits as |benefit|}}
+                            <li class="flex self-start mb-2 items-center">
+                                {{!-- <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg> --}}
+                                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-2 h-3 w-3 stroke-current" alt=""><path d="M1 6.89286L6.10714 12L13.9643 1" stroke-width="2"></path></svg>
+                                <span>{{benefit}}</span>
+                            </li>
+                        {{/foreach}}
+                        </ul>
+                    </div>
+                    {{/if}}
                 </div>
-
-                <a class="button is-primary is-medium" href="javascript:" data-members-plan="Yearly">Choose this plan</a>
-            </header>
-            <div class="plan-box-body mt-8 leading-tight">
-                <ul>
-                    {{!-- Adding lists for the yearly plan --}}
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span> access to all private posts</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Regular updates with new content</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Support independent publishing</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Simple, secure card payment</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>One easy payment instead of 12!</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        {{!-- Monthly Plan --}}
-        <div class="plan-box py-8 pl-10 pr-5 max-w-sm w-full">
-            <header class="plan-box-header">
-                <h3 class="text-base font-semibold uppercase mb-2 text-gray-800 tracking-wide">Monthly</h3>
-                <p class="text-gray-500">Get access to everything and lock in early adopter pricing for life</p>
-                <div class="text-44 font-bold my-8 leading-none">
-                    <span>{{price currency=@price.currency}} {{@price.monthly}}</span>
-                    <span class="text-lg text-gray-500 font-medium">/ month</span>
-                </div>
-
-                <a class="button is-primary is-outlined is-medium" href="javascript:" data-members-plan="Monthly">Choose this plan</a>
-            </header>
-            <div class="plan-box-body mt-8 leading-tight">
-                <ul>
-                    {{!-- Adding lists for the Monthly plan --}}
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span><strong>Full access to</strong> all private posts</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Regular updates with new content</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Support independent publishing</span>
-                    </li>
-                    <li class="flex self-start">
-                        <svg class="text-primary flex-none mr-2 icon"><use xlink:href="#icon-checkmark"></use></svg>
-                        <span>Simple, secure card payment</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
+            {{/foreach}}
+        {{/get}}
 
     </div>
 
