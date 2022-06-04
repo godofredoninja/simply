@@ -1,7 +1,7 @@
 <div class="nav-mob fixed inset-0 pt-16 header-bg h-screen z-10 w-full text-center overflow-y-auto lg:hidden">
     <div class="nav-mob-wrap absolute inset-0 top-16 pt-5 flex flex-col">
 
-        {{#if @custom.disable_member}}{{#unless @member}}
+        {{#if @site.members_enabled}}{{#unless @member}}
         <div class="py-4 flex justify-center md:hidden">
             <a data-portal="signin" class="button mr-2 is-black text-sm font-medium" href="#">{{t "Log in"}}</a>
             <a data-portal="account/plans" class="button is-primary text-sm font-medium" href="#">{{t "Subscribe"}}</a>

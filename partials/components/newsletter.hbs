@@ -1,4 +1,4 @@
-{{#if @custom.show_newsletter}}{{#unless @member}}{{#if access}}
+{{#if @site.members_enabled}}{{#if @custom.show_newsletter}}{{#unless @member}}
 <div class="pt-vmin8">
     <div class="border-t-3 border-primary bg-gray-100 p-8">
         {{#if @custom.newsletter_text}}<h2 class="text-xl font-bold text-title mb-4">{{@custom.newsletter_text}}</h2>{{/if}}
@@ -18,4 +18,4 @@
         <p class="text-sm mt-5">{{t "No spam. No jibber jabber. Unsubscribe any time."}}</p>
     </div>
 </div>
-{{/if}}{{/unless}}{{/if}}
+{{/unless}}{{/if}}{{/if}}

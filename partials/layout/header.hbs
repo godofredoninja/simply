@@ -48,7 +48,7 @@
             </a>
 
             {{!-- Menu User Account --}}
-            {{#if @custom.disable_member}}{{> "layout/account-menu"}}{{/if}}
+            {{#if @site.members_enabled}}{{> "layout/account-menu"}}{{/if}}
 
             {{!-- Toggle Menu --}}
             <a href="javascript:;" role="button" aria-label="Show Navigation Menu" class="js-menu-toggle menu-burger button is-white relative lg:hidden"><span></span><span></span><span></span></a>

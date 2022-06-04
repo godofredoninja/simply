@@ -16,10 +16,7 @@ Many people have been asking me to disable membership.
 
 You will now be able to disable the login buttons and forms.
 
-➡️ `Dashboard -> Site design -> Site-wide -> Disable member`
+➡️ `Dashboard -> Settings -> Membership -> Subscription access -> Nobody`
 
-![disable-member](https://user-images.githubusercontent.com/10253167/161638213-c6faae4a-7994-4e5b-b933-b0133a991f65.jpg)
+![disable-member](https://user-images.githubusercontent.com/10253167/172016685-2c87a5ad-3db2-4972-bddb-7fbba10c8ae6.jpg)
 
-If you want to completely disable the membership.
-
-➡️ `Dashboard -> Membership -> Subscription access -> Nobody`
