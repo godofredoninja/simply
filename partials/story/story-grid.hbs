@@ -1,4 +1,4 @@
-<article class="story js-story flex flex-col flex-grow relative mb-3{{#if story_class}} {{story_class}}{{/if}}">
+<article class="story js-story flex flex-col grow relative mb-3{{#if story_class}} {{story_class}}{{/if}}">
     <figure class="story-image mb-5 h-52 relative border border-gray-300 bg-gray-200 overflow-hidden">
             {{#if feature_image}}
             <a href="{{url}}">
@@ -21,7 +21,7 @@
         {{#if primary_tag}}<div class="absolute right-0 top-0">{{> "components/primary-tag"}}</div>{{/if}}
     </figure>
 
-    <div class="story-body flex flex-col flex-grow">
+    <div class="story-body flex flex-col grow">
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
         {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
 

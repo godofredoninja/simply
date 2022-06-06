@@ -5,32 +5,34 @@
     data-event-non-interaction="true"{{/is}}>
 
     {{#if feature_image}}
-    <a href="{{url}}" class="storySmall-img-link">
+    <a href="{{url}}" class="storySmall-link flex flex-col grow">
         <img class="storySmall-img object-cover w-full h-48 blur-up lazyload"
             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
             data-srcset="{{img_url feature_image size="xs"}} 100w,{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
             data-sizes="auto"
             width="350"
-            height="160"
+            height="192"
             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
         />
-    </a>
-    {{/if}}
 
-    <div class="storySmall-inner py-4 flex flex-col justify-between flex-grow">
-        <div class="storySmall-body">
-            {{#if feature_image}}
-                <h2 class="text-xl line-clamp-2 text-title mb-2 leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
-            {{else}}
-                <h2 class="text-xl text-title leading-tight"><a href="{{url}}" class="block">{{title}}</a></h2>
-                <p class="pt-4 mb-2">{{excerpt words="20"}}</p>
-            {{/if}}
+        <div class="storySmall-inner py-4 flex flex-col justify-between grow">
+            <h2 class="text-xl text-title leading-tight line-clamp-2 mb-2">{{title}}</h2>
+
+            {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+            {{> "components/datetime"}}
+        </div>
+    </a>
+
+    {{else}}
+
+    <a href="{{url}}" class="flex flex-col grow justify-between p-5 bg-blank rounded overflow-hidden shadow-4xl transition-all hover:shadow-primary">
+        <div>
+            <h2 class="text-xl text-title leading-tight">{{title}}</h2>
+            <p class="pt-4 mb-2">{{excerpt words="20"}}...</p>
         </div>
 
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
         {{> "components/datetime"}}
-    </div>
-
-    {{!-- Link --}}
-    {{!-- <a href="{{url}}" class="absolute inset-0 z-3" aria-label="{{title}}"></a> --}}
+    </a>
+    {{/if}}
 </div>
