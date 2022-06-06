@@ -142,7 +142,7 @@ module.exports = {
       boxShadow: {
         '3xl': '0 36px 64px 0 rgba(0,0,0,.2)',
         '4xl': 'inset 0 0 0 0.1rem rgb(58 3 45 / 8%), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%)',
-        primary: 'inset 0 0 0 0.1rem var(--color-primary), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%)'
+        'card-primary': 'inset 0 0 0 0.1rem var(--color-primary), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%)'
       },
       inset: {
         32: '8rem',

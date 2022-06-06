@@ -1,4 +1,4 @@
-<div class="storySmall overflow-hidden flex flex-col relative mb-4 w-full {{#is "post"}}godo-tracking{{/is}}"
+<div class="storySmall flex flex-col relative mb-4 w-full {{#is "post"}}godo-tracking{{/is}}"
     {{#is "post"}}data-event-category="Article"
     data-event-action="Related Posts"
     data-event-label="{{url absolute="true"}}"
@@ -25,7 +25,7 @@
 
     {{else}}
 
-    <a href="{{url}}" class="flex flex-col grow justify-between p-5 bg-blank rounded overflow-hidden shadow-4xl transition-all hover:shadow-primary">
+    <a href="{{url}}" class="flex flex-col grow justify-between p-6 bg-blank rounded shadow transition-all hover:shadow-card-primary">
         <div>
             <h2 class="text-xl text-title leading-tight">{{title}}</h2>
             <p class="pt-4 mb-2">{{excerpt words="20"}}...</p>

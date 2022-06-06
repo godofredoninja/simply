@@ -12,11 +12,9 @@
     </a>
     {{/if}}
 
-    <div class="prev-next-body pl-6 flex-auto">
-        <a href="{{url}}">
-            <div class="text-sm leading-none text-gray-500 mb-2 font-medium">{{#if storyTitle}}{{storyTitle}}{{/if}}</div>
-            <h2 class="prev-next-title text-title mb-2 text-xl md:text-22">{{title}}</h2>
-            <p class="prev-next-excerpt text-base text-gray-500 line-clamp-2 leading-snug">{{excerpt words="25"}}</p>
-        </a>
-    </div>
+    <a href="{{url}}" class="prev-next-body pl-6 flex-auto{{#unless feature_image}} p-6 bg-blank rounded shadow-4xl transition-all hover:shadow-card-primary{{/unless}}">
+        <div class="text-sm leading-none text-gray-500 mb-3 font-medium">{{#if storyTitle}}{{storyTitle}}{{/if}}</div>
+        <h2 class="prev-next-title text-title mb-3 text-xl md:text-22 line-clamp-2">{{title}}</h2>
+        <p class="prev-next-excerpt text-base text-gray-500 line-clamp-2 leading-snug">{{excerpt words="25"}}</p>
+    </a>
 </div>
