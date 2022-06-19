@@ -1,6 +1,6 @@
 <article class="story js-story flex flex-col grow relative mb-3{{#if story_class}} {{story_class}}{{/if}}">
-    <figure class="story-image mb-5 h-52 relative border border-gray-300 bg-gray-200 overflow-hidden">
-            {{#if feature_image}}
+    {{#if feature_image}}
+        <figure class="story-image mb-5 h-52 relative border border-gray-300 bg-gray-200 overflow-hidden">
             <a href="{{url}}">
                 <img class="story-img inset-image block blur-up lazyload"
                     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
@@ -9,34 +9,50 @@
                         {{img_url feature_image size="m"}} 600w,
                         {{img_url feature_image size="l"}} 1000w"
                     data-sizes="auto"
-                    alt="{{title}}"
+                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
                 />
                 {{!-- <noscript><img class="story-img absolute u-image block" src="{{img_url feature_image size="s"}}"/></noscript> --}}
             </a>
-            {{else}}
-            <a href="{{url}}" class="block" aria-label="{{title}}"></a>
+
+            {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
+            {{#if primary_tag}}{{> "components/primary-tag" class="absolute top-3 right-3"}}{{/if}}
+        </figure>
+
+        <div class="story-body flex flex-col grow">
+            <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
+
+            {{#if excerpt}}
+            <p class="story-excerpt grow mb-5 text-lg leading-normal text-gray-500">
+                <a href="{{url}}" class="block line-clamp-3">{{excerpt words="30"}}</a>
+            </p>
             {{/if}}
 
-        {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
-        {{#if primary_tag}}<div class="absolute right-0 top-0">{{> "components/primary-tag"}}</div>{{/if}}
-    </figure>
+            {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+            {{> "components/author-meta"}}
+        </div>
 
-    <div class="story-body flex flex-col grow">
-        {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-        {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
+    {{else}}
 
-        <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
+        <div class="story-body not-feature-image flex flex-col grow p-6 bg-blank rounded shadow-4xl transition-all hover:shadow-card-primary">
+            {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag"}}</div>{{/if}}
 
-        {{#if excerpt}}
-        <p class="story-excerpt line-clamp-3 mb-5 text-lg leading-normal text-gray-500">
-            <a href="{{url}}" class="block">{{excerpt words="30"}}</a>
-        </p>
-        {{/if}}
+            {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+            {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
 
-        {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
-        {{> "components/author-meta"}}
+            <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
-        {{!-- Read more --}}
-        {{!-- <a href="{{url}}" class="link is-hover font-medium">{{t "Read more"}}<svg class="icon is-medium"><use xlink:href="#icon-arrow"></use></svg></a> --}}
-    </div>
+            {{#if excerpt}}
+            <p class="story-excerpt grow mb-5 text-lg leading-normal text-gray-500">
+                <a href="{{url}}" class="block line-clamp-3">{{excerpt words="30"}}</a>
+            </p>
+            {{/if}}
+
+            {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+            {{> "components/author-meta"}}
+
+            {{!-- Read more --}}
+            {{!-- <a href="{{url}}" class="link is-hover font-medium">{{t "Read more"}}<svg class="icon is-medium"><use xlink:href="#icon-arrow"></use></svg></a> --}}
+        </div>
+
+    {{/if}}
 </article>

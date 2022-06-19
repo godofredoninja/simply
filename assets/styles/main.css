@@ -1073,6 +1073,9 @@ table tr:last-child td {
     height: 24rem;
     padding-top: 0px;
   }
+  .ss1 > .not-feature-image {
+    grid-column: 1 / -1;
+  }
   .ss2 .story-image {
     height: 16rem;
   }
@@ -1562,6 +1565,12 @@ except for when immediately preceeded by a heading */
 }
 .top-24 {
   top: 6rem;
+}
+.top-3 {
+  top: 0.75rem;
+}
+.right-3 {
+  right: 0.75rem;
 }
 .z-3 {
   z-index: 3;
