@@ -1247,7 +1247,7 @@ a > code[class*="language-"] {
 .post-body {
   /*  new */
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.625;
   padding-top: 6vmin
 
   /* stylelint-disable-next-line */
@@ -1321,6 +1321,16 @@ a > code[class*="language-"] {
     counter-increment: post;
     padding-right: 0.75rem;
   }
+/* has first letter Big
+/* ---------------------------------------------------------- */
+.has-first-letter::first-letter {
+  float: left;
+  margin-left: -0.5rem;
+  margin-right: 0.5rem;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1;
+}
 /* & > h1,
   & > h2,
   & > h3,

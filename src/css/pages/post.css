@@ -14,7 +14,7 @@
 .post-body {
   /*  new */
   font-size: 1.25rem;
-  line-height: 1.6;
+  line-height: 1.625;
   padding-top: 6vmin;
 
   /* stylelint-disable-next-line */
@@ -99,4 +99,10 @@
     counter-increment: post;
     padding-right: 0.75rem;
   }
+}
+
+/* has first letter Big
+/* ---------------------------------------------------------- */
+.has-first-letter::first-letter {
+  @apply float-left text-6xl font-medium leading-none -ml-2 mr-2;
 }
