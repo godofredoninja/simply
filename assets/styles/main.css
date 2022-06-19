@@ -1768,6 +1768,9 @@ except for when immediately preceeded by a heading */
 .mr-10 {
   margin-right: 2.5rem;
 }
+.mt-32 {
+  margin-top: 8rem;
+}
 .block {
   display: block;
 }
@@ -2266,6 +2269,9 @@ except for when immediately preceeded by a heading */
 .p-8 {
   padding: 2rem;
 }
+.p-0 {
+  padding: 0px;
+}
 .py-24 {
   padding-top: 6rem;
   padding-bottom: 6rem;
@@ -2341,6 +2347,10 @@ except for when immediately preceeded by a heading */
 .py-vw6 {
   padding-top: 6vw;
   padding-bottom: 6vw;
+}
+.px-vw4 {
+  padding-left: 4vw;
+  padding-right: 4vw;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -2516,6 +2526,9 @@ except for when immediately preceeded by a heading */
 .tracking-wider {
   letter-spacing: 0.05em;
 }
+.-tracking-wide {
+  letter-spacing: -0.025em;
+}
 .text-gray-500 {
   color: var(--gray-500);
 }
@@ -2569,6 +2582,10 @@ except for when immediately preceeded by a heading */
 }
 .text-logo {
   color: var(--header-text-link);
+}
+.\!text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 .underline {
   text-decoration-line: underline;
@@ -2817,6 +2834,9 @@ except for when immediately preceeded by a heading */
 }
 .hover\:opacity-70:hover {
   opacity: 0.7;
+}
+.hover\:opacity-80:hover {
+  opacity: 0.8;
 }
 .hover\:shadow-card-primary:hover {
   --tw-shadow: inset 0 0 0 0.1rem var(--color-primary), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%);

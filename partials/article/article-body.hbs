@@ -1,5 +1,7 @@
 <section id="post-body" class="post-body godo-canvas mx-auto relative {{#match @custom.post_font "=" "font-serif"}}font-serif{{else}}font-sans{{/match}}">{{content}}</section>
 
+{{#if access}}
+
 <footer class="post-footer godo-canvas pt-10">
     {{!-- Tags - ./partials/components/tags,hbs --}}
     {{> "components/tags"}}
@@ -22,3 +24,5 @@
         {{/next_post}}
     </div>
 </footer>
+
+{{/if}}
