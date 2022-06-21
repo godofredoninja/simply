@@ -68,6 +68,9 @@
   --input-hover-border-color: #80bdff;
   --input-focus-border-color: #80bdff;
   --placeholder-color: rgba(54, 54, 54, 0.8);
+
+  /* cta */
+  --bg-cta: rgb(255, 255, 255);
 }
 /* Dark mode
 /* ---------------------------------------------------------- */
@@ -122,6 +125,9 @@
   --input-bg: rgba(97, 97, 97, .25);
   --input-border-color: #444;
   --placeholder-color: #aaa;
+
+  /* cta */
+  --bg-cta: rgb(17, 17, 17);
 
 }
 /* Table */
@@ -726,6 +732,14 @@ h6 {
     width: 100%;
   }
 } */
+/* Content Cta
+/* ---------------------------------------------------------- */
+.cta {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--bg-cta));
+  height: 15.625rem;
+  margin-top: -15rem !important;
+}
 /* @mixin heading-text {
   color: #242424;
   font-size: 4em;
@@ -1497,7 +1511,7 @@ except for when immediately preceeded by a heading */
   font-size: 0.875rem;
 }
 .kg-bookmark-thumbnail {
-    grow: 1;
+    flex-grow: 1;
     min-height: 10rem;
     min-width: 33%;
     position: relative;
@@ -1767,9 +1781,6 @@ except for when immediately preceeded by a heading */
 }
 .mr-10 {
   margin-right: 2.5rem;
-}
-.mt-32 {
-  margin-top: 8rem;
 }
 .block {
   display: block;
@@ -2248,6 +2259,9 @@ except for when immediately preceeded by a heading */
 .p-24 {
   padding: 6rem;
 }
+.p-0 {
+  padding: 0px;
+}
 .p-5 {
   padding: 1.25rem;
 }
@@ -2268,9 +2282,6 @@ except for when immediately preceeded by a heading */
 }
 .p-8 {
   padding: 2rem;
-}
-.p-0 {
-  padding: 0px;
 }
 .py-24 {
   padding-top: 6rem;
@@ -2316,6 +2327,10 @@ except for when immediately preceeded by a heading */
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+.px-vw4 {
+  padding-left: 4vw;
+  padding-right: 4vw;
+}
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -2347,10 +2362,6 @@ except for when immediately preceeded by a heading */
 .py-vw6 {
   padding-top: 6vw;
   padding-bottom: 6vw;
-}
-.px-vw4 {
-  padding-left: 4vw;
-  padding-right: 4vw;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -2583,10 +2594,6 @@ except for when immediately preceeded by a heading */
 .text-logo {
   color: var(--header-text-link);
 }
-.\!text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
-}
 .underline {
   text-decoration-line: underline;
 }
@@ -2624,6 +2631,11 @@ except for when immediately preceeded by a heading */
   --tw-shadow-colored: 0 36px 64px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-4xl {
+  --tw-shadow: inset 0 0 0 0.1rem rgb(58 3 45 / 8%), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%);
+  --tw-shadow-colored: inset 0 0 0 0.1rem var(--tw-shadow-color), 0 10px 20px var(--tw-shadow-color), 0 2px 6px var(--tw-shadow-color), 0 0 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
@@ -2632,11 +2644,6 @@ except for when immediately preceeded by a heading */
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-.shadow-4xl {
-  --tw-shadow: inset 0 0 0 0.1rem rgb(58 3 45 / 8%), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%);
-  --tw-shadow-colored: inset 0 0 0 0.1rem var(--tw-shadow-color), 0 10px 20px var(--tw-shadow-color), 0 2px 6px var(--tw-shadow-color), 0 0 1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .blur {
@@ -2832,11 +2839,11 @@ except for when immediately preceeded by a heading */
 .hover\:opacity-100:hover {
   opacity: 1;
 }
-.hover\:opacity-70:hover {
-  opacity: 0.7;
-}
 .hover\:opacity-80:hover {
   opacity: 0.8;
+}
+.hover\:opacity-70:hover {
+  opacity: 0.7;
 }
 .hover\:shadow-card-primary:hover {
   --tw-shadow: inset 0 0 0 0.1rem var(--color-primary), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%);

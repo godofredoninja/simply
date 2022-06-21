@@ -24,7 +24,7 @@
   }
 
   &-thumbnail {
-    grow: 1;
+    flex-grow: 1;
     min-height: 10rem;
     min-width: 33%;
     position: relative;

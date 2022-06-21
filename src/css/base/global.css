@@ -117,3 +117,12 @@
     width: 100%;
   }
 } */
+
+/* Content Cta
+/* ---------------------------------------------------------- */
+
+.cta {
+  background: linear-gradient(rgba(255, 255, 255, 0), var(--bg-cta));
+  height: 15.625rem;
+  margin-top: -15rem !important;
+}

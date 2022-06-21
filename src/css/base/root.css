@@ -61,6 +61,9 @@
   --input-hover-border-color: #80bdff;
   --input-focus-border-color: #80bdff;
   --placeholder-color: rgba(54, 54, 54, 0.8);
+
+  /* cta */
+  --bg-cta: rgb(255, 255, 255);
 }
 
 /* Dark mode
@@ -117,6 +120,9 @@
   --input-bg: rgba(97, 97, 97, .25);
   --input-border-color: #444;
   --placeholder-color: #aaa;
+
+  /* cta */
+  --bg-cta: rgb(17 17 17);
 
   /* Table */
   table th,

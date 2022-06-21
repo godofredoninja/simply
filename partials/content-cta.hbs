@@ -1,4 +1,5 @@
 {{{html}}}
+<div class="cta w-full kg-width-full relative z-4"></div>
 <aside class="flex flex-col font-sans g items-center text-base text-center w-full">
     <div class="bg-gray-100 g-content px-vw4 py-10 rounded-lg shadow-4xl w-full">
         {{#has visibility="paid"}}
@@ -8,7 +9,7 @@
             <h2 class="text-2xl p-0 m-0 -tracking-wide">{{t "This post is for subscribers only"}}</h2>
         {{/has}}
         {{#has visibility="tiers"}}
-            <h2 class="text-2xl p-0 m-0 -tracking-wide">This post is for subscribers on the {{tiers}} only </h2>
+            <h2 class="text-2xl p-0 m-0 -tracking-wide">{{t "This post is for subscribers on the {specificTiers} only" specificTiers=(tiers lastSeparator=(t " and ") suffix="")}}</h2>
         {{/has}}
         {{#if @member}}
             <a class="button is-primary h-12 mt-8" data-portal="account/plans">{{t "Upgrade your account"}}</a>
