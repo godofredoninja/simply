@@ -100,6 +100,14 @@
         ],
         "default": "Infinite Scroll"
       },
+      "story_meta": {
+        "type": "select",
+        "options": [
+          "Author",
+          "Read More"
+        ],
+        "default": "Author"
+      },
       "publication_cover": {
         "type": "select",
         "options": [
@@ -189,7 +197,7 @@
     "cssnano": "^5.1.7",
     "cssnano-preset-advanced": "^5.3.3",
     "del": "^6.0.0",
-    "gscan": "^4.27.0",
+    "gscan": "^4.31.2",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
     "gulp-if": "^3.0.0",

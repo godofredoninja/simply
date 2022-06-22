@@ -19,16 +19,26 @@
         </figure>
 
         <div class="story-body flex flex-col grow">
+            {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
+            {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}}
+
             <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
             {{#if excerpt}}
-            <p class="story-excerpt grow mb-5 text-lg leading-normal text-gray-500">
+            <p class="story-excerpt mb-5 text-lg leading-normal text-gray-500">
                 <a href="{{url}}" class="block line-clamp-3">{{excerpt words="30"}}</a>
             </p>
             {{/if}}
 
+            {{#match @custom.story_meta "Author"}}
             {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
             {{> "components/author-meta"}}
+
+            {{else}}
+
+            {{!-- Read more --}}
+            <a href="{{url}}" class="link is-hover font-medium">{{t "Read more"}}<svg class="icon is-medium"><use xlink:href="#icon-arrow"></use></svg></a>
+            {{/match}}
         </div>
 
     {{else}}
@@ -37,21 +47,25 @@
             {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag"}}</div>{{/if}}
 
             {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-            {{!-- {{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}} --}}
+            {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}}
 
             <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
             {{#if excerpt}}
-            <p class="story-excerpt grow mb-5 text-lg leading-normal text-gray-500">
+            <p class="story-excerpt mb-5 text-lg leading-normal text-gray-500">
                 <a href="{{url}}" class="block line-clamp-3">{{excerpt words="30"}}</a>
             </p>
             {{/if}}
 
+            {{#match @custom.story_meta "Author"}}
             {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
             {{> "components/author-meta"}}
 
+            {{else}}
+
             {{!-- Read more --}}
-            {{!-- <a href="{{url}}" class="link is-hover font-medium">{{t "Read more"}}<svg class="icon is-medium"><use xlink:href="#icon-arrow"></use></svg></a> --}}
+            <a href="{{url}}" class="link is-hover font-medium">{{t "Read more"}}<svg class="icon is-medium"><use xlink:href="#icon-arrow"></use></svg></a>
+            {{/match}}
         </div>
 
     {{/if}}

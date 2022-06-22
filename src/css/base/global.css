@@ -83,7 +83,7 @@
   color: var(--color-link);
 
   &.is-hover:hover {
-    opacity: .92;
+    opacity: .80;
   }
 }
 
