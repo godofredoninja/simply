@@ -128,7 +128,7 @@
   - Page Toc
 - Page
   - [Contact](https://godofredo.ninja/ghost-theme/simply/contact-page/)
-  - [Podcast](https://godofredo.ninja/ghost-theme/simply/podcasts-page/)
+  - [Podcast](https://godofredo.ninja/ghost-theme/simply/podcast-page/)
   - [Portfolio](https://godofredo.ninja/ghost-theme/simply/portfolio-page/)
   - 404
 - Archive
