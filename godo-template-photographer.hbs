@@ -1,6 +1,9 @@
 {{!-- Layout --}}
 {{!< default}}
 
+{{!-- Publication Cover - partials/home/publication-cover.hbs --}}
+{{> "home/publication-cover"}}
+
 <div class="photographer pb-vmin8">
     <div class="js-feed-entry grid md:grid-cols-2 lg:grid-cols-3">
         {{#foreach posts}}
@@ -29,4 +32,4 @@
     {{pagination}}
 </div>
 
-{{#contentFor "header"}}<style>.story-cover-thumbnail{padding-top:90%}.story-cover-thumbnail .simply-cover-gradient{transition:background-color .5s ease-in-out;background-color:transparent;background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.9)),color-stop(60%,rgba(255,255,255,0)));background-image:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(255,255,255,0) 60%)}.story-cover:hover .story-cover-thumbnail .simply-cover-gradient{background-color:rgba(0,0,0,.55)}.hh-author-name a:hover{color:#fff}@media only screen and (min-width: 766px){.story-cover-thumbnail{padding-top:125%}}</style>{{/contentFor}}
+{{#contentFor "header"}}<style>.godo-f-story{height:100vh}.story-cover-thumbnail{padding-top:90%}.story-cover-thumbnail .simply-cover-gradient{transition:background-color .5s ease-in-out;background-color:transparent;background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.9)),color-stop(60%,rgba(255,255,255,0)));background-image:linear-gradient(to top,rgba(0,0,0,.9) 0%,rgba(255,255,255,0) 60%)}.story-cover:hover .story-cover-thumbnail .simply-cover-gradient{background-color:rgba(0,0,0,.55)}.hh-author-name a:hover{color:#fff}@media only screen and (min-width: 766px){.story-cover-thumbnail{padding-top:125%}}</style>{{/contentFor}}
