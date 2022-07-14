@@ -67,8 +67,7 @@ $textarea-min-height: 8em;
 [type="url"],
 [type="password"],
 [type="number"],
-[type="date"],
-[type="search"] {
+[type="date"] {
   @extend %input-textarea;
 }
 

@@ -5,7 +5,7 @@ import './main'
 import mediumZoom from 'medium-zoom'
 
 import loadScript from './util/load-script'
-import getAll from './util/get-all'
+import docSelectorAll from './util/document-query-selector-all'
 
 const simplyPost = () => {
   /* All Video Responsive
@@ -20,7 +20,7 @@ const simplyPost = () => {
       'iframe[src*="kickstarter.com"][src*="video.html"]'
     ]
 
-    const $iframes = getAll(selectors.join(','))
+    const $iframes = docSelectorAll(selectors.join(','))
 
     if (!$iframes.length) return
 
@@ -40,7 +40,7 @@ const simplyPost = () => {
   /* medium-zoom
   /* ---------------------------------------------------------- */
   const mediumZoomImg = () => {
-    getAll('.post-body img').forEach(el => !el.closest('a') && el.classList.add('simply-zoom'))
+    docSelectorAll('.post-body img').forEach(el => !el.closest('a') && el.classList.add('simply-zoom'))
 
     mediumZoom('.simply-zoom', {
       margin: 20,
@@ -53,7 +53,7 @@ const simplyPost = () => {
   /* Gallery Card
   /* ---------------------------------------------------------- */
   // const resizeImagesInGalleries = () => {
-  //   const $galleryImg = getAll('.kg-gallery-image > img')
+  //   const $galleryImg = docSelectorAll('.kg-gallery-image > img')
 
   //   if (!$galleryImg.length) return
 
@@ -70,7 +70,7 @@ const simplyPost = () => {
 
   /* highlight prismjs
   /* ---------------------------------------------------------- */
-  if (getAll('code[class*=language-]').length && typeof prismJs !== 'undefined') {
+  if (docSelectorAll('code[class*=language-]').length && typeof prismJs !== 'undefined') {
     loadScript(prismJs)
   }
 }

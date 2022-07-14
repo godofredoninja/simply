@@ -1,11 +1,11 @@
-/* global followSocialMedia menuDropdown siteSearch localStorage */
+/* global followSocialMedia menuDropdown localStorage */
 
 // lib
 import 'lazysizes'
 
-import loadScript from './util/load-script'
+// import loadScript from './util/load-script'
 import urlRegexp from './util/url-regular-expression'
-import getAll from './util/get-all'
+import docSelectorAll from './util/document-query-selector-all'
 
 const simplySetup = () => {
   const rootEl = document.documentElement
@@ -42,7 +42,7 @@ const simplySetup = () => {
     if (typeof followSocialMedia !== 'object' || followSocialMedia === null) return
 
     // check if the box for the menu exists
-    const $socialMedia = getAll('.js-social-media')
+    const $socialMedia = docSelectorAll('.js-social-media')
     if (!$socialMedia.length) return
 
     const linkElement = element => {
@@ -71,10 +71,10 @@ const simplySetup = () => {
 
   /*  Toggle modal
   /* ---------------------------------------------------------- */
-  const simplyModal = () => {
-    const $modals = getAll('.js-modal')
-    const $modalButtons = getAll('.js-modal-button')
-    const $modalCloses = getAll('.js-modal-close')
+  /*const simplyModal = () => {
+    const $modals = docSelectorAll('.js-modal')
+    const $modalButtons = docSelectorAll('.js-modal-button')
+    const $modalCloses = docSelectorAll('.js-modal-close')
 
     // Modal Click Open
     if (!$modalButtons.length) return
@@ -89,10 +89,6 @@ const simplySetup = () => {
       const $target = document.getElementById(target)
       rootEl.classList.add('overflow-hidden')
       $target.classList.add('is-active')
-
-      if (target === 'modal-search') {
-        document.querySelector('#search-field').focus()
-      }
     }
 
     const closeModals = () => {
@@ -110,6 +106,7 @@ const simplySetup = () => {
   }
 
   simplyModal()
+  */
 
   /* Header Transparency
   /* ---------------------------------------------------------- */
@@ -137,7 +134,7 @@ const simplySetup = () => {
   /* Dark Mode
   /* ---------------------------------------------------------- */
   const darkMode = () => {
-    const $toggleDarkMode = getAll('.js-dark-mode')
+    const $toggleDarkMode = docSelectorAll('.js-dark-mode')
 
     if (!$toggleDarkMode.length) return
 
@@ -159,7 +156,7 @@ const simplySetup = () => {
   /* DropDown Toggle
   /* ---------------------------------------------------------- */
   const dropDownMenuToggle = () => {
-    const dropdowns = getAll('.dropdown:not(.is-hoverable)')
+    const dropdowns = docSelectorAll('.dropdown:not(.is-hoverable)')
 
     if (!dropdowns.length) return
 
@@ -186,12 +183,6 @@ const simplySetup = () => {
     e.preventDefault()
     documentBody.classList.toggle('has-menu')
   })
-
-  /* Load Search
-  /* ---------------------------------------------------------- */
-  if (typeof searchSettings !== 'undefined' && typeof siteSearch !== 'undefined') {
-    loadScript(siteSearch)
-  }
 }
 
 document.addEventListener('DOMContentLoaded', simplySetup)

@@ -111,7 +111,7 @@ function styles (done) {
 
 // Scripts
 function scripts (done) {
-  const files = ['main', 'post', 'prismjs', 'kusi-doc-post', 'pagination', 'search']
+  const files = ['main', 'post', 'prismjs', 'kusi-doc-post', 'pagination']
 
   merge(files.map(function (file) {
     return pump([

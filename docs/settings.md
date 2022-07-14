@@ -150,28 +150,7 @@ It is not necessary to add all the icons. Only the icons you need.
 
 ## Search
 
-> The default search engine will only search the titles of the post
-
-1. Go in your Ghost's `Dashboard -> Integrations -> Add custom integration`
-2. Set a name: Choose a favorite name
-3. Get the **Content API Key** and replace the demo **key**  with this one
-4. Get the **Api URL**  and replace in **url**
-
-![Ghost search](https://user-images.githubusercontent.com/10253167/105411973-1a8bed80-5c02-11eb-87cb-5a15cd9a7856.jpg)
-
-➡️ `Dashboard -> Code injection -> Site Footer`
-
-```html
-<script>
-  var searchSettings = {
-    key: "ADD_YOUR_CONTENT_API_KEY"
-  };
-</script>
-```
-
-The search engine that includes Simply is very powerful, supports almost all languages and you can customize to your liking.
-
-Read more about the search engine [Read More](https://github.com/gmfmi/searchinGhost)
+Simply is using the default [search of ghost](https://ghost.org/docs/themes/search/)
 
 ### Language settings
 
