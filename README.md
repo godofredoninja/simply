@@ -85,6 +85,7 @@
     - Show / Hide
     - Newsletter Text
   - Comments
+    - [Ghost Native Comments](https://ghost.org/help/commenting/)
     - [Disqus Comments](https://godofredo.ninja/ghost-theme/simply/settings/#disquscomments)
     - [Facebook Comments](https://godofredo.ninja/ghost-theme/simply/settings/#facebookcomments)
     - [Hyvor Talk Comments](https://godofredo.ninja/ghost-theme/simply/settings/#hyvortalk)

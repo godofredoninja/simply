@@ -220,11 +220,63 @@ If you need a quick way to make fully functional comments Simply has everything 
 
 [Disqus](https://disqus.com/) allows you to embed comment threads within Ghost posts and pages, including additional functionality like upvoting and adding Emoji reactions.
 
-— First, you will need to get your account `disqusShortName`
+➡ First, you will need to get your account `disqusShortName`
 
-➡️ `Dashboard -> Site design -> Post -> Comments disqus short name`
+➡ you need to edit the following file. `partials/article/article-comments.hbs`
 
-![Disqus Comments simply](https://user-images.githubusercontent.com/10253167/161466531-c08a9c6f-c589-4eff-ae42-4f11066b014b.jpg)
+➡ Make sure to replace `HERE_YOUR_DISQUS_SHORT_NAME` in the code with your `disqusShortName`.
+
+➡ Inside the file you have to delete all the content and add all the code that I leave below.
+
+```handlebars
+<div id="post-comments" class="post-comments bg-gray-150 pt-8 pb-8">
+    <div class="mx-auto px-4 max-w-5xl">
+        {{!-- Disqus Comments --}}
+        <div id="disqus_thread"></div>
+    </div>
+</div>
+
+{{#contentFor "scripts"}}
+<script>
+(function(d, s, id) {
+    var disqus_config = function () {
+        this.page.url = '{{url absolute="true"}}';
+        this.page.identifier = 'ghost-{{comment_id}}';
+    };
+
+    function loadDisqus() {
+        var currentScroll = d.scrollingElement.scrollTop;
+        var disqusTarget = d.getElementById('disqus_thread');
+
+        if (d.getElementById(id)) return;
+
+        if( disqusTarget && (currentScroll > disqusTarget.getBoundingClientRect().top - 150) ) {
+            var js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://HERE_YOUR_DISQUS_SHORT_NAME.disqus.com/embed.js';
+            js.async = true;
+            js.defer = true;
+            js.setAttribute('data-timestamp', +new Date());
+            d.body.appendChild(js);
+
+            window.removeEventListener('scroll', loadDisqus);
+        }
+    }
+
+    window.addEventListener('scroll', loadDisqus);
+
+    document.querySelector('.js-dark-mode').addEventListener('click', function() {
+        if (window.DISQUS) {
+            DISQUS.reset({
+                reload: true,
+                config: disqus_config
+            });
+        }
+    });
+}(document, 'script', 'disqus-js'));
+</script>
+{{/contentFor}}
+```
 
 ---
 
