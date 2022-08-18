@@ -154,10 +154,6 @@
         "type": "text",
         "default": "Sign up for more like this",
         "group": "post"
-      },
-      "comments_disqus_short_name": {
-        "type": "text",
-        "group": "post"
       }
     }
   },

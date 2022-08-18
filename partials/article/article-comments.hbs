@@ -1,5 +1,7 @@
-    {{#if comments}}
-    <section class="article-comments gh-canvas">
-        {{comments}}
-    </section>
-    {{/if}}
+{{#if comments}}
+<div class="post-comments bg-gray-150 py-8">
+    <div class="mx-auto px-4 max-w-3xl">
+        {{comments title=(t "Discussion")}}
+    </div>
+</div>
+{{/if}}
