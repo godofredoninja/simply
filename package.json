@@ -150,6 +150,11 @@
         "default": false,
         "group": "post"
       },
+      "show_prev_and_next_post": {
+        "type": "boolean",
+        "default": true,
+        "group": "post"
+      },
       "newsletter_text": {
         "type": "text",
         "default": "Sign up for more like this",

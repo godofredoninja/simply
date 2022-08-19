@@ -13,6 +13,7 @@
     {{> "components/newsletter"}}
 
     {{!-- Previous and next article --}}
+    {{#if @custom.show_prev_and_next_post}}
     <div class="prev-next pb-8">
         <hr class="my-10">
         {{#prev_post}}
@@ -23,6 +24,7 @@
             {{> "story/story-previous-next" storyTitle=(t "Next article") class=""}}
         {{/next_post}}
     </div>
+    {{/if}}
 </footer>
 
 {{/if}}
