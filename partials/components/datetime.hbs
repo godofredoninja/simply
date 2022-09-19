@@ -2,5 +2,9 @@
     <time class="datetime capitalize" datetime="{{date format="YYYY-MM-DD"}}" {{#if updated_at}}title="{{t "Updated"}} {{date updated_at format="D MMM YYYY"}}"{{/if}}>{{date format="D MMM YYYY"}}</time>
     <span class="bull mx-1">·</span>
     <span class="readingTime cursor-default" title="{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}">{{reading_time seconds=(t "< 1 min read") minute=(t "1 min read") minutes=(t "% min read")}}</span>
-    {{#if featured}}<svg class="icon icon--star is-small p-1"><use xlink:href="#icon-star"></use></svg>{{/if}}
+    {{#if featured}}
+    <span class="cursor-pointer ml-1" title="{{t "featured story"}}">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M12.4 12.77l-1.81 4.99a.63.63 0 0 1-1.18 0l-1.8-4.99a.63.63 0 0 0-.38-.37l-4.99-1.81a.62.62 0 0 1 0-1.18l4.99-1.8a.63.63 0 0 0 .37-.38l1.81-4.99a.63.63 0 0 1 1.18 0l1.8 4.99a.63.63 0 0 0 .38.37l4.99 1.81a.63.63 0 0 1 0 1.18l-4.99 1.8a.63.63 0 0 0-.37.38z" fill="#FFC017"></path></svg>
+    </span>
+    {{/if}}
 </div>
