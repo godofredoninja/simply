@@ -1,0 +1,22 @@
+<div class="font-semibold leading-tight godo-tracking"
+    data-event-category="Article"
+    data-event-action="{{#if storyTitle}}{{storyTitle}}{{/if}}"
+    data-event-label="{{url absolute="true"}}"
+    data-event-non-interaction="true">
+
+    <a href="{{url}}" class="flex items-center {{#unless feature_image}}bg-blank p-6 shadow border rounded transition-all hover:shadow-card-primary{{/unless}}">
+        {{#if feature_image}}
+            <img class="w-24 h-24 object-cover blur-up lazyload{{#if classImage}} {{classImage}}{{else}} rounded{{/if}}"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                data-src="{{img_url feature_image size="s"}}"
+                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+                width="96"
+                height="96"/>
+        {{/if}}
+
+        <div class="flex-1 {{classBody}}">
+            <span class="text-sm leading-none text-gray-500 mb-3 block font-normal">{{#if storyTitle}}{{storyTitle}}{{/if}}</span>
+            <span class="text-lg text-title line-clamp-2 block">{{title}}</span>
+        </div>
+    </a>
+</div>

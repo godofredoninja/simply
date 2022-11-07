@@ -143,7 +143,7 @@
   }
 /* base
 /* ---------------------------------------------------------- */
-/* ! tailwindcss v3.1.6 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.2.1 | MIT License | https://tailwindcss.com */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -440,6 +440,10 @@ video {
   max-width: 100%;
   height: auto;
 }
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -532,10 +536,10 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-cite,  figcaption,  h1,  h2,  h3,  h4,  h5,  h6,  [type="text"],  [type="email"],  [type="url"],  [type="password"],  [type="number"],  [type="date"],  textarea,  .button,  .kg-card {
+cite, figcaption, h1, h2, h3, h4, h5, h6, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button, .kg-card {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.inset-image,  .kg-bookmark-thumbnail img {
+.inset-image, .kg-bookmark-thumbnail img {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -606,7 +610,7 @@ blockquote:not([class]) {
   }
 /* 2. cite - figcamption - figure
 /* ---------------------------------------------------------- */
-cite,  figcaption {
+cite, figcaption {
   display: block;
   text-align: center;
   font-size: 0.875rem;
@@ -791,7 +795,7 @@ h6 {
 h1, h2, h3 {
   @include heading-text;
 } */
-[type="text"],  [type="email"],  [type="url"],  [type="password"],  [type="number"],  [type="date"],  textarea,  .button {
+[type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button {
   font-size: 1rem;
 
   /* stylelint-disable-next-line */
@@ -1465,7 +1469,7 @@ except for when immediately preceeded by a heading */
 .kg-width-wide.kg-card-hascaption img {
     grid-column: wide-start / wide-end;
   }
-.pullquote,  .kg-blockquote-alt {
+.pullquote, .kg-blockquote-alt {
   color: var(--gray-500);
 
   font-size: 1.2em;
@@ -1876,6 +1880,9 @@ except for when immediately preceeded by a heading */
 .h-48 {
   height: 12rem;
 }
+.h-24 {
+  height: 6rem;
+}
 .max-h-128 {
   max-height: 32rem;
 }
@@ -1950,6 +1957,9 @@ except for when immediately preceeded by a heading */
 }
 .w-4\/12 {
   width: 33.333333%;
+}
+.w-24 {
+  width: 6rem;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -2073,6 +2083,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-16 {
   gap: 4rem;
+}
+.gap-8 {
+  gap: 2rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -2466,8 +2479,17 @@ except for when immediately preceeded by a heading */
 .pt-vmin8 {
   padding-top: 8vmin;
 }
+.pr-4 {
+  padding-right: 1rem;
+}
+.text-left {
+  text-align: left;
+}
 .text-center {
   text-align: center;
+}
+.text-right {
+  text-align: right;
 }
 .font-sans {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -2698,9 +2720,6 @@ except for when immediately preceeded by a heading */
 }
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
-.ease-in {
-  transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
 .line-clamp-3 {
   overflow: hidden;
@@ -2942,6 +2961,9 @@ except for when immediately preceeded by a heading */
   }
   .md\:justify-end {
     justify-content: flex-end;
+  }
+  .md\:gap-4 {
+    gap: 1rem;
   }
   .md\:py-vw6 {
     padding-top: 6vw;
