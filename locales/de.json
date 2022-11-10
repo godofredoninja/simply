@@ -79,7 +79,7 @@
   "Share on": "Teilen auf",
   "Send": "Senden",
   "Listen": "Listen",
-  "Related <span class='text-primary'>Articles</span>": "Ähnliche <span class='text-primary'>Artkel</span>",
+  "Related <span class='font-bold'>Articles</span>": "Ähnliche <span class='font-bold'>Artkel</span>",
   "Please enter a valid email address!": "Bitte gebe eine gültige E-Mail-Adresse ein!",
   "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription": "<strong>Großartig!</strong> Prüf deine E-Mails und klick den Link zur Bestätigung"
 }

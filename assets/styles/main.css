@@ -2477,6 +2477,9 @@ except for when immediately preceeded by a heading */
 .pr-4 {
   padding-right: 1rem;
 }
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .text-center {
   text-align: center;
 }

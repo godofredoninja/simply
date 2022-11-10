@@ -70,7 +70,7 @@
   "Share on": "Ulashish",
   "Send": "Yuborish",
   "Listen": "Tinglash",
-  "Related <span class='text-primary'>Articles</span>": "O'xshash <span class='text-primary'>Maqolalar</span>",
+  "Related <span class='font-bold'>Articles</span>": "O'xshash <span class='font-bold'>Maqolalar</span>",
   "Please enter a valid email address!": "Iltimos emailni to'g'ri kiriting!",
   "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription": "<strong>Ajoyib!</strong> Biz obunani faollashtirish uchun xat yubordik, pochtangizni tekshiring"
 }

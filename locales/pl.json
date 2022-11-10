@@ -78,7 +78,7 @@
   "Share on": "Podziel się na",
   "Send": "Wyślij",
   "Listen": "Słuchaj",
-  "Related <span class='text-primary'>Articles</span>": "Powiązane <span class='text-primary'>Artykuły</span>",
+  "Related <span class='font-bold'>Articles</span>": "Powiązane <span class='font-bold'>Artykuły</span>",
   "Please enter a valid email address!": "Wpisz poprawny adres email!",
   "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription": "<strong>Great!</strong> Sprawdź pocztę i kliknij w link żeby potwierdzić swoją subskrypcję"
 }

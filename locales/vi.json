@@ -79,7 +79,7 @@
   "Share on": "Chia sẻ trên",
   "Send": "Gửi",
   "Listen": "Nghe",
-  "Related <span class='text-primary'>Articles</span>": "<span class='text-primary'>Bài viết</span> liên quan",
+  "Related <span class='font-bold'>Articles</span>": "<span class='font-bold'>Bài viết</span> liên quan",
   "Please enter a valid email address!": "Vui lòng nhập một địa chỉ email hợp lệ!",
   "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription": "<strong>Thành công!</strong> Kiểm tra hòm thư của bạn và click vào liên kết xác nhận"
 }
