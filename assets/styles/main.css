@@ -2,6 +2,7 @@
 /* ---------------------------------------------------------- */
 /* Colors
 /* ---------------------------------------------------------- */
+/*#fafafa*/
 /* Header
 /* ---------------------------------------------------------- */
 /* Footer
@@ -38,7 +39,7 @@
   --border-color: #e2ecec;
 
   /* gray */
-  --gray-100: #fafafa;
+  --gray-100: rgba(250, 250, 250, 1);
   --gray-150: #f8fafc;
   --gray-200: #F3F5F9;
   --gray-300: #e0e0e0;
@@ -1955,11 +1956,11 @@ except for when immediately preceeded by a heading */
 .w-1\/3 {
   width: 33.333333%;
 }
-.w-4\/12 {
-  width: 33.333333%;
-}
 .w-24 {
   width: 6rem;
+}
+.w-4\/12 {
+  width: 33.333333%;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -2075,17 +2076,14 @@ except for when immediately preceeded by a heading */
 .gap-10 {
   gap: 2.5rem;
 }
-.gap-6 {
-  gap: 1.5rem;
+.gap-8 {
+  gap: 2rem;
 }
 .gap-2 {
   gap: 0.5rem;
 }
 .gap-16 {
   gap: 4rem;
-}
-.gap-8 {
-  gap: 2rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -2205,9 +2203,6 @@ except for when immediately preceeded by a heading */
 }
 .bg-transparent {
   background-color: transparent;
-}
-.bg-gray-150 {
-  background-color: var(--gray-150);
 }
 .bg-gray-100 {
   background-color: var(--gray-100);
@@ -2481,9 +2476,6 @@ except for when immediately preceeded by a heading */
 }
 .pr-4 {
   padding-right: 1rem;
-}
-.text-left {
-  text-align: left;
 }
 .text-center {
   text-align: center;
@@ -3125,9 +3117,6 @@ except for when immediately preceeded by a heading */
   }
   .lg\:items-baseline {
     align-items: baseline;
-  }
-  .lg\:gap-6 {
-    gap: 1.5rem;
   }
   .lg\:gap-8 {
     gap: 2rem;

@@ -4,7 +4,7 @@
 $primary-color: #0abe51;
 $dark-blue-500: #102b7b;
 
-$gray-100: #fafafa;
+$gray-100: rgba(250, 250, 250, 1); /*#fafafa*/
 $gray-150: #f8fafc;
 $gray-200: #F3F5F9;
 $gray-300: #e0e0e0;

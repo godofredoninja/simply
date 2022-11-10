@@ -229,7 +229,7 @@ If you need a quick way to make fully functional comments Simply has everything 
 ➡ Inside the file you have to delete all the content and add all the code that I leave below.
 
 ```handlebars
-<div id="post-comments" class="post-comments bg-gray-150 pt-8 pb-8">
+<div id="post-comments" class="post-comments bg-gray-100 pt-8 pb-8">
     <div class="mx-auto px-4 max-w-5xl">
         {{!-- Disqus Comments --}}
         <div id="disqus_thread"></div>
@@ -289,7 +289,7 @@ To have the [Facebook comments](https://developers.facebook.com/docs/plugins/com
 Inside the file you have to delete all the content and add all the code that I leave below.
 
 ```handlebars
-<div id="post-comments" class="post-comments bg-gray-150 pt-8 pb-8">
+<div id="post-comments" class="post-comments bg-gray-100 pt-8 pb-8">
   <div class="mx-auto px-4 max-w-5xl">
     <div class="py-4 px-5">
       <div class="fb-comments" data-href="{{url absolute="true"}}" data-width="100%" data-numposts="5"></div>
