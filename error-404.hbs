@@ -13,7 +13,7 @@
 
 {{#get "posts" limit="6" filter="tag:-[hash-portfolio,hash-kusi-doc,hash-podcast]" as |recents| }}
     <div class="container mx-auto">
-        <div class="mx-auto max-w-1100 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="mx-auto max-w-1100 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {{#foreach recents}}
                 {{> "story/story-card-small"}}
             {{/foreach}}

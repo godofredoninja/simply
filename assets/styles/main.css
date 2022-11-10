@@ -3129,6 +3129,9 @@ except for when immediately preceeded by a heading */
   .lg\:gap-6 {
     gap: 1.5rem;
   }
+  .lg\:gap-8 {
+    gap: 2rem;
+  }
   .lg\:overflow-visible {
     overflow: visible;
   }

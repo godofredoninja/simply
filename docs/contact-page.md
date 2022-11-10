@@ -11,7 +11,7 @@
 ```html
 <form
   action="https://formspree.io/your@email.com"
-  class="mt-10 grid md:grid-cols-2 gap-6"
+  class="mt-10 grid md:grid-cols-2 gap-8"
   method="POST">
 
   <input name="name" class="col-span-1" type="text" placeholder="Your Name" required>

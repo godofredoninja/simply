@@ -17,7 +17,7 @@
 
 {{#get "tags" limit="18" filter="visibility:public" include="count.posts" order="count.posts desc"}}
 <section class="container mx-auto py-8 lg:py-16">
-    <div class="max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         {{#foreach tags}}
         <article class="topic-story relative bg-dark overflow-hidden rounded-md" {{#if accent_color}}style="background-color:{{accent_color}}"{{/if}}>

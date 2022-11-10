@@ -5,10 +5,10 @@
 {{#match @custom.publication_cover "Featured Slider"}}{{> "home/featured-slider"}}{{/match}}
 
 <div class="site-post container mx-auto py-vmin8">
-    <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-6">
+    <div class="js-feed-entry max-w-1100 mx-auto grid md:grid-cols-2 lg:grid-cols-12 gap-8">
         {{#foreach posts}}
             {{#has number="6"}}
-                {{> "story/story-grid" story_class="ss1 grid lg:col-span-full lg:grid-cols-3 gap-6"}}
+                {{> "story/story-grid" story_class="ss1 grid lg:col-span-full lg:grid-cols-3 gap-8"}}
             {{else has number="4,5"}}
                 {{> "story/story-grid" story_class="ss2 lg:col-span-6"}}
             {{else}}
