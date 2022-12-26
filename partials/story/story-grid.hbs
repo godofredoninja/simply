@@ -20,7 +20,7 @@
 
         <div class="story-body flex flex-col grow">
             {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-            {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}}
+            {{!-- {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}} --}}
 
             <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
@@ -47,7 +47,7 @@
             {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag"}}</div>{{/if}}
 
             {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-            {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}}
+            {{!-- {{#match @custom.story_meta "Read More"}}{{> "components/datetime" class="mb-3 text-sm font-medium text-gray-500"}}{{/match}} --}}
 
             <h2 class="story-title text-2xl font-sans text-title leading-tight mb-3"><a href="{{url}}" class="block">{{title}}</a></h2>
 
