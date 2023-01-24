@@ -1,7 +1,7 @@
 {{#if @member}}
 {{!-- Button Updgrade --}}
 {{!-- {{#unless @member.paid}}<a class="button mr-2 text-sm font-medium hidden md:flex" href="{{@site.url}}/membership/">{{t "Upgrade"}}</a>{{/unless}} --}}
-{{#unless @member.paid}}<a data-portal="account/plans" class="button is-black mr-2 text-sm font-medium hidden md:flex" href="#">{{t "Upgrade"}}</a>{{/unless}}
+{{#unless @member.paid}}<a data-portal="account/plans" class="button is-black text-sm font-medium hidden md:flex" href="#">{{t "Upgrade"}}</a>{{/unless}}
 
 <div class="dropdown is-right h-16 flex items-center md:ml-3">
     {{!-- https://ghost.org/docs/members/member-data/ --}}
@@ -60,7 +60,7 @@
 {{else}}
 
 {{!-- <a class="button is-white mr-2 text-sm font-medium hidden md:flex" href="{{@site.url}}/signin/">{{t "Log in"}}</a> --}}
-<a data-portal="signin" class="button is-white mr-2 text-sm font-medium hidden md:flex" href="#/portal/signin">{{t "Log in"}}</a>
+<a data-portal="signin" class="button is-white text-sm font-medium hidden md:flex" href="#/portal/signin">{{t "Log in"}}</a>
 {{!-- <a class="button is-primary text-sm font-medium hidden md:flex" href="{{@site.url}}/membership/">{{t "Subscribe"}}</a> --}}
 <a data-portal="signup" class="button is-primary text-sm font-medium hidden md:flex" href="#/portal/signup">{{t "Subscribe"}}</a>
 

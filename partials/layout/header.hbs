@@ -27,10 +27,10 @@
         {{/if}}
 
         <div class="header-right flex-none flex justify-end items-center">
-            <div class="flex flex-wrap">
+            <div class="flex gap-2">
                 {{!-- Light and Dark Mode --}}
                 <a role="button" class="js-dark-mode button is-white" aria-label="Toggle theme">
-                    <div class="flex flex-wrap">
+                    <div class="flex icon">
                         <svg class="icon icon--moon"><use xlink:href="#icon-moon"></use></svg>
                         <svg class="icon icon--sunny hidden"><use xlink:href="#icon-sunny"></use></svg>
                     </div>
@@ -51,7 +51,7 @@
                 </a>
             </div>
 
-            <div class="flex flex-wrap items-center">
+            <div class="flex items-center gap-2 ml-2">
                 {{!-- Menu User Account --}}
                 {{#if @site.members_enabled}}{{> "layout/account-menu"}}{{/if}}
 
