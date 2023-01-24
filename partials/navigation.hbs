@@ -34,7 +34,7 @@
 {{!-- Primary Navigation --}}
 {{else}}
 
-<nav class="header-center mainMenu relative flex items-center pr-5 grow overflow-auto lg:overflow-visible">
+<nav class="header-center mainMenu flex items-center">
     <ul itemscope
         itemtype="http://www.schema.org/SiteNavigationElement"
         class="nav hidden lg:flex whitespace-nowrap">
@@ -54,22 +54,22 @@
         {{/foreach}}
 
         {{!-- Has DropDown Menu --}}
-        {{#if navigationDropDown}}
-        <li class="dropdown is-hoverable">
+        {{!-- {{#if navigationDropDown}} --}}
+        {{!-- <li class="dropdown is-hoverable">
             <a href="#" class="mainMenu-link dropdown-trigger h-16 flex items-center p-3 text-base text-header-link hover:text-primary">
                 <span>{{t "More"}}</span>
                 <svg class="icon is-small transform rotate-90"><use xlink:href="#icon-arrow-forward"></use></svg>
             </a>
             <div class="dropdown-menu whitespace-normal">
                 <div class="dropdown-content">
-                    <div class="js-dropdown-menu text-base">{{!-- <a href="#" class="dropdown-item hover:text-primary">Dropdown item</a> --}}</div>
+                    <div class="js-dropdown-menu text-base">{<a href="#" class="dropdown-item hover:text-primary">Dropdown item</a></div>
                     {{#has any="@site.facebook, @site.twitter"}}<hr class="dropdown-divider my-3">{{/has}}
-                    {{!-- Social Media - partials/widget/social-media.hbs --}}
+                    Social Media - partials/widget/social-media.hbs
                     {{> "widget/social-media" class="social-media"}}
                 </div>
             </div>
-        </li>
-        {{/if}}
+        </li> --}}
+        {{!-- {{/if}} --}}
 
     </ul>
 </nav>

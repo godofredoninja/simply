@@ -10,11 +10,82 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07);
 }
 
+/* Header Layout - is stacked
+/* ---------------------------------------------------------- */
+
+.is-head-stacked .header {
+  @apply static;
+}
+
+.is-head-stacked.has-cover {
+  .header {
+    position: absolute;
+  }
+
+  .header-center {
+    &::before,
+    &::after {
+      background-color: hsla(0,0%,100%,.2);
+    }
+  }
+
+  .simply-hero-cover {
+    padding-top: calc(19vmin + 2rem);
+    margin-top: 0;
+  }
+}
+
+@screen lg {
+  .is-head-stacked {
+    .header {
+      @apply h-auto;
+    }
+
+    .header-wrap {
+      @apply grid-cols-fr-auto-fr;
+    }
+
+    .header-left {
+      @apply col-start-2 row-start-1 h-24;
+    }
+
+    .header-center {
+      @apply row-start-2 col-span-full justify-center;
+    }
+
+    .header-right {
+      @apply row-start-1 col-span-full justify-between;
+    }
+
+    /* header logo */
+    .header-logo-img {
+      @apply max-h-14;
+    }
+
+    .header-center {
+      &::before,
+      &::after {
+        @apply bg-gray-300 absolute left-0 w-full top-24;
+        content: "";
+        height: 0.0625rem;
+      }
+
+      &::after {
+        @apply top-40;
+      }
+    }
+
+    /* has cover */
+    .simply-hero-cover {
+      padding-top: calc(10vmin + 8rem) !important;
+    }
+  }
+}
 
 /* Header has Transparent
 /* ---------------------------------------------------------- */
 
-.header-right > .button.is-white {
+.header-right .button.is-white {
   background-color: rgba(255, 255, 255, 0);
   color: var(--header-text-link);
 }
@@ -26,6 +97,10 @@
 .is-head-transparent:not(.has-menu) {
   --header-text-link: #fff;
 }
+
+/* .header.is-stacked ~ .simply-main {
+  @apply lg:-mt-24;
+} */
 
 /* Hamburger Button for Toggle menu
 /* ---------------------------------------------------------- */

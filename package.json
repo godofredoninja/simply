@@ -69,10 +69,11 @@
       "header": {
         "type": "select",
         "options": [
-          "Default",
-          "Drop Down Menu"
+          "Menu on the left",
+          "Menu on the right",
+          "Stacked"
         ],
-        "default": "Default"
+        "default": "Menu on the left"
       },
       "footer": {
         "type": "select",

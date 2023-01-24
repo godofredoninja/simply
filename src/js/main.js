@@ -114,6 +114,8 @@ const simplySetup = () => {
     const hasCover = documentBody.closest('.has-cover')
     const $jsHeader = document.querySelector('.js-header')
 
+    if (documentBody.classList.contains('is-head-stacked')) return
+
     window.addEventListener('scroll', () => {
       const lastScrollY = window.scrollY
 

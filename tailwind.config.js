@@ -155,7 +155,10 @@ module.exports = {
       gridTemplateColumns: {
         sidebar: '1fr 22.5rem',
         kusi2: 'calc(12.5rem + 4vmin) 1fr',
-        kusi3: 'calc(12.5rem + 4vmin) 1fr calc(13.75rem + 2vmin)'
+        kusi3: 'calc(12.5rem + 4vmin) 1fr calc(13.75rem + 2vmin)',
+        "auto-fr-auto": 'auto 1fr auto',
+        "fr-auto-auto": "1fr auto auto",
+        "fr-auto-fr": "1fr auto 1fr"
       }
     }
   },

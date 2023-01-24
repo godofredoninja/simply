@@ -2042,6 +2042,15 @@ except for when immediately preceeded by a heading */
 .resize {
   resize: both;
 }
+.grid-flow-row-dense {
+  grid-auto-flow: row dense;
+}
+.grid-cols-fr-auto-auto {
+  grid-template-columns: 1fr auto auto;
+}
+.grid-cols-auto-fr-auto {
+  grid-template-columns: auto 1fr auto;
+}
 .flex-row {
   flex-direction: row;
 }
@@ -2086,6 +2095,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-16 {
   gap: 4rem;
+}
+.gap-x-7 {
+  column-gap: 1.75rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -2742,9 +2754,74 @@ except for when immediately preceeded by a heading */
 .shadow-header {
   box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07);
 }
+/* Header Layout - is stacked
+/* ---------------------------------------------------------- */
+.is-head-stacked .header {
+  position: static;
+}
+.is-head-stacked.has-cover .header {
+    position: absolute;
+  }
+.is-head-stacked.has-cover .header-center::before, .is-head-stacked.has-cover .header-center::after {
+      background-color: hsla(0,0%,100%,.2);
+    }
+.is-head-stacked.has-cover .simply-hero-cover {
+    padding-top: calc(19vmin + 2rem);
+    margin-top: 0;
+  }
+@media (min-width: 1000px) {
+    .is-head-stacked .header {
+    height: auto;
+  }
+
+    .is-head-stacked .header-wrap {
+    grid-template-columns: 1fr auto 1fr;
+  }
+
+    .is-head-stacked .header-left {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    height: 6rem;
+  }
+
+    .is-head-stacked .header-center {
+    grid-column: 1 / -1;
+    grid-row-start: 2;
+    justify-content: center;
+  }
+
+    .is-head-stacked .header-right {
+    grid-column: 1 / -1;
+    grid-row-start: 1;
+    justify-content: space-between;
+  }
+
+    /* header logo */
+    .is-head-stacked .header-logo-img {
+    max-height: 3.5rem;
+  }
+      .is-head-stacked .header-center::before, .is-head-stacked .header-center::after {
+    position: absolute;
+    left: 0px;
+    top: 6rem;
+    width: 100%;
+    background-color: var(--gray-300);
+        content: "";
+        height: 0.0625rem;
+  }
+
+      .is-head-stacked .header-center::after {
+    top: 10rem;
+  }
+
+    /* has cover */
+    .is-head-stacked .simply-hero-cover {
+      padding-top: calc(10vmin + 8rem) !important;
+    }
+}
 /* Header has Transparent
 /* ---------------------------------------------------------- */
-.header-right > .button.is-white {
+.header-right .button.is-white {
   background-color: rgba(255, 255, 255, 0);
   color: #292929;
   color: var(--header-text-link);
@@ -2755,6 +2832,9 @@ except for when immediately preceeded by a heading */
 .is-head-transparent:not(.has-menu) {
   --header-text-link: #fff;
 }
+/* .header.is-stacked ~ .simply-main {
+  @apply lg:-mt-24;
+} */
 /* Hamburger Button for Toggle menu
 /* ---------------------------------------------------------- */
 .menu-burger {
@@ -3125,9 +3205,6 @@ except for when immediately preceeded by a heading */
   }
   .lg\:gap-8 {
     gap: 2rem;
-  }
-  .lg\:overflow-visible {
-    overflow: visible;
   }
   .lg\:py-16 {
     padding-top: 4rem;
