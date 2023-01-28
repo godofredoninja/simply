@@ -1,10 +1,10 @@
 {{#if @site.members_enabled}}{{#if @custom.show_newsletter}}{{#unless @member}}
 <div class="pt-vmin8">
-    <div class="border-t-3 border-primary bg-gray-100 p-8">
-        {{#if @custom.newsletter_text}}<h2 class="text-xl font-bold text-title mb-4">{{@custom.newsletter_text}}</h2>{{/if}}
-        <a class="flex flex-col justify-between md:flex-row md:items-center" href="#/portal" data-portal>
-            <div class="text-gray-500 border-b border-gray-400 grow mr-10 py-1 w-full mb-4 md:mb-0">{{t "Enter your email"}}</div>
-            <div class="button is-primary rounded-full">
+    <div class="p-8 bg-gray-200 rounded">
+        {{#if @custom.newsletter_text}}<h2 class="mb-4 text-xl font-bold text-title">{{@custom.newsletter_text}}</h2>{{/if}}
+        <a class="flex flex-col justify-between gap-3 md:flex-row md:items-center" href="#/portal" data-portal>
+            <div class="border-black h-11 grow input">{{t "Enter your email"}}</div>
+            <div class="button is-black h-11">
                 <svg class="stroke-current" width="38" height="38" fill="none">
                     <rect x="26.25" y="9.25" width=".5" height="6.5" rx=".25"/>
                     <rect x="29.75" y="12.25" width=".5" height="6.5" rx=".25" transform="rotate(90 29.75 12.25)"/>
@@ -15,7 +15,7 @@
             </div>
         </a>
 
-        <p class="text-sm mt-5">{{t "No spam. No jibber jabber. Unsubscribe any time."}}</p>
+        <p class="mt-5 text-sm">{{t "No spam. No jibber jabber. Unsubscribe any time."}}</p>
     </div>
 </div>
 {{/unless}}{{/if}}{{/if}}

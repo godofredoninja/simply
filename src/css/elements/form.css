@@ -62,6 +62,7 @@ $textarea-min-height: 8em;
   }
 }
 
+.input,
 [type="text"],
 [type="email"],
 [type="url"],

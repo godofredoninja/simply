@@ -3,6 +3,7 @@
 /* Colors
 /* ---------------------------------------------------------- */
 /*#fafafa*/
+/* $gray-200: #F3F5F9; */
 /* Header
 /* ---------------------------------------------------------- */
 /* Footer
@@ -41,7 +42,7 @@
   /* gray */
   --gray-100: rgba(250, 250, 250, 1);
   --gray-150: #f8fafc;
-  --gray-200: #F3F5F9;
+  --gray-200: #f6f6f6;
   --gray-300: #e0e0e0;
   --gray-400: #bdbdbd;
   --gray-500: #757575;
@@ -539,7 +540,7 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
-cite, figcaption, h1, h2, h3, h4, h5, h6, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button, .kg-card {
+cite, figcaption, h1, h2, h3, h4, h5, h6, .input, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button, .kg-card {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .inset-image, .kg-bookmark-thumbnail img {
@@ -798,7 +799,7 @@ h6 {
 h1, h2, h3 {
   @include heading-text;
 } */
-[type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button {
+.input, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button {
   font-size: 1rem;
 
   /* stylelint-disable-next-line */
@@ -825,7 +826,7 @@ h1, h2, h3 {
   &.is-active {
     outline: none;
   } */
-[type="text"][disabled], fieldset[disabled] [type="text"], [type="email"][disabled], fieldset[disabled] [type="email"], [type="url"][disabled], fieldset[disabled] [type="url"], [type="password"][disabled], fieldset[disabled] [type="password"], [type="number"][disabled], fieldset[disabled] [type="number"], [type="date"][disabled], fieldset[disabled] [type="date"], textarea[disabled], fieldset[disabled] textarea, .button[disabled], fieldset[disabled] .button {
+.input[disabled], fieldset[disabled] .input, [type="text"][disabled], fieldset[disabled] [type="text"], [type="email"][disabled], fieldset[disabled] [type="email"], [type="url"][disabled], fieldset[disabled] [type="url"], [type="password"][disabled], fieldset[disabled] [type="password"], [type="number"][disabled], fieldset[disabled] [type="number"], [type="date"][disabled], fieldset[disabled] [type="date"], textarea[disabled], fieldset[disabled] textarea, .button[disabled], fieldset[disabled] .button {
     cursor: not-allowed;
   }
 /* Components
@@ -857,7 +858,7 @@ h1, h2, h3 {
 }
 /* Elements
 /* ---------------------------------------------------------- */
-[type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea {
+.input, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea {
 
   background-color: #fff;
 
@@ -867,50 +868,50 @@ h1, h2, h3 {
   color: hsl(0, 0%, 21%);
   color: var(--input-color)
 }
-[type="text"]::-moz-placeholder, [type="email"]::-moz-placeholder, [type="url"]::-moz-placeholder, [type="password"]::-moz-placeholder, [type="number"]::-moz-placeholder, [type="date"]::-moz-placeholder, textarea::-moz-placeholder {
+.input::-moz-placeholder, [type="text"]::-moz-placeholder, [type="email"]::-moz-placeholder, [type="url"]::-moz-placeholder, [type="password"]::-moz-placeholder, [type="number"]::-moz-placeholder, [type="date"]::-moz-placeholder, textarea::-moz-placeholder {
     color: rgba(54, 54, 54, 0.8);
     color: var(--placeholder-color);
   }
-[type="text"]:-ms-input-placeholder, [type="email"]:-ms-input-placeholder, [type="url"]:-ms-input-placeholder, [type="password"]:-ms-input-placeholder, [type="number"]:-ms-input-placeholder, [type="date"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
+.input:-ms-input-placeholder, [type="text"]:-ms-input-placeholder, [type="email"]:-ms-input-placeholder, [type="url"]:-ms-input-placeholder, [type="password"]:-ms-input-placeholder, [type="number"]:-ms-input-placeholder, [type="date"]:-ms-input-placeholder, textarea:-ms-input-placeholder {
     color: rgba(54, 54, 54, 0.8);
     color: var(--placeholder-color);
   }
-[type="text"]::placeholder, [type="email"]::placeholder, [type="url"]::placeholder, [type="password"]::placeholder, [type="number"]::placeholder, [type="date"]::placeholder, textarea::placeholder {
+.input::placeholder, [type="text"]::placeholder, [type="email"]::placeholder, [type="url"]::placeholder, [type="password"]::placeholder, [type="number"]::placeholder, [type="date"]::placeholder, textarea::placeholder {
     color: rgba(54, 54, 54, 0.8);
     color: var(--placeholder-color);
   }
-[type="text"]:hover, [type="email"]:hover, [type="url"]:hover, [type="password"]:hover, [type="number"]:hover, [type="date"]:hover, textarea:hover {
+.input:hover, [type="text"]:hover, [type="email"]:hover, [type="url"]:hover, [type="password"]:hover, [type="number"]:hover, [type="date"]:hover, textarea:hover {
     border-color: #80bdff;
     border-color: var(--input-hover-border-color);
   }
-[type="text"]:focus, [type="text"]:active, [type="email"]:focus, [type="email"]:active, [type="url"]:focus, [type="url"]:active, [type="password"]:focus, [type="password"]:active, [type="number"]:focus, [type="number"]:active, [type="date"]:focus, [type="date"]:active, textarea:focus, textarea:active {
+.input:focus, .input:active, [type="text"]:focus, [type="text"]:active, [type="email"]:focus, [type="email"]:active, [type="url"]:focus, [type="url"]:active, [type="password"]:focus, [type="password"]:active, [type="number"]:focus, [type="number"]:active, [type="date"]:focus, [type="date"]:active, textarea:focus, textarea:active {
     outline: none;
     border-color: #80bdff;
     border-color: var(--input-focus-border-color);
     box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, .1);
   }
-[type="text"][disabled], fieldset[disabled] [type="text"], [type="email"][disabled], fieldset[disabled] [type="email"], [type="url"][disabled], fieldset[disabled] [type="url"], [type="password"][disabled], fieldset[disabled] [type="password"], [type="number"][disabled], fieldset[disabled] [type="number"], [type="date"][disabled], fieldset[disabled] [type="date"], textarea[disabled], fieldset[disabled] textarea {
+.input[disabled], fieldset[disabled] .input, [type="text"][disabled], fieldset[disabled] [type="text"], [type="email"][disabled], fieldset[disabled] [type="email"], [type="url"][disabled], fieldset[disabled] [type="url"], [type="password"][disabled], fieldset[disabled] [type="password"], [type="number"][disabled], fieldset[disabled] [type="number"], [type="date"][disabled], fieldset[disabled] [type="date"], textarea[disabled], fieldset[disabled] textarea {
     background-color: hsl(0, 0%, 96%);
     border-color: hsl(0, 0%, 96%);
     box-shadow: none;
     color: rgba(117, 117, 117, 0.3)
   }
-[type="text"][disabled]::-moz-placeholder, fieldset[disabled] [type="text"]::-moz-placeholder, [type="email"][disabled]::-moz-placeholder, fieldset[disabled] [type="email"]::-moz-placeholder, [type="url"][disabled]::-moz-placeholder, fieldset[disabled] [type="url"]::-moz-placeholder, [type="password"][disabled]::-moz-placeholder, fieldset[disabled] [type="password"]::-moz-placeholder, [type="number"][disabled]::-moz-placeholder, fieldset[disabled] [type="number"]::-moz-placeholder, [type="date"][disabled]::-moz-placeholder, fieldset[disabled] [type="date"]::-moz-placeholder, textarea[disabled]::-moz-placeholder, fieldset[disabled] textarea::-moz-placeholder {
+.input[disabled]::-moz-placeholder, fieldset[disabled] .input::-moz-placeholder, [type="text"][disabled]::-moz-placeholder, fieldset[disabled] [type="text"]::-moz-placeholder, [type="email"][disabled]::-moz-placeholder, fieldset[disabled] [type="email"]::-moz-placeholder, [type="url"][disabled]::-moz-placeholder, fieldset[disabled] [type="url"]::-moz-placeholder, [type="password"][disabled]::-moz-placeholder, fieldset[disabled] [type="password"]::-moz-placeholder, [type="number"][disabled]::-moz-placeholder, fieldset[disabled] [type="number"]::-moz-placeholder, [type="date"][disabled]::-moz-placeholder, fieldset[disabled] [type="date"]::-moz-placeholder, textarea[disabled]::-moz-placeholder, fieldset[disabled] textarea::-moz-placeholder {
       color: rgba(117, 117, 117, 0.3);
     }
-[type="text"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="text"]:-ms-input-placeholder, [type="email"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="email"]:-ms-input-placeholder, [type="url"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="url"]:-ms-input-placeholder, [type="password"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="password"]:-ms-input-placeholder, [type="number"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="number"]:-ms-input-placeholder, [type="date"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="date"]:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, fieldset[disabled] textarea:-ms-input-placeholder {
+.input[disabled]:-ms-input-placeholder, fieldset[disabled] .input:-ms-input-placeholder, [type="text"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="text"]:-ms-input-placeholder, [type="email"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="email"]:-ms-input-placeholder, [type="url"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="url"]:-ms-input-placeholder, [type="password"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="password"]:-ms-input-placeholder, [type="number"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="number"]:-ms-input-placeholder, [type="date"][disabled]:-ms-input-placeholder, fieldset[disabled] [type="date"]:-ms-input-placeholder, textarea[disabled]:-ms-input-placeholder, fieldset[disabled] textarea:-ms-input-placeholder {
       color: rgba(117, 117, 117, 0.3);
     }
-[type="text"][disabled]::placeholder, fieldset[disabled] [type="text"]::placeholder, [type="email"][disabled]::placeholder, fieldset[disabled] [type="email"]::placeholder, [type="url"][disabled]::placeholder, fieldset[disabled] [type="url"]::placeholder, [type="password"][disabled]::placeholder, fieldset[disabled] [type="password"]::placeholder, [type="number"][disabled]::placeholder, fieldset[disabled] [type="number"]::placeholder, [type="date"][disabled]::placeholder, fieldset[disabled] [type="date"]::placeholder, textarea[disabled]::placeholder, fieldset[disabled] textarea::placeholder {
+.input[disabled]::placeholder, fieldset[disabled] .input::placeholder, [type="text"][disabled]::placeholder, fieldset[disabled] [type="text"]::placeholder, [type="email"][disabled]::placeholder, fieldset[disabled] [type="email"]::placeholder, [type="url"][disabled]::placeholder, fieldset[disabled] [type="url"]::placeholder, [type="password"][disabled]::placeholder, fieldset[disabled] [type="password"]::placeholder, [type="number"][disabled]::placeholder, fieldset[disabled] [type="number"]::placeholder, [type="date"][disabled]::placeholder, fieldset[disabled] [type="date"]::placeholder, textarea[disabled]::placeholder, fieldset[disabled] textarea::placeholder {
       color: rgba(117, 117, 117, 0.3);
     }
-[type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea {
+.input, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea {
 
   box-shadow: inset 0 0.0625em 0.125em rgba(10, 10, 10, 0.05);
   max-width: 100%;
   width: 100%
 }
-[type="text"][readonly], [type="email"][readonly], [type="url"][readonly], [type="password"][readonly], [type="number"][readonly], [type="date"][readonly], textarea[readonly] {
+.input[readonly], [type="text"][readonly], [type="email"][readonly], [type="url"][readonly], [type="password"][readonly], [type="number"][readonly], [type="date"][readonly], textarea[readonly] {
     box-shadow: none;
   }
 textarea {
@@ -1886,6 +1887,9 @@ except for when immediately preceeded by a heading */
 .h-24 {
   height: 6rem;
 }
+.h-11 {
+  height: 2.75rem;
+}
 .max-h-128 {
   max-height: 32rem;
 }
@@ -2096,6 +2100,9 @@ except for when immediately preceeded by a heading */
 .gap-16 {
   gap: 4rem;
 }
+.gap-3 {
+  gap: 0.75rem;
+}
 .gap-x-7 {
   column-gap: 1.75rem;
 }
@@ -2210,6 +2217,10 @@ except for when immediately preceeded by a heading */
 }
 .border-gray-400 {
   border-color: var(--gray-400);
+}
+.border-black {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
 }
 .bg-dark {
   --tw-bg-opacity: 1;
