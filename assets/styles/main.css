@@ -1890,6 +1890,9 @@ except for when immediately preceeded by a heading */
 .h-11 {
   height: 2.75rem;
 }
+.h-72 {
+  height: 18rem;
+}
 .max-h-128 {
   max-height: 32rem;
 }
@@ -1964,6 +1967,9 @@ except for when immediately preceeded by a heading */
 }
 .w-1\/3 {
   width: 33.333333%;
+}
+.w-72 {
+  width: 18rem;
 }
 .w-4\/12 {
   width: 33.333333%;
@@ -2221,6 +2227,10 @@ except for when immediately preceeded by a heading */
 .border-black {
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
+}
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 .bg-dark {
   --tw-bg-opacity: 1;
@@ -2710,6 +2720,11 @@ except for when immediately preceeded by a heading */
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+.shadow-xl {
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
 .blur {
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -3170,6 +3185,9 @@ except for when immediately preceeded by a heading */
   .lg\:hidden {
     display: none;
   }
+  .lg\:h-96 {
+    height: 24rem;
+  }
   .lg\:max-h-\(screen-16\) {
     max-height: calc(100vh - 4rem);
   }
@@ -3181,6 +3199,9 @@ except for when immediately preceeded by a heading */
   }
   .lg\:w-full {
     width: 100%;
+  }
+  .lg\:w-96 {
+    width: 24rem;
   }
   .lg\:w-2\/3 {
     width: 66.666667%;
@@ -3277,9 +3298,6 @@ except for when immediately preceeded by a heading */
   }
   .lg\:text-2xl {
     font-size: 1.5rem;
-  }
-  .lg\:filter-none {
-    filter: none;
   }
 }
 @media (min-width: 1232px) {

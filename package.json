@@ -115,7 +115,8 @@
           "None",
           "Featured",
           "Featured Slider",
-          "Cover"
+          "Cover",
+          "Round"
         ],
         "default": "Cover",
         "group": "homepage"
