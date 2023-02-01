@@ -112,11 +112,12 @@
       "publication_cover": {
         "type": "select",
         "options": [
+          "Cover",
           "None",
           "Featured",
           "Featured Slider",
-          "Cover",
-          "Round"
+          "Round",
+          "Typewriter"
         ],
         "default": "Cover",
         "group": "homepage"
