@@ -2714,6 +2714,10 @@ except for when immediately preceeded by a heading */
   --tw-blur: blur(8px);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
+.contrast-50 {
+  --tw-contrast: contrast(.5);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
@@ -3099,6 +3103,9 @@ except for when immediately preceeded by a heading */
   .md\:text-22 {
     font-size: 1.375rem;
   }
+  .md\:filter-none {
+    filter: none;
+  }
 }
 @media (min-width: 1000px) {
   .lg\:sticky {
@@ -3187,6 +3194,9 @@ except for when immediately preceeded by a heading */
   .lg\:max-w-xs {
     max-width: 20rem;
   }
+  .lg\:max-w-2xl {
+    max-width: 42rem;
+  }
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -3261,6 +3271,15 @@ except for when immediately preceeded by a heading */
   .lg\:text-9xl {
     font-size: 8rem;
     line-height: 1;
+  }
+  .lg\:text-7xl {
+    font-size: 4.5rem;
+  }
+  .lg\:text-2xl {
+    font-size: 1.5rem;
+  }
+  .lg\:filter-none {
+    filter: none;
   }
 }
 @media (min-width: 1232px) {

@@ -133,10 +133,6 @@
         "default": "#ffffff",
         "group": "homepage"
       },
-      "publication_cover_img": {
-        "type": "image",
-        "group": "homepage"
-      },
       "post_font": {
         "type": "select",
         "options": [

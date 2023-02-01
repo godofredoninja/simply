@@ -1,5 +1,5 @@
 {{#if background}}
-<img class="inset-image blur-up lazyload"
+<img class="inset-image blur-up lazyload{{#if class}} {{class}}{{/if}}"
     src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
     data-srcset="{{img_url background size="s"}} 300w,
             {{img_url background size="m"}} 600w,
@@ -11,5 +11,5 @@
     alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{alt_title}}{{/if}}"
 />
 
-{{#if has_gradient}}<div class="simply-cover-gradient absolute inset-0 z-2 bg-black bg-opacity-50"></div>{{/if}}
+{{#if has_gradient}}<div class="absolute inset-0 bg-black bg-opacity-50 simply-cover-gradient z-2"></div>{{/if}}
 {{/if}}
