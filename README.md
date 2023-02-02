@@ -203,7 +203,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 
 ## Sponsored
 
-- [Digital Ocean](https://m.do.co/c/710a27a3b3de) using my [referral link]((https://m.do.co/c/710a27a3b3de)) and you will get free a **$100 in credit over 60 days**
+- [Digital Ocean](https://m.do.co/c/710a27a3b3de) using my [referral link]((https://m.do.co/c/710a27a3b3de)) and you will get free a **$100 in credit valid for 60 days**
 
 [![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%201.svg)](https://www.digitalocean.com/?refcode=710a27a3b3de&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
 
