@@ -135,6 +135,10 @@
         "default": "#ffffff",
         "group": "homepage"
       },
+      "enter_tag_slugs_for_homepage_sections": {
+        "type": "text",
+        "group": "homepage"
+      },
       "post_font": {
         "type": "select",
         "options": [
