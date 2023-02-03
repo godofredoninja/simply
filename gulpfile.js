@@ -176,6 +176,7 @@ function zipper (done) {
       'locales/*.json',
       '*.hbs',
       'partials/**',
+      'podcast/**',      
       'LICENSE',
       'package.json',
       'README.md',
