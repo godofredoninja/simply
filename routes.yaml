@@ -58,6 +58,10 @@ routes:
       post: page.medium-with-sidebar
     limit: 14
 
+  /podcast/rss/:
+    template: podcast/rss
+    content_type: text/xml
+
 collections:
   # PortFolio
   /portafolio/:
