@@ -6,7 +6,7 @@
   "engines": {
     "ghost": ">=5.0.0"
   },
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "screenshots": {
     "desktop": "screenshot.jpg"
   },
@@ -181,7 +181,8 @@
     "lint:css": "stylelint src/css/**/*.css",
     "lint": "yarn lint:js && yarn lint:css",
     "test": "yarn lint && gscan .",
-    "scan": "gscan ."
+    "scan": "gscan .",
+    "deploy": "gulp deploy"    
   },
   "devDependencies": {
     "@babel/core": "^7.18.6",
@@ -190,6 +191,7 @@
     "@babel/runtime": "^7.18.6",
     "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.5.4",
+    "@tryghost/admin-api": "^1.13.2",
     "autoprefixer": "^10.4.7",
     "babelify": "^10.0.0",
     "beeper": "^2.1.0",
@@ -198,6 +200,7 @@
     "cssnano": "^5.1.12",
     "cssnano-preset-advanced": "^5.3.8",
     "del": "^6.1.1",
+    "dotenv": "^16.0.3",    
     "gscan": "^4.31.2",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",
@@ -214,13 +217,13 @@
     "postcss": "^8.4.14",
     "postcss-discard-comments": "^5.1.2",
     "postcss-extend": "^1.0.5",
-    "postcss-import": "^14.1.0",
-    "postcss-nested": "^5.0.6",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.0",
     "precss": "^4.0.0",
     "pump": "^3.0.0",
     "standard": "^17.0.0",
     "stylelint": "^14.9.1",
-    "stylelint-config-recommended": "^8.0.0",
+    "stylelint-config-recommended": "^9.0.0",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
