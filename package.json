@@ -124,10 +124,12 @@
       },
       "publication_cover_title": {
         "type": "text",
+        "default": "Hello, I’m Godo Welcome to my World.",
         "group": "homepage"
       },
       "publication_cover_description": {
         "type": "text",
+        "default": "I'm professional based in Peru, I'm experts in website design, app development, advertising, software support, and more.",
         "group": "homepage"
       },
       "publication_cover_color": {
