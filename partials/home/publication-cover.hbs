@@ -55,8 +55,10 @@
                 <script>
                     var app = document.getElementById('typewriter');
 
+                    var typeLetters ='{{{@custom.publication_cover_description}}}';
+
                     var typewriter = new Typewriter(app, {
-                        strings: {{{@custom.publication_cover_description}}},
+                        strings: typeLetters.split(','),
                         loop: true,
                         delay: 90,
                         autoStart: true,
