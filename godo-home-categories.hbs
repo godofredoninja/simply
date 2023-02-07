@@ -4,20 +4,20 @@
 {{!-- Publication Cover - partials/home/publication-cover.hbs --}}
 {{> "home/publication-cover"}}
 
-{{!-- Feed Stories --}}
-<div class="container mx-auto site-post py-vmin8">
-    {{#if @custom.enter_tag_slugs_for_homepage_sections}}
-    <div class="grid gap-8 mx-auto js-feed-entry max-w-1100 md:grid-cols-2 lg:grid-cols-12">
+{{#if @custom.enter_tag_slugs_for_homepage_sections}}
+{{^is "paged"}}
+<div class="container mx-auto site-post pt-vmin8">
+    <div class="grid gap-8 mx-auto max-w-1100 md:grid-cols-2 lg:grid-cols-12">
 
         {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_homepage_sections}}]"}}
             {{#foreach tags}}
-                {{!-- Show Header --}}
-                <header class="flex justify-between pb-2 border-b-2 col-span-full gh-list-header {{#unless @first}}mt-10{{/unless}}">
+                {{!-- Header with link --}}
+                <header class="flex justify-between pb-2 border-b-2 col-span-full {{#unless @first}}mt-10{{/unless}}">
                     <a href="{{url}}"><h2 class="text-xl font-bold capitalize text-title">{{name}}</h2></a>
                     <a href="{{url}}">{{t "View all"}} &rarr;</a>
                 </header>
 
-                {{!-- show post --}}
+                {{!-- Post of the selected tags --}}
                 {{#get "posts" include="tags,authors" filter="tag:{{slug}}" limit=6}}
                     {{#foreach posts}}
                         {{> "story/story-grid" story_class="lg:col-span-4"}}
@@ -26,6 +26,14 @@
             {{/foreach}}
         {{/get}}
 
+        {{!-- Header for latest post --}}
+        <header class="flex justify-between pb-2 border-b-2 col-span-full mt-10">
+            <h2 class="text-xl font-bold capitalize text-title">{{t "Latest Posts"}}</h2>
+        </header>
     </div>
-    {{/if}}
 </div>
+{{/is}}
+{{/if}}
+
+{{!-- The tag below includes the post loop - partials/loop.hbs --}}
+{{>"loop"}}
