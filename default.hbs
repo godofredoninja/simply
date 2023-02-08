@@ -23,10 +23,27 @@
     <script>
     {{#match @custom.color_scheme "Auto"}}
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.querySelector('html').classList.add('dark');
-        } else {
-            document.querySelector('html').classList.remove('dark');
-        }
+			document.querySelector('html').classList.add('dark');
+			localStorage.theme = 'dark';
+		} else {
+			document.querySelector('html').classList.remove('dark');
+			localStorage.theme = '';
+		}
+
+		window.matchMedia('(prefers-color-scheme: dark)')
+		.addEventListener(
+			'change',
+			function (e) {
+				if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.querySelector('html').classList.add('dark');
+					localStorage.theme = 'dark';
+				} else {
+					document.querySelector('html').classList.remove('dark');
+					localStorage.theme = '';
+				}
+			}
+		)
+
     {{else}}
         if (localStorage.theme === 'dark') {
             document.querySelector('html').classList.add('dark');
