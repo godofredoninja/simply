@@ -1,9 +1,9 @@
-<footer class="footer pt-10">
-    <section class="mx-auto container">
-        <div class="row grid gap-16 lg:grid-cols-3 lg:gap-8">
+<footer class="pt-10 footer">
+    <section class="container mx-auto">
+        <div class="grid gap-16 row lg:grid-cols-3 lg:gap-8">
             {{!-- About --}}
             <div class="footer-items">
-                <h3 class="text-white mb-5 text-xl">{{t "About Us"}}</h3>
+                <h3 class="mb-5 text-xl text-white">{{t "About Us"}}</h3>
                 <p class="mb-4">{{@site.description}}</p>
 
                 {{!-- Social Media - partilas/widget/social-media.hbs --}}
@@ -11,13 +11,13 @@
             </div>
 
             {{!-- Tag Cloud --}}
-            <div class="footer-items footer-tags leading-tight px-4">
-                <h3 class="text-white mb-5 text-xl">{{t "Tags"}}</h3>
+            <div class="px-4 leading-tight footer-items footer-tags">
+                <h3 class="mb-5 text-xl text-white">{{t "Tags"}}</h3>
                 {{#get "tags" limit="5" filter="visibility:public" include="count.posts" order="count.posts desc"}}{{#foreach tags}}
-                <div class="mb-3 flex items-center justify-between">
+                <div class="flex items-center justify-between mb-3">
                     <a href="{{url absolute="true"}}"
                         title="{{name}}"
-                        class="capitalize pl-3 border-l-3 border-primary"
+                        class="pl-3 capitalize border-l-3 border-primary"
                         {{#if accent_color}}style="border-color:{{accent_color}}"{{/if}}>
                         {{name}}
                     </a>
@@ -29,7 +29,7 @@
             {{!-- members subscribe --}}
             {{#if @site.members_enabled}}
             <div class="footer-items">
-                <h3 class="text-white mb-5 text-xl">{{t "Subscribe"}}</h3>
+                <h3 class="mb-5 text-xl text-white">{{t "Subscribe"}}</h3>
                 <p class="mb-4">{{t "Get the best viral stories straight into your inbox!"}}</p>
 
                 {{!-- Form subscribe --}}
@@ -44,20 +44,20 @@
                         required
                     />
 
-                    <button class="button is-primary w-full mt-4" type="submit">
+                    <button class="w-full mt-4 button is-primary" type="submit">
                         <span class="button-content">Continue</span>
                         {{> "icons/loader"}}
                     </button>
 
                     {{!-- success --}}
-                    <div class="message-success p-2 rounded-md mt-4 hidden text-sm">
-                        <span class="bg-success w-3 h-3 rounded-full inline-block"></span>
+                    <div class="hidden p-2 mt-4 text-sm rounded-md message-success">
+                        <span class="inline-block w-3 h-3 rounded-full bg-success"></span>
                         {{{t "<strong>Great!</strong> Check your inbox and click the link to confirm your subscription"}}}
                     </div>
 
                     {{!-- error --}}
-                    <div class="message-error p-2 rounded-md mt-4 hidden text-sm">
-                        <span class="bg-danger w-3 h-3 rounded-full inline-block"></span>
+                    <div class="hidden p-2 mt-4 text-sm rounded-md message-error">
+                        <span class="inline-block w-3 h-3 rounded-full bg-danger"></span>
                         {{t "Please enter a valid email address!"}}
                     </div>
                 </form>
@@ -65,18 +65,12 @@
             {{/if}}
         </div>
 
-
-        <div class="footer-bottom text-center text-sm py-8 mt-8{{#if @site.secondary_navigation}} flex flex-col justify-between lg:items-baseline lg:flex-row lg:text-left{{/if}}">
+        <div class="footer-bottom gap-8 text-center text-sm py-8 mt-8 flex flex-col justify-between {{#if @site.secondary_navigation}}lg:items-baseline lg:flex-row lg:text-left{{else}}items-center{{/if}}">
             {{!-- Footer Menu --}}
-            {{#if @site.secondary_navigation}}<div class="py-4 lg:py-0 flex-none lg:order-1">{{navigation type="secondary"}}</div>{{/if}}
+            {{navigation type="secondary"}}
 
-            {{!-- Copy --}}
-            <div>
-                &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
-                <svg class="icon is-small animate-pulse text-red-600"><use xlink:href="#icon-heart"></use></svg>
-                by
-                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
-            </div>
+            {{!-- Copy Right - partilas/components/copyright.hbs --}}
+            {{> "components/copyright"}}
         </div>
     </section>
 </footer>

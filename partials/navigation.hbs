@@ -5,9 +5,9 @@
     <ul itemscope itemtype="http://www.schema.org/SiteNavigationElement" role="menu">
 
         {{#foreach navigation}}
-        <li itemprop="name" role="menuitem" class="inline-block {{#unless @last}}separator{{/unless}}">
+        <li itemprop="name" role="menuitem" class="inline-block">
             <a itemprop="url" href="{{url absolute="true"}}"
-                class="godo-tracking hover:text-primary font-medium p-2 inline-block"
+                class="godo-tracking font-medium p-2 inline-block hover:opacity-80"
                 data-event-category="Footer"
                 data-event-action="Menu"
                 data-event-label="{{label}}"

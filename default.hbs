@@ -53,12 +53,12 @@
     {{{block "header"}}}
 </head>
 <body class="{{#match @custom.header "Stacked"}}is-head-stacked {{/match}}{{block "special_body_class"}}">
-    <div class="simply-viewport flex flex-col justify-start">
+    <div class="flex flex-col justify-start simply-viewport">
         {{!-- Header ./partials/layout/header.hbs --}}
         {{> "layout/header"}}
 
         {{!-- All the main content gets inserted here, index.hbs, post.hbs, etc --}}
-        <main class="simply-main relative min-h-lg">{{{body}}}</main>
+        <main class="relative simply-main min-h-lg">{{{body}}}</main>
 
         {{!-- Footer Default ./partials/layout/footer.hbs --}}
         {{#match @custom.footer "Default"}}{{>"layout/footer"}}{{/match}}
@@ -68,10 +68,13 @@
 
         {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
         {{#match @custom.footer "No Secondary Navigation"}}{{>"layout/footer-not-menu"}}{{/match}}
+
+        {{!-- Footer Not Menu ./partials/layout/footer-center-menu.hbs --}}
+        {{#match @custom.footer "Center Menu"}}{{>"layout/footer-center-menu"}}{{/match}}
     </div>
 
     {{!-- Loandig Bar --}}
-    <div class="loadingBar top-0 fixed right-0 left-0 hidden"></div>
+    <div class="fixed top-0 left-0 right-0 hidden loadingBar"></div>
 
     {{!-- Icons --}}
     {{> "icons/icons-symbol-defs"}}

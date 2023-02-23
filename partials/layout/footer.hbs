@@ -1,24 +1,12 @@
-<footer class="footer-light py-10 lg:pt-16 text-center lg:text-left {{#is "post"}}bg-gray-100{{/is}}">
-    <div class="mx-auto max-w-extreme px-4">
-        <div class="flex flex-col lg:flex-row justify-between">
-            {{!-- Copy Right --}}
-            <div class="footer-copy text-sm order-3 mt-8 flex-none lg:text-left lg:order-none lg:mt-0">
-                &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved.
-                <div class="mt-2">
-                    Design with
-                    <svg class="icon animated infinite pulse" style="color:red;width:15px"><use xlink:href="#icon-heart"></use></svg>
-                    by
-                    <a href="https://godofredo.ninja" class="hover:text-primary" title="Developer FullStack.">@GodoFredoNinja</a>
-                </div>
-            </div>
+<footer class="footer-light py-10 lg:pt-16 text-center{{#is "post"}} bg-gray-100{{/is}}">
+    <div class="grid gap-8 px-4 mx-auto max-w-extreme {{#if @site.secondary_navigation}}lg:grid-cols-fr-auto-fr{{else}}lg:grid-cols-2{{/if}}">
+        {{!-- Footer Menu --}}
+        {{#if @site.secondary_navigation}}{{navigation type="secondary"}}{{/if}}
 
-            {{!-- Footer Menu --}}
-            {{#if @site.secondary_navigation}}<div class="mx-8">{{navigation type="secondary"}}</div>{{/if}}
+        {{!-- Social Media - partilas/widget/social-media.hbs --}}
+        {{> "widget/social-media" class="footer-social-media min-w-60 lg:text-right"}}
 
-            {{!-- Social Media - partilas/widget/social-media.hbs --}}
-            {{> "widget/social-media" class="footer-social-media mt-8 flex-none lg:mt-0 is-inline"}}
-
-        </div>
-
+        {{!-- Copy Right - partilas/components/copyright.hbs --}}
+        {{> "components/copyright"}}
     </div>
 </footer>

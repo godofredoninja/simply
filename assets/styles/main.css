@@ -1590,11 +1590,11 @@ except for when immediately preceeded by a heading */
 .top-20 {
   top: 5rem;
 }
-.right-0 {
-  right: 0px;
-}
 .left-0 {
   left: 0px;
+}
+.right-0 {
+  right: 0px;
 }
 .bottom-1 {
   bottom: 0.25rem;
@@ -1973,6 +1973,9 @@ except for when immediately preceeded by a heading */
 }
 .w-4\/12 {
   width: 33.333333%;
+}
+.min-w-60 {
+  min-width: 15rem;
 }
 .max-w-3xl {
   max-width: 48rem;
@@ -2452,6 +2455,12 @@ except for when immediately preceeded by a heading */
 .pb-10 {
   padding-bottom: 2.5rem;
 }
+.pt-vmin8 {
+  padding-top: 8vmin;
+}
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
 .pb-vmin8 {
   padding-bottom: 8vmin;
 }
@@ -2506,14 +2515,8 @@ except for when immediately preceeded by a heading */
 .pl-10 {
   padding-left: 2.5rem;
 }
-.pt-vmin8 {
-  padding-top: 8vmin;
-}
 .pr-4 {
   padding-right: 1rem;
-}
-.pb-2 {
-  padding-bottom: 0.5rem;
 }
 .text-center {
   text-align: center;
@@ -3141,11 +3144,17 @@ except for when immediately preceeded by a heading */
   .lg\:top-32 {
     top: 8rem;
   }
+  .lg\:order-none {
+    order: 0;
+  }
   .lg\:order-1 {
     order: 1;
   }
-  .lg\:order-none {
-    order: 0;
+  .lg\:order-first {
+    order: -9999;
+  }
+  .lg\:col-span-4 {
+    grid-column: span 4 / span 4;
   }
   .lg\:col-span-full {
     grid-column: 1 / -1;
@@ -3153,8 +3162,8 @@ except for when immediately preceeded by a heading */
   .lg\:col-span-6 {
     grid-column: span 6 / span 6;
   }
-  .lg\:col-span-4 {
-    grid-column: span 4 / span 4;
+  .lg\:col-span-2 {
+    grid-column: span 2 / span 2;
   }
   .lg\:mx-12 {
     margin-left: 3rem;
@@ -3232,6 +3241,15 @@ except for when immediately preceeded by a heading */
   }
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-fr-auto-fr {
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .lg\:grid-rows-2 {
+    grid-template-rows: repeat(2, minmax(0, 1fr));
   }
   .lg\:flex-row {
     flex-direction: row;

@@ -118,6 +118,9 @@ module.exports = {
         1100: '68.75rem',
         extreme: '81.25rem'
       },
+      minWidth: {
+        60: '15rem'
+      },
       minHeight: {
         96: '24rem',
         lg: '32rem'
@@ -156,9 +159,9 @@ module.exports = {
         sidebar: '1fr 22.5rem',
         kusi2: 'calc(12.5rem + 4vmin) 1fr',
         kusi3: 'calc(12.5rem + 4vmin) 1fr calc(13.75rem + 2vmin)',
-        "auto-fr-auto": 'auto 1fr auto',
-        "fr-auto-auto": "1fr auto auto",
-        "fr-auto-fr": "1fr auto 1fr"
+        'auto-fr-auto': 'auto 1fr auto',
+        'fr-auto-auto': '1fr auto auto',
+        'fr-auto-fr': '1fr auto 1fr'
       }
     }
   },

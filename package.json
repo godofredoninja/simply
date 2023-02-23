@@ -80,6 +80,7 @@
         "options": [
           "Default",
           "Dark",
+          "Center Menu",
           "No Secondary Navigation"
         ],
         "default": "Default"
