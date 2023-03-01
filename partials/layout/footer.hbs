@@ -1,12 +1,13 @@
-<footer class="footer-light py-10 lg:pt-16 text-center{{#is "post"}} bg-gray-100{{/is}}">
-    <div class="grid gap-8 px-4 mx-auto max-w-extreme {{#if @site.secondary_navigation}}lg:grid-cols-fr-auto-fr{{else}}lg:grid-cols-2{{/if}}">
-        {{!-- Footer Menu --}}
-        {{#if @site.secondary_navigation}}{{navigation type="secondary"}}{{/if}}
-
-        {{!-- Social Media - partilas/widget/social-media.hbs --}}
-        {{> "widget/social-media" class="footer-social-media min-w-60 lg:text-right"}}
-
-        {{!-- Copy Right - partilas/components/copyright.hbs --}}
-        {{> "components/copyright"}}
-    </div>
-</footer>
+{{#match @custom.footer "Default"}}
+    {{!-- Footer Default ./partials/layout/footer.hbs --}}
+    {{>"layout/footer-default"}}
+{{else match @custom.footer "Dark"}}
+    {{!-- Footer - Dark ./partials/layout/footer-dark.hbs --}}
+    {{>"layout/footer-dark"}}
+{{else match @custom.footer "No Secondary Navigation"}}
+    {{!-- Footer Not Menu ./partials/layout/footer-not-menu.hbs --}}
+    {{>"layout/footer-not-menu"}}
+{{else match @custom.footer "Center Menu"}}
+    {{!-- Footer Not Menu ./partials/layout/footer-center-menu.hbs --}}
+    {{>"layout/footer-center-menu"}}
+{{/match}}
