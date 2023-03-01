@@ -207,7 +207,7 @@ In this block of `HTML` add the icons, the icons will be displayed on the right 
     </a>
 
     <a
-        href="https://linkeding.com"
+        href="https://linkedin.com"
         title="Linkedin"
         class="hover:text-linkedin p-2 inline-block"
         target="_blank"

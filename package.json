@@ -6,7 +6,7 @@
   "engines": {
     "ghost": ">=5.0.0"
   },
-  "license": "GPLv3",
+  "license": "GPL-3.0-or-later",
   "screenshots": {
     "desktop": "screenshot.jpg"
   },
@@ -193,7 +193,8 @@
     "lint:css": "stylelint src/css/**/*.css",
     "lint": "yarn lint:js && yarn lint:css",
     "test": "yarn lint && gscan .",
-    "scan": "gscan ."
+    "scan": "gscan .",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -202,6 +203,7 @@
     "@babel/runtime": "^7.20.7",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
+    "@tryghost/admin-api": "^1.13.2",
     "autoprefixer": "^10.4.13",
     "babelify": "^10.0.0",
     "beeper": "^2.1.0",
@@ -210,6 +212,7 @@
     "cssnano": "^5.1.14",
     "cssnano-preset-advanced": "^5.3.9",
     "del": "^6.1.1",
+    "dotenv": "^16.0.3",
     "gscan": "^4.36.0",
     "gulp": "^4.0.2",
     "gulp-header": "^2.0.9",

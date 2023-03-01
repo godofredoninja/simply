@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/"
+xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+xmlns:dc="http://purl.org/dc/elements/1.1/"
+xmlns:atom="http://www.w3.org/2005/Atom"
+xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+xmlns:rawvoice="http://www.rawvoice.com/rawvoiceRssModule/"
+xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0">
+    <channel>
+        <title>{{@site.title}}</title>
+        <link>{{@site.url}}</link>
+        <description>{{@site.description}}</description>
+        <language>{{@site.locale}}</language>
+        <copyright>{{@site.title}} Copyright {{date format="YYYY"}}</copyright>
+        <atom:link href="{{@site.url}}/podcast/rss/" rel="self" type="application/rss+xml" />
+        <lastBuildDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</lastBuildDate>
+        <itunes:author>{{@site.title}}</itunes:author>
+        <itunes:summary>{{@site.description}}</itunes:summary>
+        <itunes:owner>
+            <itunes:name>Your Name</itunes:name>
+            <itunes:email>youremail@example.com</itunes:email>
+        </itunes:owner>
+        <itunes:explicit>clean</itunes:explicit>
+        <itunes:image href="{{img_url @site.icon absolute="true"}}"/>
+        <itunes:category text="Technology"></itunes:category>
+
+        {{#get "posts" filter="tag:podcast" include="tags,authors" as |episode|}}
+            {{#foreach episode}}
+            <item>
+                <title>{{title}}</title>
+                <link>{{url absolute="true"}}</link>
+                <pubDate>{{date format="ddd, DD MMM YYYY HH:mm:ss ZZ"}}</pubDate>
+                <guid isPermaLink="false">{{id}}</guid>
+                <category><![CDATA[ {{primary_tag.name}} ]]></category>
+                <description>{{custom_excerpt}}</description>
+                <content:encoded><![CDATA[ {{content}} ]]></content:encoded>
+                <enclosure url="{{og_description}}" length="0" type="audio/mpeg"/>
+                <itunes:subtitle>{{custom_excerpt}}</itunes:subtitle>
+                <itunes:summary><![CDATA[ {{content}} ]]></itunes:summary>
+            </item>
+            {{/foreach}}
+        {{/get}}
+    </channel>
+</rss>
