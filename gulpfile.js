@@ -176,7 +176,7 @@ function zipper (done) {
       'locales/*.json',
       '*.hbs',
       'partials/**',
-      'podcast/**',      
+      'podcast/**',
       'LICENSE',
       'package.json',
       'README.md',
@@ -188,9 +188,6 @@ function zipper (done) {
     dest('dist')
   ], handleError(done))
 }
-
-
-
 
 // TryGhost Admin
 const dotenv = require('dotenv')
@@ -229,7 +226,6 @@ async function deploy (done) {
     handleError(done)
   }
 }
-
 
 const cssWatcher = () => watch('src/css/**', styles)
 const jsWatcher = () => watch(['src/js/**', '*.js'], scripts)
