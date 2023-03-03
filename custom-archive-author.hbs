@@ -33,7 +33,7 @@
         <article class="author-card flex flex-col text-center">
             <img class="author-card-avatar object-cover mx-auto rounded-full w-52 h-52" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
 
-            <h2 class="author-card-name text-title capitalize text-2xl mt-5 hover:text-primary"><a href="{{url}}">{{name}}</a></h2>
+            <h2 class="author-card-name text-title capitalize text-2xl mt-5 hover:opacity-80"><a href="{{url}}">{{name}}</a></h2>
             {{#if bio}}<p class="author-card-bio text-gray-500 line-clamp-3 mt-3 leading-relaxed">{{bio}}</p>{{/if}}
 
             <div class="pt-5 space-x-2">

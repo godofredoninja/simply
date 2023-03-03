@@ -115,6 +115,7 @@ module.exports = {
         92: '0.92'
       },
       maxWidth: {
+        '2xl-2': '42.5rem',
         1100: '68.75rem',
         extreme: '81.25rem'
       },

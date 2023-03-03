@@ -7,39 +7,21 @@
 {{#contentFor "special_body_class"}}is-article is-sidebar is-canvas-full{{/contentFor}}
 
 <div class="container mx-auto px-4 py-vmin8">
-    <div class="max-w-1100 max-w mx-auto grid gap-10 xl:gap-20 lg:grid-cols-sidebar">
-        <article>
-            <header class="story-post-header">
-                <h1 class="text-4xl leading-tight text-title mb-5">{{title}}</h1>
-                {{#if custom_excerpt}}<p class="post-excerpt my-6 text-xl text-gray-500">{{custom_excerpt}}</p>{{/if}}
-                {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
-                {{> "components/author-meta"}}
+    <div class="max-w mx-auto flex flex-col justify-evenly gap-y-10 lg:flex-row">
+        <div class="max-w-2xl-2 mx-auto lg:mx-0">
+            <article>
+                <header class="story-post-header">
+                    {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
+                    {{> "article/article-header" classTitle="text-32"}}
 
-                {{#if feature_image}}
-                <figure class="story-post-media mt-8 relative">
-                    <img class="story-img block w-full object-cover object-center simply-zoom rounded-lg shadow-3xl overflow-hidden"
-                        src="{{img_url feature_image size="m"}}"
-                        srcset="{{img_url feature_image size="s"}} 300w,
-                                {{img_url feature_image size="m"}} 600w"
-                        sizes="(max-width: 1000px) 400px, 600px"
-                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                    />
+                    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+                    {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="block mt-12"}}{{/if}}
+                </header>
 
-                    {{#if feature_image_caption}}<figcaption class="post-figcaption">{{feature_image_caption}}</figcaption>{{/if}}
-                </figure>
-                {{/if}}
-            </header>
-
-            <section id="post-body" class="post-body relative godo-canvas {{#match @custom.post_font "=" "font-serif"}}font-serif{{else}}font-sans{{/match}}">{{content}}</section>
-
-            {{!-- Tags - ./partials/components/tags,hbs --}}
-            <footer class="post-footer godo-canvas pt-10">
-                {{> "components/tags"}}
-
-                {{!-- Social Share - ./partials/components/social-share --}}
-                {{> "components/social-share" Tracking_name="Footer" class="block"}}
-            </footer>
-        </article>
+                {{!-- Article Body - partials/article/article-body.hbs --}}
+                {{> "article/article-body"}}
+            </article>
+        </div>
 
         {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
         {{>"sidebar/sidebar"}}

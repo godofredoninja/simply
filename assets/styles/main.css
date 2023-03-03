@@ -2007,6 +2007,12 @@ except for when immediately preceeded by a heading */
 .max-w-md {
   max-width: 28rem;
 }
+.max-w-2xl-2 {
+  max-width: 42.5rem;
+}
+.max-w-xs {
+  max-width: 20rem;
+}
 .flex-none {
   flex: none;
 }
@@ -2097,6 +2103,9 @@ except for when immediately preceeded by a heading */
 .justify-between {
   justify-content: space-between;
 }
+.justify-evenly {
+  justify-content: space-evenly;
+}
 .gap-10 {
   gap: 2.5rem;
 }
@@ -2114,6 +2123,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-x-7 {
   column-gap: 1.75rem;
+}
+.gap-y-10 {
+  row-gap: 2.5rem;
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -2167,11 +2179,11 @@ except for when immediately preceeded by a heading */
 .rounded-md {
   border-radius: 0.375rem;
 }
-.rounded-lg {
-  border-radius: 0.5rem;
-}
 .rounded {
   border-radius: 0.25rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 .rounded-sm {
   border-radius: 0.125rem;
@@ -2706,14 +2718,14 @@ except for when immediately preceeded by a heading */
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-3xl {
-  --tw-shadow: 0 36px 64px 0 rgba(0,0,0,.2);
-  --tw-shadow-colored: 0 36px 64px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .shadow-4xl {
   --tw-shadow: inset 0 0 0 0.1rem rgb(58 3 45 / 8%), 0 10px 20px rgb(58 3 45 / 4%), 0 2px 6px rgb(58 3 45 / 4%), 0 0 1px rgb(58 3 45 / 4%);
   --tw-shadow-colored: inset 0 0 0 0.1rem var(--tw-shadow-color), 0 10px 20px var(--tw-shadow-color), 0 2px 6px var(--tw-shadow-color), 0 0 1px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.shadow-3xl {
+  --tw-shadow: 0 36px 64px 0 rgba(0,0,0,.2);
+  --tw-shadow-colored: 0 36px 64px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 .shadow-lg {
@@ -3072,9 +3084,6 @@ except for when immediately preceeded by a heading */
   .md\:items-center {
     align-items: center;
   }
-  .md\:justify-end {
-    justify-content: flex-end;
-  }
   .md\:gap-4 {
     gap: 1rem;
   }
@@ -3099,6 +3108,9 @@ except for when immediately preceeded by a heading */
   }
   .md\:pr-6 {
     padding-right: 1.5rem;
+  }
+  .md\:pl-6 {
+    padding-left: 1.5rem;
   }
   .md\:text-left {
     text-align: left;
@@ -3163,6 +3175,10 @@ except for when immediately preceeded by a heading */
     margin-left: 3rem;
     margin-right: 3rem;
   }
+  .lg\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
   .lg\:mr-16 {
     margin-right: 4rem;
   }
@@ -3223,11 +3239,11 @@ except for when immediately preceeded by a heading */
   .lg\:grid-cols-kusi3 {
     grid-template-columns: calc(12.5rem + 4vmin) 1fr calc(13.75rem + 2vmin);
   }
-  .lg\:grid-cols-sidebar {
-    grid-template-columns: 1fr 22.5rem;
-  }
   .lg\:grid-cols-12 {
     grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .lg\:grid-cols-sidebar {
+    grid-template-columns: 1fr 22.5rem;
   }
   .lg\:grid-cols-fr-auto-fr {
     grid-template-columns: 1fr auto 1fr;
@@ -3271,6 +3287,21 @@ except for when immediately preceeded by a heading */
   }
   .lg\:pt-16 {
     padding-top: 4rem;
+  }
+  .lg\:pl-12 {
+    padding-left: 3rem;
+  }
+  .lg\:pl-16 {
+    padding-left: 4rem;
+  }
+  .lg\:pl-14 {
+    padding-left: 3.5rem;
+  }
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
+  }
+  .lg\:pl-8 {
+    padding-left: 2rem;
   }
   .lg\:text-left {
     text-align: left;
