@@ -53,11 +53,11 @@
     {{/match}}
     </script>
 
-    {{!-- Fonts -> Inter=400,500,600,700 PT Serift=400,700 --}}
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-    <noscript><link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
-    {{!-- <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"> --}}
+    {{!-- Fonts -> Inter=400,500,600,700 - Source Serif Pro=400,700 --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"></noscript>
 
     {{!-- Styles --}}
     <link rel="stylesheet" type="text/css" href="{{asset "styles/main.css"}}"/>

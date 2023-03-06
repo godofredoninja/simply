@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      serif: ['PT Serif', ...defaultTheme.fontFamily.serif]
+      serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif]
     },
     colors: {
       transparent: 'transparent',
@@ -163,6 +163,9 @@ module.exports = {
         'auto-fr-auto': 'auto 1fr auto',
         'fr-auto-auto': '1fr auto auto',
         'fr-auto-fr': '1fr auto 1fr'
+      },
+      textUnderlineOffset: {
+        5: '0.3125rem'
       }
     }
   },

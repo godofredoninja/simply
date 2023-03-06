@@ -163,10 +163,10 @@
 - Visit ghost admin page > settings > integrations
 - At the bottom of that page, click the button to `Add custom integration`
 - Name the new custom integration any thing you like - say - `automated-updates` and save.
-- Copy the Admin API key 
-- Create a file named `.env` in the theme folder 
+- Copy the Admin API key
+- Create a file named `.env` in the theme folder
 - Paste the Admin API key in the `.env` file as shown below.
-- Do not git commit push the `.env` file. 
+- Do not git commit push the `.env` file.
 - I have already made sure to .gitignore the `.env` file to make sure you don't accidentally spill your secret Admin API key.
 - Also, in the same `.env` file, replace the API URL - which the URL where your site is currently located
 ```
@@ -175,13 +175,13 @@ GHOST_ADMIN_API_KEY=provideyouradminapikeyfromtheghostdashboard
 THEME_NAME=simply
 API_VERSION="v5.0"
 ```
-- run the following conmmand to deploy your theme updates to your ghost installation 
+- run the following conmmand to deploy your theme updates to your ghost installation
 ```
 yarn deploy
 ```
 or if you prefer npm over yarn
 ```
-npm run deploy 
+npm run deploy
 ```
 - You will see that the updates you made in the theme locally are now deployed and activated in your ghost setup.
 
@@ -248,7 +248,7 @@ Become a financial contributor and help us sustain our community. [[Contribute](
 - [Medium Zoom](https://github.com/francoischalifour/medium-zoom)
 - [Prismjs](https://github.com/PrismJS/prism/)
 - [Inter Font Family](https://github.com/rsms/inter/)
-- [PT Serif Font Family](https://fonts.google.com/specimen/PT+Serif)
+- [Source Serif Pro Font Family](https://fonts.google.com/specimen/Source+Serif+Pro)
 - [Safari Light - Mockup](https://www.uplabs.com/posts/safari-light-version)
 - [Tiny Slider](https://github.com/ganlanyuan/tiny-slider)
 

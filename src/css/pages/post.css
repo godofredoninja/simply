@@ -14,6 +14,7 @@
 .post-body {
   /*  new */
   font-size: 1.25rem;
+  letter-spacing: -0.003em;
   line-height: 1.625;
   padding-top: 6vmin;
 
@@ -38,7 +39,7 @@
   }
 
   a {
-    @apply underline underline-offset-4 break-words;
+    @apply underline underline-offset-5 break-words;
     /* text-decoration: underline; */
     /* word-break: break-word; */
   }
