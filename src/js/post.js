@@ -50,6 +50,30 @@ const simplyPost = () => {
 
   mediumZoomImg()
 
+  /* Copy Link
+  /* https://developer.mozilla.org/en-US/docs/Web/API/Clipboard/writeText#examples
+  /* ---------------------------------------------------------- */
+
+  const copyLink = () => {
+    const $links = docSelectorAll('.js-copy-link')
+
+    if (!$links.length) return
+
+    $links.forEach(item => item.addEventListener('click', function (event) {
+      event.preventDefault()
+
+      const shortLinkIndicator = item.querySelector('.shortlink-indicator')
+
+      navigator.clipboard.writeText(item.href).then(() => {
+        shortLinkIndicator.classList.remove('hidden')
+      })
+
+      setTimeout(() => shortLinkIndicator.classList.add('hidden'), 4000)
+    }))
+  }
+
+  copyLink()
+
   /* Gallery Card
   /* ---------------------------------------------------------- */
   // const resizeImagesInGalleries = () => {
