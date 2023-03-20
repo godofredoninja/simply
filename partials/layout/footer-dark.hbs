@@ -76,7 +76,11 @@
             {{!-- Footer Menu --}}
             {{#if @site.secondary_navigation}}
                 <div class="py-4 lg:py-0 flex-none lg:order-1">
-                    <div class="menu-secondary"><a href="https://linkedin.com/in/iamsubingyawali?ref=SubiDroid" rel="noopener noreferrer" target="_blank">Subin Gyawali</a></div>
+                    <div class="menu-secondary">
+                        <a href="{{@site.url}}/privacy/">Privacy Policy</a>
+                        <span class="mx-2">|</span>
+                        <a href="{{@site.url}}/terms/">Terms of Use</a>
+                    </div>
                 </div>
             {{/if}}
 
