@@ -221,7 +221,7 @@ async function deploy (done) {
 
     await api.themes.upload({ file: zipFile }).then(response => console.log(response)).catch(error => console.error(error))
     console.log('uploaded')
-    await api.themes.activate(`${themeName}-${version}`).then(response => console.log(response)).catch(error => console.error(error))
+    await api.themes.activate(`${themeName}-v${version}`).then(response => console.log(response)).catch(error => console.error(error))
     console.log('activated')
     done()
   } catch (err) {
