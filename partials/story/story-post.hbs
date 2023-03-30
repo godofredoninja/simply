@@ -8,17 +8,9 @@
     {{#if feature_image}}
     <figure class="story-post-media relative overflow-hidden rounded-lg shadow-3xl has-overlay h-56">
         <a href="{{url}}">
-            <img class="story-img inset-image blur-up lazyload"
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                data-srcset="{{img_url feature_image size="xs"}} 100w,
-                    {{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w"
-                data-sizes="auto"
-                alt="{{title}}"
-                width="630"
-                height="225"
-            />
+            {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+            {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="l" mediaLazy=true}}
+
             <span class="story-post-overlay inset-0 bg-primary absolute flex items-center justify-center overlay-toggle">
                 <svg class="icon h-10 w-10 text-white"><use xlink:href="#icon-arrow"></use></svg>
             </span>

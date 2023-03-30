@@ -9,9 +9,9 @@
         {{#foreach posts}}
         <article class="js-story relative story-cover min-h-lg{{#unless feature_image}} bg-dark{{/unless}}">
 
-            {{!-- Featured Media - partials/components/media-cover.hbs --}}
             <a href="{{url}}" class="story-cover-thumbnail overflow-hidden block">
-                {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+                {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+                {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="l" mediaLazy=true mediaGradient=true}}
             </a>
 
             <header class="absolute bottom-0 left-0 right-0 text-white px-4 py-10">

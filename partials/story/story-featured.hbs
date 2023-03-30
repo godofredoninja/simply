@@ -11,16 +11,8 @@
         </div>
     </div>
 
-    {{#if feature_image}}
-    <img class="inset-image"
-        srcset="{{img_url feature_image size="s"}} 300w,
-                {{img_url feature_image size="m"}} 600w,
-                {{img_url feature_image size="l"}} 1000w,
-                {{img_url feature_image size="xl"}} 2000w"
-        src="{{img_url feature_image size="m"}}"
-        sizes="auto"
-        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-    />
-    {{/if}}
+    {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaClass="inset-image"}}
+
     <div class="u-primaryGradient absolute inset-0 z-2 opacity-70"></div>
 </article>

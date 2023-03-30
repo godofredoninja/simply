@@ -6,15 +6,10 @@
 
     {{#if feature_image}}
     <a href="{{url}}" class="storySmall-link flex flex-col grow">
-        <img class="storySmall-img object-cover w-full h-48 blur-up lazyload"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-srcset="{{img_url feature_image size="xs"}} 100w,{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
-            data-sizes="auto"
-            width="350"
-            height="192"
-            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-        />
-
+        <figure class="relative w-full h-48">
+            {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+            {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="m" mediaLazy=true}}
+        </figure>
         <div class="storySmall-inner py-4 flex flex-col justify-between grow">
             <h2 class="text-xl text-title leading-tight line-clamp-2 mb-2">{{title}}</h2>
 

@@ -10,7 +10,9 @@
         <a href="{{url}}" class="flex">
             {{#if feature_image}}
             <figure class="w-32 h-20 relative overflow-hidden rounded">
-                <img class="inset-image" src="{{img_url feature_image size="s"}}" alt="{{title}}" width="128" height="80"/>
+                {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+                {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="s" mediaLazy=true}}
+
                 <span class="inset-0 bg-primary absolute flex items-center justify-center overlay-toggle">
                     <svg class="icon h-6 w-6 text-white"><use xlink:href="#icon-arrow"></use></svg>
                 </span>

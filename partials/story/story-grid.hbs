@@ -2,16 +2,8 @@
     {{#if feature_image}}
         <figure class="story-image mb-5 h-52 relative border border-gray-300 bg-gray-200 overflow-hidden">
             <a href="{{url}}">
-                <img class="story-img inset-image block blur-up lazyload"
-                    src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                    data-srcset="{{img_url feature_image size="xs"}} 100w,
-                        {{img_url feature_image size="s"}} 300w,
-                        {{img_url feature_image size="m"}} 600w,
-                        {{img_url feature_image size="l"}} 1000w"
-                    data-sizes="auto"
-                    alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-                />
-                {{!-- <noscript><img class="story-img absolute u-image block" src="{{img_url feature_image size="s"}}"/></noscript> --}}
+                {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+                {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="l" mediaLazy=true}}
             </a>
 
             {{!-- Primary Tag- partials/components/primary-tag.hbs --}}

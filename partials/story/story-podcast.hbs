@@ -9,15 +9,13 @@
     </header>
 
     <a href="{{url}}" class="spc-c-img relative w-full md:w-1/3 flex-none bg-gray-200 story-image md:h-auto">
-        {{#if feature_image}}
-        <img class="inset-image blur-up lazyload rounded-2xl"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-            data-srcset="{{img_url feature_image size="s"}} 300w,{{img_url feature_image size="m"}} 600w"
-            data-sizes="auto"
-            alt="{{title}}"
-            width="300"
-            height="280"
-        />
-        {{/if}}
+        {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+        {{> "components/featured-image"
+            mediaImage=feature_image
+            mediaAlt=feature_image_alt
+            mediaSize="m"
+            mediaLazy=true
+            mediaClass="inset-image blur-up lazyload rounded-2xl"
+        }}
     </a>
 </article>
