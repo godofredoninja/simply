@@ -1,14 +1,33 @@
-<figure class="post-image {{class}}">
-    <img class="mx-auto simply-zoom"
-        srcset="{{img_url image size="s"}} 300w,
-                {{img_url image size="m"}} 600w,
-                {{img_url image size="l"}} 1000w,
-                {{img_url image size="xl"}} 2000w"
-        sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
-        src="{{img_url image size="xl"}}"
-        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-        width="1200"
-        height="628"
-    />
+{{#if feature_image}}
+<figure class="post-image {{classFigure}}">
+    <picture>
+        <source
+            srcset="{{img_url feature_image size="s" format="avif"}} 300w,
+                    {{img_url feature_image size="m" format="avif"}} 600w,
+                    {{img_url feature_image size="l" format="avif"}} 1000w,
+                    {{img_url feature_image size="xl" format="avif"}} 2000w"
+            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+            type="image/avif"
+        >
+        <source
+            srcset="{{img_url feature_image size="s" format="webp"}} 300w,
+                    {{img_url feature_image size="m" format="webp"}} 600w,
+                    {{img_url feature_image size="l" format="webp"}} 1000w,
+                    {{img_url feature_image size="xl" format="webp"}} 2000w"
+            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+            type="image/webp"
+        >
+        <img class="mx-auto simply-zoom{{#if classImage}} {{classImage}}{{/if}}"
+            srcset="{{img_url feature_image size="s"}} 300w,
+                    {{img_url feature_image size="m"}} 600w,
+                    {{img_url feature_image size="l"}} 1000w,
+                    {{img_url feature_image size="xl"}} 2000w"
+            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
+            src="{{img_url feature_image size="xl"}}"
+            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+        >
+    </picture>
+
     {{#if feature_image_caption}}<figcaption class="post-figcaption">{{feature_image_caption}}</figcaption>{{/if}}
 </figure>
+{{/if}}

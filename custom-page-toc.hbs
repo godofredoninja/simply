@@ -15,8 +15,7 @@
 
     <section id="post-body" class="post-body godo-canvas mx-auto relative {{#match @custom.post_font "=" "font-serif"}}font-serif{{else}}font-sans{{/match}}">
         {{!-- Post Image - partials/article/article-featured-image.hbs --}}
-        {{#if feature_image}}{{> "article/article-featured-image" image=feature_image class="kg-width-wide"}}{{/if}}
-
+        {{> "article/article-featured-image" classFigure="kg-width-wide"}}
         {{content}}
 
         {{!-- Table of Content --}}

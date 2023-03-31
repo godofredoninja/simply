@@ -11,23 +11,8 @@
     {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
     {{> "article/article-header"}}
 
-    {{#if feature_image}}
-    <figure class="post-image kg-width-wide w-full mt-12 ">
-        <img class="mx-auto w-full simply-zoom"
-            srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w"
-            sizes="(max-width: 400px) 300px,(max-width: 730px) 600px, (max-width: 1600px) 100vw"
-            src="{{img_url feature_image size="xl"}}"
-            alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
-            width="1200"
-            height="628"
-        />
-
-        {{#if feature_image_caption}}<figcaption class="post-figcaption">{{feature_image_caption}}</figcaption>{{/if}}
-    </figure>
-    {{/if}}
+    {{!-- Post Image - partials/article/article-featured-image.hbs --}}
+    {{> "article/article-featured-image" classFigure="kg-width-wide w-full mt-12"}}
     </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}

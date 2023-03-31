@@ -23,8 +23,8 @@
             {{> "components/author-meta"}}
         </div>
 
-        {{!-- Featured Media - partials/components/media-cover.hbs --}}
-        {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+        {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+        {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaClass="inset-image block brightness-50"}}
     </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}
