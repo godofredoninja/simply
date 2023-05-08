@@ -93,14 +93,14 @@
   - `en` — English default language
   - `es` — Español
   - `de` — German by [dkbast](https://github.com/dkbast)
-  - `tr` — Turkish by [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz) , [@tolgaaaltas](https://github.com/tolgaaaltas)
+  - `tr` — Turkish by [Mertcan GÖKGÖZ](https://github.com/MertcanGokgoz), [@tolgaaaltas](https://github.com/tolgaaaltas)
   - `fr-CA` — Canadian French by [Pascal Andy](https://github.com/pascalandy)
   - `ru` — Russian by [Partizan007](https://github.com/partizan007)
   - `vi` — Vietnamese by [ping](https://github.com/everping)
   - `fr` — French by [ping](https://github.com/StanGirard)
   - `it` — Italian by [Marco Sanson](https://github.com/marcosanson)
   - `id` — Indonesian by [Adryan Eka Vandra](https://github.com/adryanev)
-  - `pt-BR` — Brazilian by [Daniel Pereira](https://github.com/danieldeev)
+  - `pt-BR` — Brazilian by [Daniel Pereira](https://github.com/danieldeev), [Alexandre "Lekler"](https://github.com/lekler)
   - `uz` — Uzbek by [Shukrullo Turgunov](https://github.com/vodiylik)
   - `pl` — Polish by [Anarion](https://github.com/anarion80)
   - `nl` — Dutch by [exbu](https://github.com/exbu)
