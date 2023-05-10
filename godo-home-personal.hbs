@@ -7,16 +7,16 @@
 {{#page}}
 
 <article class="simply-hero-cover flex items-center justify-center relative min-h-screen py-24 bg-dark">
-    {{!-- Featured Media - partials/components/media-cover.hbs --}}
-    {{> "components/media-cover" background=feature_image has_gradient=true alt_title=title}}
+    {{!-- Featured Image - partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=feature_image mediaAlt=title mediaClass="inset-image brightness-50"}}
 
     <div class="mx-auto max-w-3xl px-4 p-24 z-3 text-white text-center">
-        <h1 class="mb-6 text-5xl md:text-6xl tracking-wider animated bounceIn">{{title}}</h1>
+        <h1 class="mb-6 text-5xl md:text-6xl tracking-wider">{{title}}</h1>
         <div class="text-3xl md:text-32">{{content}}</div>
     </div>
 
     {{!-- Social Media - partilas/widget/social-media.hbs --}}
-    {{!-- {{> "widget/social-media" class="absolute right-0 bottom-0 mr-8 mb-8 text-white z-2 flex-col hidden md:flex"}} --}}
+    {{> "widget/social-media" class="absolute right-0 bottom-0 mr-8 mb-8 text-white z-2 flex-col hidden md:flex"}}
 </article>
 
 {{/page}}
