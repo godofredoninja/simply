@@ -1,7 +1,7 @@
 <header class="header js-header h-16 w-full text-sm flex items-center top-0 z-20 sticky">
-    <div class="header-wrap mx-auto grid grid-flow-row-dense gap-x-7 px-4 w-full max-w-extreme items-center {{#match @custom.header "Menu on the right"}}grid-cols-fr-auto-auto{{else}}grid-cols-auto-fr-auto{{/match}}">
+    <div class="header-wrap mx-auto grid grid-flow-row-dense gap-x-7 px-4 w-full max-w-extreme items-center grid-cols-auto-fr-auto">
         {{!-- Logo --}}
-        <div class="header-left flex flex-none items-center">
+        <div class="header-left flex items-center">
             <a href="{{@site.url}}"
                 class="header-logo inline-block leading-none relative godo-tracking"
                 data-event-category="Header"

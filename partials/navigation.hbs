@@ -34,16 +34,16 @@
 {{!-- Primary Navigation --}}
 {{else}}
 
-<nav class="header-center mainMenu flex items-center">
+<nav class="header-center mainMenu flex items-center h-16 {{#match @custom.header "Menu on the right"}} justify-end{{/match}}">
     <ul itemscope
         itemtype="http://www.schema.org/SiteNavigationElement"
-        class="nav hidden lg:flex whitespace-nowrap">
+        class="nav hidden lg:inline-flex flex-wrap gap-x-6 gap-y-2">
 
         {{#foreach navigation}}
         <li itemprop="name">
             <a itemprop="url"
                 href="{{url absolute="true"}}"
-                class="mainMenu-link godo-tracking h-16 flex items-center p-3 text-base text-header-link hover:opacity-80{{#if current}} active underline underline-offset-2{{/if}}"
+                class="mainMenu-link godo-tracking flex items-center text-base text-header-link hover:opacity-80{{#if current}} active underline underline-offset-2{{/if}}"
                 data-event-category="Header"
                 data-event-action="Menu"
                 data-event-label="{{label}}"
