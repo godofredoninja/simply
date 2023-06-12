@@ -3,11 +3,17 @@
         <div class="row grid gap-16 lg:grid-cols-3 lg:gap-6">
             {{!-- About --}}
             <div class="footer-items">
-                <h3 class="text-white mb-5 text-xl">{{t "About Us"}}</h3>
+                <h3 class="text-white mb-5 text-xl">{{@site.title}}</h3>
                 <p class="mb-4">{{@site.description}}</p>
 
                 {{!-- Social Media - partilas/widget/social-media.hbs --}}
-                {{> "widget/social-media" class="footer-social-media"}}
+                {{!-- {{> "widget/social-media" class="footer-social-media"}} --}}
+                <div class="footer-social-media">
+                    <span>
+                        Find me everywhere:
+                        <a href="https://linktr.ee/iamsubingyawali?ref=SubiDroid" rel="noopener noreferrer" target="_blank">@iamsubingyawali</a>
+                    </span>
+                </div>
             </div>
 
             {{!-- Tag Cloud --}}
@@ -75,7 +81,7 @@
                 &copy; {{date format="YYYY"}} {{@site.title}}. All rights reserved. Design with
                 <svg class="icon is-small animate-pulse text-red-600"><use xlink:href="#icon-heart"></use></svg>
                 by
-                <a href="https://godofredo.ninja" title="Developer FullStack.">@GodoFredoNinja</a>
+                <a href="https://godofredo.ninja">@GodoFredoNinja</a>
             </div>
         </div>
     </section>

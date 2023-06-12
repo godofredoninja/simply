@@ -12,7 +12,7 @@
             <h2 class="text-2xl p-0 m-0 -tracking-wide">{{t "This post is for subscribers on the {specificTiers} only" specificTiers=(tiers lastSeparator=(t " and ") suffix="")}}</h2>
         {{/has}}
         {{#if @member}}
-            <a class="button is-primary h-12 mt-8" data-portal="account/plans">{{t "Upgrade your account"}}</a>
+            {{!-- <a class="button is-primary h-12 mt-8" data-portal="account/plans">{{t "Upgrade your account"}}</a> --}}
         {{else}}
             <a class="button is-primary h-12 mt-8" data-portal="signup">{{t "Subscribe now"}}</a>
             <p class="mt-8 -tracking-wide">{{t "Already have an account?"}} <a class="cursor-pointer hover:opacity-80" data-portal="signin">{{t "Sign in"}}</a></p>
