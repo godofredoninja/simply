@@ -11,8 +11,8 @@
         <div class="mt-5 text-xl text-black opacity-70">{{content}}</div>
     </div>
 
-    {{!-- Featured Media - partials/components/media-cover.hbs --}}
-    {{> "components/media-cover" background=feature_image alt_title=title}}
+    {{!-- Featured Image - partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=feature_image mediaAlt=title mediaClass="inset-image"}}
 
     {{#unless feature_image}}
     <img class="inset-image blur-up lazyload"

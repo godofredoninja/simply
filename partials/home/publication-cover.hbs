@@ -9,8 +9,8 @@
         </div>
     </div>
 
-    {{!-- Featured Media - partials/components/media-cover.hbs --}}
-    {{> "components/media-cover" background=@site.cover_image alt_title=@site.title class="contrast-50 md:filter-none"}}
+    {{!-- Featured Image - partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=@site.cover_image mediaAlt=@site.title  mediaClass="inset-image"}}
 </div>
 {{/match}}
 
@@ -33,7 +33,8 @@
 
          <div class="flex items-center flex-none order-first">
             <div class="relative mx-auto overflow-hidden border-white rounded-full shadow-xl w-72 h-72 lg:w-96 lg:h-96" style="border-width: 0.875rem;">
-                {{> "components/media-cover" background=@site.cover_image alt_title=@site.title}}
+                {{!-- Featured Image - partials/components/featured-image.hbs --}}
+                {{> "components/featured-image" mediaImage=@site.cover_image mediaAlt=@site.title mediaSize="l"  mediaClass="inset-image"}}
             </div>
         </div>
     </div>
@@ -68,8 +69,8 @@
         {{/if}}
     </div>
 
-    {{!-- Featured Media - partials/components/media-cover.hbs --}}
-    {{> "components/media-cover" background=@site.cover_image has_gradient=true alt_title=@site.title}}
+    {{!-- Featured Image - partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=@site.cover_image mediaAlt=@site.title  mediaClass="inset-image brightness-50"}}
 
     {{!-- Social Media - partilas/widget/social-media.hbs --}}
     {{> "widget/social-media" class="absolute bottom-0 right-0 flex-col hidden mb-8 mr-8 text-white z-2 md:flex"}}
