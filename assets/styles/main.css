@@ -1121,9 +1121,14 @@ table tr:last-child td {
   .ss1 .story-title {
     font-size: 2.25rem;
   }
+}
+.ss1 .story-image {
+  height: 100%;
+}
+@media (min-width: 1000px) {
   .ss1 .story-image {
     grid-column: span 2 / span 2;
-    height: 24rem;
+    min-height: 24rem;
     padding-top: 0px;
   }
   .ss1 > .not-feature-image {
