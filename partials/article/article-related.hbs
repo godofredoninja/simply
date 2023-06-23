@@ -1,5 +1,5 @@
 {{#if post.tags}}
-{{#get "posts" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |post_related|}}
+{{#get "posts" include="tags" limit="6" filter="tags:[{{post.tags}}]+id:-{{post.id}}" as |post_related|}}
 {{#if post_related}}
 <div class="post-related bg-gray-100 py-10">
     <div class="container mx-auto">

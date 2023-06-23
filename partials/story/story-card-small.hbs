@@ -20,14 +20,16 @@
 
     {{else}}
 
-    <a href="{{url}}" class="flex flex-col grow justify-between p-6 bg-blank rounded shadow transition-all hover:shadow-card-primary">
+    <a href="{{url}}" class="flex flex-col grow justify-between p-6 rounded z-1">
         <div>
             <h2 class="text-xl text-title leading-tight">{{title}}</h2>
-            <p class="pt-4 mb-2">{{excerpt words="20"}}...</p>
+            <p class="pt-4 mb-2 break-words">{{excerpt words="20"}}...</p>
         </div>
 
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
-        {{> "components/datetime"}}
+        {{> "components/datetime" class="text-title text-sm"}}
+
     </a>
+    <span class="inset-0 z-0 absolute bg-secondary rounded opacity-15" {{#if primary_tag.accent_color}}style="background-color:{{primary_tag.accent_color}}"{{/if}}></span>
     {{/if}}
 </div>
