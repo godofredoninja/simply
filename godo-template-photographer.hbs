@@ -16,9 +16,9 @@
 
             <header class="absolute bottom-0 left-0 right-0 text-white px-4 py-10">
                 {{!-- Primary Tag- partials/components/primary-tag.hbs --}}
-                {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag" class="relative z-3"}}</div>{{/if}}
+                {{!-- {{#if primary_tag}}<div class="mb-4">{{> "components/primary-tag" class="relative z-3"}}</div>{{/if}} --}}
 
-                <h2 class="text-4xl font-semibold leading-tight mb-4"><a class="relative z-3" href="{{url}}">{{title}}</a></h2>
+                <h2 class="text-3xl leading-tight mb-4"><a class="relative z-3" href="{{url}}">{{title}}</a></h2>
 
                 {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
                 {{> "components/author-meta"}}

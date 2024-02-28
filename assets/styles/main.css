@@ -1138,7 +1138,7 @@ table tr:last-child td {
 /* ---------------------------------------------------------- */
 @media (min-width: 1000px) {
   .ss1 .story-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .ss1 .story-image {
     grid-column: span 2 / span 2;
@@ -1153,7 +1153,7 @@ table tr:last-child td {
     height: 16rem;
   }
   .ss2 .story-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 }
 :not(pre) > code {
@@ -2619,9 +2619,6 @@ except for when immediately preceeded by a heading */
 .text-xs {
   font-size: 0.75rem;
 }
-.text-40 {
-  font-size: 2.5rem;
-}
 .font-bold {
   font-weight: 700;
 }
@@ -2759,6 +2756,9 @@ except for when immediately preceeded by a heading */
 }
 .opacity-90 {
   opacity: 0.9;
+}
+.opacity-60 {
+  opacity: 0.6;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -3208,9 +3208,8 @@ except for when immediately preceeded by a heading */
     margin-left: 0px;
     margin-right: 0px;
   }
-  .lg\:mx-12 {
+  .lg\:ml-12 {
     margin-left: 3rem;
-    margin-right: 3rem;
   }
   .lg\:ml-6 {
     margin-left: 1.5rem;
@@ -3220,9 +3219,6 @@ except for when immediately preceeded by a heading */
   }
   .lg\:mt-0 {
     margin-top: 0px;
-  }
-  .lg\:ml-12 {
-    margin-left: 3rem;
   }
   .lg\:block {
     display: block;

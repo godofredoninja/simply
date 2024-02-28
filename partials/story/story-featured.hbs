@@ -2,17 +2,17 @@
     <div class="max-w-1100 mx-auto relative z-3 h-full flex items-center">
         <div class="lg:w-2/3">
             <p class="mb-4 text-base font-semibold uppercase text-amber-400">{{t "featured story"}}</p>
-            <h2 class="relative text-32 md:text-5xl font-semibold leading-tight mb-4"><a href="{{url}}" class="text-white">{{title}}</a></h2>
+            <h2 class="relative text-32 md:text-5xl leading-tight mb-4"><a href="{{url}}" class="text-white">{{title}}</a></h2>
             <p class="godo-f-story-excerpt mb-5 text-white font-normal line-clamp-2 text-xl">{{excerpt words="50"}}</p>
             {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
             {{> "components/datetime" class="godo-f-story-date mb-5 text-base text-white opacity-80"}}
 
-            <a href="{{url}}" class="button is-primary font-medium">{{t "Read post"}}</a>
+            {{!-- <a href="{{url}}" class="button is-primary font-medium">{{t "Read post"}}</a> --}}
         </div>
     </div>
 
     {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
-    {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaClass="inset-image"}}
+    {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaClass="inset-image brightness-50"}}
 
-    <div class="u-primaryGradient absolute inset-0 z-2 opacity-70"></div>
+    {{!-- <div class="u-primaryGradient absolute inset-0 z-2 opacity-60"></div> --}}
 </article>
