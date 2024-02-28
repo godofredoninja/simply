@@ -18,8 +18,8 @@
     {{/unless}}
 
     <div class="flex-auto overflow-hidden">
-        <div class="hh-author-name text-sm truncate">
-        {{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors class="false"}}{{/has}}
+        <div class="hh-author-name text-sm truncate font-medium">
+        {{#has author="count:>2"}}{{t "Multiple authors"}}{{else}}{{authors}}{{/has}}
         </div>
 
         {{!-- Date Time and reading Time - ./partials/components/datetime.hbs --}}
