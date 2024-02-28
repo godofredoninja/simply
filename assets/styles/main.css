@@ -684,7 +684,7 @@ mark {
 }
 h1, h2, h3, h4, h5, h6 {
 
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
 }
 h1 {
@@ -2619,6 +2619,9 @@ except for when immediately preceeded by a heading */
 .text-xs {
   font-size: 0.75rem;
 }
+.text-40 {
+  font-size: 2.5rem;
+}
 .font-bold {
   font-weight: 700;
 }
@@ -2657,6 +2660,9 @@ except for when immediately preceeded by a heading */
 }
 .-tracking-wide {
   letter-spacing: -0.025em;
+}
+.tracking-less {
+  letter-spacing: -0.011em;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -3215,6 +3221,9 @@ except for when immediately preceeded by a heading */
   .lg\:mt-0 {
     margin-top: 0px;
   }
+  .lg\:ml-12 {
+    margin-left: 3rem;
+  }
   .lg\:block {
     display: block;
   }
@@ -3329,6 +3338,9 @@ except for when immediately preceeded by a heading */
   }
   .lg\:text-2xl {
     font-size: 1.5rem;
+  }
+  .lg\:text-40 {
+    font-size: 2.5rem;
   }
   .lg\:text-44 {
     font-size: 2.75rem;
