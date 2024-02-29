@@ -185,7 +185,7 @@ npm run deploy
 ```
 - You will see that the updates you made in the theme locally are now deployed and activated in your ghost setup.
 
-Now you can iteratively edit and deploy and edit and deploy without leaving your command line :)
+"Now you can iteratively edit, deploy, and test your theme without leaving your command line :)"
 
 You can also incorporate this deploy step in your CICD pipeline if you use any.
 
