@@ -4,6 +4,7 @@
 /* ---------------------------------------------------------- */
 /*#fafafa*/
 /* $gray-200: #F3F5F9; */
+/* #757575 */
 /* Header
 /* ---------------------------------------------------------- */
 /* Footer
@@ -45,7 +46,7 @@
   --gray-200: #f6f6f6;
   --gray-300: #e0e0e0;
   --gray-400: #bdbdbd;
-  --gray-500: #757575;
+  --gray-500: #595959;
   --gray-600: #52525B;
   --gray-700: #616161;
   --gray-800: #292929;
@@ -1931,6 +1932,9 @@ except for when immediately preceeded by a heading */
 .min-h-96 {
   min-height: 24rem;
 }
+.min-h-\[7\.5rem\] {
+  min-height: 7.5rem;
+}
 .min-h-lg {
   min-height: 32rem;
 }
@@ -2142,6 +2146,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-3 {
   gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .gap-8 {
   gap: 2rem;
@@ -2745,6 +2752,9 @@ except for when immediately preceeded by a heading */
 .opacity-30 {
   opacity: 0.3;
 }
+.opacity-60 {
+  opacity: 0.6;
+}
 .opacity-70 {
   opacity: 0.7;
 }
@@ -2756,9 +2766,6 @@ except for when immediately preceeded by a heading */
 }
 .opacity-90 {
   opacity: 0.9;
-}
-.opacity-60 {
-  opacity: 0.6;
 }
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
@@ -3069,6 +3076,9 @@ except for when immediately preceeded by a heading */
   .md\:-order-none {
     order: 0;
   }
+  .md\:order-first {
+    order: -9999;
+  }
   .md\:order-none {
     order: 0;
   }
@@ -3150,6 +3160,9 @@ except for when immediately preceeded by a heading */
   }
   .md\:text-left {
     text-align: left;
+  }
+  .md\:text-right {
+    text-align: right;
   }
   .md\:text-22 {
     font-size: 1.375rem;

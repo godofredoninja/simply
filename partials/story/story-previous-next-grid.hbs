@@ -4,7 +4,7 @@
     data-event-label="{{url absolute="true"}}"
     data-event-non-interaction="true">
 
-    <a href="{{url}}" class="flex items-center {{#unless feature_image}}bg-blank p-6 shadow border rounded transition-all hover:shadow-card-primary{{/unless}}">
+    <a href="{{url}}" class="flex items-center gap-4{{#unless feature_image}} bg-blank p-6 shadow rounded transition-all hover:shadow-card-primary{{/unless}}">
         {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
         {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaClass=classImage mediaSize="s" mediaLazy=true}}
 
