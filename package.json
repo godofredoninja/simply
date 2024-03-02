@@ -106,7 +106,8 @@
         "type": "select",
         "options": [
           "Author",
-          "Read More"
+          "Read More",
+          "None"
         ],
         "default": "Author"
       },

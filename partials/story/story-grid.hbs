@@ -22,15 +22,8 @@
             </p>
             {{/if}}
 
-            {{#match @custom.story_meta "Author"}}
-            {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
-            {{> "components/author-meta"}}
-
-            {{else}}
-
-            {{!-- Read this --}}
-            <a href="{{url}}" class="tracking-wide" aria-label="{{title}}"><span class="transition-all hover:mr-2">{{t "Read more"}}</span><svg class="icon is-medium ml-2"><use xlink:href="#icon-arrow"></use></svg></a>
-            {{/match}}
+            {{!-- [Author, Read More, None] - ./partials/components/meta-data.hbs --}}
+            {{> "components/meta-data"}}
         </div>
 
     {{else}}
@@ -49,15 +42,8 @@
             </p>
             {{/if}}
 
-            {{#match @custom.story_meta "Author"}}
-            {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
-            {{> "components/author-meta"}}
-
-            {{else}}
-
-            {{!-- Read this --}}
-            <a href="{{url}}" class="tracking-wide" aria-label="{{title}}"><span class="transition-all hover:mr-2">{{t "Read more"}}</span><svg class="icon is-medium ml-2"><use xlink:href="#icon-arrow"></use></svg></a>
-            {{/match}}
+            {{!-- [Author, Read More, None] - ./partials/components/meta-data.hbs --}}
+            {{> "components/meta-data"}}
         </div>
 
         <span class="inset-0 z-0 absolute bg-secondary rounded opacity-15" {{#if primary_tag.accent_color}}style="background-color:{{primary_tag.accent_color}}"{{/if}}></span>

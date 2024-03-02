@@ -1,0 +1,10 @@
+{{#match @custom.story_meta "Author"}}
+    {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
+    {{> "components/author-meta"}}
+{{else match @custom.story_meta "Read More"}}
+    {{!-- Read More --}}
+    <a href="{{url}}" class="tracking-wide" aria-label="{{title}}">
+        <span class="transition-all hover:mr-2">{{t "Read more"}}</span>
+        <svg class="icon is-medium ml-2"><use xlink:href="#icon-arrow"></use></svg>
+    </a>
+{{/match}}
