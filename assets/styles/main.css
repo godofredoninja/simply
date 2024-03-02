@@ -4,6 +4,7 @@
 /* ---------------------------------------------------------- */
 /*#fafafa*/
 /* $gray-200: #F3F5F9; */
+/* #757575 */
 /* Header
 /* ---------------------------------------------------------- */
 /* Footer
@@ -45,7 +46,7 @@
   --gray-200: #f6f6f6;
   --gray-300: #e0e0e0;
   --gray-400: #bdbdbd;
-  --gray-500: #757575;
+  --gray-500: #595959;
   --gray-600: #52525B;
   --gray-700: #616161;
   --gray-800: #292929;
@@ -145,7 +146,7 @@
   }
 /* base
 /* ---------------------------------------------------------- */
-/* ! tailwindcss v3.3.2 | MIT License | https://tailwindcss.com */
+/* ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com */
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
 2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
@@ -169,15 +170,18 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
-html {
+html,
+:host {
   line-height: 1.5; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
+  -webkit-tap-highlight-color: transparent; /* 7 */
 }
 /*
 1. Remove the margin in all browsers.
@@ -230,15 +234,19 @@ strong {
   font-weight: bolder;
 }
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 code,
 kbd,
 samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
-  font-size: 1em; /* 2 */
+  font-feature-settings: normal; /* 2 */
+  font-variation-settings: normal; /* 3 */
+  font-size: 1em; /* 4 */
 }
 /*
 Add the correct font size in all browsers.
@@ -283,6 +291,8 @@ optgroup,
 select,
 textarea {
   font-family: inherit; /* 1 */
+  font-feature-settings: inherit; /* 1 */
+  font-variation-settings: inherit; /* 1 */
   font-size: 100%; /* 1 */
   font-weight: inherit; /* 1 */
   line-height: inherit; /* 1 */
@@ -392,6 +402,12 @@ ul,
 menu {
   list-style: none;
   margin: 0;
+  padding: 0;
+}
+/*
+Reset default styling for dialogs.
+*/
+dialog {
   padding: 0;
 }
 /*
@@ -549,7 +565,7 @@ video {
   --tw-backdrop-sepia:  ;
 }
 cite, figcaption, h1, h2, h3, h4, h5, h6, .input, [type="text"], [type="email"], [type="url"], [type="password"], [type="number"], [type="date"], textarea, .button, .kg-card {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .inset-image, .kg-bookmark-thumbnail img {
   position: absolute;
@@ -584,6 +600,10 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
+
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
 }
 a {
   color: inherit;
@@ -665,7 +685,7 @@ mark {
 }
 h1, h2, h3, h4, h5, h6 {
 
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
 }
 h1 {
@@ -1029,7 +1049,7 @@ table {
   max-width: 100%;
   overflow-x: auto;
   text-align: left;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 0.875rem;
 }
 table th {
@@ -1119,7 +1139,7 @@ table tr:last-child td {
 /* ---------------------------------------------------------- */
 @media (min-width: 1000px) {
   .ss1 .story-title {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .ss1 .story-image {
     grid-column: span 2 / span 2;
@@ -1134,7 +1154,7 @@ table tr:last-child td {
     height: 16rem;
   }
   .ss2 .story-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 }
 :not(pre) > code {
@@ -1912,6 +1932,9 @@ except for when immediately preceeded by a heading */
 .min-h-96 {
   min-height: 24rem;
 }
+.min-h-\[7\.5rem\] {
+  min-height: 7.5rem;
+}
 .min-h-lg {
   min-height: 32rem;
 }
@@ -2039,6 +2062,11 @@ except for when immediately preceeded by a heading */
   --tw-scale-y: 1.1;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.scale-125 {
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -2123,6 +2151,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-3 {
   gap: 0.75rem;
+}
+.gap-4 {
+  gap: 1rem;
 }
 .gap-8 {
   gap: 2rem;
@@ -2556,10 +2587,10 @@ except for when immediately preceeded by a heading */
   text-align: right;
 }
 .font-sans {
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 .font-serif {
-  font-family: Source Serif Pro, ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: "Source Serif 4", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
 }
 .text-22 {
   font-size: 1.375rem;
@@ -2638,6 +2669,9 @@ except for when immediately preceeded by a heading */
 }
 .-tracking-wide {
   letter-spacing: -0.025em;
+}
+.tracking-less {
+  letter-spacing: -0.011em;
 }
 .tracking-wide {
   letter-spacing: 0.025em;
@@ -2722,6 +2756,9 @@ except for when immediately preceeded by a heading */
 }
 .opacity-30 {
   opacity: 0.3;
+}
+.opacity-60 {
+  opacity: 0.6;
 }
 .opacity-70 {
   opacity: 0.7;
@@ -3044,6 +3081,9 @@ except for when immediately preceeded by a heading */
   .md\:-order-none {
     order: 0;
   }
+  .md\:order-first {
+    order: -9999;
+  }
   .md\:order-none {
     order: 0;
   }
@@ -3126,6 +3166,9 @@ except for when immediately preceeded by a heading */
   .md\:text-left {
     text-align: left;
   }
+  .md\:text-right {
+    text-align: right;
+  }
   .md\:text-22 {
     font-size: 1.375rem;
   }
@@ -3183,9 +3226,8 @@ except for when immediately preceeded by a heading */
     margin-left: 0px;
     margin-right: 0px;
   }
-  .lg\:mx-12 {
+  .lg\:ml-12 {
     margin-left: 3rem;
-    margin-right: 3rem;
   }
   .lg\:ml-6 {
     margin-left: 1.5rem;
@@ -3310,6 +3352,9 @@ except for when immediately preceeded by a heading */
   }
   .lg\:text-2xl {
     font-size: 1.5rem;
+  }
+  .lg\:text-40 {
+    font-size: 2.5rem;
   }
   .lg\:text-44 {
     font-size: 2.75rem;

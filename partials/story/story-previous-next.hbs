@@ -5,7 +5,7 @@
     data-event-non-interaction="true">
 
     {{#if feature_image}}
-    <a href="{{url}}" class="prev-next-image-link relative w-4/12 bg-gray-200 flex-none border border-gray-100" aria-label="{{title}}">
+    <a href="{{url}}" class="prev-next-image-link relative w-4/12 bg-gray-200 flex-none min-h-[7.5rem]" aria-label="{{title}}">
         {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
         {{> "components/featured-image" mediaImage=feature_image mediaAlt=feature_image_alt mediaSize="s" mediaLazy=true}}
     </a>
@@ -14,6 +14,6 @@
     <a href="{{url}}" class="prev-next-body pl-6 flex-auto{{#unless feature_image}} p-6 bg-blank rounded shadow-4xl transition-all hover:shadow-card-primary{{/unless}}">
         <div class="text-sm leading-none text-gray-500 mb-3">{{#if storyTitle}}{{storyTitle}}{{/if}}</div>
         <h2 class="prev-next-title text-title mb-3 text-xl md:text-22 line-clamp-2">{{title}}</h2>
-        <p class="prev-next-excerpt text-base text-gray-500 line-clamp-2 leading-snug">{{excerpt words="25"}}</p>
+        <p class="prev-next-excerpt text-base line-clamp-2 leading-snug">{{excerpt words="25"}}</p>
     </a>
 </div>

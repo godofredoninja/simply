@@ -13,7 +13,7 @@ h5,
 h6 {
   @extend %font-sans;
 
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
 }
 

@@ -7,14 +7,14 @@
 {{!-- {{#contentFor "special_body_class"}}is-article is-article-image-right{{/contentFor}} --}}
 
 <article class="post mb-10 relative">
-    <header class="post-header grid md:grid-cols-2 lg:mx-12">
+    <header class="post-header grid md:grid-cols-2 lg:ml-12">
         <div class="flex flex-col justify-center px-4 py-vmin8 lg:mr-16">
             {{!-- [Title, Excerpt, Author, DateTime, Share]- partials/article/article-header.hbs --}}
-            {{> "article/article-header"}}
+            {{> "article/article-header" classTitle="lg:text-5xl"}}
         </div>
 
         {{!-- Post Image - partials/article/article-featured-image.hbs --}}
-        {{> "article/article-featured-image" classFigure="flex flex-col -order-1 md:-order-none" classImage="w-full object-cover min-h-96 max-h-128 grow"}}
+        {{> "article/article-featured-image" classFigure="flex flex-col -order-1 md:-order-none" classImage="w-full object-cover min-h-96 grow"}}
     </header>
 
     {{!-- Article Body - partials/article/article-body.hbs --}}

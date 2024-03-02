@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      serif: ['Source Serif Pro', ...defaultTheme.fontFamily.serif]
+      serif: ['"Source Serif 4"', ...defaultTheme.fontFamily.serif]
     },
     colors: {
       transparent: 'transparent',
@@ -101,7 +101,11 @@ module.exports = {
         //
         22: '1.375rem',
         32: '2rem',
+        40: '2.5rem',
         44: '2.75rem'
+      },
+      letterSpacing: {
+        less: '-0.011em'
       },
       backgroundOpacity: {
         40: '0.4',

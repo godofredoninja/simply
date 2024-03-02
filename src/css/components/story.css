@@ -22,7 +22,7 @@
 
 .ss1 {
   .story-title {
-    @apply lg:text-4xl;
+    @apply lg:text-32;
   }
   .story-image {
     @apply lg:col-span-2 lg:min-h-96 lg:h-full lg:pt-0;
@@ -37,7 +37,7 @@
     @apply lg:h-64;
   }
   .story-title {
-    @apply lg:text-3xl;
+    @apply lg:text-2xl;
   }
 }
 
