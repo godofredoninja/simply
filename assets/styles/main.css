@@ -1917,12 +1917,6 @@ except for when immediately preceeded by a heading */
 .h-screen {
   height: 100vh;
 }
-.h-60 {
-  height: 15rem;
-}
-.h-64 {
-  height: 16rem;
-}
 .max-h-128 {
   max-height: 32rem;
 }
@@ -1934,6 +1928,9 @@ except for when immediately preceeded by a heading */
 }
 .max-h-96 {
   max-height: 24rem;
+}
+.max-h-\[28rem\] {
+  max-height: 28rem;
 }
 .min-h-96 {
   min-height: 24rem;
@@ -2294,9 +2291,6 @@ except for when immediately preceeded by a heading */
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
-.border-\[var\(--border-color\)\] {
-  border-color: var(--border-color);
-}
 .bg-amber-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
@@ -2514,9 +2508,6 @@ except for when immediately preceeded by a heading */
 }
 .pb-5 {
   padding-bottom: 1.25rem;
-}
-.pb-6 {
-  padding-bottom: 1.5rem;
 }
 .pb-8 {
   padding-bottom: 2rem;
@@ -3115,11 +3106,11 @@ except for when immediately preceeded by a heading */
   .md\:hidden {
     display: none;
   }
-  .md\:h-auto {
-    height: auto;
-  }
   .md\:h-72 {
     height: 18rem;
+  }
+  .md\:h-auto {
+    height: auto;
   }
   .md\:w-1\/3 {
     width: 33.333333%;

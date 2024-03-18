@@ -163,14 +163,8 @@
         "default": "List",
         "group": "post"
       },
-      "show_newsletter": {
-        "type": "boolean",
-        "default": false,
-        "group": "post"
-      },
-      "newsletter_text": {
+      "embed_signup_form": {
         "type": "text",
-        "default": "Sign up for more like this",
         "group": "post"
       }
     }
