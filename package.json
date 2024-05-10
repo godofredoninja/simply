@@ -111,6 +111,11 @@
         ],
         "default": "Author"
       },
+      "header_text_color": {
+        "type": "color",
+        "default": "#292929",
+        "group": "homepage"
+      },
       "publication_cover": {
         "type": "select",
         "options": [
@@ -126,7 +131,7 @@
       },
       "publication_cover_title": {
         "type": "text",
-        "default": "Hello, I’m Godo Welcome to my World.",
+        "default": "Hello, I'm <span class='font-serif italic text-red-600'>GodoFredo</span> Welcome to my <span class='font-serif italic text-red-600'>World.</span>",
         "group": "homepage"
       },
       "publication_cover_description": {
@@ -134,9 +139,14 @@
         "default": "I'm professional based in Peru, I'm experts in website design, app development, advertising, software support, and more.",
         "group": "homepage"
       },
-      "publication_cover_color": {
-        "type": "color",
-        "default": "#ffffff",
+      "publication_cover_align_content": {
+        "type": "select",
+        "options": [
+          "Left",
+          "Center",
+          "Right"
+        ],
+        "default": "Left",
         "group": "homepage"
       },
       "enter_tag_slugs_for_homepage_sections": {

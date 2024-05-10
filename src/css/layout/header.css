@@ -94,8 +94,12 @@
   margin-top: -$header-height;
 }
 
-.is-head-transparent:not(.has-menu) {
+.is-head-transparent.is-menu-text-white:not(.has-menu) {
   --header-text-link: #fff;
+}
+
+.is-head-transparent.is-menu-text-custom:not(.has-menu) {
+  --header-text-link: var(--header-text-color, #292929);
 }
 
 /* .header.is-stacked ~ .simply-main {

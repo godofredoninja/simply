@@ -1773,6 +1773,9 @@ except for when immediately preceeded by a heading */
 .ml-5 {
   margin-left: 1.25rem;
 }
+.ml-auto {
+  margin-left: auto;
+}
 .mr-10 {
   margin-right: 2.5rem;
 }
@@ -2926,8 +2929,11 @@ except for when immediately preceeded by a heading */
 .has-cover .simply-hero-cover {
   margin-top: -4rem;
 }
-.is-head-transparent:not(.has-menu) {
+.is-head-transparent.is-menu-text-white:not(.has-menu) {
   --header-text-link: #fff;
+}
+.is-head-transparent.is-menu-text-custom:not(.has-menu) {
+  --header-text-link: var(--header-text-color, #292929);
 }
 /* .header.is-stacked ~ .simply-main {
   @apply lg:-mt-24;
@@ -3275,6 +3281,9 @@ except for when immediately preceeded by a heading */
   .lg\:max-w-2xl {
     max-width: 42rem;
   }
+  .lg\:max-w-3xl {
+    max-width: 48rem;
+  }
   .lg\:max-w-sm {
     max-width: 24rem;
   }
@@ -3368,6 +3377,9 @@ except for when immediately preceeded by a heading */
   }
   .lg\:text-7xl {
     font-size: 4.5rem;
+  }
+  .lg\:text-7xlg {
+    font-size: 5rem;
   }
   .lg\:text-9xl {
     font-size: 8rem;

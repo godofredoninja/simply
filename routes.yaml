@@ -58,6 +58,10 @@ routes:
       post: page.medium-with-sidebar
     limit: 14
 
+  /sections/:
+    controller: channel
+    template: godo-home-categories
+
   /podcast/rss/:
     template: podcast/rss
     content_type: text/xml
