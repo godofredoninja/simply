@@ -1,8 +1,8 @@
 .is-doc .post-body {
 
-  /* & > [id]:not(:first-child) {
-    margin: 3em 0 0;
-  } */
+  & > [id]:not(:first-child) {
+    margin: 2.5em 0 0;
+  }
 
   /* & > h1,
   & > h2,
