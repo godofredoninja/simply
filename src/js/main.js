@@ -1,4 +1,4 @@
-/* global followSocialMedia menuDropdown localStorage */
+/* global followSocialMedia localStorage */
 
 // lib
 import 'lazysizes'
@@ -7,31 +7,30 @@ import 'lazysizes'
 import urlRegexp from './util/url-regular-expression'
 import docSelectorAll from './util/document-query-selector-all'
 
+import dropDownMenu from './app/dropdown'
+
 const simplySetup = () => {
   const rootEl = document.documentElement
   const documentBody = document.body
 
   /* Menu DropDown
   /* ---------------------------------------------------------- */
-  const dropDownMenu = () => {
-    // Checking if the variable exists and if it is an object
-    if (typeof menuDropdown !== 'object' || menuDropdown === null) return
+  // const dropDownMenu = () => {
+  //   if (typeof menuDropdown !== 'object' || menuDropdown === null) return
+  //   const $dropdownMenu = document.querySelector('.js-dropdown-menu')
+  //   if (!$dropdownMenu) return
 
-    // check if the box for the menu exists
-    const $dropdownMenu = document.querySelector('.js-dropdown-menu')
-    if (!$dropdownMenu) return
+  //   Object.entries(menuDropdown).forEach(([name, url]) => {
+  //     if (name !== 'string' && !urlRegexp(url)) return
 
-    Object.entries(menuDropdown).forEach(([name, url]) => {
-      if (name !== 'string' && !urlRegexp(url)) return
+  //     const link = document.createElement('a')
+  //     link.href = url
+  //     link.classList = 'dropdown-item block py-2 leading-tight px-5 hover:text-primary'
+  //     link.innerText = name
 
-      const link = document.createElement('a')
-      link.href = url
-      link.classList = 'dropdown-item block py-2 leading-tight px-5 hover:text-primary'
-      link.innerText = name
-
-      $dropdownMenu.appendChild(link)
-    })
-  }
+  //     $dropdownMenu.appendChild(link)
+  //   })
+  // }
 
   dropDownMenu()
 
