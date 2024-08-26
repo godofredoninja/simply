@@ -74,6 +74,9 @@
 
   /* cta */
   --bg-cta: rgb(255, 255, 255);
+
+  /*  tag Gradient */
+  --tag-gradient: linear-gradient(60deg, rgb(72, 33, 45), rgba(138, 11, 49, 0.87));
 }
 /* Dark mode
 /* ---------------------------------------------------------- */
@@ -772,12 +775,11 @@ h6 {
 .link.is-hover:hover {
     opacity: .80;
   }
-/* Primary Gradient
+/* Gradient
 /* ---------------------------------------------------------- */
-.u-primaryGradient {
-  background: linear-gradient(135deg, #111, #0abe51);
-  background: linear-gradient(135deg, #111, var(--ghost-accent-color));
-  /* background: linear-gradient(135deg, rgba($dark-blue-500, .7), rgba($primary-color, .7)) */
+.tag-gradient {
+  background: url('../images/tag-bg.svg') center no-repeat,linear-gradient(60deg, rgb(72, 33, 45), rgba(138, 11, 49, 0.87));
+  background: var(--tag-bg, url('../images/tag-bg.svg')) center no-repeat,var(--tag-gradient);
 }
 /* Video Responsive
 /* ---------------------------------------------------------- */
@@ -3155,6 +3157,9 @@ except for when immediately preceeded by a heading */
   }
   .md\:items-center {
     align-items: center;
+  }
+  .md\:items-stretch {
+    align-items: stretch;
   }
   .md\:gap-4 {
     gap: 1rem;

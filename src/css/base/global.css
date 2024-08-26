@@ -87,12 +87,11 @@
   }
 }
 
-/* Primary Gradient
+/* Gradient
 /* ---------------------------------------------------------- */
 
-.u-primaryGradient {
-  background: linear-gradient(135deg, #111, var(--ghost-accent-color));
-  /* background: linear-gradient(135deg, rgba($dark-blue-500, .7), rgba($primary-color, .7)) */
+.tag-gradient {
+  background: var(--tag-bg, url('../images/tag-bg.svg')) center no-repeat,var(--tag-gradient);
 }
 
 /* Video Responsive

@@ -2,23 +2,35 @@
 {{!-- The tag above means - insert everything in this file into the {body} of the default.hbs template --}}
 
 {{#tag}}
+{{#has all="feature_image, description"}}
+    {{!-- custom Styles For tag <body> --}}
+    {{#contentFor "special_body_class"}}is-tag has-cover is-head-transparent is-menu-text-white{{/contentFor}}
 
-{{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}is-tag{{/contentFor}}
-
-<section class="tag py-12 md:py-vw6 bg-gray-100">
-    <div class="mx-auto px-4 max-w-5xl text-center">
-        <h1 class="capitalize text-4xl text-title lg:text-5xl">{{name}}</h1>
-
-        <div class="text-center font-medium mt-8">
-            <a class="hover:text-primary" href="{{@site.url}}">{{t "Home"}}</a>
-            <svg class="icon h-3 w-3"><use xlink:href="#icon-arrow-forward"></use></svg>
-            <span class="text-gray-500">{{t "Posts Tagged"}} "{{name}}"</span>
+    <section class="simply-hero-cover tag-gradient relative overflow-hidden pt-16">
+        <div class="container mx-auto relative flex justify-between flex-col items-center py-12 md:py-vw4 md:flex-row md:items-stretch md:px-5">
+            <div class="flex-none text-white text-center md:text-left md:max-w-md md:pr-5 lg:max-w-xl">
+                <h1 class="text-5xl lg:text-6xl">{{name}}</h1>
+                {{#if description}}<p class="mt-6 text-22 opacity-90">{{description}}</p>{{/if}}
+            </div>
+            {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+            <figure class="max-w-lg w-full md:flex flex-col mt-12 md:mt-0 grow">
+                {{> "components/featured-image" mediaImage=feature_image mediaAlt=name mediaSize="l" mediaClass="w-full object-cover lazyload"}}
+            </figure>
         </div>
-
-        {{#if description}}<p class="text-xl mt-5 font-serif max-w-xl mx-auto">{{description}}</p>{{/if}}
-    </div>
-</section>
+    </section>
+{{else}}
+    <section class="tag py-12 md:py-vw6 bg-gray-100">
+        <div class="mx-auto px-4 max-w-5xl text-center">
+            <h1 class="capitalize text-4xl text-title lg:text-5xl">{{name}}</h1>
+            <div class="text-center font-medium mt-8">
+                <a class="hover:text-primary" href="{{@site.url}}">{{t "Home"}}</a>
+                <svg class="icon h-3 w-3"><use xlink:href="#icon-arrow-forward"></use></svg>
+                <span class="text-gray-500">{{t "Posts Tagged"}} "{{name}}"</span>
+            </div>
+            {{#if description}}<p class="text-xl mt-5 font-serif max-w-xl mx-auto">{{description}}</p>{{/if}}
+        </div>
+    </section>
+{{/has}}
 {{/tag}}
 
 {{!-- The tag below includes the post loop - partials/loop.hbs --}}

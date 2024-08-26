@@ -64,6 +64,9 @@
 
   /* cta */
   --bg-cta: rgb(255, 255, 255);
+
+  /*  tag Gradient */
+  --tag-gradient: linear-gradient(60deg, rgb(72 33 45), rgb(138 11 49 / 87%));
 }
 
 /* Dark mode
