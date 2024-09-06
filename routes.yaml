@@ -51,11 +51,9 @@ routes:
     template: godo-home-personal
     data: page.godo-personal
 
-  /medium-sidebar/:
+  /sidebar-two/:
     controller: channel
-    template: godo-template-medium-sidebar
-    data:
-      post: page.medium-with-sidebar
+    template: godo-template-sidebar-two
     limit: 14
 
   /sections/:
