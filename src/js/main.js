@@ -1,7 +1,7 @@
 /* global followSocialMedia localStorage */
 
 // lib
-import 'lazysizes'
+// import 'lazysizes'
 
 // import loadScript from './util/load-script'
 import urlRegexp from './util/url-regular-expression'

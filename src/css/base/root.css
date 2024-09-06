@@ -67,6 +67,7 @@
 
   /*  tag Gradient */
   --tag-gradient: linear-gradient(60deg, rgb(72 33 45), rgb(138 11 49 / 87%));
+  --tag-gradient-two: linear-gradient(60deg,#2e2ea2,#138395);
 }
 
 /* Dark mode

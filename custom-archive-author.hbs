@@ -15,9 +15,8 @@
     {{> "components/featured-image" mediaImage=feature_image mediaAlt=title mediaClass="inset-image"}}
 
     {{#unless feature_image}}
-    <img class="inset-image blur-up lazyload"
-        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-        data-src="{{asset "images/simply-title.jpg"}}"
+    <img class="inset-image"
+        src="{{asset "images/simply-title.jpg"}}"
         width="1200"
         height="628"
         alt="{{title}}"

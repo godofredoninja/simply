@@ -77,6 +77,7 @@
 
   /*  tag Gradient */
   --tag-gradient: linear-gradient(60deg, rgb(72, 33, 45), rgba(138, 11, 49, 0.87));
+  --tag-gradient-two: linear-gradient(60deg,#2e2ea2,#138395);
 }
 /* Dark mode
 /* ---------------------------------------------------------- */
@@ -719,13 +720,14 @@ h6 {
 }
 /* Img Blur lazyloaded
 /* ---------------------------------------------------------- */
-.blur-up {
+/* .blur-up {
   opacity: 0;
 }
+
 .blur-up.lazyloaded {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 /* Loanding Bar
 /* ---------------------------------------------------------- */
 .loadingBar {
@@ -3226,9 +3228,6 @@ except for when immediately preceeded by a heading */
   }
   .lg\:right-auto {
     right: auto;
-  }
-  .lg\:top-28 {
-    top: 7rem;
   }
   .lg\:top-32 {
     top: 8rem;

@@ -5,103 +5,93 @@
     * mediaLazy (true, false - default)
     * mediaClass (class for <img>)
     * mediaAlt (alt for <img>)
-    * mediaGradient (bg dark) filter: brightness(.5)
 --}}
 {{#if mediaImage}}
 <picture>
     {{!-- Featured Image Small 300px --}}
     {{#match mediaSize "s"}}
-        <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="avif"}}"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            type="image/avif">
-        <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="webp"}}"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            type="image/webp">
-        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block blur-up lazyload{{/if}}"
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s"}}"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+        <source srcset="{{img_url mediaImage size="s" format="avif"}}" type="image/avif">
+        <source srcset="{{img_url mediaImage size="s" format="webp"}}" type="image/webp">
+        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block{{/if}}"
+            srcset="{{img_url mediaImage size="s"}}"
+            src="{{img_url mediaImage size="s"}}"
             alt="{{#if mediaAlt}}{{mediaAlt}}{{else}}{{title}}{{/if}}"
+            {{#if mediaLazy}}loading="lazy"{{/if}}
         >
 
     {{!-- Featured Image Medium 600px --}}
     {{else match mediaSize "m"}}
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="xs" format="avif"}} 100w,
-                    {{img_url mediaImage size="s" format="avif"}} 300w,
-                    {{img_url mediaImage size="m" format="avif"}} 600w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            srcset="{{img_url mediaImage size="s" format="avif"}} 300w, {{img_url mediaImage size="m" format="avif"}} 600w"
+            sizes="(max-width:480px) 300px, 600px"
             type="image/avif">
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="xs" format="webp"}} 100w,
-                    {{img_url mediaImage size="s" format="webp"}} 300w,
-                    {{img_url mediaImage size="m" format="webp"}} 600w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            srcset="{{img_url mediaImage size="s" format="webp"}} 300w, {{img_url mediaImage size="m" format="webp"}} 600w"
+            sizes="(max-width:480px) 300px, 600px"
             type="image/webp">
-        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block blur-up lazyload{{/if}}"
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="xs"}} 100w,
-                    {{img_url mediaImage size="s"}} 300w,
+        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block{{/if}}"
+            srcset="{{img_url mediaImage size="s"}} 300w,
                     {{img_url mediaImage size="m"}} 600w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            sizes="(max-width:480px) 300px, 600px"
+            src="{{img_url mediaImage size="s"}}"
             alt="{{#if mediaAlt}}{{mediaAlt}}{{else}}{{title}}{{/if}}"
+            {{#if mediaLazy}}loading="lazy"{{/if}}
         >
 
     {{!-- Featured Image Large 1000px --}}
     {{else match mediaSize "l"}}
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="avif"}} 300w,
+            srcset="{{img_url mediaImage size="s" format="avif"}} 300w,
                     {{img_url mediaImage size="m" format="avif"}} 600w,
                     {{img_url mediaImage size="l" format="avif"}} 1000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 1000px"
             type="image/avif"
         >
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="webp"}} 300w,
+            srcset="{{img_url mediaImage size="s" format="webp"}} 300w,
                     {{img_url mediaImage size="m" format="webp"}} 600w,
                     {{img_url mediaImage size="l" format="webp"}} 1000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 1000px"
             type="image/webp"
         >
-        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block blur-up lazyload{{/if}}"
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s"}} 300w,
+        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block{{/if}}"
+            srcset="{{img_url mediaImage size="s"}} 300w,
                     {{img_url mediaImage size="m"}} 600w,
                     {{img_url mediaImage size="l"}} 1000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 100vw"
+            src="{{img_url mediaImage size="s"}}"
             alt="{{#if mediaAlt}}{{mediaAlt}}{{else}}{{title}}{{/if}}"
+            {{#if mediaLazy}}loading="lazy"{{/if}}
         >
 
     {{!-- Featured Image XL 2000px --}}
     {{else}}
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="avif"}} 300w,
+            srcset="{{img_url mediaImage size="s" format="avif"}} 300w,
                     {{img_url mediaImage size="m" format="avif"}} 600w,
                     {{img_url mediaImage size="l" format="avif"}} 1000w,
                     {{img_url mediaImage size="xl" format="avif"}} 2000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 1000px, (max-width: 1600px) 100vw"
             type="image/avif"
         >
         <source
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s" format="webp"}} 300w,
+            srcset="{{img_url mediaImage size="s" format="webp"}} 300w,
                     {{img_url mediaImage size="m" format="webp"}} 600w,
                     {{img_url mediaImage size="l" format="webp"}} 1000w,
                     {{img_url mediaImage size="xl" format="webp"}} 2000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 1000px, (max-width: 1600px) 100vw"
             type="image/webp"
         >
-        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block blur-up lazyload{{/if}}"
-            {{#if mediaLazy}}data-{{/if}}srcset="{{img_url mediaImage size="s"}} 300w,
+        <img class="{{#if mediaClass}}{{mediaClass}}{{else}}story-img inset-image block{{/if}}"
+            srcset="{{img_url mediaImage size="s"}} 300w,
                     {{img_url mediaImage size="m"}} 600w,
                     {{img_url mediaImage size="l"}} 1000w,
                     {{img_url mediaImage size="xl"}} 2000w"
-            {{#if mediaLazy}}data-{{/if}}sizes="auto"
-            src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+            sizes="(max-width: 400px) 300px, (max-width: 730px) 600px, (max-width: 1000px) 1000px, (max-width: 1600px) 100vw"
+            src="{{img_url mediaImage size="l"}}"
             alt="{{#if mediaAlt}}{{mediaAlt}}{{else}}{{title}}{{/if}}"
+            {{#if mediaLazy}}loading="lazy"{{/if}}
         >
     {{/match}}
-    {{#if mediaGradient}}<div class="absolute inset-0 bg-black bg-opacity-50 simply-cover-gradient z-2"></div>{{/if}}
 </picture>
 {{/if}}

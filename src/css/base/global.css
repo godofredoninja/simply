@@ -12,14 +12,14 @@
 /* Img Blur lazyloaded
 /* ---------------------------------------------------------- */
 
-.blur-up {
+/* .blur-up {
   opacity: 0;
 }
 
 .blur-up.lazyloaded {
   opacity: 1;
   transition: opacity 0.5s ease-in-out;
-}
+} */
 
 /* Loanding Bar
 /* ---------------------------------------------------------- */

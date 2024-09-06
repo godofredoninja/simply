@@ -1,33 +1,7 @@
 {{!< default}}
 
-{{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}medium-sidebar has-cover is-head-transparent is-menu-text-white{{/contentFor}}
-
-{{#post}}
-<div class="simply-hero-cover u-primaryGradient relative overflow-hidden pt-16">
-    <div class="mx-auto container relative flex justify-between flex-col items-center py-12 md:py-vw4 z-3 md:flex-row md:px-5">
-        <div class="md:pr-5 flex-none text-white text-center md:text-left md:max-w-md lg:max-w-xl">
-            <h1 class="text-5xl lg:text-6xl">{{title}}</h1>
-            {{#if custom_excerpt}}<p class="mt-6 text-22 opacity-80">{{custom_excerpt}}</p>{{/if}}
-        </div>
-
-        {{#if feature_image}}
-        <figure class="relative max-w-lg w-full hidden md:flex mt-12 md:mt-0">
-            <img class="blur-up lazyload object-center w-full"
-                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                data-srcset="{{img_url feature_image size="s"}} 300w,
-                        {{img_url feature_image size="m"}} 600w,
-                        {{img_url feature_image size="l"}} 1000w,
-                        {{img_url feature_image size="xl"}} 2000w"
-                data-sizes="auto"
-                width="512"
-                height="384"
-                alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
-        </figure>
-        {{/if}}
-    </div>
-</div>
-{{/post}}
+{{!-- Publication Cover - partials/home/publication-cover.hbs --}}
+{{> "home/publication-cover"}}
 
 <div class="container mx-auto px-4 py-vmin8 grid gap-10 xl:gap-20 lg:grid-cols-sidebar">
     <div>
@@ -64,13 +38,14 @@
 
                 {{#if feature_image}}
                 <a href="{{url}}" class="flex-none">
-                    <img class="block blur-up lazyload h-32 object-cover w-52"
-                        src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
-                        data-srcset="{{img_url feature_image size="s"}} 400w,{{img_url feature_image size="m"}} 750w,{{img_url feature_image size="l"}} 960w"
-                        data-sizes="auto"
-                        width="208"
-                        height="128"
-                        alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"/>
+                    {{!-- Featured Image - ./partials/components/featured-image.hbs --}}
+                    {{> "components/featured-image"
+                        mediaImage=feature_image
+                        mediaAlt=feature_image_alt
+                        mediaSize="s"
+                        mediaClass="h-32 object-cover w-52"
+                        mediaLazy=true
+                    }}
                 </a>
                 {{/if}}
             </article>
@@ -81,16 +56,6 @@
         {{pagination}}
     </div>
 
-    {{!-- sidebar --}}
-    <aside class="sidebar flex flex-col justify-start">
-        <div class="lg:sticky lg:top-28">
-            <h3 class="uppercase text-sm font-semibold mb-4">{{t "Discover more of what matters to you"}}</h3>
-            <div class="buttons">
-                {{#get "tags" limit="10" filter="visibility:public" order="count.posts desc"}}{{#foreach tags}}
-                    <a href="{{url absolute="true"}}" title="{{name}}" class="button is-light font-medium text-sm capitalize">{{name}}</a>
-                {{/foreach}}{{/get}}
-            </div>
-            <hr>
-        </div>
-    </aside>
+    {{!-- Sidebar - partials/sidebar/sidebar.hbs --}}
+    {{>"sidebar/sidebar"}}
 </div>
