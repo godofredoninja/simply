@@ -8,7 +8,7 @@
         <div class="js-feed-entry">
             {{#foreach posts}}
 
-            <article class="js-story mb-12 flex justify-between items-center">
+            <article class="js-story flex justify-between items-center pb-5 mb-5 border-b" style="border-color: var(--border-color)">
                 <header class="mr-5 w-full">
                     <div class="mb-2 flex flex-row items-center">
                         {{#primary_author}}
@@ -28,7 +28,7 @@
                     </div>
 
                     <a href="{{url}}">
-                        <h2 class="text-2xl line-clamp-2 text-title leading-tight">{{title}}</h2>
+                        <h2 class="text-22 line-clamp-2 text-title leading-tight">{{title}}</h2>
                         {{#if excerpt}}<p class="mt-2 text-gray-500 text-base line-clamp-2">{{excerpt characters="150"}}</p>{{/if}}
                     </a>
 
