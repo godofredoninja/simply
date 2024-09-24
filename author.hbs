@@ -4,67 +4,58 @@
 {{#author}}
 
 {{!-- custom Styles For tag <body> --}}
-{{#contentFor "special_body_class"}}is-author has-cover is-head-transparent is-menu-text-white{{/contentFor}}
+
+{{#if cover_image}}{{#contentFor "special_body_class"}}is-author has-cover is-head-transparent is-menu-text-white{{/contentFor}}{{/if}}
 
 {{!-- Author content --}}
-<div class="simply-hero-cover author shadow flex items-center justify-center relative min-h-lg py-24 bg-dark">
-
-    {{!-- Featured Image - partials/components/featured-image.hbs --}}
-    {{> "components/featured-image" mediaImage=cover_image mediaAlt=name mediaClass="inset-image brightness-50"}}
-
-    <article class="container relative flex flex-col text-center z-3 pt-16">
+<div class="simply-hero-cover author shadow flex items-center justify-center relative{{#if cover_image}} min-h-lg pb-12 pt-28 bg-dark text-white{{else}} text-gray-900 py-12{{/if}}">
+    <article class="container relative flex flex-col text-center z-3">
         {{!-- Author name --}}
-        <h1 class="cover-title text-4xl lg:text-5xl my-5 text-white">{{name}}</h1>
+        <h1 class="cover-title text-4xl lg:text-5xl my-5 text-inherit">{{name}}</h1>
 
         {{!-- Author avatar --}}
         <figure class="author-avatar relative mx-auto -order-1">
-            <img class="w-52 h-52 rounded-full object-cover"
+            <img class="w-40 h-40 rounded-full object-cover"
                 src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}"
                 alt="{{t "Hi I'm"}} {{name}}"
             />
         </figure>
 
-
         {{!-- author biography --}}
-        {{#if bio}}<p class="cover-des mx-auto mb-8 text-xl text-white max-w-3xl">{{bio}}</p>{{/if}}
+        {{#if bio}}<p class="cover-des mx-auto mb-8 text-xl text-inherit max-w-3xl">{{bio}}</p>{{/if}}
 
-        {{!-- Author (Location - website - RSS) --}}
-        <div class="author-meta buttons justify-center">
+        {{!-- Author (Location - website - facebook - x) --}}
+        <div class="author-meta flex flex-col gap-5 justify-center text-inherit md:flex-row">
             {{#if location}}
-                <span class="author-location button bg-transparent opacity-70 hover:opacity-100 hover:text-white hover:bg-transparent text-white">
+                <span class="p-1">
                     <svg class="icon is-stroke"><use xlink:href="#icon-map"></use></svg>
                     <span>{{location}}</span>
                 </span>
             {{/if}}
 
             {{#if website}}
-                <a href="{{website}}" class="author-link button bg-transparent opacity-70 hover:opacity-100 hover:text-white hover:bg-transparent text-white" target="_blank" rel="noopener noreferrer">
-                    <svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg>
-                    <span>{{website}}</span>
+                <a href="{{website}}" class="p-1 hover:opacity-70" target="_blank" rel="noopener noreferrer">
+                    <svg class="icon is-stroke -rotate-45"><use xlink:href="#icon-link"></use></svg>
+                    <span>{{t "Website"}}</span>
                 </a>
             {{/if}}
 
-            <a href="https://feedly.com/i/subscription/feed/{{url absolute="true"}}rss/" class="author-stats button bg-transparent opacity-70 hover:opacity-100 hover:text-white hover:bg-transparent text-white" target="_blank" rel="noopener noreferrer">
-                <svg class="icon"><use xlink:href="#icon-rss"></use></svg>
-                <span>{{plural ../pagination.total empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}</span>
-            </a>
-        </div>
-
-        {{!-- Author Facebook and Twitter --}}
-        <div class="author-follow buttons justify-center mt-8">
             {{#if facebook}}
-            <a href="{{facebook_url}}" title="Facebook" class="button text-white bg-transparent hover:text-white hover:bg-transparent" target="_blank" rel="noopener noreferrer">
+            <a href="{{facebook_url}}" title="Facebook" class="p-1 hover:opacity-70" target="_blank" rel="noopener noreferrer">
                 <svg class="icon"><use xlink:href="#icon-facebook"></use></svg>
                 </a>
             {{/if}}
 
             {{#if twitter}}
-            <a href="{{twitter_url}}" title="{{twitter}}" class="button text-white bg-transparent hover:text-white hover:bg-transparent" target="_blank" rel="noopener noreferrer">
+            <a href="{{twitter_url}}" title="{{twitter}}" class="p-1 hover:opacity-70" target="_blank" rel="noopener noreferrer">
                 <svg class="icon"><use xlink:href="#icon-twitter"></use></svg>
             </a>
             {{/if}}
         </div>
     </article>
+
+    {{!-- Featured Image - partials/components/featured-image.hbs --}}
+    {{> "components/featured-image" mediaImage=cover_image mediaAlt=name mediaClass="inset-image brightness-50"}}
 </div>
 {{/author}}
 

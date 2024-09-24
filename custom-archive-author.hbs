@@ -30,7 +30,7 @@
 <div class="container mx-auto grid gap-10 py-vmin8 md:grid-cols-2 lg:grid-cols-4">
     {{#foreach authors}}
         <article class="author-card flex flex-col text-center">
-            <img class="author-card-avatar object-cover mx-auto rounded-full w-52 h-52" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
+            <img class="author-card-avatar object-cover mx-auto rounded-full w-48 h-48" src="{{#if profile_image}}{{img_url profile_image size="s"}}{{else}}{{asset "images/avatar.png"}}{{/if}}" alt="{{t "Hi I'm"}} {{name}}" />
 
             <h2 class="author-card-name text-title capitalize text-2xl mt-5 hover:opacity-80"><a href="{{url}}">{{name}}</a></h2>
             {{#if bio}}<p class="author-card-bio text-gray-500 line-clamp-3 mt-3 leading-relaxed">{{bio}}</p>{{/if}}
@@ -38,7 +38,7 @@
             <div class="pt-5 space-x-2">
                 {{#if facebook}}<a href="{{facebook_url}}" class="button is-white" title="Facebook" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-facebook"></use></svg></a>{{/if}}
                 {{#if twitter}}<a href="{{twitter_url}}" class="button is-white" title="{{twitter}}" target="_blank" rel="noopener noreferrer"><svg class="icon"><use xlink:href="#icon-twitter"></use></svg></a>{{/if}}
-                {{#if website}}<a href="{{website}}" class="button is-white" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
+                {{#if website}}<a href="{{website}}" class="button is-white" title="{{website}}" target="_blank" rel="noopener noreferrer"><svg class="icon is-stroke -rotate-45"><use xlink:href="#icon-link"></use></svg></a>{{/if}}
             </div>
         </article>
     {{/foreach}}

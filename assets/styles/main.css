@@ -1992,6 +1992,12 @@ except for when immediately preceeded by a heading */
 .w-4\/12 {
   width: 33.333333%;
 }
+.w-40 {
+  width: 10rem;
+}
+.w-48 {
+  width: 12rem;
+}
 .w-5 {
   width: 1.25rem;
 }
@@ -2066,6 +2072,10 @@ except for when immediately preceeded by a heading */
 }
 .grow {
   flex-grow: 1;
+}
+.-rotate-45 {
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .rotate-180 {
   --tw-rotate: 180deg;
@@ -2167,6 +2177,9 @@ except for when immediately preceeded by a heading */
 }
 .gap-4 {
   gap: 1rem;
+}
+.gap-5 {
+  gap: 1.25rem;
 }
 .gap-8 {
   gap: 2rem;
@@ -2574,6 +2587,9 @@ except for when immediately preceeded by a heading */
 }
 .pt-16 {
   padding-top: 4rem;
+}
+.pt-28 {
+  padding-top: 7rem;
 }
 .pt-3 {
   padding-top: 0.75rem;
@@ -3055,9 +3071,6 @@ except for when immediately preceeded by a heading */
   --tw-bg-opacity: 1;
   background-color: rgb(252 211 77 / var(--tw-bg-opacity));
 }
-.hover\:bg-transparent:hover {
-  background-color: transparent;
-}
 .hover\:text-dark:hover {
   --tw-text-opacity: 1;
   color: rgb(17 15 22 / var(--tw-text-opacity));
@@ -3070,10 +3083,6 @@ except for when immediately preceeded by a heading */
 }
 .hover\:text-primary:hover {
   color: var(--ghost-accent-color);
-}
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
