@@ -1,6 +1,6 @@
 <article class="js-story story-post pb-12 mb-12 border-b" style="border-color: var(--border-color)">
     <header class="story-post-header mb-5">
-        <h2 class="text-2xl leading-tight text-title mb-5"><a href="{{url}}">{{title}}</a></h2>
+        <h2 class="text-2xl leading-tight text-title mb-5 md:text-28"><a href="{{url}}">{{title}}</a></h2>
         {{!-- Author - Primary Tag - Datetime - Read time - ./partials/components/author-meta.hbs --}}
         {{> "components/author-meta"}}
     </header>
@@ -15,11 +15,11 @@
     {{/if}}
 
     <div class="story-post-body">
-        <p class="my-5">{{excerpt}}</p>
+        <p class="my-5 text-lg">{{excerpt}}</p>
 
         {{!-- Read More --}}
         <a href="{{url}}" class="tracking-wide" aria-label="{{title}}">
-            <span class="transition-all hover:mr-2">{{t "Read more"}}</span>
+            <span class="transition-all hover:mr-2 text-lg">{{t "Read more"}}</span>
             <svg class="icon is-medium ml-2"><use xlink:href="#icon-arrow"></use></svg>
         </a>
     </div>

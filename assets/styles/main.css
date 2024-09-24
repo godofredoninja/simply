@@ -2627,6 +2627,9 @@ except for when immediately preceeded by a heading */
 .text-22 {
   font-size: 1.375rem;
 }
+.text-28 {
+  font-size: 1.75rem;
+}
 .text-2xl {
   font-size: 1.5rem;
 }
@@ -3223,6 +3226,9 @@ except for when immediately preceeded by a heading */
   }
   .md\:text-6xl {
     font-size: 4rem;
+  }
+  .md\:text-28 {
+    font-size: 1.75rem;
   }
 }
 @media (min-width: 1000px) {

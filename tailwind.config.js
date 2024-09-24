@@ -100,6 +100,7 @@ module.exports = {
         '7xlg': '5rem',
         '8xl': '6rem',
         //
+        28: '1.75rem',
         22: '1.375rem',
         32: '2rem',
         40: '2.5rem',
