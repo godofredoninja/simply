@@ -58,7 +58,7 @@ routes:
 
   /sections/:
     controller: channel
-    template: godo-home-categories
+    template: godo-home-sections
 
   /podcast/rss/:
     template: podcast/rss
