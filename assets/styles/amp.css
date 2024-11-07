@@ -1,5 +1,1363 @@
-/*!
- * simply v0.4.0
- * Copyright 2024 GodoFredo <hello@godofredo.ninja> (https://github.com/godofredoninja/simply)
- * Licensed under GPL-3.0-or-later
- */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}main{display:block}h1{font-size:2em;margin:.67em 0}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}[hidden],template{display:none}.container{margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}.text-gray-800{color:#292929}.text-white{color:#fff}.text-gray-500{color:#757575}.block{display:block}.uppercase{text-transform:uppercase}.capitalize{text-transform:capitalize}.tracking-wider{letter-spacing:.05em}.leading-snug{line-height:1.375}.text-sm{font-size:.875rem}.text-lg{font-size:1.25rem}.text-center{text-align:center}.font-medium{font-weight:500}.h-16{height:4rem}.m-0{margin:0}.mt-8{margin-top:2rem}.mr-3{margin-right:.75rem}.mb-3{margin-bottom:.75rem}.mb-5{margin-bottom:1.25rem}.mx-1{margin-left:.25rem;margin-right:.25rem}.pt-8{padding-top:2rem}.pb-8{padding-bottom:2rem}.px-4{padding-left:1rem;padding-right:1rem}.rounded-full{border-radius:9999px}.overflow-hidden{overflow:hidden}.flex{display:flex}.flex-none{flex:none}.flex-auto{flex:1 1 auto}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.kg-bookmark-container,body,figcaption,h1,h2,h3,h4,h5,h6{font-family:Whitney SSm A,Whitney SSm B,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif}*,:after,:before{box-sizing:border-box}body{color:#292929;font-size:1rem;font-style:normal;font-weight:400;letter-spacing:0;line-height:1.5;text-rendering:optimizeLegibility;-webkit-text-size-adjust:100%;-moz-text-size-adjust:100%;text-size-adjust:100%}a{color:var(--ghost-accent-color);text-decoration:none;word-break:break-word}a:active,a:hover{outline:0}blockquote{border-left:4px solid #292929;font-size:1.125rem;font-style:italic;margin-left:-5px;margin-right:0;padding-bottom:2px;padding-left:1.25rem}figure{margin:0;padding:0}img{-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}figcaption{color:#757575;display:block;font-size:.875rem;font-style:normal;font-weight:400;margin-top:.75rem;text-align:center;width:100%}h1,h2,h3,h4,h5,h6{color:#18181b;font-style:normal;font-weight:700;line-height:1.25;margin:1.5rem 0 0;word-break:break-word}h1{font-size:2.25rem}h2{font-size:1.75rem}h3{font-size:1.5rem}h4{font-size:1.375rem}h5{font-size:1.25rem}h6{font-size:1.125rem}strong{font-weight:700}p{margin:1.25rem 0 0}hr{border:0;border-top:1px solid #e2ecec;box-sizing:content-box;height:0;margin:1rem 0;overflow:visible}mark{background-color:transparent;background-image:linear-gradient(180deg,#d7fdd3,#d7fdd3);color:rgba(0,0,0,.8)}code,pre{font-family:Menlo,Courier,monospace;-webkit-hyphens:none;hyphens:none;-moz-tab-size:4;-o-tab-size:4;tab-size:4;white-space:pre;word-break:normal;word-spacing:normal;word-wrap:normal}:not(pre)>code{background:#e5eff5;border-radius:2px;color:#2a3644;font-size:1rem;padding:1px 6px}pre{background:#2a3644;border:0;border-radius:8px;color:#e5eff5;font-size:.875rem;line-height:1.6em;margin:0;overflow-x:auto;padding:1.25rem}pre code{background:transparent;padding:0}svg{height:100%;width:100%}svg:not(:root){overflow:hidden}table{border-collapse:collapse;border-spacing:0;display:inline-block;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:1rem;line-height:1.5;margin:1.25rem 0 0;max-width:100%;overflow-x:auto;vertical-align:top;white-space:nowrap;width:auto;-webkit-overflow-scrolling:touch}table td,table th{border:1px solid #dfe2e5;padding:.5rem .875rem}table tr:nth-child(2n){background-color:#f6f8fa}table th{font-weight:500;letter-spacing:.2px;text-transform:uppercase}.header{box-shadow:0 0 3px rgba(0,0,0,.03),0 3px 46px rgba(0,0,0,.07)}.logo-link{color:#000;font-size:1.75rem;font-weight:700}.social-media a{display:inline-block;height:2.5rem;margin:.5rem 0;padding:.5rem;vertical-align:middle;width:2.5rem}.sidebar{background:#fff;width:18rem}.sidebar ul{list-style:none;list-style-image:none;margin:1.125rem 0 1.25rem;padding:0}.sidebar ul li a{color:#292929;display:block;font-size:1.125rem;font-weight:500;padding:.5rem 1.25rem}.close-sidebar{font-size:1.5rem;outline:none}.hamburgermenu{background-color:transparent;border:0;height:3rem;margin-right:-1rem;outline:none;padding:0;position:relative;transition:transform .4s;width:3rem}.hamburgermenu span{background-color:currentColor;display:block;height:2px;left:.875rem;margin-top:-1px;position:absolute;top:50%;width:1.25rem}.hamburgermenu span:first-child{transform:translateY(-6px)}.hamburgermenu span:last-child{transform:translateY(6px)}.main{margin:0 auto;max-width:42.5rem}.article-body{font-family:charter,Georgia,Cambria,Times New Roman,Times,serif;font-size:1.125rem;line-height:1.7em}.article-body>*{margin-bottom:1.5rem}.article-body a:not(.kg-bookmark-container){text-decoration:underline;word-break:break-word}.article-body ol,.article-body ul{padding-left:1.25rem}.article-body ol li,.article-body ul li{margin-bottom:5px}.button-tags{background-color:var(--ghost-accent-color);border:0;border-radius:1.5625rem;color:#fff;display:inline-block;margin:.3125rem;padding:.3125rem 1.25rem}amp-social-share.custom-style{background-color:teal;background-image:url(https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png);background-position:50%;background-repeat:no-repeat;background-size:contain}amp-social-share.rounded{background-size:85%;border-radius:10%}.story-link-text{color:#18181b;font-size:1rem;font-weight:700}.story-link-icon{background-color:var(--ghost-accent-color);color:#fff;font-size:1.5rem;font-weight:500;height:2.5rem;text-align:center;width:2.5rem}.kg-bookmark-container{border:1px solid rgba(0,0,0,.1);display:flex;flex-direction:column}.kg-bookmark-content{order:1;padding:1.25rem}.kg-bookmark-title{font-size:1.125rem;font-weight:500;line-height:1.2}.kg-bookmark-description{color:#757575;font-size:.875rem;line-height:1.4;margin-top:.75rem}.kg-bookmark-metadata{align-items:center;display:flex;font-size:.875rem;margin-top:.75rem}.kg-bookmark-icon{margin-right:5px}.kg-bookmark-author:after{content:"•";margin:0 6px}.kg-bookmark-publisher{color:inherit}.kg-embed-card{align-items:center;display:flex;flex-direction:column;width:100%}.kg-image-card img{margin:auto}.kg-gallery-card+.kg-gallery-card{margin-top:.75em}.kg-gallery-container{position:relative}.kg-gallery-row{display:flex;flex-direction:row;justify-content:center}.kg-gallery-image{height:100%;width:100%}.kg-gallery-row:not(:first-of-type){margin:.75em 0 0}.kg-gallery-image:not(:first-of-type){margin:0 0 0 .75em}.kg-toggle-card-icon{display:none}.kg-toggle-content{margin-top:.8rem}.kg-product-card-container{background:transparent;border-radius:5px;box-shadow:inset 0 0 0 1px rgba(124,139,154,.25);padding:20px;width:100%}.kg-product-card-description p{margin-top:1.5em}.kg-product-card-description ul{margin-left:24px}.kg-product-card-title{font-size:1.9rem;font-weight:700}.kg-product-card-rating-star{height:28px;margin-right:2px;width:20px}.kg-product-card-rating-star svg{height:16px;width:16px;fill:currentColor;opacity:.15}.kg-product-card-rating-active.kg-product-card-rating-star svg{opacity:1}.kg-nft-card-container{background:#fff;border-radius:5px;box-shadow:0 2px 6px -2px rgba(0,0,0,.1),0 0 1px rgba(0,0,0,.4);color:#15212a;display:flex;flex:auto;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size:1.4rem;font-weight:400;margin:0 auto;max-width:512px;position:relative;text-decoration:none;transition:none;width:100%}.kg-nft-metadata{padding:2rem}.kg-nft-image-container{position:relative}.kg-nft-image{border-radius:5px 5px 0 0;display:flex}.kg-nft-header{align-items:flex-start;display:flex;justify-content:space-between;grid-gap:20px;gap:20px}.kg-nft-header h4.kg-nft-title{color:#15212a;font-size:1.9rem;font-weight:700;margin:0}.kg-nft-header amp-img{max-height:26px;max-width:114px}.kg-nft-opensea-logo{margin-top:2px;width:100px}.kg-nft-creator{color:#95a1ad;font-family:inherit}.kg-nft-creator span{color:#15212a;font-weight:500}.kg-nft-card p.kg-nft-description{color:#222;font-size:1.4rem;line-height:1.4em;margin:2rem 0 0}.kg-button-card{justify-content:center;width:100%}.kg-btn,.kg-button-card{align-items:center;display:flex;position:static}.kg-btn{border-radius:5px;font-size:1.65rem;font-weight:600;height:4rem;line-height:4rem;padding:0 2rem;text-decoration:none;transition:opacity .2s ease-in-out}.kg-btn:hover{opacity:.85}.kg-btn-accent{background-color:#1292ee;background-color:var(--ghost-accent-color,#1292ee);color:#fff}.kg-callout-card{border-radius:3px;display:flex;padding:20px 28px}.kg-callout-card-grey{background:rgba(124,139,154,.13)}.kg-callout-card-white{background:transparent;box-shadow:inset 0 0 0 1px rgba(124,139,154,.25)}.kg-callout-card-blue{background:rgba(33,172,232,.12)}.kg-callout-card-green{background:rgba(52,183,67,.12)}.kg-callout-card-yellow{background:rgba(240,165,15,.13)}.kg-callout-card-red{background:rgba(209,46,46,.11)}.kg-callout-card-pink{background:rgba(225,71,174,.11)}.kg-callout-card-purple{background:rgba(135,85,236,.12)}.kg-callout-card-accent{background:var(--ghost-accent-color);color:#fff}.kg-callout-card-accent a{color:#fff}.kg-callout-emoji{font-size:1.25em;line-height:1.3;padding-right:16px}.kg-header-card{align-items:center;display:flex;flex-direction:column;justify-content:center;padding:6em 3em;text-align:center}.kg-header-card.kg-size-small{padding-bottom:4em;padding-top:4em}.kg-header-card.kg-size-large{padding-bottom:12em;padding-top:12em}.kg-header-card.kg-width-full{padding-left:4em;padding-right:4em}.kg-header-card.kg-align-left{align-items:flex-start;text-align:left}.kg-header-card.kg-style-dark{background:#15171a;color:#fff}.kg-header-card.kg-style-light{border:1px solid rgba(124,139,154,.25);border-width:1px 0;color:#15171a}.kg-header-card.kg-style-accent{background-color:var(--ghost-accent-color)}.kg-header-card.kg-style-image{background-color:#e7e7eb;background-position:50%;background-size:cover}.kg-header-card h2{font-size:4em;font-weight:700;line-height:1.1em;margin:0}.kg-header-card h2 strong{font-weight:800}.kg-header-card.kg-size-small h2{font-size:3em}.kg-header-card.kg-size-large h2{font-size:5em}.kg-header-card h3{font-size:1.25em;font-weight:500;line-height:1.3em;margin:0}.kg-header-card h3 strong{font-weight:600}.kg-header-card.kg-size-small h3{font-size:1em}.kg-header-card.kg-size-large h3{font-size:1.5em}.kg-header-card:not(.kg-style-light) h2,.kg-header-card:not(.kg-style-light) h3{color:#fff}.kg-header-card a.kg-header-card-button{align-items:center;background-color:var(--ghost-accent-color);border-radius:5px;color:#fff;display:flex;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-size:.95em;font-weight:600;height:2.4em;line-height:1em;margin:1.75em 0 0;padding:0 1.2em;position:static;text-decoration:none;transition:opacity .2s ease-in-out}.kg-header-card a.kg-header-card-button:hover{opacity:.85}.kg-header-card.kg-size-large a.kg-header-card-button{margin-top:2em}.kg-header-card.kg-size-small a.kg-header-card-button{margin-top:1.5em}.kg-header-card.kg-style-dark a.kg-header-card-button,.kg-header-card.kg-style-image a.kg-header-card-button{background:#fff;color:#15171a}.kg-header-card.kg-style-accent a.kg-header-card-button{background:#fff;color:var(--ghost-accent-color)}.kg-audio-card{box-shadow:inset 0 0 0 1px rgba(124,139,154,.25);display:flex;width:100%}.kg-audio-thumbnail{align-items:center;aspect-ratio:1/1;background:transparent;border-radius:3px 0 0 3px;display:flex;height:80px;justify-content:center;min-width:80px;-o-object-fit:cover;object-fit:cover;width:80px}.kg-audio-thumbnail.placeholder{background:var(--ghost-accent-color)}.kg-audio-thumbnail.placeholder svg{height:24px;width:24px;fill:#fff}.kg-audio-player-container{display:flex;flex-direction:column;justify-content:space-between;position:relative;width:100%;--seek-before-width:0%;--volume-before-width:100%;--buffered-width:0%}.kg-audio-title{background:transparent;border:none;font-family:inherit;font-size:1.1em;font-weight:700;padding:8px 12px 0;width:100%}.kg-audio-player{display:none}.kg-width-full.kg-card-hascaption{display:grid;grid-template-columns:inherit}
+/* stylelint-disable */
+
+/* https://github.com/TryGhost/Ghost/blob/main/core/frontend/apps/amp/lib/views/amp.hbs */
+
+/* 01. Narmalize css && utilities
+/* ---------------------------------------------------------- */
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code, kbd, samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button, input, optgroup, select, textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button, input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button, select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"], [type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+/* stylelint-disable */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-gray-800 {
+  color: #292929;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-gray-500 {
+  color: #757575;
+}
+
+.block {
+  display: block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.leading-snug {
+  line-height: 1.375;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.h-16 {
+  height: 4rem;
+}
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.mx-1 {
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.px-4 {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* 02. Variables
+/* ---------------------------------------------------------- */
+
+/* font default page and titles */
+
+/* font for content */
+
+/* 03. extend
+/* ---------------------------------------------------------- */
+
+body, figcaption, h1, h2, h3, h4, h5, h6, .kg-bookmark-container {
+  font-family: Whitney SSm A, Whitney SSm B, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
+}
+
+/* 04. Global
+/* ---------------------------------------------------------- */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+
+  color: #292929;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+}
+
+a {
+  color: var(--ghost-accent-color);
+  text-decoration: none;
+  word-break: break-word
+}
+
+a:active, a:hover {
+    outline: 0;
+  }
+
+blockquote {
+  border-left: 4px solid #292929;
+  font-size: 1.125rem;
+  font-style: italic;
+  margin-left: -5px;
+  margin-right: 0;
+  padding-bottom: 2px;
+  padding-left: 1.25rem;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+figcaption {
+
+  color: #757575;
+  display: block;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  margin-top: 0.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* 05.typography - Titles
+/* ---------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+
+  color: #18181b;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 1.5rem 0 0;
+  word-break: break-word;
+}
+
+h1 { font-size: 2.25rem; }
+
+h2 { font-size: 1.75rem; }
+
+h3 { font-size: 1.5rem; }
+
+h4 { font-size: 1.375rem; }
+
+h5 { font-size: 1.25rem; }
+
+h6 { font-size: 1.125rem; }
+
+strong {
+  font-weight: 700;
+}
+
+p {
+  margin: 1.25rem 0 0;
+}
+
+/* 06. <hr> <Mark>
+/* ---------------------------------------------------------- */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 1rem 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid #e2ecec;
+}
+
+mark {
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, rgba(215, 253, 211, 1), rgba(215, 253, 211, 1));
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* 07. Code and pre
+/* ---------------------------------------------------------- */
+
+code, pre {
+  font-family: Menlo, Courier, monospace;
+  -webkit-hyphens: none;
+          hyphens: none;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
+  white-space: pre;
+  word-break: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+}
+
+:not(pre) > code {
+  background: #e5eff5;
+  border-radius: 2px;
+  color: #2a3644;
+  font-size: 1rem;
+  padding: 1px 6px;
+}
+
+pre {
+  background: #2a3644;
+  border: 0;
+  color: #e5eff5;
+  font-size: 0.875rem;
+  line-height: 1.6em;
+  margin: 0;
+  overflow-x: auto;
+  padding: 1.25rem;
+  border-radius: 8px;
+}
+
+pre code {
+    background: transparent;
+    padding: 0;
+  }
+
+/* 08. SVG
+/* ---------------------------------------------------------- */
+
+svg {
+  height: 100%;
+  width: 100%;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* 08. SVG
+/* ---------------------------------------------------------- */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1.25rem 0 0;
+  max-width: 100%;
+  overflow-x: auto;
+  vertical-align: top;
+  white-space: nowrap;
+  width: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table th, table td {
+    border: 1px solid #dfe2e5;
+    padding: 0.5rem 0.875rem;
+  }
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+  }
+
+table th {
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+  }
+
+/* 09. Header
+/* ---------------------------------------------------------- */
+
+.header {
+  box-shadow: 0 0 3px rgba(0, 0, 0, .03), 0 3px 46px rgba(0, 0, 0, .07);
+}
+
+.logo-link {
+  color: #000;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* 10. Social Media
+/* ---------------------------------------------------------- */
+
+.social-media a {
+  display: inline-block;
+  height: 2.5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  vertical-align: middle;
+  width: 2.5rem;
+}
+
+/* 11. Sidenav
+/* ---------------------------------------------------------- */
+
+.sidebar {
+  background: #fff;
+  width: 18rem;
+}
+
+.sidebar ul {
+  list-style: none;
+  list-style-image: none;
+  margin: 1.125rem 0 1.25rem;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  color: #292929;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+}
+
+.close-sidebar {
+  font-size: 1.5rem;
+  outline: none;
+}
+
+.hamburgermenu {
+  background-color: transparent;
+  border: 0;
+  height: 3rem;
+  margin-right: -1rem;
+  padding: 0;
+  position: relative;
+  transition: transform 0.4s;
+  width: 3rem;
+  outline: none;
+}
+
+.hamburgermenu span {
+    background-color: currentColor;
+    display: block;
+    height: 2px;
+    left: 0.875rem;
+    margin-top: -1px;
+    position: absolute;
+    top: 50%;
+    width: 1.25rem
+  }
+
+.hamburgermenu span:first-child {
+      transform: translate(0, -6px);
+    }
+
+.hamburgermenu span:last-child {
+      transform: translate(0, 6px);
+    }
+
+/* 12. Conten main
+/* ---------------------------------------------------------- */
+
+.main {
+  margin: 0 auto;
+  max-width: 42.5rem;
+}
+
+/* 13. Article
+/* ---------------------------------------------------------- */
+
+.article-body {
+  font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 1.125rem;
+  line-height: 1.7em;
+}
+
+.article-body > * {
+  margin-bottom: 1.5rem;
+}
+
+.article-body a:not(.kg-bookmark-container) {
+  text-decoration: underline;
+  word-break: break-word;
+}
+
+.article-body ul, .article-body ol {
+  padding-left: 1.25rem;
+}
+
+.article-body ul li, .article-body ol li {
+  margin-bottom: 5px;
+}
+
+/* 14. Buttons for Tag
+/* ---------------------------------------------------------- */
+
+.button-tags {
+  background-color: var(--ghost-accent-color);
+  border-radius: 1.5625rem;
+  border: 0;
+  color: #fff;
+  display: inline-block;
+  margin: 0.3125rem;
+  padding: 0.3125rem 1.25rem;
+}
+
+/* 15. share
+/* ---------------------------------------------------------- */
+
+amp-social-share.custom-style {
+  background-color: #008080;
+  background-image: url("https://raw.githubusercontent.com/google/material-design-icons/master/social/1x_web/ic_share_white_48dp.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+amp-social-share.rounded {
+  border-radius: 10%;
+  background-size: 85%;
+}
+
+/* 16. Related Article
+/* ---------------------------------------------------------- */
+
+.story-link-text {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #18181b;
+}
+
+.story-link-icon {
+  background-color: var(--ghost-accent-color);
+  height: 2.5rem;
+  text-align: center;
+  width: 2.5rem;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+/* 17. Bookmark card
+/* ---------------------------------------------------------- */
+
+.kg-bookmark-container {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+
+.kg-bookmark-content {
+    order: 1;
+    padding: 1.25rem;
+  }
+
+.kg-bookmark-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+.kg-bookmark-description {
+    color: #757575;
+    font-size: 0.875rem;
+    line-height: 1.4;
+    margin-top: 0.75rem;
+  }
+
+.kg-bookmark-metadata {
+    align-items: center;
+    display: flex;
+    font-size: 0.875rem;
+    margin-top: 0.75rem;
+  }
+
+.kg-bookmark-icon {
+    margin-right: 5px;
+  }
+
+.kg-bookmark-author::after {
+    content: "•";
+    margin: 0 6px;
+  }
+
+.kg-bookmark-publisher {
+    color: inherit;
+  }
+
+/* 18. Embed card
+/* ---------------------------------------------------------- */
+
+.kg-embed-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* 19 gallery Card
+/* ---------------------------------------------------------- */
+
+.kg-image-card img {
+  margin: auto;
+}
+
+.kg-gallery-card + .kg-gallery-card {
+  margin-top: 0.75em;
+}
+
+.kg-gallery-container {
+  position: relative;
+}
+
+.kg-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.kg-gallery-image {
+  width: 100%;
+  height: 100%;
+}
+
+.kg-gallery-row:not(:first-of-type) {
+  margin: 0.75em 0 0 0;
+}
+
+.kg-gallery-image:not(:first-of-type) {
+  margin: 0 0 0 0.75em;
+}
+
+/* 20. Toggle Card
+/* ---------------------------------------------------------- */
+
+.kg-toggle-card-icon {
+  display: none;
+}
+
+.kg-toggle-content {
+  margin-top: 0.8rem;
+}
+
+/* 21. Prodct card
+/* ---------------------------------------------------------- */
+
+.kg-product-card-container {
+  background: transparent;
+  padding: 20px;
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+}
+
+.kg-product-card-description p {
+  margin-top: 1.5em;
+}
+
+.kg-product-card-description ul {
+  margin-left: 24px;
+}
+
+.kg-product-card-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.kg-product-card-rating-star {
+  height: 28px;
+  width: 20px;
+  margin-right: 2px;
+}
+
+.kg-product-card-rating-star svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  opacity: 0.15;
+}
+
+.kg-product-card-rating-active.kg-product-card-rating-star svg {
+  opacity: 1;
+}
+
+/* 22. ntf card
+/* ---------------------------------------------------------- */
+
+.kg-nft-card-container {
+  position: relative;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  text-decoration: none;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.4);
+  width: 100%;
+  max-width: 512px;
+  color: #15212A;
+  background: #fff;
+  border-radius: 5px;
+  transition: none;
+  margin: 0 auto;
+}
+
+.kg-nft-metadata {
+  padding: 2.0rem;
+}
+
+.kg-nft-image-container {
+  position: relative;
+}
+
+.kg-nft-image {
+  display: flex;
+  border-radius: 5px 5px 0 0;
+}
+
+.kg-nft-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-gap: 20px;
+  gap: 20px;
+}
+
+.kg-nft-header h4.kg-nft-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0;
+  color: #15212A;
+}
+
+.kg-nft-header amp-img {
+  max-width: 114px;
+  max-height: 26px;
+}
+
+.kg-nft-opensea-logo {
+  margin-top: 2px;
+  width: 100px;
+}
+
+.kg-nft-creator {
+  font-family: inherit;
+  color: #95A1AD;
+}
+
+.kg-nft-creator span {
+  font-weight: 500;
+  color: #15212A;
+}
+
+.kg-nft-card p.kg-nft-description {
+  font-size: 1.4rem;
+  line-height: 1.4em;
+  margin: 2.0rem 0 0;
+  color: #222;
+}
+
+/* 23. Button Card
+/* ---------------------------------------------------------- */
+
+.kg-button-card {
+  display: flex;
+  position: static;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.kg-btn {
+  display: flex;
+  position: static;
+  align-items: center;
+  padding: 0 2.0rem;
+  height: 4.0rem;
+  line-height: 4.0rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.kg-btn:hover {
+  opacity: 0.85;
+}
+
+.kg-btn-accent {
+  background-color: #1292EE;
+  background-color: var(--ghost-accent-color, #1292EE);
+  color: #fff;
+}
+
+/* 24. callout card
+/* ---------------------------------------------------------- */
+
+.kg-callout-card {
+  display: flex;
+  padding: 20px 28px;
+  border-radius: 3px;
+}
+
+.kg-callout-card-grey {
+  background: rgba(124, 139, 154, 0.13);
+}
+
+.kg-callout-card-white {
+  background: transparent;
+  box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+}
+
+.kg-callout-card-blue {
+  background: rgba(33, 172, 232, 0.12);
+}
+
+.kg-callout-card-green {
+  background: rgba(52, 183, 67, 0.12);
+}
+
+.kg-callout-card-yellow {
+  background: rgba(240, 165, 15, 0.13);
+}
+
+.kg-callout-card-red {
+  background: rgba(209, 46, 46, 0.11);
+}
+
+.kg-callout-card-pink {
+  background: rgba(225, 71, 174, 0.11);
+}
+
+.kg-callout-card-purple {
+  background: rgba(135, 85, 236, 0.12);
+}
+
+.kg-callout-card-accent {
+  background: var(--ghost-accent-color);
+  color: #fff;
+}
+
+.kg-callout-card-accent a {
+  color: #fff;
+}
+
+.kg-callout-emoji {
+  padding-right: 16px;
+  line-height: 1.3;
+  font-size: 1.25em;
+}
+
+/* 25. Header Card
+/* ---------------------------------------------------------- */
+
+.kg-header-card {
+  padding: 6em 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.kg-header-card.kg-size-small {
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.kg-header-card.kg-size-large {
+  padding-top: 12em;
+  padding-bottom: 12em;
+}
+
+.kg-header-card.kg-width-full {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
+.kg-header-card.kg-align-left {
+  text-align: left;
+  align-items: flex-start;
+}
+
+.kg-header-card.kg-style-dark {
+  background: #15171a;
+  color: #ffffff;
+}
+
+.kg-header-card.kg-style-light {
+  color: #15171a;
+  border: 1px solid rgba(124, 139, 154, 0.25);
+  border-width: 1px 0;
+}
+
+.kg-header-card.kg-style-accent {
+  background-color: var(--ghost-accent-color);
+}
+
+.kg-header-card.kg-style-image {
+  background-color: #e7e7eb;
+  background-size: cover;
+  background-position: center center;
+}
+
+.kg-header-card h2 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.1em;
+  margin: 0;
+}
+
+.kg-header-card h2 strong {
+  font-weight: 800;
+}
+
+.kg-header-card.kg-size-small h2 {
+  font-size: 3em;
+}
+
+.kg-header-card.kg-size-large h2 {
+  font-size: 5em;
+}
+
+.kg-header-card h3 {
+  font-size: 1.25em;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 0;
+}
+
+.kg-header-card h3 strong {
+  font-weight: 600;
+}
+
+.kg-header-card.kg-size-small h3 {
+  font-size: 1em;
+}
+
+.kg-header-card.kg-size-large h3 {
+  font-size: 1.5em;
+}
+
+.kg-header-card:not(.kg-style-light) h2, .kg-header-card:not(.kg-style-light) h3 {
+  color: #ffffff;
+}
+
+.kg-header-card a.kg-header-card-button {
+  display: flex;
+  position: static;
+  align-items: center;
+  padding: 0 1.2em;
+  height: 2.4em;
+  line-height: 1em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 0.95em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: opacity 0.2s ease-in-out;
+  background-color: var(--ghost-accent-color);
+  color: #ffffff;
+  margin: 1.75em 0 0;
+}
+
+.kg-header-card a.kg-header-card-button:hover {
+  opacity: 0.85;
+}
+
+.kg-header-card.kg-size-large a.kg-header-card-button {
+  margin-top: 2em;
+}
+
+.kg-header-card.kg-size-small a.kg-header-card-button {
+  margin-top: 1.5em;
+}
+
+.kg-header-card.kg-style-image a.kg-header-card-button, .kg-header-card.kg-style-dark a.kg-header-card-button {
+  background: #ffffff;
+  color: #15171a;
+}
+
+.kg-header-card.kg-style-accent a.kg-header-card-button {
+  background: #ffffff;
+  color: var(--ghost-accent-color);
+}
+
+/* 26. Audio Card
+/* ---------------------------------------------------------- */
+
+.kg-audio-card {
+  display: flex;
+  width: 100%;
+  box-shadow: inset 0 0 0 1px rgba(124, 139, 154, 0.25);
+}
+
+.kg-audio-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  min-width: 80px;
+  height: 80px;
+  background: transparent;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 3px 0 0 3px;
+}
+
+.kg-audio-thumbnail.placeholder {
+  background: var(--ghost-accent-color);
+}
+
+.kg-audio-thumbnail.placeholder svg {
+  width: 24px;
+  height: 24px;
+  fill: white;
+}
+
+.kg-audio-player-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  --seek-before-width: 0%;
+  --volume-before-width: 100%;
+  --buffered-width: 0%;
+}
+
+.kg-audio-title {
+  width: 100%;
+  padding: 8px 12px 0;
+  border: none;
+  font-family: inherit;
+  font-size: 1.1em;
+  font-weight: 700;
+  background: transparent;
+}
+
+.kg-audio-player {
+  display: none;
+}
+
+.kg-width-full.kg-card-hascaption {
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+
+/*# sourceMappingURL=map/amp.css.map */
